@@ -1,29 +1,42 @@
-#include "stm32f10x_conf.h"
 
-
-void delay_ms(uint32_t ms) {
-    volatile uint32_t nCount;
-    RCC_ClocksTypeDef _rcc;
-    RCC_GetClocksFreq (&_rcc);
-    nCount = (_rcc.HCLK_Frequency / 10000) * ms;
-    for (; nCount != 0; nCount--);
+//---------------------------------
+// main.c
+// Плата индикации (MDR32)
+//---------------------------------
+#include "MDR32Fx.h"
+#include "MDR32F9Qx_rst_clk.h"
+#include "MDR32F9Qx_port.h"
+#include "MDR32F9Qx_timer.h"
+#include "MDR32F9Qx_iwdg.h"
+//---------------------------------
+#include "MDR32F9Qx_config.h"
+#include "MDR32F9Qx_usb_handlers.h"
+//---------------------------------
+#include "gpio.h"
+#include "main.h"
+//=================================
+int main (void) {
+	__disable_irq();
+	//SysTick_init();
+	RCC_init();
+	GPIO_init();
+	__enable_irq();
+	TIM1_init();
+	LCD_init();
+	START_logic();
+	IWDT_init();
+	//-------------------------------
+	uint8_t Buffer[32];
+	VCom_Configuration();
+  // CDC layer initialization 
+  USB_CDC_Init(Buffer, 1, SET);
+  Setup_CPU_Clock();
+  Setup_USB();
+	//-------------------------------
+   
+	while (1) {
+		MAIN_logic();
+		IWDG_ReloadCounter();	//сбрасываем IWDT	
+	}	
 }
-
-
-int main(void) {
-
-    GPIO_InitTypeDef gs;
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE); 
-    gs.GPIO_Speed = GPIO_Speed_50MHz; 
-    gs.GPIO_Mode  = GPIO_Mode_Out_PP; 
-    gs.GPIO_Pin   = GPIO_Pin_1;
-    GPIO_Init(GPIOA, &gs);
-
-    while(1) {
-        GPIO_WriteBit(GPIOA, GPIO_Pin_1, Bit_SET); 
-        delay_ms(500);
-        GPIO_WriteBit(GPIOA, GPIO_Pin_1, Bit_RESET); 
-        delay_ms(500);
-    }
-}
-
+//=================================
