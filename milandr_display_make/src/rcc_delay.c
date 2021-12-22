@@ -65,8 +65,8 @@ void TIM1_init() {
 	TIM1_InitStructure.TIMER_BRK_Polarity = TIMER_BRKPolarity_NonInverted;
 	TIMER_CntInit(MDR_TIMER1, &TIM1_InitStructure);
 	TIMER_ITConfig(MDR_TIMER1, TIMER_STATUS_CNT_ARR, ENABLE);
-	NVIC_SetPriority (Timer1_IRQn, 1); // Приоритет прерывания
-	NVIC_EnableIRQ(Timer1_IRQn);
+//	NVIC_SetPriority (Timer1_IRQn, 1); // Приоритет прерывания
+//	NVIC_EnableIRQ(Timer1_IRQn);
 	TIMER_Cmd(MDR_TIMER1, ENABLE);
 }
 //---------------------------------

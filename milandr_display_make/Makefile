@@ -1,24 +1,30 @@
-CXX			= arm-none-eabi-g++
-CC			= arm-none-eabi-gcc
-LD			= arm-none-eabi-gcc
+CXX		= arm-none-eabi-g++
+CC		= arm-none-eabi-gcc
+LD		= arm-none-eabi-gcc
 OBJCOPY		= arm-none-eabi-objcopy
 SIZE		= arm-none-eabi-size
 STFLASH		= st-flash
 OPENOCD		= openocd
 STUTIL		= st-flash
 
-
 OUTPUT_DIR	= bin
-OBJ_DIR	= obj
+OBJ_DIR         = obj
 
-TARGET_NAME = led
+TARGET_NAME     = display
+
 TARGET_BINARY	= $(TARGET_NAME).elf
 TARGET_HEX	= $(TARGET_NAME).hex
 
 vpath %.c ./src
 
 SOURCES	= \
-main.c
+main.c \
+gpio.c \
+logic.c \
+mt20s4.c \
+rcc_delay.c \
+usb.c \
+var.c
 
 LDFLAGS_DEBUG =  
 CDFLAGS_DEBUG = -g3 -O0
@@ -66,39 +72,26 @@ INCLUDES	= \
 -I./hardware/include/cmsis \
 -I./hardware/SPL/include
 
+#STARUPFILE = hardware/src/startup_MDR32F9Qx.s
 STARUPFILE = hardware/src/startup_stm32f10x_md.S
 
 SOURCES_SPL	= \
-stm32f10x_rcc.c \
-stm32f10x_gpio.c \
-stm32f10x_dma.c
+#MDR32F9Qx_iwdg.c \
+MDR32F9Qx_port.c \
+MDR32F9Qx_rst_clk.c \
+MDR32F9Qx_timer.c \
+MDR32F9Qx_usb.c \
+MDR32F9Qx_usb_CDC.c \
+#system_MDR32F9Qx.c \
+MDR32F9Qx_usb_device.c \
 
-#stm32f10x_crc.c \
-#stm32f10x_flash.c \
-#stm32f10x_pwr.c \
-#stm32f10x_tim.c \
-#stm32f10x_adc.c \
-#stm32f10x_dac.c \
-#stm32f10x_fsmc.c \
-#stm32f10x_usart.c \
-#stm32f10x_bkp.c \
-#stm32f10x_dbgmcu.c \
-#stm32f10x_rtc.c \
-#stm32f10x_wwdg.c \
-#stm32f10x_can.c \
-#stm32f10x_i2c.c \
-#stm32f10x_sdio.c \
-#stm32f10x_cec.c \
-#stm32f10x_exti.c \
-#stm32f10x_iwdg.c \
-#stm32f10x_spi.c \
-#misc.c
+
 
 ################################################################
 
 
 SOURCES	+= $(addprefix hardware/SPL/src/, $(SOURCES_SPL))
-SOURCES	+= hardware/src/system_stm32f10x.c
+#SOURCES	+= hardware/src/system_stm32f10x.c
 
 HEX	= $(OUTPUT_DIR)/$(TARGET_HEX)
 
