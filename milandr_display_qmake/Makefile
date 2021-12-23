@@ -110,11 +110,12 @@ SOURCES	+= $(addprefix Drivers/, $(SOURCES_DRIVERS))
 
 HEX = $(OUTPUT_DIR)/$(TARGET_HEX)
 
-#STARTUPOBJ = $(notdir $(STARUPFILE))
-#STARTUPOBJ := $(patsubst %.S, $(OBJ_DIR)/%.S.o, $(STARTUPOBJ))
+STARTUPOBJ = $(notdir $(STARUPFILE))
+STARTUPOBJ := $(patsubst %.s, $(OBJ_DIR)/%.s.o, $(STARTUPOBJ))
+
 
 OBJECTS	= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES))
-#OBJECTS += $(STARTUPOBJ)
+OBJECTS += $(STARTUPOBJ)
 
 DEPS = $(OBJECTS:.o=.d)
 

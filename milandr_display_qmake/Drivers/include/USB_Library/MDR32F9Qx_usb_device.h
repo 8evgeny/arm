@@ -283,7 +283,7 @@ typedef struct
   * @brief USB BUS parameters Structure definition
   */
 typedef struct {
-    uint32_t PULL;  /*!< This member configures the D+ è D- line pulling
+    uint32_t PULL;  /*!< This member configures the D+ Ð¸ D- line pulling
                          This member can be combination of the following values:
                          USB_HSCR_DM_PULLDOWN_Set: D- line pull down
                          USB_HSCR_DM_PULLUP_Set:   D- line pull up

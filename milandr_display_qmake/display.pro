@@ -6,8 +6,6 @@
 
 # Определяем переменные окружения сборки
 # Каталоги исходников
-DEVICE=Device/
-DRIVERS=Drivers/
 
 # Ни гуи, ни ядра Qt нам не надо!
 QT -= gui core
@@ -23,8 +21,9 @@ TARGET = display
 #Дальше подключим директории поиска заголовочных файлов
 # Подключаем заголовочные файлы
 
-INCLUDEPATH += $$DEVICE
-INCLUDEPATH += $$DRIVERS
+INCLUDEPATH += Device/include
+INCLUDEPATH += Drivers/include
+
 
 #Компилятор C и его ключи
 QMAKE_CC = arm-none-eabi-gcc
@@ -37,14 +36,14 @@ QMAKE_CFLAGS += -mfloat-abi=soft
 QMAKE_CFLAGS += -fno-strict-aliasing
 QMAKE_CFLAGS += -fdata-sections
 QMAKE_CFLAGS += -ffunction-sections
-QMAKE_CFLAGS += -xc
-QMAKE_CFLAGS += -std=c99
-QMAKE_CFLAGS += --target=arm-arm-none-eabi
-QMAKE_CFLAGS += -c
-QMAKE_CFLAGS += -fno-rtti
-QMAKE_CFLAGS += -funsigned-char
-QMAKE_CFLAGS += -fshort-enums
-QMAKE_CFLAGS += -fshort-wchar
+#QMAKE_CFLAGS += -xc
+#QMAKE_CFLAGS += -std=c99
+#QMAKE_CFLAGS += --target=arm-arm-none-eabi
+#QMAKE_CFLAGS += -c
+#QMAKE_CFLAGS += -fno-rtti
+#QMAKE_CFLAGS += -funsigned-char
+#QMAKE_CFLAGS += -fshort-enums
+#QMAKE_CFLAGS += -fshort-wchar
 
 #Компилятор C++ и его ключи
 QMAKE_CXX = arm-none-eabi-g++
@@ -75,8 +74,9 @@ QMAKE_LIBS = -lm
 QMAKE_POST_LINK += arm-none-eabi-objcopy -O ihex -j .text -j .data -S ${TARGET} ${TARGET}.hex
 
 # Заголовки
-HEADERS += $$files($$DEVICE/include/*.h)
-HEADERS += $$files($$DRIVERS/include/*.h)
+HEADERS += $$files(Device/include/*.h)
+HEADERS += $$files(Drivers/include/*.h)
+#HEADERS += Drivers/include/MDR32Fx.h
 
 # Исходники
 SOURCES += $$files($$DEVICE/*.c)

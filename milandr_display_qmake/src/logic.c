@@ -1,7 +1,7 @@
 
 //---------------------------------
 // ptz.c
-// Плата индикации (MDR32)
+// РџР»Р°С‚Р° РёРЅРґРёРєР°С†РёРё (MDR32)
 //---------------------------------
 #include "MDR32Fx.h"
 #include "MDR32F9Qx_rst_clk.h"
@@ -10,35 +10,35 @@
 #include "main.h"
 #include "gpio.h"
 //---------------------------------
-// Стартовая логика
+// РЎС‚Р°СЂС‚РѕРІР°СЏ Р»РѕРіРёРєР°
 //---------------------------------
 void START_logic() {
-	//приветствие
-	PORT_SetBits(MDR_PORTB, LED1_ERROR|LED2_REC);	//проверка светодиодов
-	LCD_control(1,0,0);		//включение дисплея и выбор курсора
-	LCD_entry_mode(1,0);	//установка направления сдвига
-	LCD_clear_display();	//установка курсора в начало
-	LCD_function(1,1);	//страница знакогенератора 1
+	//РїСЂРёРІРµС‚СЃС‚РІРёРµ
+	PORT_SetBits(MDR_PORTB, LED1_ERROR|LED2_REC);	//РїСЂРѕРІРµСЂРєР° СЃРІРµС‚РѕРґРёРѕРґРѕРІ
+	LCD_control(1,0,0);		//РІРєР»СЋС‡РµРЅРёРµ РґРёСЃРїР»РµСЏ Рё РІС‹Р±РѕСЂ РєСѓСЂСЃРѕСЂР°
+	LCD_entry_mode(1,0);	//СѓСЃС‚Р°РЅРѕРІРєР° РЅР°РїСЂР°РІР»РµРЅРёСЏ СЃРґРІРёРіР°
+	LCD_clear_display();	//СѓСЃС‚Р°РЅРѕРІРєР° РєСѓСЂСЃРѕСЂР° РІ РЅР°С‡Р°Р»Рѕ
+	LCD_function(1,1);	//СЃС‚СЂР°РЅРёС†Р° Р·РЅР°РєРѕРіРµРЅРµСЂР°С‚РѕСЂР° 1
 	LCD_clear_display();
-	//LCD_write_string("  Видеорегистратор  ");
+	//LCD_write_string("  Р’РёРґРµРѕСЂРµРіРёСЃС‚СЂР°С‚РѕСЂ  ");
   LCD_write_string("  Videorecorder  ");
 	LCD_set_line(2);
 	LCD_write_string("  GIT-VIDEO SURV   ");
 	LCD_set_line(4);
-	//LCD_write_string("     версия 1.0     ");
+	//LCD_write_string("     РІРµСЂСЃРёСЏ 1.0     ");
 	LCD_write_string(" -- version 1.0 -- ");
 	delay_ms(5000);
 	PORT_ResetBits(MDR_PORTB, LED1_ERROR|LED2_REC);
 	
 	//LCD_clear_display();
 	
-	//проверка зуммера
+	//РїСЂРѕРІРµСЂРєР° Р·СѓРјРјРµСЂР°
 	//PORT_SetBits(MDR_PORTB, BUZZER);	
 	//delay_ms(100);
 	//PORT_ResetBits(MDR_PORTB, BUZZER);
 }
 //---------------------------------
-// Главная логика
+// Р“Р»Р°РІРЅР°СЏ Р»РѕРіРёРєР°
 //---------------------------------
 void MAIN_logic() {
 	//PORT_ResetBits(MDR_PORTB, LED1_ERROR|LED2_REC);

@@ -1,7 +1,6 @@
-
 //---------------------------------
 // main.h
-// Плата индикации (MDR32)
+// РџР»Р°С‚Р° РёРЅРґРёРєР°С†РёРё (MDR32)
 //---------------------------------
 #include "MDR32Fx.h"
 #include "MDR32F9Qx_rst_clk.h"
@@ -12,7 +11,7 @@
 #ifndef _MAIN
 #define _MAIN
 //---------------------------------
-// Прототипы функций
+// РџСЂРѕС‚РѕС‚РёРїС‹ С„СѓРЅРєС†РёР№
 //---------------------------------
 void RCC_init(void);
 void IWDT_init(void);
@@ -46,7 +45,7 @@ void LCD_write_string(char *DATA);
 void LCD_set_line(uint8_t BYTE);
 void LCD_set_XY(uint8_t X, uint8_t Y);
 //---------------------------------
-// Задержка SysTick
+// Р—Р°РґРµСЂР¶РєР° SysTick
 //---------------------------------
 extern volatile uint32_t delay_dec;
 //---------------------------------
