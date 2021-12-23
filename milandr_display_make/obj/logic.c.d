@@ -1,32 +1,30 @@
-obj/logic.c.o: src/logic.c hardware/include/MDR32Fx.h \
- hardware/include/cmsis/core_cm3.h hardware/include/cmsis/core_cmInstr.h \
- hardware/include/cmsis/core_cmFunc.h hardware/include/system_MDR32F9Qx.h \
- hardware/include/MDR32F9Qx_rst_clk.h hardware/include/MDR32F9Qx_config.h \
- hardware/include/MDR32F9Qx_board.h hardware/include/MDR32F9Qx_lib.h \
- hardware/include/MDR32Fx.h hardware/include/MDR32F9Qx_port.h \
- include/main.h include/gpio.h include/gpio.h
+obj/logic.c.o: src/logic.c Drivers/include/MDR32Fx.h \
+ Device/include/core_cm3.h Device/include/cmsis_version.h \
+ Device/include/cmsis_compiler.h Device/include/cmsis_gcc.h \
+ Device/include/mpu_armv7.h Device/include/system_MDR32F9Qx.h \
+ Drivers/include/MDR32F9Qx_rst_clk.h Device/include/MDR32F9Qx_config.h \
+ Drivers/include/MDR32F9Qx_port.h include/main.h include/gpio.h \
+ include/gpio.h
 
-hardware/include/MDR32Fx.h:
+Drivers/include/MDR32Fx.h:
 
-hardware/include/cmsis/core_cm3.h:
+Device/include/core_cm3.h:
 
-hardware/include/cmsis/core_cmInstr.h:
+Device/include/cmsis_version.h:
 
-hardware/include/cmsis/core_cmFunc.h:
+Device/include/cmsis_compiler.h:
 
-hardware/include/system_MDR32F9Qx.h:
+Device/include/cmsis_gcc.h:
 
-hardware/include/MDR32F9Qx_rst_clk.h:
+Device/include/mpu_armv7.h:
 
-hardware/include/MDR32F9Qx_config.h:
+Device/include/system_MDR32F9Qx.h:
 
-hardware/include/MDR32F9Qx_board.h:
+Drivers/include/MDR32F9Qx_rst_clk.h:
 
-hardware/include/MDR32F9Qx_lib.h:
+Device/include/MDR32F9Qx_config.h:
 
-hardware/include/MDR32Fx.h:
-
-hardware/include/MDR32F9Qx_port.h:
+Drivers/include/MDR32F9Qx_port.h:
 
 include/main.h:
 

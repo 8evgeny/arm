@@ -1,40 +1,38 @@
-obj/usb.c.o: src/usb.c hardware/include/MDR32F9Qx_config.h \
- hardware/include/MDR32F9Qx_board.h hardware/include/MDR32F9Qx_lib.h \
- hardware/include/MDR32Fx.h hardware/include/cmsis/core_cm3.h \
- hardware/include/cmsis/core_cmInstr.h \
- hardware/include/cmsis/core_cmFunc.h hardware/include/system_MDR32F9Qx.h \
- hardware/include/MDR32F9Qx_usb_handlers.h \
- hardware/include/MDR32F9Qx_usb_default_handlers.h \
- hardware/include/MDR32F9Qx_usb_CDC.h hardware/include/MDR32F9Qx_config.h \
- hardware/include/MDR32F9Qx_usb_device.h hardware/include/MDR32F9Qx_usb.h \
- hardware/include/MDR32F9Qx_rst_clk.h
+obj/usb.c.o: src/usb.c Device/include/MDR32F9Qx_config.h \
+ Drivers/include/MDR32Fx.h Device/include/core_cm3.h \
+ Device/include/cmsis_version.h Device/include/cmsis_compiler.h \
+ Device/include/cmsis_gcc.h Device/include/mpu_armv7.h \
+ Device/include/system_MDR32F9Qx.h \
+ Device/include/MDR32F9Qx_usb_handlers.h \
+ Device/include/MDR32F9Qx_usb_default_handlers.h \
+ Drivers/include/MDR32F9Qx_usb_CDC.h \
+ Drivers/include/USB_Library/MDR32F9Qx_usb_device.h \
+ Drivers/include/MDR32F9Qx_usb.h Drivers/include/MDR32F9Qx_rst_clk.h
 
-hardware/include/MDR32F9Qx_config.h:
+Device/include/MDR32F9Qx_config.h:
 
-hardware/include/MDR32F9Qx_board.h:
+Drivers/include/MDR32Fx.h:
 
-hardware/include/MDR32F9Qx_lib.h:
+Device/include/core_cm3.h:
 
-hardware/include/MDR32Fx.h:
+Device/include/cmsis_version.h:
 
-hardware/include/cmsis/core_cm3.h:
+Device/include/cmsis_compiler.h:
 
-hardware/include/cmsis/core_cmInstr.h:
+Device/include/cmsis_gcc.h:
 
-hardware/include/cmsis/core_cmFunc.h:
+Device/include/mpu_armv7.h:
 
-hardware/include/system_MDR32F9Qx.h:
+Device/include/system_MDR32F9Qx.h:
 
-hardware/include/MDR32F9Qx_usb_handlers.h:
+Device/include/MDR32F9Qx_usb_handlers.h:
 
-hardware/include/MDR32F9Qx_usb_default_handlers.h:
+Device/include/MDR32F9Qx_usb_default_handlers.h:
 
-hardware/include/MDR32F9Qx_usb_CDC.h:
+Drivers/include/MDR32F9Qx_usb_CDC.h:
 
-hardware/include/MDR32F9Qx_config.h:
+Drivers/include/USB_Library/MDR32F9Qx_usb_device.h:
 
-hardware/include/MDR32F9Qx_usb_device.h:
+Drivers/include/MDR32F9Qx_usb.h:
 
-hardware/include/MDR32F9Qx_usb.h:
-
-hardware/include/MDR32F9Qx_rst_clk.h:
+Drivers/include/MDR32F9Qx_rst_clk.h:
