@@ -76,37 +76,39 @@ LDFLAGS	= \
 #-u _printf_float 
 
 INCLUDES = \
+-I../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc \
+-I../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm \
+-I../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/CoreSupport/CM3 \
+-I../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx \
+-I../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc \
+-I../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc/USB_Library \
+-I../MDR1986BExx/2.0.3/Libraries/MDR32Fx/inc \
+-I../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src \
 -I. \
 -I./include \
--I./Device \
--I./Device/include \
--I./Drivers \
--I./Drivers/include \
--I./Drivers/include/USB_Library \
-
 
 #STARUPFILE = Device/startup_MDR32F9Qx.s
 
-SOURCES_DRIVERS = \
+SOURCES_SPL = \
 MDR32F9Qx_iwdg.c \
 MDR32F9Qx_port.c \
 MDR32F9Qx_rst_clk.c \
 MDR32F9Qx_timer.c \
-MDR32F9Qx_usb.c \
+MDR32F9Qx_usb.c
+
+SOURCES_USB = \
 MDR32F9Qx_usb_CDC.c \
-MDR32F9Qx_usb_device.c \
+MDR32F9Qx_usb_device.c
 
-SOURCES_DEVICE = \
+SOURCES_DEVICE_SUPPORT = \
 #MDR1986VE9x.sct \
-system_MDR32F9Qx.c \
-
+system_MDR32F9Qx.c
 
 ################################################################
 
-SOURCES	+= $(addprefix Device/, $(SOURCES_DEVICE))
-SOURCES	+= $(addprefix Drivers/, $(SOURCES_DRIVERS))
-
-#SOURCES	+= hardware/src/system_stm32f10x.c
+SOURCES	+= $(addprefix ../MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/, $(SOURCES_DEVICE_SUPPORT))
+SOURCES	+= $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/, $(SOURCES_SPL))
+SOURCES	+= $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/USB_Library/, $(SOURCES_USB))
 
 HEX = $(OUTPUT_DIR)/$(TARGET_HEX)
 
@@ -119,8 +121,6 @@ OBJECTS += $(STARTUPOBJ)
 
 DEPS = $(OBJECTS:.o=.d)
 
-
-
 all: release
 
 release: LDFLAGS+=$(LDFLAGS_RELEASE)
@@ -130,10 +130,8 @@ release: _firmware
 debug: LDFLAGS+=$(LDFLAGS_DEBUG)
 debug: CFLAGS+=$(CDFLAGS_DEBUG)
 debug: _firmware
-	
 
 _firmware: $(TARGET) $(HEX)
-
 
 $(TARGET): $(OBJECTS) | $(OUTPUT_DIR) $(OBJ_DIR)
 	$(LD) $(LDFLAGS) -o $@ $(OBJECTS) $(LIBS)
@@ -171,7 +169,6 @@ $(OBJ_DIR):
 
 _size: $(TARGET)
 	$(SIZE) --format=berkeley $(TARGET) 
-
 
 flash: flash-ocd
 

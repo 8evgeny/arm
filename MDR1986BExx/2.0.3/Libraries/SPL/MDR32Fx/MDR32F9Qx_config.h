@@ -61,7 +61,7 @@ extern "C" {
    For MDR1986VE1T and MDR1986VE3T revision is selected in 
    "Device->Startup" variant in "Manage Run-Time Environment" window */
 // #define USE_MDR1986VE91
-// #define USE_MDR1986VE92
+#define USE_MDR1986VE92
 // #define USE_MDR1986VE93
 // #define USE_MDR1986VE94
 // #define USE_MDR1986VE1T_REV3_4
