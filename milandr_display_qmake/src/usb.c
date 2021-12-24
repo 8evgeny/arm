@@ -82,18 +82,18 @@ static void VCom_Configuration(void);
   * @param  None
   * @retval None
   */
-		/*
+        /*
 int main(void)
 {
     VCom_Configuration();
 
-    // CDC layer initialization 
+    // CDC layer initialization
     USB_CDC_Init(Buffer, 1, SET);
 
     Setup_CPU_Clock();
     Setup_USB();
 
-    // Main loop 
+    // Main loop
     while (1)
     {
     }
@@ -143,25 +143,35 @@ void Setup_CPU_Clock(void)
   */
 void Setup_USB(void)
 {
-    /* Enables the CPU_CLK clock on USB */
+    // Включение тактирования
     RST_CLK_PCLKcmd(RST_CLK_PCLK_USB, ENABLE);
 
-    /* Device layer initialization */
+    // Выбор источника тактирования USB
     USB_Clock_InitStruct.USB_USBC1_Source = USB_C1HSEdiv2;
+
+    // Выбор коэффициента умножения схемы PLL для USB
     USB_Clock_InitStruct.USB_PLLUSBMUL    = USB_PLLUSBMUL12;
 
+    // Выбор режима USB FULL Speed
     USB_DeviceBUSParam.MODE  = USB_SC_SCFSP_Full;
+
+    // Выбор скорости 12мБит в сек
     USB_DeviceBUSParam.SPEED = USB_SC_SCFSR_12Mb;
+//    USB_DeviceBUSParam.SPEED = USB_SC_SCFSR_1_5Mb;
+
+    // Подтягивание линии DP к питанию
     USB_DeviceBUSParam.PULL  = USB_HSCR_DP_PULLUP_Set;
 
+    // Инициализация USB с заданными параметрами
     USB_DeviceInit(&USB_Clock_InitStruct, &USB_DeviceBUSParam);
 
-    /* Enable all USB interrupts */
+    // Разрешение всех видов прерываний от USB
     USB_SetSIM(USB_SIS_Msk);
 
+    // Включение питания USB и разрешение передачи и приема данных
     USB_DevicePowerOn();
 
-    /* Enable interrupt on USB */
+    // Включение прерываний USB
 #ifdef USB_INT_HANDLE_REQUIRED
     NVIC_EnableIRQ(USB_IRQn);
 #endif /* USB_INT_HANDLE_REQUIRED */
@@ -174,7 +184,9 @@ void Setup_USB(void)
   * @param  None
   * @retval None
   */
+/* Задание конфигурации последовательной линии связи которую может прочитать хост */
 /*static*/ void VCom_Configuration(void)
+//static void VCom_Configuration(void)
 {
 #ifdef USB_CDC_LINE_CODING_SUPPORTED
     LineCoding.dwDTERate = 115200;
@@ -190,6 +202,8 @@ void Setup_USB(void)
   * @param  Length: Length of data
   * @retval @ref USB_Result.
   */
+
+// Данная процедура автоматически вызывается при приеме данных по USB
 USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
     USB_Result result;
@@ -198,7 +212,7 @@ USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
     ReceivedByteCount += Length;
 #endif /* USB_DEBUG_PROTO */
 
-    /* Send back received data portion */
+    /* Передача одного байта назад на устройство */
     result = USB_CDC_SendData(Buffer, Length);
 
 #ifdef USB_DEBUG_PROTO
@@ -267,6 +281,7 @@ USB_Result USB_CDC_DataSent(void)
   * @param  DATA: Pointer to the USB_CDC Line Coding Structure
   * @retval @ref USB_Result.
   */
+
 USB_Result USB_CDC_GetLineCoding(uint16_t wINDEX, USB_CDC_LineCoding_TypeDef* DATA)
 {
     assert_param(DATA);
