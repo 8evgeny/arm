@@ -85,9 +85,10 @@ INCLUDES = \
 -I../MDR1986BExx/2.0.3/Libraries/MDR32Fx/inc \
 -I../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src \
 -I. \
--I./include \
+-I./include 
 
-STARUPFILE = ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/startup_MDR32F9Qx.S
+#STARUPFILE = ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/startup_MDR32F9Qx.S
+STARUPFILE = startup/startup_stm32f10x_md.S
 
 SOURCES_SPL = \
 MDR32F9Qx_iwdg.c \
@@ -113,7 +114,7 @@ SOURCES	+= $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/USB_Librar
 HEX = $(OUTPUT_DIR)/$(TARGET_HEX)
 
 STARTUPOBJ = $(notdir $(STARUPFILE))
-STARTUPOBJ := $(patsubst %.s, $(OBJ_DIR)/%.s.o, $(STARTUPOBJ))
+STARTUPOBJ := $(patsubst %.S, $(OBJ_DIR)/%.S.o, $(STARTUPOBJ))
 
 
 OBJECTS	= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES))
