@@ -88,16 +88,12 @@ HEADERS += $$files(./include/*.h)
 SOURCES += $$files(./src/*.c)
 SOURCES += $$files(./src/*.cpp)
 
-#unix:!macx: LIBS += -L$$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10/lib/ -lcc1
+LIBS += -lm
 
-#INCLUDEPATH += $$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10
+
+#unix:!macx: LIBS += -L$$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/ -lstdc++
+
 #INCLUDEPATH += $$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include
-#DEPENDPATH += $$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10
+#DEPENDPATH += $$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include
 
-QMAKE_LIBS += -L$$PWD/../../../../../../lib/arm-none-eabi/lib/ -lstdc++
-
-INCLUDEPATH += $$PWD/../../../../../../lib/arm-none-eabi/include
-DEPENDPATH += $$PWD/../../../../../../lib/arm-none-eabi/include
-
-unix:!macx: PRE_TARGETDEPS += $$PWD/../../../../../../lib/arm-none-eabi/lib/libstdc++.a
-
+#unix:!macx: PRE_TARGETDEPS += $$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/libstdc++.a
