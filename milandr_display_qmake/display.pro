@@ -44,7 +44,7 @@ QMAKE_CFLAGS += -ffunction-sections
 #QMAKE_CFLAGS += -fshort-wchar
 
 #Компилятор C++ и его ключи
-QMAKE_CXX = arm-none-eabi-g++
+QMAKE_CXX = arm-none-eabi-gcc
 #QMAKE_CXXFLAGS +=
 #QMAKE_CXXFLAGS +=
 #QMAKE_CXXFLAGS +=
@@ -66,7 +66,7 @@ QMAKE_LFLAGS += -Wl,--gc-sections
 #QMAKE_LFLAGS += -Wl,-Map=$(TARGET).map
 #QMAKE_LFLAGS += -u _printf_float
 
-QMAKE_LIBS = -lm
+QMAKE_LIBS += -lm
 
 #Настраиваем постобработку ELF-файла, с целью перекрутить его в Intel HEX для последующей прошивки в плату
 QMAKE_POST_LINK += arm-none-eabi-objcopy -O ihex -j .text -j .data -S ${TARGET} ${TARGET}.hex
@@ -86,3 +86,18 @@ HEADERS += $$files(./include/*.h)
 
 # Исходники проекта
 SOURCES += $$files(./src/*.c)
+SOURCES += $$files(./src/*.cpp)
+
+#unix:!macx: LIBS += -L$$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10/lib/ -lcc1
+
+#INCLUDEPATH += $$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10
+#INCLUDEPATH += $$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include
+#DEPENDPATH += $$PWD/../../../../toolchain/gcc-arm-none-eabi-10.3-2021.10
+
+QMAKE_LIBS += -L$$PWD/../../../../../../lib/arm-none-eabi/lib/ -lstdc++
+
+INCLUDEPATH += $$PWD/../../../../../../lib/arm-none-eabi/include
+DEPENDPATH += $$PWD/../../../../../../lib/arm-none-eabi/include
+
+unix:!macx: PRE_TARGETDEPS += $$PWD/../../../../../../lib/arm-none-eabi/lib/libstdc++.a
+

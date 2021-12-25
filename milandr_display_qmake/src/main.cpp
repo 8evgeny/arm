@@ -13,7 +13,7 @@
 //---------------------------------
 #include "gpio.h"
 #include "main.h"
-//#include <string>
+#include "string"
 //=================================
 int main (int argc, char** argv) {
 	__disable_irq();
@@ -25,6 +25,7 @@ int main (int argc, char** argv) {
 	LCD_init();
 	START_logic();
 	IWDT_init();
+    std::string aa = "ssss";
 	//-------------------------------
 	uint8_t Buffer[32];
 	VCom_Configuration();
