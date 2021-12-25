@@ -16,15 +16,19 @@ TARGET_BINARY	= $(TARGET_NAME).elf
 TARGET_HEX	= $(TARGET_NAME).hex
 
 vpath %.c ./src
+vpath %.cpp ./src
 
-SOURCES	= \
+SOURCES_C	= \
 gpio.c \
 logic.c \
 mt20s4.c \
 rcc_delay.c \
 usb.c \
 var.c \
-main.c \
+#main.c \
+
+SOURCES_CPP	= \
+main.cpp \
 
 LDFLAGS_DEBUG =  
 CDFLAGS_DEBUG = -g3 -O0
@@ -58,6 +62,10 @@ CFLAGS = \
 TARGET	= $(OUTPUT_DIR)/$(TARGET_BINARY)
 
 LIBS = -lm
+
+CXXFLAGS = -O3 -o prog -rdynamic -D_GNU_SOURCE -L./libmine
+#LIBS += -lpthread -ldl
+
 
 LDFLAGS	= \
 --specs=nosys.specs \
@@ -107,9 +115,9 @@ system_MDR32F9Qx.c
 
 ################################################################
 
-SOURCES	+= $(addprefix ../MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/, $(SOURCES_DEVICE_SUPPORT))
-SOURCES	+= $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/, $(SOURCES_SPL))
-SOURCES	+= $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/USB_Library/, $(SOURCES_USB))
+SOURCES_C	+= $(addprefix ../MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/, $(SOURCES_DEVICE_SUPPORT))
+SOURCES_C	+= $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/, $(SOURCES_SPL))
+SOURCES_C	+= $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/USB_Library/, $(SOURCES_USB))
 
 HEX = $(OUTPUT_DIR)/$(TARGET_HEX)
 
@@ -117,7 +125,8 @@ STARTUPOBJ = $(notdir $(STARUPFILE))
 STARTUPOBJ := $(patsubst %.S, $(OBJ_DIR)/%.S.o, $(STARTUPOBJ))
 
 
-OBJECTS	= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES))
+OBJECTS	+= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES_C))
+OBJECTS	+= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES_CPP))
 OBJECTS += $(STARTUPOBJ)
 
 DEPS = $(OBJECTS:.o=.d)
@@ -139,21 +148,21 @@ $(TARGET): $(OBJECTS) | $(OUTPUT_DIR) $(OBJ_DIR)
 	$(SIZE) --format=berkeley $(TARGET) 
 
 obj/%.cpp.o: %.cpp
-ifeq ($(OS), Windows_NT)
-	$(eval dirname=$(subst /,\\,$(dir $@)))
-	@ if NOT EXIST $(dirname) mkdir $(dirname)
-else
+#ifeq ($(OS), Windows_NT)
+#	$(eval dirname=$(subst /,\\,$(dir $@)))
+#	@ if NOT EXIST $(dirname) mkdir $(dirname)
+#else
 	@mkdir -p $(dir $@) $(TO_NULL) 
-endif
+#endif
 	$(CXX) -c -MMD -MP $(CFLAGS) $(INCLUDES) $< -o $@
 
 obj/%.c.o: %.c
-ifeq ($(OS), Windows_NT)
-	$(eval dirname=$(subst /,\\,$(dir $@)))
-	@ if NOT EXIST $(dirname) mkdir $(dirname)
-else
+#ifeq ($(OS), Windows_NT)
+#	$(eval dirname=$(subst /,\\,$(dir $@)))
+#	@ if NOT EXIST $(dirname) mkdir $(dirname)
+#else
 	@mkdir -p $(dir $@) $(TO_NULL) 
-endif
+#endif
 	$(CC) -c -MMD -MP $(CFLAGS) $(INCLUDES) $< -o $@
 
 $(STARTUPOBJ):
