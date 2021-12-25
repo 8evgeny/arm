@@ -40,8 +40,8 @@ CFLAGS = \
     -Wall \
     -mcpu=cortex-m3 \
     -mthumb \
-    -D__HEAP_SIZE=0x0C00 \
-    -D__STACK_SIZE=0x0400 \
+    -D__HEAP_SIZE=0x0000 \
+    -D__STACK_SIZE=0x0100 \
     -mfloat-abi=soft \
     -fno-strict-aliasing \
     -fdata-sections \
