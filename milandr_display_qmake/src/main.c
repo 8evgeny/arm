@@ -28,10 +28,10 @@ int main (void) {
 	//-------------------------------
 	uint8_t Buffer[32];
 	VCom_Configuration();
-  // CDC layer initialization 
-  USB_CDC_Init(Buffer, 1, SET);
-  Setup_CPU_Clock();
-  Setup_USB();
+    // CDC layer initialization
+    USB_CDC_Init(Buffer, 1, SET);
+    Setup_CPU_Clock();
+    Setup_USB();
 	//-------------------------------
    
 	while (1) {

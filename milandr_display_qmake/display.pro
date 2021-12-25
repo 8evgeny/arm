@@ -1,12 +1,3 @@
-#$ sudo pacman -S arduino arduino-avr-core
-#нам понадобятся ещё компилятор, ассемблер, компоновщик и стандартная библиотека C для AVR, поэтому ставим и их
-#$ sudo pacman -S avr-gcc avr-binutils avr-libc
-#Отладчик и эмулятор , поэтому установим ещё такие пакеты
-#$ sudo pacman -S avr-gdb simavr
-
-# Определяем переменные окружения сборки
-# Каталоги исходников
-
 # Ни гуи, ни ядра Qt нам не надо!
 QT -= gui core
 CONFIG -= qt
@@ -21,17 +12,24 @@ TARGET = display
 #Дальше подключим директории поиска заголовочных файлов
 # Подключаем заголовочные файлы
 
-INCLUDEPATH += Device/include
-INCLUDEPATH += Drivers/include
-
+INCLUDEPATH += ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc
+INCLUDEPATH += ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm
+INCLUDEPATH += ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/CoreSupport/CM3
+INCLUDEPATH += ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx
+INCLUDEPATH += ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc
+INCLUDEPATH += ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc/USB_Library
+INCLUDEPATH += ../MDR1986BExx/2.0.3/Libraries/MDR32Fx/inc
+INCLUDEPATH += ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src
+INCLUDEPATH += ./include
+INCLUDEPATH += .
 
 #Компилятор C и его ключи
 QMAKE_CC = arm-none-eabi-gcc
 QMAKE_CFLAGS += -Wall
 QMAKE_CFLAGS += -mcpu=cortex-m3
 QMAKE_CFLAGS += -mthumb
-QMAKE_CFLAGS += -D__HEAP_SIZE=0x0000
-QMAKE_CFLAGS += -D__STACK_SIZE=0x0100
+QMAKE_CFLAGS += -D__HEAP_SIZE=0x0C00
+QMAKE_CFLAGS += -D__STACK_SIZE=0x0400
 QMAKE_CFLAGS += -mfloat-abi=soft
 QMAKE_CFLAGS += -fno-strict-aliasing
 QMAKE_CFLAGS += -fdata-sections
