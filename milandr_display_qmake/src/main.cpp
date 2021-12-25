@@ -18,9 +18,9 @@
 #include <string>
 //=================================
 int main (int argc, char** argv) {
-//    std::vector<int> aa;
-//    aa.push_back(11);
-//    std::string ss{"1111"};
+    std::vector<int> aa;
+    aa.push_back(11);
+    std::string ss{"1111"};
 	__disable_irq();
 	//SysTick_init();
 	RCC_init();

@@ -1,6 +1,6 @@
 CXX		= arm-none-eabi-g++
 CC		= arm-none-eabi-gcc
-LD		= arm-none-eabi-gcc
+LD		= arm-none-eabi-g++
 OBJCOPY		= arm-none-eabi-objcopy
 SIZE		= arm-none-eabi-size
 STFLASH		= st-flash
@@ -40,6 +40,7 @@ CFLAGS = \
     -Wall \
     -mcpu=cortex-m3 \
     -mthumb \
+    -Os \
     -D__HEAP_SIZE=0x0000 \
     -D__STACK_SIZE=0x0100 \
     -mfloat-abi=soft \
@@ -63,7 +64,7 @@ TARGET	= $(OUTPUT_DIR)/$(TARGET_BINARY)
 
 LIBS = -lm
 
-CXXFLAGS = -O3 -o prog -rdynamic -D_GNU_SOURCE -L./libmine
+CXXFLAGS = -O3 -std=c++17 -stdlib=libc++ -o prog -rdynamic -D_GNU_SOURCE -L./libmine
 #LIBS += -lpthread -ldl
 
 
