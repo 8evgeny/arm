@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="display_Cmake"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CMSIS">
+				<Option output="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/libCMSIS.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 CMSIS"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CMSIS/fast">
+				<Option output="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/libCMSIS.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 CMSIS/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="display_Cmake.elf">
+				<Option output="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/display_Cmake.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/CoreSupport/CM3"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc/USB_Library"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/MDR32Fx/inc"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 display_Cmake.elf"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="display_Cmake.elf/fast">
+				<Option output="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/display_Cmake.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/CoreSupport/CM3"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc/USB_Library"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/MDR32Fx/inc"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src"/>
+					<Add directory="/home/evg/SOFT/Github/Arm/milandr_display_cmake/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 display_Cmake.elf/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/evg/SOFT/Github/Arm/milandr_display_cmake/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/system_MDR32F9Qx.c">
+			<Option target="CMSIS"/>
+		</Unit>
+		<Unit filename="/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/system_MDR32F9Qx.h">
+			<Option target="CMSIS"/>
+		</Unit>
+		<Unit filename="/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/MDR32F9Qx_iwdg.c">
+			<Option target="CMSIS"/>
+		</Unit>
+		<Unit filename="/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/MDR32F9Qx_port.c">
+			<Option target="CMSIS"/>
+		</Unit>
+		<Unit filename="/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/MDR32F9Qx_rst_clk.c">
+			<Option target="CMSIS"/>
+		</Unit>
+		<Unit filename="/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/MDR32F9Qx_timer.c">
+			<Option target="CMSIS"/>
+		</Unit>
+		<Unit filename="/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/MDR32F9Qx_usb.c">
+			<Option target="CMSIS"/>
+		</Unit>
+		<Unit filename="/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/USB_Library/MDR32F9Qx_usb_CDC.c">
+			<Option target="CMSIS"/>
+		</Unit>
+		<Unit filename="/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/USB_Library/MDR32F9Qx_usb_device.c">
+			<Option target="CMSIS"/>
+		</Unit>
+		<Unit filename="/home/evg/SOFT/Github/Arm/milandr_display_cmake/src/main.cpp">
+			<Option target="display_Cmake.elf"/>
+		</Unit>
+		<Unit filename="/home/evg/SOFT/Github/Arm/milandr_display_cmake/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

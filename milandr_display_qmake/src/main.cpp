@@ -7,13 +7,15 @@
 #include "MDR32F9Qx_port.h"
 #include "MDR32F9Qx_timer.h"
 #include "MDR32F9Qx_iwdg.h"
+
 //---------------------------------
 #include "MDR32F9Qx_config.h"
 #include "MDR32F9Qx_usb_handlers.h"
 //---------------------------------
 #include "gpio.h"
 #include "main.h"
-//#include <string>
+#include <string>
+
 //=================================
 int main (int argc, char** argv) {
 	__disable_irq();
@@ -25,6 +27,7 @@ int main (int argc, char** argv) {
 	LCD_init();
 	START_logic();
 	IWDT_init();
+    std::string www = "qwertyu";
 	//-------------------------------
 	uint8_t Buffer[32];
 	VCom_Configuration();

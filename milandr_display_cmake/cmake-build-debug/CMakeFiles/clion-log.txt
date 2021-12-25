@@ -1,0 +1,8 @@
+/home/evg/CLion/clion-2020.1.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/evg/SOFT/Github/Arm/milandr_display_cmake
+CMAKE_SOURCE_DIR /home/evg/SOFT/Github/Arm/milandr_display_cmake
+-- Configuring done
+CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
+Missing variable is:
+CMAKE_CXX_LINK_EXECUTABLE
+-- Generating done
+CMake Generate step failed.  Build files cannot be regenerated correctly.

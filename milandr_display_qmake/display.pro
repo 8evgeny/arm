@@ -86,3 +86,6 @@ HEADERS += $$files(./include/*.h)
 
 # Исходники проекта
 SOURCES += $$files(./src/*.c)
+SOURCES += $$files(./src/*.cpp)
+
+unix:!macx: LIBS += -lcc1
