@@ -1,0 +1,842 @@
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+# 1 "CMakeCCompilerId.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "CMakeCCompilerId.c"
+# 321 "CMakeCCompilerId.c"
+char const* info_compiler = "INFO" ":" "compiler[" "GNU" "]";
+# 567 "CMakeCCompilerId.c"
+char const info_version[] = {
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  ('0' + (((10) / 10000000)%10)), ('0' + (((10) / 1000000)%10)), ('0' + (((10) / 100000)%10)), ('0' + (((10) / 10000)%10)), ('0' + (((10) / 1000)%10)), ('0' + (((10) / 100)%10)), ('0' + (((10) / 10)%10)), ('0' + ((10) % 10)),
+
+  '.', ('0' + (((3) / 10000000)%10)), ('0' + (((3) / 1000000)%10)), ('0' + (((3) / 100000)%10)), ('0' + (((3) / 10000)%10)), ('0' + (((3) / 1000)%10)), ('0' + (((3) / 100)%10)), ('0' + (((3) / 10)%10)), ('0' + ((3) % 10)),
+
+   '.', ('0' + (((1) / 10000000)%10)), ('0' + (((1) / 1000000)%10)), ('0' + (((1) / 100000)%10)), ('0' + (((1) / 10000)%10)), ('0' + (((1) / 1000)%10)), ('0' + (((1) / 100)%10)), ('0' + (((1) / 10)%10)), ('0' + ((1) % 10)),
+
+
+
+
+
+  ']','\0'};
+# 614 "CMakeCCompilerId.c"
+char const* info_platform = "INFO" ":" "platform[" "]";
+char const* info_arch = "INFO" ":" "arch[" "]";
+# 634 "CMakeCCompilerId.c"
+const char* info_language_dialect_default =
+  "INFO" ":" "dialect_default[" "11" "]";
+# 645 "CMakeCCompilerId.c"
+int main(int argc, char* argv[])
+
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
+
+  require += info_version[argc];
+# 667 "CMakeCCompilerId.c"
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
+}
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-none-eabi-cpp: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+# 1 "CMakeCCompilerId.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "CMakeCCompilerId.c"
+# 321 "CMakeCCompilerId.c"
+char const* info_compiler = "INFO" ":" "compiler[" "GNU" "]";
+# 567 "CMakeCCompilerId.c"
+char const info_version[] = {
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  ('0' + (((10) / 10000000)%10)), ('0' + (((10) / 1000000)%10)), ('0' + (((10) / 100000)%10)), ('0' + (((10) / 10000)%10)), ('0' + (((10) / 1000)%10)), ('0' + (((10) / 100)%10)), ('0' + (((10) / 10)%10)), ('0' + ((10) % 10)),
+
+  '.', ('0' + (((3) / 10000000)%10)), ('0' + (((3) / 1000000)%10)), ('0' + (((3) / 100000)%10)), ('0' + (((3) / 10000)%10)), ('0' + (((3) / 1000)%10)), ('0' + (((3) / 100)%10)), ('0' + (((3) / 10)%10)), ('0' + ((3) % 10)),
+
+   '.', ('0' + (((1) / 10000000)%10)), ('0' + (((1) / 1000000)%10)), ('0' + (((1) / 100000)%10)), ('0' + (((1) / 10000)%10)), ('0' + (((1) / 1000)%10)), ('0' + (((1) / 100)%10)), ('0' + (((1) / 10)%10)), ('0' + ((1) % 10)),
+
+
+
+
+
+  ']','\0'};
+# 614 "CMakeCCompilerId.c"
+char const* info_platform = "INFO" ":" "platform[" "]";
+char const* info_arch = "INFO" ":" "arch[" "]";
+# 634 "CMakeCCompilerId.c"
+const char* info_language_dialect_default =
+  "INFO" ":" "dialect_default[" "11" "]";
+# 645 "CMakeCCompilerId.c"
+int main(int argc, char* argv[])
+
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
+
+  require += info_version[argc];
+# 667 "CMakeCCompilerId.c"
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
+}
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-none-eabi-cpp: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2a073/fast && /usr/bin/make -f CMakeFiles/cmTC_2a073.dir/build.make CMakeFiles/cmTC_2a073.dir/build
+make[1]: вход в каталог «/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_2a073.dir/testCCompiler.c.o
+/home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp    -o CMakeFiles/cmTC_2a073.dir/testCCompiler.c.o   -c /home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp/testCCompiler.c
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_2a073.dir/build.make:66: CMakeFiles/cmTC_2a073.dir/testCCompiler.c.o] Ошибка 1
+make[1]: выход из каталога «/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp»
+make: *** [Makefile:121: cmTC_2a073/fast] Ошибка 2
+
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+# 1 "CMakeCCompilerId.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "CMakeCCompilerId.c"
+# 321 "CMakeCCompilerId.c"
+char const* info_compiler = "INFO" ":" "compiler[" "GNU" "]";
+# 567 "CMakeCCompilerId.c"
+char const info_version[] = {
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  ('0' + (((10) / 10000000)%10)), ('0' + (((10) / 1000000)%10)), ('0' + (((10) / 100000)%10)), ('0' + (((10) / 10000)%10)), ('0' + (((10) / 1000)%10)), ('0' + (((10) / 100)%10)), ('0' + (((10) / 10)%10)), ('0' + ((10) % 10)),
+
+  '.', ('0' + (((3) / 10000000)%10)), ('0' + (((3) / 1000000)%10)), ('0' + (((3) / 100000)%10)), ('0' + (((3) / 10000)%10)), ('0' + (((3) / 1000)%10)), ('0' + (((3) / 100)%10)), ('0' + (((3) / 10)%10)), ('0' + ((3) % 10)),
+
+   '.', ('0' + (((1) / 10000000)%10)), ('0' + (((1) / 1000000)%10)), ('0' + (((1) / 100000)%10)), ('0' + (((1) / 10000)%10)), ('0' + (((1) / 1000)%10)), ('0' + (((1) / 100)%10)), ('0' + (((1) / 10)%10)), ('0' + ((1) % 10)),
+
+
+
+
+
+  ']','\0'};
+# 614 "CMakeCCompilerId.c"
+char const* info_platform = "INFO" ":" "platform[" "]";
+char const* info_arch = "INFO" ":" "arch[" "]";
+# 634 "CMakeCCompilerId.c"
+const char* info_language_dialect_default =
+  "INFO" ":" "dialect_default[" "11" "]";
+# 645 "CMakeCCompilerId.c"
+int main(int argc, char* argv[])
+
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
+
+  require += info_version[argc];
+# 667 "CMakeCCompilerId.c"
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
+}
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-none-eabi-cpp: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+# 1 "CMakeCCompilerId.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "CMakeCCompilerId.c"
+# 321 "CMakeCCompilerId.c"
+char const* info_compiler = "INFO" ":" "compiler[" "GNU" "]";
+# 567 "CMakeCCompilerId.c"
+char const info_version[] = {
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  ('0' + (((10) / 10000000)%10)), ('0' + (((10) / 1000000)%10)), ('0' + (((10) / 100000)%10)), ('0' + (((10) / 10000)%10)), ('0' + (((10) / 1000)%10)), ('0' + (((10) / 100)%10)), ('0' + (((10) / 10)%10)), ('0' + ((10) % 10)),
+
+  '.', ('0' + (((3) / 10000000)%10)), ('0' + (((3) / 1000000)%10)), ('0' + (((3) / 100000)%10)), ('0' + (((3) / 10000)%10)), ('0' + (((3) / 1000)%10)), ('0' + (((3) / 100)%10)), ('0' + (((3) / 10)%10)), ('0' + ((3) % 10)),
+
+   '.', ('0' + (((1) / 10000000)%10)), ('0' + (((1) / 1000000)%10)), ('0' + (((1) / 100000)%10)), ('0' + (((1) / 10000)%10)), ('0' + (((1) / 1000)%10)), ('0' + (((1) / 100)%10)), ('0' + (((1) / 10)%10)), ('0' + ((1) % 10)),
+
+
+
+
+
+  ']','\0'};
+# 614 "CMakeCCompilerId.c"
+char const* info_platform = "INFO" ":" "platform[" "]";
+char const* info_arch = "INFO" ":" "arch[" "]";
+# 634 "CMakeCCompilerId.c"
+const char* info_language_dialect_default =
+  "INFO" ":" "dialect_default[" "11" "]";
+# 645 "CMakeCCompilerId.c"
+int main(int argc, char* argv[])
+
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
+
+  require += info_version[argc];
+# 667 "CMakeCCompilerId.c"
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
+}
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-none-eabi-cpp: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Determining if the C compiler works failed with the following output:
+Change Dir: /home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_42a8c/fast && /usr/bin/make -f CMakeFiles/cmTC_42a8c.dir/build.make CMakeFiles/cmTC_42a8c.dir/build
+make[1]: вход в каталог «/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_42a8c.dir/testCCompiler.c.o
+/home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp    -o CMakeFiles/cmTC_42a8c.dir/testCCompiler.c.o   -c /home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp/testCCompiler.c
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_42a8c.dir/build.make:66: CMakeFiles/cmTC_42a8c.dir/testCCompiler.c.o] Ошибка 1
+make[1]: выход из каталога «/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp»
+make: *** [Makefile:121: cmTC_42a8c/fast] Ошибка 2
+
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+# 1 "CMakeCCompilerId.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "CMakeCCompilerId.c"
+# 321 "CMakeCCompilerId.c"
+char const* info_compiler = "INFO" ":" "compiler[" "GNU" "]";
+# 567 "CMakeCCompilerId.c"
+char const info_version[] = {
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  ('0' + (((10) / 10000000)%10)), ('0' + (((10) / 1000000)%10)), ('0' + (((10) / 100000)%10)), ('0' + (((10) / 10000)%10)), ('0' + (((10) / 1000)%10)), ('0' + (((10) / 100)%10)), ('0' + (((10) / 10)%10)), ('0' + ((10) % 10)),
+
+  '.', ('0' + (((3) / 10000000)%10)), ('0' + (((3) / 1000000)%10)), ('0' + (((3) / 100000)%10)), ('0' + (((3) / 10000)%10)), ('0' + (((3) / 1000)%10)), ('0' + (((3) / 100)%10)), ('0' + (((3) / 10)%10)), ('0' + ((3) % 10)),
+
+   '.', ('0' + (((1) / 10000000)%10)), ('0' + (((1) / 1000000)%10)), ('0' + (((1) / 100000)%10)), ('0' + (((1) / 10000)%10)), ('0' + (((1) / 1000)%10)), ('0' + (((1) / 100)%10)), ('0' + (((1) / 10)%10)), ('0' + ((1) % 10)),
+
+
+
+
+
+  ']','\0'};
+# 614 "CMakeCCompilerId.c"
+char const* info_platform = "INFO" ":" "platform[" "]";
+char const* info_arch = "INFO" ":" "arch[" "]";
+# 634 "CMakeCCompilerId.c"
+const char* info_language_dialect_default =
+  "INFO" ":" "dialect_default[" "11" "]";
+# 645 "CMakeCCompilerId.c"
+int main(int argc, char* argv[])
+
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
+
+  require += info_version[argc];
+# 667 "CMakeCCompilerId.c"
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
+}
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-none-eabi-cpp: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+# 1 "CMakeCCompilerId.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "CMakeCCompilerId.c"
+# 321 "CMakeCCompilerId.c"
+char const* info_compiler = "INFO" ":" "compiler[" "GNU" "]";
+# 567 "CMakeCCompilerId.c"
+char const info_version[] = {
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  ('0' + (((10) / 10000000)%10)), ('0' + (((10) / 1000000)%10)), ('0' + (((10) / 100000)%10)), ('0' + (((10) / 10000)%10)), ('0' + (((10) / 1000)%10)), ('0' + (((10) / 100)%10)), ('0' + (((10) / 10)%10)), ('0' + ((10) % 10)),
+
+  '.', ('0' + (((3) / 10000000)%10)), ('0' + (((3) / 1000000)%10)), ('0' + (((3) / 100000)%10)), ('0' + (((3) / 10000)%10)), ('0' + (((3) / 1000)%10)), ('0' + (((3) / 100)%10)), ('0' + (((3) / 10)%10)), ('0' + ((3) % 10)),
+
+   '.', ('0' + (((1) / 10000000)%10)), ('0' + (((1) / 1000000)%10)), ('0' + (((1) / 100000)%10)), ('0' + (((1) / 10000)%10)), ('0' + (((1) / 1000)%10)), ('0' + (((1) / 100)%10)), ('0' + (((1) / 10)%10)), ('0' + ((1) % 10)),
+
+
+
+
+
+  ']','\0'};
+# 614 "CMakeCCompilerId.c"
+char const* info_platform = "INFO" ":" "platform[" "]";
+char const* info_arch = "INFO" ":" "arch[" "]";
+# 634 "CMakeCCompilerId.c"
+const char* info_language_dialect_default =
+  "INFO" ":" "dialect_default[" "11" "]";
+# 645 "CMakeCCompilerId.c"
+int main(int argc, char* argv[])
+
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
+
+  require += info_version[argc];
+# 667 "CMakeCCompilerId.c"
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
+}
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-none-eabi-cpp: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+# 1 "CMakeCCompilerId.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "CMakeCCompilerId.c"
+# 321 "CMakeCCompilerId.c"
+char const* info_compiler = "INFO" ":" "compiler[" "GNU" "]";
+# 567 "CMakeCCompilerId.c"
+char const info_version[] = {
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  ('0' + (((10) / 10000000)%10)), ('0' + (((10) / 1000000)%10)), ('0' + (((10) / 100000)%10)), ('0' + (((10) / 10000)%10)), ('0' + (((10) / 1000)%10)), ('0' + (((10) / 100)%10)), ('0' + (((10) / 10)%10)), ('0' + ((10) % 10)),
+
+  '.', ('0' + (((3) / 10000000)%10)), ('0' + (((3) / 1000000)%10)), ('0' + (((3) / 100000)%10)), ('0' + (((3) / 10000)%10)), ('0' + (((3) / 1000)%10)), ('0' + (((3) / 100)%10)), ('0' + (((3) / 10)%10)), ('0' + ((3) % 10)),
+
+   '.', ('0' + (((1) / 10000000)%10)), ('0' + (((1) / 1000000)%10)), ('0' + (((1) / 100000)%10)), ('0' + (((1) / 10000)%10)), ('0' + (((1) / 1000)%10)), ('0' + (((1) / 100)%10)), ('0' + (((1) / 10)%10)), ('0' + ((1) % 10)),
+
+
+
+
+
+  ']','\0'};
+# 614 "CMakeCCompilerId.c"
+char const* info_platform = "INFO" ":" "platform[" "]";
+char const* info_arch = "INFO" ":" "arch[" "]";
+# 634 "CMakeCCompilerId.c"
+const char* info_language_dialect_default =
+  "INFO" ":" "dialect_default[" "11" "]";
+# 645 "CMakeCCompilerId.c"
+int main(int argc, char* argv[])
+
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
+
+  require += info_version[argc];
+# 667 "CMakeCCompilerId.c"
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
+}
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-none-eabi-cpp: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+# 1 "CMakeCCompilerId.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "CMakeCCompilerId.c"
+# 321 "CMakeCCompilerId.c"
+char const* info_compiler = "INFO" ":" "compiler[" "GNU" "]";
+# 567 "CMakeCCompilerId.c"
+char const info_version[] = {
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  ('0' + (((10) / 10000000)%10)), ('0' + (((10) / 1000000)%10)), ('0' + (((10) / 100000)%10)), ('0' + (((10) / 10000)%10)), ('0' + (((10) / 1000)%10)), ('0' + (((10) / 100)%10)), ('0' + (((10) / 10)%10)), ('0' + ((10) % 10)),
+
+  '.', ('0' + (((3) / 10000000)%10)), ('0' + (((3) / 1000000)%10)), ('0' + (((3) / 100000)%10)), ('0' + (((3) / 10000)%10)), ('0' + (((3) / 1000)%10)), ('0' + (((3) / 100)%10)), ('0' + (((3) / 10)%10)), ('0' + ((3) % 10)),
+
+   '.', ('0' + (((1) / 10000000)%10)), ('0' + (((1) / 1000000)%10)), ('0' + (((1) / 100000)%10)), ('0' + (((1) / 10000)%10)), ('0' + (((1) / 1000)%10)), ('0' + (((1) / 100)%10)), ('0' + (((1) / 10)%10)), ('0' + ((1) % 10)),
+
+
+
+
+
+  ']','\0'};
+# 614 "CMakeCCompilerId.c"
+char const* info_platform = "INFO" ":" "platform[" "]";
+char const* info_arch = "INFO" ":" "arch[" "]";
+# 634 "CMakeCCompilerId.c"
+const char* info_language_dialect_default =
+  "INFO" ":" "dialect_default[" "11" "]";
+# 645 "CMakeCCompilerId.c"
+int main(int argc, char* argv[])
+
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
+
+  require += info_version[argc];
+# 667 "CMakeCCompilerId.c"
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
+}
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-none-eabi-cpp: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Determining if the C compiler works failed with the following output:
+Change Dir: /home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_87bdf/fast && /usr/bin/make -f CMakeFiles/cmTC_87bdf.dir/build.make CMakeFiles/cmTC_87bdf.dir/build
+make[1]: вход в каталог «/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_87bdf.dir/testCCompiler.c.o
+/home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp    -o CMakeFiles/cmTC_87bdf.dir/testCCompiler.c.o   -c /home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp/testCCompiler.c
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_87bdf.dir/build.make:66: CMakeFiles/cmTC_87bdf.dir/testCCompiler.c.o] Ошибка 1
+make[1]: выход из каталога «/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp»
+make: *** [Makefile:121: cmTC_87bdf/fast] Ошибка 2
+
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+# 1 "CMakeCCompilerId.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "CMakeCCompilerId.c"
+# 321 "CMakeCCompilerId.c"
+char const* info_compiler = "INFO" ":" "compiler[" "GNU" "]";
+# 567 "CMakeCCompilerId.c"
+char const info_version[] = {
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  ('0' + (((10) / 10000000)%10)), ('0' + (((10) / 1000000)%10)), ('0' + (((10) / 100000)%10)), ('0' + (((10) / 10000)%10)), ('0' + (((10) / 1000)%10)), ('0' + (((10) / 100)%10)), ('0' + (((10) / 10)%10)), ('0' + ((10) % 10)),
+
+  '.', ('0' + (((3) / 10000000)%10)), ('0' + (((3) / 1000000)%10)), ('0' + (((3) / 100000)%10)), ('0' + (((3) / 10000)%10)), ('0' + (((3) / 1000)%10)), ('0' + (((3) / 100)%10)), ('0' + (((3) / 10)%10)), ('0' + ((3) % 10)),
+
+   '.', ('0' + (((1) / 10000000)%10)), ('0' + (((1) / 1000000)%10)), ('0' + (((1) / 100000)%10)), ('0' + (((1) / 10000)%10)), ('0' + (((1) / 1000)%10)), ('0' + (((1) / 100)%10)), ('0' + (((1) / 10)%10)), ('0' + ((1) % 10)),
+
+
+
+
+
+  ']','\0'};
+# 614 "CMakeCCompilerId.c"
+char const* info_platform = "INFO" ":" "platform[" "]";
+char const* info_arch = "INFO" ":" "arch[" "]";
+# 634 "CMakeCCompilerId.c"
+const char* info_language_dialect_default =
+  "INFO" ":" "dialect_default[" "11" "]";
+# 645 "CMakeCCompilerId.c"
+int main(int argc, char* argv[])
+
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
+
+  require += info_version[argc];
+# 667 "CMakeCCompilerId.c"
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
+}
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-none-eabi-cpp: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+# 1 "CMakeCCompilerId.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "CMakeCCompilerId.c"
+# 321 "CMakeCCompilerId.c"
+char const* info_compiler = "INFO" ":" "compiler[" "GNU" "]";
+# 567 "CMakeCCompilerId.c"
+char const info_version[] = {
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  ('0' + (((10) / 10000000)%10)), ('0' + (((10) / 1000000)%10)), ('0' + (((10) / 100000)%10)), ('0' + (((10) / 10000)%10)), ('0' + (((10) / 1000)%10)), ('0' + (((10) / 100)%10)), ('0' + (((10) / 10)%10)), ('0' + ((10) % 10)),
+
+  '.', ('0' + (((3) / 10000000)%10)), ('0' + (((3) / 1000000)%10)), ('0' + (((3) / 100000)%10)), ('0' + (((3) / 10000)%10)), ('0' + (((3) / 1000)%10)), ('0' + (((3) / 100)%10)), ('0' + (((3) / 10)%10)), ('0' + ((3) % 10)),
+
+   '.', ('0' + (((1) / 10000000)%10)), ('0' + (((1) / 1000000)%10)), ('0' + (((1) / 100000)%10)), ('0' + (((1) / 10000)%10)), ('0' + (((1) / 1000)%10)), ('0' + (((1) / 100)%10)), ('0' + (((1) / 10)%10)), ('0' + ((1) % 10)),
+
+
+
+
+
+  ']','\0'};
+# 614 "CMakeCCompilerId.c"
+char const* info_platform = "INFO" ":" "platform[" "]";
+char const* info_arch = "INFO" ":" "arch[" "]";
+# 634 "CMakeCCompilerId.c"
+const char* info_language_dialect_default =
+  "INFO" ":" "dialect_default[" "11" "]";
+# 645 "CMakeCCompilerId.c"
+int main(int argc, char* argv[])
+
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
+  require += info_arch[argc];
+
+  require += info_version[argc];
+# 667 "CMakeCCompilerId.c"
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
+}
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" did not produce an executable in "/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/3.16.3/CompilerIdC".
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-none-eabi-cpp: error: unrecognized command-line option '--target=arm-arm-none-eabi'
+
+
+Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Determining if the C compiler works failed with the following output:
+Change Dir: /home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7055d/fast && /usr/bin/make -f CMakeFiles/cmTC_7055d.dir/build.make CMakeFiles/cmTC_7055d.dir/build
+make[1]: вход в каталог «/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_7055d.dir/testCCompiler.c.o
+/home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-cpp    -o CMakeFiles/cmTC_7055d.dir/testCCompiler.c.o   -c /home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp/testCCompiler.c
+arm-none-eabi-cpp: fatal error: '-c' is not a valid option to the preprocessor
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_7055d.dir/build.make:66: CMakeFiles/cmTC_7055d.dir/testCCompiler.c.o] Ошибка 1
+make[1]: выход из каталога «/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/CMakeTmp»
+make: *** [Makefile:121: cmTC_7055d/fast] Ошибка 2
+
+
+
