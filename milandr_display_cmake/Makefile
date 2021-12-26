@@ -1,6 +1,6 @@
 CXX		= arm-none-eabi-g++
 CC		= arm-none-eabi-gcc
-LD		= arm-none-eabi-g++
+LD		= arm-none-eabi-gcc
 OBJCOPY		= arm-none-eabi-objcopy
 SIZE		= arm-none-eabi-size
 STFLASH		= st-flash
@@ -40,7 +40,6 @@ CFLAGS = \
     -Wall \
     -mcpu=cortex-m3 \
     -mthumb \
-    -Os \
     -D__HEAP_SIZE=0x0000 \
     -D__STACK_SIZE=0x0100 \
     -mfloat-abi=soft \
@@ -64,7 +63,7 @@ TARGET	= $(OUTPUT_DIR)/$(TARGET_BINARY)
 
 LIBS = -lm
 
-CXXFLAGS = -O3 -std=c++17 -stdlib=libc++ -o prog -rdynamic -D_GNU_SOURCE -L./libmine
+CXXFLAGS = -O3 -o prog -rdynamic -D_GNU_SOURCE -L./libmine
 #LIBS += -lpthread -ldl
 
 
@@ -97,8 +96,7 @@ INCLUDES = \
 -I./include 
 
 #STARUPFILE = ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/startup_MDR32F9Qx.S
-#STARUPFILE = startup/startup_stm32f10x_md.S
-STARUPFILE = startup/startup_ARMCM3.S
+STARUPFILE = startup/startup_stm32f10x_md.S
 
 SOURCES_SPL = \
 MDR32F9Qx_iwdg.c \
@@ -133,8 +131,7 @@ OBJECTS += $(STARTUPOBJ)
 
 DEPS = $(OBJECTS:.o=.d)
 
-#all: release
-all: debug
+all: release
 
 release: LDFLAGS+=$(LDFLAGS_RELEASE)
 release: CFLAGS+=$(CDFLAGS_RELEASE)
