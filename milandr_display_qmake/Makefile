@@ -97,7 +97,8 @@ INCLUDES = \
 -I./include 
 
 #STARUPFILE = ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/startup_MDR32F9Qx.S
-STARUPFILE = startup/startup_stm32f10x_md.S
+#STARUPFILE = startup/startup_stm32f10x_md.S
+STARUPFILE = startup/startup_ARMCM3.S
 
 SOURCES_SPL = \
 MDR32F9Qx_iwdg.c \

@@ -44,13 +44,13 @@ QMAKE_CFLAGS += -ffunction-sections
 #QMAKE_CFLAGS += -fshort-wchar
 
 #Компилятор C++ и его ключи
-QMAKE_CXX = arm-none-eabi-gcc
+QMAKE_CXX = arm-none-eabi-g++
 #QMAKE_CXXFLAGS +=
 #QMAKE_CXXFLAGS +=
 #QMAKE_CXXFLAGS +=
 
 #задаем компоновщик и его ключи
-QMAKE_LINK = arm-none-eabi-gcc
+QMAKE_LINK = arm-none-eabi-g++
 QMAKE_LFLAGS += --specs=nosys.specs
 QMAKE_LFLAGS += --specs=nano.specs
 QMAKE_LFLAGS += -mcpu=cortex-m3
@@ -65,6 +65,10 @@ QMAKE_LFLAGS += -Wl,--gc-sections
 #QMAKE_LFLAGS += -Wl,-script="./hardware/stm32f103c8_flash.ld"
 #QMAKE_LFLAGS += -Wl,-Map=$(TARGET).map
 #QMAKE_LFLAGS += -u _printf_float
+
+QMAKE_O
+
+
 
 QMAKE_LIBS += -lm
 
