@@ -66,8 +66,6 @@ QMAKE_LFLAGS += -Wl,--gc-sections
 #QMAKE_LFLAGS += -Wl,-Map=$(TARGET).map
 #QMAKE_LFLAGS += -u _printf_float
 
-QMAKE_O
-
 
 
 QMAKE_LIBS += -lm
