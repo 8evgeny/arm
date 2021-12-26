@@ -133,7 +133,8 @@ OBJECTS += $(STARTUPOBJ)
 
 DEPS = $(OBJECTS:.o=.d)
 
-all: release
+#all: release
+all: debug
 
 release: LDFLAGS+=$(LDFLAGS_RELEASE)
 release: CFLAGS+=$(CDFLAGS_RELEASE)
