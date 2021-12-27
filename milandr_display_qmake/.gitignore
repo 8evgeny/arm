@@ -2,3 +2,4 @@ bin/
 obj/
 MDR1986BExx/
 *.pro.user.*
+*.pro.user

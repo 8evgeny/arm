@@ -1,8 +1,8 @@
-CXX		= arm-none-eabi-g++
-CC		= arm-none-eabi-gcc
-LD		= arm-none-eabi-g++
-OBJCOPY		= arm-none-eabi-objcopy
-SIZE		= arm-none-eabi-size
+CXX		= /home/evgeny/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+CC		= /home/evgeny/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
+LD		= /home/evgeny/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+OBJCOPY		= /home/evgeny/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-objcopy
+SIZE		= /home/evgeny/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-size
 STFLASH		= st-flash
 OPENOCD		= openocd
 STUTIL		= st-flash
@@ -133,8 +133,8 @@ OBJECTS += $(STARTUPOBJ)
 
 DEPS = $(OBJECTS:.o=.d)
 
-#all: release
-all: debug
+all: release
+# all: debug
 
 release: LDFLAGS+=$(LDFLAGS_RELEASE)
 release: CFLAGS+=$(CDFLAGS_RELEASE)
