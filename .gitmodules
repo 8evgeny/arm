@@ -1,9 +1,0 @@
-[submodule "CMSIS Version 5"]
-	path = CMSIS Version 5
-	url = ../../ARM-software/CMSIS_5.git
-[submodule "Documentation to Milandr MCU 1986x Standard Peripherals Library"]
-	path = Documentation to Milandr MCU 1986x Standard Peripherals Library
-	url = ../../eldarkg/emdr1986x-std-per-lib-doc.git
-[submodule "Milandr MCU 1986x Standard Peripherals Library"]
-	path = Milandr MCU 1986x Standard Peripherals Library
-	url = ../../eldarkg/emdr1986x-std-per-lib.git
