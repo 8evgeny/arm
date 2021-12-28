@@ -1,8 +1,8 @@
-CXX		= /home/evgeny/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
-CC		= /home/evgeny/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
-LD		= /home/evgeny/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
-OBJCOPY		= /home/evgeny/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-objcopy
-SIZE		= /home/evgeny/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-size
+CXX		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+CC		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
+LD		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+OBJCOPY		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-objcopy
+SIZE		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-size
 STFLASH		= st-flash
 OPENOCD		= openocd
 STUTIL		= st-flash
