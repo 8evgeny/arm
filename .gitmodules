@@ -7,3 +7,6 @@
 [submodule "Stm32Qt_qbs3"]
 	path = Stm32Qt_qbs3
 	url = ../../qbs/qbs.git
+[submodule "QBS"]
+	path = QBS
+	url = ../../qbs/qbs.git
