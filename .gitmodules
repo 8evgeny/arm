@@ -4,3 +4,6 @@
 [submodule "Stm32Qt_qbs2"]
 	path = Stm32Qt_qbs2
 	url = ../../mcuby/template-qbs-stm32f746g-disco.git
+[submodule "Stm32Qt_qbs3"]
+	path = Stm32Qt_qbs3
+	url = ../../qbs/qbs.git
