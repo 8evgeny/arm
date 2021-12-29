@@ -1,0 +1,3 @@
+[submodule "Stm32Qt+qbs"]
+	path = Stm32Qt+qbs
+	url = ../../alekseysidorov/te-stm32f407-qbs-template.git
