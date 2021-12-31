@@ -62,7 +62,7 @@ set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE CXX)
 
 add_library(CMSIS ${SOURCES_SPL} ${SOURCES_USB} ${SOURCES_DEVICE_SUPPORT})
 
-target_include_directories(${PROJECT_NAME}.elf PUBLIC
+include_directories(
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/CoreSupport/CM3
