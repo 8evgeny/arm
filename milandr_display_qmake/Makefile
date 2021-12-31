@@ -6,11 +6,11 @@
 # SIZE		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-size
 
 # дома
-CXX		= /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
-CC		= /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
-LD		= /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
-OBJCOPY		= /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-objcopy
-SIZE		= /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-size
+CXX		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-g++
+CC		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-gcc
+LD		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-g++
+OBJCOPY		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-objcopy
+SIZE		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-size
 
 STFLASH		= st-flash
 OPENOCD		= openocd

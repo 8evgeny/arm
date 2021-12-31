@@ -1,0 +1,2 @@
+/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/rebuild_cache.dir
+/home/evg/SOFT/Github/Arm/milandr_display_cmake/build/CMakeFiles/edit_cache.dir
