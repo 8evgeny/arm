@@ -4,3 +4,4 @@ MDR1986BExx/
 *.pro.user.*
 CMakeLists.txt.user
 build/
+CMakeLists.txt.user
