@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.15.1, 2021-12-31T15:04:31. -->
+<!-- Written by QtCreator 4.15.1, 2021-12-31T16:30:10. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -103,17 +103,16 @@
     <value type="QString" key="CMake.Initial.Parameters">-GUnix Makefiles
 -DCMAKE_BUILD_TYPE:STRING=Debug
 -DCMAKE_PROJECT_INCLUDE_BEFORE:PATH=%{IDE:ResourcePath}/package-manager/auto-setup.cmake
--DQT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}
--DCMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}
--DCMAKE_C_COMPILER:STRING=%{Compiler:Executable:C}
--DCMAKE_CXX_COMPILER:STRING=%{Compiler:Executable:Cxx}</value>
+-DCMAKE_C_COMPILER=/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-gcc
+-DCMAKE_CXX_COMPILER=/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-g++
+-DCMAKE_AR=/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-ar
+-DCMAKE_LINKER=/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-ld</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/evg/SOFT/Github/Arm/milandr_display_cmake/build</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
        <value type="QString">all</value>
       </valuelist>
-      <value type="QString" key="CMakeProjectManager.MakeStep.CMakeArguments">--toolchain /home/evg/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin</value>
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Сборка</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
