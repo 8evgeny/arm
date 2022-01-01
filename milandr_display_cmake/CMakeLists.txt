@@ -30,16 +30,13 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -D__STARTUP_CLEAR_BSS \
     -D__START=main \
     --specs=nosys.specs \
+    --specs=nano.specs \
     -fno-exceptions \
     -D__HEAP_SIZE=0x0C00 \
     -D__STACK_SIZE=0x0400 \
     -mfloat-abi=soft \
     -fno-strict-aliasing \
     ")
-
-#-DUSE_MDR1986VE9x -D__STARTUP_CLEAR_BSS -D__START=main
-#CFLAGS = -mcpu=cortex-m3 -mthumb -O2 -ffunction-sections -fdata-sections -Wall -Wextra -Wshadow -Wredundant-decls -Wno-missing-field-initializers -Wconversion -Wno-packed-bitfield-compat -pipe
-
 #-nostdli
 #-xc
 #-std=c99
@@ -52,6 +49,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     --specs=nosys.specs \
+    --specs=nano.specs \
     -mcpu=cortex-m3 \
     -mthumb -std=c++17 \
     -O3 \
@@ -68,7 +66,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
 #-rdynamic
 #-nostdlib
 set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
-    --specs=nosys.specs \
     -Wl,-Map=${PROJECT_NAME}.map \
     -Wl,--gc-sections \
     -ffunction-sections \
@@ -81,6 +78,7 @@ set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
     -mcpu=cortex-m3 \
     -T std-per-lib/../Milandr MCU 1986x Standard Peripherals Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
     --specs=nosys.specs \
+    --specs=nano.specs \
     -Wl,--gc-sections \
     -ffreestanding \
     -nostartfiles \
