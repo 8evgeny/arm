@@ -85,9 +85,6 @@ set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
     -Wl,-Map=example.map
     ")
 
-#add_definitions("-std=c++17")
-#message ("CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}")
-
 include_directories(
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm
@@ -131,30 +128,30 @@ set (SOURCES_DEVICE_SUPPORT
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/system_MDR32F9Qx.c
     )
 
-#add_library(CMSIS
-#    ${SOURCES_SPL}
-#    ${SOURCES_USB}
-#    ${SOURCES_DEVICE_SUPPORT}
-#    )
-
-add_executable(${PROJECT_NAME}.elf
-    ${SOURCES_C}
-    ${SOURCES_CPP}
-    ${LINKER_SCRIPT}
+add_library(CMSIS
     ${SOURCES_SPL}
     ${SOURCES_USB}
     ${SOURCES_DEVICE_SUPPORT}
     )
 
+add_executable(${PROJECT_NAME}.elf
+    ${SOURCES_C}
+    ${SOURCES_CPP}
+    ${LINKER_SCRIPT}
+#    ${SOURCES_SPL}
+#    ${SOURCES_USB}
+#    ${SOURCES_DEVICE_SUPPORT}
+    )
+
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE CXX)
 
-#target_link_libraries(${PROJECT_NAME}.elf
-#    ${CMSIS}
-##    m
-#    )
+target_link_libraries(${PROJECT_NAME}.elf
+    CMSIS
+#    m
+    )
 
 set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
-#set(BIN_FILE ${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.bin)
+set(BIN_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.bin)
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}
