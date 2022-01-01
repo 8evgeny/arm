@@ -143,35 +143,34 @@ void Setup_CPU_Clock(void)
   */
 void Setup_USB(void)
 {
-    // Включение тактирования
+    /* Включение тактирования */
     RST_CLK_PCLKcmd(RST_CLK_PCLK_USB, ENABLE);
 
-    // Выбор источника тактирования USB
+    /* Выбор источника тактирования USB */
     USB_Clock_InitStruct.USB_USBC1_Source = USB_C1HSEdiv2;
 
-    // Выбор коэффициента умножения схемы PLL для USB
+    /* Выбор коэффициента умножения схемы PLL для USB */
     USB_Clock_InitStruct.USB_PLLUSBMUL    = USB_PLLUSBMUL12;
 
-    // Выбор режима USB FULL Speed
+    /* Выбор режима USB FULL Speed */
     USB_DeviceBUSParam.MODE  = USB_SC_SCFSP_Full;
 
-    // Выбор скорости 12мБит в сек
+    /* Выбор скорости 12мБит в сек */
     USB_DeviceBUSParam.SPEED = USB_SC_SCFSR_12Mb;
-//    USB_DeviceBUSParam.SPEED = USB_SC_SCFSR_1_5Mb;
 
-    // Подтягивание линии DP к питанию
+    /* Подтягивание линии DP к питанию */
     USB_DeviceBUSParam.PULL  = USB_HSCR_DP_PULLUP_Set;
 
-    // Инициализация USB с заданными параметрами
+    /* Инициализация USB с заданными параметрами */
     USB_DeviceInit(&USB_Clock_InitStruct, &USB_DeviceBUSParam);
 
-    // Разрешение всех видов прерываний от USB
+    /* Разрешение всех видов прерываний от USB */
     USB_SetSIM(USB_SIS_Msk);
 
-    // Включение питания USB и разрешение передачи и приема данных
+    /* Включение питания USB и разрешение передачи и приема данных */
     USB_DevicePowerOn();
 
-    // Включение прерываний USB
+    /* Включение прерываний USB */
 #ifdef USB_INT_HANDLE_REQUIRED
     NVIC_EnableIRQ(USB_IRQn);
 #endif /* USB_INT_HANDLE_REQUIRED */
@@ -186,7 +185,6 @@ void Setup_USB(void)
   */
 /* Задание конфигурации последовательной линии связи которую может прочитать хост */
 /*static*/ void VCom_Configuration(void)
-//static void VCom_Configuration(void)
 {
 #ifdef USB_CDC_LINE_CODING_SUPPORTED
     LineCoding.dwDTERate = 115200;
@@ -203,7 +201,7 @@ void Setup_USB(void)
   * @retval @ref USB_Result.
   */
 
-// Данная процедура автоматически вызывается при приеме данных по USB
+/* Данная процедура автоматически вызывается при приеме данных по USB */
 USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
     USB_Result result;

@@ -1,8 +1,17 @@
-CXX		= arm-none-eabi-g++
-CC		= arm-none-eabi-gcc
-LD		= arm-none-eabi-g++
-OBJCOPY		= arm-none-eabi-objcopy
-SIZE		= arm-none-eabi-size
+# на работе
+# CXX		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+# CC		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
+# LD		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+# OBJCOPY       	= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-objcopy
+# SIZE		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-size
+
+# дома
+CXX		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-g++
+CC		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-gcc
+LD		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-g++
+OBJCOPY		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-objcopy
+SIZE		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-size
+
 STFLASH		= st-flash
 OPENOCD		= openocd
 STUTIL		= st-flash
@@ -133,8 +142,8 @@ OBJECTS += $(STARTUPOBJ)
 
 DEPS = $(OBJECTS:.o=.d)
 
-#all: release
-all: debug
+all: release
+# all: debug
 
 release: LDFLAGS+=$(LDFLAGS_RELEASE)
 release: CFLAGS+=$(CDFLAGS_RELEASE)

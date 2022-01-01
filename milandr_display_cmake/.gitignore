@@ -2,3 +2,7 @@ bin/
 obj/
 MDR1986BExx/
 *.pro.user.*
+CMakeLists.txt.user
+build/
+build_release/
+CMakeLists.txt.user
