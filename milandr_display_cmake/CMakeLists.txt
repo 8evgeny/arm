@@ -6,28 +6,76 @@ set(TOOLS_PATH /home/evg/toolchain/gcc-arm-none-eabi-new)
 set(CMAKE_C_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-gcc)
 set(CMAKE_CXX_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
 
-project(display_Cmake)
+project(display_cmake_release C CXX)
 
-set(CMAKE_BUILD_TYPE debug)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --specs=nosys.specs -fno-exceptions -Wall -mcpu=cortex-m3 -mthumb -D__HEAP_SIZE=0x0C00 -D__STACK_SIZE=0x0400 -mfloat-abi=soft -fno-strict-aliasing -fdata-sections -ffunction-sections")
+#set(CMAKE_BUILD_TYPE debug)
+set(CMAKE_BUILD_TYPE release)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
+    -mcpu=cortex-m3 \
+    -mthumb \
+    -O2 \
+    -ffunction-sections \
+    -fdata-sections \
+    -Wall \
+    -Wextra \
+    -Wshadow \
+    -Wredundant-decls \
+    -Wno-missing-field-initializers \
+    -Wconversion \
+    -Wno-packed-bitfield-compat \
+    -pipe \
+    -std=c99 \
+    --specs=nosys.specs \
+    -fno-exceptions \
+    -D__HEAP_SIZE=0x0C00 \
+    -D__STACK_SIZE=0x0400 \
+    -mfloat-abi=soft \
+    -fno-strict-aliasing \
+    ")
+
+#CFLAGS = -mcpu=cortex-m3 -mthumb -O2 -ffunction-sections -fdata-sections -Wall -Wextra -Wshadow -Wredundant-decls -Wno-missing-field-initializers -Wconversion -Wno-packed-bitfield-compat -pipe
+
 #-nostdli
 #-xc
 #-std=c99
 #--target=arm-arm-none-eabi
-#-mcpu=cortex-m3
 #-c
 #-fno-rtti
 #-funsigned-char
 #-fshort-enums
 #-fshort-wchar
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --specs=nosys.specs -fno-exceptions -mcpu=cortex-m3 -mthumb -std=c++17 -O3 -o prog -D_GNU_SOURCE -L./libmine")
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
+    --specs=nosys.specs \
+    -fno-exceptions \
+    -mcpu=cortex-m3 \
+    -mthumb -std=c++17 \
+    -O3 \
+    -o prog \
+    -D_GNU_SOURCE \
+    -L./libmine \
+    ")
+
 #-rdynamic
 #-nostdlib
-set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG}  --specs=nosys.specs -Wl,-Map=${PROJECT_NAME}.map -Wl,--gc-sections -ffunction-sections -fdata-sections -fno-strict-aliasing -mfloat-abi=soft -Wl,--defsym=__STACK_SIZE=0x0100 -Wl,--defsym=__HEAP_SIZE=0x0000 -mthumb -mcpu=cortex-m3  ")
+set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
+    --specs=nosys.specs \
+    -Wl,-Map=${PROJECT_NAME}.map \
+    -Wl,--gc-sections \
+    -ffunction-sections \
+    -fdata-sections \
+    -fno-strict-aliasing \
+    -mfloat-abi=soft \
+    -Wl,--defsym=__STACK_SIZE=0x0100 \
+    -Wl,--defsym=__HEAP_SIZE=0x0000 \
+    -mthumb \
+    -mcpu=cortex-m3 \
+    ")
 #--specs=nano.specs
 #--specs=nosys.specs
 
-add_definitions("-std=c++17")
+#add_definitions("-std=c++17")
 #message ("CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}")
 
 include_directories(
@@ -73,11 +121,11 @@ set (SOURCES_DEVICE_SUPPORT
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/system_MDR32F9Qx.c
     )
 
-add_library(CMSIS
-    ${SOURCES_SPL}
-    ${SOURCES_USB}
-    ${SOURCES_DEVICE_SUPPORT}
-    )
+#add_library(CMSIS
+#    ${SOURCES_SPL}
+#    ${SOURCES_USB}
+#    ${SOURCES_DEVICE_SUPPORT}
+#    )
 
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
@@ -87,6 +135,7 @@ add_executable(${PROJECT_NAME}.elf
     ${SOURCES_USB}
     ${SOURCES_DEVICE_SUPPORT}
     )
+
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE CXX)
 
 #target_link_libraries(${PROJECT_NAME}.elf
@@ -94,14 +143,14 @@ set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE CXX)
 ##    m
 #    )
 
-set(HEX_FILE ${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.hex)
-set(BIN_FILE ${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.bin)
+set(HEX_FILE ${PROJECT_SOURCE_DIR}/build_release/${PROJECT_NAME}.hex)
+#set(BIN_FILE ${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.bin)
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}
-    COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
-    COMMENT "Building ${HEX_FILE} \nBuilding ${BIN_FILE}")
-
+#    COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
+#    COMMENT "Building ${HEX_FILE} \nBuilding ${BIN_FILE}")
+     COMMENT "Building ${HEX_FILE} ")
 
 
 

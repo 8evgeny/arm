@@ -21,7 +21,7 @@ void START_logic() {
 	LCD_function(1,1);	//страница знакогенератора 1
 	LCD_clear_display();
 	//LCD_write_string("  Видеорегистратор  ");
-  LCD_write_string("  Videorecorder  ");
+    LCD_write_string("  Videorecorder  ");
 	LCD_set_line(2);
 	LCD_write_string("  GIT-VIDEO SURV   ");
 	LCD_set_line(4);
@@ -30,12 +30,12 @@ void START_logic() {
 	delay_ms(5000);
 	PORT_ResetBits(MDR_PORTB, LED1_ERROR|LED2_REC);
 	
-	//LCD_clear_display();
+    LCD_clear_display();
 	
-	//проверка зуммера
-	//PORT_SetBits(MDR_PORTB, BUZZER);	
-	//delay_ms(100);
-	//PORT_ResetBits(MDR_PORTB, BUZZER);
+//	проверка зуммера
+    PORT_SetBits(MDR_PORTB, BUZZER);
+    delay_ms(100);
+    PORT_ResetBits(MDR_PORTB, BUZZER);
 }
 //---------------------------------
 // Главная логика
