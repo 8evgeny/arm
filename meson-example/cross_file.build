@@ -1,0 +1,67 @@
+[binaries]
+c       = 'clang-5.0'
+cpp     = 'clang++-5.0'
+ld      = 'llvm-link-5.0'
+ar      = 'llvm-ar-5.0'
+as      = 'llvm-as-5.0'
+size    = 'llvm-size-5.0'
+objdump = 'llvm-objdump-5.0'
+objcopy = 'arm-none-eabi-objcopy'
+strip   = 'arm-none-eabi-strip'
+gdb     = 'arm-none-eabi-gdb'
+terminal= 'x-terminal-emulator'
+openocd = '/usr/local/bin/openocd'
+
+[properties]
+c_args      = [
+               '--target=arm-none-eabi',    # define target for clang
+               '-mthumb',                   # define language
+               #------------------------------------
+               '-fshort-enums',             # otherwise errors at linking...
+               '-fmessage-length=0',        # all error warnings in a single line (default 72)
+               '-fsigned-char',             # char is per default unsigned
+               '-ffunction-sections',       # each function to a seperate section ==> Code-optimization / deletion
+               '-fdata-sections',           # each variable to a seperate section ==> Code-optimization / deletion
+
+               '-Weverything',
+               '-ffreestanding',
+
+               #------------------------------------
+               '-Wno-reserved-id-macro',
+               '-Wno-unused-macros',
+               '-Wno-documentation',
+               '-Wno-parentheses-equality',
+               '-Wno-unused-parameter',
+               '-Wno-padded',
+               '-Wno-documentation-unknown-command',
+               '-Wno-missing-noreturn',
+               '-Wno-undef',
+               '-Wno-keyword-macro',
+               '-Wno-cast-align',
+               '-Wno-conversion',
+               '-Wno-covered-switch-default',
+               '-Wno-empty-translation-unit',
+               '-Wno-switch-enum',
+               '-Wno-missing-variable-declarations',
+               #------------------------------------
+
+               # '-emit-llvm', # creates segfault : need further inspection
+               '-v', # option for more verbose output
+               ]
+
+c_link_args = [
+               '--target=arm-none-eabi', # define target for linker
+               '-v',                     # option for more verbose output
+                '-nostdlib',             # do not import the standard library's
+
+               # '-Wl,-Map,output.map',    # create linker map file
+               # '-Wl,--as-needed',        # linker optimisation
+               # '-Wl,--gc-sections',      # needed for optimization
+               #'-flto',
+              ]
+
+[host_machine]
+system     = 'none'
+cpu_family = 'arm'
+cpu        = 'cortex-m4'
+endian     = 'little'

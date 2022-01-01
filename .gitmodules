@@ -1,3 +1,6 @@
 [submodule "Qbs3_QtCreator template for Milandr microcpu"]
 	path = Qbs3_QtCreator template for Milandr microcpu
 	url = ../../WicRus/emdr1986x-std-per-lib-qbs.git
+[submodule "Milandr_MCU_1986x_Standard_Peripherals_Library"]
+	path = Milandr_MCU_1986x_Standard_Peripherals_Library
+	url = ../../eldarkg/emdr1986x-std-per-lib.git
