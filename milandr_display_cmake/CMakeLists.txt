@@ -76,7 +76,7 @@ set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
     -Wl,--defsym=__HEAP_SIZE=0x0000 \
     -mthumb \
     -mcpu=cortex-m3 \
-    -T std-per-lib/../Milandr MCU 1986x Standard Peripherals Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
+    -T std-per-lib/../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
     --specs=nosys.specs \
     --specs=nano.specs \
     -Wl,--gc-sections \
@@ -84,11 +84,6 @@ set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
     -nostartfiles \
     -Wl,-Map=example.map
     ")
-#-T std-per-lib/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld --specs=nosys.specs -Wl,--gc-sections -ffreestanding -nostartfiles -Wl,-Map=example.map
-
-
-#--specs=nano.specs
-#--specs=nosys.specs
 
 #add_definitions("-std=c++17")
 #message ("CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}")
