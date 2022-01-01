@@ -153,7 +153,7 @@ set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE CXX)
 ##    m
 #    )
 
-set(HEX_FILE ${PROJECT_SOURCE_DIR}/build_release/${PROJECT_NAME}.hex)
+set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
 #set(BIN_FILE ${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.bin)
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
