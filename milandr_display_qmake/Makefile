@@ -1,17 +1,8 @@
-# на работе
-# CXX		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
-# CC		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
-# LD		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
-# OBJCOPY       	= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-objcopy
-# SIZE		= /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-size
-
-# дома
-CXX		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-g++
-CC		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-gcc
-LD		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-g++
-OBJCOPY		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-objcopy
-SIZE		= /home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-size
-
+CXX		= arm-none-eabi-g++
+CC		= arm-none-eabi-gcc
+LD		= arm-none-eabi-gcc
+OBJCOPY		= arm-none-eabi-objcopy
+SIZE		= arm-none-eabi-size
 STFLASH		= st-flash
 OPENOCD		= openocd
 STUTIL		= st-flash
@@ -23,6 +14,7 @@ TARGET_NAME     = display
 
 TARGET_BINARY	= $(TARGET_NAME).elf
 TARGET_HEX	= $(TARGET_NAME).hex
+TARGET_BIN	= $(TARGET_NAME).bin
 
 vpath %.c ./src
 vpath %.cpp ./src
@@ -49,7 +41,6 @@ CFLAGS = \
     -Wall \
     -mcpu=cortex-m3 \
     -mthumb \
-    -Os \
     -D__HEAP_SIZE=0x0000 \
     -D__STACK_SIZE=0x0100 \
     -mfloat-abi=soft \
@@ -73,7 +64,7 @@ TARGET	= $(OUTPUT_DIR)/$(TARGET_BINARY)
 
 LIBS = -lm
 
-CXXFLAGS = -O3 -std=c++17 -stdlib=libc++ -o prog -rdynamic -D_GNU_SOURCE -L./libmine
+CXXFLAGS = -O3 -o prog -rdynamic -D_GNU_SOURCE -L./libmine
 #LIBS += -lpthread -ldl
 
 
@@ -89,7 +80,7 @@ LDFLAGS	= \
 -fdata-sections \
 -ffunction-sections  \
 -Wl,--gc-sections \
-#-Wl,-script="./hardware/stm32f103c8_flash.ld" \
+#-Wl,-script="../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld" \
 -Wl,-Map=$(TARGET).map
 #-u _printf_float 
 
@@ -105,9 +96,7 @@ INCLUDES = \
 -I. \
 -I./include 
 
-#STARUPFILE = ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/startup_MDR32F9Qx.S
-#STARUPFILE = startup/startup_stm32f10x_md.S
-STARUPFILE = startup/startup_MDR32F9Qx.S
+STARUPFILE = ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
 
 SOURCES_SPL = \
 MDR32F9Qx_iwdg.c \
@@ -135,7 +124,6 @@ HEX = $(OUTPUT_DIR)/$(TARGET_HEX)
 STARTUPOBJ = $(notdir $(STARUPFILE))
 STARTUPOBJ := $(patsubst %.S, $(OBJ_DIR)/%.S.o, $(STARTUPOBJ))
 
-
 OBJECTS	+= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES_C))
 OBJECTS	+= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES_CPP))
 OBJECTS += $(STARTUPOBJ)
@@ -143,7 +131,6 @@ OBJECTS += $(STARTUPOBJ)
 DEPS = $(OBJECTS:.o=.d)
 
 all: release
-# all: debug
 
 release: LDFLAGS+=$(LDFLAGS_RELEASE)
 release: CFLAGS+=$(CDFLAGS_RELEASE)
@@ -182,7 +169,7 @@ $(STARTUPOBJ):
 
 $(HEX): $(TARGET)
 	$(OBJCOPY) -O ihex $(TARGET) $(HEX)
-
+	
 $(OUTPUT_DIR):
 	@mkdir $(OUTPUT_DIR)
 

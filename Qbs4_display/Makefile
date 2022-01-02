@@ -14,7 +14,6 @@ TARGET_NAME     = display
 
 TARGET_BINARY	= $(TARGET_NAME).elf
 TARGET_HEX	= $(TARGET_NAME).hex
-TARGET_BIN	= $(TARGET_NAME).bin
 
 vpath %.c ./src
 vpath %.cpp ./src
@@ -80,7 +79,7 @@ LDFLAGS	= \
 -fdata-sections \
 -ffunction-sections  \
 -Wl,--gc-sections \
-#-Wl,-script="../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld" \
+#-Wl,-script="./hardware/stm32f103c8_flash.ld" \
 -Wl,-Map=$(TARGET).map
 #-u _printf_float 
 
@@ -96,7 +95,8 @@ INCLUDES = \
 -I. \
 -I./include 
 
-STARUPFILE = ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
+#STARUPFILE = ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/startup_MDR32F9Qx.S
+STARUPFILE = startup/startup_MDR32F9Qx.S
 
 SOURCES_SPL = \
 MDR32F9Qx_iwdg.c \
@@ -123,6 +123,7 @@ HEX = $(OUTPUT_DIR)/$(TARGET_HEX)
 
 STARTUPOBJ = $(notdir $(STARUPFILE))
 STARTUPOBJ := $(patsubst %.S, $(OBJ_DIR)/%.S.o, $(STARTUPOBJ))
+
 
 OBJECTS	+= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES_C))
 OBJECTS	+= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES_CPP))
@@ -169,7 +170,7 @@ $(STARTUPOBJ):
 
 $(HEX): $(TARGET)
 	$(OBJCOPY) -O ihex $(TARGET) $(HEX)
-	
+
 $(OUTPUT_DIR):
 	@mkdir $(OUTPUT_DIR)
 

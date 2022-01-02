@@ -82,12 +82,14 @@ set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
     -Wl,--gc-sections \
     -ffreestanding \
     -nostartfiles \
-    -Wl,-Map=example.map
+    -Wl,-Map=example.map \
+    -Wl,--print-memory-usage \
     ")
 
 include_directories(
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm
+    ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/CoreSupport/CM3
     ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx
     ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc
@@ -128,10 +130,15 @@ set (SOURCES_DEVICE_SUPPORT
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/system_MDR32F9Qx.c
     )
 
+set (STARTUP_DEVICE_SUPPORT
+    ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
+    )
+
 add_library(CMSIS
     ${SOURCES_SPL}
     ${SOURCES_USB}
     ${SOURCES_DEVICE_SUPPORT}
+    ${STARTUP_DEVICE_SUPPORT}
     )
 
 add_executable(${PROJECT_NAME}.elf
@@ -155,11 +162,11 @@ set(BIN_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.bin)
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}
-#    COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
-#    COMMENT "Building ${HEX_FILE} \nBuilding ${BIN_FILE}")
-     COMMENT "Building ${HEX_FILE} ")
+    COMMENT "Building ${HEX_FILE} ")
 
-
+#add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
+#    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
+#    COMMENT "Building ${BIN_FILE} ")
 
 #include(${CMAKE_SOURCE_DIR}/conanbuildinfo.cmake)
 #include(${CMAKE_SOURCE_DIR}/conanbuildinfo.cmake)
