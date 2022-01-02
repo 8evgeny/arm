@@ -49,14 +49,14 @@
 ****************************************************************************/
 
 CppApplication {
-    condition: {
-        if (!qbs.architecture.startsWith("arm"))
-            return false;
-        return (qbs.toolchain.contains("gcc")
-                || qbs.toolchain.contains("iar")
-                || qbs.toolchain.contains("keil"))
-                && !qbs.toolchain.contains("xcode")
-    }
+//    condition: {
+//        if (!qbs.architecture.startsWith("arm"))
+//            return false;
+//        return (qbs.toolchain.contains("gcc")
+//                || qbs.toolchain.contains("iar")
+//                || qbs.toolchain.contains("keil"))
+//                && !qbs.toolchain.contains("xcode")
+//    }
     name: "stm32f4discovery-blueblink"
     cpp.cLanguageVersion: "c99"
     cpp.positionIndependentCode: false
@@ -66,7 +66,7 @@ CppApplication {
     //
 
     Properties {
-        condition: qbs.toolchain.contains("gcc")
+//        condition: qbs.toolchain.contains("gcc")
         cpp.assemblerFlags: [
             "-mcpu=cortex-m4",
             "-mfloat-abi=hard",
@@ -81,7 +81,7 @@ CppApplication {
     }
 
     Group {
-        condition: qbs.toolchain.contains("gcc")
+//        condition: qbs.toolchain.contains("gcc")
         name: "GCC"
         prefix: "gcc/"
         Group {
@@ -96,67 +96,67 @@ CppApplication {
         }
     }
 
-    //
-    // IAR-specific properties and sources.
-    //
+//    //
+//    // IAR-specific properties and sources.
+//    //
 
-    Properties {
-        condition: qbs.toolchain.contains("iar")
-        cpp.assemblerFlags: [
-            "--cpu", "cortex-m4",
-            "--fpu", "vfpv4_sp"
-        ]
-        cpp.driverFlags: [
-            "--cpu", "cortex-m4",
-            "--fpu", "vfpv4_sp"
-        ]
-    }
+//    Properties {
+//        condition: qbs.toolchain.contains("iar")
+//        cpp.assemblerFlags: [
+//            "--cpu", "cortex-m4",
+//            "--fpu", "vfpv4_sp"
+//        ]
+//        cpp.driverFlags: [
+//            "--cpu", "cortex-m4",
+//            "--fpu", "vfpv4_sp"
+//        ]
+//    }
 
-    Group {
-        condition: qbs.toolchain.contains("iar")
-        name: "IAR"
-        prefix: "iar/"
-        Group {
-            name: "Startup"
-            fileTags: ["asm"]
-            files: ["startup.s"]
-        }
-        Group {
-            name: "Linker Script"
-            fileTags: ["linkerscript"]
-            files: ["flash.icf"]
-        }
-    }
+//    Group {
+//        condition: qbs.toolchain.contains("iar")
+//        name: "IAR"
+//        prefix: "iar/"
+//        Group {
+//            name: "Startup"
+//            fileTags: ["asm"]
+//            files: ["startup.s"]
+//        }
+//        Group {
+//            name: "Linker Script"
+//            fileTags: ["linkerscript"]
+//            files: ["flash.icf"]
+//        }
+//    }
 
-    //
-    // KEIL-specific properties and sources.
-    //
+//    //
+//    // KEIL-specific properties and sources.
+//    //
 
-    Properties {
-        condition: qbs.toolchain.contains("keil")
-        cpp.assemblerFlags: [
-            "--cpu", "cortex-m4.fp"
-        ]
-        cpp.driverFlags: [
-            "--cpu", "cortex-m4.fp"
-        ]
-    }
+//    Properties {
+//        condition: qbs.toolchain.contains("keil")
+//        cpp.assemblerFlags: [
+//            "--cpu", "cortex-m4.fp"
+//        ]
+//        cpp.driverFlags: [
+//            "--cpu", "cortex-m4.fp"
+//        ]
+//    }
 
-    Group {
-        condition: qbs.toolchain.contains("keil")
-        name: "KEIL"
-        prefix: "keil/"
-        Group {
-            name: "Startup"
-            fileTags: ["asm"]
-            files: ["startup.s"]
-        }
-        Group {
-            name: "Linker Script"
-            fileTags: ["linkerscript"]
-            files: ["flash.sct"]
-        }
-    }
+//    Group {
+//        condition: qbs.toolchain.contains("keil")
+//        name: "KEIL"
+//        prefix: "keil/"
+//        Group {
+//            name: "Startup"
+//            fileTags: ["asm"]
+//            files: ["startup.s"]
+//        }
+//        Group {
+//            name: "Linker Script"
+//            fileTags: ["linkerscript"]
+//            files: ["flash.sct"]
+//        }
+//    }
 
     //
     // Common code.

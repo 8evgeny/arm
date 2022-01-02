@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 6.0.1, 2021-12-31T23:35:56. -->
+<!-- Written by QtCreator 6.0.1, 2022-01-02T01:36:40. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -102,22 +102,39 @@
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qbs (сборка)</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qbs.BuildStep</value>
+      <value type="bool" key="Qbs.CleanInstallRoot">true</value>
       <valuemap type="QVariantMap" key="Qbs.Configuration">
+       <value type="QString" key="qbs.architectures">armv7a</value>
+       <value type="QString" key="qbs.defaultBuildVariant">release</value>
+       <value type="QString" key="qbs.profile">qtc_arm_9ae37e22</value>
+      </valuemap>
+      <value type="bool" key="Qbs.DryKeepGoing">true</value>
+      <value type="bool" key="Qbs.Install">true</value>
+      <value type="qlonglong" key="Qbs.MaxJobs">14</value>
+      <value type="bool" key="Qbs.ShowCommandLines">true</value>
+      <value type="bool" key="Qbs.forceProbesKey">true</value>
+     </valuemap>
+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.1">
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qbs (сборка)</value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qbs.BuildStep</value>
+      <valuemap type="QVariantMap" key="Qbs.Configuration">
+       <value type="bool" key="modules.cpp.separateDebugInformation">true</value>
        <value type="QString" key="qbs.defaultBuildVariant">debug</value>
        <value type="QString" key="qbs.profile">qtc_arm_9ae37e22</value>
        <value type="bool" key="qbspm.forceProbes">false</value>
       </valuemap>
       <value type="bool" key="Qbs.Install">true</value>
-      <value type="qlonglong" key="Qbs.MaxJobs">12</value>
+      <value type="qlonglong" key="Qbs.MaxJobs">9</value>
      </valuemap>
-     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
+     <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">2</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Сборка</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
     </valuemap>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">false</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Qbs (очистка)</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qbs.CleanStep</value>
      </valuemap>
@@ -134,6 +151,7 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Отладка</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qbs.QbsBuildConfiguration</value>
     <value type="QString" key="Qbs.configName">Debug_Arm_enbe_bbeef365ce256400</value>
+    <value type="int" key="SeparateDebugInfo">0</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/evg/SOFT/Github/Arm/Stm32Qt_qbs3/examples/baremetal/build-stm32f4discovery-Arm_enbedded-Release</value>

@@ -96,63 +96,63 @@ CppApplication {
     // IAR-specific properties and sources.
     //
 
-    Properties {
-        condition: qbs.toolchain.contains("iar")
-        cpp.assemblerFlags: [
-            "--cpu", "cortex-m3",
-            "--fpu", "none"
-        ]
-        cpp.driverFlags: [
-            "--cpu", "cortex-m3",
-            "--fpu", "none"
-        ]
-    }
+//    Properties {
+//        condition: qbs.toolchain.contains("iar")
+//        cpp.assemblerFlags: [
+//            "--cpu", "cortex-m3",
+//            "--fpu", "none"
+//        ]
+//        cpp.driverFlags: [
+//            "--cpu", "cortex-m3",
+//            "--fpu", "none"
+//        ]
+//    }
 
-    Group {
-        condition: qbs.toolchain.contains("iar")
-        name: "IAR"
-        prefix: "iar/"
-        Group {
-            name: "Startup"
-            fileTags: ["asm"]
-            files: ["startup.s"]
-        }
-        Group {
-            name: "Linker Script"
-            fileTags: ["linkerscript"]
-            files: ["flash.icf"]
-        }
-    }
+//    Group {
+//        condition: qbs.toolchain.contains("iar")
+//        name: "IAR"
+//        prefix: "iar/"
+//        Group {
+//            name: "Startup"
+//            fileTags: ["asm"]
+//            files: ["startup.s"]
+//        }
+//        Group {
+//            name: "Linker Script"
+//            fileTags: ["linkerscript"]
+//            files: ["flash.icf"]
+//        }
+//    }
 
     //
     // KEIL-specific properties and sources.
     //
 
-    Properties {
-        condition: qbs.toolchain.contains("keil")
-        cpp.assemblerFlags: [
-            "--cpu", "cortex-m3"
-        ]
-        cpp.driverFlags: [
-            "--cpu", "cortex-m3"
-        ]
-    }
+//    Properties {
+//        condition: qbs.toolchain.contains("keil")
+//        cpp.assemblerFlags: [
+//            "--cpu", "cortex-m3"
+//        ]
+//        cpp.driverFlags: [
+//            "--cpu", "cortex-m3"
+//        ]
+//    }
 
-    Group {
-        condition: qbs.toolchain.contains("keil")
-        name: "KEIL"
-        prefix: "keil/"
-        Group {
-            name: "Startup"
-            fileTags: ["asm"]
-            files: ["startup.s"]
-        }
-        Group {
-            name: "Linker Script"
-            fileTags: ["linkerscript"]
-            files: ["flash.sct"]
-        }
-    }
+//    Group {
+//        condition: qbs.toolchain.contains("keil")
+//        name: "KEIL"
+//        prefix: "keil/"
+//        Group {
+//            name: "Startup"
+//            fileTags: ["asm"]
+//            files: ["startup.s"]
+//        }
+//        Group {
+//            name: "Linker Script"
+//            fileTags: ["linkerscript"]
+//            files: ["flash.sct"]
+//        }
+//    }
 
     //
     // Common code.
