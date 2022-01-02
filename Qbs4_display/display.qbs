@@ -1,16 +1,35 @@
 import qbs
 Project {
-    name: "simple"
+    name: "display"
     Product {
-        name: "micro"
-        type: "hex"
+        name: "milandr_display"
+        type: [
+            "elf",
+            "hex",
+            "bin",
+        ]
         Group {
-            name: "sources"
-            files: ["main.c",
-                    "system_MDR32F9Qx.c",
-                    "startup_Cortex_M3.c"]
+            name: "src_c"
+            prefix: "src/"
+            files: [
+                "gpio.c",
+                "logic.c",
+                "mt20s4.c",
+                "rcc_delay.c",
+                "usb.c",
+                "var.c",
+            ]
             fileTags: ['c']
         }
+        Group {
+            name: "src_cpp"
+            prefix: "src/"
+            files: [
+                "main.cpp"
+            ]
+            fileTags: ['cpp']
+        }
+
         Rule {
             inputs: ["c"]
             Artifact {
@@ -39,6 +58,37 @@ Project {
                 return cmd;
             }
         }
+
+        Rule {
+            inputs: ["cpp"]
+            Artifact {
+                fileTags: ['obj']
+                filePath: input.fileName + '.o'
+            }
+            prepare: {
+                var args = [];
+                args.push("-mcpu=cortex-m3")
+                args.push("-mthumb")
+                args.push("-g")
+                args.push("-ffunction-sections")
+                args.push("-O0")
+                args.push("-Wall")
+                args.push("-Wunused")
+                args.push("-DM3")
+                args.push('-c');
+                args.push(input.filePath);
+                args.push('-o');
+                args.push(output.filePath);
+                var compilerPath = "/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-gcc"
+                var cmd = new Command(compilerPath, args);
+                cmd.description = 'compiling ' + input.fileName;
+                cmd.highlight = 'compiler';
+                cmd.silent = false;
+                return cmd;
+            }
+        }
+
+
         Rule{
             multiplex: true
             inputs: ['obj']
@@ -65,6 +115,7 @@ Project {
                 return cmd;
             }
         }
+
         Rule{
             inputs: ['elf']
             Artifact{
