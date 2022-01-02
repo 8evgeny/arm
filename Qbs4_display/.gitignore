@@ -5,5 +5,6 @@ MDR1986BExx/
 CMakeLists.txt.user
 build/
 build_release/
+build_debug/
 cmake-build-debug/
 CMakeLists.txt.user
