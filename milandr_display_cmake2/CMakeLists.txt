@@ -61,12 +61,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -fno-threadsafe-statics \
     -DUSE_MDR1986VE9x \
     -D__STARTUP_CLEAR_BSS \
+    -Wl,-Map=${PROJECT_NAME}.map \
     ")
 
 #-rdynamic
 #-nostdlib
 set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
-    -Wl,-Map=${PROJECT_NAME}.map \
     -Wl,--gc-sections \
     -ffunction-sections \
     -fdata-sections \
@@ -82,7 +82,6 @@ set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
     -Wl,--gc-sections \
     -ffreestanding \
     -nostartfiles \
-    -Wl,-Map=example.map \
     -Wl,--print-memory-usage \
     ")
 
