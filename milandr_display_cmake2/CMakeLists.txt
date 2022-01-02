@@ -51,7 +51,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     --specs=nosys.specs \
     --specs=nano.specs \
     -mcpu=cortex-m3 \
-    -mthumb -std=c++17 \
+    -mthumb \
+    -std=c++17 \
     -O3 \
     -o prog \
     -D_GNU_SOURCE \
@@ -62,27 +63,27 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -DUSE_MDR1986VE9x \
     -D__STARTUP_CLEAR_BSS \
     -Wl,-Map=${PROJECT_NAME}.map \
+    -Wl,--print-memory-usage \
+    -Wl,--defsym=__STACK_SIZE=0x0100 \
+    -Wl,--defsym=__HEAP_SIZE=0x0000 \
+    -Wl,--gc-sections \
+    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
     ")
 
 #-rdynamic
 #-nostdlib
 set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
-    -Wl,--gc-sections \
     -ffunction-sections \
     -fdata-sections \
     -fno-strict-aliasing \
     -mfloat-abi=soft \
-    -Wl,--defsym=__STACK_SIZE=0x0100 \
-    -Wl,--defsym=__HEAP_SIZE=0x0000 \
     -mthumb \
     -mcpu=cortex-m3 \
-    -T std-per-lib/../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
+    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
     --specs=nosys.specs \
     --specs=nano.specs \
-    -Wl,--gc-sections \
     -ffreestanding \
     -nostartfiles \
-    -Wl,--print-memory-usage \
     ")
 
 include_directories(
