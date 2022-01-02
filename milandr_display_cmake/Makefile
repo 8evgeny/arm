@@ -1,6 +1,6 @@
 CXX		= arm-none-eabi-g++
 CC		= arm-none-eabi-gcc
-LD		= arm-none-eabi-gcc
+LD		= arm-none-eabi-g++
 OBJCOPY		= arm-none-eabi-objcopy
 SIZE		= arm-none-eabi-size
 STFLASH		= st-flash

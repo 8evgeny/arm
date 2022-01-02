@@ -13,12 +13,14 @@
 //---------------------------------
 #include "gpio.h"
 #include "main.h"
-//#include <string>
+#include <string>
+#include <vector>
 //=================================
 int main (int argc, char** argv) {
 	__disable_irq();
-	//SysTick_init();
+//	SysTick_init();
 	RCC_init();
+//    std::string aa = "qqq";
 	GPIO_init();
 	__enable_irq();
 	TIM1_init();
