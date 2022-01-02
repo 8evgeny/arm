@@ -14,36 +14,41 @@ Project {
     property string USB: SPL_inc + "/USB_Library"
     property string Startup: Home + "/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc"
     Product {
+//CppApplication {
+
+
+
+//        cpp.toolchainInstallPath: "/home/evg/toolchain/gcc-arm-none-eabi-new/bin"
+//        cpp.cxxCompilerName: "arm-none-eabi-g++"
+//        Depends {name: "c" }
         name: "milandr_display"
+//        Depends {name: "cpp" }
         type: [
-            "elf",
-            "hex",
+            "application",
             "bin",
+            "hex",
+            // Тип - приложение, т.е. исполняемый файл.
+            // Type - application, i.e. executable file.
         ]
 
         Group {
             name: "sources_c"
+            prefix: "src/"
             files: [
-                "src/*.c",
-//                "/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc/MDR32Fx.h"
-//                "src/gpio.c",
-//                "src/logic.c",
-//                "src/mt20s4.c",
-//                "src/rcc_delay.c",
-//                "src/usb.c",
-//                "src/var.c",
+                "*.c",
+                "*.h"
             ]
             fileTags: ['c']
         }
-        Group {
-            name: "includes"
-//            prefix: Dev_support_inc + "/"
-            files: [
-//                "MDR32Fx.h",
-   "/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc/MDR32Fx.h"
-            ]
-            fileTags: ['h']
-        }
+//        Group {
+//            name: "includes"
+////            prefix: Dev_support_inc + "/"
+//            files: [
+////                "MDR32Fx.h",
+//   "/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc/MDR32Fx.h"
+//            ]
+//            fileTags: ['h']
+//        }
 
 
         Group {
@@ -51,7 +56,7 @@ Project {
             files: [
                 "src/*.cpp",
 //                "src/main.cpp",
-                "/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc/MDR32Fx.h"
+//                "/home/evg/SOFT/Github/Arm/MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc/MDR32Fx.h"
             ]
             fileTags: ['cpp']
         }
@@ -93,8 +98,26 @@ Project {
             fileTags: ['src_dev_support']
         }
 
-
-
+        cpp.debugInformation: true
+        cpp.commonCompilerFlags: [
+            "-mcpu=cortex-m3", "-mthumb",
+//            "-mfloat-abi=hard","-mfpu=fpv4-sp-d16",
+//            "-Os","-g3","-Wall","-fmessage-length=0", "-ffunction-sections","-c","-fmessage-length=0",
+        ]
+        cpp.includePaths: [
+            Dev_support_inc,
+            "../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc",
+            "../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm",
+            "../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/CoreSupport/CM3",
+            "../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx",
+            "../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc",
+            "../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc/USB_Library",
+            "../MDR1986BExx/2.0.3/Libraries/MDR32Fx/inc",
+            "../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src",
+            "./include"
+        ]
+        cpp.toolchainInstallPath: "/home/evg/toolchain/gcc-arm-none-eabi-new/bin"
+        cpp.cxxCompilerName: "arm-none-eabi-g++"
 
 
         Rule {
@@ -107,6 +130,7 @@ Project {
             }
             prepare: {
                 var args = [];
+                var includes = [];
                 args.push("-mcpu=cortex-m3")
                 args.push("-mthumb")
                 args.push("-g")
@@ -119,8 +143,17 @@ Project {
                 args.push(input.filePath);
                 args.push('-o');
                 args.push(output.filePath);
-                var compilerPath = "/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-gcc"
-                var cmd = new Command(compilerPath, args);
+                includes.push("../inc_spl");
+//                includes.push("../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc");
+//                includes.push("../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm");
+//                includes.push("../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/CoreSupport/CM3");
+//                includes.push("../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx");
+//                includes.push("../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc");
+//                includes.push("../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc/USB_Library");
+//                includes.push("../MDR1986BExx/2.0.3/Libraries/MDR32Fx/inc");
+//                includes.push("../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src");
+                var compilerPath = "/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-gcc";
+                var cmd = new Command(compilerPath, args, includes);
                 cmd.description = 'compiling ' + input.fileName;
                 cmd.highlight = 'compiler';
                 cmd.silent = false;
@@ -138,6 +171,7 @@ Project {
             }
             prepare: {
                 var args = [];
+                var includes = [];
                 args.push("-mcpu=cortex-m3")
                 args.push("-mthumb")
                 args.push("-g")
@@ -150,8 +184,17 @@ Project {
                 args.push(input.filePath);
                 args.push('-o');
                 args.push(output.filePath);
-                var compilerPath = "/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-gcc"
-                var cmd = new Command(compilerPath, args);
+                includes.push("inc_spl");
+                includes.push("../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc");
+                includes.push("../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm");
+                includes.push("../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/CoreSupport/CM3");
+                includes.push("../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx");
+                includes.push("../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc");
+                includes.push("../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc/USB_Library");
+                includes.push("../MDR1986BExx/2.0.3/Libraries/MDR32Fx/inc");
+                includes.push("../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src");
+                var compilerPath = "/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-g++";
+                var cmd = new Command(compilerPath, args, includes);
                 cmd.description = 'compiling ' + input.fileName;
                 cmd.highlight = 'compiler';
                 cmd.silent = false;
@@ -177,10 +220,10 @@ Project {
                 args.push("-Wl,--gc-sections")
                 for(i in inputs['obj'])
                     args.push(inputs["obj"][i].filePath);
-                args.push("-T/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-ld")
+                args.push("-T/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-ld");
                 args.push('-o');
                 args.push(output.filePath);
-                var compilerPath = "/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-gcc"
+                var compilerPath = "/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-g++";
                 var cmd = new Command(compilerPath,args);
                 cmd.description = "linking"+project.name
                 return cmd;
