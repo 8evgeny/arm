@@ -6,7 +6,7 @@ set(TOOLS_PATH /home/evg/toolchain/gcc-arm-none-eabi-new)
 set(CMAKE_C_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-gcc)
 set(CMAKE_CXX_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
 
-project(display_cmake_release C CXX)
+project(display_cmake_release2 C CXX)
 
 #set(CMAKE_BUILD_TYPE debug)
 set(CMAKE_BUILD_TYPE release)
@@ -31,15 +31,17 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -D__START=main \
     --specs=nosys.specs \
     --specs=nano.specs \
-    -fno-exceptions \
-    -D__HEAP_SIZE=0x0C00 \
-    -D__STACK_SIZE=0x0400 \
-    -mfloat-abi=soft \
-    -fno-strict-aliasing \
     ")
+
+
+#-fno-exceptions \
+#-D__HEAP_SIZE=0x0C00 \
+#-D__STACK_SIZE=0x0400 \
+#-mfloat-abi=soft \
+#-fno-strict-aliasing \
+
 #-nostdli
 #-xc
-#-std=c99
 #--target=arm-arm-none-eabi
 #-c
 #-fno-rtti
@@ -48,26 +50,28 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
 #-fshort-wchar
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-    --specs=nosys.specs \
-    --specs=nano.specs \
-    -mcpu=cortex-m3 \
-    -mthumb \
-    -std=c++17 \
-    -O3 \
-    -o prog \
-    -D_GNU_SOURCE \
-    -L./libmine \
     -fno-rtti \
     -fno-exceptions \
     -fno-threadsafe-statics \
     -DUSE_MDR1986VE9x \
     -D__STARTUP_CLEAR_BSS \
+    --specs=nano.specs \
+    --specs=nosys.specs \
+    -mcpu=cortex-m3 \
+    -std=c++17 \
     -Wl,-Map=${PROJECT_NAME}.map \
     -Wl,--print-memory-usage \
     -Wl,--defsym=__STACK_SIZE=0x0100 \
     -Wl,--defsym=__HEAP_SIZE=0x0000 \
     -Wl,--gc-sections \
+    -ffreestanding \
     ")
+
+#-mthumb \
+#-O3 \
+#-o prog \
+#-D_GNU_SOURCE \
+#-L./libmine \
 
 #-rdynamic
 #-nostdlib
