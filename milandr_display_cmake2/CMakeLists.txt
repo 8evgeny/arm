@@ -66,8 +66,11 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -Wl,--gc-sections \
     -ffreestanding \
     ")
-#/home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
-#startup_MDR32F9Qx.S
+
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
+#    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
+#    ")
+
 #-mthumb \
 #-O3 \
 #-o prog \
@@ -113,7 +116,6 @@ set (SOURCES_C
     src/rcc_delay.c
     src/usb.c
     src/var.c
-    /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
     )
 
 set (SOURCES_CPP
@@ -151,8 +153,6 @@ add_library(CMSIS
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
     ${SOURCES_CPP}
-    ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld
-    ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
 #    ${SOURCES_SPL}
 #    ${SOURCES_USB}
 #    ${SOURCES_DEVICE_SUPPORT}
