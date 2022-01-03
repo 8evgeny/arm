@@ -67,7 +67,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -Wl,--defsym=__STACK_SIZE=0x0100 \
     -Wl,--defsym=__HEAP_SIZE=0x0000 \
     -Wl,--gc-sections \
-    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
     ")
 
 #-rdynamic
@@ -79,12 +78,13 @@ set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
     -mfloat-abi=soft \
     -mthumb \
     -mcpu=cortex-m3 \
-    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
     --specs=nosys.specs \
     --specs=nano.specs \
     -ffreestanding \
     -nostartfiles \
     ")
+#    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
+
 
 include_directories(
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc
