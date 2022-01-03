@@ -66,7 +66,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -Wl,--gc-sections \
     -ffreestanding \
     ")
-
+#/home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
+#startup_MDR32F9Qx.S
 #-mthumb \
 #-O3 \
 #-o prog \
@@ -75,18 +76,19 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
 
 #-rdynamic
 #-nostdlib
-set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
-    -ffunction-sections \
-    -fdata-sections \
-    -fno-strict-aliasing \
-    -mfloat-abi=soft \
-    -mthumb \
-    -mcpu=cortex-m3 \
-    --specs=nosys.specs \
-    --specs=nano.specs \
-    -ffreestanding \
-    -nostartfiles \
-    ")
+
+#set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
+#    -ffunction-sections \
+#    -fdata-sections \
+#    -fno-strict-aliasing \
+#    -mfloat-abi=soft \
+#    -mthumb \
+#    -mcpu=cortex-m3 \
+#    --specs=nosys.specs \
+#    --specs=nano.specs \
+#    -ffreestanding \
+#    -nostartfiles \
+#    ")
 #    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
 
 
@@ -111,6 +113,7 @@ set (SOURCES_C
     src/rcc_delay.c
     src/usb.c
     src/var.c
+    /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
     )
 
 set (SOURCES_CPP
@@ -148,7 +151,8 @@ add_library(CMSIS
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
     ${SOURCES_CPP}
-    ${LINKER_SCRIPT}
+    ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld
+    ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
 #    ${SOURCES_SPL}
 #    ${SOURCES_USB}
 #    ${SOURCES_DEVICE_SUPPORT}
