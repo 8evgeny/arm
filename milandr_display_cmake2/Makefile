@@ -26,7 +26,6 @@ mt20s4.c \
 rcc_delay.c \
 usb.c \
 var.c \
-system_MDR32F9Qx.c \
 #main.c \
 
 SOURCES_CPP	= \
@@ -68,7 +67,6 @@ LIBS = -lm
 CXXFLAGS = -O3 -o prog -rdynamic -D_GNU_SOURCE -L./libmine
 #LIBS += -lpthread -ldl
 
-
 LDFLAGS	= \
 --specs=nosys.specs \
 --specs=nano.specs \
@@ -86,8 +84,6 @@ LDFLAGS	= \
 # -Wl,-script="../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld" \
 #-u _printf_float 
 
- 
-
 
 INCLUDES = \
 -I../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc \
@@ -102,6 +98,7 @@ INCLUDES = \
 -I./include 
 
 STARUPFILE = ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
+DEV_SUPPORT_FILE =  ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/system_MDR32F9Qx.c
 
 SOURCES_SPL = \
 MDR32F9Qx_iwdg.c \
@@ -114,13 +111,13 @@ SOURCES_USB = \
 MDR32F9Qx_usb_CDC.c \
 MDR32F9Qx_usb_device.c
 
-# SOURCES_DEVICE_SUPPORT = \
-# system_MDR32F9Qx.c
+SOURCES_DEVICE_SUPPORT = \
+system_MDR32F9Qx.c
 
 ################################################################
 
-# SOURCES_DEV_SUPP = $(addprefix ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm, $(SOURCES_DEVICE_SUPPORT))
 SOURCES_C += $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/, $(SOURCES_SPL))
+SOURCES_C += $(addprefix ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/, $(SOURCES_DEVICE_SUPPORT))
 SOURCES_C += $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/USB_Library/, $(SOURCES_USB))
 
 HEX = $(OUTPUT_DIR)/$(TARGET_HEX)
@@ -129,7 +126,6 @@ STARTUPOBJ = $(notdir $(STARUPFILE))
 STARTUPOBJ := $(patsubst %.S, $(OBJ_DIR)/%.S.o, $(STARTUPOBJ))
 
 OBJECTS	+= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES_C))
-# OBJECTS	+= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES_DEV_SUPP))
 OBJECTS	+= $(patsubst %, $(OBJ_DIR)/%.o, $(SOURCES_CPP))
 OBJECTS += $(STARTUPOBJ)
 

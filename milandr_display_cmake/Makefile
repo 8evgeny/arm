@@ -67,7 +67,6 @@ LIBS = -lm
 CXXFLAGS = -O3 -o prog -rdynamic -D_GNU_SOURCE -L./libmine
 #LIBS += -lpthread -ldl
 
-
 LDFLAGS	= \
 --specs=nosys.specs \
 --specs=nano.specs \
@@ -77,14 +76,13 @@ LDFLAGS	= \
 -Wl,--defsym=__STACK_SIZE=0x0100 \
 -mfloat-abi=soft \
 -fno-strict-aliasing \
+-T ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
 -fdata-sections \
 -ffunction-sections  \
 -Wl,--gc-sections \
-#-Wl,-script="../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld" \
--Wl,-Map=$(TARGET).map
+-Wl,-Map=$(TARGET).map \
+# -Wl,-script="../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld" \
 #-u _printf_float 
-
-LFLAGS  = -T ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld
 
 
 INCLUDES = \
@@ -100,6 +98,7 @@ INCLUDES = \
 -I./include 
 
 STARUPFILE = ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
+DEV_SUPPORT_FILE =  ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/system_MDR32F9Qx.c
 
 SOURCES_SPL = \
 MDR32F9Qx_iwdg.c \
@@ -113,14 +112,13 @@ MDR32F9Qx_usb_CDC.c \
 MDR32F9Qx_usb_device.c
 
 SOURCES_DEVICE_SUPPORT = \
-#MDR1986VE9x.sct \
 system_MDR32F9Qx.c
 
 ################################################################
 
-SOURCES_C	+= $(addprefix ../MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/, $(SOURCES_DEVICE_SUPPORT))
-SOURCES_C	+= $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/, $(SOURCES_SPL))
-SOURCES_C	+= $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/USB_Library/, $(SOURCES_USB))
+SOURCES_C += $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/, $(SOURCES_SPL))
+SOURCES_C += $(addprefix ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/, $(SOURCES_DEVICE_SUPPORT))
+SOURCES_C += $(addprefix ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src/USB_Library/, $(SOURCES_USB))
 
 HEX = $(OUTPUT_DIR)/$(TARGET_HEX)
 
