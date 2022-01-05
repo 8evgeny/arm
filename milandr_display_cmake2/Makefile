@@ -53,7 +53,6 @@ CFLAGS = \
 #-xc \
 #-std=c99 \
 #--target=arm-arm-none-eabi \
-#-mcpu=cortex-m3 \
 #-c \
 #-fno-rtti \
 #-funsigned-char \
