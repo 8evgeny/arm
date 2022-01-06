@@ -1,5 +1,5 @@
 # Настройки компилятора C
-#QMAKE_CC = arm-none-eabi-gcc
+QMAKE_CC = arm-none-eabi-gcc
 QMAKE_CC =/home/evg/toolchain/gcc-arm-none-eabi-new/bin/arm-none-eabi-gcc
 QMAKE_CFLAGS += -mcpu=cortex-m3
 QMAKE_CFLAGS += -mthumb

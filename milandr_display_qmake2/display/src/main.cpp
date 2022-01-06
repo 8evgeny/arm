@@ -13,7 +13,7 @@
 //---------------------------------
 #include "gpio.h"
 #include "main.h"
-//#include <string>
+#include <string>
 //=================================
 //int main (int argc, char** argv) {
     int main () {
