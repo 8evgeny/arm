@@ -236,6 +236,9 @@ DIST          = /home/evg/Qt/5.12.12/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/toolchain.prf \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/default_pre.prf \
+		../../../common/alias.pri \
+		../../../common/includepath.pri \
+		../../../common/gcc.pri \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/resolve_config.prf \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/default_post.prf \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/qml_debug.prf \
@@ -450,6 +453,9 @@ Makefile: ../../spl/spl.pro /home/evg/Qt/5.12.12/gcc_64/mkspecs/linux-clang/qmak
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/toolchain.prf \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/default_pre.prf \
+		../../common/alias.pri \
+		../../common/includepath.pri \
+		../../common/gcc.pri \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/resolve_config.prf \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/default_post.prf \
 		/home/evg/Qt/5.12.12/gcc_64/mkspecs/features/qml_debug.prf \
@@ -639,6 +645,9 @@ Makefile: ../../spl/spl.pro /home/evg/Qt/5.12.12/gcc_64/mkspecs/linux-clang/qmak
 /home/evg/Qt/5.12.12/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/evg/Qt/5.12.12/gcc_64/mkspecs/features/toolchain.prf:
 /home/evg/Qt/5.12.12/gcc_64/mkspecs/features/default_pre.prf:
+../../common/alias.pri:
+../../common/includepath.pri:
+../../common/gcc.pri:
 /home/evg/Qt/5.12.12/gcc_64/mkspecs/features/resolve_config.prf:
 /home/evg/Qt/5.12.12/gcc_64/mkspecs/features/default_post.prf:
 /home/evg/Qt/5.12.12/gcc_64/mkspecs/features/qml_debug.prf:
