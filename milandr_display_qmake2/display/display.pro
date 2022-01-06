@@ -34,7 +34,7 @@ SOURCES += $$files(./src/*.cpp)
 
 LIBS += -L../build/lib -lspl
 LIBS += -L../build/lib -ldev_support
-LIBS += -L../build/lib -lstartup_support
+#LIBS += -L../build/lib -lstartup_support
 LIBS += -L../build/lib -lusb
 
 #Настраиваем постобработку ELF-файла, с целью перекрутить его в Intel HEX для последующей прошивки в плату

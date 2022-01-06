@@ -15,6 +15,6 @@ include(../common/gcc.pri)
 HEADERS += $$files($$DevSupport/startup/arm/system_MDR32F9Qx.h)
 
 SOURCES += $$files($$DevSupport/startup/arm/system_MDR32F9Qx.c)
-
+SOURCES += ../../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
 
 
