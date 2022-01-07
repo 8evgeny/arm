@@ -31,15 +31,17 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -D__START=main \
     --specs=nosys.specs \
     --specs=nano.specs \
-    -fno-exceptions \
-    -D__HEAP_SIZE=0x0C00 \
-    -D__STACK_SIZE=0x0400 \
-    -mfloat-abi=soft \
-    -fno-strict-aliasing \
     ")
+
+
+#-fno-exceptions \
+#-D__HEAP_SIZE=0x0C00 \
+#-D__STACK_SIZE=0x0400 \
+#-mfloat-abi=soft \
+#-fno-strict-aliasing \
+
 #-nostdli
 #-xc
-#-std=c99
 #--target=arm-arm-none-eabi
 #-c
 #-fno-rtti
@@ -48,41 +50,48 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
 #-fshort-wchar
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-    --specs=nosys.specs \
-    --specs=nano.specs \
-    -mcpu=cortex-m3 \
-    -mthumb \
-    -std=c++17 \
-    -O3 \
-    -o prog \
-    -D_GNU_SOURCE \
-    -L./libmine \
     -fno-rtti \
     -fno-exceptions \
     -fno-threadsafe-statics \
     -DUSE_MDR1986VE9x \
     -D__STARTUP_CLEAR_BSS \
+    --specs=nano.specs \
+    --specs=nosys.specs \
+    -mcpu=cortex-m3 \
+    -std=c++17 \
     -Wl,-Map=${PROJECT_NAME}.map \
     -Wl,--print-memory-usage \
     -Wl,--defsym=__STACK_SIZE=0x0100 \
     -Wl,--defsym=__HEAP_SIZE=0x0000 \
     -Wl,--gc-sections \
+    -ffreestanding \
     ")
+
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
+#    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
+#    ")
+
+#-mthumb \
+#-O3 \
+#-o prog \
+#-D_GNU_SOURCE \
+#-L./libmine \
 
 #-rdynamic
 #-nostdlib
-set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
-    -ffunction-sections \
-    -fdata-sections \
-    -fno-strict-aliasing \
-    -mfloat-abi=soft \
-    -mthumb \
-    -mcpu=cortex-m3 \
-    --specs=nosys.specs \
-    --specs=nano.specs \
-    -ffreestanding \
-    -nostartfiles \
-    ")
+
+#set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
+#    -ffunction-sections \
+#    -fdata-sections \
+#    -fno-strict-aliasing \
+#    -mfloat-abi=soft \
+#    -mthumb \
+#    -mcpu=cortex-m3 \
+#    --specs=nosys.specs \
+#    --specs=nano.specs \
+#    -ffreestanding \
+#    -nostartfiles \
+#    ")
 #    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
 
 
@@ -144,7 +153,6 @@ add_library(CMSIS
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
     ${SOURCES_CPP}
-    ${LINKER_SCRIPT}
 #    ${SOURCES_SPL}
 #    ${SOURCES_USB}
 #    ${SOURCES_DEVICE_SUPPORT}
