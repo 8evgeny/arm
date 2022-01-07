@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___clock___source" xml:lang="en-US">
+<title>TIM Clock Source</title>
+<indexterm><primary>TIM Clock Source</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___clock___source_1gab133f0839cf6a4e858457d48f057eea8">TIM_CLOCKSOURCE_ETRMODE2</link>   <link linkend="_group___peripheral___registers___bits___definition_1gabf12f04862dbc92ca238d1518b27b16b">TIM_SMCR_ETPS_1</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___clock___source_1ga9b398a201d8b6a4f200ebde86b1d8f3a">TIM_CLOCKSOURCE_INTERNAL</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga00b43cd09557a69ed10471ed76b228d8">TIM_SMCR_ETPS_0</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___clock___source_1ga3310aa84f2f322eb77538997c070e56a">TIM_CLOCKSOURCE_ITR0</link>   <link linkend="_group___t_i_m___trigger___selection_1gab7cf2b7db3956d4fd1e5a5d84f4891e7">TIM_TS_ITR0</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___clock___source_1gae2da814f8d86491e7c344bb8d0f62b96">TIM_CLOCKSOURCE_ITR1</link>   <link linkend="_group___t_i_m___trigger___selection_1gad90fbca297153ca9c0112a67ea2c6cb3">TIM_TS_ITR1</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___clock___source_1gafb779719a41769b14303da4977f6a5f1">TIM_CLOCKSOURCE_ITR2</link>   <link linkend="_group___t_i_m___trigger___selection_1ga8599ba58a5f911d648503c7ac55d4320">TIM_TS_ITR2</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___clock___source_1ga0cce2af04ad903ba683515c3772abb27">TIM_CLOCKSOURCE_ITR3</link>   <link linkend="_group___t_i_m___trigger___selection_1ga63183e611b91c5847040172c0069514d">TIM_TS_ITR3</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___clock___source_1gad8c96337acf40356d82570cc4851ce2d">TIM_CLOCKSOURCE_TI1ED</link>   <link linkend="_group___t_i_m___trigger___selection_1ga8c89554efc693e679c94b5a749af123c">TIM_TS_TI1F_ED</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___clock___source_1ga0a8708d4dab5cbd557a76efb362e13c0">TIM_CLOCKSOURCE_TI1</link>   <link linkend="_group___t_i_m___trigger___selection_1ga38d3514d54bcdb0ea8ac8bd91c5832b5">TIM_TS_TI1FP1</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___clock___source_1ga7950cf616702dd38d8f1ab5091efc012">TIM_CLOCKSOURCE_TI2</link>   <link linkend="_group___t_i_m___trigger___selection_1ga0ed58a269bccd3f22d19cc9a2ba3123f">TIM_TS_TI2FP2</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___clock___source_1gaa7743af6f4b8869cad0375526c6145ce">TIM_CLOCKSOURCE_ETRMODE1</link>   <link linkend="_group___t_i_m___trigger___selection_1gaece08e02e056613a882aa7ff0a6ccc2d">TIM_TS_ETRF</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___clock___source_1gaa7743af6f4b8869cad0375526c6145ce"/>    <section>
+    <title>TIM_CLOCKSOURCE_ETRMODE1</title>
+<indexterm><primary>TIM_CLOCKSOURCE_ETRMODE1</primary><secondary>TIM Clock Source</secondary></indexterm>
+<indexterm><primary>TIM Clock Source</primary><secondary>TIM_CLOCKSOURCE_ETRMODE1</secondary></indexterm>
+<para><computeroutput>#define TIM_CLOCKSOURCE_ETRMODE1   <link linkend="_group___t_i_m___trigger___selection_1gaece08e02e056613a882aa7ff0a6ccc2d">TIM_TS_ETRF</link></computeroutput></para>
+<para>External clock source mode 1 (ETRF) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___clock___source_1gab133f0839cf6a4e858457d48f057eea8"/>    <section>
+    <title>TIM_CLOCKSOURCE_ETRMODE2</title>
+<indexterm><primary>TIM_CLOCKSOURCE_ETRMODE2</primary><secondary>TIM Clock Source</secondary></indexterm>
+<indexterm><primary>TIM Clock Source</primary><secondary>TIM_CLOCKSOURCE_ETRMODE2</secondary></indexterm>
+<para><computeroutput>#define TIM_CLOCKSOURCE_ETRMODE2   <link linkend="_group___peripheral___registers___bits___definition_1gabf12f04862dbc92ca238d1518b27b16b">TIM_SMCR_ETPS_1</link></computeroutput></para>
+<para>External clock source mode 2 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___clock___source_1ga9b398a201d8b6a4f200ebde86b1d8f3a"/>    <section>
+    <title>TIM_CLOCKSOURCE_INTERNAL</title>
+<indexterm><primary>TIM_CLOCKSOURCE_INTERNAL</primary><secondary>TIM Clock Source</secondary></indexterm>
+<indexterm><primary>TIM Clock Source</primary><secondary>TIM_CLOCKSOURCE_INTERNAL</secondary></indexterm>
+<para><computeroutput>#define TIM_CLOCKSOURCE_INTERNAL   <link linkend="_group___peripheral___registers___bits___definition_1ga00b43cd09557a69ed10471ed76b228d8">TIM_SMCR_ETPS_0</link></computeroutput></para>
+<para>Internal clock source 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___clock___source_1ga3310aa84f2f322eb77538997c070e56a"/>    <section>
+    <title>TIM_CLOCKSOURCE_ITR0</title>
+<indexterm><primary>TIM_CLOCKSOURCE_ITR0</primary><secondary>TIM Clock Source</secondary></indexterm>
+<indexterm><primary>TIM Clock Source</primary><secondary>TIM_CLOCKSOURCE_ITR0</secondary></indexterm>
+<para><computeroutput>#define TIM_CLOCKSOURCE_ITR0   <link linkend="_group___t_i_m___trigger___selection_1gab7cf2b7db3956d4fd1e5a5d84f4891e7">TIM_TS_ITR0</link></computeroutput></para>
+<para>External clock source mode 1 (ITR0) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___clock___source_1gae2da814f8d86491e7c344bb8d0f62b96"/>    <section>
+    <title>TIM_CLOCKSOURCE_ITR1</title>
+<indexterm><primary>TIM_CLOCKSOURCE_ITR1</primary><secondary>TIM Clock Source</secondary></indexterm>
+<indexterm><primary>TIM Clock Source</primary><secondary>TIM_CLOCKSOURCE_ITR1</secondary></indexterm>
+<para><computeroutput>#define TIM_CLOCKSOURCE_ITR1   <link linkend="_group___t_i_m___trigger___selection_1gad90fbca297153ca9c0112a67ea2c6cb3">TIM_TS_ITR1</link></computeroutput></para>
+<para>External clock source mode 1 (ITR1) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___clock___source_1gafb779719a41769b14303da4977f6a5f1"/>    <section>
+    <title>TIM_CLOCKSOURCE_ITR2</title>
+<indexterm><primary>TIM_CLOCKSOURCE_ITR2</primary><secondary>TIM Clock Source</secondary></indexterm>
+<indexterm><primary>TIM Clock Source</primary><secondary>TIM_CLOCKSOURCE_ITR2</secondary></indexterm>
+<para><computeroutput>#define TIM_CLOCKSOURCE_ITR2   <link linkend="_group___t_i_m___trigger___selection_1ga8599ba58a5f911d648503c7ac55d4320">TIM_TS_ITR2</link></computeroutput></para>
+<para>External clock source mode 1 (ITR2) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___clock___source_1ga0cce2af04ad903ba683515c3772abb27"/>    <section>
+    <title>TIM_CLOCKSOURCE_ITR3</title>
+<indexterm><primary>TIM_CLOCKSOURCE_ITR3</primary><secondary>TIM Clock Source</secondary></indexterm>
+<indexterm><primary>TIM Clock Source</primary><secondary>TIM_CLOCKSOURCE_ITR3</secondary></indexterm>
+<para><computeroutput>#define TIM_CLOCKSOURCE_ITR3   <link linkend="_group___t_i_m___trigger___selection_1ga63183e611b91c5847040172c0069514d">TIM_TS_ITR3</link></computeroutput></para>
+<para>External clock source mode 1 (ITR3) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___clock___source_1ga0a8708d4dab5cbd557a76efb362e13c0"/>    <section>
+    <title>TIM_CLOCKSOURCE_TI1</title>
+<indexterm><primary>TIM_CLOCKSOURCE_TI1</primary><secondary>TIM Clock Source</secondary></indexterm>
+<indexterm><primary>TIM Clock Source</primary><secondary>TIM_CLOCKSOURCE_TI1</secondary></indexterm>
+<para><computeroutput>#define TIM_CLOCKSOURCE_TI1   <link linkend="_group___t_i_m___trigger___selection_1ga38d3514d54bcdb0ea8ac8bd91c5832b5">TIM_TS_TI1FP1</link></computeroutput></para>
+<para>External clock source mode 1 (TTI1FP1) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___clock___source_1gad8c96337acf40356d82570cc4851ce2d"/>    <section>
+    <title>TIM_CLOCKSOURCE_TI1ED</title>
+<indexterm><primary>TIM_CLOCKSOURCE_TI1ED</primary><secondary>TIM Clock Source</secondary></indexterm>
+<indexterm><primary>TIM Clock Source</primary><secondary>TIM_CLOCKSOURCE_TI1ED</secondary></indexterm>
+<para><computeroutput>#define TIM_CLOCKSOURCE_TI1ED   <link linkend="_group___t_i_m___trigger___selection_1ga8c89554efc693e679c94b5a749af123c">TIM_TS_TI1F_ED</link></computeroutput></para>
+<para>External clock source mode 1 (TTI1FP1 + edge detect.) </para>
+    </section><anchor xml:id="_group___t_i_m___clock___source_1ga7950cf616702dd38d8f1ab5091efc012"/>    <section>
+    <title>TIM_CLOCKSOURCE_TI2</title>
+<indexterm><primary>TIM_CLOCKSOURCE_TI2</primary><secondary>TIM Clock Source</secondary></indexterm>
+<indexterm><primary>TIM Clock Source</primary><secondary>TIM_CLOCKSOURCE_TI2</secondary></indexterm>
+<para><computeroutput>#define TIM_CLOCKSOURCE_TI2   <link linkend="_group___t_i_m___trigger___selection_1ga0ed58a269bccd3f22d19cc9a2ba3123f">TIM_TS_TI2FP2</link></computeroutput></para>
+<para>External clock source mode 1 (TTI2FP2) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+</section>
+</section>

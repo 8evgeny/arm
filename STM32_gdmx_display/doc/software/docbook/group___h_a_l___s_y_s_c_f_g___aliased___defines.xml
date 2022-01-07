@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___s_y_s_c_f_g___aliased___defines" xml:lang="en-US">
+<title>HAL SYSCFG Aliased Defines maintained for legacy purpose</title>
+<indexterm><primary>HAL SYSCFG Aliased Defines maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_y_s_c_f_g___aliased___defines_1gab49ca938ca8481b3bd783423f840c1bd"/>#define <emphasis role="strong">HAL_SYSCFG_FASTMODEPLUS_I2C_PA9</emphasis>   I2C_FASTMODEPLUS_PA9</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_y_s_c_f_g___aliased___defines_1ga51ca865a9860b7a43fbb46fb768e3657"/>#define <emphasis role="strong">HAL_SYSCFG_FASTMODEPLUS_I2C_PA10</emphasis>   I2C_FASTMODEPLUS_PA10</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_y_s_c_f_g___aliased___defines_1ga615cfdee08ad61f7b1581775e4e0385e"/>#define <emphasis role="strong">HAL_SYSCFG_FASTMODEPLUS_I2C_PB6</emphasis>   I2C_FASTMODEPLUS_PB6</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_y_s_c_f_g___aliased___defines_1gaacdf5fce976c3d425f3aac760f4dc90d"/>#define <emphasis role="strong">HAL_SYSCFG_FASTMODEPLUS_I2C_PB7</emphasis>   I2C_FASTMODEPLUS_PB7</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_y_s_c_f_g___aliased___defines_1gad8342aebd8090a8777d84165d5726b62"/>#define <emphasis role="strong">HAL_SYSCFG_FASTMODEPLUS_I2C_PB8</emphasis>   I2C_FASTMODEPLUS_PB8</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_y_s_c_f_g___aliased___defines_1ga8ace04770933b1fbf1b0e28abd6f3a25"/>#define <emphasis role="strong">HAL_SYSCFG_FASTMODEPLUS_I2C_PB9</emphasis>   I2C_FASTMODEPLUS_PB9</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_y_s_c_f_g___aliased___defines_1gad982b1937d6178bc74b6f95e3d343ab1"/>#define <emphasis role="strong">HAL_SYSCFG_FASTMODEPLUS_I2C1</emphasis>   I2C_FASTMODEPLUS_I2C1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_y_s_c_f_g___aliased___defines_1gaa415be62939648ababfdce87dea7c8d4"/>#define <emphasis role="strong">HAL_SYSCFG_FASTMODEPLUS_I2C2</emphasis>   I2C_FASTMODEPLUS_I2C2</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_y_s_c_f_g___aliased___defines_1ga3347764cd910d40c261ffcfa150b0912"/>#define <emphasis role="strong">HAL_SYSCFG_FASTMODEPLUS_I2C3</emphasis>   I2C_FASTMODEPLUS_I2C3</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

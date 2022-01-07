@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structx_l_i_s_t" kind="struct" language="C++" prot="public">
+    <compoundname>xLIST</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structx_l_i_s_t_1a8fa392ba5e75883d007713e1e6c83a76" prot="public" static="no" mutable="no">
+        <type>listFIRST_LIST_INTEGRITY_CHECK_VALUE volatile UBaseType_t</type>
+        <definition>listFIRST_LIST_INTEGRITY_CHECK_VALUE volatile UBaseType_t uxNumberOfItems</definition>
+        <argsstring></argsstring>
+        <name>uxNumberOfItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/list.h" line="166" column="22" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/list.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_l_i_s_t_1ae8639154918acc3f75d718480322aa82" prot="public" static="no" mutable="no">
+        <type><ref refid="structx_l_i_s_t___i_t_e_m" kindref="compound">ListItem_t</ref> *configLIST_VOLATILE</type>
+        <definition>ListItem_t* configLIST_VOLATILE pxIndex</definition>
+        <argsstring></argsstring>
+        <name>pxIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/list.h" line="167" column="33" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/list.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_l_i_s_t_1a83a65be4e3a2bb70855742896126bf63" prot="public" static="no" mutable="no">
+        <type><ref refid="structx_m_i_n_i___l_i_s_t___i_t_e_m" kindref="compound">MiniListItem_t</ref></type>
+        <definition>MiniListItem_t xListEnd</definition>
+        <argsstring></argsstring>
+        <name>xListEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/list.h" line="168" column="16" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/list.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>xMINI_LIST_ITEM</label>
+        <link refid="structx_m_i_n_i___l_i_s_t___i_t_e_m"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>pxNext</edgelabel>
+          <edgelabel>pxPrevious</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>xLIST</label>
+        <link refid="structx_l_i_s_t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>xListEnd</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>pxIndex</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>xLIST_ITEM</label>
+        <link refid="structx_l_i_s_t___i_t_e_m"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>pxNext</edgelabel>
+          <edgelabel>pxPrevious</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/include/list.h" line="163" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/list.h" bodystart="164" bodyend="170"/>
+    <listofallmembers>
+      <member refid="structx_l_i_s_t_1ae8639154918acc3f75d718480322aa82" prot="public" virt="non-virtual"><scope>xLIST</scope><name>pxIndex</name></member>
+      <member refid="structx_l_i_s_t_1a8fa392ba5e75883d007713e1e6c83a76" prot="public" virt="non-virtual"><scope>xLIST</scope><name>uxNumberOfItems</name></member>
+      <member refid="structx_l_i_s_t_1a83a65be4e3a2bb70855742896126bf63" prot="public" virt="non-virtual"><scope>xLIST</scope><name>xListEnd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

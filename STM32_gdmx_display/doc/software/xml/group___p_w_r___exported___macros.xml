@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___p_w_r___exported___macros" kind="group">
+    <compoundname>PWR_Exported_Macros</compoundname>
+    <title>PWR Exported Macros</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga2977135bbea35b786805eea640d1c884" prot="public" static="no">
+        <name>__HAL_PWR_GET_FLAG</name>
+        <param><defname>__FLAG__</defname></param>
+        <initializer>((PWR-&gt;CSR &amp; (__FLAG__)) == (__FLAG__))</initializer>
+        <briefdescription>
+<para>Check PWR flag is set or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;FLAG&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem><para>PWR_FLAG_WU: Wake Up flag. This flag indicates that a wakeup event was received from the WKUP pin or from the RTC alarm An additional wakeup event is detected if the WKUP pin is enabled (by setting the EWUP bit) when the WKUP pin level is already high. </para>
+</listitem>
+<listitem><para>PWR_FLAG_SB: StandBy flag. This flag indicates that the system was resumed from StandBy mode. </para>
+</listitem>
+<listitem><para>PWR_FLAG_PVDO: PVD Output. This flag is valid only if PVD is enabled by the HAL_PWR_EnablePVD() function. The PVD is stopped by Standby mode For this reason, this bit is equal to 0 after Standby or reset until the PVDE bit is set. </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new state of <bold>FLAG</bold> (TRUE or FALSE). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="190" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga96f24bf4b16c9f944cd829100bf746e5" prot="public" static="no">
+        <name>__HAL_PWR_CLEAR_FLAG</name>
+        <param><defname>__FLAG__</defname></param>
+        <initializer>SET_BIT(PWR-&gt;CR, ((__FLAG__) &lt;&lt; 2))</initializer>
+        <briefdescription>
+<para>Clear the PWR&apos;s pending flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;FLAG&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the flag to clear. This parameter can be one of the following values: <itemizedlist>
+<listitem><para>PWR_FLAG_WU: Wake Up flag </para>
+</listitem>
+<listitem><para>PWR_FLAG_SB: StandBy flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="198" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga3180f039cf14ef78a64089f387f8f9c2" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_ENABLE_IT</name>
+        <param></param>
+        <initializer>SET_BIT(EXTI-&gt;IMR, <ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>)</initializer>
+        <briefdescription>
+<para>Enable interrupt on PVD Exti Line 16. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="204" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1gad240d7bf8f15191b068497b9aead1f1f" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_DISABLE_IT</name>
+        <param></param>
+        <initializer>CLEAR_BIT(EXTI-&gt;IMR, <ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>)</initializer>
+        <briefdescription>
+<para>Disable interrupt on PVD Exti Line 16. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="210" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1gae5ba5672fe8cb7c1686c7f2cc211b128" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_ENABLE_EVENT</name>
+        <param></param>
+        <initializer>SET_BIT(EXTI-&gt;EMR, <ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>)</initializer>
+        <briefdescription>
+<para>Enable event on PVD Exti Line 16. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="216" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga8bd379e960497722450c7cea474a7e7a" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_DISABLE_EVENT</name>
+        <param></param>
+        <initializer>CLEAR_BIT(EXTI-&gt;EMR, <ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>)</initializer>
+        <briefdescription>
+<para>Disable event on PVD Exti Line 16. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="222" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga5b971478563a00e1ee1a9d8ca8054e08" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE</name>
+        <param></param>
+        <initializer>SET_BIT(EXTI-&gt;FTSR, <ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>)</initializer>
+        <briefdescription>
+<para>PVD EXTI line configuration: set falling edge trigger. <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="229" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga1ca57168205f8cd8d1014e6eb9465f2d" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE</name>
+        <param></param>
+        <initializer>CLEAR_BIT(EXTI-&gt;FTSR, <ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>)</initializer>
+        <briefdescription>
+<para>Disable the PVD Extended Interrupt Falling Trigger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="236" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga7bef3f30c9fe267c99d5240fbf3f878c" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE</name>
+        <param></param>
+        <initializer>SET_BIT(EXTI-&gt;RTSR, <ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>)</initializer>
+        <briefdescription>
+<para>PVD EXTI line configuration: set rising edge trigger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="243" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga1ca8fd7f3286a176f6be540c75a004c6" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</name>
+        <param></param>
+        <initializer>CLEAR_BIT(EXTI-&gt;RTSR, <ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>)</initializer>
+        <briefdescription>
+<para>Disable the PVD Extended Interrupt Rising Trigger. This parameter can be: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="250" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga638033d236eb78c1e5ecb9b49c4e7f36" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_ENABLE_RISING_FALLING_EDGE</name>
+        <param></param>
+        <initializer><ref refid="group___p_w_r___exported___macros_1ga7bef3f30c9fe267c99d5240fbf3f878c" kindref="member">__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE</ref>();<ref refid="group___p_w_r___exported___macros_1ga5b971478563a00e1ee1a9d8ca8054e08" kindref="member">__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE</ref>();</initializer>
+        <briefdescription>
+<para>PVD EXTI line configuration: set rising &amp; falling edge trigger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="256" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga3f66c9c0c214cd08c24674904dcdc4e0" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_DISABLE_RISING_FALLING_EDGE</name>
+        <param></param>
+        <initializer><ref refid="group___p_w_r___exported___macros_1ga1ca8fd7f3286a176f6be540c75a004c6" kindref="member">__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</ref>();<ref refid="group___p_w_r___exported___macros_1ga1ca57168205f8cd8d1014e6eb9465f2d" kindref="member">__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE</ref>();</initializer>
+        <briefdescription>
+<para>Disable the PVD Extended Interrupt Rising &amp; Falling Trigger. This parameter can be: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="263" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1ga5e66fa75359b51066e0731ac1e5ae438" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_GET_FLAG</name>
+        <param></param>
+        <initializer>(EXTI-&gt;PR &amp; (<ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>))</initializer>
+        <briefdescription>
+<para>Check whether the specified PVD EXTI interrupt flag is set or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>EXTI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PVD Line Status. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="271" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1gac0fb2218bc050f5d8fdb1a3f28590352" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_CLEAR_FLAG</name>
+        <param></param>
+        <initializer>(EXTI-&gt;PR = (<ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>))</initializer>
+        <briefdescription>
+<para>Clear the PVD EXTI flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="277" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___exported___macros_1gaba4a7968f5c4c4ca6a7047b147ba18d4" prot="public" static="no">
+        <name>__HAL_PWR_PVD_EXTI_GENERATE_SWIT</name>
+        <param></param>
+        <initializer>SET_BIT(EXTI-&gt;SWIER, <ref refid="group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b" kindref="member">PWR_EXTI_LINE_PVD</ref>)</initializer>
+        <briefdescription>
+<para>Generate a Software interrupt on selected EXTI line. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="283" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

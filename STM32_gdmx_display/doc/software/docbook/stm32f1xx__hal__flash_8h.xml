@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f1xx__hal__flash_8h" xml:lang="en-US">
+<title>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h File Reference</title>
+<indexterm><primary>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h</primary></indexterm>
+<para>
+
+<para>Header file of Flash HAL module. </para>
+ 
+</para>
+<programlisting>#include &quot;stm32f1xx_hal_def.h&quot;
+#include &quot;stm32f1xx_hal_flash_ex.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___process_type_def">FLASH_ProcessTypeDef</link></para>
+
+<para>FLASH handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">FLASH_TIMEOUT_VALUE</emphasis>   50000U /* 50 s */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_FLASH_TYPEPROGRAM</emphasis>(VALUE)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_FLASH_LATENCY</emphasis>(__LATENCY__)   ((__LATENCY__) == <link linkend="_group___f_l_a_s_h___latency_1ga1276f51e97dc9857ca261fae4eb890f3">FLASH_LATENCY_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___error___codes_1gae7fb9ee7198d393aba27ade3a9f50a70">HAL_FLASH_ERROR_NONE</link>   0x00U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___error___codes_1ga516a75e6f98eed9daefa0b442a74c04b">HAL_FLASH_ERROR_PROG</link>   0x01U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___error___codes_1ga27e871d85f9311272098315bc3723075">HAL_FLASH_ERROR_WRP</link>   0x02U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___error___codes_1ga9fe984a57c2e92c27c4217468d1b2d93">HAL_FLASH_ERROR_OPTV</link>   0x04U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1ga2b607dfc2efd463a8530e327bc755582">FLASH_TYPEPROGRAM_HALFWORD</link>   0x01U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1gadd25c6821539030ba6711e7c0d586c3e">FLASH_TYPEPROGRAM_WORD</link>   0x02U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1gabdc2b0b4d2e66c2be90fafbfbf1e225f">FLASH_TYPEPROGRAM_DOUBLEWORD</link>   0x03U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___latency_1ga1276f51e97dc9857ca261fae4eb890f3">FLASH_LATENCY_0</link>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___half___cycle_1ga65eb4c393cbc94747449b8aab349200a">__HAL_FLASH_HALF_CYCLE_ACCESS_ENABLE</link>()   (FLASH-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga6e66d0fa94c019e9c27a3d79e8228cd9">FLASH_ACR_HLFCYA</link>)</para>
+
+<para>Enable the FLASH half cycle access. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___half___cycle_1ga2e0c8e2c00a86896027c0cf1c95fbba1">__HAL_FLASH_HALF_CYCLE_ACCESS_DISABLE</link>()   (FLASH-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga6e66d0fa94c019e9c27a3d79e8228cd9">FLASH_ACR_HLFCYA</link>))</para>
+
+<para>Disable the FLASH half cycle access. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___prefetch_1gad36059641057f824516303ea92734e6f">__HAL_FLASH_PREFETCH_BUFFER_ENABLE</link>()   (FLASH-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga5285ab198307213dce0629f9b7c6fc86">FLASH_ACR_PRFTBE</link>)</para>
+
+<para>Enable the FLASH prefetch buffer. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___prefetch_1ga646a4cb92e85659334d14a8c78f0ede8">__HAL_FLASH_PREFETCH_BUFFER_DISABLE</link>()   (FLASH-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga5285ab198307213dce0629f9b7c6fc86">FLASH_ACR_PRFTBE</link>))</para>
+
+<para>Disable the FLASH prefetch buffer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h___exported___types_1ga2b0268387bc11bcab76be9ce7c43eaaf"/>enum <link linkend="_group___f_l_a_s_h___exported___types_1ga2b0268387bc11bcab76be9ce7c43eaaf">FLASH_ProcedureTypeDef</link> { 
+<emphasis role="strong">FLASH_PROC_NONE</emphasis> = 0U
+, <emphasis role="strong">FLASH_PROC_PAGEERASE</emphasis> = 1U
+, <emphasis role="strong">FLASH_PROC_MASSERASE</emphasis> = 2U
+, <emphasis role="strong">FLASH_PROC_PROGRAMHALFWORD</emphasis> = 3U
+, 
+<emphasis role="strong">FLASH_PROC_PROGRAMWORD</emphasis> = 4U
+, <emphasis role="strong">FLASH_PROC_PROGRAMDOUBLEWORD</emphasis> = 5U
+ }</para>
+
+<para>FLASH Procedure structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_FLASH_Program</emphasis> (uint32_t TypeProgram, uint32_t Address, uint64_t Data)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_FLASH_Program_IT</emphasis> (uint32_t TypeProgram, uint32_t Address, uint64_t Data)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_FLASH_IRQHandler</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_FLASH_EndOfOperationCallback</emphasis> (uint32_t ReturnValue)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_FLASH_OperationErrorCallback</emphasis> (uint32_t ReturnValue)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_FLASH_Unlock</emphasis> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_FLASH_Lock</emphasis> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_FLASH_OB_Unlock</emphasis> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_FLASH_OB_Lock</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_FLASH_OB_Launch</emphasis> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">HAL_FLASH_GetError</emphasis> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">FLASH_WaitForLastOperation</emphasis> (uint32_t Timeout)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of Flash HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2016 STMicroelectronics. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+</section>

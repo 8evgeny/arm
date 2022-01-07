@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status" xml:lang="en-US">
+<title>APB1 Peripheral Clock Enable Disable Status</title>
+<indexterm><primary>APB1 Peripheral Clock Enable Disable Status</primary></indexterm>
+<para>
+
+<para>Get the enable or disable status of the APB1 peripheral clock. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1gadee5016adb1c8b62a5bb05f055859de0"/>#define <emphasis role="strong">__HAL_RCC_TIM2_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gacd3966a4d6ae47f06b3c095eaf26a610">RCC_APB1ENR_TIM2EN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1gacaaa75c78c8ef4cf85f30fb20d522054"/>#define <emphasis role="strong">__HAL_RCC_TIM2_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gacd3966a4d6ae47f06b3c095eaf26a610">RCC_APB1ENR_TIM2EN</link>)) == RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1gaf6090239db6a8a6917b3f3accea15ed0"/>#define <emphasis role="strong">__HAL_RCC_TIM3_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga75bfa33eb00ee30c6e22f7ceea464ac7">RCC_APB1ENR_TIM3EN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1ga50f8e043a42eaf534c1efa2477078c0a"/>#define <emphasis role="strong">__HAL_RCC_TIM3_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga75bfa33eb00ee30c6e22f7ceea464ac7">RCC_APB1ENR_TIM3EN</link>)) == RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1ga9b26aff2638d1e0613b0ce0530f0cd48"/>#define <emphasis role="strong">__HAL_RCC_WWDG_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gaf712b922ee776a972d2efa3da0ea4733">RCC_APB1ENR_WWDGEN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1ga21d4e081c859ddccd4492343743bb245"/>#define <emphasis role="strong">__HAL_RCC_WWDG_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gaf712b922ee776a972d2efa3da0ea4733">RCC_APB1ENR_WWDGEN</link>)) == RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1gad3bbe0639658ed2cc56f8328b26373ea"/>#define <emphasis role="strong">__HAL_RCC_USART2_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gab840af4f735ec36419d61c7db3cfa00d">RCC_APB1ENR_USART2EN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1ga61e4b1f3e82831cdc7508d4c38312eab"/>#define <emphasis role="strong">__HAL_RCC_USART2_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gab840af4f735ec36419d61c7db3cfa00d">RCC_APB1ENR_USART2EN</link>)) == RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1ga7570e5654fd61b44dabe0546e524c906"/>#define <emphasis role="strong">__HAL_RCC_I2C1_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga5ca3afe0c517702b2d1366b692c8db0e">RCC_APB1ENR_I2C1EN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1ga8868ab331b4bb14a1d5cc55c9133e4de"/>#define <emphasis role="strong">__HAL_RCC_I2C1_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga5ca3afe0c517702b2d1366b692c8db0e">RCC_APB1ENR_I2C1EN</link>)) == RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1gabec2fa9dccfe0e8e239b02303f2a56c4"/>#define <emphasis role="strong">__HAL_RCC_BKP_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gad32a0efcb7062b8ffbf77865951d2a54">RCC_APB1ENR_BKPEN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1gaa6e91221fef5277d99489a232e0d6d6f"/>#define <emphasis role="strong">__HAL_RCC_BKP_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gad32a0efcb7062b8ffbf77865951d2a54">RCC_APB1ENR_BKPEN</link>)) == RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1ga850f4fd113303ed7322577ad023cf748"/>#define <emphasis role="strong">__HAL_RCC_PWR_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga5c19997ccd28464b80a7c3325da0ca60">RCC_APB1ENR_PWREN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_1ga1019fdeb30eb4bcb23a0bea2278a94a2"/>#define <emphasis role="strong">__HAL_RCC_PWR_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;APB1ENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga5c19997ccd28464b80a7c3325da0ca60">RCC_APB1ENR_PWREN</link>)) == RESET)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Get the enable or disable status of the APB1 peripheral clock. </para>
+
+<para><note><title>Note</title>
+
+<para>After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. </para>
+</note>
+</para>
+</section>
+</section>

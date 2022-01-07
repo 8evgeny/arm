@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c_ex" kind="group">
+    <compoundname>RCCEx</compoundname>
+    <title>RCCEx</title>
+    <innergroup refid="group___r_c_c_ex___exported___types">RCCEx Exported Types</innergroup>
+    <innergroup refid="group___r_c_c_ex___exported___constants">RCCEx Exported Constants</innergroup>
+    <innergroup refid="group___r_c_c_ex___exported___macros">RCCEx Exported Macros</innergroup>
+    <innergroup refid="group___r_c_c_ex___private___constants">RCCEx_Private_Constants</innergroup>
+    <innergroup refid="group___r_c_c_ex___private___macros">RCCEx_Private_Macros</innergroup>
+    <innergroup refid="group___r_c_c_ex___exported___functions">RCCEx_Exported_Functions</innergroup>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

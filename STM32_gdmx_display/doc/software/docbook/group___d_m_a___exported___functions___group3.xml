@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___d_m_a___exported___functions___group3" xml:lang="en-US">
+<title>DMA_Exported_Functions_Group3</title>
+<indexterm><primary>DMA_Exported_Functions_Group3</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___d_m_a___exported___functions___group3_1gaef09509c41da57dc118c8ffb9533ce3f"/><link linkend="_group___d_m_a___exported___types_1ga9c012af359987a240826f29073bbe463">HAL_DMA_StateTypeDef</link> <emphasis role="strong">HAL_DMA_GetState</emphasis> (<link linkend="_group___d_m_a___exported___types_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___d_m_a___exported___functions___group3_1gabc0735694a0dd08e352b796d7fa7634f"/>uint32_t <emphasis role="strong">HAL_DMA_GetError</emphasis> (<link linkend="_group___d_m_a___exported___types_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

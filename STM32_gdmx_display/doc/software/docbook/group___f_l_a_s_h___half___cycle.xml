@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h___half___cycle" xml:lang="en-US">
+<title>FLASH Half Cycle</title>
+<indexterm><primary>FLASH Half Cycle</primary></indexterm>
+<para>
+
+<para>macros to handle FLASH half cycle </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___half___cycle_1ga65eb4c393cbc94747449b8aab349200a">__HAL_FLASH_HALF_CYCLE_ACCESS_ENABLE</link>()   (FLASH-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga6e66d0fa94c019e9c27a3d79e8228cd9">FLASH_ACR_HLFCYA</link>)</para>
+
+<para>Enable the FLASH half cycle access. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___half___cycle_1ga2e0c8e2c00a86896027c0cf1c95fbba1">__HAL_FLASH_HALF_CYCLE_ACCESS_DISABLE</link>()   (FLASH-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga6e66d0fa94c019e9c27a3d79e8228cd9">FLASH_ACR_HLFCYA</link>))</para>
+
+<para>Disable the FLASH half cycle access. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>macros to handle FLASH half cycle </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h___half___cycle_1ga2e0c8e2c00a86896027c0cf1c95fbba1"/>    <section>
+    <title>__HAL_FLASH_HALF_CYCLE_ACCESS_DISABLE</title>
+<indexterm><primary>__HAL_FLASH_HALF_CYCLE_ACCESS_DISABLE</primary><secondary>FLASH Half Cycle</secondary></indexterm>
+<indexterm><primary>FLASH Half Cycle</primary><secondary>__HAL_FLASH_HALF_CYCLE_ACCESS_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_HALF_CYCLE_ACCESS_DISABLE( )   (FLASH-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga6e66d0fa94c019e9c27a3d79e8228cd9">FLASH_ACR_HLFCYA</link>))</computeroutput></para><para>
+
+<para>Disable the FLASH half cycle access. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>half cycle access can only be used with a low-frequency clock of less than 8 MHz that can be obtained with the use of HSI or HSE but not of PLL. </para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___half___cycle_1ga65eb4c393cbc94747449b8aab349200a"/>    <section>
+    <title>__HAL_FLASH_HALF_CYCLE_ACCESS_ENABLE</title>
+<indexterm><primary>__HAL_FLASH_HALF_CYCLE_ACCESS_ENABLE</primary><secondary>FLASH Half Cycle</secondary></indexterm>
+<indexterm><primary>FLASH Half Cycle</primary><secondary>__HAL_FLASH_HALF_CYCLE_ACCESS_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_HALF_CYCLE_ACCESS_ENABLE( )   (FLASH-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga6e66d0fa94c019e9c27a3d79e8228cd9">FLASH_ACR_HLFCYA</link>)</computeroutput></para><para>
+
+<para>Enable the FLASH half cycle access. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>half cycle access can only be used with a low-frequency clock of less than 8 MHz that can be obtained with the use of HSI or HSE but not of PLL. </para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

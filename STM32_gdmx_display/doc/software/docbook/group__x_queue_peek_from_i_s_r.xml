@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__x_queue_peek_from_i_s_r" xml:lang="en-US">
+<title>xQueuePeekFromISR</title>
+<indexterm><primary>xQueuePeekFromISR</primary></indexterm>
+
+<para>queue. h <literallayout>
+BaseType_t xQueuePeekFromISR(
+                                QueueHandle_t xQueue,
+                                void *pvBuffer,
+                            );</literallayout></para>
+
+<para>A version of xQueuePeek() that can be called from an interrupt service routine (ISR).</para>
+
+<para>Receive an item from a queue without removing the item from the queue. The item is received by copy so a buffer of adequate size must be provided. The number of bytes copied into the buffer was defined when the queue was created.</para>
+
+<para>Successfully received items remain on the queue so will be returned again by the next call, or a call to xQueueReceive().</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>xQueue</entry>
+                                <entry>
+<para>The handle to the queue from which the item is to be received.</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>pvBuffer</entry>
+                                <entry>
+<para>Pointer to the buffer into which the received item will be copied.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>pdTRUE if an item was successfully received from the queue, otherwise pdFALSE. </para>
+</formalpara>
+</para>
+</section>

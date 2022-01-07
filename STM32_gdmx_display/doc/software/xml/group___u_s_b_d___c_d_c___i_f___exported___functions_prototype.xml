@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype" kind="group">
+    <compoundname>USBD_CDC_IF_Exported_FunctionsPrototype</compoundname>
+    <title>USBD_CDC_IF_Exported_FunctionsPrototype</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1ga5137d6201dbdef2bf351c5b4941c24f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t CDC_Transmit_FS</definition>
+        <argsstring>(uint8_t *Buf, uint16_t Len)</argsstring>
+        <name>CDC_Transmit_FS</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>Buf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>Len</declname>
+        </param>
+        <briefdescription>
+<para>CDC_Transmit_FS Data to send over USB IN endpoint are sent over CDC interface through this function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of data to be sent (in bytes) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if all operations are OK else USBD_FAIL or USBD_BUSY </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="128" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="299" bodyend="311" declfile="Inc/usbd_cdc_if.h" declline="128" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1gae6ee2a1ab766ec431c22350f8e19d00c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USBD_CDC_IF_clear</definition>
+        <argsstring>(void)</argsstring>
+        <name>USBD_CDC_IF_clear</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="131" column="6" bodyfile="Src/usbd_cdc_if.c" bodystart="314" bodyend="318" declfile="Inc/usbd_cdc_if.h" declline="131" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1ga2d2da5c6a86b837256c54b4bb42c5a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USBD_CDC_IF_write</definition>
+        <argsstring>(void)</argsstring>
+        <name>USBD_CDC_IF_write</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="134" column="6" bodyfile="Src/usbd_cdc_if.c" bodystart="321" bodyend="330" declfile="Inc/usbd_cdc_if.h" declline="134" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1ga6a894b0133456f4b37f5a9786ab495e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int USBD_CDC_IF_procRcvData</definition>
+        <argsstring>(uint8_t *data, uint16_t size)</argsstring>
+        <name>USBD_CDC_IF_procRcvData</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="137" column="5" bodyfile="Src/usbd_cdc_if.c" bodystart="333" bodyend="390" declfile="Inc/usbd_cdc_if.h" declline="137" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1gaf64b900615ca8a917baebf430f11add9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int USBD_CDC_IF_analyzeRcvData</definition>
+        <argsstring>(void)</argsstring>
+        <name>USBD_CDC_IF_analyzeRcvData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="140" column="5" bodyfile="Src/usbd_cdc_if.c" bodystart="393" bodyend="449" declfile="Inc/usbd_cdc_if.h" declline="140" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Public functions declaration. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

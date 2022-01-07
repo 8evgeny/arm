@@ -1,0 +1,47 @@
+.TH "EXTI_Private_Constants" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EXTI_Private_Constants \- EXTI Private Constants
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBEXTI_PROPERTY_SHIFT\fP   24u"
+.br
+.RI "EXTI Line property definition\&. "
+.ti -1c
+.RI "#define \fBEXTI_CONFIG\fP   (0x02uL << \fBEXTI_PROPERTY_SHIFT\fP)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_GPIO\fP   ((0x04uL << \fBEXTI_PROPERTY_SHIFT\fP) | EXTI_CONFIG)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_PROPERTY_MASK\fP   (EXTI_CONFIG | EXTI_GPIO)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_PIN_MASK\fP   0x0000001Fu"
+.br
+.RI "EXTI bit usage\&. "
+.ti -1c
+.RI "#define \fBEXTI_MODE_MASK\fP   (EXTI_MODE_EVENT | EXTI_MODE_INTERRUPT)"
+.br
+.RI "EXTI Mask for interrupt & event mode\&. "
+.ti -1c
+.RI "#define \fBEXTI_TRIGGER_MASK\fP   (EXTI_TRIGGER_RISING | EXTI_TRIGGER_FALLING)"
+.br
+.RI "EXTI Mask for trigger possibilities\&. "
+.ti -1c
+.RI "#define \fBEXTI_LINE_NB\fP   18UL"
+.br
+.RI "EXTI Line number\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

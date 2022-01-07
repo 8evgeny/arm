@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c___timeout" kind="group">
+    <compoundname>RCC_Timeout</compoundname>
+    <title>RCC Timeout</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___r_c_c___timeout_1gae578b5efd6bd38193ab426ce65cb77b1" prot="public" static="no">
+        <name>RCC_DBP_TIMEOUT_VALUE</name>
+        <initializer>100U    /* 100 ms */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1202" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___timeout_1gafe8ed1c0ca0e1c17ea69e09391498cc7" prot="public" static="no">
+        <name>RCC_LSE_TIMEOUT_VALUE</name>
+        <initializer><ref refid="stm32f1xx__hal__conf_8h_1a85e6fc812dc26f7161a04be2568a5462" kindref="member">LSE_STARTUP_TIMEOUT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1204" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___timeout_1gab3caadc0f23d394d1033aba55d31fcdc" prot="public" static="no">
+        <name>CLOCKSWITCH_TIMEOUT_VALUE</name>
+        <initializer>5000    /* 5 s    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1205" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___timeout_1gac0cd4ed24fa948844e1a40b12c450f32" prot="public" static="no">
+        <name>HSE_TIMEOUT_VALUE</name>
+        <initializer><ref refid="stm32f1xx__hal__conf_8h_1a68ecbc9b0a1a40a1ec9d18d5e9747c4f" kindref="member">HSE_STARTUP_TIMEOUT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1206" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___timeout_1gad9e56670dcbbe9dbc3a8971b36bbec58" prot="public" static="no">
+        <name>HSI_TIMEOUT_VALUE</name>
+        <initializer>2U      /* 2 ms (minimum Tick + 1) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1207" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___timeout_1gad52c7f624c88b0c82ab41b9dbd2b347f" prot="public" static="no">
+        <name>LSI_TIMEOUT_VALUE</name>
+        <initializer>2U      /* 2 ms (minimum Tick + 1) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1208" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___timeout_1gad54d8ad9b3511329efee38b3ad0665de" prot="public" static="no">
+        <name>PLL_TIMEOUT_VALUE</name>
+        <initializer>2U      /* 2 ms (minimum Tick + 1) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1209" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1209" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

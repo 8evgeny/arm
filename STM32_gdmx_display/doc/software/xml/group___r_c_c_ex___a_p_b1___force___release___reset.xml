@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c_ex___a_p_b1___force___release___reset" kind="group">
+    <compoundname>RCCEx_APB1_Force_Release_Reset</compoundname>
+    <title>APB1 Force Release Reset</title>
+    <briefdescription>
+<para>Force or release APB1 peripheral reset. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_t_i_m___break_dead_time_config_type_def" kind="struct" language="C++" prot="public">
+    <compoundname>TIM_BreakDeadTimeConfigTypeDef</compoundname>
+    <includes refid="stm32f1xx__hal__tim_8h" local="no">stm32f1xx_hal_tim.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_t_i_m___break_dead_time_config_type_def_1af45695121f3b3fe1ab24e8fbdb56d781" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t OffStateRunMode</definition>
+        <argsstring></argsstring>
+        <name>OffStateRunMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TIM off state in run mode This parameter can be a value of <ref refid="group___t_i_m___o_s_s_r___off___state___selection__for___run__mode__state" kindref="compound">TIM OSSR OffState Selection for Run mode state</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="267" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___break_dead_time_config_type_def_1a24f5a355f44432458801392e40a80faa" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t OffStateIDLEMode</definition>
+        <argsstring></argsstring>
+        <name>OffStateIDLEMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TIM off state in IDLE mode This parameter can be a value of <ref refid="group___t_i_m___o_s_s_i___off___state___selection__for___idle__mode__state" kindref="compound">TIM OSSI OffState Selection for Idle mode state</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="269" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___break_dead_time_config_type_def_1a5fb4b2ca5382b21df284a2d0ce75d32c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t LockLevel</definition>
+        <argsstring></argsstring>
+        <name>LockLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TIM Lock level This parameter can be a value of <ref refid="group___t_i_m___lock__level" kindref="compound">TIM Lock level</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="271" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___break_dead_time_config_type_def_1a5a08cf07668e90bc708f8cccf709f2b4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t DeadTime</definition>
+        <argsstring></argsstring>
+        <name>DeadTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TIM dead Time This parameter can be a number between Min_Data = 0x00 and Max_Data = 0xFF </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="273" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___break_dead_time_config_type_def_1a2a1604bd7f46bd571a2507c5f873474f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t BreakState</definition>
+        <argsstring></argsstring>
+        <name>BreakState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TIM Break State This parameter can be a value of <ref refid="group___t_i_m___break___input__enable__disable" kindref="compound">TIM Break Input Enable</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="275" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___break_dead_time_config_type_def_1a9ac85dcd5135063196b8954d9b779aa7" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t BreakPolarity</definition>
+        <argsstring></argsstring>
+        <name>BreakPolarity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TIM Break input polarity This parameter can be a value of <ref refid="group___t_i_m___break___polarity" kindref="compound">TIM Break Input Polarity</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="277" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___break_dead_time_config_type_def_1a9832cc0d752f1106cd4fc5a2f0e510c0" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t BreakFilter</definition>
+        <argsstring></argsstring>
+        <name>BreakFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the break input filter. This parameter can be a number between Min_Data = 0x0 and Max_Data = 0xF </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="279" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___break_dead_time_config_type_def_1a811ab6cfce79a2aadab7fc040413c037" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AutomaticOutput</definition>
+        <argsstring></argsstring>
+        <name>AutomaticOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TIM Automatic Output Enable state This parameter can be a value of <ref refid="group___t_i_m___a_o_e___bit___set___reset" kindref="compound">TIM Automatic Output Enable</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="281" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TIM Break input(s) and Dead time configuration Structure definition. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>2 break inputs can be configured (BKIN and BKIN2) with configurable filter and polarity. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="265" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="266" bodyend="283"/>
+    <listofallmembers>
+      <member refid="struct_t_i_m___break_dead_time_config_type_def_1a811ab6cfce79a2aadab7fc040413c037" prot="public" virt="non-virtual"><scope>TIM_BreakDeadTimeConfigTypeDef</scope><name>AutomaticOutput</name></member>
+      <member refid="struct_t_i_m___break_dead_time_config_type_def_1a9832cc0d752f1106cd4fc5a2f0e510c0" prot="public" virt="non-virtual"><scope>TIM_BreakDeadTimeConfigTypeDef</scope><name>BreakFilter</name></member>
+      <member refid="struct_t_i_m___break_dead_time_config_type_def_1a9ac85dcd5135063196b8954d9b779aa7" prot="public" virt="non-virtual"><scope>TIM_BreakDeadTimeConfigTypeDef</scope><name>BreakPolarity</name></member>
+      <member refid="struct_t_i_m___break_dead_time_config_type_def_1a2a1604bd7f46bd571a2507c5f873474f" prot="public" virt="non-virtual"><scope>TIM_BreakDeadTimeConfigTypeDef</scope><name>BreakState</name></member>
+      <member refid="struct_t_i_m___break_dead_time_config_type_def_1a5a08cf07668e90bc708f8cccf709f2b4" prot="public" virt="non-virtual"><scope>TIM_BreakDeadTimeConfigTypeDef</scope><name>DeadTime</name></member>
+      <member refid="struct_t_i_m___break_dead_time_config_type_def_1a5fb4b2ca5382b21df284a2d0ce75d32c" prot="public" virt="non-virtual"><scope>TIM_BreakDeadTimeConfigTypeDef</scope><name>LockLevel</name></member>
+      <member refid="struct_t_i_m___break_dead_time_config_type_def_1a24f5a355f44432458801392e40a80faa" prot="public" virt="non-virtual"><scope>TIM_BreakDeadTimeConfigTypeDef</scope><name>OffStateIDLEMode</name></member>
+      <member refid="struct_t_i_m___break_dead_time_config_type_def_1af45695121f3b3fe1ab24e8fbdb56d781" prot="public" virt="non-virtual"><scope>TIM_BreakDeadTimeConfigTypeDef</scope><name>OffStateRunMode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

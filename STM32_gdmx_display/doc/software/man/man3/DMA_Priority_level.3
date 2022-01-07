@@ -1,0 +1,46 @@
+.TH "DMA_Priority_level" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_Priority_level \- DMA Priority level
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDMA_PRIORITY_LOW\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBDMA_PRIORITY_MEDIUM\fP   ((uint32_t)\fBDMA_CCR_PL_0\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA_PRIORITY_HIGH\fP   ((uint32_t)\fBDMA_CCR_PL_1\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA_PRIORITY_VERY_HIGH\fP   ((uint32_t)\fBDMA_CCR_PL\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DMA_PRIORITY_HIGH   ((uint32_t)\fBDMA_CCR_PL_1\fP)"
+Priority level : High 
+.br
+ 
+.SS "#define DMA_PRIORITY_LOW   0x00000000U"
+Priority level : Low 
+.br
+ 
+.SS "#define DMA_PRIORITY_MEDIUM   ((uint32_t)\fBDMA_CCR_PL_0\fP)"
+Priority level : Medium 
+.br
+ 
+.SS "#define DMA_PRIORITY_VERY_HIGH   ((uint32_t)\fBDMA_CCR_PL\fP)"
+Priority level : Very_High 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

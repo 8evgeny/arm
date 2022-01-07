@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___f_l_a_s_h___interrupt" kind="group">
+    <compoundname>FLASH_Interrupt</compoundname>
+    <title>Interrupt</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___f_l_a_s_h___interrupt_1ga13fa137a911f02a2f94fb9fb0762a340" prot="public" static="no">
+        <name>__HAL_FLASH_ENABLE_IT</name>
+        <param><defname>__INTERRUPT__</defname></param>
+        <initializer>(FLASH-&gt;CR |= (__INTERRUPT__))</initializer>
+        <briefdescription>
+<para>Enable the specified FLASH interrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;INTERRUPT&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FLASH interrupt This parameter can be any combination of the following values: <itemizedlist>
+<listitem><para><ref refid="group___f_l_a_s_h___interrupt__definition_1gaea20e80e1806d58a7544cfe8659e7f11" kindref="member">FLASH_IT_EOP</ref> End of FLASH Operation Interrupt </para>
+</listitem>
+<listitem><para><ref refid="group___f_l_a_s_h___interrupt__definition_1ga4e2c23ab8c1b9a5ee49bf6d695d9ae8c" kindref="member">FLASH_IT_ERR</ref> Error Interrupt <linebreak/>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="683" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="683" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___f_l_a_s_h___interrupt_1ga1f40f507b5d4b3a4da68e4244a1097ee" prot="public" static="no">
+        <name>__HAL_FLASH_DISABLE_IT</name>
+        <param><defname>__INTERRUPT__</defname></param>
+        <initializer>(FLASH-&gt;CR &amp;= ~(__INTERRUPT__))</initializer>
+        <briefdescription>
+<para>Disable the specified FLASH interrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;INTERRUPT&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FLASH interrupt This parameter can be any combination of the following values: <itemizedlist>
+<listitem><para><ref refid="group___f_l_a_s_h___interrupt__definition_1gaea20e80e1806d58a7544cfe8659e7f11" kindref="member">FLASH_IT_EOP</ref> End of FLASH Operation Interrupt </para>
+</listitem>
+<listitem><para><ref refid="group___f_l_a_s_h___interrupt__definition_1ga4e2c23ab8c1b9a5ee49bf6d695d9ae8c" kindref="member">FLASH_IT_ERR</ref> Error Interrupt <linebreak/>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="693" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="693" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___f_l_a_s_h___interrupt_1ga0d3dd161fecc0e47c9e109c7c28672c1" prot="public" static="no">
+        <name>__HAL_FLASH_GET_FLAG</name>
+        <param><defname>__FLAG__</defname></param>
+        <initializer>                                            (((__FLAG__) == <ref refid="group___f_l_a_s_h___flag__definition_1gacb2c4c991a260c3f110cd8c72f302864" kindref="member">FLASH_FLAG_OPTVERR</ref>) ? \
+                                            (FLASH-&gt;OBR &amp; <ref refid="group___peripheral___registers___bits___definition_1gab52c27d6657bd72f1860fa25a1faf8e3" kindref="member">FLASH_OBR_OPTERR</ref>) : \
+                                            (FLASH-&gt;SR &amp; (__FLAG__)))</initializer>
+        <briefdescription>
+<para>Get the specified FLASH flag status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;FLAG&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the FLASH flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem><para><ref refid="group___f_l_a_s_h___flag__definition_1gaf043ba4d8f837350bfc7754a99fae5a9" kindref="member">FLASH_FLAG_EOP</ref> FLASH End of Operation flag </para>
+</listitem>
+<listitem><para><ref refid="group___f_l_a_s_h___flag__definition_1ga6abf64f916992585899369166db3f266" kindref="member">FLASH_FLAG_WRPERR</ref> FLASH Write protected error flag </para>
+</listitem>
+<listitem><para><ref refid="group___f_l_a_s_h___flag__definition_1gae2ef62dee0a5ca01e6226746039b6f20" kindref="member">FLASH_FLAG_PGERR</ref> FLASH Programming error flag </para>
+</listitem>
+<listitem><para><ref refid="group___f_l_a_s_h___flag__definition_1gad3bc368f954ad7744deda3315da2fff7" kindref="member">FLASH_FLAG_BSY</ref> FLASH Busy flag </para>
+</listitem>
+<listitem><para><ref refid="group___f_l_a_s_h___flag__definition_1gacb2c4c991a260c3f110cd8c72f302864" kindref="member">FLASH_FLAG_OPTVERR</ref> Loaded OB and its complement do not match </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new state of <bold>FLAG</bold> (SET or RESET). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="706" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="706" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___f_l_a_s_h___interrupt_1ga68e49c4675761e2ec35153e747de7622" prot="public" static="no">
+        <name>__HAL_FLASH_CLEAR_FLAG</name>
+        <param><defname>__FLAG__</defname></param>
+        <initializer>                          do { \
+                          /* Clear <ref refid="group___f_l_a_s_h___flag__definition_1gacb2c4c991a260c3f110cd8c72f302864" kindref="member">FLASH_FLAG_OPTVERR</ref> flag */ \
+                          if ((__FLAG__) == <ref refid="group___f_l_a_s_h___flag__definition_1gacb2c4c991a260c3f110cd8c72f302864" kindref="member">FLASH_FLAG_OPTVERR</ref>) \
+                          { \
+                            CLEAR_BIT(FLASH-&gt;OBR, <ref refid="group___peripheral___registers___bits___definition_1gab52c27d6657bd72f1860fa25a1faf8e3" kindref="member">FLASH_OBR_OPTERR</ref>); \
+                          } \
+                          else { \
+                            /* Clear Flag in Bank1 */ \
+                            FLASH-&gt;SR  = (__FLAG__); \
+                          } \
+                    } while(0U)</initializer>
+        <briefdescription>
+<para>Clear the specified FLASH flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;FLAG&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the FLASH flags to clear. This parameter can be any combination of the following values: <itemizedlist>
+<listitem><para><ref refid="group___f_l_a_s_h___flag__definition_1gaf043ba4d8f837350bfc7754a99fae5a9" kindref="member">FLASH_FLAG_EOP</ref> FLASH End of Operation flag </para>
+</listitem>
+<listitem><para><ref refid="group___f_l_a_s_h___flag__definition_1ga6abf64f916992585899369166db3f266" kindref="member">FLASH_FLAG_WRPERR</ref> FLASH Write protected error flag </para>
+</listitem>
+<listitem><para><ref refid="group___f_l_a_s_h___flag__definition_1gae2ef62dee0a5ca01e6226746039b6f20" kindref="member">FLASH_FLAG_PGERR</ref> FLASH Programming error flag </para>
+</listitem>
+<listitem><para><ref refid="group___f_l_a_s_h___flag__definition_1gacb2c4c991a260c3f110cd8c72f302864" kindref="member">FLASH_FLAG_OPTVERR</ref> Loaded OB and its complement do not match </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="719" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="719" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>macros to handle FLASH interrupts </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,674 @@
+\hypertarget{group___exported__macro}{}\doxysection{Exported\+\_\+macro}
+\label{group___exported__macro}\index{Exported\_macro@{Exported\_macro}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries IS\+\_\+\+ADC\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_gad8a5831c786b6b265531b890a194cbe2}\label{group___exported__macro_gad8a5831c786b6b265531b890a194cbe2}} 
+\#define {\bfseries IS\+\_\+\+ADC\+\_\+\+COMMON\+\_\+\+INSTANCE}(INSTANCE)~((INSTANCE) == ADC12\+\_\+\+COMMON)
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga26b4e299ac54d09082645a70f889c143}\label{group___exported__macro_ga26b4e299ac54d09082645a70f889c143}} 
+\#define {\bfseries IS\+\_\+\+ADC\+\_\+\+MULTIMODE\+\_\+\+MASTER\+\_\+\+INSTANCE}(INSTANCE)~((INSTANCE) == ADC1)
+\item 
+\mbox{\Hypertarget{group___exported__macro_gaa088d7869d4bac4f4e56d1e8fd19d928}\label{group___exported__macro_gaa088d7869d4bac4f4e56d1e8fd19d928}} 
+\#define {\bfseries IS\+\_\+\+ADC\+\_\+\+DMA\+\_\+\+CAPABILITY\+\_\+\+INSTANCE}(INSTANCE)~((INSTANCE) == ADC1)
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga974dd363bcb2a5f48ec032509fd4ece3}\label{group___exported__macro_ga974dd363bcb2a5f48ec032509fd4ece3}} 
+\#define {\bfseries IS\+\_\+\+CAN\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)~((INSTANCE) == CAN1)
+\item 
+\mbox{\Hypertarget{group___exported__macro_gaa514941a7f02f65eb27450c05e4e8dd1}\label{group___exported__macro_gaa514941a7f02f65eb27450c05e4e8dd1}} 
+\#define {\bfseries IS\+\_\+\+CRC\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)~((INSTANCE) == CRC)
+\item 
+\#define {\bfseries IS\+\_\+\+DMA\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+GPIO\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga9d2e0c4bb80b983730a3a5d98d56f535}\label{group___exported__macro_ga9d2e0c4bb80b983730a3a5d98d56f535}} 
+\#define {\bfseries IS\+\_\+\+GPIO\+\_\+\+AF\+\_\+\+INSTANCE}(INSTANCE)~IS\+\_\+\+GPIO\+\_\+\+ALL\+\_\+\+INSTANCE(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_gaa84537785f7bf8425db6e392187ea2e6}\label{group___exported__macro_gaa84537785f7bf8425db6e392187ea2e6}} 
+\#define {\bfseries IS\+\_\+\+GPIO\+\_\+\+LOCK\+\_\+\+INSTANCE}(INSTANCE)~IS\+\_\+\+GPIO\+\_\+\+ALL\+\_\+\+INSTANCE(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+I2\+C\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga85b79d63f4643c0de9a7519290a0eceb}\label{group___exported__macro_ga85b79d63f4643c0de9a7519290a0eceb}} 
+\#define {\bfseries IS\+\_\+\+SMBUS\+\_\+\+ALL\+\_\+\+INSTANCE}~IS\+\_\+\+I2\+C\+\_\+\+ALL\+\_\+\+INSTANCE
+\item 
+\mbox{\Hypertarget{group___exported__macro_gad9ec4c52f0572ee67d043e006f1d5e39}\label{group___exported__macro_gad9ec4c52f0572ee67d043e006f1d5e39}} 
+\#define {\bfseries IS\+\_\+\+IWDG\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)~((INSTANCE) == IWDG)
+\item 
+\#define {\bfseries IS\+\_\+\+SPI\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga7e85353dbe9dc9d80ad06f0b935c12e1}\label{group___exported__macro_ga7e85353dbe9dc9d80ad06f0b935c12e1}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+ADVANCED\+\_\+\+INSTANCE}(INSTANCE)~((INSTANCE) == TIM1)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CC1\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CC2\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CC3\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CC4\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE\+\_\+\+ETRMODE1\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE\+\_\+\+ETRMODE2\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE\+\_\+\+TIX\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE\+\_\+\+ITRX\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+OCXREF\+\_\+\+CLEAR\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+ENCODER\+\_\+\+INTERFACE\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+XOR\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+MASTER\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+SLAVE\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga730694316ec15a3895d005f03eec720c}\label{group___exported__macro_ga730694316ec15a3895d005f03eec720c}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+SYNCHRO\+\_\+\+INSTANCE}(INSTANCE)~IS\+\_\+\+TIM\+\_\+\+MASTER\+\_\+\+INSTANCE(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+DMABURST\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga68b8d9ca22720c9034753c604d83500d}\label{group___exported__macro_ga68b8d9ca22720c9034753c604d83500d}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+BREAK\+\_\+\+INSTANCE}(INSTANCE)~  ((INSTANCE) == TIM1)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CCX\+\_\+\+INSTANCE}(INSTANCE,  CHANNEL)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CCXN\+\_\+\+INSTANCE}(INSTANCE,  CHANNEL)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+COUNTER\+\_\+\+MODE\+\_\+\+SELECT\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga3b470612fd4c4e29fb985247056b1e07}\label{group___exported__macro_ga3b470612fd4c4e29fb985247056b1e07}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+REPETITION\+\_\+\+COUNTER\+\_\+\+INSTANCE}(INSTANCE)~  ((INSTANCE) == TIM1)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CLOCK\+\_\+\+DIVISION\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+DMA\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+DMA\+\_\+\+CC\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga5f61206c3c8b20784f9d237dce300afd}\label{group___exported__macro_ga5f61206c3c8b20784f9d237dce300afd}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+COMMUTATION\+\_\+\+EVENT\+\_\+\+INSTANCE}(INSTANCE)~  ((INSTANCE) == TIM1)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+ETR\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+HALL\+\_\+\+SENSOR\+\_\+\+INTERFACE\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_gac41867bf288927ff8ff10a85e67a591b}\label{group___exported__macro_gac41867bf288927ff8ff10a85e67a591b}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+32\+B\+\_\+\+COUNTER\+\_\+\+INSTANCE}(INSTANCE)~0U
+\item 
+\#define {\bfseries IS\+\_\+\+USART\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+HALFDUPLEX\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+LIN\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+HWFLOW\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+SMARTCARD\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+IRDA\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+MULTIPROCESSOR\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+DMA\+\_\+\+INSTANCE}(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___exported__macro_gab4230e8bd4d88adc4250f041d67375ce}\label{group___exported__macro_gab4230e8bd4d88adc4250f041d67375ce}} 
+\#define {\bfseries IS\+\_\+\+RTC\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)~((INSTANCE) == RTC)
+\item 
+\mbox{\Hypertarget{group___exported__macro_gac2a8aaec233e19987232455643a04d6f}\label{group___exported__macro_gac2a8aaec233e19987232455643a04d6f}} 
+\#define {\bfseries IS\+\_\+\+WWDG\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)~((INSTANCE) == WWDG)
+\item 
+\mbox{\Hypertarget{group___exported__macro_gadaf663c55446f04fa69ee912b8890b32}\label{group___exported__macro_gadaf663c55446f04fa69ee912b8890b32}} 
+\#define {\bfseries IS\+\_\+\+PCD\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)~((INSTANCE) == USB)
+\item 
+\mbox{\Hypertarget{group___exported__macro_gad9882b19500d8f514fa6d252b7c25960}\label{group___exported__macro_gad9882b19500d8f514fa6d252b7c25960}} 
+\#define {\bfseries RCC\+\_\+\+HSE\+\_\+\+MIN}~4000000U
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga2515efe7dad3d4732efadaae74202124}\label{group___exported__macro_ga2515efe7dad3d4732efadaae74202124}} 
+\#define {\bfseries RCC\+\_\+\+HSE\+\_\+\+MAX}~16000000U
+\item 
+\mbox{\Hypertarget{group___exported__macro_ga08aeea283003a2c787227347087b5b1f}\label{group___exported__macro_ga08aeea283003a2c787227347087b5b1f}} 
+\#define {\bfseries RCC\+\_\+\+MAX\+\_\+\+FREQUENCY}~72000000U
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___exported__macro_ga2204b62b378bcf08b3b9006c184c7c23}\label{group___exported__macro_ga2204b62b378bcf08b3b9006c184c7c23}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_ADC\_ALL\_INSTANCE@{IS\_ADC\_ALL\_INSTANCE}}
+\index{IS\_ADC\_ALL\_INSTANCE@{IS\_ADC\_ALL\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_ADC\_ALL\_INSTANCE}{IS\_ADC\_ALL\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+ADC\+\_\+\+ALL\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((INSTANCE) == ADC1) || \(\backslash\)}
+\DoxyCodeLine{                                       ((INSTANCE) == ADC2))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga40beb02b397c5f47e22a83fc28034afe}\label{group___exported__macro_ga40beb02b397c5f47e22a83fc28034afe}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_DMA\_ALL\_INSTANCE@{IS\_DMA\_ALL\_INSTANCE}}
+\index{IS\_DMA\_ALL\_INSTANCE@{IS\_DMA\_ALL\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_DMA\_ALL\_INSTANCE}{IS\_DMA\_ALL\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+DMA\+\_\+\+ALL\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((INSTANCE) == DMA1\_Channel1) || \(\backslash\)}
+\DoxyCodeLine{                                       ((INSTANCE) == DMA1\_Channel2) || \(\backslash\)}
+\DoxyCodeLine{                                       ((INSTANCE) == DMA1\_Channel3) || \(\backslash\)}
+\DoxyCodeLine{                                       ((INSTANCE) == DMA1\_Channel4) || \(\backslash\)}
+\DoxyCodeLine{                                       ((INSTANCE) == DMA1\_Channel5) || \(\backslash\)}
+\DoxyCodeLine{                                       ((INSTANCE) == DMA1\_Channel6) || \(\backslash\)}
+\DoxyCodeLine{                                       ((INSTANCE) == DMA1\_Channel7))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga783626dd2431afebea836a102e318957}\label{group___exported__macro_ga783626dd2431afebea836a102e318957}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_GPIO\_ALL\_INSTANCE@{IS\_GPIO\_ALL\_INSTANCE}}
+\index{IS\_GPIO\_ALL\_INSTANCE@{IS\_GPIO\_ALL\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_GPIO\_ALL\_INSTANCE}{IS\_GPIO\_ALL\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+GPIO\+\_\+\+ALL\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((INSTANCE) == GPIOA) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == GPIOB) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == GPIOC) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == GPIOD) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == GPIOE))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gacdf0149a4e8c41a6814c13613c38a6b2}\label{group___exported__macro_gacdf0149a4e8c41a6814c13613c38a6b2}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_I2C\_ALL\_INSTANCE@{IS\_I2C\_ALL\_INSTANCE}}
+\index{IS\_I2C\_ALL\_INSTANCE@{IS\_I2C\_ALL\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_I2C\_ALL\_INSTANCE}{IS\_I2C\_ALL\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+I2\+C\+\_\+\+ALL\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((INSTANCE) == I2C1) || \(\backslash\)}
+\DoxyCodeLine{                                       ((INSTANCE) == I2C2))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga98ae6698dc54d8441fce553a65bf5429}\label{group___exported__macro_ga98ae6698dc54d8441fce553a65bf5429}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_IRDA\_INSTANCE@{IS\_IRDA\_INSTANCE}}
+\index{IS\_IRDA\_INSTANCE@{IS\_IRDA\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_IRDA\_INSTANCE}{IS\_IRDA\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+IRDA\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                    (((INSTANCE) == USART1) || \(\backslash\)}
+\DoxyCodeLine{                                    ((INSTANCE) == USART2) || \(\backslash\)}
+\DoxyCodeLine{                                    ((INSTANCE) == USART3))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gab2734c105403831749ccb34eeb058988}\label{group___exported__macro_gab2734c105403831749ccb34eeb058988}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_SMARTCARD\_INSTANCE@{IS\_SMARTCARD\_INSTANCE}}
+\index{IS\_SMARTCARD\_INSTANCE@{IS\_SMARTCARD\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_SMARTCARD\_INSTANCE}{IS\_SMARTCARD\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                         (((INSTANCE) == USART1) || \(\backslash\)}
+\DoxyCodeLine{                                         ((INSTANCE) == USART2) || \(\backslash\)}
+\DoxyCodeLine{                                         ((INSTANCE) == USART3))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga59c7619a86c03df3ebeb4bd8aaef982c}\label{group___exported__macro_ga59c7619a86c03df3ebeb4bd8aaef982c}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_SPI\_ALL\_INSTANCE@{IS\_SPI\_ALL\_INSTANCE}}
+\index{IS\_SPI\_ALL\_INSTANCE@{IS\_SPI\_ALL\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_SPI\_ALL\_INSTANCE}{IS\_SPI\_ALL\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+ALL\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((INSTANCE) == SPI1) || \(\backslash\)}
+\DoxyCodeLine{                                       ((INSTANCE) == SPI2))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga0c02efc77b1bfb640d7f6593f58ad464}\label{group___exported__macro_ga0c02efc77b1bfb640d7f6593f58ad464}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CC1\_INSTANCE@{IS\_TIM\_CC1\_INSTANCE}}
+\index{IS\_TIM\_CC1\_INSTANCE@{IS\_TIM\_CC1\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CC1\_INSTANCE}{IS\_TIM\_CC1\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CC1\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga6ef84d278cf917c7e420b94687b39c7c}\label{group___exported__macro_ga6ef84d278cf917c7e420b94687b39c7c}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CC2\_INSTANCE@{IS\_TIM\_CC2\_INSTANCE}}
+\index{IS\_TIM\_CC2\_INSTANCE@{IS\_TIM\_CC2\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CC2\_INSTANCE}{IS\_TIM\_CC2\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CC2\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga0c37cb8f925fd43622cce7a4c00fd95e}\label{group___exported__macro_ga0c37cb8f925fd43622cce7a4c00fd95e}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CC3\_INSTANCE@{IS\_TIM\_CC3\_INSTANCE}}
+\index{IS\_TIM\_CC3\_INSTANCE@{IS\_TIM\_CC3\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CC3\_INSTANCE}{IS\_TIM\_CC3\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CC3\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gae72b7182a73d81c33196265b31091c07}\label{group___exported__macro_gae72b7182a73d81c33196265b31091c07}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CC4\_INSTANCE@{IS\_TIM\_CC4\_INSTANCE}}
+\index{IS\_TIM\_CC4\_INSTANCE@{IS\_TIM\_CC4\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CC4\_INSTANCE}{IS\_TIM\_CC4\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CC4\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga6517a51ea79512a42bc53c718a77f18e}\label{group___exported__macro_ga6517a51ea79512a42bc53c718a77f18e}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CCX\_INSTANCE@{IS\_TIM\_CCX\_INSTANCE}}
+\index{IS\_TIM\_CCX\_INSTANCE@{IS\_TIM\_CCX\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CCX\_INSTANCE}{IS\_TIM\_CCX\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CCX\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE,  }\item[{}]{CHANNEL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{   ((((INSTANCE) == TIM1) \&\&                  \(\backslash\)}
+\DoxyCodeLine{     (((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga6b1541e4a49d62610899e24bf23f4879}{TIM\_CHANNEL\_1}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga33e02d43345a7ac5886f01b39e4f7ccd}{TIM\_CHANNEL\_2}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga4ea100c1789b178f3cb46721b7257e2d}{TIM\_CHANNEL\_3}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_gad59ef74820ee8bf77fa1f8d589fde2ac}{TIM\_CHANNEL\_4}})))           \(\backslash\)}
+\DoxyCodeLine{    ||                                         \(\backslash\)}
+\DoxyCodeLine{    (((INSTANCE) == TIM2) \&\&                   \(\backslash\)}
+\DoxyCodeLine{     (((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga6b1541e4a49d62610899e24bf23f4879}{TIM\_CHANNEL\_1}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga33e02d43345a7ac5886f01b39e4f7ccd}{TIM\_CHANNEL\_2}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga4ea100c1789b178f3cb46721b7257e2d}{TIM\_CHANNEL\_3}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_gad59ef74820ee8bf77fa1f8d589fde2ac}{TIM\_CHANNEL\_4}})))           \(\backslash\)}
+\DoxyCodeLine{    ||                                         \(\backslash\)}
+\DoxyCodeLine{    (((INSTANCE) == TIM3) \&\&                   \(\backslash\)}
+\DoxyCodeLine{     (((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga6b1541e4a49d62610899e24bf23f4879}{TIM\_CHANNEL\_1}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga33e02d43345a7ac5886f01b39e4f7ccd}{TIM\_CHANNEL\_2}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga4ea100c1789b178f3cb46721b7257e2d}{TIM\_CHANNEL\_3}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_gad59ef74820ee8bf77fa1f8d589fde2ac}{TIM\_CHANNEL\_4}})))           \(\backslash\)}
+\DoxyCodeLine{    ||                                         \(\backslash\)}
+\DoxyCodeLine{    (((INSTANCE) == TIM4) \&\&                   \(\backslash\)}
+\DoxyCodeLine{     (((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga6b1541e4a49d62610899e24bf23f4879}{TIM\_CHANNEL\_1}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga33e02d43345a7ac5886f01b39e4f7ccd}{TIM\_CHANNEL\_2}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga4ea100c1789b178f3cb46721b7257e2d}{TIM\_CHANNEL\_3}}) ||          \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_gad59ef74820ee8bf77fa1f8d589fde2ac}{TIM\_CHANNEL\_4}}))))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga7181cfd1649c4e65e24b7c863e94a54f}\label{group___exported__macro_ga7181cfd1649c4e65e24b7c863e94a54f}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CCXN\_INSTANCE@{IS\_TIM\_CCXN\_INSTANCE}}
+\index{IS\_TIM\_CCXN\_INSTANCE@{IS\_TIM\_CCXN\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CCXN\_INSTANCE}{IS\_TIM\_CCXN\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CCXN\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE,  }\item[{}]{CHANNEL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    (((INSTANCE) == TIM1) \&\&                    \(\backslash\)}
+\DoxyCodeLine{     (((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga6b1541e4a49d62610899e24bf23f4879}{TIM\_CHANNEL\_1}}) ||           \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga33e02d43345a7ac5886f01b39e4f7ccd}{TIM\_CHANNEL\_2}}) ||           \(\backslash\)}
+\DoxyCodeLine{      ((CHANNEL) == \mbox{\hyperlink{group___t_i_m___channel_ga4ea100c1789b178f3cb46721b7257e2d}{TIM\_CHANNEL\_3}})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gac54b9f42e8ab07c41abe7d96d13d698a}\label{group___exported__macro_gac54b9f42e8ab07c41abe7d96d13d698a}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CLOCK\_DIVISION\_INSTANCE@{IS\_TIM\_CLOCK\_DIVISION\_INSTANCE}}
+\index{IS\_TIM\_CLOCK\_DIVISION\_INSTANCE@{IS\_TIM\_CLOCK\_DIVISION\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CLOCK\_DIVISION\_INSTANCE}{IS\_TIM\_CLOCK\_DIVISION\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CLOCK\+\_\+\+DIVISION\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga0ca20886f56bf7611ad511433b9caade}\label{group___exported__macro_ga0ca20886f56bf7611ad511433b9caade}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CLOCKSOURCE\_ETRMODE1\_INSTANCE@{IS\_TIM\_CLOCKSOURCE\_ETRMODE1\_INSTANCE}}
+\index{IS\_TIM\_CLOCKSOURCE\_ETRMODE1\_INSTANCE@{IS\_TIM\_CLOCKSOURCE\_ETRMODE1\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CLOCKSOURCE\_ETRMODE1\_INSTANCE}{IS\_TIM\_CLOCKSOURCE\_ETRMODE1\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE\+\_\+\+ETRMODE1\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga7beb8f84094e6a1567d10177cc4fdae9}\label{group___exported__macro_ga7beb8f84094e6a1567d10177cc4fdae9}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CLOCKSOURCE\_ETRMODE2\_INSTANCE@{IS\_TIM\_CLOCKSOURCE\_ETRMODE2\_INSTANCE}}
+\index{IS\_TIM\_CLOCKSOURCE\_ETRMODE2\_INSTANCE@{IS\_TIM\_CLOCKSOURCE\_ETRMODE2\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CLOCKSOURCE\_ETRMODE2\_INSTANCE}{IS\_TIM\_CLOCKSOURCE\_ETRMODE2\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE\+\_\+\+ETRMODE2\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga57882c3c75fddf0ccf0c6ecf99b3d3df}\label{group___exported__macro_ga57882c3c75fddf0ccf0c6ecf99b3d3df}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CLOCKSOURCE\_ITRX\_INSTANCE@{IS\_TIM\_CLOCKSOURCE\_ITRX\_INSTANCE}}
+\index{IS\_TIM\_CLOCKSOURCE\_ITRX\_INSTANCE@{IS\_TIM\_CLOCKSOURCE\_ITRX\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CLOCKSOURCE\_ITRX\_INSTANCE}{IS\_TIM\_CLOCKSOURCE\_ITRX\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE\+\_\+\+ITRX\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gacbd23fd1f9f73dc249b16c89131a671c}\label{group___exported__macro_gacbd23fd1f9f73dc249b16c89131a671c}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_CLOCKSOURCE\_TIX\_INSTANCE@{IS\_TIM\_CLOCKSOURCE\_TIX\_INSTANCE}}
+\index{IS\_TIM\_CLOCKSOURCE\_TIX\_INSTANCE@{IS\_TIM\_CLOCKSOURCE\_TIX\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_CLOCKSOURCE\_TIX\_INSTANCE}{IS\_TIM\_CLOCKSOURCE\_TIX\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE\+\_\+\+TIX\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gaac0e3e7e7a18fd8eb81734b2baf9e3be}\label{group___exported__macro_gaac0e3e7e7a18fd8eb81734b2baf9e3be}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_COUNTER\_MODE\_SELECT\_INSTANCE@{IS\_TIM\_COUNTER\_MODE\_SELECT\_INSTANCE}}
+\index{IS\_TIM\_COUNTER\_MODE\_SELECT\_INSTANCE@{IS\_TIM\_COUNTER\_MODE\_SELECT\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_COUNTER\_MODE\_SELECT\_INSTANCE}{IS\_TIM\_COUNTER\_MODE\_SELECT\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+COUNTER\+\_\+\+MODE\+\_\+\+SELECT\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gad80a186286ce3daa92249a8d52111aaf}\label{group___exported__macro_gad80a186286ce3daa92249a8d52111aaf}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_DMA\_CC\_INSTANCE@{IS\_TIM\_DMA\_CC\_INSTANCE}}
+\index{IS\_TIM\_DMA\_CC\_INSTANCE@{IS\_TIM\_DMA\_CC\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_DMA\_CC\_INSTANCE}{IS\_TIM\_DMA\_CC\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+DMA\+\_\+\+CC\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gad51d77b3bcc12a3a5c308d727b561371}\label{group___exported__macro_gad51d77b3bcc12a3a5c308d727b561371}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_DMA\_INSTANCE@{IS\_TIM\_DMA\_INSTANCE}}
+\index{IS\_TIM\_DMA\_INSTANCE@{IS\_TIM\_DMA\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_DMA\_INSTANCE}{IS\_TIM\_DMA\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+DMA\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga1ed43d4e9823446a1b9d43afc452f42e}\label{group___exported__macro_ga1ed43d4e9823446a1b9d43afc452f42e}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_DMABURST\_INSTANCE@{IS\_TIM\_DMABURST\_INSTANCE}}
+\index{IS\_TIM\_DMABURST\_INSTANCE@{IS\_TIM\_DMABURST\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_DMABURST\_INSTANCE}{IS\_TIM\_DMABURST\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+DMABURST\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gacb14170c4996e004849647d8cb626402}\label{group___exported__macro_gacb14170c4996e004849647d8cb626402}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_ENCODER\_INTERFACE\_INSTANCE@{IS\_TIM\_ENCODER\_INTERFACE\_INSTANCE}}
+\index{IS\_TIM\_ENCODER\_INTERFACE\_INSTANCE@{IS\_TIM\_ENCODER\_INTERFACE\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_ENCODER\_INTERFACE\_INSTANCE}{IS\_TIM\_ENCODER\_INTERFACE\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+ENCODER\+\_\+\+INTERFACE\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gac71942c3817f1a893ef84fefe69496b7}\label{group___exported__macro_gac71942c3817f1a893ef84fefe69496b7}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_ETR\_INSTANCE@{IS\_TIM\_ETR\_INSTANCE}}
+\index{IS\_TIM\_ETR\_INSTANCE@{IS\_TIM\_ETR\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_ETR\_INSTANCE}{IS\_TIM\_ETR\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+ETR\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga979ea18ba0931f5ed15cc2f3ac84794b}\label{group___exported__macro_ga979ea18ba0931f5ed15cc2f3ac84794b}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_HALL\_SENSOR\_INTERFACE\_INSTANCE@{IS\_TIM\_HALL\_SENSOR\_INTERFACE\_INSTANCE}}
+\index{IS\_TIM\_HALL\_SENSOR\_INTERFACE\_INSTANCE@{IS\_TIM\_HALL\_SENSOR\_INTERFACE\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_HALL\_SENSOR\_INTERFACE\_INSTANCE}{IS\_TIM\_HALL\_SENSOR\_INTERFACE\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+HALL\+\_\+\+SENSOR\+\_\+\+INTERFACE\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                         (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{                                                         ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{                                                         ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{                                                         ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gaba506eb03409b21388d7c5a6401a4f98}\label{group___exported__macro_gaba506eb03409b21388d7c5a6401a4f98}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_INSTANCE@{IS\_TIM\_INSTANCE}}
+\index{IS\_TIM\_INSTANCE@{IS\_TIM\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_INSTANCE}{IS\_TIM\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga98104b1522d066b0c20205ca179d0eba}\label{group___exported__macro_ga98104b1522d066b0c20205ca179d0eba}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_MASTER\_INSTANCE@{IS\_TIM\_MASTER\_INSTANCE}}
+\index{IS\_TIM\_MASTER\_INSTANCE@{IS\_TIM\_MASTER\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_MASTER\_INSTANCE}{IS\_TIM\_MASTER\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+MASTER\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga7bf2abf939c55a4c8284c184735accdc}\label{group___exported__macro_ga7bf2abf939c55a4c8284c184735accdc}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_OCXREF\_CLEAR\_INSTANCE@{IS\_TIM\_OCXREF\_CLEAR\_INSTANCE}}
+\index{IS\_TIM\_OCXREF\_CLEAR\_INSTANCE@{IS\_TIM\_OCXREF\_CLEAR\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_OCXREF\_CLEAR\_INSTANCE}{IS\_TIM\_OCXREF\_CLEAR\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+OCXREF\+\_\+\+CLEAR\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga3ba7d4187dba8dfb4ffd610312e8af14}\label{group___exported__macro_ga3ba7d4187dba8dfb4ffd610312e8af14}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_SLAVE\_INSTANCE@{IS\_TIM\_SLAVE\_INSTANCE}}
+\index{IS\_TIM\_SLAVE\_INSTANCE@{IS\_TIM\_SLAVE\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_SLAVE\_INSTANCE}{IS\_TIM\_SLAVE\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+SLAVE\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga6e06388143bb7bb111c78a3686dd753a}\label{group___exported__macro_ga6e06388143bb7bb111c78a3686dd753a}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_TIM\_XOR\_INSTANCE@{IS\_TIM\_XOR\_INSTANCE}}
+\index{IS\_TIM\_XOR\_INSTANCE@{IS\_TIM\_XOR\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_XOR\_INSTANCE}{IS\_TIM\_XOR\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+XOR\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((INSTANCE) == TIM1)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM2)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM3)    || \(\backslash\)}
+\DoxyCodeLine{   ((INSTANCE) == TIM4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga593805f0b99f2637ccc659d640700617}\label{group___exported__macro_ga593805f0b99f2637ccc659d640700617}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_UART\_DMA\_INSTANCE@{IS\_UART\_DMA\_INSTANCE}}
+\index{IS\_UART\_DMA\_INSTANCE@{IS\_UART\_DMA\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_DMA\_INSTANCE}{IS\_UART\_DMA\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+DMA\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((INSTANCE) == USART1) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == USART2) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == USART3))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga69c4aa0c561c4c39c621710fbbb0cb7b}\label{group___exported__macro_ga69c4aa0c561c4c39c621710fbbb0cb7b}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_UART\_HALFDUPLEX\_INSTANCE@{IS\_UART\_HALFDUPLEX\_INSTANCE}}
+\index{IS\_UART\_HALFDUPLEX\_INSTANCE@{IS\_UART\_HALFDUPLEX\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_HALFDUPLEX\_INSTANCE}{IS\_UART\_HALFDUPLEX\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+HALFDUPLEX\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                               (((INSTANCE) == USART1) || \(\backslash\)}
+\DoxyCodeLine{                                               ((INSTANCE) == USART2) || \(\backslash\)}
+\DoxyCodeLine{                                               ((INSTANCE) == USART3))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gaf9a11d0720f3efa780126414a4ac50ad}\label{group___exported__macro_gaf9a11d0720f3efa780126414a4ac50ad}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_UART\_HWFLOW\_INSTANCE@{IS\_UART\_HWFLOW\_INSTANCE}}
+\index{IS\_UART\_HWFLOW\_INSTANCE@{IS\_UART\_HWFLOW\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_HWFLOW\_INSTANCE}{IS\_UART\_HWFLOW\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+HWFLOW\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                           (((INSTANCE) == USART1) || \(\backslash\)}
+\DoxyCodeLine{                                           ((INSTANCE) == USART2) || \(\backslash\)}
+\DoxyCodeLine{                                           ((INSTANCE) == USART3))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gacbd2efab4cd39d4867c4dbeacb87e84b}\label{group___exported__macro_gacbd2efab4cd39d4867c4dbeacb87e84b}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_UART\_INSTANCE@{IS\_UART\_INSTANCE}}
+\index{IS\_UART\_INSTANCE@{IS\_UART\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_INSTANCE}{IS\_UART\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                    (((INSTANCE) == USART1) || \(\backslash\)}
+\DoxyCodeLine{                                    ((INSTANCE) == USART2) || \(\backslash\)}
+\DoxyCodeLine{                                    ((INSTANCE) == USART3))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_ga7d2763df993c77cfa6e249ec7bc80482}\label{group___exported__macro_ga7d2763df993c77cfa6e249ec7bc80482}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_UART\_LIN\_INSTANCE@{IS\_UART\_LIN\_INSTANCE}}
+\index{IS\_UART\_LIN\_INSTANCE@{IS\_UART\_LIN\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_LIN\_INSTANCE}{IS\_UART\_LIN\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+LIN\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((INSTANCE) == USART1) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == USART2) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INSTANCE) == USART3))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gaa814dadfb961c5b8f8db363e249f2313}\label{group___exported__macro_gaa814dadfb961c5b8f8db363e249f2313}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_UART\_MULTIPROCESSOR\_INSTANCE@{IS\_UART\_MULTIPROCESSOR\_INSTANCE}}
+\index{IS\_UART\_MULTIPROCESSOR\_INSTANCE@{IS\_UART\_MULTIPROCESSOR\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_MULTIPROCESSOR\_INSTANCE}{IS\_UART\_MULTIPROCESSOR\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+MULTIPROCESSOR\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                   (((INSTANCE) == USART1) || \(\backslash\)}
+\DoxyCodeLine{                                                   ((INSTANCE) == USART2) || \(\backslash\)}
+\DoxyCodeLine{                                                   ((INSTANCE) == USART3))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___exported__macro_gafbce654f84a7c994817453695ac91cbe}\label{group___exported__macro_gafbce654f84a7c994817453695ac91cbe}} 
+\index{Exported\_macro@{Exported\_macro}!IS\_USART\_INSTANCE@{IS\_USART\_INSTANCE}}
+\index{IS\_USART\_INSTANCE@{IS\_USART\_INSTANCE}!Exported\_macro@{Exported\_macro}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_INSTANCE}{IS\_USART\_INSTANCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{INSTANCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((INSTANCE) == USART1) || \(\backslash\)}
+\DoxyCodeLine{                                     ((INSTANCE) == USART2) || \(\backslash\)}
+\DoxyCodeLine{                                     ((INSTANCE) == USART3))}
+
+\end{DoxyCode}

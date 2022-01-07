@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_6e3bb2a974add98279cf61c1a5e10c53" kind="dir">
+    <compoundname>build/CMakeFiles/CMSIS.dir/Src</compoundname>
+    <innerfile refid="_c_m_s_i_s_8dir_2_src_2system__stm32f1xx_8c_8obj_8d">system_stm32f1xx.c.obj.d</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/CMSIS.dir/Src/"/>
+  </compounddef>
+</doxygen>

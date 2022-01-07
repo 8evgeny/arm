@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___c_d_c___private___function_prototypes" kind="group">
+    <compoundname>USBD_CDC_Private_FunctionPrototypes</compoundname>
+    <title>USBD_CDC_Private_FunctionPrototypes</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___private___function_prototypes_1gaa88ef865b03935a16194a5f072a068dd" prot="public" static="yes" mutable="no">
+        <type>__ALIGN_BEGIN uint8_t USBD_CDC_DeviceQualifierDesc[USB_LEN_DEV_QUALIFIER_DESC]</type>
+        <definition>__ALIGN_BEGIN uint8_t USBD_CDC_OtherSpeedCfgDesc [USB_CDC_CONFIG_DESC_SIZ] __ALIGN_END</definition>
+        <argsstring></argsstring>
+        <name>__ALIGN_END</name>
+        <initializer>=
+{
+  USB_LEN_DEV_QUALIFIER_DESC,
+  USB_DESC_TYPE_DEVICE_QUALIFIER,
+  0x00,
+  0x02,
+  0x00,
+  0x00,
+  0x00,
+  0x40,
+  0x01,
+  0x00,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" line="131" column="59" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

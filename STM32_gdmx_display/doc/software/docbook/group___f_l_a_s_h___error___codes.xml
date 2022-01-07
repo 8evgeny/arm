@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h___error___codes" xml:lang="en-US">
+<title>FLASH Error Codes</title>
+<indexterm><primary>FLASH Error Codes</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___error___codes_1gae7fb9ee7198d393aba27ade3a9f50a70">HAL_FLASH_ERROR_NONE</link>   0x00U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___error___codes_1ga516a75e6f98eed9daefa0b442a74c04b">HAL_FLASH_ERROR_PROG</link>   0x01U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___error___codes_1ga27e871d85f9311272098315bc3723075">HAL_FLASH_ERROR_WRP</link>   0x02U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___error___codes_1ga9fe984a57c2e92c27c4217468d1b2d93">HAL_FLASH_ERROR_OPTV</link>   0x04U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h___error___codes_1gae7fb9ee7198d393aba27ade3a9f50a70"/>    <section>
+    <title>HAL_FLASH_ERROR_NONE</title>
+<indexterm><primary>HAL_FLASH_ERROR_NONE</primary><secondary>FLASH Error Codes</secondary></indexterm>
+<indexterm><primary>FLASH Error Codes</primary><secondary>HAL_FLASH_ERROR_NONE</secondary></indexterm>
+<para><computeroutput>#define HAL_FLASH_ERROR_NONE   0x00U</computeroutput></para>
+<para>No error </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___error___codes_1ga9fe984a57c2e92c27c4217468d1b2d93"/>    <section>
+    <title>HAL_FLASH_ERROR_OPTV</title>
+<indexterm><primary>HAL_FLASH_ERROR_OPTV</primary><secondary>FLASH Error Codes</secondary></indexterm>
+<indexterm><primary>FLASH Error Codes</primary><secondary>HAL_FLASH_ERROR_OPTV</secondary></indexterm>
+<para><computeroutput>#define HAL_FLASH_ERROR_OPTV   0x04U</computeroutput></para>
+<para>Option validity error </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___error___codes_1ga516a75e6f98eed9daefa0b442a74c04b"/>    <section>
+    <title>HAL_FLASH_ERROR_PROG</title>
+<indexterm><primary>HAL_FLASH_ERROR_PROG</primary><secondary>FLASH Error Codes</secondary></indexterm>
+<indexterm><primary>FLASH Error Codes</primary><secondary>HAL_FLASH_ERROR_PROG</secondary></indexterm>
+<para><computeroutput>#define HAL_FLASH_ERROR_PROG   0x01U</computeroutput></para>
+<para>Programming error </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___error___codes_1ga27e871d85f9311272098315bc3723075"/>    <section>
+    <title>HAL_FLASH_ERROR_WRP</title>
+<indexterm><primary>HAL_FLASH_ERROR_WRP</primary><secondary>FLASH Error Codes</secondary></indexterm>
+<indexterm><primary>FLASH Error Codes</primary><secondary>HAL_FLASH_ERROR_WRP</secondary></indexterm>
+<para><computeroutput>#define HAL_FLASH_ERROR_WRP   0x02U</computeroutput></para>
+<para>Write protection error </para>
+</section>
+</section>
+</section>

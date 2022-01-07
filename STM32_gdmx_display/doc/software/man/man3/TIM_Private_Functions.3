@@ -1,0 +1,48 @@
+.TH "TIM_Private_Functions" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Private_Functions \- TIM Private Functions
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBTIM_Base_SetConfig\fP (\fBTIM_TypeDef\fP *TIMx, \fBTIM_Base_InitTypeDef\fP *Structure)"
+.br
+.ti -1c
+.RI "void \fBTIM_TI1_SetConfig\fP (\fBTIM_TypeDef\fP *TIMx, uint32_t TIM_ICPolarity, uint32_t TIM_ICSelection, uint32_t TIM_ICFilter)"
+.br
+.ti -1c
+.RI "void \fBTIM_OC2_SetConfig\fP (\fBTIM_TypeDef\fP *TIMx, \fBTIM_OC_InitTypeDef\fP *OC_Config)"
+.br
+.ti -1c
+.RI "void \fBTIM_ETR_SetConfig\fP (\fBTIM_TypeDef\fP *TIMx, uint32_t TIM_ExtTRGPrescaler, uint32_t TIM_ExtTRGPolarity, uint32_t ExtTRGFilter)"
+.br
+.ti -1c
+.RI "void \fBTIM_DMADelayPulseCplt\fP (\fBDMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void \fBTIM_DMADelayPulseHalfCplt\fP (\fBDMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void \fBTIM_DMAError\fP (\fBDMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void \fBTIM_DMACaptureCplt\fP (\fBDMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void \fBTIM_DMACaptureHalfCplt\fP (\fBDMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void \fBTIM_CCxChannelCmd\fP (\fBTIM_TypeDef\fP *TIMx, uint32_t Channel, uint32_t ChannelState)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___private___macros" xml:lang="en-US">
+<title>HAL Private Macros</title>
+<indexterm><primary>HAL Private Macros</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">IS_TICKFREQ</emphasis>(FREQ)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___h_a_l___private___macros_1ga2a86bf8a89ad75716cd92e932a8ae71e"/>    <section>
+    <title>IS_TICKFREQ</title>
+<indexterm><primary>IS_TICKFREQ</primary><secondary>HAL Private Macros</secondary></indexterm>
+<indexterm><primary>HAL Private Macros</primary><secondary>IS_TICKFREQ</secondary></indexterm>
+<para><computeroutput>#define IS_TICKFREQ( FREQ)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((FREQ)&#32;==&#32;HAL_TICK_FREQ_10HZ)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FREQ)&#32;==&#32;HAL_TICK_FREQ_100HZ)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FREQ)&#32;==&#32;HAL_TICK_FREQ_1KHZ))
+</programlisting></section>
+</section>
+</section>

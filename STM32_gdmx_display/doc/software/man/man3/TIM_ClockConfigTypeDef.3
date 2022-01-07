@@ -1,0 +1,44 @@
+.TH "TIM_ClockConfigTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_ClockConfigTypeDef \- Clock Configuration Handle Structure definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_tim\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBClockSource\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBClockPolarity\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBClockPrescaler\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBClockFilter\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Clock Configuration Handle Structure definition\&. 
+.SH "Field Documentation"
+.PP 
+.SS "uint32_t ClockFilter"
+TIM clock filter This parameter can be a number between Min_Data = 0x0 and Max_Data = 0xF 
+.SS "uint32_t ClockPolarity"
+TIM clock polarity This parameter can be a value of \fBTIM Clock Polarity\fP 
+.SS "uint32_t ClockPrescaler"
+TIM clock prescaler This parameter can be a value of \fBTIM Clock Prescaler\fP 
+.SS "uint32_t ClockSource"
+TIM clock sources This parameter can be a value of \fBTIM Clock Source\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

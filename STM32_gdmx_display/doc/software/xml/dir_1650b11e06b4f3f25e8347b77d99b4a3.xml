@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_1650b11e06b4f3f25e8347b77d99b4a3" kind="dir">
+    <compoundname>Middlewares/Third_Party/FreeRTOS/Source</compoundname>
+    <innerdir refid="dir_d232b820f41ddec31a220de0f20b5b51">Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS</innerdir>
+    <innerdir refid="dir_785597ed28c61d94000e8cb1328bf518">Middlewares/Third_Party/FreeRTOS/Source/include</innerdir>
+    <innerdir refid="dir_f327900ea47a6b4b131ddc02370e7e05">Middlewares/Third_Party/FreeRTOS/Source/portable</innerdir>
+    <innerfile refid="croutine_8c">croutine.c</innerfile>
+    <innerfile refid="event__groups_8c">event_groups.c</innerfile>
+    <innerfile refid="list_8c">list.c</innerfile>
+    <innerfile refid="queue_8c">queue.c</innerfile>
+    <innerfile refid="stream__buffer_8c">stream_buffer.c</innerfile>
+    <innerfile refid="tasks_8c">tasks.c</innerfile>
+    <innerfile refid="timers_8c">timers.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/"/>
+  </compounddef>
+</doxygen>

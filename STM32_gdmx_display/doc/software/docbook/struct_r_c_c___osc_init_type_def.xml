@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_r_c_c___osc_init_type_def" xml:lang="en-US">
+<title>RCC_OscInitTypeDef Struct Reference</title>
+<indexterm><primary>RCC_OscInitTypeDef</primary></indexterm>
+<para>
+
+<para>RCC Internal/External Oscillator (HSE, HSI, LSE and LSI) configuration structure definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f1xx_hal_rcc_ex.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___osc_init_type_def_1a23b9d1da2a92936c618d2416406275a3">OscillatorType</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___osc_init_type_def_1ad499b1bbeeb8096235b534a9bfa53c9d">HSEState</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___osc_init_type_def_1a92007c1d01624a71cb277bf05b8d9a14">HSEPredivValue</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___osc_init_type_def_1abb72dd5bfb99667e36d99b6887f80a0a">LSEState</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___osc_init_type_def_1a49183e0be5cf522de0fa1968df0bf0d7">HSIState</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___osc_init_type_def_1ad28b977e258a3ee788cd6c2d72430c30">HSICalibrationValue</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___osc_init_type_def_1a9acc15f6278f950ef02d5d6f819f68e8">LSIState</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_r_c_c___p_l_l_init_type_def">RCC_PLLInitTypeDef</link> <link linkend="_struct_r_c_c___osc_init_type_def_1a7ec4025786fa81e2a4bfc42832c0eddf">PLL</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>RCC Internal/External Oscillator (HSE, HSI, LSE and LSI) configuration structure definition. </para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_r_c_c___osc_init_type_def_1a92007c1d01624a71cb277bf05b8d9a14"/>    <section>
+    <title>HSEPredivValue</title>
+<indexterm><primary>HSEPredivValue</primary><secondary>RCC_OscInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_OscInitTypeDef</primary><secondary>HSEPredivValue</secondary></indexterm>
+<para><computeroutput>uint32_t HSEPredivValue</computeroutput></para>
+<para>The Prediv1 factor value (named PREDIV1 or PLLXTPRE in RM) This parameter can be a value of <link linkend="_group___r_c_c_ex___prediv1___factor">HSE Prediv1 Factor</link> </para>
+    </section><anchor xml:id="_struct_r_c_c___osc_init_type_def_1ad499b1bbeeb8096235b534a9bfa53c9d"/>    <section>
+    <title>HSEState</title>
+<indexterm><primary>HSEState</primary><secondary>RCC_OscInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_OscInitTypeDef</primary><secondary>HSEState</secondary></indexterm>
+<para><computeroutput>uint32_t HSEState</computeroutput></para>
+<para>The new state of the HSE. This parameter can be a value of <link linkend="_group___r_c_c___h_s_e___config">HSE Config</link> </para>
+    </section><anchor xml:id="_struct_r_c_c___osc_init_type_def_1ad28b977e258a3ee788cd6c2d72430c30"/>    <section>
+    <title>HSICalibrationValue</title>
+<indexterm><primary>HSICalibrationValue</primary><secondary>RCC_OscInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_OscInitTypeDef</primary><secondary>HSICalibrationValue</secondary></indexterm>
+<para><computeroutput>uint32_t HSICalibrationValue</computeroutput></para>
+<para>The HSI calibration trimming value (default is RCC_HSICALIBRATION_DEFAULT). This parameter must be a number between Min_Data = 0x00 and Max_Data = 0x1F </para>
+    </section><anchor xml:id="_struct_r_c_c___osc_init_type_def_1a49183e0be5cf522de0fa1968df0bf0d7"/>    <section>
+    <title>HSIState</title>
+<indexterm><primary>HSIState</primary><secondary>RCC_OscInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_OscInitTypeDef</primary><secondary>HSIState</secondary></indexterm>
+<para><computeroutput>uint32_t HSIState</computeroutput></para>
+<para>The new state of the HSI. This parameter can be a value of <link linkend="_group___r_c_c___h_s_i___config">HSI Config</link> </para>
+    </section><anchor xml:id="_struct_r_c_c___osc_init_type_def_1abb72dd5bfb99667e36d99b6887f80a0a"/>    <section>
+    <title>LSEState</title>
+<indexterm><primary>LSEState</primary><secondary>RCC_OscInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_OscInitTypeDef</primary><secondary>LSEState</secondary></indexterm>
+<para><computeroutput>uint32_t LSEState</computeroutput></para>
+<para>The new state of the LSE. This parameter can be a value of <link linkend="_group___r_c_c___l_s_e___config">LSE Config</link> </para>
+    </section><anchor xml:id="_struct_r_c_c___osc_init_type_def_1a9acc15f6278f950ef02d5d6f819f68e8"/>    <section>
+    <title>LSIState</title>
+<indexterm><primary>LSIState</primary><secondary>RCC_OscInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_OscInitTypeDef</primary><secondary>LSIState</secondary></indexterm>
+<para><computeroutput>uint32_t LSIState</computeroutput></para>
+<para>The new state of the LSI. This parameter can be a value of <link linkend="_group___r_c_c___l_s_i___config">LSI Config</link> </para>
+    </section><anchor xml:id="_struct_r_c_c___osc_init_type_def_1a23b9d1da2a92936c618d2416406275a3"/>    <section>
+    <title>OscillatorType</title>
+<indexterm><primary>OscillatorType</primary><secondary>RCC_OscInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_OscInitTypeDef</primary><secondary>OscillatorType</secondary></indexterm>
+<para><computeroutput>uint32_t OscillatorType</computeroutput></para>
+<para>The oscillators to be configured. This parameter can be a value of <link linkend="_group___r_c_c___oscillator___type">Oscillator Type</link> </para>
+    </section><anchor xml:id="_struct_r_c_c___osc_init_type_def_1a7ec4025786fa81e2a4bfc42832c0eddf"/>    <section>
+    <title>PLL</title>
+<indexterm><primary>PLL</primary><secondary>RCC_OscInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_OscInitTypeDef</primary><secondary>PLL</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_r_c_c___p_l_l_init_type_def">RCC_PLLInitTypeDef</link> PLL</computeroutput></para>
+<para>PLL structure parameters </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/STM32F1xx_HAL_Driver/Inc/<link linkend="_stm32f1xx__hal__rcc__ex_8h">stm32f1xx_hal_rcc_ex.h</link></section>
+</section>

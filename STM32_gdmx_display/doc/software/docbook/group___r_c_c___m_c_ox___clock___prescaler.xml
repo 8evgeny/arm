@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___m_c_ox___clock___prescaler" xml:lang="en-US">
+<title>MCO Clock Prescaler</title>
+<indexterm><primary>MCO Clock Prescaler</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___r_c_c___m_c_ox___clock___prescaler_1ga438d8c3bead4e1ec5dd5757cb0313d53"/>#define <emphasis role="strong">RCC_MCODIV_1</emphasis>   0x00000000U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c_ex___peripheral___configuration" kind="group">
+    <compoundname>RCCEx_Peripheral_Configuration</compoundname>
+    <title>Peripheral Configuration</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___r_c_c_ex___peripheral___configuration_1ga4c75b81d1b7d65cda934c9f1350ea97b" prot="public" static="no">
+        <name>__HAL_RCC_ADC_CONFIG</name>
+        <param><defname>__ADCCLKSOURCE__</defname></param>
+        <initializer>                  MODIFY_REG(RCC-&gt;CFGR, <ref refid="group___peripheral___registers___bits___definition_1ga970436533d6ba9f1cb8ac840476093fb" kindref="member">RCC_CFGR_ADCPRE</ref>, (uint32_t)(__ADCCLKSOURCE__))</initializer>
+        <briefdescription>
+<para>Macro to configure the ADCx clock (x=1 to 3 depending on devices). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;ADCCLKSOURCE&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the ADC clock source. This parameter can be one of the following values: <itemizedlist>
+<listitem><para>RCC_ADCPCLK2_DIV2 PCLK2 clock divided by 2 selected as ADC clock </para>
+</listitem>
+<listitem><para>RCC_ADCPCLK2_DIV4 PCLK2 clock divided by 4 selected as ADC clock </para>
+</listitem>
+<listitem><para>RCC_ADCPCLK2_DIV6 PCLK2 clock divided by 6 selected as ADC clock </para>
+</listitem>
+<listitem><para>RCC_ADCPCLK2_DIV8 PCLK2 clock divided by 8 selected as ADC clock </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" line="1721" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" bodystart="1721" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c_ex___peripheral___configuration_1ga2ee9f1838a8450f949b548a06ed3bc58" prot="public" static="no">
+        <name>__HAL_RCC_GET_ADC_SOURCE</name>
+        <param></param>
+        <initializer>((uint32_t)(READ_BIT(RCC-&gt;CFGR, <ref refid="group___peripheral___registers___bits___definition_1ga970436533d6ba9f1cb8ac840476093fb" kindref="member">RCC_CFGR_ADCPRE</ref>)))</initializer>
+        <briefdescription>
+<para>Macro to get the ADC clock (ADCxCLK, x=1 to 3 depending on devices). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>clock source can be one of the following values: <itemizedlist>
+<listitem><para>RCC_ADCPCLK2_DIV2 PCLK2 clock divided by 2 selected as ADC clock </para>
+</listitem>
+<listitem><para>RCC_ADCPCLK2_DIV4 PCLK2 clock divided by 4 selected as ADC clock </para>
+</listitem>
+<listitem><para>RCC_ADCPCLK2_DIV6 PCLK2 clock divided by 6 selected as ADC clock </para>
+</listitem>
+<listitem><para>RCC_ADCPCLK2_DIV8 PCLK2 clock divided by 8 selected as ADC clock </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" line="1731" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" bodystart="1731" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Macros to configure clock source of different peripherals. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_led_8c" xml:lang="en-US">
+<title>Src/led.c File Reference</title>
+<indexterm><primary>Src/led.c</primary></indexterm>
+<para>
+
+<para><link linkend="_led_8c">led.c</link> file. </para>
+ 
+</para>
+<programlisting>#include &quot;led.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_led_8c_1a50cf228fce8563fc202330b7b4816cb9">LED_init</link> (void)</para>
+
+<para>LED control module initialization. </para>
+</listitem>
+            <listitem><para>void <link linkend="_led_8c_1a160438dfbbe2b383198647cbcc9a0503">LED_setLED1</link> (void)</para>
+
+<para>Turn on LED &quot;Alarm&quot;. </para>
+</listitem>
+            <listitem><para>void <link linkend="_led_8c_1a730574f2ed84f2fd20c54babfc73c0ca">LED_resetLED1</link> (void)</para>
+
+<para>Turn off LED &quot;Alarm&quot;. </para>
+</listitem>
+            <listitem><para>void <link linkend="_led_8c_1ae985eca49a31a26d39db27a7b214f0f5">LED_setLED2</link> (void)</para>
+
+<para>Turn on LED &quot;Write&quot;. </para>
+</listitem>
+            <listitem><para>void <link linkend="_led_8c_1a09886ae6f7015a329efc7d315aaa6f99">LED_resetLED2</link> (void)</para>
+
+<para>Turn off LED &quot;Write&quot;. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_led_8c">led.c</link> file. </para>
+
+<para>Led control module (Source file). <formalpara><title>Author</title>
+
+<para>Arthur Markaryan </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>26.03.2021 </para>
+</formalpara>
+<formalpara><title>Copyright</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_led_8c_1a50cf228fce8563fc202330b7b4816cb9"/>    <section>
+    <title>LED_init()</title>
+<indexterm><primary>LED_init</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_init</secondary></indexterm>
+<para><computeroutput>void LED_init (void )</computeroutput></para><para>
+
+<para>LED control module initialization. </para>
+</para>
+
+<para>GPIO initialization function to drive LEDs. 
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_led_8c_1a730574f2ed84f2fd20c54babfc73c0ca"/>    <section>
+    <title>LED_resetLED1()</title>
+<indexterm><primary>LED_resetLED1</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_resetLED1</secondary></indexterm>
+<para><computeroutput>void LED_resetLED1 (void )</computeroutput></para><para>
+
+<para>Turn off LED &quot;Alarm&quot;. </para>
+</para>
+
+<para>LED lighting control function. 
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_led_8c_1a09886ae6f7015a329efc7d315aaa6f99"/>    <section>
+    <title>LED_resetLED2()</title>
+<indexterm><primary>LED_resetLED2</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_resetLED2</secondary></indexterm>
+<para><computeroutput>void LED_resetLED2 (void )</computeroutput></para><para>
+
+<para>Turn off LED &quot;Write&quot;. </para>
+</para>
+
+<para>LED lighting control function. 
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_led_8c_1a160438dfbbe2b383198647cbcc9a0503"/>    <section>
+    <title>LED_setLED1()</title>
+<indexterm><primary>LED_setLED1</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_setLED1</secondary></indexterm>
+<para><computeroutput>void LED_setLED1 (void )</computeroutput></para><para>
+
+<para>Turn on LED &quot;Alarm&quot;. </para>
+</para>
+
+<para>LED lighting control function. 
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_led_8c_1ae985eca49a31a26d39db27a7b214f0f5"/>    <section>
+    <title>LED_setLED2()</title>
+<indexterm><primary>LED_setLED2</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_setLED2</secondary></indexterm>
+<para><computeroutput>void LED_setLED2 (void )</computeroutput></para><para>
+
+<para>Turn on LED &quot;Write&quot;. </para>
+</para>
+
+<para>LED lighting control function. 
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

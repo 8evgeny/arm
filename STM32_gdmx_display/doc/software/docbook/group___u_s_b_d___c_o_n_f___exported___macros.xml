@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___c_o_n_f___exported___macros" xml:lang="en-US">
+<title>USBD_CONF_Exported_Macros</title>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary></indexterm>
+<para>
+
+<para>Aliases. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga35ff353194f56823357f503e546ccf4b">USBD_malloc</link>   (uint32_t *)<link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga2df01b9aae6026e9f6b55da3b1e72aee">USBD_static_malloc</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1gab44fcf9b4d7bfbe8b1308eca76975fe5">USBD_free</link>   <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga92ed1214efe53f54b3586a6233cfa5a6">USBD_static_free</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1gaf7b31857d15ef0abbd84e0e70a2b903f">USBD_memset</link>   /* Not used */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga18d9c17ef2afe7244b559ed428ca1e81">USBD_memcpy</link>   /* Not used */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga78993b66136329032c26d0c13a78e963">USBD_Delay</link>   HAL_Delay</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_UsrLog</emphasis>(...)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_ErrLog</emphasis>(...)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_DbgLog</emphasis>(...)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void * <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga2df01b9aae6026e9f6b55da3b1e72aee">USBD_static_malloc</link> (uint32_t size)</para>
+
+<para>Static single allocation. </para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga92ed1214efe53f54b3586a6233cfa5a6">USBD_static_free</link> (void *p)</para>
+
+<para>Dummy memory free. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Aliases. </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___u_s_b_d___c_o_n_f___exported___macros_1ga009d0ba418c356a4668fac6115b07ac5"/>    <section>
+    <title>USBD_DbgLog</title>
+<indexterm><primary>USBD_DbgLog</primary><secondary>USBD_CONF_Exported_Macros</secondary></indexterm>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary><secondary>USBD_DbgLog</secondary></indexterm>
+<para><computeroutput>#define USBD_DbgLog( ...)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;DEBUG&#32;:&#32;&quot;</emphasis>)&#32;;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(__VA_ARGS__);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n&quot;</emphasis>);
+</programlisting>    </section><anchor xml:id="_group___u_s_b_d___c_o_n_f___exported___macros_1ga78993b66136329032c26d0c13a78e963"/>    <section>
+    <title>USBD_Delay</title>
+<indexterm><primary>USBD_Delay</primary><secondary>USBD_CONF_Exported_Macros</secondary></indexterm>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary><secondary>USBD_Delay</secondary></indexterm>
+<para><computeroutput>#define USBD_Delay   HAL_Delay</computeroutput></para>
+<para>Alias for delay. </para>
+    </section><anchor xml:id="_group___u_s_b_d___c_o_n_f___exported___macros_1ga077a76b66987212e70c3c4db2ca73a8b"/>    <section>
+    <title>USBD_ErrLog</title>
+<indexterm><primary>USBD_ErrLog</primary><secondary>USBD_CONF_Exported_Macros</secondary></indexterm>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary><secondary>USBD_ErrLog</secondary></indexterm>
+<para><computeroutput>#define USBD_ErrLog( ...)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;ERROR:&#32;&quot;</emphasis>)&#32;;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(__VA_ARGS__);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n&quot;</emphasis>);
+</programlisting>    </section><anchor xml:id="_group___u_s_b_d___c_o_n_f___exported___macros_1gab44fcf9b4d7bfbe8b1308eca76975fe5"/>    <section>
+    <title>USBD_free</title>
+<indexterm><primary>USBD_free</primary><secondary>USBD_CONF_Exported_Macros</secondary></indexterm>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary><secondary>USBD_free</secondary></indexterm>
+<para><computeroutput>#define USBD_free   <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga92ed1214efe53f54b3586a6233cfa5a6">USBD_static_free</link></computeroutput></para>
+<para>Alias for memory release. </para>
+    </section><anchor xml:id="_group___u_s_b_d___c_o_n_f___exported___macros_1ga35ff353194f56823357f503e546ccf4b"/>    <section>
+    <title>USBD_malloc</title>
+<indexterm><primary>USBD_malloc</primary><secondary>USBD_CONF_Exported_Macros</secondary></indexterm>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary><secondary>USBD_malloc</secondary></indexterm>
+<para><computeroutput>#define USBD_malloc   (uint32_t *)<link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga2df01b9aae6026e9f6b55da3b1e72aee">USBD_static_malloc</link></computeroutput></para>
+<para>Alias for memory allocation. </para>
+    </section><anchor xml:id="_group___u_s_b_d___c_o_n_f___exported___macros_1ga18d9c17ef2afe7244b559ed428ca1e81"/>    <section>
+    <title>USBD_memcpy</title>
+<indexterm><primary>USBD_memcpy</primary><secondary>USBD_CONF_Exported_Macros</secondary></indexterm>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary><secondary>USBD_memcpy</secondary></indexterm>
+<para><computeroutput>#define USBD_memcpy   /* Not used */</computeroutput></para>
+<para>Alias for memory copy. </para>
+    </section><anchor xml:id="_group___u_s_b_d___c_o_n_f___exported___macros_1gaf7b31857d15ef0abbd84e0e70a2b903f"/>    <section>
+    <title>USBD_memset</title>
+<indexterm><primary>USBD_memset</primary><secondary>USBD_CONF_Exported_Macros</secondary></indexterm>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary><secondary>USBD_memset</secondary></indexterm>
+<para><computeroutput>#define USBD_memset   /* Not used */</computeroutput></para>
+<para>Alias for memory set. </para>
+    </section><anchor xml:id="_group___u_s_b_d___c_o_n_f___exported___macros_1gad0adad09bbf4f06418659a39edc0f6c6"/>    <section>
+    <title>USBD_UsrLog</title>
+<indexterm><primary>USBD_UsrLog</primary><secondary>USBD_CONF_Exported_Macros</secondary></indexterm>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary><secondary>USBD_UsrLog</secondary></indexterm>
+<para><computeroutput>#define USBD_UsrLog( ...)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(__VA_ARGS__);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n&quot;</emphasis>);
+</programlisting></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___u_s_b_d___c_o_n_f___exported___macros_1ga92ed1214efe53f54b3586a6233cfa5a6"/>    <section>
+    <title>USBD_static_free()</title>
+<indexterm><primary>USBD_static_free</primary><secondary>USBD_CONF_Exported_Macros</secondary></indexterm>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary><secondary>USBD_static_free</secondary></indexterm>
+<para><computeroutput>void USBD_static_free (void * p)</computeroutput></para><para>
+
+<para>Dummy memory free. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>p</entry>
+                                <entry>
+<para>Pointer to allocated memory address </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___u_s_b_d___c_o_n_f___exported___macros_1ga2df01b9aae6026e9f6b55da3b1e72aee"/>    <section>
+    <title>USBD_static_malloc()</title>
+<indexterm><primary>USBD_static_malloc</primary><secondary>USBD_CONF_Exported_Macros</secondary></indexterm>
+<indexterm><primary>USBD_CONF_Exported_Macros</primary><secondary>USBD_static_malloc</secondary></indexterm>
+<para><computeroutput>void* USBD_static_malloc (uint32_t size)</computeroutput></para><para>
+
+<para>Static single allocation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>size</entry>
+                                <entry>
+<para>Size of allocated memory </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

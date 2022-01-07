@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c___exported___macros" kind="group">
+    <compoundname>RCC_Exported_Macros</compoundname>
+    <title>RCC Exported Macros</title>
+    <innergroup refid="group___r_c_c___peripheral___clock___enable___disable">Peripheral Clock Enable Disable</innergroup>
+    <innergroup refid="group___r_c_c___a_h_b___peripheral___clock___enable___disable___status">AHB Peripheral Clock Enable Disable Status</innergroup>
+    <innergroup refid="group___r_c_c___a_p_b1___clock___enable___disable">APB1 Clock Enable Disable</innergroup>
+    <innergroup refid="group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status">APB1 Peripheral Clock Enable Disable Status</innergroup>
+    <innergroup refid="group___r_c_c___a_p_b2___clock___enable___disable">APB2 Clock Enable Disable</innergroup>
+    <innergroup refid="group___r_c_c___a_p_b2___peripheral___clock___enable___disable___status">APB2 Peripheral Clock Enable Disable Status</innergroup>
+    <innergroup refid="group___r_c_c___a_p_b1___force___release___reset">APB1 Force Release Reset</innergroup>
+    <innergroup refid="group___r_c_c___a_p_b2___force___release___reset">APB2 Force Release Reset</innergroup>
+    <innergroup refid="group___r_c_c___h_s_i___configuration">HSI Configuration</innergroup>
+    <innergroup refid="group___r_c_c___l_s_i___configuration">LSI Configuration</innergroup>
+    <innergroup refid="group___r_c_c___h_s_e___configuration">HSE Configuration</innergroup>
+    <innergroup refid="group___r_c_c___l_s_e___configuration">LSE Configuration</innergroup>
+    <innergroup refid="group___r_c_c___p_l_l___configuration">PLL Configuration</innergroup>
+    <innergroup refid="group___r_c_c___get___clock__source">Get Clock source</innergroup>
+    <innergroup refid="group___r_c_c_ex___m_c_ox___clock___config">RCC Extended MCOx Clock Config</innergroup>
+    <innergroup refid="group___r_c_c___r_t_c___clock___configuration">RCC RTC Clock Configuration</innergroup>
+    <innergroup refid="group___r_c_c___flags___interrupts___management">Flags Interrupts Management</innergroup>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

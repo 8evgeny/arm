@@ -1,0 +1,60 @@
+\hypertarget{usbd__cdc__if_8c}{}\doxysection{Src/usbd\+\_\+cdc\+\_\+if.c File Reference}
+\label{usbd__cdc__if_8c}\index{Src/usbd\_cdc\_if.c@{Src/usbd\_cdc\_if.c}}
+
+
+\+: Usb device for Virtual Com Port.  
+
+
+{\ttfamily \#include \char`\"{}usbd\+\_\+cdc\+\_\+if.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structt___rcv_buffer}{t\+\_\+\+Rcv\+Buffer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries APP\+\_\+\+RX\+\_\+\+DATA\+\_\+\+SIZE}~1000
+\item 
+\#define {\bfseries APP\+\_\+\+TX\+\_\+\+DATA\+\_\+\+SIZE}~128
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___u_s_b_d___c_d_c___i_f_ga5137d6201dbdef2bf351c5b4941c24f4}{CDC\+\_\+\+Transmit\+\_\+\+FS}} (uint8\+\_\+t $\ast$Buf, uint16\+\_\+t Len)
+\begin{DoxyCompactList}\small\item\em CDC\+\_\+\+Transmit\+\_\+\+FS Data to send over USB IN endpoint are sent over CDC interface through this function. \end{DoxyCompactList}\item 
+void {\bfseries USBD\+\_\+\+CDC\+\_\+\+IF\+\_\+clear} (void)
+\item 
+void {\bfseries USBD\+\_\+\+CDC\+\_\+\+IF\+\_\+write} (void)
+\item 
+int {\bfseries USBD\+\_\+\+CDC\+\_\+\+IF\+\_\+proc\+Rcv\+Data} (uint8\+\_\+t $\ast$data, uint16\+\_\+t size)
+\item 
+int {\bfseries USBD\+\_\+\+CDC\+\_\+\+IF\+\_\+analyze\+Rcv\+Data} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structt___rcv_buffer}{t\+\_\+\+Rcv\+Buffer}} {\bfseries Rcv\+Buffer}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___u_s_b_d___c_d_c___i_f___private___variables_ga1e37e6616e6affe5acf9c0befd063f6a}{User\+Rx\+Buffer\+FS}} \mbox{[}APP\+\_\+\+RX\+\_\+\+DATA\+\_\+\+SIZE\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___u_s_b_d___c_d_c___i_f___private___variables_gad48fea85cdb7aed49bf62140a52f23e0}{User\+Tx\+Buffer\+FS}} \mbox{[}APP\+\_\+\+TX\+\_\+\+DATA\+\_\+\+SIZE\mbox{]}
+\item 
+\mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{USBD\+\_\+\+Handle\+Type\+Def}} {\bfseries h\+Usb\+Device\+FS}
+\item 
+\mbox{\hyperlink{struct___u_s_b_d___c_d_c___itf}{USBD\+\_\+\+CDC\+\_\+\+Itf\+Type\+Def}} \mbox{\hyperlink{group___u_s_b_d___c_d_c___i_f_ga99394ed19b774f171df96c2848c411ed}{USBD\+\_\+\+Interface\+\_\+fops\+\_\+\+FS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Usb device for Virtual Com Port. 
+
+\begin{DoxyVersion}{Version}
+\+: v2.\+0\+\_\+\+Cube
+\end{DoxyVersion}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2019 Donskih Dmitriy. All rights reserved.\end{center} }
+
+This software component is licensed by Donskih Dmitriy under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 

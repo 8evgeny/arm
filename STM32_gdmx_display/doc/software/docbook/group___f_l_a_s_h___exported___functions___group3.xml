@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h___exported___functions___group3" xml:lang="en-US">
+<title>FLASH_Exported_Functions_Group3</title>
+<indexterm><primary>FLASH_Exported_Functions_Group3</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h___exported___functions___group3_1ga20e71ba6b2a09cd5b9f0bd369f842de3"/>uint32_t <emphasis role="strong">HAL_FLASH_GetError</emphasis> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

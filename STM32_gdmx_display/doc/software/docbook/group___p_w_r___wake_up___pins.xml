@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___p_w_r___wake_up___pins" xml:lang="en-US">
+<title>PWR WakeUp Pins</title>
+<indexterm><primary>PWR WakeUp Pins</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___p_w_r___wake_up___pins_1ga0da8e7cbe0826e93b777ae4419a1cd05"/>#define <emphasis role="strong">PWR_WAKEUP_PIN1</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga7ac8c15a08bbee754ea720b0d4a4f580">PWR_CSR_EWUP</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

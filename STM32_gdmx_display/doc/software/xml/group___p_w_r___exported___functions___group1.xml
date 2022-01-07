@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___p_w_r___exported___functions___group1" kind="group">
+    <compoundname>PWR_Exported_Functions_Group1</compoundname>
+    <title>Initialization and de-initialization functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___p_w_r___exported___functions___group1_1ga7edb99b94a46448c34f0301b0a077ff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_PWR_DeInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_PWR_DeInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="329" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" declline="329" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___p_w_r___exported___functions___group1_1ga3d07cef39bf294db4aed7e06e5dbf9af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_PWR_EnableBkUpAccess</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_PWR_EnableBkUpAccess</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="330" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" declline="330" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___p_w_r___exported___functions___group1_1ga1513de5f2e4b72e094fb04bab786fec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_PWR_DisableBkUpAccess</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_PWR_DisableBkUpAccess</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="331" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" declline="331" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

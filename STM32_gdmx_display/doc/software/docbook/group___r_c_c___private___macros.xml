@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___private___macros" xml:lang="en-US">
+<title>RCC_Private_Macros</title>
+<indexterm><primary>RCC_Private_Macros</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___r_c_c___alias___for___legacy">Alias define maintained for legacy</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_PLLSOURCE</emphasis>(__SOURCE__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_OSCILLATORTYPE</emphasis>(__OSCILLATOR__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_HSE</emphasis>(__HSE__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_LSE</emphasis>(__LSE__)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___macros_1ga230f351a740560f6b51cdc4b7051606e"/>#define <emphasis role="strong">IS_RCC_HSI</emphasis>(__HSI__)   (((__HSI__) == <link linkend="_group___r_c_c___h_s_i___config_1ga1b34d37d3b51afec0758b3ddc7a7e665">RCC_HSI_OFF</link>) || ((__HSI__) == <link linkend="_group___r_c_c___h_s_i___config_1ga0bf09ef9e46d5da25cced7b3122f92f5">RCC_HSI_ON</link>))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___macros_1ga0811e1266f1690c9f967df0129cb9d66"/>#define <emphasis role="strong">IS_RCC_CALIBRATION_VALUE</emphasis>(__VALUE__)   ((__VALUE__) &lt;= 0x1FU)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___macros_1ga2961f77a4ee7870f36d9f7f6729a0608"/>#define <emphasis role="strong">IS_RCC_LSI</emphasis>(__LSI__)   (((__LSI__) == <link linkend="_group___r_c_c___l_s_i___config_1gaa1710927d79a2032f87f039c4a27356a">RCC_LSI_OFF</link>) || ((__LSI__) == <link linkend="_group___r_c_c___l_s_i___config_1ga6b364ac3500e60b6bff695ee518c87d6">RCC_LSI_ON</link>))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_PLL</emphasis>(__PLL__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_CLOCKTYPE</emphasis>(CLK)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_SYSCLKSOURCE</emphasis>(__SOURCE__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_SYSCLKSOURCE_STATUS</emphasis>(__SOURCE__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_HCLK</emphasis>(__HCLK__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_PCLK</emphasis>(__PCLK__)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___macros_1ga9fa7b8751b8f868f0f1dd55b6efced65"/>#define <emphasis role="strong">IS_RCC_MCO</emphasis>(__MCO__)   ((__MCO__) == <link linkend="_group___r_c_c___m_c_o___index_1gad9bc2abe13f0d3e62a5f9aa381927eb3">RCC_MCO</link>)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___macros_1gab281379d2f6361a20a082259be63af0f"/>#define <emphasis role="strong">IS_RCC_MCODIV</emphasis>(__DIV__)   (((__DIV__) == RCC_MCODIV_1))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_RTCCLKSOURCE</emphasis>(__SOURCE__)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c___private___macros_1gaedf7abbab300ed340b88d5f665910707"/>    <section>
+    <title>IS_RCC_CLOCKTYPE</title>
+<indexterm><primary>IS_RCC_CLOCKTYPE</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_CLOCKTYPE</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_CLOCKTYPE( CLK)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((((CLK)&#32;&amp;&#32;<link linkend="_group___r_c_c___system___clock___type_1ga7e721f5bf3fe925f78dae0356165332e">RCC_CLOCKTYPE_SYSCLK</link>)&#32;==&#32;<link linkend="_group___r_c_c___system___clock___type_1ga7e721f5bf3fe925f78dae0356165332e">RCC_CLOCKTYPE_SYSCLK</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((CLK)&#32;&amp;&#32;<link linkend="_group___r_c_c___system___clock___type_1gaa5330efbd790632856a2b15851517ef9">RCC_CLOCKTYPE_HCLK</link>)&#32;&#32;&#32;==&#32;<link linkend="_group___r_c_c___system___clock___type_1gaa5330efbd790632856a2b15851517ef9">RCC_CLOCKTYPE_HCLK</link>)&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((CLK)&#32;&amp;&#32;<link linkend="_group___r_c_c___system___clock___type_1gab00c7b70f0770a616be4b5df45a454c4">RCC_CLOCKTYPE_PCLK1</link>)&#32;&#32;==&#32;<link linkend="_group___r_c_c___system___clock___type_1gab00c7b70f0770a616be4b5df45a454c4">RCC_CLOCKTYPE_PCLK1</link>)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((CLK)&#32;&amp;&#32;<link linkend="_group___r_c_c___system___clock___type_1gaef7e78706e597a6551d71f5f9ad60cc0">RCC_CLOCKTYPE_PCLK2</link>)&#32;&#32;==&#32;<link linkend="_group___r_c_c___system___clock___type_1gaef7e78706e597a6551d71f5f9ad60cc0">RCC_CLOCKTYPE_PCLK2</link>))
+</programlisting>    </section><anchor xml:id="_group___r_c_c___private___macros_1ga0f01b4d9e55bcb7fcbd2c08f6d7bb5b3"/>    <section>
+    <title>IS_RCC_HCLK</title>
+<indexterm><primary>IS_RCC_HCLK</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_HCLK</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_HCLK( __HCLK__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__HCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_h_b___clock___source_1ga226f5bf675015ea677868132b6b83494">RCC_SYSCLK_DIV1</link>)&#32;||&#32;((__HCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_h_b___clock___source_1gac37c0610458a92e3cb32ec81014625c3">RCC_SYSCLK_DIV2</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_h_b___clock___source_1ga6fd3652d6853563cdf388a4386b9d22f">RCC_SYSCLK_DIV4</link>)&#32;||&#32;((__HCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_h_b___clock___source_1ga7def31373854ba9c72bb76b1d13e3aad">RCC_SYSCLK_DIV8</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_h_b___clock___source_1ga895462b261e03eade3d0139cc1327a51">RCC_SYSCLK_DIV16</link>)&#32;||&#32;((__HCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_h_b___clock___source_1ga73814b5a7ee000687ec8334637ca5b14">RCC_SYSCLK_DIV64</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_h_b___clock___source_1ga43eddf4d4160df30548a714dce102ad8">RCC_SYSCLK_DIV128</link>)&#32;||&#32;((__HCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_h_b___clock___source_1ga94956d6e9c3a78230bf660b838f987e2">RCC_SYSCLK_DIV256</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_h_b___clock___source_1gabe18a9d55c0858bbfe3db657fb64c76d">RCC_SYSCLK_DIV512</link>))
+</programlisting>    </section><anchor xml:id="_group___r_c_c___private___macros_1ga3c9bb7f31e4cd8436a41ae33c8908226"/>    <section>
+    <title>IS_RCC_HSE</title>
+<indexterm><primary>IS_RCC_HSE</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_HSE</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_HSE( __HSE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__HSE__)&#32;==&#32;<link linkend="_group___r_c_c___h_s_e___config_1ga1616626d23fbce440398578855df6f97">RCC_HSE_OFF</link>)&#32;||&#32;((__HSE__)&#32;==&#32;<link linkend="_group___r_c_c___h_s_e___config_1gabc4f70a44776c557af20496b04d9a9db">RCC_HSE_ON</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HSE__)&#32;==&#32;<link linkend="_group___r_c_c___h_s_e___config_1ga5ca515db2d5c4d5bdb9ee3d154df2704">RCC_HSE_BYPASS</link>))
+</programlisting>    </section><anchor xml:id="_group___r_c_c___private___macros_1ga6c766af016cdc1d63f1ed64c5082737c"/>    <section>
+    <title>IS_RCC_LSE</title>
+<indexterm><primary>IS_RCC_LSE</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_LSE</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_LSE( __LSE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__LSE__)&#32;==&#32;<link linkend="_group___r_c_c___l_s_e___config_1ga6645c27708d0cad1a4ab61d2abb24c77">RCC_LSE_OFF</link>)&#32;||&#32;((__LSE__)&#32;==&#32;<link linkend="_group___r_c_c___l_s_e___config_1gac981ea636c2f215e4473901e0912f55a">RCC_LSE_ON</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__LSE__)&#32;==&#32;<link linkend="_group___r_c_c___l_s_e___config_1gaad580157edbae878edbcc83c5a68e767">RCC_LSE_BYPASS</link>))
+</programlisting>    </section><anchor xml:id="_group___r_c_c___private___macros_1ga68584e3b585c1c1770d504a030d0dd34"/>    <section>
+    <title>IS_RCC_OSCILLATORTYPE</title>
+<indexterm><primary>IS_RCC_OSCILLATORTYPE</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_OSCILLATORTYPE</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_OSCILLATORTYPE( __OSCILLATOR__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__OSCILLATOR__)&#32;==&#32;RCC_OSCILLATORTYPE_NONE)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__OSCILLATOR__)&#32;&amp;&#32;RCC_OSCILLATORTYPE_HSE)&#32;==&#32;RCC_OSCILLATORTYPE_HSE)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__OSCILLATOR__)&#32;&amp;&#32;RCC_OSCILLATORTYPE_HSI)&#32;==&#32;RCC_OSCILLATORTYPE_HSI)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__OSCILLATOR__)&#32;&amp;&#32;RCC_OSCILLATORTYPE_LSI)&#32;==&#32;RCC_OSCILLATORTYPE_LSI)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__OSCILLATOR__)&#32;&amp;&#32;RCC_OSCILLATORTYPE_LSE)&#32;==&#32;RCC_OSCILLATORTYPE_LSE))
+</programlisting>    </section><anchor xml:id="_group___r_c_c___private___macros_1ga378b8fcc2e64326f6f98b30cb3fc22d9"/>    <section>
+    <title>IS_RCC_PCLK</title>
+<indexterm><primary>IS_RCC_PCLK</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_PCLK</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_PCLK( __PCLK__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__PCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_p_b1___a_p_b2___clock___source_1ga8e3fcdef0e5d77bb61a52420fe1e9fbc">RCC_HCLK_DIV1</link>)&#32;||&#32;((__PCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_p_b1___a_p_b2___clock___source_1ga4d2ebcf280d85e8449a5fb7b994b5169">RCC_HCLK_DIV2</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_p_b1___a_p_b2___clock___source_1ga85b5f4fd936e22a3f4df5ed756f6e083">RCC_HCLK_DIV4</link>)&#32;||&#32;((__PCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_p_b1___a_p_b2___clock___source_1gadb18bc60e2c639cb59244bedb54f7bb3">RCC_HCLK_DIV8</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PCLK__)&#32;==&#32;<link linkend="_group___r_c_c___a_p_b1___a_p_b2___clock___source_1ga27ac27d48360121bc2dc68b99dc8845d">RCC_HCLK_DIV16</link>))
+</programlisting>    </section><anchor xml:id="_group___r_c_c___private___macros_1ga4e8a1f3a151c3011e915df4da312dd73"/>    <section>
+    <title>IS_RCC_PLL</title>
+<indexterm><primary>IS_RCC_PLL</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_PLL</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_PLL( __PLL__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__PLL__)&#32;==&#32;<link linkend="_group___r_c_c___p_l_l___config_1gae47a612f8e15c32917ee2181362d88f3">RCC_PLL_NONE</link>)&#32;||&#32;((__PLL__)&#32;==&#32;<link linkend="_group___r_c_c___p_l_l___config_1ga3a8d5c8bcb101c6ca1a574729acfa903">RCC_PLL_OFF</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PLL__)&#32;==&#32;<link linkend="_group___r_c_c___p_l_l___config_1gaf86dbee130304ba5760818f56d34ec91">RCC_PLL_ON</link>))
+</programlisting>    </section><anchor xml:id="_group___r_c_c___private___macros_1ga13202f72c93b28705bd35aab3cbd951f"/>    <section>
+    <title>IS_RCC_PLLSOURCE</title>
+<indexterm><primary>IS_RCC_PLLSOURCE</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_PLLSOURCE</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_PLLSOURCE( __SOURCE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___p_l_l___clock___source_1ga09fff12a4e92f4da5980321b7f99b632">RCC_PLLSOURCE_HSI_DIV2</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___p_l_l___clock___source_1ga197cea7fe5c2db26fe7fcdb0f99dd4d7">RCC_PLLSOURCE_HSE</link>))
+</programlisting>    </section><anchor xml:id="_group___r_c_c___private___macros_1gacd1d98013cd9a28e8b1544adf931e7b3"/>    <section>
+    <title>IS_RCC_RTCCLKSOURCE</title>
+<indexterm><primary>IS_RCC_RTCCLKSOURCE</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_RTCCLKSOURCE</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_RTCCLKSOURCE( __SOURCE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___r_t_c___clock___source_1gacce0b2f54d103340d8c3a218e86e295d">RCC_RTCCLKSOURCE_NO_CLK</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___r_t_c___clock___source_1ga5dca8d63f250a20bd6bc005670d0c150">RCC_RTCCLKSOURCE_LSE</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___r_t_c___clock___source_1gab47a1afb8b5eef9f20f4772961d0a5f4">RCC_RTCCLKSOURCE_LSI</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___r_t_c___clock___source_1ga7e022374ec3ceffa94e5bb6310c35c83">RCC_RTCCLKSOURCE_HSE_DIV128</link>))
+</programlisting>    </section><anchor xml:id="_group___r_c_c___private___macros_1ga7dc6fce00c2191e691fb2b17dd176d65"/>    <section>
+    <title>IS_RCC_SYSCLKSOURCE</title>
+<indexterm><primary>IS_RCC_SYSCLKSOURCE</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_SYSCLKSOURCE</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_SYSCLKSOURCE( __SOURCE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___system___clock___source_1gaaeeb699502e7d7a9f1b5d57fcf1f5095">RCC_SYSCLKSOURCE_HSI</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___system___clock___source_1ga9116d0627e1e7f33c48e1357b9a35a1c">RCC_SYSCLKSOURCE_HSE</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___system___clock___source_1ga5caf08ac71d7dd7e7b2e3e421606aca7">RCC_SYSCLKSOURCE_PLLCLK</link>))
+</programlisting>    </section><anchor xml:id="_group___r_c_c___private___macros_1gae09fa77206ca9cb1952b7d0ae49c8f4c"/>    <section>
+    <title>IS_RCC_SYSCLKSOURCE_STATUS</title>
+<indexterm><primary>IS_RCC_SYSCLKSOURCE_STATUS</primary><secondary>RCC_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCC_Private_Macros</primary><secondary>IS_RCC_SYSCLKSOURCE_STATUS</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_SYSCLKSOURCE_STATUS( __SOURCE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___system___clock___source___status_1ga0d6c2b0b2d59e6591295649853bb2abd">RCC_SYSCLKSOURCE_STATUS_HSI</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___system___clock___source___status_1ga3847769265bf19becf7b976a7e908a64">RCC_SYSCLKSOURCE_STATUS_HSE</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__SOURCE__)&#32;==&#32;<link linkend="_group___r_c_c___system___clock___source___status_1ga4f05019ec09da478d084f44dbaad7d6d">RCC_SYSCLKSOURCE_STATUS_PLLCLK</link>))
+</programlisting></section>
+</section>
+</section>

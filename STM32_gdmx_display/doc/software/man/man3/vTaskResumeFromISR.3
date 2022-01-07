@@ -1,0 +1,39 @@
+.TH "vTaskResumeFromISR" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vTaskResumeFromISR \- vTaskResumeFromISR
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+void xTaskResumeFromISR( TaskHandle_t xTaskToResume );
+.fi
+.PP
+.PP
+INCLUDE_xTaskResumeFromISR must be defined as 1 for this function to be available\&. See the configuration section for more information\&.
+.PP
+An implementation of vTaskResume() that can be called from within an ISR\&.
+.PP
+A task that has been suspended by one or more calls to vTaskSuspend () will be made available for running again by a single call to xTaskResumeFromISR ()\&.
+.PP
+xTaskResumeFromISR() should not be used to synchronise a task with an interrupt if there is a chance that the interrupt could arrive prior to the task being suspended - as this can lead to interrupts being missed\&. Use of a semaphore as a synchronisation mechanism would avoid this eventuality\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxTaskToResume\fP Handle to the task being readied\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+pdTRUE if resuming the task should result in a context switch, otherwise pdFALSE\&. This is used by the ISR to determine if a context switch may be required following the ISR\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

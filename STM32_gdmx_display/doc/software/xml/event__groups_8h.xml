@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="event__groups_8h" kind="file" language="C++">
+    <compoundname>event_groups.h</compoundname>
+    <includes refid="timers_8h" local="yes">timers.h</includes>
+    <includedby refid="cmsis__os_8h" local="yes">Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h</includedby>
+    <includedby refid="event__groups_8c" local="yes">Middlewares/Third_Party/FreeRTOS/Source/event_groups.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h</label>
+        <link refid="event__groups_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>timers.h</label>
+        <link refid="timers_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>list.h</label>
+        <link refid="list_8h_source"/>
+      </node>
+      <node id="3">
+        <label>task.h</label>
+        <link refid="task_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h</label>
+        <link refid="cmsis__os_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h</label>
+        <link refid="event__groups_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="event__groups_8h_1a3d7de214a697f33fe7b914e26a93f33a" prot="public" static="no">
+        <name>xEventGroupClearBitsFromISR</name>
+        <param><defname>xEventGroup</defname></param>
+        <param><defname>uxBitsToClear</defname></param>
+        <initializer>xTimerPendFunctionCallFromISR( vEventGroupClearBitsCallback, ( void * ) xEventGroup, ( uint32_t ) uxBitsToClear, NULL )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="409" column="11" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="event__groups_8h_1a62b68278abac6358369ae8e390988a02" prot="public" static="no">
+        <name>xEventGroupSetBitsFromISR</name>
+        <param><defname>xEventGroup</defname></param>
+        <param><defname>uxBitsToSet</defname></param>
+        <param><defname>pxHigherPriorityTaskWoken</defname></param>
+        <initializer>xTimerPendFunctionCallFromISR( vEventGroupSetBitsCallback, ( void * ) xEventGroup, ( uint32_t ) uxBitsToSet, pxHigherPriorityTaskWoken )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="561" column="11" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" bodystart="561" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="event__groups_8h_1a0ae86f092fb07ccb475ae938f9a12584" prot="public" static="no">
+        <name>xEventGroupGetBits</name>
+        <param><defname>xEventGroup</defname></param>
+        <initializer>xEventGroupClearBits( xEventGroup, 0 )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="707" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" bodystart="707" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="event__groups_8h_1a5119294106541c4eca46e8742fdb4e85" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* EventGroupHandle_t</definition>
+        <argsstring></argsstring>
+        <name>EventGroupHandle_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="81" column="15" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="event__groups_8h_1ab2f21b93db0b2a0ab64d7a81ff32ac2e" prot="public" static="no">
+        <type>TickType_t</type>
+        <definition>typedef TickType_t EventBits_t</definition>
+        <argsstring></argsstring>
+        <name>EventBits_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="91" column="20" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="event__groups_8h_1aab9d5b405bc57b7624dcabe9a9a503db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EventBits_t</type>
+        <definition>EventBits_t xEventGroupWaitBits</definition>
+        <argsstring>(EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToWaitFor, const BaseType_t xClearOnExit, const BaseType_t xWaitForAllBits, TickType_t xTicksToWait) PRIVILEGED_FUNCTION</argsstring>
+        <name>xEventGroupWaitBits</name>
+        <param>
+          <type>EventGroupHandle_t</type>
+          <declname>xEventGroup</declname>
+        </param>
+        <param>
+          <type>const EventBits_t</type>
+          <declname>uxBitsToWaitFor</declname>
+        </param>
+        <param>
+          <type>const BaseType_t</type>
+          <declname>xClearOnExit</declname>
+        </param>
+        <param>
+          <type>const BaseType_t</type>
+          <declname>xWaitForAllBits</declname>
+        </param>
+        <param>
+          <type>TickType_t</type>
+          <declname>xTicksToWait</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="294" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" bodystart="296" bodyend="443" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" declline="294" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="event__groups_8h_1a0fb72cfdd4f0d5f86d955fc3af448f2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EventBits_t</type>
+        <definition>EventBits_t xEventGroupClearBits</definition>
+        <argsstring>(EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToClear) PRIVILEGED_FUNCTION</argsstring>
+        <name>xEventGroupClearBits</name>
+        <param>
+          <type>EventGroupHandle_t</type>
+          <declname>xEventGroup</declname>
+        </param>
+        <param>
+          <type>const EventBits_t</type>
+          <declname>uxBitsToClear</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="351" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" bodystart="446" bodyend="470" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" declline="351" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="event__groups_8h_1a02d7b3bb55f7e11d9c47116266c5fb2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EventBits_t</type>
+        <definition>EventBits_t xEventGroupSetBits</definition>
+        <argsstring>(EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToSet) PRIVILEGED_FUNCTION</argsstring>
+        <name>xEventGroupSetBits</name>
+        <param>
+          <type>EventGroupHandle_t</type>
+          <declname>xEventGroup</declname>
+        </param>
+        <param>
+          <type>const EventBits_t</type>
+          <declname>uxBitsToSet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="484" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" bodystart="504" bodyend="595" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" declline="484" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="event__groups_8h_1a869511456b86426f52e2eec898bff341" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EventBits_t</type>
+        <definition>EventBits_t xEventGroupSync</definition>
+        <argsstring>(EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToSet, const EventBits_t uxBitsToWaitFor, TickType_t xTicksToWait) PRIVILEGED_FUNCTION</argsstring>
+        <name>xEventGroupSync</name>
+        <param>
+          <type>EventGroupHandle_t</type>
+          <declname>xEventGroup</declname>
+        </param>
+        <param>
+          <type>const EventBits_t</type>
+          <declname>uxBitsToSet</declname>
+        </param>
+        <param>
+          <type>const EventBits_t</type>
+          <declname>uxBitsToWaitFor</declname>
+        </param>
+        <param>
+          <type>TickType_t</type>
+          <declname>xTicksToWait</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="688" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" bodystart="176" bodyend="293" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" declline="688" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="event__groups_8h_1a95822db4357d0b77c35aed0c7427eca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EventBits_t</type>
+        <definition>EventBits_t xEventGroupGetBitsFromISR</definition>
+        <argsstring>(EventGroupHandle_t xEventGroup) PRIVILEGED_FUNCTION</argsstring>
+        <name>xEventGroupGetBitsFromISR</name>
+        <param>
+          <type>EventGroupHandle_t</type>
+          <declname>xEventGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="724" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" bodystart="488" bodyend="501" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" declline="724" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="event__groups_8h_1a50cb52d1c81b063fd8d94f5293dcfea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vEventGroupDelete</definition>
+        <argsstring>(EventGroupHandle_t xEventGroup) PRIVILEGED_FUNCTION</argsstring>
+        <name>vEventGroupDelete</name>
+        <param>
+          <type>EventGroupHandle_t</type>
+          <declname>xEventGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="event__groups_8h_source" kindref="compound">event_groups.h</ref> <preformatted>
+   void xEventGroupDelete( EventGroupHandle_t xEventGroup );
+</preformatted></para>
+<para>Delete an event group that was previously created by a call to xEventGroupCreate(). Tasks that are blocked on the event group will be unblocked and obtain 0 as the event group&apos;s value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xEventGroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event group being deleted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="738" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" bodystart="598" bodyend="637" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" declline="738" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="event__groups_8h_1abe76a301815525eb5e03f331e5e51ae3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vEventGroupSetBitsCallback</definition>
+        <argsstring>(void *pvEventGroup, const uint32_t ulBitsToSet) PRIVILEGED_FUNCTION</argsstring>
+        <name>vEventGroupSetBitsCallback</name>
+        <param>
+          <type>void *</type>
+          <declname>pvEventGroup</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>ulBitsToSet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="741" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" bodystart="642" bodyend="645" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" declline="741" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="event__groups_8h_1a9187a137998183178320167de254cce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vEventGroupClearBitsCallback</definition>
+        <argsstring>(void *pvEventGroup, const uint32_t ulBitsToClear) PRIVILEGED_FUNCTION</argsstring>
+        <name>vEventGroupClearBitsCallback</name>
+        <param>
+          <type>void *</type>
+          <declname>pvEventGroup</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>ulBitsToClear</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" line="742" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" bodystart="650" bodyend="653" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" declline="742" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>FreeRTOS<sp/>Kernel<sp/>V10.0.1</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2017<sp/>Amazon.com,<sp/>Inc.<sp/>or<sp/>its<sp/>affiliates.<sp/><sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy<sp/>of</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,<sp/>FITNESS</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>http://www.FreeRTOS.org</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>http://aws.amazon.com/freertos</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>1<sp/>tab<sp/>==<sp/>4<sp/>spaces!</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EVENT_GROUPS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVENT_GROUPS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INC_FREERTOS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>&quot;include<sp/>FreeRTOS.h&quot;</highlight><highlight class="normal"><sp/>must<sp/>appear<sp/>in<sp/>source<sp/>files<sp/>before<sp/>&quot;include<sp/>event_groups.h&quot;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>FreeRTOS<sp/>includes.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;timers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>EventGroupHandle_t;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/>*<sp/>The<sp/>type<sp/>that<sp/>holds<sp/>event<sp/>bits<sp/>always<sp/>matches<sp/>TickType_t<sp/>-<sp/>therefore<sp/>the</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/>*<sp/>number<sp/>of<sp/>bits<sp/>it<sp/>holds<sp/>is<sp/>set<sp/>by<sp/>configUSE_16_BIT_TICKS<sp/>(16<sp/>bits<sp/>if<sp/>set<sp/>to<sp/>1,</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/>*<sp/>32<sp/>bits<sp/>if<sp/>set<sp/>to<sp/>0.</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/>*<sp/>\defgroup<sp/>EventBits_t<sp/>EventBits_t</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/>*<sp/>\ingroup<sp/>EventGroup</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>TickType_t<sp/>EventBits_t;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#if(<sp/>configSUPPORT_DYNAMIC_ALLOCATION<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>EventGroupHandle_t<sp/>xEventGroupCreate(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor">#if(<sp/>configSUPPORT_STATIC_ALLOCATION<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>EventGroupHandle_t<sp/>xEventGroupCreateStatic(<sp/><ref refid="structx_s_t_a_t_i_c___e_v_e_n_t___g_r_o_u_p" kindref="compound">StaticEventGroup_t</ref><sp/>*pxEventGroupBuffer<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal">EventBits_t<sp/>xEventGroupWaitBits(<sp/>EventGroupHandle_t<sp/>xEventGroup,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EventBits_t<sp/>uxBitsToWaitFor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BaseType_t<sp/>xClearOnExit,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BaseType_t<sp/>xWaitForAllBits,<sp/>TickType_t<sp/>xTicksToWait<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal">EventBits_t<sp/>xEventGroupClearBits(<sp/>EventGroupHandle_t<sp/>xEventGroup,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EventBits_t<sp/>uxBitsToClear<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight><highlight class="preprocessor">#if(<sp/>configUSE_TRACE_FACILITY<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseType_t<sp/>xEventGroupClearBitsFromISR(<sp/>EventGroupHandle_t<sp/>xEventGroup,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EventBits_t<sp/>uxBitsToSet<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>xEventGroupClearBitsFromISR(<sp/>xEventGroup,<sp/>uxBitsToClear<sp/>)<sp/>xTimerPendFunctionCallFromISR(<sp/>vEventGroupClearBitsCallback,<sp/>(<sp/>void<sp/>*<sp/>)<sp/>xEventGroup,<sp/>(<sp/>uint32_t<sp/>)<sp/>uxBitsToClear,<sp/>NULL<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="484"><highlight class="normal">EventBits_t<sp/>xEventGroupSetBits(<sp/>EventGroupHandle_t<sp/>xEventGroup,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EventBits_t<sp/>uxBitsToSet<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"></highlight><highlight class="preprocessor">#if(<sp/>configUSE_TRACE_FACILITY<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseType_t<sp/>xEventGroupSetBitsFromISR(<sp/>EventGroupHandle_t<sp/>xEventGroup,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EventBits_t<sp/>uxBitsToSet,<sp/>BaseType_t<sp/>*pxHigherPriorityTaskWoken<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="561"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>xEventGroupSetBitsFromISR(<sp/>xEventGroup,<sp/>uxBitsToSet,<sp/>pxHigherPriorityTaskWoken<sp/>)<sp/>xTimerPendFunctionCallFromISR(<sp/>vEventGroupSetBitsCallback,<sp/>(<sp/>void<sp/>*<sp/>)<sp/>xEventGroup,<sp/>(<sp/>uint32_t<sp/>)<sp/>uxBitsToSet,<sp/>pxHigherPriorityTaskWoken<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="562"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="563"><highlight class="normal"></highlight></codeline>
+<codeline lineno="688"><highlight class="normal">EventBits_t<sp/>xEventGroupSync(<sp/>EventGroupHandle_t<sp/>xEventGroup,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EventBits_t<sp/>uxBitsToSet,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EventBits_t<sp/>uxBitsToWaitFor,<sp/>TickType_t<sp/>xTicksToWait<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="689"><highlight class="normal"></highlight></codeline>
+<codeline lineno="690"><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xEventGroupGetBits(<sp/>xEventGroup<sp/>)<sp/>xEventGroupClearBits(<sp/>xEventGroup,<sp/>0<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="708"><highlight class="normal"></highlight></codeline>
+<codeline lineno="724"><highlight class="normal">EventBits_t<sp/>xEventGroupGetBitsFromISR(<sp/>EventGroupHandle_t<sp/>xEventGroup<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="725"><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vEventGroupDelete(<sp/>EventGroupHandle_t<sp/>xEventGroup<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"></highlight></codeline>
+<codeline lineno="740"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>For<sp/>internal<sp/>use<sp/>only.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="741"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vEventGroupSetBitsCallback(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvEventGroup,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>ulBitsToSet<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="742"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vEventGroupClearBitsCallback(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvEventGroup,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>ulBitsToClear<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="743"><highlight class="normal"></highlight></codeline>
+<codeline lineno="744"><highlight class="normal"></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(configUSE_TRACE_FACILITY<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/>UBaseType_t<sp/>uxEventGroupGetNumber(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>xEventGroup<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vEventGroupSetNumber(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>xEventGroup,<sp/>UBaseType_t<sp/>uxEventGroupNumber<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="748"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="749"><highlight class="normal"></highlight></codeline>
+<codeline lineno="750"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="751"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="752"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="753"><highlight class="normal"></highlight></codeline>
+<codeline lineno="754"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>EVENT_GROUPS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="755"><highlight class="normal"></highlight></codeline>
+<codeline lineno="756"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h"/>
+  </compounddef>
+</doxygen>

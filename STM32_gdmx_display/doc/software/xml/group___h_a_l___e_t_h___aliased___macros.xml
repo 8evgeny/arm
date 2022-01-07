@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___e_t_h___aliased___macros" kind="group">
+    <compoundname>HAL_ETH_Aliased_Macros</compoundname>
+    <title>HAL ETH Aliased Macros maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___e_t_h___aliased___macros_1gad96bacd190bd8ba2523e83be7b1432d8" prot="public" static="no">
+        <name>__HAL_ETH_EXTI_ENABLE_IT</name>
+        <initializer>__HAL_ETH_WAKEUP_EXTI_ENABLE_IT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3548" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3548" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___e_t_h___aliased___macros_1ga2e18c5d21291947835cdefeecdd061ec" prot="public" static="no">
+        <name>__HAL_ETH_EXTI_DISABLE_IT</name>
+        <initializer>__HAL_ETH_WAKEUP_EXTI_DISABLE_IT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3549" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3549" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___e_t_h___aliased___macros_1gab8cb753cb998d6d2d65f2ce0bee7c384" prot="public" static="no">
+        <name>__HAL_ETH_EXTI_GET_FLAG</name>
+        <initializer>__HAL_ETH_WAKEUP_EXTI_GET_FLAG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3550" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3550" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___e_t_h___aliased___macros_1ga54ff39d1814de51ec16312fb209f2f41" prot="public" static="no">
+        <name>__HAL_ETH_EXTI_CLEAR_FLAG</name>
+        <initializer>__HAL_ETH_WAKEUP_EXTI_CLEAR_FLAG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3551" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3551" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___e_t_h___aliased___macros_1gac2ffccd4ff4dd93383c34465f81969ce" prot="public" static="no">
+        <name>__HAL_ETH_EXTI_SET_RISING_EGDE_TRIGGER</name>
+        <initializer>__HAL_ETH_WAKEUP_EXTI_ENABLE_RISING_EDGE_TRIGGER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3552" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3552" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___e_t_h___aliased___macros_1ga2a6e3b3b6ef975a01c856883cfb14621" prot="public" static="no">
+        <name>__HAL_ETH_EXTI_SET_FALLING_EGDE_TRIGGER</name>
+        <initializer>__HAL_ETH_WAKEUP_EXTI_ENABLE_FALLING_EDGE_TRIGGER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3553" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3553" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___e_t_h___aliased___macros_1ga50a8c65b53a6639779b3e6ec038a0065" prot="public" static="no">
+        <name>__HAL_ETH_EXTI_SET_FALLINGRISING_TRIGGER</name>
+        <initializer>__HAL_ETH_WAKEUP_EXTI_ENABLE_FALLINGRISING_TRIGGER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3554" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3554" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___e_t_h___aliased___macros_1ga117a90653929730381f567a223c73a98" prot="public" static="no">
+        <name>ETH_PROMISCIOUSMODE_ENABLE</name>
+        <initializer>ETH_PROMISCUOUS_MODE_ENABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3556" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3556" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___e_t_h___aliased___macros_1ga0bca9efbd85292833f130ba06962768b" prot="public" static="no">
+        <name>ETH_PROMISCIOUSMODE_DISABLE</name>
+        <initializer>ETH_PROMISCUOUS_MODE_DISABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3557" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3557" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___e_t_h___aliased___macros_1ga418197e62c9492de5e51c8657fd0e1e8" prot="public" static="no">
+        <name>IS_ETH_PROMISCIOUS_MODE</name>
+        <initializer>IS_ETH_PROMISCUOUS_MODE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3558" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3558" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

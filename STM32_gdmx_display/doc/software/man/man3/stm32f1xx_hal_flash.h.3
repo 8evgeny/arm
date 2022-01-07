@@ -1,0 +1,146 @@
+.TH "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \- Header file of Flash HAL module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f1xx_hal_def\&.h'\fP
+.br
+\fC#include 'stm32f1xx_hal_flash_ex\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBFLASH_ProcessTypeDef\fP"
+.br
+.RI "FLASH handle Structure definition 
+.br
+ "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFLASH_TIMEOUT_VALUE\fP   50000U /* 50 s */"
+.br
+.ti -1c
+.RI "#define \fBIS_FLASH_TYPEPROGRAM\fP(VALUE)"
+.br
+.ti -1c
+.RI "#define \fBIS_FLASH_LATENCY\fP(__LATENCY__)   ((__LATENCY__) == \fBFLASH_LATENCY_0\fP)"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_NONE\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_PROG\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_WRP\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_OPTV\fP   0x04U"
+.br
+.ti -1c
+.RI "#define \fBFLASH_TYPEPROGRAM_HALFWORD\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBFLASH_TYPEPROGRAM_WORD\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBFLASH_TYPEPROGRAM_DOUBLEWORD\fP   0x03U"
+.br
+.ti -1c
+.RI "#define \fBFLASH_LATENCY_0\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fB__HAL_FLASH_HALF_CYCLE_ACCESS_ENABLE\fP()   (FLASH\->ACR |= \fBFLASH_ACR_HLFCYA\fP)"
+.br
+.RI "Enable the FLASH half cycle access\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_HALF_CYCLE_ACCESS_DISABLE\fP()   (FLASH\->ACR &= (~\fBFLASH_ACR_HLFCYA\fP))"
+.br
+.RI "Disable the FLASH half cycle access\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_PREFETCH_BUFFER_ENABLE\fP()   (FLASH\->ACR |= \fBFLASH_ACR_PRFTBE\fP)"
+.br
+.RI "Enable the FLASH prefetch buffer\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_PREFETCH_BUFFER_DISABLE\fP()   (FLASH\->ACR &= (~\fBFLASH_ACR_PRFTBE\fP))"
+.br
+.RI "Disable the FLASH prefetch buffer\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFLASH_ProcedureTypeDef\fP { \fBFLASH_PROC_NONE\fP = 0U, \fBFLASH_PROC_PAGEERASE\fP = 1U, \fBFLASH_PROC_MASSERASE\fP = 2U, \fBFLASH_PROC_PROGRAMHALFWORD\fP = 3U, \fBFLASH_PROC_PROGRAMWORD\fP = 4U, \fBFLASH_PROC_PROGRAMDOUBLEWORD\fP = 5U }"
+.br
+.RI "FLASH Procedure structure definition\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_FLASH_Program\fP (uint32_t TypeProgram, uint32_t Address, uint64_t Data)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_FLASH_Program_IT\fP (uint32_t TypeProgram, uint32_t Address, uint64_t Data)"
+.br
+.ti -1c
+.RI "void \fBHAL_FLASH_IRQHandler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_FLASH_EndOfOperationCallback\fP (uint32_t ReturnValue)"
+.br
+.ti -1c
+.RI "void \fBHAL_FLASH_OperationErrorCallback\fP (uint32_t ReturnValue)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_FLASH_Unlock\fP (void)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_FLASH_Lock\fP (void)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_FLASH_OB_Unlock\fP (void)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_FLASH_OB_Lock\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_FLASH_OB_Launch\fP (void)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_FLASH_GetError\fP (void)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBFLASH_WaitForLastOperation\fP (uint32_t Timeout)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file of Flash HAL module\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2016 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

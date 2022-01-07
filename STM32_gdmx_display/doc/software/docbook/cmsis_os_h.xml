@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cmsis_os_h" xml:lang="en-US">
+
+<para>The file <emphasis role="bold"><link linkend="_cmsis__os_8h_source">cmsis_os.h</link></emphasis> is a template header file for a CMSIS-RTOS compliant Real-Time Operating System (RTOS). Each RTOS that is compliant with CMSIS-RTOS shall provide a specific <emphasis role="bold"><link linkend="_cmsis__os_8h_source">cmsis_os.h</link></emphasis> header file that represents its implementation.</para>
+
+<para>The file <link linkend="_cmsis__os_8h_source">cmsis_os.h</link> contains:<itemizedlist>
+<listitem>
+<para>CMSIS-RTOS API function definitions</para>
+</listitem><listitem>
+<para>struct definitions for parameters and return types</para>
+</listitem><listitem>
+<para>status and priority values used by CMSIS-RTOS API functions</para>
+</listitem><listitem>
+<para>macros for defining threads and other kernel objects</para>
+</listitem></itemizedlist>
+</para>
+
+<para><emphasis role="bold">Name conventions and header file modifications</emphasis></para>
+
+<para>All definitions are prefixed with <emphasis role="bold">os</emphasis> to give an unique name space for CMSIS-RTOS functions. Definitions that are prefixed <emphasis role="bold">os_</emphasis> are not used in the application code but local to this header file. All definitions and functions that belong to a module are grouped and have a common prefix, i.e. <emphasis role="bold">osThread</emphasis>.</para>
+
+<para>Definitions that are marked with <emphasis role="bold">CAN BE CHANGED</emphasis> can be adapted towards the needs of the actual CMSIS-RTOS implementation. These definitions can be specific to the underlying RTOS kernel.</para>
+
+<para>Definitions that are marked with <emphasis role="bold">MUST REMAIN UNCHANGED</emphasis> cannot be altered. Otherwise the CMSIS-RTOS implementation is no longer compliant to the standard. Note that some functions are optional and need not to be provided by every CMSIS-RTOS implementation.</para>
+
+<para><emphasis role="bold">Function calls from interrupt service routines</emphasis></para>
+
+<para>The following CMSIS-RTOS functions can be called from threads and interrupt service routines (ISR):<itemizedlist>
+<listitem>
+<para>osSignalSet</para>
+</listitem><listitem>
+<para>osSemaphoreRelease</para>
+</listitem><listitem>
+<para>osPoolAlloc, osPoolCAlloc, osPoolFree</para>
+</listitem><listitem>
+<para>osMessagePut, osMessageGet</para>
+</listitem><listitem>
+<para>osMailAlloc, osMailCAlloc, osMailGet, osMailPut, osMailFree</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Functions that cannot be called from an ISR are verifying the interrupt status and return in case that they are called from an ISR context the status code <emphasis role="bold">osErrorISR</emphasis>. In some implementations this condition might be caught using the HARD FAULT vector.</para>
+
+<para>Some CMSIS-RTOS implementations support CMSIS-RTOS function calls from multiple ISR at the same time. If this is impossible, the CMSIS-RTOS rejects calls by nested ISR functions with the status code <emphasis role="bold">osErrorISRRecursive</emphasis>.</para>
+
+<para><emphasis role="bold">Define and reference object definitions</emphasis></para>
+
+<para>With <emphasis role="bold">#define osObjectsExternal</emphasis> objects are defined as external symbols. This allows to create a consistent header file that is used throughout a project as shown below:</para>
+
+<para><emphasis>Header File</emphasis> <literallayout><computeroutput>#include&#32;&lt;cmsis_os.h&gt;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;CMSIS&#32;RTOS&#32;header&#32;file
+
+//&#32;Thread&#32;definition
+extern&#32;void&#32;thread_sample&#32;(void&#32;const&#32;*argument);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;function&#32;prototype
+osThreadDef&#32;(thread_sample,&#32;osPriorityBelowNormal,&#32;1,&#32;100);
+
+//&#32;Pool&#32;definition
+osPoolDef(MyPool,&#32;10,&#32;long);
+</computeroutput></literallayout></para>
+
+<para>This header file defines all objects when included in a C/C++ source file. When <emphasis role="bold">#define osObjectsExternal</emphasis> is present before the header file, the objects are defined as external symbols. A single consistent header file can therefore be used throughout the whole project.</para>
+
+<para><emphasis>Example</emphasis> <literallayout><computeroutput>#include&#32;&quot;osObjects.h&quot;&#32;&#32;&#32;&#32;&#32;//&#32;Definition&#32;of&#32;the&#32;CMSIS-RTOS&#32;objects
+</computeroutput></literallayout></para>
+
+<para><literallayout><computeroutput>#define&#32;osObjectExternal&#32;&#32;&#32;//&#32;Objects&#32;will&#32;be&#32;defined&#32;as&#32;external&#32;symbols
+#include&#32;&quot;osObjects.h&quot;&#32;&#32;&#32;&#32;&#32;//&#32;Reference&#32;to&#32;the&#32;CMSIS-RTOS&#32;objects
+</computeroutput></literallayout> </para>
+</section>

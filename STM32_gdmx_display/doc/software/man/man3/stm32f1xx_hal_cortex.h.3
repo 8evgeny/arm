@@ -1,0 +1,122 @@
+.TH "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \- Header file of CORTEX HAL module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f1xx_hal_def\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNVIC_PRIORITYGROUP_0\fP   0x00000007U"
+.br
+.ti -1c
+.RI "#define \fBNVIC_PRIORITYGROUP_1\fP   0x00000006U"
+.br
+.ti -1c
+.RI "#define \fBNVIC_PRIORITYGROUP_2\fP   0x00000005U"
+.br
+.ti -1c
+.RI "#define \fBNVIC_PRIORITYGROUP_3\fP   0x00000004U"
+.br
+.ti -1c
+.RI "#define \fBNVIC_PRIORITYGROUP_4\fP   0x00000003U"
+.br
+.ti -1c
+.RI "#define \fBSYSTICK_CLKSOURCE_HCLK_DIV8\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBSYSTICK_CLKSOURCE_HCLK\fP   0x00000004U"
+.br
+.ti -1c
+.RI "#define \fBIS_NVIC_PRIORITY_GROUP\fP(GROUP)"
+.br
+.ti -1c
+.RI "#define \fBIS_NVIC_PREEMPTION_PRIORITY\fP(PRIORITY)   ((PRIORITY) < 0x10U)"
+.br
+.ti -1c
+.RI "#define \fBIS_NVIC_SUB_PRIORITY\fP(PRIORITY)   ((PRIORITY) < 0x10U)"
+.br
+.ti -1c
+.RI "#define \fBIS_NVIC_DEVICE_IRQ\fP(IRQ)   ((IRQ) >= (\fBIRQn_Type\fP)0x00U)"
+.br
+.ti -1c
+.RI "#define \fBIS_SYSTICK_CLK_SOURCE\fP(SOURCE)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBHAL_NVIC_SetPriorityGrouping\fP (uint32_t PriorityGroup)"
+.br
+.ti -1c
+.RI "void \fBHAL_NVIC_SetPriority\fP (\fBIRQn_Type\fP IRQn, uint32_t PreemptPriority, uint32_t SubPriority)"
+.br
+.ti -1c
+.RI "void \fBHAL_NVIC_EnableIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.ti -1c
+.RI "void \fBHAL_NVIC_DisableIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.ti -1c
+.RI "void \fBHAL_NVIC_SystemReset\fP (void)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_SYSTICK_Config\fP (uint32_t TicksNumb)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_NVIC_GetPriorityGrouping\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_NVIC_GetPriority\fP (\fBIRQn_Type\fP IRQn, uint32_t PriorityGroup, uint32_t *pPreemptPriority, uint32_t *pSubPriority)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_NVIC_GetPendingIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.ti -1c
+.RI "void \fBHAL_NVIC_SetPendingIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.ti -1c
+.RI "void \fBHAL_NVIC_ClearPendingIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_NVIC_GetActive\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.ti -1c
+.RI "void \fBHAL_SYSTICK_CLKSourceConfig\fP (uint32_t CLKSource)"
+.br
+.ti -1c
+.RI "void \fBHAL_SYSTICK_IRQHandler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_SYSTICK_Callback\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file of CORTEX HAL module\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2017 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

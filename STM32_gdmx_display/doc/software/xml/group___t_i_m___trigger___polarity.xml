@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___t_i_m___trigger___polarity" kind="group">
+    <compoundname>TIM_Trigger_Polarity</compoundname>
+    <title>TIM Trigger Polarity</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___t_i_m___trigger___polarity_1ga64337379c3762dca395b812c65656de4" prot="public" static="no">
+        <name>TIM_TRIGGERPOLARITY_INVERTED</name>
+        <initializer><ref refid="group___t_i_m___e_t_r___polarity_1ga42652ff688f0042659f8304ae08abfa6" kindref="member">TIM_ETRPOLARITY_INVERTED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Polarity for ETRx trigger sources <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="893" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="893" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_i_m___trigger___polarity_1gad985881cdfddb63dfc52e6aaca776ff6" prot="public" static="no">
+        <name>TIM_TRIGGERPOLARITY_NONINVERTED</name>
+        <initializer><ref refid="group___t_i_m___e_t_r___polarity_1ga7fa7c43245b25564414b2e191d5d8b14" kindref="member">TIM_ETRPOLARITY_NONINVERTED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Polarity for ETRx trigger sources <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="894" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="894" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_i_m___trigger___polarity_1ga64b521aa367d745ec00a763449634ace" prot="public" static="no">
+        <name>TIM_TRIGGERPOLARITY_RISING</name>
+        <initializer><ref refid="group___t_i_m___input___channel___polarity_1ga4f4cede88a4ad4b33e81f2567e9bb08f" kindref="member">TIM_INPUTCHANNELPOLARITY_RISING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Polarity for TIxFPx or TI1_ED trigger sources </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="895" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="895" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_i_m___trigger___polarity_1ga77df5988527ca829743dd57d2f867972" prot="public" static="no">
+        <name>TIM_TRIGGERPOLARITY_FALLING</name>
+        <initializer><ref refid="group___t_i_m___input___channel___polarity_1ga07441a8c0a52234e30f471c23803450c" kindref="member">TIM_INPUTCHANNELPOLARITY_FALLING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Polarity for TIxFPx or TI1_ED trigger sources </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="896" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="896" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_i_m___trigger___polarity_1gaa72eb9fd278575ff05aa3dd1c173dcc8" prot="public" static="no">
+        <name>TIM_TRIGGERPOLARITY_BOTHEDGE</name>
+        <initializer><ref refid="group___t_i_m___input___channel___polarity_1gaab2598881d1f19158e77723c5d29d6ac" kindref="member">TIM_INPUTCHANNELPOLARITY_BOTHEDGE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Polarity for TIxFPx or TI1_ED trigger sources </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="897" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="897" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

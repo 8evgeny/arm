@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___r_n_g___aliased___macros" xml:lang="en-US">
+<title>HAL RNG Aliased Macros maintained for legacy purpose</title>
+<indexterm><primary>HAL RNG Aliased Macros maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_n_g___aliased___macros_1gae0a40bc008a77b2f6f6bbe2c3d4bf978"/>#define <emphasis role="strong">HAL_RNG_ReadyCallback</emphasis>(__HANDLE__)   HAL_RNG_ReadyDataCallback((__HANDLE__), uint32_t random32bit)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

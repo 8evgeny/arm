@@ -1,0 +1,117 @@
+\hypertarget{stm32f1xx__hal_8h}{}\doxysection{Drivers/\+STM32\+F1xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32f1xx\+\_\+hal.h File Reference}
+\label{stm32f1xx__hal_8h}\index{Drivers/STM32F1xx\_HAL\_Driver/Inc/stm32f1xx\_hal.h@{Drivers/STM32F1xx\_HAL\_Driver/Inc/stm32f1xx\_hal.h}}
+
+
+This file contains all the functions prototypes for the HAL module driver.  
+
+
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal\+\_\+conf.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_ga4a466905a367266e7c23417248dc741d}{\+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM2}}()~SET\+\_\+\+BIT(DBGMCU-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaaa1ee73c14e640c4e97041a9ce3e221a}{DBGMCU\+\_\+\+CR\+\_\+\+DBG\+\_\+\+TIM2\+\_\+\+STOP}})
+\begin{DoxyCompactList}\small\item\em TIM2 Peripherals Debug mode. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM2}()~CLEAR\+\_\+\+BIT(DBGMCU-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaaa1ee73c14e640c4e97041a9ce3e221a}{DBGMCU\+\_\+\+CR\+\_\+\+DBG\+\_\+\+TIM2\+\_\+\+STOP}})
+\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_gaf2fe2b6d0a5e8df4ebb38020acf210d9}{\+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM3}}()~SET\+\_\+\+BIT(DBGMCU-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac6801756368b597301f4098b69bce4e7}{DBGMCU\+\_\+\+CR\+\_\+\+DBG\+\_\+\+TIM3\+\_\+\+STOP}})
+\begin{DoxyCompactList}\small\item\em TIM3 Peripherals Debug mode. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM3}()~CLEAR\+\_\+\+BIT(DBGMCU-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac6801756368b597301f4098b69bce4e7}{DBGMCU\+\_\+\+CR\+\_\+\+DBG\+\_\+\+TIM3\+\_\+\+STOP}})
+\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_ga81215154725c479c67fb1adac906fbd9}{\+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+WWDG}}()~SET\+\_\+\+BIT(DBGMCU-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga626bea771c7fdb87e515685104d3a562}{DBGMCU\+\_\+\+CR\+\_\+\+DBG\+\_\+\+WWDG\+\_\+\+STOP}})
+\begin{DoxyCompactList}\small\item\em WWDG Peripherals Debug mode. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+WWDG}()~CLEAR\+\_\+\+BIT(DBGMCU-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga626bea771c7fdb87e515685104d3a562}{DBGMCU\+\_\+\+CR\+\_\+\+DBG\+\_\+\+WWDG\+\_\+\+STOP}})
+\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_gabab7ab631ba58fb6246a9385e8af9d0d}{\+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+IWDG}}()~SET\+\_\+\+BIT(DBGMCU-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga06e02885e11d05135dd967b33fad68f1}{DBGMCU\+\_\+\+CR\+\_\+\+DBG\+\_\+\+IWDG\+\_\+\+STOP}})
+\begin{DoxyCompactList}\small\item\em IWDG Peripherals Debug mode. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+IWDG}()~CLEAR\+\_\+\+BIT(DBGMCU-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga06e02885e11d05135dd967b33fad68f1}{DBGMCU\+\_\+\+CR\+\_\+\+DBG\+\_\+\+IWDG\+\_\+\+STOP}})
+\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_ga6160f642dcff812be3a04c5b5c66e31d}{\+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+I2\+C1\+\_\+\+TIMEOUT}}()~SET\+\_\+\+BIT(DBGMCU-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga74c71dedb4221750d7e3d8237c8b7846}{DBGMCU\+\_\+\+CR\+\_\+\+DBG\+\_\+\+I2\+C1\+\_\+\+SMBUS\+\_\+\+TIMEOUT}})
+\begin{DoxyCompactList}\small\item\em I2\+C1 Peripherals Debug mode. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+I2\+C1\+\_\+\+TIMEOUT}()~CLEAR\+\_\+\+BIT(DBGMCU-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga74c71dedb4221750d7e3d8237c8b7846}{DBGMCU\+\_\+\+CR\+\_\+\+DBG\+\_\+\+I2\+C1\+\_\+\+SMBUS\+\_\+\+TIMEOUT}})
+\item 
+\#define {\bfseries IS\+\_\+\+TICKFREQ}(FREQ)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___t_i_c_k___f_r_e_q_gab36ec81674817249c46734772ff3b73a}\label{group___h_a_l___t_i_c_k___f_r_e_q_gab36ec81674817249c46734772ff3b73a}} 
+enum {\bfseries HAL\+\_\+\+Tick\+Freq\+Type\+Def} \{ {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+10\+HZ} = 100U
+, {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+100\+HZ} = 10U
+, {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+1\+KHZ} = 1U
+, {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+\+DEFAULT} = HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+1\+KHZ
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+Init} (void)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+De\+Init} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}{HAL\+\_\+\+Msp\+Init}} (void)
+\item 
+void {\bfseries HAL\+\_\+\+Msp\+De\+Init} (void)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}{HAL\+\_\+\+Init\+Tick}} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the TIM4 as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. \end{DoxyCompactList}\item 
+void {\bfseries HAL\+\_\+\+Inc\+Tick} (void)
+\item 
+void {\bfseries HAL\+\_\+\+Delay} (uint32\+\_\+t Delay)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Tick} (void)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Tick\+Prio} (void)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+Set\+Tick\+Freq} (HAL\+\_\+\+Tick\+Freq\+Type\+Def Freq)
+\item 
+HAL\+\_\+\+Tick\+Freq\+Type\+Def {\bfseries HAL\+\_\+\+Get\+Tick\+Freq} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaaf651af2afe688a991c657f64f8fa5f9}{HAL\+\_\+\+Suspend\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga24e0ee9dae1ec0f9d19200f5575ff790}{HAL\+\_\+\+Resume\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Hal\+Version} (void)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+REVID} (void)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+DEVID} (void)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+UIDw0} (void)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+UIDw1} (void)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+UIDw2} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGSleep\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGSleep\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStop\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStop\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStandby\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStandby\+Mode} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t {\bfseries uw\+Tick\+Prio}
+\item 
+HAL\+\_\+\+Tick\+Freq\+Type\+Def {\bfseries uw\+Tick\+Freq}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the HAL module driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2017 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 

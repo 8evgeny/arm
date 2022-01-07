@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___exported___functions___group2" xml:lang="en-US">
+<title>RCC_Exported_Functions_Group2</title>
+<indexterm><primary>RCC_Exported_Functions_Group2</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1ga9de46b9c4ecdb1a5e34136b051a6132c"/>void <emphasis role="strong">HAL_RCC_MCOConfig</emphasis> (uint32_t RCC_MCOx, uint32_t RCC_MCOSource, uint32_t RCC_MCODiv)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1gaa0f440ce71c18e95b12b2044cc044bea"/>void <emphasis role="strong">HAL_RCC_EnableCSS</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1gac2f9cf8f56fd7b22c62ddf32aa5ee3fb"/>void <emphasis role="strong">HAL_RCC_DisableCSS</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1ga887cafe88b21a059061b077a1e3fa7d8"/>uint32_t <emphasis role="strong">HAL_RCC_GetSysClockFreq</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1ga38d6c5c7a5d8758849912c9aa0a2156d"/>uint32_t <emphasis role="strong">HAL_RCC_GetHCLKFreq</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1gab3042d8ac5703ac696cabf0ee461c599"/>uint32_t <emphasis role="strong">HAL_RCC_GetPCLK1Freq</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1gabbd5f8933a5ee05e4b3384e33026aca1"/>uint32_t <emphasis role="strong">HAL_RCC_GetPCLK2Freq</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1gae2f9413fc447c2d7d6af3a8669c77b36"/>void <emphasis role="strong">HAL_RCC_GetOscConfig</emphasis> (<link linkend="_struct_r_c_c___osc_init_type_def">RCC_OscInitTypeDef</link> *RCC_OscInitStruct)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1gabc95375dfca279d88b9ded9d063d2323"/>void <emphasis role="strong">HAL_RCC_GetClockConfig</emphasis> (<link linkend="_struct_r_c_c___clk_init_type_def">RCC_ClkInitTypeDef</link> *RCC_ClkInitStruct, uint32_t *pFLatency)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1ga0c124cf403362750513cae7fb6e6b195"/>void <emphasis role="strong">HAL_RCC_NMI_IRQHandler</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___exported___functions___group2_1gaa05b9157de5a48617bd06eb6aafa68aa"/>void <emphasis role="strong">HAL_RCC_CSSCallback</emphasis> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

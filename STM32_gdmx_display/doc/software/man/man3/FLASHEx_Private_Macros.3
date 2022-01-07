@@ -1,0 +1,48 @@
+.TH "FLASHEx_Private_Macros" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FLASHEx_Private_Macros \- FLASHEx_Private_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIS_FLASH_TYPEERASE\fP(VALUE)   (((VALUE) == \fBFLASH_TYPEERASE_PAGES\fP) || ((VALUE) == \fBFLASH_TYPEERASE_MASSERASE\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OPTIONBYTE\fP(VALUE)   (((VALUE) <= (\fBOPTIONBYTE_WRP\fP | \fBOPTIONBYTE_RDP\fP | \fBOPTIONBYTE_USER\fP | \fBOPTIONBYTE_DATA\fP)))"
+.br
+.ti -1c
+.RI "#define \fBIS_WRPSTATE\fP(VALUE)   (((VALUE) == \fBOB_WRPSTATE_DISABLE\fP) || ((VALUE) == \fBOB_WRPSTATE_ENABLE\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_RDP_LEVEL\fP(LEVEL)   (((LEVEL) == OB_RDP_LEVEL_0) || ((LEVEL) == OB_RDP_LEVEL_1))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_DATA_ADDRESS\fP(ADDRESS)   (((ADDRESS) == OB_DATA_ADDRESS_DATA0) || ((ADDRESS) == OB_DATA_ADDRESS_DATA1))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_IWDG_SOURCE\fP(SOURCE)   (((SOURCE) == \fBOB_IWDG_SW\fP) || ((SOURCE) == \fBOB_IWDG_HW\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_STOP_SOURCE\fP(SOURCE)   (((SOURCE) == \fBOB_STOP_NO_RST\fP) || ((SOURCE) == \fBOB_STOP_RST\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_STDBY_SOURCE\fP(SOURCE)   (((SOURCE) == \fBOB_STDBY_NO_RST\fP) || ((SOURCE) == \fBOB_STDBY_RST\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_WRP\fP(PAGE)   (((PAGE) != 0x0000000U))"
+.br
+.ti -1c
+.RI "#define \fBIS_FLASH_BANK\fP(BANK)   (((BANK) == \fBFLASH_BANK_1\fP))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

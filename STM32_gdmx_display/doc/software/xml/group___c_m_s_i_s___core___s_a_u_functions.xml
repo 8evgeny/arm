@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___c_m_s_i_s___core___s_a_u_functions" kind="group">
+    <compoundname>CMSIS_Core_SAUFunctions</compoundname>
+    <title>SAU Functions</title>
+    <innergroup refid="group___c_m_s_i_s___core___sys_tick_functions">SysTick Functions</innergroup>
+    <briefdescription>
+<para>Functions that configure the SAU. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

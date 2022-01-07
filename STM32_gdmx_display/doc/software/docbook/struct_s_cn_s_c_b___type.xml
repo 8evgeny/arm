@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_s_cn_s_c_b___type" xml:lang="en-US">
+<title>SCnSCB_Type Struct Reference</title>
+<indexterm><primary>SCnSCB_Type</primary></indexterm>
+<para>
+
+<para>Structure type to access the System Control and ID Register not in the SCB. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;core_armv8mml.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <emphasis role="strong">RESERVED0</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gacf9b76331abd768af25a10b3625da4b4">ICTR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gafabed911b9f91f9df848999e1b5d6504">ACTLR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga6236035fc90059a599910d9cb9299ff0">CPPWR</link></para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">RESERVED1</emphasis> [1U]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure type to access the System Control and ID Register not in the SCB. </para>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Drivers/CMSIS/Include/<link linkend="_core__armv8mml_8h">core_armv8mml.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm1_8h">core_cm1.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm3_8h">core_cm3.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm33_8h">core_cm33.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm4_8h">core_cm4.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm7_8h">core_cm7.h</link>Drivers/CMSIS/Include/<link linkend="_core__sc000_8h">core_sc000.h</link>Drivers/CMSIS/Include/<link linkend="_core__sc300_8h">core_sc300.h</link></section>
+</section>

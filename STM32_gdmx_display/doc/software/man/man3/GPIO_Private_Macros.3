@@ -1,0 +1,66 @@
+.TH "GPIO_Private_Macros" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GPIO_Private_Macros \- GPIO Private Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIS_GPIO_PIN_ACTION\fP(ACTION)   (((ACTION) == GPIO_PIN_RESET) || ((ACTION) == GPIO_PIN_SET))"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_PIN\fP(PIN)   (((((uint32_t)PIN) & GPIO_PIN_MASK ) != 0x00u) && ((((uint32_t)PIN) & ~GPIO_PIN_MASK) == 0x00u))"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_MODE\fP(MODE)"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_SPEED\fP(SPEED)"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_PULL\fP(PULL)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define IS_GPIO_MODE(MODE)"
+\fBValue:\fP
+.PP
+.nf
+                            (((MODE) == GPIO_MODE_INPUT)              ||\
+                            ((MODE) == GPIO_MODE_OUTPUT_PP)          ||\
+                            ((MODE) == GPIO_MODE_OUTPUT_OD)          ||\
+                            ((MODE) == GPIO_MODE_AF_PP)              ||\
+                            ((MODE) == GPIO_MODE_AF_OD)              ||\
+                            ((MODE) == GPIO_MODE_IT_RISING)          ||\
+                            ((MODE) == GPIO_MODE_IT_FALLING)         ||\
+                            ((MODE) == GPIO_MODE_IT_RISING_FALLING)  ||\
+                            ((MODE) == GPIO_MODE_EVT_RISING)         ||\
+                            ((MODE) == GPIO_MODE_EVT_FALLING)        ||\
+                            ((MODE) == GPIO_MODE_EVT_RISING_FALLING) ||\
+                            ((MODE) == GPIO_MODE_ANALOG))
+.fi
+.SS "#define IS_GPIO_PULL(PULL)"
+\fBValue:\fP
+.PP
+.nf
+                            (((PULL) == GPIO_NOPULL) || ((PULL) == GPIO_PULLUP) || \
+                            ((PULL) == GPIO_PULLDOWN))
+.fi
+.SS "#define IS_GPIO_SPEED(SPEED)"
+\fBValue:\fP
+.PP
+.nf
+                              (((SPEED) == GPIO_SPEED_FREQ_LOW) || \
+                              ((SPEED) == GPIO_SPEED_FREQ_MEDIUM) || ((SPEED) == GPIO_SPEED_FREQ_HIGH))
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

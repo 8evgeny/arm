@@ -1,0 +1,74 @@
+.TH "TIM_Output_Compare_and_PWM_modes" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Output_Compare_and_PWM_modes \- TIM Output Compare and PWM Modes
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_OCMODE_TIMING\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_OCMODE_ACTIVE\fP   \fBTIM_CCMR1_OC1M_0\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_OCMODE_INACTIVE\fP   \fBTIM_CCMR1_OC1M_1\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_OCMODE_TOGGLE\fP   (\fBTIM_CCMR1_OC1M_1\fP | \fBTIM_CCMR1_OC1M_0\fP)"
+.br
+.ti -1c
+.RI "#define \fBTIM_OCMODE_PWM1\fP   (\fBTIM_CCMR1_OC1M_2\fP | \fBTIM_CCMR1_OC1M_1\fP)"
+.br
+.ti -1c
+.RI "#define \fBTIM_OCMODE_PWM2\fP   (\fBTIM_CCMR1_OC1M_2\fP | \fBTIM_CCMR1_OC1M_1\fP | \fBTIM_CCMR1_OC1M_0\fP)"
+.br
+.ti -1c
+.RI "#define \fBTIM_OCMODE_FORCED_ACTIVE\fP   (\fBTIM_CCMR1_OC1M_2\fP | \fBTIM_CCMR1_OC1M_0\fP)"
+.br
+.ti -1c
+.RI "#define \fBTIM_OCMODE_FORCED_INACTIVE\fP   \fBTIM_CCMR1_OC1M_2\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TIM_OCMODE_ACTIVE   \fBTIM_CCMR1_OC1M_0\fP"
+Set channel to active level on match 
+.br
+ 
+.SS "#define TIM_OCMODE_FORCED_ACTIVE   (\fBTIM_CCMR1_OC1M_2\fP | \fBTIM_CCMR1_OC1M_0\fP)"
+Force active level 
+.br
+ 
+.SS "#define TIM_OCMODE_FORCED_INACTIVE   \fBTIM_CCMR1_OC1M_2\fP"
+Force inactive level 
+.br
+ 
+.SS "#define TIM_OCMODE_INACTIVE   \fBTIM_CCMR1_OC1M_1\fP"
+Set channel to inactive level on match 
+.SS "#define TIM_OCMODE_PWM1   (\fBTIM_CCMR1_OC1M_2\fP | \fBTIM_CCMR1_OC1M_1\fP)"
+PWM mode 1 
+.br
+ 
+.SS "#define TIM_OCMODE_PWM2   (\fBTIM_CCMR1_OC1M_2\fP | \fBTIM_CCMR1_OC1M_1\fP | \fBTIM_CCMR1_OC1M_0\fP)"
+PWM mode 2 
+.br
+ 
+.SS "#define TIM_OCMODE_TIMING   0x00000000U"
+Frozen 
+.br
+ 
+.SS "#define TIM_OCMODE_TOGGLE   (\fBTIM_CCMR1_OC1M_1\fP | \fBTIM_CCMR1_OC1M_0\fP)"
+Toggle 
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

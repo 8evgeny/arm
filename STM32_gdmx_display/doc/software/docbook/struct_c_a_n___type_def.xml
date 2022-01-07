@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_c_a_n___type_def" xml:lang="en-US">
+<title>CAN_TypeDef Struct Reference</title>
+<indexterm><primary>CAN_TypeDef</primary></indexterm>
+<para>
+
+<para>Controller Area Network. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f103xb.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a27af4e9f888f0b7b1e8da7e002d98798"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">MCR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1acdd4c1b5466be103fb2bb2a225b1d3a9"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">MSR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a87e3001757a0cd493785f1f3337dd0e8"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">TSR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1accf4141cee239380d0ad4634ee21dbf6"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">RF0R</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a02b589bb589df4f39e549dca4d5abb08"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">RF1R</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a6566f8cfbd1d8aa7e8db046aa35e77db"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">IER</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a2b39f943954e0e7d177b511d9074a0b7"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">ESR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a5c0fcd3e7b4c59ab1dd68f6bd8f74e07"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">BTR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1aae28ab86a4ae57ed057ed1ea89a6d34b"/>uint32_t <emphasis role="strong">RESERVED0</emphasis> [88]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1ae37503ab1a7bbd29846f94cdadf0a9ef"/><link linkend="_struct_c_a_n___tx_mail_box___type_def">CAN_TxMailBox_TypeDef</link> <emphasis role="strong">sTxMailBox</emphasis> [3]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a21b030b34e131f7ef6ea273416449fe4"/><link linkend="_struct_c_a_n___f_i_f_o_mail_box___type_def">CAN_FIFOMailBox_TypeDef</link> <emphasis role="strong">sFIFOMailBox</emphasis> [2]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a4bb07a7828fbd5fe86f6a5a3545c177d"/>uint32_t <emphasis role="strong">RESERVED1</emphasis> [12]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a1cb734df34f6520a7204c4c70634ebba"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">FMR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1aaa6f4cf1f16aaa6d17ec6c410db76acf"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">FM1R</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a4c9b972a304c0e08ca27cbe57627c496"/>uint32_t <emphasis role="strong">RESERVED2</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1aae0256ae42106ee7f87fc7e5bdb779d4"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">FS1R</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1af2b40c5e36a5e861490988275499e158"/>uint32_t <emphasis role="strong">RESERVED3</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1af1405e594e39e5b34f9499f680157a25"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">FFA1R</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1ac0018930ee9f18afda25b695b9a4ec16"/>uint32_t <emphasis role="strong">RESERVED4</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1aaf76271f4ab0b3deb3ceb6e2ac0d62d0"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">FA1R</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a269f31b91d0f38a48061b76ecc346f55"/>uint32_t <emphasis role="strong">RESERVED5</emphasis> [8]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_c_a_n___type_def_1a6f34c431b88ced05a7315dfd33b343b2"/><link linkend="_struct_c_a_n___filter_register___type_def">CAN_FilterRegister_TypeDef</link> <emphasis role="strong">sFilterRegister</emphasis> [14]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Controller Area Network. </para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/CMSIS/Device/ST/STM32F1xx/Include/<link linkend="_stm32f103xb_8h">stm32f103xb.h</link></section>
+</section>

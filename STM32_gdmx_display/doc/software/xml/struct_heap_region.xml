@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_heap_region" kind="struct" language="C++" prot="public">
+    <compoundname>HeapRegion</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_heap_region_1a9d602a97428bd849298f05391a13968e" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* pucStartAddress</definition>
+        <argsstring></argsstring>
+        <name>pucStartAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/portable.h" line="108" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/portable.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_heap_region_1ab0ed41976d9901576b117bc7981f6c98" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t xSizeInBytes</definition>
+        <argsstring></argsstring>
+        <name>xSizeInBytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/portable.h" line="109" column="8" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/portable.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/include/portable.h" line="106" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/portable.h" bodystart="107" bodyend="110"/>
+    <listofallmembers>
+      <member refid="struct_heap_region_1a9d602a97428bd849298f05391a13968e" prot="public" virt="non-virtual"><scope>HeapRegion</scope><name>pucStartAddress</name></member>
+      <member refid="struct_heap_region_1ab0ed41976d9901576b117bc7981f6c98" prot="public" virt="non-virtual"><scope>HeapRegion</scope><name>xSizeInBytes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

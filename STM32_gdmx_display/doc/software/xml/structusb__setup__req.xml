@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structusb__setup__req" kind="struct" language="C++" prot="public">
+    <compoundname>usb_setup_req</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structusb__setup__req_1ae9d47c1f5d3b81fa2f00e3177c02f8ba" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t bmRequest</definition>
+        <argsstring></argsstring>
+        <name>bmRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="161" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusb__setup__req_1a1e7be110861bd4ff75c86d5214f31543" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t bRequest</definition>
+        <argsstring></argsstring>
+        <name>bRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="162" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusb__setup__req_1a7383d0165ad8eab48aa239c005199121" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t wValue</definition>
+        <argsstring></argsstring>
+        <name>wValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="163" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusb__setup__req_1adc578ce35d89d52deba61ee6f312f177" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t wIndex</definition>
+        <argsstring></argsstring>
+        <name>wIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="164" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusb__setup__req_1a496c03443b177fd2e6c93616064d2934" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t wLength</definition>
+        <argsstring></argsstring>
+        <name>wLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="165" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="159" column="1" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="160" bodyend="166"/>
+    <listofallmembers>
+      <member refid="structusb__setup__req_1ae9d47c1f5d3b81fa2f00e3177c02f8ba" prot="public" virt="non-virtual"><scope>usb_setup_req</scope><name>bmRequest</name></member>
+      <member refid="structusb__setup__req_1a1e7be110861bd4ff75c86d5214f31543" prot="public" virt="non-virtual"><scope>usb_setup_req</scope><name>bRequest</name></member>
+      <member refid="structusb__setup__req_1adc578ce35d89d52deba61ee6f312f177" prot="public" virt="non-virtual"><scope>usb_setup_req</scope><name>wIndex</name></member>
+      <member refid="structusb__setup__req_1a496c03443b177fd2e6c93616064d2934" prot="public" virt="non-virtual"><scope>usb_setup_req</scope><name>wLength</name></member>
+      <member refid="structusb__setup__req_1a7383d0165ad8eab48aa239c005199121" prot="public" virt="non-virtual"><scope>usb_setup_req</scope><name>wValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

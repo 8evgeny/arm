@@ -1,0 +1,193 @@
+.TH "DMA_Exported_Macros" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_Exported_Macros \- DMA Exported Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_DMA_RESET_HANDLE_STATE\fP(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_DMA_STATE_RESET\fP)"
+.br
+.RI "Reset DMA handle state\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_ENABLE\fP(__HANDLE__)   (SET_BIT((__HANDLE__)\->Instance\->CCR, \fBDMA_CCR_EN\fP))"
+.br
+.RI "Enable the specified DMA Channel\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_DISABLE\fP(__HANDLE__)   (CLEAR_BIT((__HANDLE__)\->Instance\->CCR, \fBDMA_CCR_EN\fP))"
+.br
+.RI "Disable the specified DMA Channel\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_ENABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   (SET_BIT((__HANDLE__)\->Instance\->CCR, (__INTERRUPT__)))"
+.br
+.RI "Enables the specified DMA Channel interrupts\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_DISABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   (CLEAR_BIT((__HANDLE__)\->Instance\->CCR , (__INTERRUPT__)))"
+.br
+.RI "Disable the specified DMA Channel interrupts\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_IT_SOURCE\fP(__HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)\->Instance\->CCR & (__INTERRUPT__)) == (__INTERRUPT__)) ? SET : RESET)"
+.br
+.RI "Check whether the specified DMA Channel interrupt is enabled or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_COUNTER\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CNDTR)"
+.br
+.RI "Return the number of remaining data units in the current DMA Channel transfer\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_DMA_DISABLE(__HANDLE__)   (CLEAR_BIT((__HANDLE__)\->Instance\->CCR, \fBDMA_CCR_EN\fP))"
+
+.PP
+Disable the specified DMA Channel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_DMA_DISABLE_IT(__HANDLE__, __INTERRUPT__)   (CLEAR_BIT((__HANDLE__)\->Instance\->CCR , (__INTERRUPT__)))"
+
+.PP
+Disable the specified DMA Channel interrupts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the DMA interrupt sources to be enabled or disabled\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+DMA_IT_TC: Transfer complete interrupt mask 
+.IP "\(bu" 2
+DMA_IT_HT: Half transfer complete interrupt mask 
+.IP "\(bu" 2
+DMA_IT_TE: Transfer error interrupt mask 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_DMA_ENABLE(__HANDLE__)   (SET_BIT((__HANDLE__)\->Instance\->CCR, \fBDMA_CCR_EN\fP))"
+
+.PP
+Enable the specified DMA Channel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_DMA_ENABLE_IT(__HANDLE__, __INTERRUPT__)   (SET_BIT((__HANDLE__)\->Instance\->CCR, (__INTERRUPT__)))"
+
+.PP
+Enables the specified DMA Channel interrupts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the DMA interrupt sources to be enabled or disabled\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+DMA_IT_TC: Transfer complete interrupt mask 
+.IP "\(bu" 2
+DMA_IT_HT: Half transfer complete interrupt mask 
+.IP "\(bu" 2
+DMA_IT_TE: Transfer error interrupt mask 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_DMA_GET_COUNTER(__HANDLE__)   ((__HANDLE__)\->Instance\->CNDTR)"
+
+.PP
+Return the number of remaining data units in the current DMA Channel transfer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP number of remaining data units in the current DMA Channel transfer\&. 
+.RE
+.PP
+
+.SS "#define __HAL_DMA_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__)   ((((__HANDLE__)\->Instance\->CCR & (__INTERRUPT__)) == (__INTERRUPT__)) ? SET : RESET)"
+
+.PP
+Check whether the specified DMA Channel interrupt is enabled or not\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the DMA interrupt source to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+DMA_IT_TC: Transfer complete interrupt mask 
+.IP "\(bu" 2
+DMA_IT_HT: Half transfer complete interrupt mask 
+.IP "\(bu" 2
+DMA_IT_TE: Transfer error interrupt mask 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP state of DMA_IT (SET or RESET)\&. 
+.RE
+.PP
+
+.SS "#define __HAL_DMA_RESET_HANDLE_STATE(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_DMA_STATE_RESET\fP)"
+
+.PP
+Reset DMA handle state\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_g_p_i_o___init_type_def" kind="struct" language="C++" prot="public">
+    <compoundname>GPIO_InitTypeDef</compoundname>
+    <includes refid="stm32f1xx__hal__gpio_8h" local="no">stm32f1xx_hal_gpio.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_g_p_i_o___init_type_def_1a871d0ab74071724e96b7cc9ae2a7532b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pin</definition>
+        <argsstring></argsstring>
+        <name>Pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the GPIO pins to be configured. This parameter can be any value of <ref refid="group___g_p_i_o__pins__define" kindref="compound">GPIO pins define</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="49" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_g_p_i_o___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Mode</definition>
+        <argsstring></argsstring>
+        <name>Mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the operating mode for the selected pins. This parameter can be a value of <ref refid="group___g_p_i_o__mode__define" kindref="compound">GPIO mode define</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="52" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_g_p_i_o___init_type_def_1a6cdde08eb507b710f8179a4326548e26" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pull</definition>
+        <argsstring></argsstring>
+        <name>Pull</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the Pull-up or Pull-Down activation for the selected pins. This parameter can be a value of <ref refid="group___g_p_i_o__pull__define" kindref="compound">GPIO pull define</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="55" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_g_p_i_o___init_type_def_1ad04b2041f59d32492ec36a891418f3fd" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Speed</definition>
+        <argsstring></argsstring>
+        <name>Speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the speed for the selected pins. This parameter can be a value of <ref refid="group___g_p_i_o__speed__define" kindref="compound">GPIO speed define</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="58" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>GPIO Init structure definition. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="47" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="48" bodyend="60"/>
+    <listofallmembers>
+      <member refid="struct_g_p_i_o___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839" prot="public" virt="non-virtual"><scope>GPIO_InitTypeDef</scope><name>Mode</name></member>
+      <member refid="struct_g_p_i_o___init_type_def_1a871d0ab74071724e96b7cc9ae2a7532b" prot="public" virt="non-virtual"><scope>GPIO_InitTypeDef</scope><name>Pin</name></member>
+      <member refid="struct_g_p_i_o___init_type_def_1a6cdde08eb507b710f8179a4326548e26" prot="public" virt="non-virtual"><scope>GPIO_InitTypeDef</scope><name>Pull</name></member>
+      <member refid="struct_g_p_i_o___init_type_def_1ad04b2041f59d32492ec36a891418f3fd" prot="public" virt="non-virtual"><scope>GPIO_InitTypeDef</scope><name>Speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

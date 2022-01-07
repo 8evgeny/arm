@@ -1,0 +1,43 @@
+.TH "HAL_DAC_Aliased_Macros" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_DAC_Aliased_Macros \- HAL DAC Aliased Macros maintained for legacy purpose
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_DHR12R1_ALIGNEMENT\fP   DAC_DHR12R1_ALIGNMENT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DHR12R2_ALIGNEMENT\fP   DAC_DHR12R2_ALIGNMENT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DHR12RD_ALIGNEMENT\fP   DAC_DHR12RD_ALIGNMENT"
+.br
+.ti -1c
+.RI "#define \fBIS_DAC_GENERATE_WAVE\fP   IS_DAC_WAVE"
+.br
+.ti -1c
+.RI "#define \fBIS_DAC_WAVE\fP(WAVE)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define IS_DAC_WAVE(WAVE)"
+\fBValue:\fP
+.PP
+.nf
+                          (((WAVE) == DAC_WAVE_NONE) || \
+                          ((WAVE) == DAC_WAVE_NOISE)|| \
+                          ((WAVE) == DAC_WAVE_TRIANGLE))
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

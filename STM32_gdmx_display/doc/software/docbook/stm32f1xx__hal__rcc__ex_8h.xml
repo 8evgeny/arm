@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f1xx__hal__rcc__ex_8h" xml:lang="en-US">
+<title>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h File Reference</title>
+<indexterm><primary>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h</primary></indexterm>
+<para>
+
+<para>Header file of RCC HAL Extension module. </para>
+ 
+</para>
+<programlisting>#include &quot;stm32f1xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_r_c_c___osc_init_type_def">RCC_OscInitTypeDef</link></para>
+
+<para>RCC Internal/External Oscillator (HSE, HSI, LSE and LSI) configuration structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link></para>
+
+<para>RCC extended clocks structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">CR_REG_INDEX</emphasis>   ((uint8_t)1)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_HSE_PREDIV</emphasis>(__DIV__)   (((__DIV__) == RCC_HSE_PREDIV_DIV1)  || ((__DIV__) == RCC_HSE_PREDIV_DIV2))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_PLL_MUL</emphasis>(__MUL__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_MCO1SOURCE</emphasis>(__SOURCE__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_ADCPLLCLK_DIV</emphasis>(__ADCCLK__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_PERIPHCLOCK</emphasis>(__SELECTION__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PERIPHCLK_RTC</emphasis>   0x00000001U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PERIPHCLK_ADC</emphasis>   0x00000002U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_ADCPCLK2_DIV2</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga9514a85f55de77d1c7d7be1f2f1f9665">RCC_CFGR_ADCPRE_DIV2</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_ADCPCLK2_DIV4</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga748ba0a0bbb1ad1fe7e4e00f40695402">RCC_CFGR_ADCPRE_DIV4</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_ADCPCLK2_DIV6</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga8337d95f8480d74072e817540a333b6c">RCC_CFGR_ADCPRE_DIV6</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_ADCPCLK2_DIV8</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga7898d2e86664877dc43fbc2421a16347">RCC_CFGR_ADCPRE_DIV8</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_HSE_PREDIV_DIV1</emphasis>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_HSE_PREDIV_DIV2</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga39cb6bd06fb93eed1e2fe9da0297810a">RCC_CFGR_PLLXTPRE</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL2</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gaa19a3c7d27836012150a86fd9c950cdf">RCC_CFGR_PLLMULL2</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL3</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gaeb4c410e818f5a68d58a723e7355e6e8">RCC_CFGR_PLLMULL3</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL4</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga6066f758a13c7686d1dc709ac0a7d976">RCC_CFGR_PLLMULL4</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL5</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gaf2290e27c9c1b64d2dd076652db40a68">RCC_CFGR_PLLMULL5</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL6</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga5ea3b717fd226bc6ff5a78b711c051eb">RCC_CFGR_PLLMULL6</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL7</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga6ff8d8dcf3876d1c85657680a64c1696">RCC_CFGR_PLLMULL7</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL8</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga95d6580b1595ff2d5c3383218370cfca">RCC_CFGR_PLLMULL8</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL9</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga384c396ec051b958c9a5781c13faf7e5">RCC_CFGR_PLLMULL9</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL10</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gae07bb87d09d30874a5eebb32510f647f">RCC_CFGR_PLLMULL10</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL11</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gad338c178459b97d617398dca92b2a699">RCC_CFGR_PLLMULL11</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL12</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga79000f4e48edc56ee6ff315b64dcbfa5">RCC_CFGR_PLLMULL12</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL13</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga647a6f3d6de31737ca95de9db3925274">RCC_CFGR_PLLMULL13</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL14</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga9ffe33153aa4ffd2fe43439a6d2eaf5c">RCC_CFGR_PLLMULL14</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL15</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gaa9afaf1b82cb9c1e9c8b34c5b77b3f17">RCC_CFGR_PLLMULL15</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_PLL_MUL16</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gaecd78b92c36f3a3aafc6cc8fbf90a7e7">RCC_CFGR_PLLMULL16</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_MCO1SOURCE_NOCLOCK</emphasis>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gab345908eef02b3029dd78be58baa0c8d">RCC_CFGR_MCO_NOCLOCK</link>)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_MCO1SOURCE_SYSCLK</emphasis>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaecf3b078108fdaf7e66d15ae71ec4181">RCC_CFGR_MCO_SYSCLK</link>)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_MCO1SOURCE_HSI</emphasis>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga91f0ac507b8c4e5d443c107d934cfdb1">RCC_CFGR_MCO_HSI</link>)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_MCO1SOURCE_HSE</emphasis>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga183179f1b1763f38ae88f2d8d90acd70">RCC_CFGR_MCO_HSE</link>)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RCC_MCO1SOURCE_PLLCLK</emphasis>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaf501b78192ef13a7016e1f2089c9f8a3">RCC_CFGR_MCO_PLLCLK_DIV2</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c_ex___h_s_e___configuration_1gafc6bfe4fd172ea49871172fa137b60e0">__HAL_RCC_HSE_PREDIV_CONFIG</link>(__HSE_PREDIV_VALUE__)                     MODIFY_REG(RCC-&gt;CFGR,<link linkend="_group___peripheral___registers___bits___definition_1ga39cb6bd06fb93eed1e2fe9da0297810a">RCC_CFGR_PLLXTPRE</link>, (uint32_t)(__HSE_PREDIV_VALUE__))</para>
+
+<para>Macro to configure the External High Speed oscillator (HSE) Predivision factor for PLL. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c_ex___h_s_e___configuration_1ga33799456f6dcbcdb9e66374277083d4c">__HAL_RCC_HSE_GET_PREDIV</link>()   READ_BIT(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1ga39cb6bd06fb93eed1e2fe9da0297810a">RCC_CFGR_PLLXTPRE</link>)</para>
+
+<para>Macro to get prediv1 factor for PLL. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c_ex___peripheral___configuration_1ga4c75b81d1b7d65cda934c9f1350ea97b">__HAL_RCC_ADC_CONFIG</link>(__ADCCLKSOURCE__)                     MODIFY_REG(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1ga970436533d6ba9f1cb8ac840476093fb">RCC_CFGR_ADCPRE</link>, (uint32_t)(__ADCCLKSOURCE__))</para>
+
+<para>Macro to configure the ADCx clock (x=1 to 3 depending on devices). </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c_ex___peripheral___configuration_1ga2ee9f1838a8450f949b548a06ed3bc58">__HAL_RCC_GET_ADC_SOURCE</link>()   ((uint32_t)(READ_BIT(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1ga970436533d6ba9f1cb8ac840476093fb">RCC_CFGR_ADCPRE</link>)))</para>
+
+<para>Macro to get the ADC clock (ADCxCLK, x=1 to 3 depending on devices). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_RCCEx_PeriphCLKConfig</emphasis> (<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link> *PeriphClkInit)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_RCCEx_GetPeriphCLKConfig</emphasis> (<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link> *PeriphClkInit)</para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">HAL_RCCEx_GetPeriphCLKFreq</emphasis> (uint32_t PeriphClk)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of RCC HAL Extension module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2016 STMicroelectronics. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+</section>

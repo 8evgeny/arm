@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h_ex___o_b__n_r_s_t___s_t_d_b_y" xml:lang="en-US">
+<title>Option Byte nRST STDBY</title>
+<indexterm><primary>Option Byte nRST STDBY</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___o_b__n_r_s_t___s_t_d_b_y_1gad776ed7b3b9a98013aac9976eedb7e94">OB_STDBY_NO_RST</link>   ((uint16_t)0x0004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___o_b__n_r_s_t___s_t_d_b_y_1ga69451a6f69247528f58735c9c83499ce">OB_STDBY_RST</link>   ((uint16_t)0x0000)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h_ex___o_b__n_r_s_t___s_t_d_b_y_1gad776ed7b3b9a98013aac9976eedb7e94"/>    <section>
+    <title>OB_STDBY_NO_RST</title>
+<indexterm><primary>OB_STDBY_NO_RST</primary><secondary>Option Byte nRST STDBY</secondary></indexterm>
+<indexterm><primary>Option Byte nRST STDBY</primary><secondary>OB_STDBY_NO_RST</secondary></indexterm>
+<para><computeroutput>#define OB_STDBY_NO_RST   ((uint16_t)0x0004)</computeroutput></para>
+<para>No reset generated when entering in STANDBY </para>
+    </section><anchor xml:id="_group___f_l_a_s_h_ex___o_b__n_r_s_t___s_t_d_b_y_1ga69451a6f69247528f58735c9c83499ce"/>    <section>
+    <title>OB_STDBY_RST</title>
+<indexterm><primary>OB_STDBY_RST</primary><secondary>Option Byte nRST STDBY</secondary></indexterm>
+<indexterm><primary>Option Byte nRST STDBY</primary><secondary>OB_STDBY_RST</secondary></indexterm>
+<para><computeroutput>#define OB_STDBY_RST   ((uint16_t)0x0000)</computeroutput></para>
+<para>Reset generated when entering in STANDBY </para>
+</section>
+</section>
+</section>

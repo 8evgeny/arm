@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__r_e_a_d_m_e" xml:lang="en-US">
+
+<para><link xlink:href="https://www.code-inspector.com"></link> <link xlink:href="https://www.code-inspector.com"></link></para>
+<section xml:id="_md__r_e_a_d_m_e_1autotoc_md0">
+<title>GDMXDisplay</title>
+
+<para>Display 4 GDMX video registrator (a part of GITVideo SURV project)</para>
+
+<para>Just an USB LCD output terminal (ttyACM type) </para>
+</section>
+</section>

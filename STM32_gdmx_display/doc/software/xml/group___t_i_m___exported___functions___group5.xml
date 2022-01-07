@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___t_i_m___exported___functions___group5" kind="group">
+    <compoundname>TIM_Exported_Functions_Group5</compoundname>
+    <title>TIM One Pulse functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group5_1ga476d67a220c23ebdc69fac7b09dbaa72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_OnePulse_Init</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t OnePulseMode)</argsstring>
+        <name>HAL_TIM_OnePulse_Init</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>OnePulseMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1856" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1856" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group5_1gae60b468b11199522c6c83a943439c7b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_OnePulse_DeInit</definition>
+        <argsstring>(TIM_HandleTypeDef *htim)</argsstring>
+        <name>HAL_TIM_OnePulse_DeInit</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1857" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1857" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group5_1ga6579726753cb2b769a21d10bec75219f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_TIM_OnePulse_MspInit</definition>
+        <argsstring>(TIM_HandleTypeDef *htim)</argsstring>
+        <name>HAL_TIM_OnePulse_MspInit</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1858" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1858" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group5_1ga9b73c7135e8348613f30f3a4d84478e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_TIM_OnePulse_MspDeInit</definition>
+        <argsstring>(TIM_HandleTypeDef *htim)</argsstring>
+        <name>HAL_TIM_OnePulse_MspDeInit</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1859" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1859" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group5_1ga40e43e4f2484df59079e0316d6a6fd23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_OnePulse_Start</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t OutputChannel)</argsstring>
+        <name>HAL_TIM_OnePulse_Start</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>OutputChannel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1861" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1861" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group5_1gac7744a2a063e8bf2909319d70fc764fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_OnePulse_Stop</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t OutputChannel)</argsstring>
+        <name>HAL_TIM_OnePulse_Stop</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>OutputChannel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1862" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1862" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group5_1gafcde302725d20c6f992f26660d491bb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_OnePulse_Start_IT</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t OutputChannel)</argsstring>
+        <name>HAL_TIM_OnePulse_Start_IT</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>OutputChannel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1864" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1864" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group5_1ga6bbce5414404228fde71dadd8d1cddc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_OnePulse_Stop_IT</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t OutputChannel)</argsstring>
+        <name>HAL_TIM_OnePulse_Stop_IT</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>OutputChannel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1865" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1865" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TIM One Pulse functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

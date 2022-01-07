@@ -1,0 +1,45 @@
+.TH "xTaskNotifyGive" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xTaskNotifyGive \- xTaskNotifyGive
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+BaseType_t xTaskNotifyGive( TaskHandle_t xTaskToNotify );
+.fi
+.PP
+.PP
+configUSE_TASK_NOTIFICATIONS must be undefined or defined as 1 for this macro to be available\&.
+.PP
+When configUSE_TASK_NOTIFICATIONS is set to one each task has its own private 'notification value', which is a 32-bit unsigned integer (uint32_t)\&.
+.PP
+Events can be sent to a task using an intermediary object\&. Examples of such objects are queues, semaphores, mutexes and event groups\&. Task notifications are a method of sending an event directly to a task without the need for such an intermediary object\&.
+.PP
+A notification sent to a task can optionally perform an action, such as update, overwrite or increment the task's notification value\&. In that way task notifications can be used to send data to a task, or be used as light weight and fast binary or counting semaphores\&.
+.PP
+xTaskNotifyGive() is a helper macro intended for use when task notifications are used as light weight and faster binary or counting semaphore equivalents\&. Actual FreeRTOS semaphores are given using the xSemaphoreGive() API function, the equivalent action that instead uses a task notification is xTaskNotifyGive()\&.
+.PP
+When task notifications are being used as a binary or counting semaphore equivalent then the task being notified should wait for the notification using the ulTaskNotificationTake() API function rather than the xTaskNotifyWait() API function\&.
+.PP
+See http://www.FreeRTOS.org/RTOS-task-notifications.html for more details\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxTaskToNotify\fP The handle of the task being notified\&. The handle to a task can be returned from the xTaskCreate() API function used to create the task, and the handle of the currently running task can be obtained by calling xTaskGetCurrentTaskHandle()\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+xTaskNotifyGive() is a macro that calls xTaskNotify() with the eAction parameter set to eIncrement - so pdPASS is always returned\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

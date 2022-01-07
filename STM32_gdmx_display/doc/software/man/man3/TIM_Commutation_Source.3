@@ -1,0 +1,30 @@
+.TH "TIM_Commutation_Source" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Commutation_Source \- TIM Commutation Source
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_COMMUTATION_TRGI\fP   \fBTIM_CR2_CCUS\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_COMMUTATION_SOFTWARE\fP   0x00000000U"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TIM_COMMUTATION_SOFTWARE   0x00000000U"
+When Capture/compare control bits are preloaded, they are updated by setting the COMG bit 
+.SS "#define TIM_COMMUTATION_TRGI   \fBTIM_CR2_CCUS\fP"
+When Capture/compare control bits are preloaded, they are updated by setting the COMG bit or when an rising edge occurs on trigger input 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

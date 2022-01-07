@@ -1,0 +1,146 @@
+.TH "USBD_CDC_Private_Functions" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USBD_CDC_Private_Functions \- USBD_CDC_Private_Functions
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBUSBD_CDC_RegisterInterface\fP (\fBUSBD_HandleTypeDef\fP *pdev, \fBUSBD_CDC_ItfTypeDef\fP *fops)"
+.br
+.RI "USBD_CDC_RegisterInterface\&. "
+.ti -1c
+.RI "uint8_t \fBUSBD_CDC_SetTxBuffer\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t *pbuff, uint16_t length)"
+.br
+.RI "USBD_CDC_SetTxBuffer\&. "
+.ti -1c
+.RI "uint8_t \fBUSBD_CDC_SetRxBuffer\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t *pbuff)"
+.br
+.RI "USBD_CDC_SetRxBuffer\&. "
+.ti -1c
+.RI "uint8_t \fBUSBD_CDC_TransmitPacket\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_CDC_TransmitPacket Transmit packet on IN endpoint\&. "
+.ti -1c
+.RI "uint8_t \fBUSBD_CDC_ReceivePacket\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_CDC_ReceivePacket prepare OUT Endpoint for reception\&. "
+.ti -1c
+.RI "uint8_t * \fBUSBD_CDC_GetDeviceQualifierDescriptor\fP (uint16_t *length)"
+.br
+.RI "DeviceQualifierDescriptor return Device Qualifier descriptor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "uint8_t * USBD_CDC_GetDeviceQualifierDescriptor (uint16_t * length)"
+
+.PP
+DeviceQualifierDescriptor return Device Qualifier descriptor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlength\fP : pointer data length 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIpointer\fP to descriptor buffer 
+.RE
+.PP
+
+.SS "uint8_t USBD_CDC_ReceivePacket (\fBUSBD_HandleTypeDef\fP * pdev)"
+
+.PP
+USBD_CDC_ReceivePacket prepare OUT Endpoint for reception\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdev\fP device instance 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIstatus\fP 
+.RE
+.PP
+
+.SS "uint8_t USBD_CDC_RegisterInterface (\fBUSBD_HandleTypeDef\fP * pdev, \fBUSBD_CDC_ItfTypeDef\fP * fops)"
+
+.PP
+USBD_CDC_RegisterInterface\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdev\fP device instance 
+.br
+\fIfops\fP CD Interface callback 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIstatus\fP 
+.RE
+.PP
+
+.SS "uint8_t USBD_CDC_SetRxBuffer (\fBUSBD_HandleTypeDef\fP * pdev, uint8_t * pbuff)"
+
+.PP
+USBD_CDC_SetRxBuffer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdev\fP device instance 
+.br
+\fIpbuff\fP Rx Buffer 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIstatus\fP 
+.RE
+.PP
+
+.SS "uint8_t USBD_CDC_SetTxBuffer (\fBUSBD_HandleTypeDef\fP * pdev, uint8_t * pbuff, uint16_t length)"
+
+.PP
+USBD_CDC_SetTxBuffer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdev\fP device instance 
+.br
+\fIpbuff\fP Tx Buffer 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIstatus\fP 
+.RE
+.PP
+
+.SS "uint8_t USBD_CDC_TransmitPacket (\fBUSBD_HandleTypeDef\fP * pdev)"
+
+.PP
+USBD_CDC_TransmitPacket Transmit packet on IN endpoint\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpdev\fP device instance 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIstatus\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

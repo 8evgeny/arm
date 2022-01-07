@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___h_s_e___config" xml:lang="en-US">
+<title>HSE Config</title>
+<indexterm><primary>HSE Config</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c___h_s_e___config_1ga1616626d23fbce440398578855df6f97">RCC_HSE_OFF</link>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___h_s_e___config_1gabc4f70a44776c557af20496b04d9a9db">RCC_HSE_ON</link>   <link linkend="_group___peripheral___registers___bits___definition_1gadb8228c9020595b4cf9995137b8c9a7d">RCC_CR_HSEON</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___h_s_e___config_1ga5ca515db2d5c4d5bdb9ee3d154df2704">RCC_HSE_BYPASS</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gaa3288090671af5a959aae4d7f7696d55">RCC_CR_HSEBYP</link> | <link linkend="_group___peripheral___registers___bits___definition_1gadb8228c9020595b4cf9995137b8c9a7d">RCC_CR_HSEON</link>))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c___h_s_e___config_1ga5ca515db2d5c4d5bdb9ee3d154df2704"/>    <section>
+    <title>RCC_HSE_BYPASS</title>
+<indexterm><primary>RCC_HSE_BYPASS</primary><secondary>HSE Config</secondary></indexterm>
+<indexterm><primary>HSE Config</primary><secondary>RCC_HSE_BYPASS</secondary></indexterm>
+<para><computeroutput>#define RCC_HSE_BYPASS   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gaa3288090671af5a959aae4d7f7696d55">RCC_CR_HSEBYP</link> | <link linkend="_group___peripheral___registers___bits___definition_1gadb8228c9020595b4cf9995137b8c9a7d">RCC_CR_HSEON</link>))</computeroutput></para>
+<para>External clock source for HSE clock </para>
+    </section><anchor xml:id="_group___r_c_c___h_s_e___config_1ga1616626d23fbce440398578855df6f97"/>    <section>
+    <title>RCC_HSE_OFF</title>
+<indexterm><primary>RCC_HSE_OFF</primary><secondary>HSE Config</secondary></indexterm>
+<indexterm><primary>HSE Config</primary><secondary>RCC_HSE_OFF</secondary></indexterm>
+<para><computeroutput>#define RCC_HSE_OFF   0x00000000U</computeroutput></para>
+<para>HSE clock deactivation </para>
+    </section><anchor xml:id="_group___r_c_c___h_s_e___config_1gabc4f70a44776c557af20496b04d9a9db"/>    <section>
+    <title>RCC_HSE_ON</title>
+<indexterm><primary>RCC_HSE_ON</primary><secondary>HSE Config</secondary></indexterm>
+<indexterm><primary>HSE Config</primary><secondary>RCC_HSE_ON</secondary></indexterm>
+<para><computeroutput>#define RCC_HSE_ON   <link linkend="_group___peripheral___registers___bits___definition_1gadb8228c9020595b4cf9995137b8c9a7d">RCC_CR_HSEON</link></computeroutput></para>
+<para>HSE clock activation </para>
+</section>
+</section>
+</section>

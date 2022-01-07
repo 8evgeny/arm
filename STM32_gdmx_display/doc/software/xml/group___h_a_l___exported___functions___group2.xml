@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___exported___functions___group2" kind="group">
+    <compoundname>HAL_Exported_Functions_Group2</compoundname>
+    <title>HAL_Exported_Functions_Group2</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gaa8361d44d76b7f6256834f828165837a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_IncTick</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_IncTick</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="295" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="295" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gae63b34eea12780ca2e1100c2402da18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_Delay</definition>
+        <argsstring>(uint32_t Delay)</argsstring>
+        <name>HAL_Delay</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>Delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="296" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="296" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gaf2c4f03d53e997a54e1fd5e80daa55c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_GetTick</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GetTick</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="297" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="297" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gacdcc8b5d33b9f97fe1b0abd6a86a3d4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_GetTickPrio</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GetTickPrio</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="298" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="298" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1ga47f2dd240b2aed823a76b11496f37690" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_SetTickFreq</definition>
+        <argsstring>(HAL_TickFreqTypeDef Freq)</argsstring>
+        <name>HAL_SetTickFreq</name>
+        <param>
+          <type>HAL_TickFreqTypeDef</type>
+          <declname>Freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="299" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="299" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1ga803cdbcc0883bcf5f5c98c50024c97e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HAL_TickFreqTypeDef</type>
+        <definition>HAL_TickFreqTypeDef HAL_GetTickFreq</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GetTickFreq</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="300" column="21" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="300" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gaaf651af2afe688a991c657f64f8fa5f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_SuspendTick</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_SuspendTick</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Suspend Tick increment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Disable the tick increment by disabling TIM4 update interrupt. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="301" column="6" bodyfile="Src/stm32f1xx_hal_timebase_tim.c" bodystart="96" bodyend="100" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="301" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1ga24e0ee9dae1ec0f9d19200f5575ff790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_ResumeTick</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_ResumeTick</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Resume Tick increment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Enable the tick increment by Enabling TIM4 update interrupt. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="302" column="6" bodyfile="Src/stm32f1xx_hal_timebase_tim.c" bodystart="108" bodyend="112" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="302" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gafb139b375512ad2a234e4619b129b966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_GetHalVersion</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GetHalVersion</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="303" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="303" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gae051ef9e932404b21f5877c7186406b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_GetREVID</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GetREVID</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="304" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="304" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gaff785f069ed650de77ff82ac407f7c84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_GetDEVID</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GetDEVID</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="305" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="305" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gaf982aa0a575eef3758c0840a24077506" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_GetUIDw0</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GetUIDw0</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="306" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="306" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1ga52720dd92ed2bd4314a2a129855d766c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_GetUIDw1</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GetUIDw1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="307" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="307" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1ga5785ae5ec8d4c5a7dadb1359f0778700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_GetUIDw2</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GetUIDw2</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="308" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="308" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gaf031bcc71ebad9b7edf405547efd762b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_DBGMCU_EnableDBGSleepMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_DBGMCU_EnableDBGSleepMode</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="309" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="309" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gac7820d0561f19999a68d714655b901b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_DBGMCU_DisableDBGSleepMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_DBGMCU_DisableDBGSleepMode</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="310" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="310" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1gadf25043b17de4bef38a95a75fd03e5c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_DBGMCU_EnableDBGStopMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_DBGMCU_EnableDBGStopMode</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="311" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="311" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1ga2c93dcee35e5983d74f1000de7c042d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_DBGMCU_DisableDBGStopMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_DBGMCU_DisableDBGStopMode</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="312" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="312" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1ga28a1323b2eeb0a408c1cfdbfa0db5ead" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_DBGMCU_EnableDBGStandbyMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_DBGMCU_EnableDBGStandbyMode</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="313" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="313" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___h_a_l___exported___functions___group2_1ga7faa58d8508ea3123b9f247a70379779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_DBGMCU_DisableDBGStandbyMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_DBGMCU_DisableDBGStandbyMode</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="314" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" declline="314" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

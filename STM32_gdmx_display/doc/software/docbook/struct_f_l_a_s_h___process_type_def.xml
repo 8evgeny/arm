@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_l_a_s_h___process_type_def" xml:lang="en-US">
+<title>FLASH_ProcessTypeDef Struct Reference</title>
+<indexterm><primary>FLASH_ProcessTypeDef</primary></indexterm>
+<para>
+
+<para>FLASH handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f1xx_hal_flash.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> <link linkend="_group___f_l_a_s_h___exported___types_1ga2b0268387bc11bcab76be9ce7c43eaaf">FLASH_ProcedureTypeDef</link> <link linkend="_struct_f_l_a_s_h___process_type_def_1a5e0516d2d3654cef74de4ed427c16d26">ProcedureOnGoing</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_struct_f_l_a_s_h___process_type_def_1a04975ac6f628743bfcd68da33d96cdee">DataRemaining</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_struct_f_l_a_s_h___process_type_def_1a1cfe8c27be9a16679f15eda30081bd30">Address</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint64_t <link linkend="_struct_f_l_a_s_h___process_type_def_1a59e6cefcc14b8810b8f48ae2785ed3fe">Data</link></para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link> <link linkend="_struct_f_l_a_s_h___process_type_def_1ad4cf225029dbefe8d3fe660c33b8bb6b">Lock</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_struct_f_l_a_s_h___process_type_def_1a123c5063e6a3b1901b2fbe5f88c53a7e">ErrorCode</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>FLASH handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_f_l_a_s_h___process_type_def_1a1cfe8c27be9a16679f15eda30081bd30"/>    <section>
+    <title>Address</title>
+<indexterm><primary>Address</primary><secondary>FLASH_ProcessTypeDef</secondary></indexterm>
+<indexterm><primary>FLASH_ProcessTypeDef</primary><secondary>Address</secondary></indexterm>
+<para><computeroutput><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t Address</computeroutput></para>
+<para>Internal variable to save address selected for program or erase </para>
+    </section><anchor xml:id="_struct_f_l_a_s_h___process_type_def_1a59e6cefcc14b8810b8f48ae2785ed3fe"/>    <section>
+    <title>Data</title>
+<indexterm><primary>Data</primary><secondary>FLASH_ProcessTypeDef</secondary></indexterm>
+<indexterm><primary>FLASH_ProcessTypeDef</primary><secondary>Data</secondary></indexterm>
+<para><computeroutput><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint64_t Data</computeroutput></para>
+<para>Internal variable to save data to be programmed </para>
+    </section><anchor xml:id="_struct_f_l_a_s_h___process_type_def_1a04975ac6f628743bfcd68da33d96cdee"/>    <section>
+    <title>DataRemaining</title>
+<indexterm><primary>DataRemaining</primary><secondary>FLASH_ProcessTypeDef</secondary></indexterm>
+<indexterm><primary>FLASH_ProcessTypeDef</primary><secondary>DataRemaining</secondary></indexterm>
+<para><computeroutput><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t DataRemaining</computeroutput></para>
+<para>Internal variable to save the remaining pages to erase or half-word to program in IT context </para>
+    </section><anchor xml:id="_struct_f_l_a_s_h___process_type_def_1a123c5063e6a3b1901b2fbe5f88c53a7e"/>    <section>
+    <title>ErrorCode</title>
+<indexterm><primary>ErrorCode</primary><secondary>FLASH_ProcessTypeDef</secondary></indexterm>
+<indexterm><primary>FLASH_ProcessTypeDef</primary><secondary>ErrorCode</secondary></indexterm>
+<para><computeroutput><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t ErrorCode</computeroutput></para>
+<para>FLASH error code 
+<literallayout>&#160;&#xa;</literallayout>
+ This parameter can be a value of <link linkend="_group___f_l_a_s_h___error___codes">FLASH Error Codes</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_struct_f_l_a_s_h___process_type_def_1ad4cf225029dbefe8d3fe660c33b8bb6b"/>    <section>
+    <title>Lock</title>
+<indexterm><primary>Lock</primary><secondary>FLASH_ProcessTypeDef</secondary></indexterm>
+<indexterm><primary>FLASH_ProcessTypeDef</primary><secondary>Lock</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f1xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link> Lock</computeroutput></para>
+<para>FLASH locking object 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_struct_f_l_a_s_h___process_type_def_1a5e0516d2d3654cef74de4ed427c16d26"/>    <section>
+    <title>ProcedureOnGoing</title>
+<indexterm><primary>ProcedureOnGoing</primary><secondary>FLASH_ProcessTypeDef</secondary></indexterm>
+<indexterm><primary>FLASH_ProcessTypeDef</primary><secondary>ProcedureOnGoing</secondary></indexterm>
+<para><computeroutput><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> <link linkend="_group___f_l_a_s_h___exported___types_1ga2b0268387bc11bcab76be9ce7c43eaaf">FLASH_ProcedureTypeDef</link> ProcedureOnGoing</computeroutput></para>
+<para>Internal variable to indicate which procedure is ongoing or not in IT context </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/STM32F1xx_HAL_Driver/Inc/<link linkend="_stm32f1xx__hal__flash_8h">stm32f1xx_hal_flash.h</link></section>
+</section>

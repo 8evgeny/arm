@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structx_m_e_m_o_r_y___r_e_g_i_o_n" xml:lang="en-US">
+<title>xMEMORY_REGION Struct Reference</title>
+<indexterm><primary>xMEMORY_REGION</primary></indexterm>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structx_m_e_m_o_r_y___r_e_g_i_o_n_1a5c540d9e8ba79b50b9600f7225d41268"/>void * <emphasis role="strong">pvBaseAddress</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structx_m_e_m_o_r_y___r_e_g_i_o_n_1a53924a8e3f7db81a7803b646573864c6"/>uint32_t <emphasis role="strong">ulLengthInBytes</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structx_m_e_m_o_r_y___r_e_g_i_o_n_1a8339f23aad15c6b829547a17f839f32c"/>uint32_t <emphasis role="strong">ulParameters</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Middlewares/Third_Party/FreeRTOS/Source/include/task.h</section>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_i_w_d_g___type_def" kind="struct" language="C++" prot="public">
+    <compoundname>IWDG_TypeDef</compoundname>
+    <includes refid="stm32f103xb_8h" local="no">stm32f103xb.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_i_w_d_g___type_def_1a2f692354bde770f2a5e3e1b294ec064b" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t KR</definition>
+        <argsstring></argsstring>
+        <name>KR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Key register, Address offset: 0x00 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="404" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_i_w_d_g___type_def_1af8d25514079514d38c104402f46470af" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t PR</definition>
+        <argsstring></argsstring>
+        <name>PR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prescaler register, Address offset: 0x04 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="405" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_i_w_d_g___type_def_1a7015e1046dbd3ea8783b33dc11a69e52" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t RLR</definition>
+        <argsstring></argsstring>
+        <name>RLR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reload register, Address offset: 0x08 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="406" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_i_w_d_g___type_def_1af6aca2bbd40c0fb6df7c3aebe224a360" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t SR</definition>
+        <argsstring></argsstring>
+        <name>SR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Status register, Address offset: 0x0C </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="407" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Independent WATCHDOG. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="402" column="1" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="403" bodyend="408"/>
+    <listofallmembers>
+      <member refid="struct_i_w_d_g___type_def_1a2f692354bde770f2a5e3e1b294ec064b" prot="public" virt="non-virtual"><scope>IWDG_TypeDef</scope><name>KR</name></member>
+      <member refid="struct_i_w_d_g___type_def_1af8d25514079514d38c104402f46470af" prot="public" virt="non-virtual"><scope>IWDG_TypeDef</scope><name>PR</name></member>
+      <member refid="struct_i_w_d_g___type_def_1a7015e1046dbd3ea8783b33dc11a69e52" prot="public" virt="non-virtual"><scope>IWDG_TypeDef</scope><name>RLR</name></member>
+      <member refid="struct_i_w_d_g___type_def_1af6aca2bbd40c0fb6df7c3aebe224a360" prot="public" virt="non-virtual"><scope>IWDG_TypeDef</scope><name>SR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

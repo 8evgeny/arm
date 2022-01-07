@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___l_s_e___config" xml:lang="en-US">
+<title>LSE Config</title>
+<indexterm><primary>LSE Config</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c___l_s_e___config_1ga6645c27708d0cad1a4ab61d2abb24c77">RCC_LSE_OFF</link>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___l_s_e___config_1gac981ea636c2f215e4473901e0912f55a">RCC_LSE_ON</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga00145f8814cb9a5b180d76499d97aead">RCC_BDCR_LSEON</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___l_s_e___config_1gaad580157edbae878edbcc83c5a68e767">RCC_LSE_BYPASS</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga542dffd7f8dc4da5401b54d822a22af0">RCC_BDCR_LSEBYP</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga00145f8814cb9a5b180d76499d97aead">RCC_BDCR_LSEON</link>))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c___l_s_e___config_1gaad580157edbae878edbcc83c5a68e767"/>    <section>
+    <title>RCC_LSE_BYPASS</title>
+<indexterm><primary>RCC_LSE_BYPASS</primary><secondary>LSE Config</secondary></indexterm>
+<indexterm><primary>LSE Config</primary><secondary>RCC_LSE_BYPASS</secondary></indexterm>
+<para><computeroutput>#define RCC_LSE_BYPASS   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga542dffd7f8dc4da5401b54d822a22af0">RCC_BDCR_LSEBYP</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga00145f8814cb9a5b180d76499d97aead">RCC_BDCR_LSEON</link>))</computeroutput></para>
+<para>External clock source for LSE clock </para>
+    </section><anchor xml:id="_group___r_c_c___l_s_e___config_1ga6645c27708d0cad1a4ab61d2abb24c77"/>    <section>
+    <title>RCC_LSE_OFF</title>
+<indexterm><primary>RCC_LSE_OFF</primary><secondary>LSE Config</secondary></indexterm>
+<indexterm><primary>LSE Config</primary><secondary>RCC_LSE_OFF</secondary></indexterm>
+<para><computeroutput>#define RCC_LSE_OFF   0x00000000U</computeroutput></para>
+<para>LSE clock deactivation </para>
+    </section><anchor xml:id="_group___r_c_c___l_s_e___config_1gac981ea636c2f215e4473901e0912f55a"/>    <section>
+    <title>RCC_LSE_ON</title>
+<indexterm><primary>RCC_LSE_ON</primary><secondary>LSE Config</secondary></indexterm>
+<indexterm><primary>LSE Config</primary><secondary>RCC_LSE_ON</secondary></indexterm>
+<para><computeroutput>#define RCC_LSE_ON   <link linkend="_group___peripheral___registers___bits___definition_1ga00145f8814cb9a5b180d76499d97aead">RCC_BDCR_LSEON</link></computeroutput></para>
+<para>LSE clock activation </para>
+</section>
+</section>
+</section>

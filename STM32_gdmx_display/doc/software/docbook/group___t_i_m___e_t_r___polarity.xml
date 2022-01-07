@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___e_t_r___polarity" xml:lang="en-US">
+<title>TIM ETR Polarity</title>
+<indexterm><primary>TIM ETR Polarity</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___e_t_r___polarity_1ga42652ff688f0042659f8304ae08abfa6">TIM_ETRPOLARITY_INVERTED</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga2a5f335c3d7a4f82d1e91dc1511e3322">TIM_SMCR_ETP</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___e_t_r___polarity_1ga7fa7c43245b25564414b2e191d5d8b14">TIM_ETRPOLARITY_NONINVERTED</link>   0x00000000U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___e_t_r___polarity_1ga42652ff688f0042659f8304ae08abfa6"/>    <section>
+    <title>TIM_ETRPOLARITY_INVERTED</title>
+<indexterm><primary>TIM_ETRPOLARITY_INVERTED</primary><secondary>TIM ETR Polarity</secondary></indexterm>
+<indexterm><primary>TIM ETR Polarity</primary><secondary>TIM_ETRPOLARITY_INVERTED</secondary></indexterm>
+<para><computeroutput>#define TIM_ETRPOLARITY_INVERTED   <link linkend="_group___peripheral___registers___bits___definition_1ga2a5f335c3d7a4f82d1e91dc1511e3322">TIM_SMCR_ETP</link></computeroutput></para>
+<para>Polarity for ETR source </para>
+    </section><anchor xml:id="_group___t_i_m___e_t_r___polarity_1ga7fa7c43245b25564414b2e191d5d8b14"/>    <section>
+    <title>TIM_ETRPOLARITY_NONINVERTED</title>
+<indexterm><primary>TIM_ETRPOLARITY_NONINVERTED</primary><secondary>TIM ETR Polarity</secondary></indexterm>
+<indexterm><primary>TIM ETR Polarity</primary><secondary>TIM_ETRPOLARITY_NONINVERTED</secondary></indexterm>
+<para><computeroutput>#define TIM_ETRPOLARITY_NONINVERTED   0x00000000U</computeroutput></para>
+<para>Polarity for ETR source </para>
+</section>
+</section>
+</section>

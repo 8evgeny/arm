@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___i_o_r_e_q" xml:lang="en-US">
+<title>USBD_IOREQ</title>
+<indexterm><primary>USBD_IOREQ</primary></indexterm>
+<para>
+
+<para>header file for the <link linkend="_usbd__ioreq_8c">usbd_ioreq.c</link> file </para>
+ 
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___exported___defines">USBD_IOREQ_Exported_Defines</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___exported___types">USBD_IOREQ_Exported_Types</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___exported___macros">USBD_IOREQ_Exported_Macros</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___exported___variables">USBD_IOREQ_Exported_Variables</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype">USBD_IOREQ_Exported_FunctionsPrototype</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___private___types_definitions">USBD_IOREQ_Private_TypesDefinitions</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___private___defines">USBD_IOREQ_Private_Defines</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___private___macros">USBD_IOREQ_Private_Macros</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___private___variables">USBD_IOREQ_Private_Variables</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___private___function_prototypes">USBD_IOREQ_Private_FunctionPrototypes</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___i_o_r_e_q___private___functions">USBD_IOREQ_Private_Functions</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>header file for the <link linkend="_usbd__ioreq_8c">usbd_ioreq.c</link> file </para>
+
+<para>control I/O requests module</para>
+</section>
+</section>

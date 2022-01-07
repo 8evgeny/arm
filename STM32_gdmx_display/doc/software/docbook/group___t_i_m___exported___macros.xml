@@ -1,0 +1,2469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___exported___macros" xml:lang="en-US">
+<title>TIM Exported Macros</title>
+<indexterm><primary>TIM Exported Macros</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gace20fd4e38231b9682fbc83a80ec19a3">__HAL_TIM_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca28011b79e60b74a6c55947c505c51cbc">HAL_TIM_STATE_RESET</link>)</para>
+
+<para>Reset TIM handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga1a90544705059e9f19f991651623b0c0">__HAL_TIM_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1|=(<link linkend="_group___peripheral___registers___bits___definition_1ga93d86355e5e3b399ed45e1ca83abed2a">TIM_CR1_CEN</link>))</para>
+
+<para>Enable the TIM peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga04890dcef3ed061854721a3672585607">__HAL_TIM_MOE_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;BDTR|=(<link linkend="_group___peripheral___registers___bits___definition_1ga277a096614829feba2d0a4fbb7d3dffc">TIM_BDTR_MOE</link>))</para>
+
+<para>Enable the TIM main Output. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga6a5e653e0e06a04151b74eb1a5f96eb6">__HAL_TIM_DISABLE</link>(__HANDLE__)</para>
+
+<para>Disable the TIM peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga69d63e147faeca8909e9679f684c0325">__HAL_TIM_MOE_DISABLE</link>(__HANDLE__)</para>
+
+<para>Disable the TIM main Output. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gaa5c4053e8e57dc234efecbb698287b55">__HAL_TIM_MOE_DISABLE_UNCONDITIONALLY</link>(__HANDLE__)   (__HANDLE__)-&gt;Instance-&gt;BDTR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga277a096614829feba2d0a4fbb7d3dffc">TIM_BDTR_MOE</link>)</para>
+
+<para>Disable the TIM main Output. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga4d69943bc4716743c78e3194e259097e">__HAL_TIM_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;DIER |= (__INTERRUPT__))</para>
+
+<para>Enable the specified TIM interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga31d67e905bc62e3142179dc4bbf8ba64">__HAL_TIM_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;DIER &amp;= ~(__INTERRUPT__))</para>
+
+<para>Disable the specified TIM interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gabb91ccd46cd7204c87170a1ea5b38135">__HAL_TIM_ENABLE_DMA</link>(__HANDLE__,  __DMA__)   ((__HANDLE__)-&gt;Instance-&gt;DIER |= (__DMA__))</para>
+
+<para>Enable the specified DMA request. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga1a6e8b19efd23fd0295802d904c4702f">__HAL_TIM_DISABLE_DMA</link>(__HANDLE__,  __DMA__)   ((__HANDLE__)-&gt;Instance-&gt;DIER &amp;= ~(__DMA__))</para>
+
+<para>Disable the specified DMA request. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga96d98c66ad9d85f00c148de99888ef19">__HAL_TIM_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp;(__FLAG__)) == (__FLAG__))</para>
+
+<para>Check whether the specified TIM interrupt flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga2fe74db6b8cb4badd04ed48e0f5ac7b4">__HAL_TIM_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR = ~(__FLAG__))</para>
+
+<para>Clear the specified TIM interrupt flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga644babf93470a6eee6bce8906c4da5c5">__HAL_TIM_GET_IT_SOURCE</link>(__HANDLE__,  __INTERRUPT__)</para>
+
+<para>Check whether the specified TIM interrupt source is enabled or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gaea68155ce77e591e0c2582def061d6f0">__HAL_TIM_CLEAR_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;SR = ~(__INTERRUPT__))</para>
+
+<para>Clear the TIM interrupt pending bits. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gac73f5e7669d92971830481e7298e98ba">__HAL_TIM_IS_TIM_COUNTING_DOWN</link>(__HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;(<link linkend="_group___peripheral___registers___bits___definition_1gacea10770904af189f3aaeb97b45722aa">TIM_CR1_DIR</link>)) == (<link linkend="_group___peripheral___registers___bits___definition_1gacea10770904af189f3aaeb97b45722aa">TIM_CR1_DIR</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gafdc5a06eab07e0c24e729fd492bdb27c">__HAL_TIM_SET_PRESCALER</link>(__HANDLE__,  __PRESC__)   ((__HANDLE__)-&gt;Instance-&gt;PSC = (__PRESC__))</para>
+
+<para>Set the TIM Prescaler on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga9746ac75e4cd25cec1a9ebac8cb82b97">__HAL_TIM_SET_COUNTER</link>(__HANDLE__,  __COUNTER__)   ((__HANDLE__)-&gt;Instance-&gt;CNT = (__COUNTER__))</para>
+
+<para>Set the TIM Counter Register value on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gaf1af08014b9d06efbbb091d58d47c8ba">__HAL_TIM_GET_COUNTER</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CNT)</para>
+
+<para>Get the TIM Counter Register value on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga1e6300cab1e34ecaaf490dc7d4812d69">__HAL_TIM_SET_AUTORELOAD</link>(__HANDLE__,  __AUTORELOAD__)</para>
+
+<para>Set the TIM Autoreload Register value on runtime without calling another time any Init function. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gaa7a5c7645695bad15bacd402513a028a">__HAL_TIM_GET_AUTORELOAD</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;ARR)</para>
+
+<para>Get the TIM Autoreload Register value on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga8aa84d77c670890408092630f9b2bdc4">__HAL_TIM_SET_CLOCKDIVISION</link>(__HANDLE__,  __CKD__)</para>
+
+<para>Set the TIM Clock Division value on runtime without calling another time any Init function. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gae6bc91bb5940bce52828c690f24001b8">__HAL_TIM_GET_CLOCKDIVISION</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp; <link linkend="_group___peripheral___registers___bits___definition_1gacacc4ff7e5b75fd2e4e6b672ccd33a72">TIM_CR1_CKD</link>)</para>
+
+<para>Get the TIM Clock Division value on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gaeb106399b95ef02cec502f58276a0e92">__HAL_TIM_SET_ICPRESCALER</link>(__HANDLE__,  __CHANNEL__,  __ICPSC__)</para>
+
+<para>Set the TIM Input Capture prescaler on runtime without calling another time HAL_TIM_IC_ConfigChannel() function. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gabfeec6b3c67a5747c7dbd20aff61d8e2">__HAL_TIM_GET_ICPRESCALER</link>(__HANDLE__,  __CHANNEL__)</para>
+
+<para>Get the TIM Input Capture prescaler on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga300d0c9624c3b072d3afeb7cef639b66">__HAL_TIM_SET_COMPARE</link>(__HANDLE__,  __CHANNEL__,  __COMPARE__)</para>
+
+<para>Set the TIM Capture Compare Register value on runtime without calling another time ConfigChannel function. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gaa40722f56910966e1da5241b610eed84">__HAL_TIM_GET_COMPARE</link>(__HANDLE__,  __CHANNEL__)</para>
+
+<para>Get the TIM Capture Compare Register value on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga199e848f0a301987a500faea0db2dd70">__HAL_TIM_ENABLE_OCxPRELOAD</link>(__HANDLE__,  __CHANNEL__)</para>
+
+<para>Set the TIM Output compare preload. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga3e0ec4eb797b54c408a3be067f41a2f8">__HAL_TIM_DISABLE_OCxPRELOAD</link>(__HANDLE__,  __CHANNEL__)</para>
+
+<para>Reset the TIM Output compare preload. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga390795eb198214e5d4ed235ae3f751e4">__HAL_TIM_ENABLE_OCxFAST</link>(__HANDLE__,  __CHANNEL__)</para>
+
+<para>Enable fast mode for a given channel. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gab9f8dc78886759192b5f044c7b9b0aa7">__HAL_TIM_DISABLE_OCxFAST</link>(__HANDLE__,  __CHANNEL__)</para>
+
+<para>Disable fast mode for a given channel. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1ga3b06856bd6d7e10cfff342b1726db51d">__HAL_TIM_URS_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1|= <link linkend="_group___peripheral___registers___bits___definition_1ga06c997c2c23e8bef7ca07579762c113b">TIM_CR1_URS</link>)</para>
+
+<para>Set the Update Request Source (URS) bit of the TIMx_CR1 register. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gafacb551a4c537e62a0fe740b2f12236c">__HAL_TIM_URS_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1&amp;=~<link linkend="_group___peripheral___registers___bits___definition_1ga06c997c2c23e8bef7ca07579762c113b">TIM_CR1_URS</link>)</para>
+
+<para>Reset the Update Request Source (URS) bit of the TIMx_CR1 register. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___exported___macros_1gac5d6989516caa67fae23a9329228cdc7">__HAL_TIM_SET_CAPTUREPOLARITY</link>(__HANDLE__,  __CHANNEL__,  __POLARITY__)</para>
+
+<para>Set the TIM Capture x input polarity on runtime. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___exported___macros_1ga2fe74db6b8cb4badd04ed48e0f5ac7b4"/>    <section>
+    <title>__HAL_TIM_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_TIM_CLEAR_FLAG</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_CLEAR_FLAG( __HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR = ~(__FLAG__))</computeroutput></para><para>
+
+<para>Clear the specified TIM interrupt flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM Handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;FLAG&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM interrupt flag to clear. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_FLAG_UPDATE: Update interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC1: Capture/Compare 1 interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC2: Capture/Compare 2 interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC3: Capture/Compare 3 interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC4: Capture/Compare 4 interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_COM: Commutation interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_TRIGGER: Trigger interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_BREAK: Break interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC1OF: Capture/Compare 1 overcapture flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC2OF: Capture/Compare 2 overcapture flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC3OF: Capture/Compare 3 overcapture flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC4OF: Capture/Compare 4 overcapture flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>The</entry>
+                                <entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gaea68155ce77e591e0c2582def061d6f0"/>    <section>
+    <title>__HAL_TIM_CLEAR_IT</title>
+<indexterm><primary>__HAL_TIM_CLEAR_IT</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_CLEAR_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_CLEAR_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;SR = ~(__INTERRUPT__))</computeroutput></para><para>
+
+<para>Clear the TIM interrupt pending bits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;INTERRUPT&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the interrupt pending bit to clear. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_IT_UPDATE: Update interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC1: Capture/Compare 1 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC2: Capture/Compare 2 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC3: Capture/Compare 3 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC4: Capture/Compare 4 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_COM: Commutation interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_TRIGGER: Trigger interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_BREAK: Break interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga6a5e653e0e06a04151b74eb1a5f96eb6"/>    <section>
+    <title>__HAL_TIM_DISABLE</title>
+<indexterm><primary>__HAL_TIM_DISABLE</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_DISABLE( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;if&#32;(((__HANDLE__)-&gt;Instance-&gt;CCER&#32;&amp;&#32;TIM_CCER_CCxE_MASK)&#32;==&#32;0UL)&#32;\
+&#32;&#32;&#32;&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;if(((__HANDLE__)-&gt;Instance-&gt;CCER&#32;&amp;&#32;TIM_CCER_CCxNE_MASK)&#32;==&#32;0UL)&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;CR1&#32;&amp;=&#32;~(<link linkend="_group___peripheral___registers___bits___definition_1ga93d86355e5e3b399ed45e1ca83abed2a">TIM_CR1_CEN</link>);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;}&#32;\
+&#32;&#32;&#32;&#32;}&#32;\
+&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Disable the TIM peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga1a6e8b19efd23fd0295802d904c4702f"/>    <section>
+    <title>__HAL_TIM_DISABLE_DMA</title>
+<indexterm><primary>__HAL_TIM_DISABLE_DMA</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_DISABLE_DMA</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_DISABLE_DMA( __HANDLE__,  __DMA__)   ((__HANDLE__)-&gt;Instance-&gt;DIER &amp;= ~(__DMA__))</computeroutput></para><para>
+
+<para>Disable the specified DMA request. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM Handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;DMA&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM DMA request to disable. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_DMA_UPDATE: Update DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_CC1: Capture/Compare 1 DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_CC2: Capture/Compare 2 DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_CC3: Capture/Compare 3 DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_CC4: Capture/Compare 4 DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_COM: Commutation DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_TRIGGER: Trigger DMA request </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga31d67e905bc62e3142179dc4bbf8ba64"/>    <section>
+    <title>__HAL_TIM_DISABLE_IT</title>
+<indexterm><primary>__HAL_TIM_DISABLE_IT</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_DISABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;DIER &amp;= ~(__INTERRUPT__))</computeroutput></para><para>
+
+<para>Disable the specified TIM interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM Handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;INTERRUPT&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM interrupt source to disable. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_IT_UPDATE: Update interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC1: Capture/Compare 1 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC2: Capture/Compare 2 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC3: Capture/Compare 3 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC4: Capture/Compare 4 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_COM: Commutation interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_TRIGGER: Trigger interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_BREAK: Break interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gab9f8dc78886759192b5f044c7b9b0aa7"/>    <section>
+    <title>__HAL_TIM_DISABLE_OCxFAST</title>
+<indexterm><primary>__HAL_TIM_DISABLE_OCxFAST</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_DISABLE_OCxFAST</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_DISABLE_OCxFAST( __HANDLE__,  __CHANNEL__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;(((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga6b1541e4a49d62610899e24bf23f4879">TIM_CHANNEL_1</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;&amp;=&#32;~<link linkend="_group___peripheral___registers___bits___definition_1gab9c5878e85ce02c22d8a374deebd1b6e">TIM_CCMR1_OC1FE</link>)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga33e02d43345a7ac5886f01b39e4f7ccd">TIM_CHANNEL_2</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;&amp;=&#32;~<link linkend="_group___peripheral___registers___bits___definition_1ga3bf610cf77c3c6c936ce7c4f85992e6c">TIM_CCMR1_OC2FE</link>)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga4ea100c1789b178f3cb46721b7257e2d">TIM_CHANNEL_3</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;&amp;=&#32;~<link linkend="_group___peripheral___registers___bits___definition_1gae6d8d2847058747ce23a648668ce4dba">TIM_CCMR2_OC3FE</link>)&#32;:\
+&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;&amp;=&#32;~<link linkend="_group___peripheral___registers___bits___definition_1ga70dc197250c2699d470aea1a7a42ad57">TIM_CCMR2_OC4FE</link>))
+</programlisting><para>
+
+<para>Disable fast mode for a given channel. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;CHANNEL&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: TIM Channel 1 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: TIM Channel 2 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: TIM Channel 3 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: TIM Channel 4 selected </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>When fast mode is disabled CCx output behaves normally depending on counter and CCRx values even when the trigger is ON. The minimum delay to activate CCx output when an active edge occurs on the trigger input is 5 clock cycles. </para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga3e0ec4eb797b54c408a3be067f41a2f8"/>    <section>
+    <title>__HAL_TIM_DISABLE_OCxPRELOAD</title>
+<indexterm><primary>__HAL_TIM_DISABLE_OCxPRELOAD</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_DISABLE_OCxPRELOAD</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_DISABLE_OCxPRELOAD( __HANDLE__,  __CHANNEL__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;(((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga6b1541e4a49d62610899e24bf23f4879">TIM_CHANNEL_1</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;&amp;=&#32;~<link linkend="_group___peripheral___registers___bits___definition_1ga1aa54ddf87a4b339881a8d5368ec80eb">TIM_CCMR1_OC1PE</link>)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga33e02d43345a7ac5886f01b39e4f7ccd">TIM_CHANNEL_2</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;&amp;=&#32;~<link linkend="_group___peripheral___registers___bits___definition_1gabddbf508732039730125ab3e87e9d370">TIM_CCMR1_OC2PE</link>)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga4ea100c1789b178f3cb46721b7257e2d">TIM_CHANNEL_3</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;&amp;=&#32;~<link linkend="_group___peripheral___registers___bits___definition_1ga276fd2250d2b085b73ef51cb4c099d24">TIM_CCMR2_OC3PE</link>)&#32;:\
+&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;&amp;=&#32;~<link linkend="_group___peripheral___registers___bits___definition_1ga3e951cd3f6593e321cf79b662a1deaaa">TIM_CCMR2_OC4PE</link>))
+</programlisting><para>
+
+<para>Reset the TIM Output compare preload. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;CHANNEL&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: TIM Channel 1 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: TIM Channel 2 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: TIM Channel 3 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: TIM Channel 4 selected </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga1a90544705059e9f19f991651623b0c0"/>    <section>
+    <title>__HAL_TIM_ENABLE</title>
+<indexterm><primary>__HAL_TIM_ENABLE</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1|=(<link linkend="_group___peripheral___registers___bits___definition_1ga93d86355e5e3b399ed45e1ca83abed2a">TIM_CR1_CEN</link>))</computeroutput></para><para>
+
+<para>Enable the TIM peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gabb91ccd46cd7204c87170a1ea5b38135"/>    <section>
+    <title>__HAL_TIM_ENABLE_DMA</title>
+<indexterm><primary>__HAL_TIM_ENABLE_DMA</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_ENABLE_DMA</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_ENABLE_DMA( __HANDLE__,  __DMA__)   ((__HANDLE__)-&gt;Instance-&gt;DIER |= (__DMA__))</computeroutput></para><para>
+
+<para>Enable the specified DMA request. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM Handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;DMA&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM DMA request to enable. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_DMA_UPDATE: Update DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_CC1: Capture/Compare 1 DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_CC2: Capture/Compare 2 DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_CC3: Capture/Compare 3 DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_CC4: Capture/Compare 4 DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_COM: Commutation DMA request </para>
+</listitem>
+<listitem>
+<para>TIM_DMA_TRIGGER: Trigger DMA request </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga4d69943bc4716743c78e3194e259097e"/>    <section>
+    <title>__HAL_TIM_ENABLE_IT</title>
+<indexterm><primary>__HAL_TIM_ENABLE_IT</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_ENABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;DIER |= (__INTERRUPT__))</computeroutput></para><para>
+
+<para>Enable the specified TIM interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM Handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;INTERRUPT&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM interrupt source to enable. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_IT_UPDATE: Update interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC1: Capture/Compare 1 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC2: Capture/Compare 2 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC3: Capture/Compare 3 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC4: Capture/Compare 4 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_COM: Commutation interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_TRIGGER: Trigger interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_BREAK: Break interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga390795eb198214e5d4ed235ae3f751e4"/>    <section>
+    <title>__HAL_TIM_ENABLE_OCxFAST</title>
+<indexterm><primary>__HAL_TIM_ENABLE_OCxFAST</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_ENABLE_OCxFAST</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_ENABLE_OCxFAST( __HANDLE__,  __CHANNEL__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;(((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga6b1541e4a49d62610899e24bf23f4879">TIM_CHANNEL_1</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;|=&#32;<link linkend="_group___peripheral___registers___bits___definition_1gab9c5878e85ce02c22d8a374deebd1b6e">TIM_CCMR1_OC1FE</link>)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga33e02d43345a7ac5886f01b39e4f7ccd">TIM_CHANNEL_2</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;|=&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga3bf610cf77c3c6c936ce7c4f85992e6c">TIM_CCMR1_OC2FE</link>)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga4ea100c1789b178f3cb46721b7257e2d">TIM_CHANNEL_3</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;|=&#32;<link linkend="_group___peripheral___registers___bits___definition_1gae6d8d2847058747ce23a648668ce4dba">TIM_CCMR2_OC3FE</link>)&#32;:\
+&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;|=&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga70dc197250c2699d470aea1a7a42ad57">TIM_CCMR2_OC4FE</link>))
+</programlisting><para>
+
+<para>Enable fast mode for a given channel. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;CHANNEL&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: TIM Channel 1 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: TIM Channel 2 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: TIM Channel 3 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: TIM Channel 4 selected </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>When fast mode is enabled an active edge on the trigger input acts like a compare match on CCx output. Delay to sample the trigger input and to activate CCx output is reduced to 3 clock cycles. </para>
+
+<para>Fast mode acts only if the channel is configured in PWM1 or PWM2 mode. </para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga199e848f0a301987a500faea0db2dd70"/>    <section>
+    <title>__HAL_TIM_ENABLE_OCxPRELOAD</title>
+<indexterm><primary>__HAL_TIM_ENABLE_OCxPRELOAD</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_ENABLE_OCxPRELOAD</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_ENABLE_OCxPRELOAD( __HANDLE__,  __CHANNEL__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;(((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga6b1541e4a49d62610899e24bf23f4879">TIM_CHANNEL_1</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;|=&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga1aa54ddf87a4b339881a8d5368ec80eb">TIM_CCMR1_OC1PE</link>)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga33e02d43345a7ac5886f01b39e4f7ccd">TIM_CHANNEL_2</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;|=&#32;<link linkend="_group___peripheral___registers___bits___definition_1gabddbf508732039730125ab3e87e9d370">TIM_CCMR1_OC2PE</link>)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga4ea100c1789b178f3cb46721b7257e2d">TIM_CHANNEL_3</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;|=&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga276fd2250d2b085b73ef51cb4c099d24">TIM_CCMR2_OC3PE</link>)&#32;:\
+&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;|=&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga3e951cd3f6593e321cf79b662a1deaaa">TIM_CCMR2_OC4PE</link>))
+</programlisting><para>
+
+<para>Set the TIM Output compare preload. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;CHANNEL&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: TIM Channel 1 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: TIM Channel 2 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: TIM Channel 3 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: TIM Channel 4 selected </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gaa7a5c7645695bad15bacd402513a028a"/>    <section>
+    <title>__HAL_TIM_GET_AUTORELOAD</title>
+<indexterm><primary>__HAL_TIM_GET_AUTORELOAD</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_GET_AUTORELOAD</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GET_AUTORELOAD( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;ARR)</computeroutput></para><para>
+
+<para>Get the TIM Autoreload Register value on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>16-bit</entry>
+                                <entry>
+<para>or 32-bit value of the timer auto-reload register(TIMx_ARR) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gae6bc91bb5940bce52828c690f24001b8"/>    <section>
+    <title>__HAL_TIM_GET_CLOCKDIVISION</title>
+<indexterm><primary>__HAL_TIM_GET_CLOCKDIVISION</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_GET_CLOCKDIVISION</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GET_CLOCKDIVISION( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp; <link linkend="_group___peripheral___registers___bits___definition_1gacacc4ff7e5b75fd2e4e6b672ccd33a72">TIM_CR1_CKD</link>)</computeroutput></para><para>
+
+<para>Get the TIM Clock Division value on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>The</entry>
+                                <entry>
+<para>clock division can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CLOCKDIVISION_DIV1: tDTS=tCK_INT </para>
+</listitem>
+<listitem>
+<para>TIM_CLOCKDIVISION_DIV2: tDTS=2*tCK_INT </para>
+</listitem>
+<listitem>
+<para>TIM_CLOCKDIVISION_DIV4: tDTS=4*tCK_INT </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gaa40722f56910966e1da5241b610eed84"/>    <section>
+    <title>__HAL_TIM_GET_COMPARE</title>
+<indexterm><primary>__HAL_TIM_GET_COMPARE</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_GET_COMPARE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GET_COMPARE( __HANDLE__,  __CHANNEL__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;(((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga6b1541e4a49d62610899e24bf23f4879">TIM_CHANNEL_1</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCR1)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga33e02d43345a7ac5886f01b39e4f7ccd">TIM_CHANNEL_2</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCR2)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga4ea100c1789b178f3cb46721b7257e2d">TIM_CHANNEL_3</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCR3)&#32;:\
+&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CCR4))
+</programlisting><para>
+
+<para>Get the TIM Capture Compare Register value on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;CHANNEL&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM Channel associated with the capture compare register This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: get capture/compare 1 register value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: get capture/compare 2 register value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: get capture/compare 3 register value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: get capture/compare 4 register value </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>16-bit</entry>
+                                <entry>
+<para>or 32-bit value of the capture/compare register (TIMx_CCRy) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gaf1af08014b9d06efbbb091d58d47c8ba"/>    <section>
+    <title>__HAL_TIM_GET_COUNTER</title>
+<indexterm><primary>__HAL_TIM_GET_COUNTER</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_GET_COUNTER</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GET_COUNTER( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CNT)</computeroutput></para><para>
+
+<para>Get the TIM Counter Register value on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>16-bit</entry>
+                                <entry>
+<para>or 32-bit value of the timer counter register (TIMx_CNT) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga96d98c66ad9d85f00c148de99888ef19"/>    <section>
+    <title>__HAL_TIM_GET_FLAG</title>
+<indexterm><primary>__HAL_TIM_GET_FLAG</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GET_FLAG( __HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp;(__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Check whether the specified TIM interrupt flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM Handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;FLAG&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM interrupt flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_FLAG_UPDATE: Update interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC1: Capture/Compare 1 interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC2: Capture/Compare 2 interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC3: Capture/Compare 3 interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC4: Capture/Compare 4 interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_COM: Commutation interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_TRIGGER: Trigger interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_BREAK: Break interrupt flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC1OF: Capture/Compare 1 overcapture flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC2OF: Capture/Compare 2 overcapture flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC3OF: Capture/Compare 3 overcapture flag </para>
+</listitem>
+<listitem>
+<para>TIM_FLAG_CC4OF: Capture/Compare 4 overcapture flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>The</entry>
+                                <entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gabfeec6b3c67a5747c7dbd20aff61d8e2"/>    <section>
+    <title>__HAL_TIM_GET_ICPRESCALER</title>
+<indexterm><primary>__HAL_TIM_GET_ICPRESCALER</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_GET_ICPRESCALER</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GET_ICPRESCALER( __HANDLE__,  __CHANNEL__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;(((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga6b1541e4a49d62610899e24bf23f4879">TIM_CHANNEL_1</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;&amp;&#32;<link linkend="_group___peripheral___registers___bits___definition_1gab46b7186665f5308cd2ca52acfb63e72">TIM_CCMR1_IC1PSC</link>)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga33e02d43345a7ac5886f01b39e4f7ccd">TIM_CHANNEL_2</link>)&#32;?&#32;(((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;&amp;&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga5e8e704f9ce5742f45e15e3b3126aa9d">TIM_CCMR1_IC2PSC</link>)&#32;&gt;&gt;&#32;8U)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga4ea100c1789b178f3cb46721b7257e2d">TIM_CHANNEL_3</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;&amp;&#32;<link linkend="_group___peripheral___registers___bits___definition_1gafc3d11f2e968752bc9ec7131c986c3a6">TIM_CCMR2_IC3PSC</link>)&#32;:\
+&#32;&#32;&#32;(((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;&amp;&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga6fd7591e2de10272f7fafb08cdd1b7b0">TIM_CCMR2_IC4PSC</link>))&#32;&gt;&gt;&#32;8U)
+</programlisting><para>
+
+<para>Get the TIM Input Capture prescaler on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;CHANNEL&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: get input capture 1 prescaler value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: get input capture 2 prescaler value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: get input capture 3 prescaler value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: get input capture 4 prescaler value </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>The</entry>
+                                <entry>
+<para>input capture prescaler can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_ICPSC_DIV1: no prescaler </para>
+</listitem>
+<listitem>
+<para>TIM_ICPSC_DIV2: capture is done once every 2 events </para>
+</listitem>
+<listitem>
+<para>TIM_ICPSC_DIV4: capture is done once every 4 events </para>
+</listitem>
+<listitem>
+<para>TIM_ICPSC_DIV8: capture is done once every 8 events </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga644babf93470a6eee6bce8906c4da5c5"/>    <section>
+    <title>__HAL_TIM_GET_IT_SOURCE</title>
+<indexterm><primary>__HAL_TIM_GET_IT_SOURCE</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_GET_IT_SOURCE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GET_IT_SOURCE( __HANDLE__,  __INTERRUPT__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((((__HANDLE__)-&gt;Instance-&gt;DIER&#32;&amp;&#32;(__INTERRUPT__))&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;==&#32;(__INTERRUPT__))&#32;?&#32;SET&#32;:&#32;RESET)
+</programlisting><para>
+
+<para>Check whether the specified TIM interrupt source is enabled or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;INTERRUPT&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the TIM interrupt source to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_IT_UPDATE: Update interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC1: Capture/Compare 1 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC2: Capture/Compare 2 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC3: Capture/Compare 3 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_CC4: Capture/Compare 4 interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_COM: Commutation interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_TRIGGER: Trigger interrupt </para>
+</listitem>
+<listitem>
+<para>TIM_IT_BREAK: Break interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>The</entry>
+                                <entry>
+<para>state of TIM_IT (SET or RESET). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gac73f5e7669d92971830481e7298e98ba"/>    <section>
+    <title>__HAL_TIM_IS_TIM_COUNTING_DOWN</title>
+<indexterm><primary>__HAL_TIM_IS_TIM_COUNTING_DOWN</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_IS_TIM_COUNTING_DOWN</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_IS_TIM_COUNTING_DOWN( __HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;(<link linkend="_group___peripheral___registers___bits___definition_1gacea10770904af189f3aaeb97b45722aa">TIM_CR1_DIR</link>)) == (<link linkend="_group___peripheral___registers___bits___definition_1gacea10770904af189f3aaeb97b45722aa">TIM_CR1_DIR</link>))</computeroutput></para>
+<para><literallayout><computeroutput>@brief  Indicates whether or not the TIM Counter is used as downcounter.
+@param  __HANDLE__ TIM handle.
+@retval False (Counter used as upcounter) or True (Counter used as downcounter)
+@note This macro is particularly useful to get the counting mode when the timer operates in Center-aligned mode or Encoder
+</computeroutput></literallayout> mode. </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga69d63e147faeca8909e9679f684c0325"/>    <section>
+    <title>__HAL_TIM_MOE_DISABLE</title>
+<indexterm><primary>__HAL_TIM_MOE_DISABLE</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_MOE_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_MOE_DISABLE( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;if&#32;(((__HANDLE__)-&gt;Instance-&gt;CCER&#32;&amp;&#32;TIM_CCER_CCxE_MASK)&#32;==&#32;0UL)&#32;\
+&#32;&#32;&#32;&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;if(((__HANDLE__)-&gt;Instance-&gt;CCER&#32;&amp;&#32;TIM_CCER_CCxNE_MASK)&#32;==&#32;0UL)&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;BDTR&#32;&amp;=&#32;~(<link linkend="_group___peripheral___registers___bits___definition_1ga277a096614829feba2d0a4fbb7d3dffc">TIM_BDTR_MOE</link>);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;}&#32;\
+&#32;&#32;&#32;&#32;}&#32;\
+&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Disable the TIM main Output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>The Main Output Enable of a timer instance is disabled only if all the CCx and CCxN channels have been disabled </para>
+</note>
+</para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gaa5c4053e8e57dc234efecbb698287b55"/>    <section>
+    <title>__HAL_TIM_MOE_DISABLE_UNCONDITIONALLY</title>
+<indexterm><primary>__HAL_TIM_MOE_DISABLE_UNCONDITIONALLY</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_MOE_DISABLE_UNCONDITIONALLY</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_MOE_DISABLE_UNCONDITIONALLY( __HANDLE__)   (__HANDLE__)-&gt;Instance-&gt;BDTR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga277a096614829feba2d0a4fbb7d3dffc">TIM_BDTR_MOE</link>)</computeroutput></para><para>
+
+<para>Disable the TIM main Output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>The Main Output Enable of a timer instance is disabled unconditionally </para>
+</note>
+</para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga04890dcef3ed061854721a3672585607"/>    <section>
+    <title>__HAL_TIM_MOE_ENABLE</title>
+<indexterm><primary>__HAL_TIM_MOE_ENABLE</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_MOE_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_MOE_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;BDTR|=(<link linkend="_group___peripheral___registers___bits___definition_1ga277a096614829feba2d0a4fbb7d3dffc">TIM_BDTR_MOE</link>))</computeroutput></para><para>
+
+<para>Enable the TIM main Output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gace20fd4e38231b9682fbc83a80ec19a3"/>    <section>
+    <title>__HAL_TIM_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_TIM_RESET_HANDLE_STATE</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca28011b79e60b74a6c55947c505c51cbc">HAL_TIM_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset TIM handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga1e6300cab1e34ecaaf490dc7d4812d69"/>    <section>
+    <title>__HAL_TIM_SET_AUTORELOAD</title>
+<indexterm><primary>__HAL_TIM_SET_AUTORELOAD</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_SET_AUTORELOAD</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SET_AUTORELOAD( __HANDLE__,  __AUTORELOAD__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;<emphasis role="keywordflow">do</emphasis>{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;ARR&#32;=&#32;(__AUTORELOAD__);&#32;&#32;\
+&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Init.Period&#32;=&#32;(__AUTORELOAD__);&#32;&#32;&#32;&#32;\
+&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Set the TIM Autoreload Register value on runtime without calling another time any Init function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;AUTORELOAD&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the Counter register new value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gac5d6989516caa67fae23a9329228cdc7"/>    <section>
+    <title>__HAL_TIM_SET_CAPTUREPOLARITY</title>
+<indexterm><primary>__HAL_TIM_SET_CAPTUREPOLARITY</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_SET_CAPTUREPOLARITY</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SET_CAPTUREPOLARITY( __HANDLE__,  __CHANNEL__,  __POLARITY__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;<emphasis role="keywordflow">do</emphasis>{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;TIM_RESET_CAPTUREPOLARITY((__HANDLE__),&#32;(__CHANNEL__));&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;TIM_SET_CAPTUREPOLARITY((__HANDLE__),&#32;(__CHANNEL__),&#32;(__POLARITY__));&#32;\
+&#32;&#32;}<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Set the TIM Capture x input polarity on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;CHANNEL&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: TIM Channel 1 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: TIM Channel 2 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: TIM Channel 3 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: TIM Channel 4 selected </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;POLARITY&lt;/strong&gt;</entry>
+                                <entry>
+<para>Polarity for TIx source <itemizedlist>
+<listitem>
+<para>TIM_INPUTCHANNELPOLARITY_RISING: Rising Edge </para>
+</listitem>
+<listitem>
+<para>TIM_INPUTCHANNELPOLARITY_FALLING: Falling Edge </para>
+</listitem>
+<listitem>
+<para>TIM_INPUTCHANNELPOLARITY_BOTHEDGE: Rising and Falling Edge </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga8aa84d77c670890408092630f9b2bdc4"/>    <section>
+    <title>__HAL_TIM_SET_CLOCKDIVISION</title>
+<indexterm><primary>__HAL_TIM_SET_CLOCKDIVISION</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_SET_CLOCKDIVISION</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SET_CLOCKDIVISION( __HANDLE__,  __CKD__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;<emphasis role="keywordflow">do</emphasis>{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;CR1&#32;&amp;=&#32;(~<link linkend="_group___peripheral___registers___bits___definition_1gacacc4ff7e5b75fd2e4e6b672ccd33a72">TIM_CR1_CKD</link>);&#32;&#32;\
+&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;CR1&#32;|=&#32;(__CKD__);&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Init.ClockDivision&#32;=&#32;(__CKD__);&#32;&#32;&#32;\
+&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Set the TIM Clock Division value on runtime without calling another time any Init function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;CKD&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the clock division value. This parameter can be one of the following value: <itemizedlist>
+<listitem>
+<para>TIM_CLOCKDIVISION_DIV1: tDTS=tCK_INT </para>
+</listitem>
+<listitem>
+<para>TIM_CLOCKDIVISION_DIV2: tDTS=2*tCK_INT </para>
+</listitem>
+<listitem>
+<para>TIM_CLOCKDIVISION_DIV4: tDTS=4*tCK_INT </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga300d0c9624c3b072d3afeb7cef639b66"/>    <section>
+    <title>__HAL_TIM_SET_COMPARE</title>
+<indexterm><primary>__HAL_TIM_SET_COMPARE</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_SET_COMPARE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SET_COMPARE( __HANDLE__,  __CHANNEL__,  __COMPARE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;(((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga6b1541e4a49d62610899e24bf23f4879">TIM_CHANNEL_1</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCR1&#32;=&#32;(__COMPARE__))&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga33e02d43345a7ac5886f01b39e4f7ccd">TIM_CHANNEL_2</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCR2&#32;=&#32;(__COMPARE__))&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga4ea100c1789b178f3cb46721b7257e2d">TIM_CHANNEL_3</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCR3&#32;=&#32;(__COMPARE__))&#32;:\
+&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CCR4&#32;=&#32;(__COMPARE__)))
+</programlisting><para>
+
+<para>Set the TIM Capture Compare Register value on runtime without calling another time ConfigChannel function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;CHANNEL&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: TIM Channel 1 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: TIM Channel 2 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: TIM Channel 3 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: TIM Channel 4 selected </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;COMPARE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the Capture Compare register new value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga9746ac75e4cd25cec1a9ebac8cb82b97"/>    <section>
+    <title>__HAL_TIM_SET_COUNTER</title>
+<indexterm><primary>__HAL_TIM_SET_COUNTER</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_SET_COUNTER</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SET_COUNTER( __HANDLE__,  __COUNTER__)   ((__HANDLE__)-&gt;Instance-&gt;CNT = (__COUNTER__))</computeroutput></para><para>
+
+<para>Set the TIM Counter Register value on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;COUNTER&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the Counter register new value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gaeb106399b95ef02cec502f58276a0e92"/>    <section>
+    <title>__HAL_TIM_SET_ICPRESCALER</title>
+<indexterm><primary>__HAL_TIM_SET_ICPRESCALER</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_SET_ICPRESCALER</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SET_ICPRESCALER( __HANDLE__,  __CHANNEL__,  __ICPSC__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;<emphasis role="keywordflow">do</emphasis>{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;TIM_RESET_ICPRESCALERVALUE((__HANDLE__),&#32;(__CHANNEL__));&#32;&#32;\
+&#32;&#32;&#32;&#32;TIM_SET_ICPRESCALERVALUE((__HANDLE__),&#32;(__CHANNEL__),&#32;(__ICPSC__));&#32;\
+&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Set the TIM Input Capture prescaler on runtime without calling another time HAL_TIM_IC_ConfigChannel() function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;CHANNEL&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: TIM Channel 1 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: TIM Channel 2 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: TIM Channel 3 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: TIM Channel 4 selected </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;ICPSC&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the Input Capture4 prescaler new value. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_ICPSC_DIV1: no prescaler </para>
+</listitem>
+<listitem>
+<para>TIM_ICPSC_DIV2: capture is done once every 2 events </para>
+</listitem>
+<listitem>
+<para>TIM_ICPSC_DIV4: capture is done once every 4 events </para>
+</listitem>
+<listitem>
+<para>TIM_ICPSC_DIV8: capture is done once every 8 events </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gafdc5a06eab07e0c24e729fd492bdb27c"/>    <section>
+    <title>__HAL_TIM_SET_PRESCALER</title>
+<indexterm><primary>__HAL_TIM_SET_PRESCALER</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_SET_PRESCALER</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SET_PRESCALER( __HANDLE__,  __PRESC__)   ((__HANDLE__)-&gt;Instance-&gt;PSC = (__PRESC__))</computeroutput></para><para>
+
+<para>Set the TIM Prescaler on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;PRESC&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the Prescaler new value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1gafacb551a4c537e62a0fe740b2f12236c"/>    <section>
+    <title>__HAL_TIM_URS_DISABLE</title>
+<indexterm><primary>__HAL_TIM_URS_DISABLE</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_URS_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_URS_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1&amp;=~<link linkend="_group___peripheral___registers___bits___definition_1ga06c997c2c23e8bef7ca07579762c113b">TIM_CR1_URS</link>)</computeroutput></para><para>
+
+<para>Reset the Update Request Source (URS) bit of the TIMx_CR1 register. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>When the URS bit of the TIMx_CR1 register is reset, any of the following events generate an update interrupt or DMA request (if enabled): _ Counter overflow underflow _ Setting the UG bit _ Update generation through the slave mode controller </para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___t_i_m___exported___macros_1ga3b06856bd6d7e10cfff342b1726db51d"/>    <section>
+    <title>__HAL_TIM_URS_ENABLE</title>
+<indexterm><primary>__HAL_TIM_URS_ENABLE</primary><secondary>TIM Exported Macros</secondary></indexterm>
+<indexterm><primary>TIM Exported Macros</primary><secondary>__HAL_TIM_URS_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_URS_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1|= <link linkend="_group___peripheral___registers___bits___definition_1ga06c997c2c23e8bef7ca07579762c113b">TIM_CR1_URS</link>)</computeroutput></para><para>
+
+<para>Set the Update Request Source (URS) bit of the TIMx_CR1 register. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HANDLE&lt;/strong&gt;</entry>
+                                <entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>When the URS bit of the TIMx_CR1 register is set, only counter overflow/underflow generates an update interrupt or DMA request (if enabled) </para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

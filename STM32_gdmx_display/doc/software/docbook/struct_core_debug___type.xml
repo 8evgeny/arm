@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_core_debug___type" xml:lang="en-US">
+<title>CoreDebug_Type Struct Reference</title>
+<indexterm><primary>CoreDebug_Type</primary></indexterm>
+<para>
+
+<para>Structure type to access the Core Debug Register (CoreDebug). </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;core_armv8mbl.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga94ca828091a9226ab6684fbf30e52909">DHCSR</link></para>
+</listitem>
+            <listitem><para>__OM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gab74a9ec90ad18e4f7a20362d362b754a">DCRSR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad1dbd0dd98b6d9327f70545e0081ddbf">DCRDR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaa99de5f8c609f10c25ed51f57b2edd74">DEMCR</link></para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">RESERVED4</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga65047e5b8051fa0c84200f8229a155b3">DAUTHCTRL</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2916e1173ded6e0fc26e8445e72a6087">DSCSR</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure type to access the Core Debug Register (CoreDebug). </para>
+<para>
+The documentation for this struct was generated from the following files:</para>
+Drivers/CMSIS/Include/<link linkend="_core__armv8mbl_8h">core_armv8mbl.h</link>Drivers/CMSIS/Include/<link linkend="_core__armv8mml_8h">core_armv8mml.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm23_8h">core_cm23.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm3_8h">core_cm3.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm33_8h">core_cm33.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm4_8h">core_cm4.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm7_8h">core_cm7.h</link>Drivers/CMSIS/Include/<link linkend="_core__sc300_8h">core_sc300.h</link></section>
+</section>

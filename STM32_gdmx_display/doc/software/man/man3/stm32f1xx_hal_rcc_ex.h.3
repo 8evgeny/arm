@@ -1,0 +1,180 @@
+.TH "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \- Header file of RCC HAL Extension module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f1xx_hal_def\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBRCC_OscInitTypeDef\fP"
+.br
+.RI "RCC Internal/External Oscillator (HSE, HSI, LSE and LSI) configuration structure definition\&. "
+.ti -1c
+.RI "struct \fBRCC_PeriphCLKInitTypeDef\fP"
+.br
+.RI "RCC extended clocks structure definition\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCR_REG_INDEX\fP   ((uint8_t)1)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_HSE_PREDIV\fP(__DIV__)   (((__DIV__) == RCC_HSE_PREDIV_DIV1)  || ((__DIV__) == RCC_HSE_PREDIV_DIV2))"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PLL_MUL\fP(__MUL__)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_MCO1SOURCE\fP(__SOURCE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_ADCPLLCLK_DIV\fP(__ADCCLK__)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PERIPHCLOCK\fP(__SELECTION__)"
+.br
+.ti -1c
+.RI "#define \fBRCC_PERIPHCLK_RTC\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBRCC_PERIPHCLK_ADC\fP   0x00000002U"
+.br
+.ti -1c
+.RI "#define \fBRCC_ADCPCLK2_DIV2\fP   \fBRCC_CFGR_ADCPRE_DIV2\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_ADCPCLK2_DIV4\fP   \fBRCC_CFGR_ADCPRE_DIV4\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_ADCPCLK2_DIV6\fP   \fBRCC_CFGR_ADCPRE_DIV6\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_ADCPCLK2_DIV8\fP   \fBRCC_CFGR_ADCPRE_DIV8\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSE_PREDIV_DIV1\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSE_PREDIV_DIV2\fP   \fBRCC_CFGR_PLLXTPRE\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL2\fP   \fBRCC_CFGR_PLLMULL2\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL3\fP   \fBRCC_CFGR_PLLMULL3\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL4\fP   \fBRCC_CFGR_PLLMULL4\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL5\fP   \fBRCC_CFGR_PLLMULL5\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL6\fP   \fBRCC_CFGR_PLLMULL6\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL7\fP   \fBRCC_CFGR_PLLMULL7\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL8\fP   \fBRCC_CFGR_PLLMULL8\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL9\fP   \fBRCC_CFGR_PLLMULL9\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL10\fP   \fBRCC_CFGR_PLLMULL10\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL11\fP   \fBRCC_CFGR_PLLMULL11\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL12\fP   \fBRCC_CFGR_PLLMULL12\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL13\fP   \fBRCC_CFGR_PLLMULL13\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL14\fP   \fBRCC_CFGR_PLLMULL14\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL15\fP   \fBRCC_CFGR_PLLMULL15\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_MUL16\fP   \fBRCC_CFGR_PLLMULL16\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO1SOURCE_NOCLOCK\fP   ((uint32_t)\fBRCC_CFGR_MCO_NOCLOCK\fP)"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO1SOURCE_SYSCLK\fP   ((uint32_t)\fBRCC_CFGR_MCO_SYSCLK\fP)"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO1SOURCE_HSI\fP   ((uint32_t)\fBRCC_CFGR_MCO_HSI\fP)"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO1SOURCE_HSE\fP   ((uint32_t)\fBRCC_CFGR_MCO_HSE\fP)"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO1SOURCE_PLLCLK\fP   ((uint32_t)\fBRCC_CFGR_MCO_PLLCLK_DIV2\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_HSE_PREDIV_CONFIG\fP(__HSE_PREDIV_VALUE__)                     MODIFY_REG(RCC\->CFGR,\fBRCC_CFGR_PLLXTPRE\fP, (uint32_t)(__HSE_PREDIV_VALUE__))"
+.br
+.RI "Macro to configure the External High Speed oscillator (HSE) Predivision factor for PLL\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_HSE_GET_PREDIV\fP()   READ_BIT(RCC\->CFGR, \fBRCC_CFGR_PLLXTPRE\fP)"
+.br
+.RI "Macro to get prediv1 factor for PLL\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC_CONFIG\fP(__ADCCLKSOURCE__)                     MODIFY_REG(RCC\->CFGR, \fBRCC_CFGR_ADCPRE\fP, (uint32_t)(__ADCCLKSOURCE__))"
+.br
+.RI "Macro to configure the ADCx clock (x=1 to 3 depending on devices)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_ADC_SOURCE\fP()   ((uint32_t)(READ_BIT(RCC\->CFGR, \fBRCC_CFGR_ADCPRE\fP)))"
+.br
+.RI "Macro to get the ADC clock (ADCxCLK, x=1 to 3 depending on devices)\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RCCEx_PeriphCLKConfig\fP (\fBRCC_PeriphCLKInitTypeDef\fP *PeriphClkInit)"
+.br
+.ti -1c
+.RI "void \fBHAL_RCCEx_GetPeriphCLKConfig\fP (\fBRCC_PeriphCLKInitTypeDef\fP *PeriphClkInit)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_RCCEx_GetPeriphCLKFreq\fP (uint32_t PeriphClk)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file of RCC HAL Extension module\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2016 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

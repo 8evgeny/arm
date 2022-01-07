@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_m_s_i_s___core___function_interface" xml:lang="en-US">
+<title>Functions and Instructions Reference</title>
+<indexterm><primary>Functions and Instructions Reference</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___c_m_s_i_s___core___reg_acc_functions">CMSIS Core Register Access Functions</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions">NVIC Functions</link></para>
+
+<para>Functions that manage interrupts and exceptions via the NVIC. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structos__thread__def" kind="struct" language="C++" prot="public">
+    <compoundname>os_thread_def</compoundname>
+    <includes refid="cmsis__os_8h" local="no">cmsis_os.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structos__thread__def_1a5ac083a645d964373f022d03df4849c8" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>Thread name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" line="281" column="26" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structos__thread__def_1ad3c9624ee214329fb34e71f544a6933e" prot="public" static="no" mutable="no">
+        <type>os_pthread</type>
+        <definition>os_pthread pthread</definition>
+        <argsstring></argsstring>
+        <name>pthread</name>
+        <briefdescription>
+<para>start address of thread function </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" line="282" column="26" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structos__thread__def_1a15da8f23c6fe684b70a73646ada685e7" prot="public" static="no" mutable="no">
+        <type>osPriority</type>
+        <definition>osPriority tpriority</definition>
+        <argsstring></argsstring>
+        <name>tpriority</name>
+        <briefdescription>
+<para>initial thread priority </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" line="283" column="26" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structos__thread__def_1aa4c4115851a098c0b87358ab6c025603" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t instances</definition>
+        <argsstring></argsstring>
+        <name>instances</name>
+        <briefdescription>
+<para>maximum number of instances of that thread function </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" line="284" column="26" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structos__thread__def_1a950b7f81ad4711959517296e63bc79d1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t stacksize</definition>
+        <argsstring></argsstring>
+        <name>stacksize</name>
+        <briefdescription>
+<para>stack size requirements in bytes; 0 is default stack size </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" line="285" column="26" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Thread Definition structure contains startup information of a thread. <simplesect kind="note"><para>CAN BE CHANGED: <bold><ref refid="structos__thread__def" kindref="compound">os_thread_def</ref></bold> is implementation specific in every CMSIS-RTOS. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" line="280" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" bodystart="280" bodyend="290"/>
+    <listofallmembers>
+      <member refid="structos__thread__def_1aa4c4115851a098c0b87358ab6c025603" prot="public" virt="non-virtual"><scope>os_thread_def</scope><name>instances</name></member>
+      <member refid="structos__thread__def_1a5ac083a645d964373f022d03df4849c8" prot="public" virt="non-virtual"><scope>os_thread_def</scope><name>name</name></member>
+      <member refid="structos__thread__def_1ad3c9624ee214329fb34e71f544a6933e" prot="public" virt="non-virtual"><scope>os_thread_def</scope><name>pthread</name></member>
+      <member refid="structos__thread__def_1a950b7f81ad4711959517296e63bc79d1" prot="public" virt="non-virtual"><scope>os_thread_def</scope><name>stacksize</name></member>
+      <member refid="structos__thread__def_1a15da8f23c6fe684b70a73646ada685e7" prot="public" virt="non-virtual"><scope>os_thread_def</scope><name>tpriority</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

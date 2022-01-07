@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___t_i_m___master___slave___mode" kind="group">
+    <compoundname>TIM_Master_Slave_Mode</compoundname>
+    <title>TIM Master/Slave Mode</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___t_i_m___master___slave___mode_1gafdc0de07db4688aa8c87cf03220aaf28" prot="public" static="no">
+        <name>TIM_MASTERSLAVEMODE_ENABLE</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga52101db4ca2c7b3003f1b16a49b2032c" kindref="member">TIM_SMCR_MSM</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No action </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="841" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="841" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_i_m___master___slave___mode_1ga58ff99ef1d6d6f187e3615f9d3ec3b8b" prot="public" static="no">
+        <name>TIM_MASTERSLAVEMODE_DISABLE</name>
+        <initializer>0x00000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Master/slave mode is selected </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="842" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="842" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

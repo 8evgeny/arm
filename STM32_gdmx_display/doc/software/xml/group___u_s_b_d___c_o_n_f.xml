@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___c_o_n_f" kind="group">
+    <compoundname>USBD_CONF</compoundname>
+    <title>USBD_CONF</title>
+    <innergroup refid="group___u_s_b_d___c_o_n_f___exported___variables">USBD_CONF_Exported_Variables</innergroup>
+    <innergroup refid="group___u_s_b_d___c_o_n_f___exported___defines">USBD_CONF_Exported_Defines</innergroup>
+    <innergroup refid="group___u_s_b_d___c_o_n_f___exported___macros">USBD_CONF_Exported_Macros</innergroup>
+    <innergroup refid="group___u_s_b_d___c_o_n_f___exported___types">USBD_CONF_Exported_Types</innergroup>
+    <innergroup refid="group___u_s_b_d___c_o_n_f___exported___functions_prototype">USBD_CONF_Exported_FunctionsPrototype</innergroup>
+    <briefdescription>
+<para>Configuration file for Usb otg low level driver. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

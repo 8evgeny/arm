@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype" kind="group">
+    <compoundname>USBD_IOREQ_Exported_FunctionsPrototype</compoundname>
+    <title>USBD_IOREQ_Exported_FunctionsPrototype</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gae66e8dc0e24f9d7d23930f6c87605e75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlSendData</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *pbuf, uint16_t len)</argsstring>
+        <name>USBD_CtlSendData</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlSendData send data on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="80" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="87" bodyend="99" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="80" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gaf07248d84e87cdf14db392f94b369744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlContinueSendData</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *pbuf, uint16_t len)</argsstring>
+        <name>USBD_CtlContinueSendData</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlContinueSendData continue sending data on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="84" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="109" bodyend="116" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="84" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gabe067dfaa82139b6d3acf5f8cdd5fc91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlPrepareRx</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *pbuf, uint16_t len)</argsstring>
+        <name>USBD_CtlPrepareRx</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlPrepareRx receive data on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data to be received </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="88" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="126" bodyend="138" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="88" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gaf6cabd5a8d9d527cf6aa64915abb7f2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlContinueRx</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *pbuf, uint16_t len)</argsstring>
+        <name>USBD_CtlContinueRx</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlContinueRx continue receive data on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data to be received </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="92" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="148" bodyend="154" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="92" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1ga19e53947fc912c43bcee2c7d7429e8ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlSendStatus</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_CtlSendStatus</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlSendStatus send zero lzngth packet on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="96" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="162" bodyend="171" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="96" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gad5e847f89ca67a6b2154a72d0aa25e9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlReceiveStatus</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_CtlReceiveStatus</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlReceiveStatus receive zero lzngth packet on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="98" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="179" bodyend="188" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="98" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1ga1ea167471f0e91676934feb76f67b1c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t USBD_GetRxCount</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr)</argsstring>
+        <name>USBD_GetRxCount</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>USBD_GetRxCount returns the received data length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>endpoint address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>Rx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data blength </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="100" column="11" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="197" bodyend="200" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="100" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

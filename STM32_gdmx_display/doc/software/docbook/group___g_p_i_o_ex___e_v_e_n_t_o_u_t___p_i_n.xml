@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n" xml:lang="en-US">
+<title>EVENTOUT Pin</title>
+<indexterm><primary>EVENTOUT Pin</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga1caf81a3226da92f477e6fd15cfef16b">AFIO_EVENTOUT_PIN_0</link>   <link linkend="_group___peripheral___registers___bits___definition_1gafc55b0764100c312652f8439c76ead93">AFIO_EVCR_PIN_PX0</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae2d151889f9f4b65ce6547aa80dca582">AFIO_EVENTOUT_PIN_1</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga1837985898c39579fb8e2d08a536abc9">AFIO_EVCR_PIN_PX1</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga20d5efc2e37b380ba6acab899fac25ec">AFIO_EVENTOUT_PIN_2</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaefeb8141d1a950490ba1546475a800f7">AFIO_EVCR_PIN_PX2</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gac6eb85f0eff1513ba213dc9d1c0af35b">AFIO_EVENTOUT_PIN_3</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaf5f9ed9c7b281ab90977e12567642227">AFIO_EVCR_PIN_PX3</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa2a1db689ed0a7b46f5ed773a2e54d54">AFIO_EVENTOUT_PIN_4</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga581b5d39100696da09b2ff97a99972da">AFIO_EVCR_PIN_PX4</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa96afd6502080bd3d6cd68e6e06e7bfa">AFIO_EVENTOUT_PIN_5</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga8ad484dafff8764ce9ce9d594dd5a013">AFIO_EVCR_PIN_PX5</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae9b4ddb2c1bd1c343d396983148f1522">AFIO_EVENTOUT_PIN_6</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga2f3145a544acb1f90a7282ec5a29c157">AFIO_EVCR_PIN_PX6</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga999cd9c3ce9821b73e7610f11da7258f">AFIO_EVENTOUT_PIN_7</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga0a96447627679aea8f50ae5c69ad8cf4">AFIO_EVCR_PIN_PX7</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaed7094c896c9284edbb2267a74e148a6">AFIO_EVENTOUT_PIN_8</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga08e94e6d3f024d5cb985c77c726ffc2b">AFIO_EVCR_PIN_PX8</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gacb2d76e8d7197ff9f65634034cb47ca1">AFIO_EVENTOUT_PIN_9</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga02d0b8d6c4a728bb5149eae7f21bb1df">AFIO_EVCR_PIN_PX9</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga2890d890882a1d2c32fc2a4d47117bfb">AFIO_EVENTOUT_PIN_10</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga1b6f2cc7e47f2a227bab6776f6e56744">AFIO_EVCR_PIN_PX10</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaf36cec461fe61b6060137724f6ad3148">AFIO_EVENTOUT_PIN_11</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga4bbd72a869b61e23731639501e73102e">AFIO_EVCR_PIN_PX11</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga736b25c4c65a79dc259a6b7592c46d2a">AFIO_EVENTOUT_PIN_12</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga6f9a1344125a2fad10cf831cafcb6dd8">AFIO_EVCR_PIN_PX12</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga990d0bda08e8837940fe244359e04da9">AFIO_EVENTOUT_PIN_13</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga62196f78a13b996b3bcd998ce80998b6">AFIO_EVCR_PIN_PX13</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga32432319feb5904520558d1ed5c74c81">AFIO_EVENTOUT_PIN_14</link>   <link linkend="_group___peripheral___registers___bits___definition_1gadb3233497ca8b69f9ee6be98ac1a5643">AFIO_EVCR_PIN_PX14</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga09637caad04c7fb41cf804489e5d6037">AFIO_EVENTOUT_PIN_15</link>   <link linkend="_group___peripheral___registers___bits___definition_1gab02338e562caabecfd265882afbccfe9">AFIO_EVCR_PIN_PX15</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_AFIO_EVENTOUT_PIN</emphasis>(__PIN__)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga1caf81a3226da92f477e6fd15cfef16b"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_0</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_0</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_0</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_0   <link linkend="_group___peripheral___registers___bits___definition_1gafc55b0764100c312652f8439c76ead93">AFIO_EVCR_PIN_PX0</link></computeroutput></para>
+<para>EVENTOUT on pin 0 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae2d151889f9f4b65ce6547aa80dca582"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_1</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_1</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_1</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_1   <link linkend="_group___peripheral___registers___bits___definition_1ga1837985898c39579fb8e2d08a536abc9">AFIO_EVCR_PIN_PX1</link></computeroutput></para>
+<para>EVENTOUT on pin 1 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga2890d890882a1d2c32fc2a4d47117bfb"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_10</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_10</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_10</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_10   <link linkend="_group___peripheral___registers___bits___definition_1ga1b6f2cc7e47f2a227bab6776f6e56744">AFIO_EVCR_PIN_PX10</link></computeroutput></para>
+<para>EVENTOUT on pin 10 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaf36cec461fe61b6060137724f6ad3148"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_11</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_11</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_11</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_11   <link linkend="_group___peripheral___registers___bits___definition_1ga4bbd72a869b61e23731639501e73102e">AFIO_EVCR_PIN_PX11</link></computeroutput></para>
+<para>EVENTOUT on pin 11 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga736b25c4c65a79dc259a6b7592c46d2a"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_12</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_12</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_12</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_12   <link linkend="_group___peripheral___registers___bits___definition_1ga6f9a1344125a2fad10cf831cafcb6dd8">AFIO_EVCR_PIN_PX12</link></computeroutput></para>
+<para>EVENTOUT on pin 12 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga990d0bda08e8837940fe244359e04da9"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_13</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_13</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_13</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_13   <link linkend="_group___peripheral___registers___bits___definition_1ga62196f78a13b996b3bcd998ce80998b6">AFIO_EVCR_PIN_PX13</link></computeroutput></para>
+<para>EVENTOUT on pin 13 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga32432319feb5904520558d1ed5c74c81"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_14</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_14</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_14</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_14   <link linkend="_group___peripheral___registers___bits___definition_1gadb3233497ca8b69f9ee6be98ac1a5643">AFIO_EVCR_PIN_PX14</link></computeroutput></para>
+<para>EVENTOUT on pin 14 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga09637caad04c7fb41cf804489e5d6037"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_15</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_15</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_15</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_15   <link linkend="_group___peripheral___registers___bits___definition_1gab02338e562caabecfd265882afbccfe9">AFIO_EVCR_PIN_PX15</link></computeroutput></para>
+<para>EVENTOUT on pin 15 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga20d5efc2e37b380ba6acab899fac25ec"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_2</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_2</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_2</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_2   <link linkend="_group___peripheral___registers___bits___definition_1gaefeb8141d1a950490ba1546475a800f7">AFIO_EVCR_PIN_PX2</link></computeroutput></para>
+<para>EVENTOUT on pin 2 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gac6eb85f0eff1513ba213dc9d1c0af35b"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_3</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_3</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_3</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_3   <link linkend="_group___peripheral___registers___bits___definition_1gaf5f9ed9c7b281ab90977e12567642227">AFIO_EVCR_PIN_PX3</link></computeroutput></para>
+<para>EVENTOUT on pin 3 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa2a1db689ed0a7b46f5ed773a2e54d54"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_4</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_4</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_4</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_4   <link linkend="_group___peripheral___registers___bits___definition_1ga581b5d39100696da09b2ff97a99972da">AFIO_EVCR_PIN_PX4</link></computeroutput></para>
+<para>EVENTOUT on pin 4 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa96afd6502080bd3d6cd68e6e06e7bfa"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_5</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_5</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_5</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_5   <link linkend="_group___peripheral___registers___bits___definition_1ga8ad484dafff8764ce9ce9d594dd5a013">AFIO_EVCR_PIN_PX5</link></computeroutput></para>
+<para>EVENTOUT on pin 5 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae9b4ddb2c1bd1c343d396983148f1522"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_6</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_6</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_6</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_6   <link linkend="_group___peripheral___registers___bits___definition_1ga2f3145a544acb1f90a7282ec5a29c157">AFIO_EVCR_PIN_PX6</link></computeroutput></para>
+<para>EVENTOUT on pin 6 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga999cd9c3ce9821b73e7610f11da7258f"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_7</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_7</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_7</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_7   <link linkend="_group___peripheral___registers___bits___definition_1ga0a96447627679aea8f50ae5c69ad8cf4">AFIO_EVCR_PIN_PX7</link></computeroutput></para>
+<para>EVENTOUT on pin 7 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaed7094c896c9284edbb2267a74e148a6"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_8</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_8</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_8</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_8   <link linkend="_group___peripheral___registers___bits___definition_1ga08e94e6d3f024d5cb985c77c726ffc2b">AFIO_EVCR_PIN_PX8</link></computeroutput></para>
+<para>EVENTOUT on pin 8 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gacb2d76e8d7197ff9f65634034cb47ca1"/>    <section>
+    <title>AFIO_EVENTOUT_PIN_9</title>
+<indexterm><primary>AFIO_EVENTOUT_PIN_9</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>AFIO_EVENTOUT_PIN_9</secondary></indexterm>
+<para><computeroutput>#define AFIO_EVENTOUT_PIN_9   <link linkend="_group___peripheral___registers___bits___definition_1ga02d0b8d6c4a728bb5149eae7f21bb1df">AFIO_EVCR_PIN_PX9</link></computeroutput></para>
+<para>EVENTOUT on pin 9 </para>
+    </section><anchor xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaeb2811674e9647b67a4abd1fe4a117fe"/>    <section>
+    <title>IS_AFIO_EVENTOUT_PIN</title>
+<indexterm><primary>IS_AFIO_EVENTOUT_PIN</primary><secondary>EVENTOUT Pin</secondary></indexterm>
+<indexterm><primary>EVENTOUT Pin</primary><secondary>IS_AFIO_EVENTOUT_PIN</secondary></indexterm>
+<para><computeroutput>#define IS_AFIO_EVENTOUT_PIN( __PIN__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga1caf81a3226da92f477e6fd15cfef16b">AFIO_EVENTOUT_PIN_0</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae2d151889f9f4b65ce6547aa80dca582">AFIO_EVENTOUT_PIN_1</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga20d5efc2e37b380ba6acab899fac25ec">AFIO_EVENTOUT_PIN_2</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gac6eb85f0eff1513ba213dc9d1c0af35b">AFIO_EVENTOUT_PIN_3</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa2a1db689ed0a7b46f5ed773a2e54d54">AFIO_EVENTOUT_PIN_4</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa96afd6502080bd3d6cd68e6e06e7bfa">AFIO_EVENTOUT_PIN_5</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae9b4ddb2c1bd1c343d396983148f1522">AFIO_EVENTOUT_PIN_6</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga999cd9c3ce9821b73e7610f11da7258f">AFIO_EVENTOUT_PIN_7</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaed7094c896c9284edbb2267a74e148a6">AFIO_EVENTOUT_PIN_8</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gacb2d76e8d7197ff9f65634034cb47ca1">AFIO_EVENTOUT_PIN_9</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga2890d890882a1d2c32fc2a4d47117bfb">AFIO_EVENTOUT_PIN_10</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaf36cec461fe61b6060137724f6ad3148">AFIO_EVENTOUT_PIN_11</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga736b25c4c65a79dc259a6b7592c46d2a">AFIO_EVENTOUT_PIN_12</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga990d0bda08e8837940fe244359e04da9">AFIO_EVENTOUT_PIN_13</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga32432319feb5904520558d1ed5c74c81">AFIO_EVENTOUT_PIN_14</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__PIN__)&#32;==&#32;<link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga09637caad04c7fb41cf804489e5d6037">AFIO_EVENTOUT_PIN_15</link>))
+</programlisting></section>
+</section>
+</section>

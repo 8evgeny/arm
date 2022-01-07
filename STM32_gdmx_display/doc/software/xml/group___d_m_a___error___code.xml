@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___d_m_a___error___code" kind="group">
+    <compoundname>DMA_Error_Code</compoundname>
+    <title>DMA Error Code</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___d_m_a___error___code_1gaad4009390bfbe05a1bb7115d03c25a97" prot="public" static="no">
+        <name>HAL_DMA_ERROR_NONE</name>
+        <initializer>0x00000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No error <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="151" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a___error___code_1ga9882442c5f8f0170917934bbee1cc92d" prot="public" static="no">
+        <name>HAL_DMA_ERROR_TE</name>
+        <initializer>0x00000001U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Transfer error <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="152" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a___error___code_1gab7526e686427f26bf3b6af062d5a690b" prot="public" static="no">
+        <name>HAL_DMA_ERROR_NO_XFER</name>
+        <initializer>0x00000004U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>no ongoing transfer <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="153" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a___error___code_1ga6cf6a5b8881ff36ed4316a29bbfb5b79" prot="public" static="no">
+        <name>HAL_DMA_ERROR_TIMEOUT</name>
+        <initializer>0x00000020U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timeout error <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="154" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a___error___code_1ga7432f31f9972e1c0a398a3f20587d118" prot="public" static="no">
+        <name>HAL_DMA_ERROR_NOT_SUPPORTED</name>
+        <initializer>0x00000100U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Not supported mode <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="155" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

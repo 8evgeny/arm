@@ -1,0 +1,58 @@
+\hypertarget{group___f_l_a_s_h___half___cycle}{}\doxysection{FLASH Half Cycle}
+\label{group___f_l_a_s_h___half___cycle}\index{FLASH Half Cycle@{FLASH Half Cycle}}
+
+
+macros to handle FLASH half cycle  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___half___cycle_ga65eb4c393cbc94747449b8aab349200a}{\+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+HALF\+\_\+\+CYCLE\+\_\+\+ACCESS\+\_\+\+ENABLE}}()~(FLASH-\/$>$ACR $\vert$= \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6e66d0fa94c019e9c27a3d79e8228cd9}{FLASH\+\_\+\+ACR\+\_\+\+HLFCYA}})
+\begin{DoxyCompactList}\small\item\em Enable the FLASH half cycle access. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___half___cycle_ga2e0c8e2c00a86896027c0cf1c95fbba1}{\+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+HALF\+\_\+\+CYCLE\+\_\+\+ACCESS\+\_\+\+DISABLE}}()~(FLASH-\/$>$ACR \&= ($\sim$\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6e66d0fa94c019e9c27a3d79e8228cd9}{FLASH\+\_\+\+ACR\+\_\+\+HLFCYA}}))
+\begin{DoxyCompactList}\small\item\em Disable the FLASH half cycle access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+macros to handle FLASH half cycle 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___f_l_a_s_h___half___cycle_ga2e0c8e2c00a86896027c0cf1c95fbba1}\label{group___f_l_a_s_h___half___cycle_ga2e0c8e2c00a86896027c0cf1c95fbba1}} 
+\index{FLASH Half Cycle@{FLASH Half Cycle}!\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_DISABLE@{\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_DISABLE}}
+\index{\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_DISABLE@{\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_DISABLE}!FLASH Half Cycle@{FLASH Half Cycle}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_DISABLE}{\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+HALF\+\_\+\+CYCLE\+\_\+\+ACCESS\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(FLASH-\/$>$ACR \&= ($\sim$\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6e66d0fa94c019e9c27a3d79e8228cd9}{FLASH\+\_\+\+ACR\+\_\+\+HLFCYA}}))}
+
+
+
+Disable the FLASH half cycle access. 
+
+\begin{DoxyNote}{Note}
+half cycle access can only be used with a low-\/frequency clock of less than 8 MHz that can be obtained with the use of HSI or HSE but not of PLL. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___f_l_a_s_h___half___cycle_ga65eb4c393cbc94747449b8aab349200a}\label{group___f_l_a_s_h___half___cycle_ga65eb4c393cbc94747449b8aab349200a}} 
+\index{FLASH Half Cycle@{FLASH Half Cycle}!\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_ENABLE@{\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_ENABLE}}
+\index{\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_ENABLE@{\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_ENABLE}!FLASH Half Cycle@{FLASH Half Cycle}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_ENABLE}{\_\_HAL\_FLASH\_HALF\_CYCLE\_ACCESS\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+HALF\+\_\+\+CYCLE\+\_\+\+ACCESS\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(FLASH-\/$>$ACR $\vert$= \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6e66d0fa94c019e9c27a3d79e8228cd9}{FLASH\+\_\+\+ACR\+\_\+\+HLFCYA}})}
+
+
+
+Enable the FLASH half cycle access. 
+
+\begin{DoxyNote}{Note}
+half cycle access can only be used with a low-\/frequency clock of less than 8 MHz that can be obtained with the use of HSI or HSE but not of PLL. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

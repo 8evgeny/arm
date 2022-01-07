@@ -1,0 +1,60 @@
+\hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status}{}\doxysection{APB1 Peripheral Clock Enable Disable Status}
+\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status}\index{APB1 Peripheral Clock Enable Disable Status@{APB1 Peripheral Clock Enable Disable Status}}
+
+
+Get the enable or disable status of the APB1 peripheral clock.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gadee5016adb1c8b62a5bb05f055859de0}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gadee5016adb1c8b62a5bb05f055859de0}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM2\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gacd3966a4d6ae47f06b3c095eaf26a610}{RCC\+\_\+\+APB1\+ENR\+\_\+\+TIM2\+EN}})) != RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gacaaa75c78c8ef4cf85f30fb20d522054}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gacaaa75c78c8ef4cf85f30fb20d522054}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM2\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gacd3966a4d6ae47f06b3c095eaf26a610}{RCC\+\_\+\+APB1\+ENR\+\_\+\+TIM2\+EN}})) == RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gaf6090239db6a8a6917b3f3accea15ed0}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gaf6090239db6a8a6917b3f3accea15ed0}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM3\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga75bfa33eb00ee30c6e22f7ceea464ac7}{RCC\+\_\+\+APB1\+ENR\+\_\+\+TIM3\+EN}})) != RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga50f8e043a42eaf534c1efa2477078c0a}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga50f8e043a42eaf534c1efa2477078c0a}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM3\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga75bfa33eb00ee30c6e22f7ceea464ac7}{RCC\+\_\+\+APB1\+ENR\+\_\+\+TIM3\+EN}})) == RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga9b26aff2638d1e0613b0ce0530f0cd48}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga9b26aff2638d1e0613b0ce0530f0cd48}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+WWDG\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf712b922ee776a972d2efa3da0ea4733}{RCC\+\_\+\+APB1\+ENR\+\_\+\+WWDGEN}})) != RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga21d4e081c859ddccd4492343743bb245}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga21d4e081c859ddccd4492343743bb245}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+WWDG\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf712b922ee776a972d2efa3da0ea4733}{RCC\+\_\+\+APB1\+ENR\+\_\+\+WWDGEN}})) == RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gad3bbe0639658ed2cc56f8328b26373ea}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gad3bbe0639658ed2cc56f8328b26373ea}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART2\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gab840af4f735ec36419d61c7db3cfa00d}{RCC\+\_\+\+APB1\+ENR\+\_\+\+USART2\+EN}})) != RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga61e4b1f3e82831cdc7508d4c38312eab}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga61e4b1f3e82831cdc7508d4c38312eab}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART2\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gab840af4f735ec36419d61c7db3cfa00d}{RCC\+\_\+\+APB1\+ENR\+\_\+\+USART2\+EN}})) == RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga7570e5654fd61b44dabe0546e524c906}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga7570e5654fd61b44dabe0546e524c906}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5ca3afe0c517702b2d1366b692c8db0e}{RCC\+\_\+\+APB1\+ENR\+\_\+\+I2\+C1\+EN}})) != RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga8868ab331b4bb14a1d5cc55c9133e4de}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga8868ab331b4bb14a1d5cc55c9133e4de}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5ca3afe0c517702b2d1366b692c8db0e}{RCC\+\_\+\+APB1\+ENR\+\_\+\+I2\+C1\+EN}})) == RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gabec2fa9dccfe0e8e239b02303f2a56c4}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gabec2fa9dccfe0e8e239b02303f2a56c4}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+BKP\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gad32a0efcb7062b8ffbf77865951d2a54}{RCC\+\_\+\+APB1\+ENR\+\_\+\+BKPEN}})) != RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gaa6e91221fef5277d99489a232e0d6d6f}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_gaa6e91221fef5277d99489a232e0d6d6f}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+BKP\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gad32a0efcb7062b8ffbf77865951d2a54}{RCC\+\_\+\+APB1\+ENR\+\_\+\+BKPEN}})) == RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga850f4fd113303ed7322577ad023cf748}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga850f4fd113303ed7322577ad023cf748}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+PWR\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5c19997ccd28464b80a7c3325da0ca60}{RCC\+\_\+\+APB1\+ENR\+\_\+\+PWREN}})) != RESET)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga1019fdeb30eb4bcb23a0bea2278a94a2}\label{group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status_ga1019fdeb30eb4bcb23a0bea2278a94a2}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+PWR\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((RCC-\/$>$APB1\+ENR \& (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5c19997ccd28464b80a7c3325da0ca60}{RCC\+\_\+\+APB1\+ENR\+\_\+\+PWREN}})) == RESET)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Get the enable or disable status of the APB1 peripheral clock. 
+
+\begin{DoxyNote}{Note}
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. 
+\end{DoxyNote}

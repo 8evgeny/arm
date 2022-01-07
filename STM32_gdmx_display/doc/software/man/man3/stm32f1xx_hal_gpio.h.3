@@ -1,0 +1,229 @@
+.TH "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \- Header file of GPIO HAL module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f1xx_hal_def\&.h'\fP
+.br
+\fC#include 'stm32f1xx_hal_gpio_ex\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBGPIO_InitTypeDef\fP"
+.br
+.RI "GPIO Init structure definition\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGPIO_PIN_0\fP   ((uint16_t)0x0001)  /* Pin 0 selected    */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_1\fP   ((uint16_t)0x0002)  /* Pin 1 selected    */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_2\fP   ((uint16_t)0x0004)  /* Pin 2 selected    */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_3\fP   ((uint16_t)0x0008)  /* Pin 3 selected    */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_4\fP   ((uint16_t)0x0010)  /* Pin 4 selected    */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_5\fP   ((uint16_t)0x0020)  /* Pin 5 selected    */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_6\fP   ((uint16_t)0x0040)  /* Pin 6 selected    */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_7\fP   ((uint16_t)0x0080)  /* Pin 7 selected    */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_8\fP   ((uint16_t)0x0100)  /* Pin 8 selected    */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_9\fP   ((uint16_t)0x0200)  /* Pin 9 selected    */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_10\fP   ((uint16_t)0x0400)  /* Pin 10 selected   */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_11\fP   ((uint16_t)0x0800)  /* Pin 11 selected   */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_12\fP   ((uint16_t)0x1000)  /* Pin 12 selected   */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_13\fP   ((uint16_t)0x2000)  /* Pin 13 selected   */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_14\fP   ((uint16_t)0x4000)  /* Pin 14 selected   */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_15\fP   ((uint16_t)0x8000)  /* Pin 15 selected   */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_All\fP   ((uint16_t)0xFFFF)  /* All pins selected */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PIN_MASK\fP   0x0000FFFFu /* PIN mask for assert test */"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_INPUT\fP   0x00000000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_OUTPUT_PP\fP   0x00000001u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_OUTPUT_OD\fP   0x00000011u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_AF_PP\fP   0x00000002u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_AF_OD\fP   0x00000012u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_AF_INPUT\fP   \fBGPIO_MODE_INPUT\fP"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_ANALOG\fP   0x00000003u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_IT_RISING\fP   0x10110000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_IT_FALLING\fP   0x10210000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_IT_RISING_FALLING\fP   0x10310000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_EVT_RISING\fP   0x10120000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_EVT_FALLING\fP   0x10220000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_EVT_RISING_FALLING\fP   0x10320000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_SPEED_FREQ_LOW\fP   (\fBGPIO_CRL_MODE0_1\fP)"
+.br
+.ti -1c
+.RI "#define \fBGPIO_SPEED_FREQ_MEDIUM\fP   (\fBGPIO_CRL_MODE0_0\fP)"
+.br
+.ti -1c
+.RI "#define \fBGPIO_SPEED_FREQ_HIGH\fP   (\fBGPIO_CRL_MODE0\fP)"
+.br
+.ti -1c
+.RI "#define \fBGPIO_NOPULL\fP   0x00000000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PULLUP\fP   0x00000001u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PULLDOWN\fP   0x00000002u"
+.br
+.ti -1c
+.RI "#define \fB__HAL_GPIO_EXTI_GET_FLAG\fP(__EXTI_LINE__)   (EXTI\->PR & (__EXTI_LINE__))"
+.br
+.RI "Checks whether the specified EXTI line flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_GPIO_EXTI_CLEAR_FLAG\fP(__EXTI_LINE__)   (EXTI\->PR = (__EXTI_LINE__))"
+.br
+.RI "Clears the EXTI's line pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_GPIO_EXTI_GET_IT\fP(__EXTI_LINE__)   (EXTI\->PR & (__EXTI_LINE__))"
+.br
+.RI "Checks whether the specified EXTI line is asserted or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_GPIO_EXTI_CLEAR_IT\fP(__EXTI_LINE__)   (EXTI\->PR = (__EXTI_LINE__))"
+.br
+.RI "Clears the EXTI's line pending bits\&. "
+.ti -1c
+.RI "#define \fB__HAL_GPIO_EXTI_GENERATE_SWIT\fP(__EXTI_LINE__)   (EXTI\->SWIER |= (__EXTI_LINE__))"
+.br
+.RI "Generates a Software interrupt on selected EXTI line\&. "
+.ti -1c
+.RI "#define \fBIS_GPIO_PIN_ACTION\fP(ACTION)   (((ACTION) == GPIO_PIN_RESET) || ((ACTION) == GPIO_PIN_SET))"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_PIN\fP(PIN)   (((((uint32_t)PIN) & GPIO_PIN_MASK ) != 0x00u) && ((((uint32_t)PIN) & ~GPIO_PIN_MASK) == 0x00u))"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_MODE\fP(MODE)"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_SPEED\fP(SPEED)"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_PULL\fP(PULL)"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBGPIO_PinState\fP { \fBGPIO_PIN_RESET\fP = 0u, \fBGPIO_PIN_SET\fP }"
+.br
+.RI "GPIO Bit SET and Bit RESET enumeration\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBHAL_GPIO_Init\fP (\fBGPIO_TypeDef\fP *GPIOx, \fBGPIO_InitTypeDef\fP *GPIO_Init)"
+.br
+.ti -1c
+.RI "void \fBHAL_GPIO_DeInit\fP (\fBGPIO_TypeDef\fP *GPIOx, uint32_t GPIO_Pin)"
+.br
+.ti -1c
+.RI "\fBGPIO_PinState\fP \fBHAL_GPIO_ReadPin\fP (\fBGPIO_TypeDef\fP *GPIOx, uint16_t GPIO_Pin)"
+.br
+.ti -1c
+.RI "void \fBHAL_GPIO_WritePin\fP (\fBGPIO_TypeDef\fP *GPIOx, uint16_t GPIO_Pin, \fBGPIO_PinState\fP PinState)"
+.br
+.ti -1c
+.RI "void \fBHAL_GPIO_TogglePin\fP (\fBGPIO_TypeDef\fP *GPIOx, uint16_t GPIO_Pin)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_GPIO_LockPin\fP (\fBGPIO_TypeDef\fP *GPIOx, uint16_t GPIO_Pin)"
+.br
+.ti -1c
+.RI "void \fBHAL_GPIO_EXTI_IRQHandler\fP (uint16_t GPIO_Pin)"
+.br
+.ti -1c
+.RI "void \fBHAL_GPIO_EXTI_Callback\fP (uint16_t GPIO_Pin)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file of GPIO HAL module\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2016 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

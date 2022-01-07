@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_ea31fac118d0acc7c18c32b193822606" kind="dir">
+    <compoundname>Debug/Drivers/STM32F1xx_HAL_Driver/Src</compoundname>
+    <innerfile refid="stm32f1xx__hal_8d">stm32f1xx_hal.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__cortex_8d">stm32f1xx_hal_cortex.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__dma_8d">stm32f1xx_hal_dma.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__exti_8d">stm32f1xx_hal_exti.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__flash_8d">stm32f1xx_hal_flash.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__flash__ex_8d">stm32f1xx_hal_flash_ex.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__gpio_8d">stm32f1xx_hal_gpio.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__gpio__ex_8d">stm32f1xx_hal_gpio_ex.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__pcd_8d">stm32f1xx_hal_pcd.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__pcd__ex_8d">stm32f1xx_hal_pcd_ex.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__pwr_8d">stm32f1xx_hal_pwr.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__rcc_8d">stm32f1xx_hal_rcc.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__rcc__ex_8d">stm32f1xx_hal_rcc_ex.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__tim_8d">stm32f1xx_hal_tim.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__tim__ex_8d">stm32f1xx_hal_tim_ex.d</innerfile>
+    <innerfile refid="stm32f1xx__ll__usb_8d">stm32f1xx_ll_usb.d</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Debug/Drivers/STM32F1xx_HAL_Driver/Src/"/>
+  </compounddef>
+</doxygen>

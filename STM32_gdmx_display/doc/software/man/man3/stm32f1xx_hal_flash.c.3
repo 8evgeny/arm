@@ -1,0 +1,99 @@
+.TH "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c \- FLASH HAL module driver\&. This file provides firmware functions to manage the following functionalities of the internal FLASH memory:  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f1xx_hal\&.h'\fP
+.br
+
+.SH "Detailed Description"
+.PP 
+FLASH HAL module driver\&. This file provides firmware functions to manage the following functionalities of the internal FLASH memory: 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.IP "\(bu" 2
+Program operations functions
+.IP "\(bu" 2
+Memory Control functions
+.IP "\(bu" 2
+Peripheral State functions
+.PP
+.RE
+.PP
+.PP
+.nf
+==============================================================================
+                      ##### FLASH peripheral features #####
+==============================================================================
+[..] The Flash memory interface manages CPU AHB I-Code and D-Code accesses 
+     to the Flash memory. It implements the erase and program Flash memory operations 
+     and the read and write protection mechanisms.
+
+[..] The Flash memory interface accelerates code execution with a system of instruction
+    prefetch. 
+
+[..] The FLASH main features are:
+    (+) Flash memory read operations
+    (+) Flash memory program/erase operations
+    (+) Read / write protections
+    (+) Prefetch on I-Code
+    (+) Option Bytes programming
+
+
+                   ##### How to use this driver #####
+==============================================================================
+[..]                             
+    This driver provides functions and macros to configure and program the FLASH 
+    memory of all STM32F1xx devices.
+  
+    (#) FLASH Memory I/O Programming functions: this group includes all needed
+        functions to erase and program the main memory:
+      (++) Lock and Unlock the FLASH interface
+      (++) Erase function: Erase page, erase all pages
+      (++) Program functions: half word, word and doubleword
+    (#) FLASH Option Bytes Programming functions: this group includes all needed
+        functions to manage the Option Bytes:
+      (++) Lock and Unlock the Option Bytes
+      (++) Set/Reset the write protection
+      (++) Set the Read protection Level
+      (++) Program the user Option Bytes
+      (++) Launch the Option Bytes loader
+      (++) Erase Option Bytes
+      (++) Program the data Option Bytes
+      (++) Get the Write protection.
+      (++) Get the user option bytes.
+  
+    (#) Interrupts and flags management functions : this group 
+        includes all needed functions to:
+      (++) Handle FLASH interrupts
+      (++) Wait for last FLASH operation according to its status
+      (++) Get error flag status
+
+[..] In addition to these function, this driver includes a set of macros allowing
+     to handle the following operations:
+    
+    (+) Set/Get the latency
+    (+) Enable/Disable the prefetch buffer
+    (+) Enable/Disable the half cycle access
+    (+) Enable/Disable the FLASH interrupts
+    (+) Monitor the FLASH flags status.fi
+.PP
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2016 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

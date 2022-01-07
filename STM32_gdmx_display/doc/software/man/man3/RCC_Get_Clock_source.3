@@ -1,0 +1,68 @@
+.TH "RCC_Get_Clock_source" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_Get_Clock_source \- Get Clock source
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCLK_CONFIG\fP(__SYSCLKSOURCE__)                     MODIFY_REG(RCC\->CFGR, \fBRCC_CFGR_SW\fP, (__SYSCLKSOURCE__))"
+.br
+.RI "Macro to configure the system clock source\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_SYSCLK_SOURCE\fP()   ((uint32_t)(READ_BIT(RCC\->CFGR,\fBRCC_CFGR_SWS\fP)))"
+.br
+.RI "Macro to get the clock source used as system clock\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_RCC_GET_SYSCLK_SOURCE()   ((uint32_t)(READ_BIT(RCC\->CFGR,\fBRCC_CFGR_SWS\fP)))"
+
+.PP
+Macro to get the clock source used as system clock\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP clock source used as system clock\&. The returned value can be one of the following: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_SYSCLKSOURCE_STATUS_HSI\fP HSI used as system clock 
+.IP "\(bu" 2
+\fBRCC_SYSCLKSOURCE_STATUS_HSE\fP HSE used as system clock 
+.IP "\(bu" 2
+\fBRCC_SYSCLKSOURCE_STATUS_PLLCLK\fP PLL used as system clock 
+.PP
+.RE
+.PP
+
+.SS "#define __HAL_RCC_SYSCLK_CONFIG(__SYSCLKSOURCE__)                     MODIFY_REG(RCC\->CFGR, \fBRCC_CFGR_SW\fP, (__SYSCLKSOURCE__))"
+
+.PP
+Macro to configure the system clock source\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>SYSCLKSOURCE</strong>\fP specifies the system clock source\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_SYSCLKSOURCE_HSI\fP HSI oscillator is used as system clock source\&. 
+.IP "\(bu" 2
+\fBRCC_SYSCLKSOURCE_HSE\fP HSE oscillator is used as system clock source\&. 
+.IP "\(bu" 2
+\fBRCC_SYSCLKSOURCE_PLLCLK\fP PLL output is used as system clock source\&. 
+.PP
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t" xml:lang="en-US">
+<title>EVENTOUT Cortex Configuration</title>
+<indexterm><primary>EVENTOUT Cortex Configuration</primary></indexterm>
+<para>
+
+<para>This section propose definition to use the Cortex EVENTOUT signal. </para>
+ 
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n">EVENTOUT Pin</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t">EVENTOUT Port</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This section propose definition to use the Cortex EVENTOUT signal. </para>
+</section>
+</section>

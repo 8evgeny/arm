@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___a_h_b___peripheral___clock___enable___disable___status" xml:lang="en-US">
+<title>AHB Peripheral Clock Enable Disable Status</title>
+<indexterm><primary>AHB Peripheral Clock Enable Disable Status</primary></indexterm>
+<para>
+
+<para>Get the enable or disable status of the AHB peripheral clock. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_h_b___peripheral___clock___enable___disable___status_1gaab05e603c9cadd72e4b6397837b46cef"/>#define <emphasis role="strong">__HAL_RCC_DMA1_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;AHBENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gac8c3053f1ce37c9f643f0e31471927ea">RCC_AHBENR_DMA1EN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_h_b___peripheral___clock___enable___disable___status_1gae89d94d6252c79e450623f69eb939ed6"/>#define <emphasis role="strong">__HAL_RCC_DMA1_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;AHBENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gac8c3053f1ce37c9f643f0e31471927ea">RCC_AHBENR_DMA1EN</link>)) == RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_h_b___peripheral___clock___enable___disable___status_1ga87efa23f18c79992ea64654c4d159f3b"/>#define <emphasis role="strong">__HAL_RCC_SRAM_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;AHBENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga295a704767cb94ee624cbc4dd4c4cd9a">RCC_AHBENR_SRAMEN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_h_b___peripheral___clock___enable___disable___status_1ga44b59a52419512fd34d2d87190bf39c8"/>#define <emphasis role="strong">__HAL_RCC_SRAM_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;AHBENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga295a704767cb94ee624cbc4dd4c4cd9a">RCC_AHBENR_SRAMEN</link>)) == RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_h_b___peripheral___clock___enable___disable___status_1ga40f5675d8f45c678b8a2f43fca8f991e"/>#define <emphasis role="strong">__HAL_RCC_FLITF_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;AHBENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga67a12de126652d191a1bc2c114c3395a">RCC_AHBENR_FLITFEN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_h_b___peripheral___clock___enable___disable___status_1gaeab36991bb98be402aae3d70b0887658"/>#define <emphasis role="strong">__HAL_RCC_FLITF_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;AHBENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga67a12de126652d191a1bc2c114c3395a">RCC_AHBENR_FLITFEN</link>)) == RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_h_b___peripheral___clock___enable___disable___status_1ga0e1b25cbf589c1c47c1d069e4c803d56"/>#define <emphasis role="strong">__HAL_RCC_CRC_IS_CLK_ENABLED</emphasis>()   ((RCC-&gt;AHBENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gade3ee302bf659a2bfbf75e1a00630242">RCC_AHBENR_CRCEN</link>)) != RESET)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_h_b___peripheral___clock___enable___disable___status_1ga3d2645916b9ee9bad8c724a719c621d9"/>#define <emphasis role="strong">__HAL_RCC_CRC_IS_CLK_DISABLED</emphasis>()   ((RCC-&gt;AHBENR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1gade3ee302bf659a2bfbf75e1a00630242">RCC_AHBENR_CRCEN</link>)) == RESET)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Get the enable or disable status of the AHB peripheral clock. </para>
+
+<para><note><title>Note</title>
+
+<para>After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. </para>
+</note>
+</para>
+</section>
+</section>

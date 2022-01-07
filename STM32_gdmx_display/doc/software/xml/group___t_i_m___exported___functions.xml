@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___t_i_m___exported___functions" kind="group">
+    <compoundname>TIM_Exported_Functions</compoundname>
+    <title>TIM Exported Functions</title>
+    <innergroup refid="group___t_i_m___exported___functions___group8">TIM Peripheral Control functions</innergroup>
+    <innergroup refid="group___t_i_m___exported___functions___group9">TIM Callbacks functions</innergroup>
+    <innergroup refid="group___t_i_m___exported___functions___group10">TIM Peripheral State functions</innergroup>
+    <innergroup refid="group___t_i_m___exported___functions___group1">TIM Time Base functions</innergroup>
+    <innergroup refid="group___t_i_m___exported___functions___group2">TIM Output Compare functions</innergroup>
+    <innergroup refid="group___t_i_m___exported___functions___group3">TIM PWM functions</innergroup>
+    <innergroup refid="group___t_i_m___exported___functions___group4">TIM Input Capture functions</innergroup>
+    <innergroup refid="group___t_i_m___exported___functions___group5">TIM One Pulse functions</innergroup>
+    <innergroup refid="group___t_i_m___exported___functions___group6">TIM Encoder functions</innergroup>
+    <innergroup refid="group___t_i_m___exported___functions___group7">TIM IRQ handler management</innergroup>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___p_w_r___regulator__state__in___s_l_e_e_p___s_t_o_p__mode" xml:lang="en-US">
+<title>PWR Regulator state in SLEEP/STOP mode</title>
+<indexterm><primary>PWR Regulator state in SLEEP/STOP mode</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___p_w_r___regulator__state__in___s_l_e_e_p___s_t_o_p__mode_1ga1d5b4e1482184286e28c16162f530039"/>#define <emphasis role="strong">PWR_MAINREGULATOR_ON</emphasis>   0x00000000U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___p_w_r___regulator__state__in___s_l_e_e_p___s_t_o_p__mode_1gab9922a15f8414818d736d5e7fcace963"/>#define <emphasis role="strong">PWR_LOWPOWERREGULATOR_ON</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga3aeb8d6f2539b0a3a4b851aeba0eea66">PWR_CR_LPDS</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

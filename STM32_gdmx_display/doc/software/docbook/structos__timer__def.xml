@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structos__timer__def" xml:lang="en-US">
+<title>os_timer_def Struct Reference</title>
+<indexterm><primary>os_timer_def</primary></indexterm>
+<para>
+<computeroutput>#include &lt;cmsis_os.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structos__timer__def_1a15773df83aba93f8e61f3737af5fae47"/>os_ptimer <link linkend="_structos__timer__def_1a15773df83aba93f8e61f3737af5fae47">ptimer</link></para>
+
+<para>start address of a timer function </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Timer Definition structure contains timer parameters. <note><title>Note</title>
+
+<para>CAN BE CHANGED: <emphasis role="bold"><link linkend="_structos__timer__def">os_timer_def</link></emphasis> is implementation specific in every CMSIS-RTOS. </para>
+</note>
+</para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h</section>
+</section>

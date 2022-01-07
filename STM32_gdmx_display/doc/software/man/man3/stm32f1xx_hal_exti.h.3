@@ -1,0 +1,225 @@
+.TH "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h \- Header file of EXTI HAL module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f1xx_hal_def\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBEXTI_HandleTypeDef\fP"
+.br
+.RI "EXTI Handle structure definition\&. "
+.ti -1c
+.RI "struct \fBEXTI_ConfigTypeDef\fP"
+.br
+.RI "EXTI Configuration structure definition\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBEXTI_LINE_0\fP   (EXTI_GPIO     | 0x00u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_1\fP   (EXTI_GPIO     | 0x01u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_2\fP   (EXTI_GPIO     | 0x02u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_3\fP   (EXTI_GPIO     | 0x03u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_4\fP   (EXTI_GPIO     | 0x04u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_5\fP   (EXTI_GPIO     | 0x05u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_6\fP   (EXTI_GPIO     | 0x06u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_7\fP   (EXTI_GPIO     | 0x07u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_8\fP   (EXTI_GPIO     | 0x08u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_9\fP   (EXTI_GPIO     | 0x09u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_10\fP   (EXTI_GPIO     | 0x0Au)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_11\fP   (EXTI_GPIO     | 0x0Bu)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_12\fP   (EXTI_GPIO     | 0x0Cu)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_13\fP   (EXTI_GPIO     | 0x0Du)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_14\fP   (EXTI_GPIO     | 0x0Eu)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_15\fP   (EXTI_GPIO     | 0x0Fu)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_16\fP   (EXTI_CONFIG   | 0x10u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_LINE_17\fP   (EXTI_CONFIG   | 0x11u)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_MODE_NONE\fP   0x00000000u"
+.br
+.ti -1c
+.RI "#define \fBEXTI_MODE_INTERRUPT\fP   0x00000001u"
+.br
+.ti -1c
+.RI "#define \fBEXTI_MODE_EVENT\fP   0x00000002u"
+.br
+.ti -1c
+.RI "#define \fBEXTI_TRIGGER_NONE\fP   0x00000000u"
+.br
+.ti -1c
+.RI "#define \fBEXTI_TRIGGER_RISING\fP   0x00000001u"
+.br
+.ti -1c
+.RI "#define \fBEXTI_TRIGGER_FALLING\fP   0x00000002u"
+.br
+.ti -1c
+.RI "#define \fBEXTI_TRIGGER_RISING_FALLING\fP   (EXTI_TRIGGER_RISING | EXTI_TRIGGER_FALLING)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_GPIOA\fP   0x00000000u"
+.br
+.ti -1c
+.RI "#define \fBEXTI_GPIOB\fP   0x00000001u"
+.br
+.ti -1c
+.RI "#define \fBEXTI_GPIOC\fP   0x00000002u"
+.br
+.ti -1c
+.RI "#define \fBEXTI_GPIOD\fP   0x00000003u"
+.br
+.ti -1c
+.RI "#define \fBEXTI_PROPERTY_SHIFT\fP   24u"
+.br
+.RI "EXTI Line property definition\&. "
+.ti -1c
+.RI "#define \fBEXTI_CONFIG\fP   (0x02uL << \fBEXTI_PROPERTY_SHIFT\fP)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_GPIO\fP   ((0x04uL << \fBEXTI_PROPERTY_SHIFT\fP) | EXTI_CONFIG)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_PROPERTY_MASK\fP   (EXTI_CONFIG | EXTI_GPIO)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_PIN_MASK\fP   0x0000001Fu"
+.br
+.RI "EXTI bit usage\&. "
+.ti -1c
+.RI "#define \fBEXTI_MODE_MASK\fP   (EXTI_MODE_EVENT | EXTI_MODE_INTERRUPT)"
+.br
+.RI "EXTI Mask for interrupt & event mode\&. "
+.ti -1c
+.RI "#define \fBEXTI_TRIGGER_MASK\fP   (EXTI_TRIGGER_RISING | EXTI_TRIGGER_FALLING)"
+.br
+.RI "EXTI Mask for trigger possibilities\&. "
+.ti -1c
+.RI "#define \fBEXTI_LINE_NB\fP   18UL"
+.br
+.RI "EXTI Line number\&. "
+.ti -1c
+.RI "#define \fBIS_EXTI_LINE\fP(__LINE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_EXTI_MODE\fP(__LINE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_EXTI_TRIGGER\fP(__LINE__)   (((__LINE__) & ~\fBEXTI_TRIGGER_MASK\fP) == 0x00u)"
+.br
+.ti -1c
+.RI "#define \fBIS_EXTI_PENDING_EDGE\fP(__LINE__)   ((__LINE__) == EXTI_TRIGGER_RISING_FALLING)"
+.br
+.ti -1c
+.RI "#define \fBIS_EXTI_CONFIG_LINE\fP(__LINE__)   (((__LINE__) & EXTI_CONFIG) != 0x00u)"
+.br
+.ti -1c
+.RI "#define \fBIS_EXTI_GPIO_PORT\fP(__PORT__)"
+.br
+.ti -1c
+.RI "#define \fBIS_EXTI_GPIO_PIN\fP(__PIN__)   ((__PIN__) < 16u)"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBEXTI_CallbackIDTypeDef\fP { \fBHAL_EXTI_COMMON_CB_ID\fP = 0x00U }"
+.br
+.RI "HAL EXTI common Callback ID enumeration definition\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_EXTI_SetConfigLine\fP (\fBEXTI_HandleTypeDef\fP *hexti, \fBEXTI_ConfigTypeDef\fP *pExtiConfig)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_EXTI_GetConfigLine\fP (\fBEXTI_HandleTypeDef\fP *hexti, \fBEXTI_ConfigTypeDef\fP *pExtiConfig)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_EXTI_ClearConfigLine\fP (\fBEXTI_HandleTypeDef\fP *hexti)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_EXTI_RegisterCallback\fP (\fBEXTI_HandleTypeDef\fP *hexti, \fBEXTI_CallbackIDTypeDef\fP CallbackID, void(*pPendingCbfn)(void))"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_EXTI_GetHandle\fP (\fBEXTI_HandleTypeDef\fP *hexti, uint32_t ExtiLine)"
+.br
+.ti -1c
+.RI "void \fBHAL_EXTI_IRQHandler\fP (\fBEXTI_HandleTypeDef\fP *hexti)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_EXTI_GetPending\fP (\fBEXTI_HandleTypeDef\fP *hexti, uint32_t Edge)"
+.br
+.ti -1c
+.RI "void \fBHAL_EXTI_ClearPending\fP (\fBEXTI_HandleTypeDef\fP *hexti, uint32_t Edge)"
+.br
+.ti -1c
+.RI "void \fBHAL_EXTI_GenerateSWI\fP (\fBEXTI_HandleTypeDef\fP *hexti)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file of EXTI HAL module\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2019 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

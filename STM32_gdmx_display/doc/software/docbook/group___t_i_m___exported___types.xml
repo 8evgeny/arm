@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___exported___types" xml:lang="en-US">
+<title>TIM Exported Types</title>
+<indexterm><primary>TIM Exported Types</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_t_i_m___base___init_type_def">TIM_Base_InitTypeDef</link></para>
+
+<para>TIM Time base Configuration Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___o_c___init_type_def">TIM_OC_InitTypeDef</link></para>
+
+<para>TIM Output Compare Configuration Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___one_pulse___init_type_def">TIM_OnePulse_InitTypeDef</link></para>
+
+<para>TIM One Pulse Mode Configuration Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___i_c___init_type_def">TIM_IC_InitTypeDef</link></para>
+
+<para>TIM Input Capture Configuration Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___encoder___init_type_def">TIM_Encoder_InitTypeDef</link></para>
+
+<para>TIM Encoder Configuration Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___clock_config_type_def">TIM_ClockConfigTypeDef</link></para>
+
+<para>Clock Configuration Handle Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___clear_input_config_type_def">TIM_ClearInputConfigTypeDef</link></para>
+
+<para>TIM Clear Input Configuration Handle Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___master_config_type_def">TIM_MasterConfigTypeDef</link></para>
+
+<para>TIM Master configuration Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___slave_config_type_def">TIM_SlaveConfigTypeDef</link></para>
+
+<para>TIM Slave configuration Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___break_dead_time_config_type_def">TIM_BreakDeadTimeConfigTypeDef</link></para>
+
+<para>TIM Break input(s) and Dead time configuration Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link></para>
+
+<para>TIM Time Base Handle Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___t_i_m___exported___types_1gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</link> { 
+<link linkend="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca28011b79e60b74a6c55947c505c51cbc">HAL_TIM_STATE_RESET</link> = 0x00U
+, <link linkend="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca4545554d7fa04d17e78d69d17cb7e4b3">HAL_TIM_STATE_READY</link> = 0x01U
+, <link linkend="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca1ddbfef19ad0562eb8143919b710cc12">HAL_TIM_STATE_BUSY</link> = 0x02U
+, <link linkend="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca03e3339df71a74ac37820f72c2989371">HAL_TIM_STATE_TIMEOUT</link> = 0x03U
+, 
+<link linkend="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca318cceb243cb9ca9e01833913e4f90ea">HAL_TIM_STATE_ERROR</link> = 0x04U
+ }</para>
+
+<para>HAL State structures definition. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___t_i_m___exported___types_1gaa3fa7bcbb4707f1151ccfc90a8cf9706">HAL_TIM_ActiveChannel</link> { 
+<link linkend="_group___t_i_m___exported___types_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a2024e95c48b58ec9b2115faa276e3fad">HAL_TIM_ACTIVE_CHANNEL_1</link> = 0x01U
+, <link linkend="_group___t_i_m___exported___types_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706ae80e6a1dd1c479f504219c0fec2f3322">HAL_TIM_ACTIVE_CHANNEL_2</link> = 0x02U
+, <link linkend="_group___t_i_m___exported___types_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706acc3fcf4ee6d91744c4bc6a5eccde2601">HAL_TIM_ACTIVE_CHANNEL_3</link> = 0x04U
+, <link linkend="_group___t_i_m___exported___types_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a7d98ec7e385cacb3aaa6cec601fa6ab6">HAL_TIM_ACTIVE_CHANNEL_4</link> = 0x08U
+, 
+<link linkend="_group___t_i_m___exported___types_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a574f72ac3bb41fe660318aa42dfdc98d">HAL_TIM_ACTIVE_CHANNEL_CLEARED</link> = 0x00U
+ }</para>
+
+<para>HAL Active channel structures definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___t_i_m___exported___types_1gaa3fa7bcbb4707f1151ccfc90a8cf9706"/>    <section>
+    <title>HAL_TIM_ActiveChannel</title>
+<indexterm><primary>HAL_TIM_ActiveChannel</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_ActiveChannel</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___t_i_m___exported___types_1gaa3fa7bcbb4707f1151ccfc90a8cf9706">HAL_TIM_ActiveChannel</link></computeroutput></para><para>
+
+<para>HAL Active channel structures definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_TIM_ACTIVE_CHANNEL_1</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_ACTIVE_CHANNEL_1</secondary></indexterm>
+<anchor xml:id="_group___t_i_m___exported___types_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a2024e95c48b58ec9b2115faa276e3fad"/>HAL_TIM_ACTIVE_CHANNEL_1</entry><entry>
+<para>The active channel is 1 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_ACTIVE_CHANNEL_2</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_ACTIVE_CHANNEL_2</secondary></indexterm>
+<anchor xml:id="_group___t_i_m___exported___types_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706ae80e6a1dd1c479f504219c0fec2f3322"/>HAL_TIM_ACTIVE_CHANNEL_2</entry><entry>
+<para>The active channel is 2 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_ACTIVE_CHANNEL_3</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_ACTIVE_CHANNEL_3</secondary></indexterm>
+<anchor xml:id="_group___t_i_m___exported___types_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706acc3fcf4ee6d91744c4bc6a5eccde2601"/>HAL_TIM_ACTIVE_CHANNEL_3</entry><entry>
+<para>The active channel is 3 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_ACTIVE_CHANNEL_4</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_ACTIVE_CHANNEL_4</secondary></indexterm>
+<anchor xml:id="_group___t_i_m___exported___types_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a7d98ec7e385cacb3aaa6cec601fa6ab6"/>HAL_TIM_ACTIVE_CHANNEL_4</entry><entry>
+<para>The active channel is 4 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_ACTIVE_CHANNEL_CLEARED</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_ACTIVE_CHANNEL_CLEARED</secondary></indexterm>
+<anchor xml:id="_group___t_i_m___exported___types_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a574f72ac3bb41fe660318aa42dfdc98d"/>HAL_TIM_ACTIVE_CHANNEL_CLEARED</entry><entry>
+<para>All active channels cleared </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+    </section><anchor xml:id="_group___t_i_m___exported___types_1gae0994cf5970e56ca4903e9151f40010c"/>    <section>
+    <title>HAL_TIM_StateTypeDef</title>
+<indexterm><primary>HAL_TIM_StateTypeDef</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___t_i_m___exported___types_1gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</link></computeroutput></para><para>
+
+<para>HAL State structures definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_TIM_STATE_RESET</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca28011b79e60b74a6c55947c505c51cbc"/>HAL_TIM_STATE_RESET</entry><entry>
+<para>Peripheral not yet initialized or disabled 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_STATE_READY</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca4545554d7fa04d17e78d69d17cb7e4b3"/>HAL_TIM_STATE_READY</entry><entry>
+<para>Peripheral Initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_STATE_BUSY</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca1ddbfef19ad0562eb8143919b710cc12"/>HAL_TIM_STATE_BUSY</entry><entry>
+<para>An internal process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_STATE_TIMEOUT</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca03e3339df71a74ac37820f72c2989371"/>HAL_TIM_STATE_TIMEOUT</entry><entry>
+<para>Timeout state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_STATE_ERROR</primary><secondary>TIM Exported Types</secondary></indexterm>
+<indexterm><primary>TIM Exported Types</primary><secondary>HAL_TIM_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___t_i_m___exported___types_1ggae0994cf5970e56ca4903e9151f40010ca318cceb243cb9ca9e01833913e4f90ea"/>HAL_TIM_STATE_ERROR</entry><entry>
+<para>Reception process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

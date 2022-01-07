@@ -1,0 +1,52 @@
+\hypertarget{struct___device__cb}{}\doxysection{\+\_\+\+Device\+\_\+cb Struct Reference}
+\label{struct___device__cb}\index{\_Device\_cb@{\_Device\_cb}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct___device__cb_a6766e3508b1115ff28f972cd38ca685e}\label{struct___device__cb_a6766e3508b1115ff28f972cd38ca685e}} 
+uint8\+\_\+t($\ast$ {\bfseries Init} )(struct \mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{\+\_\+\+USBD\+\_\+\+Handle\+Type\+Def}} $\ast$pdev, uint8\+\_\+t cfgidx)
+\item 
+\mbox{\Hypertarget{struct___device__cb_a0c3e05262fdf4d85c4efaf53491887b0}\label{struct___device__cb_a0c3e05262fdf4d85c4efaf53491887b0}} 
+uint8\+\_\+t($\ast$ {\bfseries De\+Init} )(struct \mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{\+\_\+\+USBD\+\_\+\+Handle\+Type\+Def}} $\ast$pdev, uint8\+\_\+t cfgidx)
+\item 
+\mbox{\Hypertarget{struct___device__cb_acdac828e3d3ffa0b1cac9851fa8d7f72}\label{struct___device__cb_acdac828e3d3ffa0b1cac9851fa8d7f72}} 
+uint8\+\_\+t($\ast$ {\bfseries Setup} )(struct \mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{\+\_\+\+USBD\+\_\+\+Handle\+Type\+Def}} $\ast$pdev, \mbox{\hyperlink{structusb__setup__req}{USBD\+\_\+\+Setup\+Req\+Typedef}} $\ast$req)
+\item 
+\mbox{\Hypertarget{struct___device__cb_ad1104933798bae825247d5c03e5694d0}\label{struct___device__cb_ad1104933798bae825247d5c03e5694d0}} 
+uint8\+\_\+t($\ast$ {\bfseries EP0\+\_\+\+Tx\+Sent} )(struct \mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{\+\_\+\+USBD\+\_\+\+Handle\+Type\+Def}} $\ast$pdev)
+\item 
+\mbox{\Hypertarget{struct___device__cb_ae4486c709f99410000a62641d12be2c1}\label{struct___device__cb_ae4486c709f99410000a62641d12be2c1}} 
+uint8\+\_\+t($\ast$ {\bfseries EP0\+\_\+\+Rx\+Ready} )(struct \mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{\+\_\+\+USBD\+\_\+\+Handle\+Type\+Def}} $\ast$pdev)
+\item 
+\mbox{\Hypertarget{struct___device__cb_a3200c47f98ebcea09202bd24e6cbe76a}\label{struct___device__cb_a3200c47f98ebcea09202bd24e6cbe76a}} 
+uint8\+\_\+t($\ast$ {\bfseries Data\+In} )(struct \mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{\+\_\+\+USBD\+\_\+\+Handle\+Type\+Def}} $\ast$pdev, uint8\+\_\+t epnum)
+\item 
+\mbox{\Hypertarget{struct___device__cb_a247be006602782de0a36d0bfb8403e3c}\label{struct___device__cb_a247be006602782de0a36d0bfb8403e3c}} 
+uint8\+\_\+t($\ast$ {\bfseries Data\+Out} )(struct \mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{\+\_\+\+USBD\+\_\+\+Handle\+Type\+Def}} $\ast$pdev, uint8\+\_\+t epnum)
+\item 
+\mbox{\Hypertarget{struct___device__cb_a7d7ea8a83453087520c85e0fad187a9a}\label{struct___device__cb_a7d7ea8a83453087520c85e0fad187a9a}} 
+uint8\+\_\+t($\ast$ {\bfseries SOF} )(struct \mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{\+\_\+\+USBD\+\_\+\+Handle\+Type\+Def}} $\ast$pdev)
+\item 
+\mbox{\Hypertarget{struct___device__cb_a794a6133ea44bef1be7735de3bb0d140}\label{struct___device__cb_a794a6133ea44bef1be7735de3bb0d140}} 
+uint8\+\_\+t($\ast$ {\bfseries Iso\+INIncomplete} )(struct \mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{\+\_\+\+USBD\+\_\+\+Handle\+Type\+Def}} $\ast$pdev, uint8\+\_\+t epnum)
+\item 
+\mbox{\Hypertarget{struct___device__cb_a26c067fe2f7b53408542f7451a2f8f0d}\label{struct___device__cb_a26c067fe2f7b53408542f7451a2f8f0d}} 
+uint8\+\_\+t($\ast$ {\bfseries Iso\+OUTIncomplete} )(struct \mbox{\hyperlink{struct___u_s_b_d___handle_type_def}{\+\_\+\+USBD\+\_\+\+Handle\+Type\+Def}} $\ast$pdev, uint8\+\_\+t epnum)
+\item 
+\mbox{\Hypertarget{struct___device__cb_ac8752bfe7926ac4e940c9fc23c3fb3da}\label{struct___device__cb_ac8752bfe7926ac4e940c9fc23c3fb3da}} 
+uint8\+\_\+t $\ast$($\ast$ {\bfseries Get\+HSConfig\+Descriptor} )(uint16\+\_\+t $\ast$length)
+\item 
+\mbox{\Hypertarget{struct___device__cb_a9f36421f1c47504abc179a61026713c0}\label{struct___device__cb_a9f36421f1c47504abc179a61026713c0}} 
+uint8\+\_\+t $\ast$($\ast$ {\bfseries Get\+FSConfig\+Descriptor} )(uint16\+\_\+t $\ast$length)
+\item 
+\mbox{\Hypertarget{struct___device__cb_a749f59dcd83ea5385b333e6ed5c96ea3}\label{struct___device__cb_a749f59dcd83ea5385b333e6ed5c96ea3}} 
+uint8\+\_\+t $\ast$($\ast$ {\bfseries Get\+Other\+Speed\+Config\+Descriptor} )(uint16\+\_\+t $\ast$length)
+\item 
+\mbox{\Hypertarget{struct___device__cb_a9974d8ef0c91be29ac0aeacf0884064e}\label{struct___device__cb_a9974d8ef0c91be29ac0aeacf0884064e}} 
+uint8\+\_\+t $\ast$($\ast$ {\bfseries Get\+Device\+Qualifier\+Descriptor} )(uint16\+\_\+t $\ast$length)
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Middlewares/\+ST/\+STM32\+\_\+\+USB\+\_\+\+Device\+\_\+\+Library/\+Core/\+Inc/\mbox{\hyperlink{usbd__def_8h}{usbd\+\_\+def.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+.TH "FLASH_ProcessTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FLASH_ProcessTypeDef \- FLASH handle Structure definition 
+.br
+  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_flash\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fB__IO\fP \fBFLASH_ProcedureTypeDef\fP \fBProcedureOnGoing\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBDataRemaining\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBAddress\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint64_t \fBData\fP"
+.br
+.ti -1c
+.RI "\fBHAL_LockTypeDef\fP \fBLock\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBErrorCode\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+FLASH handle Structure definition 
+.br
+ 
+.SH "Field Documentation"
+.PP 
+.SS "\fB__IO\fP uint32_t Address"
+Internal variable to save address selected for program or erase 
+.SS "\fB__IO\fP uint64_t Data"
+Internal variable to save data to be programmed 
+.SS "\fB__IO\fP uint32_t DataRemaining"
+Internal variable to save the remaining pages to erase or half-word to program in IT context 
+.SS "\fB__IO\fP uint32_t ErrorCode"
+FLASH error code 
+.br
+ This parameter can be a value of \fBFLASH Error Codes\fP 
+.br
+ 
+.SS "\fBHAL_LockTypeDef\fP Lock"
+FLASH locking object 
+.br
+ 
+.SS "\fB__IO\fP \fBFLASH_ProcedureTypeDef\fP ProcedureOnGoing"
+Internal variable to indicate which procedure is ongoing or not in IT context 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

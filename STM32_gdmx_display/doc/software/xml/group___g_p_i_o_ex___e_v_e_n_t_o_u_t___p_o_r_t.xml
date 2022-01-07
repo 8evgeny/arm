@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t" kind="group">
+    <compoundname>GPIOEx_EVENTOUT_PORT</compoundname>
+    <title>EVENTOUT Port</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga923160935b624e039735fb52e0e3f848" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PORT_A</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga4a85c353b94b1e9d22dd67088b1ac4d3" kindref="member">AFIO_EVCR_PORT_PA</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on port A </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="95" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga6fcb0bbd79fa6194d268c8eda55637b8" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PORT_B</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gad2d0d2c1f1c046bdf055bb99465592ef" kindref="member">AFIO_EVCR_PORT_PB</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on port B </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="96" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1gafed308a7c2b954b28e89b11e4087a6ea" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PORT_C</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga15241a60ec90040d0bb2d1b8c4c6b77f" kindref="member">AFIO_EVCR_PORT_PC</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on port C </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="97" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1gac7639a5273dd5f7be582b41b5d5e71b6" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PORT_D</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga45b10610230c14d7cc6a7fe15dabfc7d" kindref="member">AFIO_EVCR_PORT_PD</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on port D </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="98" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga0aeff714f7ceb462a26915788adddefb" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PORT_E</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gab4931a15c9784e7b7d0e678271cba75a" kindref="member">AFIO_EVCR_PORT_PE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on port E </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="99" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga9e6c9f1f73af1b6f579f050bd00cc43b" prot="public" static="no">
+        <name>IS_AFIO_EVENTOUT_PORT</name>
+        <param><defname>__PORT__</defname></param>
+        <initializer>                                         (((__PORT__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga923160935b624e039735fb52e0e3f848" kindref="member">AFIO_EVENTOUT_PORT_A</ref>) || \
+                                         ((__PORT__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga6fcb0bbd79fa6194d268c8eda55637b8" kindref="member">AFIO_EVENTOUT_PORT_B</ref>) || \
+                                         ((__PORT__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1gafed308a7c2b954b28e89b11e4087a6ea" kindref="member">AFIO_EVENTOUT_PORT_C</ref>) || \
+                                         ((__PORT__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1gac7639a5273dd5f7be582b41b5d5e71b6" kindref="member">AFIO_EVENTOUT_PORT_D</ref>) || \
+                                         ((__PORT__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga0aeff714f7ceb462a26915788adddefb" kindref="member">AFIO_EVENTOUT_PORT_E</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="101" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

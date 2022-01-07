@@ -1,0 +1,152 @@
+\hypertarget{group___u_s_b_d___c_o_n_f___exported___macros}{}\doxysection{USBD\+\_\+\+CONF\+\_\+\+Exported\+\_\+\+Macros}
+\label{group___u_s_b_d___c_o_n_f___exported___macros}\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+
+
+Aliases.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga35ff353194f56823357f503e546ccf4b}{USBD\+\_\+malloc}}~(uint32\+\_\+t $\ast$)\mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga2df01b9aae6026e9f6b55da3b1e72aee}{USBD\+\_\+static\+\_\+malloc}}
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_gab44fcf9b4d7bfbe8b1308eca76975fe5}{USBD\+\_\+free}}~\mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga92ed1214efe53f54b3586a6233cfa5a6}{USBD\+\_\+static\+\_\+free}}
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_gaf7b31857d15ef0abbd84e0e70a2b903f}{USBD\+\_\+memset}}~/$\ast$ Not used $\ast$/
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga18d9c17ef2afe7244b559ed428ca1e81}{USBD\+\_\+memcpy}}~/$\ast$ Not used $\ast$/
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga78993b66136329032c26d0c13a78e963}{USBD\+\_\+\+Delay}}~HAL\+\_\+\+Delay
+\item 
+\#define {\bfseries USBD\+\_\+\+Usr\+Log}(...)
+\item 
+\#define {\bfseries USBD\+\_\+\+Err\+Log}(...)
+\item 
+\#define {\bfseries USBD\+\_\+\+Dbg\+Log}(...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga2df01b9aae6026e9f6b55da3b1e72aee}{USBD\+\_\+static\+\_\+malloc}} (uint32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Static single allocation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga92ed1214efe53f54b3586a6233cfa5a6}{USBD\+\_\+static\+\_\+free}} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Dummy memory free. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aliases. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_s_b_d___c_o_n_f___exported___macros_ga009d0ba418c356a4668fac6115b07ac5}\label{group___u_s_b_d___c_o_n_f___exported___macros_ga009d0ba418c356a4668fac6115b07ac5}} 
+\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}!USBD\_DbgLog@{USBD\_DbgLog}}
+\index{USBD\_DbgLog@{USBD\_DbgLog}!USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{USBD\_DbgLog}{USBD\_DbgLog}}
+{\footnotesize\ttfamily \#define USBD\+\_\+\+Dbg\+Log(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                            printf(\textcolor{stringliteral}{"{}DEBUG : "{}}) ;\(\backslash\)}
+\DoxyCodeLine{                            printf(\_\_VA\_ARGS\_\_);\(\backslash\)}
+\DoxyCodeLine{                            printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_s_b_d___c_o_n_f___exported___macros_ga78993b66136329032c26d0c13a78e963}\label{group___u_s_b_d___c_o_n_f___exported___macros_ga78993b66136329032c26d0c13a78e963}} 
+\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}!USBD\_Delay@{USBD\_Delay}}
+\index{USBD\_Delay@{USBD\_Delay}!USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{USBD\_Delay}{USBD\_Delay}}
+{\footnotesize\ttfamily \#define USBD\+\_\+\+Delay~HAL\+\_\+\+Delay}
+
+Alias for delay. \mbox{\Hypertarget{group___u_s_b_d___c_o_n_f___exported___macros_ga077a76b66987212e70c3c4db2ca73a8b}\label{group___u_s_b_d___c_o_n_f___exported___macros_ga077a76b66987212e70c3c4db2ca73a8b}} 
+\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}!USBD\_ErrLog@{USBD\_ErrLog}}
+\index{USBD\_ErrLog@{USBD\_ErrLog}!USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{USBD\_ErrLog}{USBD\_ErrLog}}
+{\footnotesize\ttfamily \#define USBD\+\_\+\+Err\+Log(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                            printf(\textcolor{stringliteral}{"{}ERROR: "{}}) ;\(\backslash\)}
+\DoxyCodeLine{                            printf(\_\_VA\_ARGS\_\_);\(\backslash\)}
+\DoxyCodeLine{                            printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_s_b_d___c_o_n_f___exported___macros_gab44fcf9b4d7bfbe8b1308eca76975fe5}\label{group___u_s_b_d___c_o_n_f___exported___macros_gab44fcf9b4d7bfbe8b1308eca76975fe5}} 
+\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}!USBD\_free@{USBD\_free}}
+\index{USBD\_free@{USBD\_free}!USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{USBD\_free}{USBD\_free}}
+{\footnotesize\ttfamily \#define USBD\+\_\+free~\mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga92ed1214efe53f54b3586a6233cfa5a6}{USBD\+\_\+static\+\_\+free}}}
+
+Alias for memory release. \mbox{\Hypertarget{group___u_s_b_d___c_o_n_f___exported___macros_ga35ff353194f56823357f503e546ccf4b}\label{group___u_s_b_d___c_o_n_f___exported___macros_ga35ff353194f56823357f503e546ccf4b}} 
+\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}!USBD\_malloc@{USBD\_malloc}}
+\index{USBD\_malloc@{USBD\_malloc}!USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{USBD\_malloc}{USBD\_malloc}}
+{\footnotesize\ttfamily \#define USBD\+\_\+malloc~(uint32\+\_\+t $\ast$)\mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga2df01b9aae6026e9f6b55da3b1e72aee}{USBD\+\_\+static\+\_\+malloc}}}
+
+Alias for memory allocation. \mbox{\Hypertarget{group___u_s_b_d___c_o_n_f___exported___macros_ga18d9c17ef2afe7244b559ed428ca1e81}\label{group___u_s_b_d___c_o_n_f___exported___macros_ga18d9c17ef2afe7244b559ed428ca1e81}} 
+\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}!USBD\_memcpy@{USBD\_memcpy}}
+\index{USBD\_memcpy@{USBD\_memcpy}!USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{USBD\_memcpy}{USBD\_memcpy}}
+{\footnotesize\ttfamily \#define USBD\+\_\+memcpy~/$\ast$ Not used $\ast$/}
+
+Alias for memory copy. \mbox{\Hypertarget{group___u_s_b_d___c_o_n_f___exported___macros_gaf7b31857d15ef0abbd84e0e70a2b903f}\label{group___u_s_b_d___c_o_n_f___exported___macros_gaf7b31857d15ef0abbd84e0e70a2b903f}} 
+\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}!USBD\_memset@{USBD\_memset}}
+\index{USBD\_memset@{USBD\_memset}!USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{USBD\_memset}{USBD\_memset}}
+{\footnotesize\ttfamily \#define USBD\+\_\+memset~/$\ast$ Not used $\ast$/}
+
+Alias for memory set. \mbox{\Hypertarget{group___u_s_b_d___c_o_n_f___exported___macros_gad0adad09bbf4f06418659a39edc0f6c6}\label{group___u_s_b_d___c_o_n_f___exported___macros_gad0adad09bbf4f06418659a39edc0f6c6}} 
+\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}!USBD\_UsrLog@{USBD\_UsrLog}}
+\index{USBD\_UsrLog@{USBD\_UsrLog}!USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{USBD\_UsrLog}{USBD\_UsrLog}}
+{\footnotesize\ttfamily \#define USBD\+\_\+\+Usr\+Log(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                            printf(\_\_VA\_ARGS\_\_);\(\backslash\)}
+\DoxyCodeLine{                            printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___u_s_b_d___c_o_n_f___exported___macros_ga92ed1214efe53f54b3586a6233cfa5a6}\label{group___u_s_b_d___c_o_n_f___exported___macros_ga92ed1214efe53f54b3586a6233cfa5a6}} 
+\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}!USBD\_static\_free@{USBD\_static\_free}}
+\index{USBD\_static\_free@{USBD\_static\_free}!USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{USBD\_static\_free()}{USBD\_static\_free()}}
+{\footnotesize\ttfamily void USBD\+\_\+static\+\_\+free (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Dummy memory free. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to allocated memory address \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_s_b_d___c_o_n_f___exported___macros_ga2df01b9aae6026e9f6b55da3b1e72aee}\label{group___u_s_b_d___c_o_n_f___exported___macros_ga2df01b9aae6026e9f6b55da3b1e72aee}} 
+\index{USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}!USBD\_static\_malloc@{USBD\_static\_malloc}}
+\index{USBD\_static\_malloc@{USBD\_static\_malloc}!USBD\_CONF\_Exported\_Macros@{USBD\_CONF\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{USBD\_static\_malloc()}{USBD\_static\_malloc()}}
+{\footnotesize\ttfamily void$\ast$ USBD\+\_\+static\+\_\+malloc (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Static single allocation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of allocated memory \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

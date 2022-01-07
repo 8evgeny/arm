@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___d_m_a___memory__incremented__mode" kind="group">
+    <compoundname>DMA_Memory_incremented_mode</compoundname>
+    <title>DMA Memory incremented mode</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___d_m_a___memory__incremented__mode_1ga43d30885699cc8378562316ff4fed1cd" prot="public" static="no">
+        <name>DMA_MINC_ENABLE</name>
+        <initializer>((uint32_t)<ref refid="group___peripheral___registers___bits___definition_1gaa189138f534283d876f654ec9474987e" kindref="member">DMA_CCR_MINC</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Memory increment mode Enable <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="183" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a___memory__incremented__mode_1ga32625330516c188151743473fad97a33" prot="public" static="no">
+        <name>DMA_MINC_DISABLE</name>
+        <initializer>0x00000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Memory increment mode Disable </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="184" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

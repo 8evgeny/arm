@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h_ex___exported___functions___group1" xml:lang="en-US">
+<title>FLASHEx_Exported_Functions_Group1</title>
+<indexterm><primary>FLASHEx_Exported_Functions_Group1</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h_ex___exported___functions___group1_1ga9c4e0c7b4f528b7cccae6ad610eb5953"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_FLASHEx_Erase</emphasis> (<link linkend="_struct_f_l_a_s_h___erase_init_type_def">FLASH_EraseInitTypeDef</link> *pEraseInit, uint32_t *PageError)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h_ex___exported___functions___group1_1gaf58c6764859e4febc21abe462dfb2615"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_FLASHEx_Erase_IT</emphasis> (<link linkend="_struct_f_l_a_s_h___erase_init_type_def">FLASH_EraseInitTypeDef</link> *pEraseInit)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

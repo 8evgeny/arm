@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___l_t_d_c___aliased___functions" kind="group">
+    <compoundname>HAL_LTDC_Aliased_Functions</compoundname>
+    <title>HAL LTDC Aliased Functions maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___l_t_d_c___aliased___functions_1ga9db84d8e2888690969d2cb8db7b96d0e" prot="public" static="no">
+        <name>HAL_LTDC_LineEvenCallback</name>
+        <initializer>HAL_LTDC_LineEventCallback</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1535" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1535" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___l_t_d_c___aliased___functions_1gad1e34250a1cd7818eb43a6ba601508c2" prot="public" static="no">
+        <name>HAL_LTDC_Relaod</name>
+        <initializer>HAL_LTDC_Reload</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1536" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1536" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___l_t_d_c___aliased___functions_1gaab10aa276becaede12de0aa022179a19" prot="public" static="no">
+        <name>HAL_LTDC_StructInitFromVideoConfig</name>
+        <initializer>HAL_LTDCEx_StructInitFromVideoConfig</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1537" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1537" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___l_t_d_c___aliased___functions_1gaae7d5975926b94dfa67bff3a3f7cae1c" prot="public" static="no">
+        <name>HAL_LTDC_StructInitFromAdaptedCommandConfig</name>
+        <initializer>HAL_LTDCEx_StructInitFromAdaptedCommandConfig</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1538" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1538" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

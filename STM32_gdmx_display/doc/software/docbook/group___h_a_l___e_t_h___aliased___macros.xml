@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___e_t_h___aliased___macros" xml:lang="en-US">
+<title>HAL ETH Aliased Macros maintained for legacy purpose</title>
+<indexterm><primary>HAL ETH Aliased Macros maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___e_t_h___aliased___macros_1gad96bacd190bd8ba2523e83be7b1432d8"/>#define <emphasis role="strong">__HAL_ETH_EXTI_ENABLE_IT</emphasis>   __HAL_ETH_WAKEUP_EXTI_ENABLE_IT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___e_t_h___aliased___macros_1ga2e18c5d21291947835cdefeecdd061ec"/>#define <emphasis role="strong">__HAL_ETH_EXTI_DISABLE_IT</emphasis>   __HAL_ETH_WAKEUP_EXTI_DISABLE_IT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___e_t_h___aliased___macros_1gab8cb753cb998d6d2d65f2ce0bee7c384"/>#define <emphasis role="strong">__HAL_ETH_EXTI_GET_FLAG</emphasis>   __HAL_ETH_WAKEUP_EXTI_GET_FLAG</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___e_t_h___aliased___macros_1ga54ff39d1814de51ec16312fb209f2f41"/>#define <emphasis role="strong">__HAL_ETH_EXTI_CLEAR_FLAG</emphasis>   __HAL_ETH_WAKEUP_EXTI_CLEAR_FLAG</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___e_t_h___aliased___macros_1gac2ffccd4ff4dd93383c34465f81969ce"/>#define <emphasis role="strong">__HAL_ETH_EXTI_SET_RISING_EGDE_TRIGGER</emphasis>   __HAL_ETH_WAKEUP_EXTI_ENABLE_RISING_EDGE_TRIGGER</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___e_t_h___aliased___macros_1ga2a6e3b3b6ef975a01c856883cfb14621"/>#define <emphasis role="strong">__HAL_ETH_EXTI_SET_FALLING_EGDE_TRIGGER</emphasis>   __HAL_ETH_WAKEUP_EXTI_ENABLE_FALLING_EDGE_TRIGGER</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___e_t_h___aliased___macros_1ga50a8c65b53a6639779b3e6ec038a0065"/>#define <emphasis role="strong">__HAL_ETH_EXTI_SET_FALLINGRISING_TRIGGER</emphasis>   __HAL_ETH_WAKEUP_EXTI_ENABLE_FALLINGRISING_TRIGGER</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___e_t_h___aliased___macros_1ga117a90653929730381f567a223c73a98"/>#define <emphasis role="strong">ETH_PROMISCIOUSMODE_ENABLE</emphasis>   ETH_PROMISCUOUS_MODE_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___e_t_h___aliased___macros_1ga0bca9efbd85292833f130ba06962768b"/>#define <emphasis role="strong">ETH_PROMISCIOUSMODE_DISABLE</emphasis>   ETH_PROMISCUOUS_MODE_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___e_t_h___aliased___macros_1ga418197e62c9492de5e51c8657fd0e1e8"/>#define <emphasis role="strong">IS_ETH_PROMISCIOUS_MODE</emphasis>   IS_ETH_PROMISCUOUS_MODE</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

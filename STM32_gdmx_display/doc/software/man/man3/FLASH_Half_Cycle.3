@@ -1,0 +1,65 @@
+.TH "FLASH_Half_Cycle" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FLASH_Half_Cycle \- FLASH Half Cycle
+.PP
+ \- macros to handle FLASH half cycle  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_FLASH_HALF_CYCLE_ACCESS_ENABLE\fP()   (FLASH\->ACR |= \fBFLASH_ACR_HLFCYA\fP)"
+.br
+.RI "Enable the FLASH half cycle access\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_HALF_CYCLE_ACCESS_DISABLE\fP()   (FLASH\->ACR &= (~\fBFLASH_ACR_HLFCYA\fP))"
+.br
+.RI "Disable the FLASH half cycle access\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+macros to handle FLASH half cycle 
+
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_FLASH_HALF_CYCLE_ACCESS_DISABLE()   (FLASH\->ACR &= (~\fBFLASH_ACR_HLFCYA\fP))"
+
+.PP
+Disable the FLASH half cycle access\&. 
+.PP
+\fBNote\fP
+.RS 4
+half cycle access can only be used with a low-frequency clock of less than 8 MHz that can be obtained with the use of HSI or HSE but not of PLL\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_FLASH_HALF_CYCLE_ACCESS_ENABLE()   (FLASH\->ACR |= \fBFLASH_ACR_HLFCYA\fP)"
+
+.PP
+Enable the FLASH half cycle access\&. 
+.PP
+\fBNote\fP
+.RS 4
+half cycle access can only be used with a low-frequency clock of less than 8 MHz that can be obtained with the use of HSI or HSE but not of PLL\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

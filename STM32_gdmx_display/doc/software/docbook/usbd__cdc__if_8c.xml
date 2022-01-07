@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__cdc__if_8c" xml:lang="en-US">
+<title>Src/usbd_cdc_if.c File Reference</title>
+<indexterm><primary>Src/usbd_cdc_if.c</primary></indexterm>
+<para>
+
+<para>: Usb device for Virtual Com Port. </para>
+ 
+</para>
+<programlisting>#include &quot;usbd_cdc_if.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structt___rcv_buffer">t_RcvBuffer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">APP_RX_DATA_SIZE</emphasis>   1000</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">APP_TX_DATA_SIZE</emphasis>   128</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_group___u_s_b_d___c_d_c___i_f_1ga5137d6201dbdef2bf351c5b4941c24f4">CDC_Transmit_FS</link> (uint8_t *Buf, uint16_t Len)</para>
+
+<para>CDC_Transmit_FS Data to send over USB IN endpoint are sent over CDC interface through this function. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">USBD_CDC_IF_clear</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">USBD_CDC_IF_write</emphasis> (void)</para>
+</listitem>
+            <listitem><para>int <emphasis role="strong">USBD_CDC_IF_procRcvData</emphasis> (uint8_t *data, uint16_t size)</para>
+</listitem>
+            <listitem><para>int <emphasis role="strong">USBD_CDC_IF_analyzeRcvData</emphasis> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structt___rcv_buffer">t_RcvBuffer</link> <emphasis role="strong">RcvBuffer</emphasis></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___u_s_b_d___c_d_c___i_f___private___variables_1ga1e37e6616e6affe5acf9c0befd063f6a">UserRxBufferFS</link> [APP_RX_DATA_SIZE]</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___u_s_b_d___c_d_c___i_f___private___variables_1gad48fea85cdb7aed49bf62140a52f23e0">UserTxBufferFS</link> [APP_TX_DATA_SIZE]</para>
+</listitem>
+            <listitem><para><link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> <emphasis role="strong">hUsbDeviceFS</emphasis></para>
+</listitem>
+            <listitem><para><link linkend="_struct___u_s_b_d___c_d_c___itf">USBD_CDC_ItfTypeDef</link> <link linkend="_group___u_s_b_d___c_d_c___i_f_1ga99394ed19b774f171df96c2848c411ed">USBD_Interface_fops_FS</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>: Usb device for Virtual Com Port. </para>
+
+<para><formalpara><title>Version</title>
+
+<para>: v2.0_Cube</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2019 Donskih Dmitriy. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by Donskih Dmitriy under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+</section>

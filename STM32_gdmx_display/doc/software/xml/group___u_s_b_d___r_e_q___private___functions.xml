@@ -1,0 +1,699 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___r_e_q___private___functions" kind="group">
+    <compoundname>USBD_REQ_Private_Functions</compoundname>
+    <title>USBD_REQ_Private_Functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1gac40d4171a55983d25bbbb7b8c3fce95e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_StdDevReq</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_StdDevReq</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_StdDevReq Handle standard usb device requests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="114" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="114" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1gac1c8cd8a59f1c99887f131a4299f31b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_StdItfReq</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_StdItfReq</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_StdItfReq Handle standard usb interface requests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="178" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="178" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1ga46d1a0a4e23e1e8c80167dcdc59b2538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_StdEPReq</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_StdEPReq</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_StdEPReq Handle standard usb endpoint requests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="230" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="230" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1ga54a17c9993f3422dce6dce7e9d8614b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USBD_ParseSetupRequest</definition>
+        <argsstring>(USBD_SetupReqTypedef *req, uint8_t *pdata)</argsstring>
+        <name>USBD_ParseSetupRequest</name>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pdata</declname>
+        </param>
+        <briefdescription>
+<para>USBD_ParseSetupRequest Copy buffer into setup structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="834" column="6" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="834" bodyend="842"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1ga48795256b00d45158aa8036e843d300a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USBD_CtlError</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_CtlError</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlError Handle USB low level Error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="852" column="6" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="852" bodyend="857"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1ga9ad6afa29382920474120306997d83ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USBD_GetString</definition>
+        <argsstring>(uint8_t *desc, uint8_t *unicode, uint16_t *len)</argsstring>
+        <name>USBD_GetString</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>desc</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>unicode</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>USBD_GetString Convert Ascii string into unicode one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: descriptor buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unicode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Formatted string buffer (unicode) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: descriptor length </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="868" column="6" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="868" bodyend="884"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1gabd138ace9070799673bc18e4e0d613ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void USBD_GetDescriptor</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_GetDescriptor</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_GetDescriptor Handle Get Descriptor requests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="405" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="405" bodyend="586" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" declline="74" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1ga0e0f88d1736ddc2844af2f8e6a14d649" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void USBD_SetAddress</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_SetAddress</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_SetAddress Set device address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="595" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="595" bodyend="628" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" declline="77" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1ga4036614a87134f9dd934bdda6dae4c59" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void USBD_SetConfig</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_SetConfig</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_SetConfig Handle Set device configuration request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="637" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="637" bodyend="703" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" declline="80" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1ga27e8e36f8a70ccc0971d8cd4e7cb2c8b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void USBD_GetConfig</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_GetConfig</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_GetConfig Handle Get device configuration request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="712" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="712" bodyend="737" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" declline="83" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1gadaa37e8f1428de7fda2b9180e07efa8d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void USBD_GetStatus</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_GetStatus</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_GetStatus Handle Get Status request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="746" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="746" bodyend="777" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" declline="86" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1gabe5e34cc88ecbbab979a0d419efca48c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void USBD_SetFeature</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_SetFeature</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_SetFeature Handle Set device feature request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="787" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="787" bodyend="795" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" declline="89" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1gaea2f5fe73a30fc08795fb5d2dd783c88" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void USBD_ClrFeature</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>USBD_ClrFeature</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="structusb__setup__req" kindref="compound">USBD_SetupReqTypedef</ref> *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>USBD_ClrFeature Handle clear device feature request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>usb request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="805" column="13" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="805" bodyend="824" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" declline="92" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___r_e_q___private___functions_1ga883784e66ec66c2f3cb2fdf631770518" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t USBD_GetLen</definition>
+        <argsstring>(uint8_t *buf)</argsstring>
+        <name>USBD_GetLen</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>USBD_GetLen return the string length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: pointer to the ascii string buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" line="892" column="16" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" bodystart="892" bodyend="903" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" declline="95" declcolumn="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

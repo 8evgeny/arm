@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___p_w_r___exported___functions___group1" xml:lang="en-US">
+<title>Initialization and de-initialization functions</title>
+<indexterm><primary>Initialization and de-initialization functions</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___p_w_r___exported___functions___group1_1ga7edb99b94a46448c34f0301b0a077ff5"/>void <emphasis role="strong">HAL_PWR_DeInit</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___p_w_r___exported___functions___group1_1ga3d07cef39bf294db4aed7e06e5dbf9af"/>void <emphasis role="strong">HAL_PWR_EnableBkUpAccess</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___p_w_r___exported___functions___group1_1ga1513de5f2e4b72e094fb04bab786fec8"/>void <emphasis role="strong">HAL_PWR_DisableBkUpAccess</emphasis> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

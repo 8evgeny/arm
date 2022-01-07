@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___f_l_a_s_h___private___macros" kind="group">
+    <compoundname>FLASH_Private_Macros</compoundname>
+    <title>FLASH_Private_Macros</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___f_l_a_s_h___private___macros_1gaa189973d36fcbbaf7f758c682247ad39" prot="public" static="no">
+        <name>IS_FLASH_TYPEPROGRAM</name>
+        <param><defname>VALUE</defname></param>
+        <initializer>                                      (((VALUE) == <ref refid="group___f_l_a_s_h___type___program_1ga2b607dfc2efd463a8530e327bc755582" kindref="member">FLASH_TYPEPROGRAM_HALFWORD</ref>) || \
+                                      ((VALUE) == <ref refid="group___f_l_a_s_h___type___program_1gadd25c6821539030ba6711e7c0d586c3e" kindref="member">FLASH_TYPEPROGRAM_WORD</ref>)     || \
+                                      ((VALUE) == <ref refid="group___f_l_a_s_h___type___program_1gabdc2b0b4d2e66c2be90fafbfbf1e225f" kindref="member">FLASH_TYPEPROGRAM_DOUBLEWORD</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" line="51" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___f_l_a_s_h___private___macros_1gad8585a26722685574b9586a771a9aa8a" prot="public" static="no">
+        <name>IS_FLASH_LATENCY</name>
+        <param><defname>__LATENCY__</defname></param>
+        <initializer>((__LATENCY__) == <ref refid="group___f_l_a_s_h___latency_1ga1276f51e97dc9857ca261fae4eb890f3" kindref="member">FLASH_LATENCY_0</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" line="61" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

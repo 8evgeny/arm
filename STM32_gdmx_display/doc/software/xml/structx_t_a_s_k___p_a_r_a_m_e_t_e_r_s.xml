@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s" kind="struct" language="C++" prot="public">
+    <compoundname>xTASK_PARAMETERS</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a06aee8b42bc6c569b62ab3cdc4abf8b0" prot="public" static="no" mutable="no">
+        <type>TaskFunction_t</type>
+        <definition>TaskFunction_t pvTaskCode</definition>
+        <argsstring></argsstring>
+        <name>pvTaskCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="114" column="16" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a2de8afaf668518af9982627791b2cc23" prot="public" static="no" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const pcName</definition>
+        <argsstring></argsstring>
+        <name>pcName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="115" column="19" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1aae6fa1f3cc5f8b931225ed4b454f3865" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t usStackDepth</definition>
+        <argsstring></argsstring>
+        <name>usStackDepth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="116" column="10" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a308cef200968d514395c0272c061d3ec" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* pvParameters</definition>
+        <argsstring></argsstring>
+        <name>pvParameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="117" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a0befed3dd0fe55b4314158f4814f50ae" prot="public" static="no" mutable="no">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxPriority</definition>
+        <argsstring></argsstring>
+        <name>uxPriority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="118" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a3f80c2175bac00298ba9a17ddd50e29d" prot="public" static="no" mutable="no">
+        <type>StackType_t *</type>
+        <definition>StackType_t* puxStackBuffer</definition>
+        <argsstring></argsstring>
+        <name>puxStackBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="119" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a7bc9c069ce3a5e929c7ef29e95184584" prot="public" static="no" mutable="no">
+        <type><ref refid="structx_m_e_m_o_r_y___r_e_g_i_o_n" kindref="compound">MemoryRegion_t</ref></type>
+        <definition>MemoryRegion_t xRegions[portNUM_CONFIGURABLE_REGIONS]</definition>
+        <argsstring>[portNUM_CONFIGURABLE_REGIONS]</argsstring>
+        <name>xRegions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="120" column="16" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>xMEMORY_REGION</label>
+        <link refid="structx_m_e_m_o_r_y___r_e_g_i_o_n"/>
+      </node>
+      <node id="1">
+        <label>xTASK_PARAMETERS</label>
+        <link refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>xRegions</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="112" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="113" bodyend="124"/>
+    <listofallmembers>
+      <member refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a2de8afaf668518af9982627791b2cc23" prot="public" virt="non-virtual"><scope>xTASK_PARAMETERS</scope><name>pcName</name></member>
+      <member refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a3f80c2175bac00298ba9a17ddd50e29d" prot="public" virt="non-virtual"><scope>xTASK_PARAMETERS</scope><name>puxStackBuffer</name></member>
+      <member refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a308cef200968d514395c0272c061d3ec" prot="public" virt="non-virtual"><scope>xTASK_PARAMETERS</scope><name>pvParameters</name></member>
+      <member refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a06aee8b42bc6c569b62ab3cdc4abf8b0" prot="public" virt="non-virtual"><scope>xTASK_PARAMETERS</scope><name>pvTaskCode</name></member>
+      <member refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1aae6fa1f3cc5f8b931225ed4b454f3865" prot="public" virt="non-virtual"><scope>xTASK_PARAMETERS</scope><name>usStackDepth</name></member>
+      <member refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a0befed3dd0fe55b4314158f4814f50ae" prot="public" virt="non-virtual"><scope>xTASK_PARAMETERS</scope><name>uxPriority</name></member>
+      <member refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s_1a7bc9c069ce3a5e929c7ef29e95184584" prot="public" virt="non-virtual"><scope>xTASK_PARAMETERS</scope><name>xRegions</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,59 @@
+.TH "USART_TypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USART_TypeDef \- Universal Synchronous Asynchronous Receiver Transmitter\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f103xb\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBSR\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBDR\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBBRR\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBCR1\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBCR2\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBCR3\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBGTPR\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Universal Synchronous Asynchronous Receiver Transmitter\&. 
+.SH "Field Documentation"
+.PP 
+.SS "\fB__IO\fP uint32_t BRR"
+USART Baud rate register, Address offset: 0x08 
+.SS "\fB__IO\fP uint32_t CR1"
+USART Control register 1, Address offset: 0x0C 
+.SS "\fB__IO\fP uint32_t CR2"
+USART Control register 2, Address offset: 0x10 
+.SS "\fB__IO\fP uint32_t CR3"
+USART Control register 3, Address offset: 0x14 
+.SS "\fB__IO\fP uint32_t DR"
+USART Data register, Address offset: 0x04 
+.SS "\fB__IO\fP uint32_t GTPR"
+USART Guard time and prescaler register, Address offset: 0x18 
+.SS "\fB__IO\fP uint32_t SR"
+USART Status register, Address offset: 0x00 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

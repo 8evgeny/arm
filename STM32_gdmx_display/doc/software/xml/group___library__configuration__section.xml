@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___library__configuration__section" kind="group">
+    <compoundname>Library_configuration_section</compoundname>
+    <title>Library_configuration_section</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___library__configuration__section_1gab52bb1ba72165913f41a6271d60b844c" prot="public" static="no">
+        <name>STM32F1</name>
+        <briefdescription>
+<para>STM32 Family. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="53" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___library__configuration__section_1gab50febca128907bd4baf44562e1202d0" prot="public" static="no">
+        <name>__STM32F1_CMSIS_VERSION_MAIN</name>
+        <initializer>(0x04)</initializer>
+        <briefdescription>
+<para>Comment the line below if you will not use the peripherals drivers. In this case, these drivers will not be included and the application code will be based on direct access to peripherals registers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt; STM32F100C4, STM32F100R4, STM32F100C6, STM32F100R6, STM32F100C8, STM32F100R8, STM32F100V8, STM32F100CB, STM32F100RB and STM32F100VB</para>
+<para>&lt; STM32F100RC, STM32F100VC, STM32F100ZC, STM32F100RD, STM32F100VD, STM32F100ZD, STM32F100RE, STM32F100VE and STM32F100ZE</para>
+<para>&lt; STM32F101C4, STM32F101R4, STM32F101T4, STM32F101C6, STM32F101R6 and STM32F101T6 Devices</para>
+<para>&lt; STM32F101C8, STM32F101R8, STM32F101T8, STM32F101V8, STM32F101CB, STM32F101RB, STM32F101TB and STM32F101VB</para>
+<para>&lt; STM32F101RC, STM32F101VC, STM32F101ZC, STM32F101RD, STM32F101VD, STM32F101ZD, STM32F101RE, STM32F101VE and STM32F101ZE</para>
+<para>&lt; STM32F101RF, STM32F101VF, STM32F101ZF, STM32F101RG, STM32F101VG and STM32F101ZG</para>
+<para>&lt; STM32F102C4, STM32F102R4, STM32F102C6 and STM32F102R6</para>
+<para>&lt; STM32F102C8, STM32F102R8, STM32F102CB and STM32F102RB</para>
+<para>&lt; STM32F103C4, STM32F103R4, STM32F103T4, STM32F103C6, STM32F103R6 and STM32F103T6</para>
+<para>&lt; STM32F103C8, STM32F103R8, STM32F103T8, STM32F103V8, STM32F103CB, STM32F103RB, STM32F103TB and STM32F103VB</para>
+<para>&lt; STM32F103RC, STM32F103VC, STM32F103ZC, STM32F103RD, STM32F103VD, STM32F103ZD, STM32F103RE, STM32F103VE and STM32F103ZE</para>
+<para>&lt; STM32F103RF, STM32F103VF, STM32F103ZF, STM32F103RG, STM32F103VG and STM32F103ZG</para>
+<para>&lt; STM32F105R8, STM32F105V8, STM32F105RB, STM32F105VB, STM32F105RC and STM32F105VC</para>
+<para>&lt; STM32F107RB, STM32F107VB, STM32F107RC and STM32F107VC</para>
+<para>CMSIS Device version number V4.3.1 [31:24] main version </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="95" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___library__configuration__section_1ga4e51532a561075fb07e03adf49646321" prot="public" static="no">
+        <name>__STM32F1_CMSIS_VERSION_SUB1</name>
+        <initializer>(0x03)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>[23:16] sub1 version </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="96" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___library__configuration__section_1gaadb6cccec78cfbae315f60e7a72d7ad6" prot="public" static="no">
+        <name>__STM32F1_CMSIS_VERSION_SUB2</name>
+        <initializer>(0x01)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>[15:8] sub2 version </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="97" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___library__configuration__section_1ga3a6ddbe6f81547b6c4379e0a43769c2a" prot="public" static="no">
+        <name>__STM32F1_CMSIS_VERSION_RC</name>
+        <initializer>(0x00)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>[7:0] release candidate </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="98" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___library__configuration__section_1ga9bdb63d2332892bb8339e343cf504e9e" prot="public" static="no">
+        <name>__STM32F1_CMSIS_VERSION</name>
+        <initializer>                                       ((<ref refid="group___library__configuration__section_1gab50febca128907bd4baf44562e1202d0" kindref="member">__STM32F1_CMSIS_VERSION_MAIN</ref> &lt;&lt; 24)\
+                                       |(<ref refid="group___library__configuration__section_1ga4e51532a561075fb07e03adf49646321" kindref="member">__STM32F1_CMSIS_VERSION_SUB1</ref> &lt;&lt; 16)\
+                                       |(<ref refid="group___library__configuration__section_1gaadb6cccec78cfbae315f60e7a72d7ad6" kindref="member">__STM32F1_CMSIS_VERSION_SUB2</ref> &lt;&lt; 8 )\
+                                       |(<ref refid="group___library__configuration__section_1ga3a6ddbe6f81547b6c4379e0a43769c2a" kindref="member">__STM32F1_CMSIS_VERSION_RC</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="99" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

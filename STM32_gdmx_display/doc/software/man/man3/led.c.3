@@ -1,0 +1,117 @@
+.TH "Src/led.c" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Src/led.c \- \fBled\&.c\fP file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'led\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBLED_init\fP (void)"
+.br
+.RI "LED control module initialization\&. "
+.ti -1c
+.RI "void \fBLED_setLED1\fP (void)"
+.br
+.RI "Turn on LED 'Alarm'\&. "
+.ti -1c
+.RI "void \fBLED_resetLED1\fP (void)"
+.br
+.RI "Turn off LED 'Alarm'\&. "
+.ti -1c
+.RI "void \fBLED_setLED2\fP (void)"
+.br
+.RI "Turn on LED 'Write'\&. "
+.ti -1c
+.RI "void \fBLED_resetLED2\fP (void)"
+.br
+.RI "Turn off LED 'Write'\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBled\&.c\fP file\&. 
+
+Led control module (Source file)\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Arthur Markaryan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+26\&.03\&.2021 
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void LED_init (void)"
+
+.PP
+LED control module initialization\&. GPIO initialization function to drive LEDs\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void LED_resetLED1 (void)"
+
+.PP
+Turn off LED 'Alarm'\&. LED lighting control function\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void LED_resetLED2 (void)"
+
+.PP
+Turn off LED 'Write'\&. LED lighting control function\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void LED_setLED1 (void)"
+
+.PP
+Turn on LED 'Alarm'\&. LED lighting control function\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void LED_setLED2 (void)"
+
+.PP
+Turn on LED 'Write'\&. LED lighting control function\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

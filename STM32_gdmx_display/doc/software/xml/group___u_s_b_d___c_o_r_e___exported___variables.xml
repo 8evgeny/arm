@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___c_o_r_e___exported___variables" kind="group">
+    <compoundname>USBD_CORE_Exported_Variables</compoundname>
+    <title>USBD_CORE_Exported_Variables</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___u_s_b_d___c_o_r_e___exported___variables_1ga4ea96ee34eb73d0dae16f02a232e9b5c" prot="public" static="no" mutable="no">
+        <type><ref refid="struct___device__cb" kindref="compound">USBD_ClassTypeDef</ref></type>
+        <definition>USBD_ClassTypeDef USBD_CDC</definition>
+        <argsstring></argsstring>
+        <name>USBD_CDC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="140" column="27" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" bodystart="155" bodyend="-1" declfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" declline="140" declcolumn="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___u_s_b_d___c_o_r_e___exported___variables_1ga9ea5914811159ebdbeac6a7e0596dd9f" prot="public" static="no">
+        <name>USBD_CDC_CLASS</name>
+        <initializer>&amp;USBD_CDC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="141" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___c_o_r_e___exported___variables_1ga9bc8feb8ff2afdf4144088e1a585fe77" prot="public" static="no">
+        <name>USBD_SOF</name>
+        <initializer><ref refid="group___u_s_b_d___c_o_r_e___private___functions_1gacf5d847096b6b8d9b1880dab9cd1726d" kindref="member">USBD_LL_SOF</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="77" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

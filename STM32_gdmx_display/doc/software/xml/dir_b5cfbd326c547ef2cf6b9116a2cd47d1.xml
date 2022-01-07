@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_b5cfbd326c547ef2cf6b9116a2cd47d1" kind="dir">
+    <compoundname>build/CMakeFiles/gdmx_display.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC</compoundname>
+    <innerdir refid="dir_aa22797f1dde1f23ad24e00e75823adc">build/CMakeFiles/gdmx_display.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/gdmx_display.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,52 @@
+.TH "RCC_LSI_Configuration" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_LSI_Configuration \- LSI Configuration
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_LSI_ENABLE\fP()   (*(\fB__IO\fP uint32_t *) RCC_CSR_LSION_BB = ENABLE)"
+.br
+.RI "Macro to enable the Internal Low Speed oscillator (LSI)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_LSI_DISABLE\fP()   (*(\fB__IO\fP uint32_t *) RCC_CSR_LSION_BB = DISABLE)"
+.br
+.RI "Macro to disable the Internal Low Speed oscillator (LSI)\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_RCC_LSI_DISABLE()   (*(\fB__IO\fP uint32_t *) RCC_CSR_LSION_BB = DISABLE)"
+
+.PP
+Macro to disable the Internal Low Speed oscillator (LSI)\&. 
+.PP
+\fBNote\fP
+.RS 4
+LSI can not be disabled if the IWDG is running\&. 
+.PP
+When the LSI is stopped, LSIRDY flag goes low after 6 LSI oscillator clock cycles\&. 
+.RE
+.PP
+
+.SS "#define __HAL_RCC_LSI_ENABLE()   (*(\fB__IO\fP uint32_t *) RCC_CSR_LSION_BB = ENABLE)"
+
+.PP
+Macro to enable the Internal Low Speed oscillator (LSI)\&. 
+.PP
+\fBNote\fP
+.RS 4
+After enabling the LSI, the application software should wait on LSIRDY flag to be set indicating that LSI clock is stable and can be used to clock the IWDG and/or the RTC\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

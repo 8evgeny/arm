@@ -1,0 +1,55 @@
+.TH "RCCEx_MCOx_Clock_Config" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCCEx_MCOx_Clock_Config \- RCC Extended MCOx Clock Config
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_MCO1_CONFIG\fP(__MCOCLKSOURCE__,  __MCODIV__)                    MODIFY_REG(RCC\->CFGR, \fBRCC_CFGR_MCO\fP, (__MCOCLKSOURCE__))"
+.br
+.RI "Macro to configure the MCO clock\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_RCC_MCO1_CONFIG(__MCOCLKSOURCE__, __MCODIV__)                    MODIFY_REG(RCC\->CFGR, \fBRCC_CFGR_MCO\fP, (__MCOCLKSOURCE__))"
+
+.PP
+Macro to configure the MCO clock\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>MCOCLKSOURCE</strong>\fP specifies the MCO clock source\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_MCO1SOURCE_NOCLOCK\fP No clock selected as MCO clock 
+.IP "\(bu" 2
+\fBRCC_MCO1SOURCE_SYSCLK\fP System clock (SYSCLK) selected as MCO clock 
+.IP "\(bu" 2
+\fBRCC_MCO1SOURCE_HSI\fP HSI selected as MCO clock 
+.IP "\(bu" 2
+\fBRCC_MCO1SOURCE_HSE\fP HSE selected as MCO clock 
+.IP "\(bu" 2
+\fBRCC_MCO1SOURCE_PLLCLK\fP PLL clock divided by 2 selected as MCO clock 
+.PP
+.br
+\fI<strong>MCODIV</strong>\fP specifies the MCO clock prescaler\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_MCODIV_1\fP No division applied on MCO clock source 
+.PP
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_7c0b0880f4bfb9f793b7785b093fa4ec" kind="dir">
+    <compoundname>Middlewares/ST/STM32_USB_Device_Library/Core/Src</compoundname>
+    <innerfile refid="usbd__core_8c">usbd_core.c</innerfile>
+    <innerfile refid="usbd__ctlreq_8c">usbd_ctlreq.c</innerfile>
+    <innerfile refid="usbd__ioreq_8c">usbd_ioreq.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Src/"/>
+  </compounddef>
+</doxygen>

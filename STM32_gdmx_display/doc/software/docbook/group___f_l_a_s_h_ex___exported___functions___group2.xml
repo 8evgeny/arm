@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h_ex___exported___functions___group2" xml:lang="en-US">
+<title>FLASHEx_Exported_Functions_Group2</title>
+<indexterm><primary>FLASHEx_Exported_Functions_Group2</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h_ex___exported___functions___group2_1ga74d4265b88afed50efe9fda0f025979a"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_FLASHEx_OBErase</emphasis> (void)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h_ex___exported___functions___group2_1ga001dd4a8defa9eb24a17c4df5953a41d"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_FLASHEx_OBProgram</emphasis> (<link linkend="_struct_f_l_a_s_h___o_b_program_init_type_def">FLASH_OBProgramInitTypeDef</link> *pOBInit)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h_ex___exported___functions___group2_1ga6d45d5442b8147533b1100ec40fe75d7"/>void <emphasis role="strong">HAL_FLASHEx_OBGetConfig</emphasis> (<link linkend="_struct_f_l_a_s_h___o_b_program_init_type_def">FLASH_OBProgramInitTypeDef</link> *pOBInit)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h_ex___exported___functions___group2_1ga683593291451ae3e0dd1a6426ba72b3a"/>uint32_t <emphasis role="strong">HAL_FLASHEx_OBGetUserData</emphasis> (uint32_t DATAAdress)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

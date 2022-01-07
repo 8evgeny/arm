@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___p_w_r___aliased" kind="group">
+    <compoundname>HAL_PWR_Aliased</compoundname>
+    <title>HAL PWR Aliased maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga56b037b1ad9b9887c5f073aa10370168" prot="public" static="no">
+        <name>HAL_PWR_PVDConfig</name>
+        <initializer>HAL_PWR_ConfigPVD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1440" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga190c1061330751d78f53b13231044e85" prot="public" static="no">
+        <name>HAL_PWR_DisableBkUpReg</name>
+        <initializer>HAL_PWREx_DisableBkUpReg</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1441" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1gac95b95ec23381b451ce4634650fb336d" prot="public" static="no">
+        <name>HAL_PWR_DisableFlashPowerDown</name>
+        <initializer>HAL_PWREx_DisableFlashPowerDown</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1442" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga33da5f16df6d8fc4c1b5073424302364" prot="public" static="no">
+        <name>HAL_PWR_DisableVddio2Monitor</name>
+        <initializer>HAL_PWREx_DisableVddio2Monitor</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1443" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga3a85d5ac9965f0c58a9a76fd73af4180" prot="public" static="no">
+        <name>HAL_PWR_EnableBkUpReg</name>
+        <initializer>HAL_PWREx_EnableBkUpReg</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1444" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga255d34e05cdc098d1ce2e906f8b9769c" prot="public" static="no">
+        <name>HAL_PWR_EnableFlashPowerDown</name>
+        <initializer>HAL_PWREx_EnableFlashPowerDown</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1445" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga24b58c5b242fb37cb1281dbe38f11cf9" prot="public" static="no">
+        <name>HAL_PWR_EnableVddio2Monitor</name>
+        <initializer>HAL_PWREx_EnableVddio2Monitor</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1446" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1gaef372c1750d486fcb3bf8246988fd9ae" prot="public" static="no">
+        <name>HAL_PWR_PVD_PVM_IRQHandler</name>
+        <initializer>HAL_PWREx_PVD_PVM_IRQHandler</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1447" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga68e7b6a7061c08f98dcdf40cd9292daa" prot="public" static="no">
+        <name>HAL_PWR_PVDLevelConfig</name>
+        <initializer>HAL_PWR_ConfigPVD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1448" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga45060736b4f7dceef206a35ef5dd6fe8" prot="public" static="no">
+        <name>HAL_PWR_Vddio2Monitor_IRQHandler</name>
+        <initializer>HAL_PWREx_Vddio2Monitor_IRQHandler</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1449" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga94a9526151bf5196900a49d7a29971df" prot="public" static="no">
+        <name>HAL_PWR_Vddio2MonitorCallback</name>
+        <initializer>HAL_PWREx_Vddio2MonitorCallback</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1450" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga7e8045466ad70adfb92b0d2ee2e9f8e0" prot="public" static="no">
+        <name>HAL_PWREx_ActivateOverDrive</name>
+        <initializer>HAL_PWREx_EnableOverDrive</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1451" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga89286748f454d55aa96fd55eb09b647c" prot="public" static="no">
+        <name>HAL_PWREx_DeactivateOverDrive</name>
+        <initializer>HAL_PWREx_DisableOverDrive</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1452" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga12c8593c0f54dd87bd780fa3f2f64e3d" prot="public" static="no">
+        <name>HAL_PWREx_DisableSDADCAnalog</name>
+        <initializer>HAL_PWREx_DisableSDADC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1453" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga6d03ec69c2f6072e818420aa4135e7d3" prot="public" static="no">
+        <name>HAL_PWREx_EnableSDADCAnalog</name>
+        <initializer>HAL_PWREx_EnableSDADC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1454" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1gacff48681bbdda3059a2e161b6a3b33c3" prot="public" static="no">
+        <name>HAL_PWREx_PVMConfig</name>
+        <initializer>HAL_PWREx_ConfigPVM</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1455" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1455" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga7c173d32b42f94bf35a331ff6b52fc00" prot="public" static="no">
+        <name>PWR_MODE_NORMAL</name>
+        <initializer><ref refid="group___p_w_r___p_v_d___mode_1ga3a4bf701a36a14a4edf4dc5a28153277" kindref="member">PWR_PVD_MODE_NORMAL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1457" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1gac7ab4dbca1cfe28383f89d0356b25da7" prot="public" static="no">
+        <name>PWR_MODE_IT_RISING</name>
+        <initializer><ref refid="group___p_w_r___p_v_d___mode_1ga102d7b8354419990a2a780f61cd020a6" kindref="member">PWR_PVD_MODE_IT_RISING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1458" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1458" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga9057a67887ea202b2db8da7064008fab" prot="public" static="no">
+        <name>PWR_MODE_IT_FALLING</name>
+        <initializer><ref refid="group___p_w_r___p_v_d___mode_1gab600a54f3a588de836cfe4b727ab8a53" kindref="member">PWR_PVD_MODE_IT_FALLING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1459" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1459" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga97e8abb320b4be192e23c520e74d01a9" prot="public" static="no">
+        <name>PWR_MODE_IT_RISING_FALLING</name>
+        <initializer><ref refid="group___p_w_r___p_v_d___mode_1gac531fbf14457e6595505354fad521b67" kindref="member">PWR_PVD_MODE_IT_RISING_FALLING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1460" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1460" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1gaca42d0e80c82d3f35ec7b07227fb8b7f" prot="public" static="no">
+        <name>PWR_MODE_EVENT_RISING</name>
+        <initializer><ref refid="group___p_w_r___p_v_d___mode_1ga1a946b01887aa886de329a92c3ab0dd4" kindref="member">PWR_PVD_MODE_EVENT_RISING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1461" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1461" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1gaa37ffde31fc0bdadb0ed77a9588034dd" prot="public" static="no">
+        <name>PWR_MODE_EVENT_FALLING</name>
+        <initializer><ref refid="group___p_w_r___p_v_d___mode_1gaaedbe45f1a1ea6c30af6ac51abae0cae" kindref="member">PWR_PVD_MODE_EVENT_FALLING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1462" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1462" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga87c794b332bd1b39496a35613344a4cc" prot="public" static="no">
+        <name>PWR_MODE_EVENT_RISING_FALLING</name>
+        <initializer><ref refid="group___p_w_r___p_v_d___mode_1ga7455387c8e9049f9f66b46423d4f4091" kindref="member">PWR_PVD_MODE_EVENT_RISING_FALLING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1463" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1463" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga8f5087b1948b370918ecbdf8eb614543" prot="public" static="no">
+        <name>CR_OFFSET_BB</name>
+        <initializer>PWR_CR_OFFSET_BB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1465" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1465" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1gaed8fdacbc906bcba6acfa26ffbfc1305" prot="public" static="no">
+        <name>CSR_OFFSET_BB</name>
+        <initializer>PWR_CSR_OFFSET_BB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1466" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1466" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1gadcd5e2748a515ef914b84737e10ab061" prot="public" static="no">
+        <name>PMODE_BIT_NUMBER</name>
+        <initializer>VOS_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1467" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1467" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga2e7c040f5c63f0fce3e274d9a03f1d1a" prot="public" static="no">
+        <name>CR_PMODE_BB</name>
+        <initializer>CR_VOS_BB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1468" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1468" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga36ff45d972bf94f31f172fd53cf44d23" prot="public" static="no">
+        <name>DBP_BitNumber</name>
+        <initializer>DBP_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1470" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1470" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga17d618eb800c401ef9c6789c9374eaf8" prot="public" static="no">
+        <name>PVDE_BitNumber</name>
+        <initializer>PVDE_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1471" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1471" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga15fea9df1b0d324394336f70b319b377" prot="public" static="no">
+        <name>PMODE_BitNumber</name>
+        <initializer>PMODE_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1472" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1472" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga94fe0520e8f9b71fa2b99c0565ec70ea" prot="public" static="no">
+        <name>EWUP_BitNumber</name>
+        <initializer>EWUP_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1473" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1gad99a3da921e3e64587f6b9505ecba665" prot="public" static="no">
+        <name>FPDS_BitNumber</name>
+        <initializer>FPDS_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1474" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1474" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga2f24ddbcbc5b8d74c0b032cfa53c725a" prot="public" static="no">
+        <name>ODEN_BitNumber</name>
+        <initializer>ODEN_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1475" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1gaf2e21cacf95f557d2535d623c41577c2" prot="public" static="no">
+        <name>ODSWEN_BitNumber</name>
+        <initializer>ODSWEN_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1476" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1476" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga50e53827046644c175fe431eea5f4261" prot="public" static="no">
+        <name>MRLVDS_BitNumber</name>
+        <initializer>MRLVDS_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1477" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1477" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga7ebe7d965ce7638645ee9a5e35c01be7" prot="public" static="no">
+        <name>LPLVDS_BitNumber</name>
+        <initializer>LPLVDS_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1478" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1478" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga1a0832bfe421cdd6f2640ffb625cc2d8" prot="public" static="no">
+        <name>BRE_BitNumber</name>
+        <initializer>BRE_BIT_NUMBER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1479" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1479" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___p_w_r___aliased_1ga1092f618f6edca6f56e410e926455774" prot="public" static="no">
+        <name>PWR_MODE_EVT</name>
+        <initializer><ref refid="group___p_w_r___p_v_d___mode_1ga3a4bf701a36a14a4edf4dc5a28153277" kindref="member">PWR_PVD_MODE_NORMAL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1481" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1481" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

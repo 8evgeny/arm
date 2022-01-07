@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__conf_8h" xml:lang="en-US">
+<title>Inc/usbd_conf.h File Reference</title>
+<indexterm><primary>Inc/usbd_conf.h</primary></indexterm>
+<para>
+
+<para>: Header for <link linkend="_usbd__conf_8c">usbd_conf.c</link> file. </para>
+ 
+</para>
+<programlisting>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &quot;main.h&quot;
+#include &quot;stm32f1xx.h&quot;
+#include &quot;stm32f1xx_hal.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">USBD_MAX_NUM_INTERFACES</emphasis>   1</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_MAX_NUM_CONFIGURATION</emphasis>   1</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_MAX_STR_DESC_SIZ</emphasis>   512</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_DEBUG_LEVEL</emphasis>   3</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_SELF_POWERED</emphasis>   1</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">MAX_STATIC_ALLOC_SIZE</emphasis>   512</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DEVICE_FS</emphasis>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga35ff353194f56823357f503e546ccf4b">USBD_malloc</link>   (uint32_t *)<link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga2df01b9aae6026e9f6b55da3b1e72aee">USBD_static_malloc</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1gab44fcf9b4d7bfbe8b1308eca76975fe5">USBD_free</link>   <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga92ed1214efe53f54b3586a6233cfa5a6">USBD_static_free</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1gaf7b31857d15ef0abbd84e0e70a2b903f">USBD_memset</link>   /* Not used */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga18d9c17ef2afe7244b559ed428ca1e81">USBD_memcpy</link>   /* Not used */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga78993b66136329032c26d0c13a78e963">USBD_Delay</link>   HAL_Delay</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_UsrLog</emphasis>(...)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_ErrLog</emphasis>(...)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_DbgLog</emphasis>(...)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void * <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga2df01b9aae6026e9f6b55da3b1e72aee">USBD_static_malloc</link> (uint32_t size)</para>
+
+<para>Static single allocation. </para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga92ed1214efe53f54b3586a6233cfa5a6">USBD_static_free</link> (void *p)</para>
+
+<para>Dummy memory free. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>: Header for <link linkend="_usbd__conf_8c">usbd_conf.c</link> file. </para>
+
+<para><formalpara><title>Version</title>
+
+<para>: v2.0_Cube</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2019 Donskih Dmitriy. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by Donskih Dmitriy under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+</section>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___f_l_a_s_h___aliased___functions" kind="group">
+    <compoundname>HAL_FLASH_Aliased_Functions</compoundname>
+    <title>HAL FLASH Aliased Functions maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___f_l_a_s_h___aliased___functions_1ga7f39eb32cad2b3a69edac9db280ae255" prot="public" static="no">
+        <name>FLASH_HalfPageProgram</name>
+        <initializer>HAL_FLASHEx_HalfPageProgram</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1390" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___f_l_a_s_h___aliased___functions_1ga59ea20f4333891430997c1f2516c8e75" prot="public" static="no">
+        <name>FLASH_EnableRunPowerDown</name>
+        <initializer>HAL_FLASHEx_EnableRunPowerDown</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1391" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___f_l_a_s_h___aliased___functions_1gad23696b2f516b4121e6f0fc4e162566c" prot="public" static="no">
+        <name>FLASH_DisableRunPowerDown</name>
+        <initializer>HAL_FLASHEx_DisableRunPowerDown</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1392" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___f_l_a_s_h___aliased___functions_1gaa1adfb208f775a74dd7796879403ff3f" prot="public" static="no">
+        <name>HAL_DATA_EEPROMEx_Unlock</name>
+        <initializer>HAL_FLASHEx_DATAEEPROM_Unlock</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1393" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___f_l_a_s_h___aliased___functions_1gae482c56adea4a0ba4e5037ef28143b06" prot="public" static="no">
+        <name>HAL_DATA_EEPROMEx_Lock</name>
+        <initializer>HAL_FLASHEx_DATAEEPROM_Lock</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1394" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___f_l_a_s_h___aliased___functions_1gadd129e009dd98c78912e328fc2aa370e" prot="public" static="no">
+        <name>HAL_DATA_EEPROMEx_Erase</name>
+        <initializer>HAL_FLASHEx_DATAEEPROM_Erase</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1395" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___f_l_a_s_h___aliased___functions_1ga8460315cf3b1c92cc16cb13646845529" prot="public" static="no">
+        <name>HAL_DATA_EEPROMEx_Program</name>
+        <initializer>HAL_FLASHEx_DATAEEPROM_Program</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1396" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1396" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_s_c___private___defines" xml:lang="en-US">
+<title>USBD_DESC_Private_Defines</title>
+<indexterm><primary>USBD_DESC_Private_Defines</primary></indexterm>
+<para>
+
+<para>Private defines. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1gac5251397ce2246b546b472cd802e6d62"/>#define <emphasis role="strong">USBD_VID</emphasis>   1155</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1ga070dd542d4d914e86fdf103fa5fdd72f"/>#define <emphasis role="strong">USBD_LANGID_STRING</emphasis>   1033</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1gaee0c9fd7e8265b90126028919cd863a6"/>#define <emphasis role="strong">USBD_MANUFACTURER_STRING</emphasis>   &quot;Git-Video&quot;</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1gaa6f9e36da39c9881963cabf42df4d216"/>#define <emphasis role="strong">USBD_PID_FS</emphasis>   22336</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1gaa11017e20e3a2f1ef891b86212c4b730"/>#define <emphasis role="strong">USBD_PRODUCT_STRING_FS</emphasis>   &quot;GDMX-Info panel&quot;</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1gaca5e66e8b6c89a896f6ad16f9a68128f"/>#define <emphasis role="strong">USBD_CONFIGURATION_STRING_FS</emphasis>   &quot;CDC Config&quot;</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1ga2562ccc9162020b79f07d813eba10ddb"/>#define <emphasis role="strong">USBD_INTERFACE_STRING_FS</emphasis>   &quot;CDC Interface&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Private defines. </para>
+</section>
+</section>

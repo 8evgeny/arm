@@ -1,0 +1,765 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="usbd__ioreq_8h" kind="file" language="C++">
+    <compoundname>usbd_ioreq.h</compoundname>
+    <includes refid="usbd__def_8h" local="yes">usbd_def.h</includes>
+    <includes refid="usbd__core_8h" local="yes">usbd_core.h</includes>
+    <includedby refid="usbd__cdc_8h" local="yes">Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</includedby>
+    <includedby refid="usbd__core_8h" local="yes">Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h</includedby>
+    <includedby refid="usbd__ctlreq_8c" local="yes">Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c</includedby>
+    <includedby refid="usbd__ioreq_8c" local="yes">Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c</includedby>
+    <incdepgraph>
+      <node id="21">
+        <label>stm32f1xx_hal_flash.h</label>
+        <link refid="stm32f1xx__hal__flash_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>stm32f1xx_hal_tim_ex.h</label>
+        <link refid="stm32f1xx__hal__tim__ex_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>stm32f1xx_hal_pcd.h</label>
+        <link refid="stm32f1xx__hal__pcd_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="20">
+        <label>stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>stm32f1xx_ll_usb.h</label>
+        <link refid="stm32f1xx__ll__usb_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stddef.h</label>
+      </node>
+      <node id="23">
+        <label>stm32f1xx_hal_pwr.h</label>
+        <link refid="stm32f1xx__hal__pwr_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stm32f1xx_hal_rcc.h</label>
+        <link refid="stm32f1xx__hal__rcc_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>stm32f1xx_hal_dma_ex.h</label>
+        <link refid="stm32f1xx__hal__dma__ex_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="22">
+        <label>stm32f1xx_hal_flash_ex.h</label>
+        <link refid="stm32f1xx__hal__flash__ex_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>stm32f1xx_hal_dma.h</label>
+        <link refid="stm32f1xx__hal__dma_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>stm32f1xx_hal_tim.h</label>
+        <link refid="stm32f1xx__hal__tim_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stm32f1xx_hal_rcc_ex.h</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="17">
+        <label>stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Src/usb_device.c</label>
+        <link refid="usb__device_8c"/>
+      </node>
+      <node id="7">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</label>
+        <link refid="usbd__cdc_8c"/>
+      </node>
+      <node id="2">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c</label>
+        <link refid="usbd__ioreq_8c"/>
+      </node>
+      <node id="8">
+        <label>Src/usbd_conf.c</label>
+        <link refid="usbd__conf_8c"/>
+      </node>
+      <node id="4">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="6">
+        <label>Src/usbd_cdc_if.c</label>
+        <link refid="usbd__cdc__if_8c"/>
+      </node>
+      <node id="9">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Src/usbd_desc.c</label>
+        <link refid="usbd__desc_8c"/>
+      </node>
+      <node id="10">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c</label>
+        <link refid="usbd__core_8c"/>
+      </node>
+      <node id="1">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gae66e8dc0e24f9d7d23930f6c87605e75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlSendData</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *pbuf, uint16_t len)</argsstring>
+        <name>USBD_CtlSendData</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlSendData send data on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="80" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="87" bodyend="99" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="80" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gaf07248d84e87cdf14db392f94b369744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlContinueSendData</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *pbuf, uint16_t len)</argsstring>
+        <name>USBD_CtlContinueSendData</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlContinueSendData continue sending data on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="84" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="109" bodyend="116" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="84" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gabe067dfaa82139b6d3acf5f8cdd5fc91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlPrepareRx</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *pbuf, uint16_t len)</argsstring>
+        <name>USBD_CtlPrepareRx</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlPrepareRx receive data on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data to be received </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="88" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="126" bodyend="138" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="88" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gaf6cabd5a8d9d527cf6aa64915abb7f2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlContinueRx</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *pbuf, uint16_t len)</argsstring>
+        <name>USBD_CtlContinueRx</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlContinueRx continue receive data on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of data to be received </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="92" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="148" bodyend="154" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="92" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1ga19e53947fc912c43bcee2c7d7429e8ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlSendStatus</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_CtlSendStatus</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlSendStatus send zero lzngth packet on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="96" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="162" bodyend="171" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="96" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gad5e847f89ca67a6b2154a72d0aa25e9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_CtlReceiveStatus</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_CtlReceiveStatus</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CtlReceiveStatus receive zero lzngth packet on the ctl pipe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="98" column="21" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="179" bodyend="188" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="98" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1ga1ea167471f0e91676934feb76f67b1c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t USBD_GetRxCount</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr)</argsstring>
+        <name>USBD_GetRxCount</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>USBD_GetRxCount returns the received data length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>endpoint address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>Rx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data blength </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" line="100" column="11" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" bodystart="197" bodyend="200" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" declline="100" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for the <ref refid="usbd__ioreq_8c" kindref="compound">usbd_ioreq.c</ref> file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>MCD Application Team</para>
+</simplesect>
+<simplesect kind="attention"><para></para>
+</simplesect>
+<heading level="2"><center><copy/> Copyright (c) 2015 STMicroelectronics. All rights reserved.</center></heading>
+</para>
+<para>This software component is licensed by ST under Ultimate Liberty license SLA0044, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: www.st.com/SLA0044 </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__USBD_IOREQ_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__USBD_IOREQ_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/>&quot;<ref refid="usbd__def_8h" kindref="compound">usbd_def.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/>&quot;<ref refid="usbd__core_8h" kindref="compound">usbd_core.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gae66e8dc0e24f9d7d23930f6c87605e75" kindref="member">USBD_CtlSendData</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*pbuf,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>len);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gaf07248d84e87cdf14db392f94b369744" kindref="member">USBD_CtlContinueSendData</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*pbuf,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>len);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gabe067dfaa82139b6d3acf5f8cdd5fc91" kindref="member">USBD_CtlPrepareRx</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*pbuf,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>len);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gaf6cabd5a8d9d527cf6aa64915abb7f2b" kindref="member">USBD_CtlContinueRx</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*pbuf,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>len);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1ga19e53947fc912c43bcee2c7d7429e8ee" kindref="member">USBD_CtlSendStatus</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gad5e847f89ca67a6b2154a72d0aa25e9a" kindref="member">USBD_CtlReceiveStatus</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">uint32_t<sp/><sp/><ref refid="group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1ga1ea167471f0e91676934feb76f67b1c2" kindref="member">USBD_GetRxCount</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/>ep_addr);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__USBD_IOREQ_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">/************************<sp/>(C)<sp/>COPYRIGHT<sp/>STMicroelectronics<sp/>*****END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h"/>
+  </compounddef>
+</doxygen>

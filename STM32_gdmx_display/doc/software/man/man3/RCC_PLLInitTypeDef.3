@@ -1,0 +1,39 @@
+.TH "RCC_PLLInitTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_PLLInitTypeDef \- RCC PLL configuration structure definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_rcc\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBPLLState\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPLLSource\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPLLMUL\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+RCC PLL configuration structure definition\&. 
+.SH "Field Documentation"
+.PP 
+.SS "uint32_t PLLMUL"
+PLLMUL: Multiplication factor for PLL VCO input clock This parameter must be a value of \fBPLL Multiplication Factor\fP 
+.SS "uint32_t PLLSource"
+PLLSource: PLL entry clock source\&. This parameter must be a value of \fBPLL Clock Source\fP 
+.SS "uint32_t PLLState"
+PLLState: The new state of the PLL\&. This parameter can be a value of \fBPLL Config\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

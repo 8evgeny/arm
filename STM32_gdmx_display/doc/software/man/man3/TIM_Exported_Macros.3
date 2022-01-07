@@ -1,0 +1,1174 @@
+.TH "TIM_Exported_Macros" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Exported_Macros \- TIM Exported Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_TIM_RESET_HANDLE_STATE\fP(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_TIM_STATE_RESET\fP)"
+.br
+.RI "Reset TIM handle state\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR1|=(\fBTIM_CR1_CEN\fP))"
+.br
+.RI "Enable the TIM peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_MOE_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->BDTR|=(\fBTIM_BDTR_MOE\fP))"
+.br
+.RI "Enable the TIM main Output\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_DISABLE\fP(__HANDLE__)"
+.br
+.RI "Disable the TIM peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_MOE_DISABLE\fP(__HANDLE__)"
+.br
+.RI "Disable the TIM main Output\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_MOE_DISABLE_UNCONDITIONALLY\fP(__HANDLE__)   (__HANDLE__)\->Instance\->BDTR &= ~(\fBTIM_BDTR_MOE\fP)"
+.br
+.RI "Disable the TIM main Output\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_ENABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)\->Instance\->DIER |= (__INTERRUPT__))"
+.br
+.RI "Enable the specified TIM interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_DISABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)\->Instance\->DIER &= ~(__INTERRUPT__))"
+.br
+.RI "Disable the specified TIM interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_ENABLE_DMA\fP(__HANDLE__,  __DMA__)   ((__HANDLE__)\->Instance\->DIER |= (__DMA__))"
+.br
+.RI "Enable the specified DMA request\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_DISABLE_DMA\fP(__HANDLE__,  __DMA__)   ((__HANDLE__)\->Instance\->DIER &= ~(__DMA__))"
+.br
+.RI "Disable the specified DMA request\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_GET_FLAG\fP(__HANDLE__,  __FLAG__)   (((__HANDLE__)\->Instance\->SR &(__FLAG__)) == (__FLAG__))"
+.br
+.RI "Check whether the specified TIM interrupt flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_CLEAR_FLAG\fP(__HANDLE__,  __FLAG__)   ((__HANDLE__)\->Instance\->SR = ~(__FLAG__))"
+.br
+.RI "Clear the specified TIM interrupt flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_GET_IT_SOURCE\fP(__HANDLE__,  __INTERRUPT__)"
+.br
+.RI "Check whether the specified TIM interrupt source is enabled or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_CLEAR_IT\fP(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)\->Instance\->SR = ~(__INTERRUPT__))"
+.br
+.RI "Clear the TIM interrupt pending bits\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_IS_TIM_COUNTING_DOWN\fP(__HANDLE__)   (((__HANDLE__)\->Instance\->CR1 &(\fBTIM_CR1_DIR\fP)) == (\fBTIM_CR1_DIR\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_TIM_SET_PRESCALER\fP(__HANDLE__,  __PRESC__)   ((__HANDLE__)\->Instance\->PSC = (__PRESC__))"
+.br
+.RI "Set the TIM Prescaler on runtime\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_SET_COUNTER\fP(__HANDLE__,  __COUNTER__)   ((__HANDLE__)\->Instance\->CNT = (__COUNTER__))"
+.br
+.RI "Set the TIM Counter Register value on runtime\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_GET_COUNTER\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CNT)"
+.br
+.RI "Get the TIM Counter Register value on runtime\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_SET_AUTORELOAD\fP(__HANDLE__,  __AUTORELOAD__)"
+.br
+.RI "Set the TIM Autoreload Register value on runtime without calling another time any Init function\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_GET_AUTORELOAD\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->ARR)"
+.br
+.RI "Get the TIM Autoreload Register value on runtime\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_SET_CLOCKDIVISION\fP(__HANDLE__,  __CKD__)"
+.br
+.RI "Set the TIM Clock Division value on runtime without calling another time any Init function\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_GET_CLOCKDIVISION\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR1 & \fBTIM_CR1_CKD\fP)"
+.br
+.RI "Get the TIM Clock Division value on runtime\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_SET_ICPRESCALER\fP(__HANDLE__,  __CHANNEL__,  __ICPSC__)"
+.br
+.RI "Set the TIM Input Capture prescaler on runtime without calling another time HAL_TIM_IC_ConfigChannel() function\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_GET_ICPRESCALER\fP(__HANDLE__,  __CHANNEL__)"
+.br
+.RI "Get the TIM Input Capture prescaler on runtime\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_SET_COMPARE\fP(__HANDLE__,  __CHANNEL__,  __COMPARE__)"
+.br
+.RI "Set the TIM Capture Compare Register value on runtime without calling another time ConfigChannel function\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_GET_COMPARE\fP(__HANDLE__,  __CHANNEL__)"
+.br
+.RI "Get the TIM Capture Compare Register value on runtime\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_ENABLE_OCxPRELOAD\fP(__HANDLE__,  __CHANNEL__)"
+.br
+.RI "Set the TIM Output compare preload\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_DISABLE_OCxPRELOAD\fP(__HANDLE__,  __CHANNEL__)"
+.br
+.RI "Reset the TIM Output compare preload\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_ENABLE_OCxFAST\fP(__HANDLE__,  __CHANNEL__)"
+.br
+.RI "Enable fast mode for a given channel\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_DISABLE_OCxFAST\fP(__HANDLE__,  __CHANNEL__)"
+.br
+.RI "Disable fast mode for a given channel\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_URS_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR1|= \fBTIM_CR1_URS\fP)"
+.br
+.RI "Set the Update Request Source (URS) bit of the TIMx_CR1 register\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_URS_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR1&=~\fBTIM_CR1_URS\fP)"
+.br
+.RI "Reset the Update Request Source (URS) bit of the TIMx_CR1 register\&. "
+.ti -1c
+.RI "#define \fB__HAL_TIM_SET_CAPTUREPOLARITY\fP(__HANDLE__,  __CHANNEL__,  __POLARITY__)"
+.br
+.RI "Set the TIM Capture x input polarity on runtime\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_TIM_CLEAR_FLAG(__HANDLE__, __FLAG__)   ((__HANDLE__)\->Instance\->SR = ~(__FLAG__))"
+
+.PP
+Clear the specified TIM interrupt flag\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the TIM Handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the TIM interrupt flag to clear\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_FLAG_UPDATE: Update interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_CC1: Capture/Compare 1 interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_CC2: Capture/Compare 2 interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_CC3: Capture/Compare 3 interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_CC4: Capture/Compare 4 interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_COM: Commutation interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_TRIGGER: Trigger interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_BREAK: Break interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_CC1OF: Capture/Compare 1 overcapture flag 
+.IP "\(bu" 2
+TIM_FLAG_CC2OF: Capture/Compare 2 overcapture flag 
+.IP "\(bu" 2
+TIM_FLAG_CC3OF: Capture/Compare 3 overcapture flag 
+.IP "\(bu" 2
+TIM_FLAG_CC4OF: Capture/Compare 4 overcapture flag 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP new state of \fBFLAG\fP (TRUE or FALSE)\&. 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_CLEAR_IT(__HANDLE__, __INTERRUPT__)   ((__HANDLE__)\->Instance\->SR = ~(__INTERRUPT__))"
+
+.PP
+Clear the TIM interrupt pending bits\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the interrupt pending bit to clear\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_IT_UPDATE: Update interrupt 
+.IP "\(bu" 2
+TIM_IT_CC1: Capture/Compare 1 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC2: Capture/Compare 2 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC3: Capture/Compare 3 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC4: Capture/Compare 4 interrupt 
+.IP "\(bu" 2
+TIM_IT_COM: Commutation interrupt 
+.IP "\(bu" 2
+TIM_IT_TRIGGER: Trigger interrupt 
+.IP "\(bu" 2
+TIM_IT_BREAK: Break interrupt 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_DISABLE(__HANDLE__)"
+\fBValue:\fP
+.PP
+.nf
+  do { \
+    if (((__HANDLE__)->Instance->CCER & TIM_CCER_CCxE_MASK) == 0UL) \
+    { \
+      if(((__HANDLE__)->Instance->CCER & TIM_CCER_CCxNE_MASK) == 0UL) \
+      { \
+        (__HANDLE__)->Instance->CR1 &= ~(TIM_CR1_CEN); \
+      } \
+    } \
+  } while(0)
+.fi
+.PP
+Disable the TIM peripheral\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_DISABLE_DMA(__HANDLE__, __DMA__)   ((__HANDLE__)\->Instance\->DIER &= ~(__DMA__))"
+
+.PP
+Disable the specified DMA request\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the TIM Handle\&. 
+.br
+\fI<strong>DMA</strong>\fP specifies the TIM DMA request to disable\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_DMA_UPDATE: Update DMA request 
+.IP "\(bu" 2
+TIM_DMA_CC1: Capture/Compare 1 DMA request 
+.IP "\(bu" 2
+TIM_DMA_CC2: Capture/Compare 2 DMA request 
+.IP "\(bu" 2
+TIM_DMA_CC3: Capture/Compare 3 DMA request 
+.IP "\(bu" 2
+TIM_DMA_CC4: Capture/Compare 4 DMA request 
+.IP "\(bu" 2
+TIM_DMA_COM: Commutation DMA request 
+.IP "\(bu" 2
+TIM_DMA_TRIGGER: Trigger DMA request 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_DISABLE_IT(__HANDLE__, __INTERRUPT__)   ((__HANDLE__)\->Instance\->DIER &= ~(__INTERRUPT__))"
+
+.PP
+Disable the specified TIM interrupt\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the TIM Handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the TIM interrupt source to disable\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_IT_UPDATE: Update interrupt 
+.IP "\(bu" 2
+TIM_IT_CC1: Capture/Compare 1 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC2: Capture/Compare 2 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC3: Capture/Compare 3 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC4: Capture/Compare 4 interrupt 
+.IP "\(bu" 2
+TIM_IT_COM: Commutation interrupt 
+.IP "\(bu" 2
+TIM_IT_TRIGGER: Trigger interrupt 
+.IP "\(bu" 2
+TIM_IT_BREAK: Break interrupt 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_DISABLE_OCxFAST(__HANDLE__, __CHANNEL__)"
+\fBValue:\fP
+.PP
+.nf
+  (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCMR1 &= ~TIM_CCMR1_OC1FE) :\
+   ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCMR1 &= ~TIM_CCMR1_OC2FE) :\
+   ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCMR2 &= ~TIM_CCMR2_OC3FE) :\
+   ((__HANDLE__)->Instance->CCMR2 &= ~TIM_CCMR2_OC4FE))
+.fi
+.PP
+Disable fast mode for a given channel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>CHANNEL</strong>\fP TIM Channels to be configured\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CHANNEL_1: TIM Channel 1 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_2: TIM Channel 2 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_3: TIM Channel 3 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_4: TIM Channel 4 selected 
+.PP
+.RE
+.PP
+\fBNote\fP
+.RS 4
+When fast mode is disabled CCx output behaves normally depending on counter and CCRx values even when the trigger is ON\&. The minimum delay to activate CCx output when an active edge occurs on the trigger input is 5 clock cycles\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_DISABLE_OCxPRELOAD(__HANDLE__, __CHANNEL__)"
+\fBValue:\fP
+.PP
+.nf
+  (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCMR1 &= ~TIM_CCMR1_OC1PE) :\
+   ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCMR1 &= ~TIM_CCMR1_OC2PE) :\
+   ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCMR2 &= ~TIM_CCMR2_OC3PE) :\
+   ((__HANDLE__)->Instance->CCMR2 &= ~TIM_CCMR2_OC4PE))
+.fi
+.PP
+Reset the TIM Output compare preload\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>CHANNEL</strong>\fP TIM Channels to be configured\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CHANNEL_1: TIM Channel 1 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_2: TIM Channel 2 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_3: TIM Channel 3 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_4: TIM Channel 4 selected 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR1|=(\fBTIM_CR1_CEN\fP))"
+
+.PP
+Enable the TIM peripheral\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_ENABLE_DMA(__HANDLE__, __DMA__)   ((__HANDLE__)\->Instance\->DIER |= (__DMA__))"
+
+.PP
+Enable the specified DMA request\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the TIM Handle\&. 
+.br
+\fI<strong>DMA</strong>\fP specifies the TIM DMA request to enable\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_DMA_UPDATE: Update DMA request 
+.IP "\(bu" 2
+TIM_DMA_CC1: Capture/Compare 1 DMA request 
+.IP "\(bu" 2
+TIM_DMA_CC2: Capture/Compare 2 DMA request 
+.IP "\(bu" 2
+TIM_DMA_CC3: Capture/Compare 3 DMA request 
+.IP "\(bu" 2
+TIM_DMA_CC4: Capture/Compare 4 DMA request 
+.IP "\(bu" 2
+TIM_DMA_COM: Commutation DMA request 
+.IP "\(bu" 2
+TIM_DMA_TRIGGER: Trigger DMA request 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_ENABLE_IT(__HANDLE__, __INTERRUPT__)   ((__HANDLE__)\->Instance\->DIER |= (__INTERRUPT__))"
+
+.PP
+Enable the specified TIM interrupt\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the TIM Handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the TIM interrupt source to enable\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_IT_UPDATE: Update interrupt 
+.IP "\(bu" 2
+TIM_IT_CC1: Capture/Compare 1 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC2: Capture/Compare 2 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC3: Capture/Compare 3 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC4: Capture/Compare 4 interrupt 
+.IP "\(bu" 2
+TIM_IT_COM: Commutation interrupt 
+.IP "\(bu" 2
+TIM_IT_TRIGGER: Trigger interrupt 
+.IP "\(bu" 2
+TIM_IT_BREAK: Break interrupt 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_ENABLE_OCxFAST(__HANDLE__, __CHANNEL__)"
+\fBValue:\fP
+.PP
+.nf
+  (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCMR1 |= TIM_CCMR1_OC1FE) :\
+   ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCMR1 |= TIM_CCMR1_OC2FE) :\
+   ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCMR2 |= TIM_CCMR2_OC3FE) :\
+   ((__HANDLE__)->Instance->CCMR2 |= TIM_CCMR2_OC4FE))
+.fi
+.PP
+Enable fast mode for a given channel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>CHANNEL</strong>\fP TIM Channels to be configured\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CHANNEL_1: TIM Channel 1 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_2: TIM Channel 2 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_3: TIM Channel 3 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_4: TIM Channel 4 selected 
+.PP
+.RE
+.PP
+\fBNote\fP
+.RS 4
+When fast mode is enabled an active edge on the trigger input acts like a compare match on CCx output\&. Delay to sample the trigger input and to activate CCx output is reduced to 3 clock cycles\&. 
+.PP
+Fast mode acts only if the channel is configured in PWM1 or PWM2 mode\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_ENABLE_OCxPRELOAD(__HANDLE__, __CHANNEL__)"
+\fBValue:\fP
+.PP
+.nf
+  (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCMR1 |= TIM_CCMR1_OC1PE) :\
+   ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCMR1 |= TIM_CCMR1_OC2PE) :\
+   ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCMR2 |= TIM_CCMR2_OC3PE) :\
+   ((__HANDLE__)->Instance->CCMR2 |= TIM_CCMR2_OC4PE))
+.fi
+.PP
+Set the TIM Output compare preload\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>CHANNEL</strong>\fP TIM Channels to be configured\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CHANNEL_1: TIM Channel 1 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_2: TIM Channel 2 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_3: TIM Channel 3 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_4: TIM Channel 4 selected 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_GET_AUTORELOAD(__HANDLE__)   ((__HANDLE__)\->Instance\->ARR)"
+
+.PP
+Get the TIM Autoreload Register value on runtime\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fI16-bit\fP or 32-bit value of the timer auto-reload register(TIMx_ARR) 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_GET_CLOCKDIVISION(__HANDLE__)   ((__HANDLE__)\->Instance\->CR1 & \fBTIM_CR1_CKD\fP)"
+
+.PP
+Get the TIM Clock Division value on runtime\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP clock division can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CLOCKDIVISION_DIV1: tDTS=tCK_INT 
+.IP "\(bu" 2
+TIM_CLOCKDIVISION_DIV2: tDTS=2*tCK_INT 
+.IP "\(bu" 2
+TIM_CLOCKDIVISION_DIV4: tDTS=4*tCK_INT 
+.PP
+.RE
+.PP
+
+.SS "#define __HAL_TIM_GET_COMPARE(__HANDLE__, __CHANNEL__)"
+\fBValue:\fP
+.PP
+.nf
+  (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1) :\
+   ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2) :\
+   ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3) :\
+   ((__HANDLE__)->Instance->CCR4))
+.fi
+.PP
+Get the TIM Capture Compare Register value on runtime\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>CHANNEL</strong>\fP TIM Channel associated with the capture compare register This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CHANNEL_1: get capture/compare 1 register value 
+.IP "\(bu" 2
+TIM_CHANNEL_2: get capture/compare 2 register value 
+.IP "\(bu" 2
+TIM_CHANNEL_3: get capture/compare 3 register value 
+.IP "\(bu" 2
+TIM_CHANNEL_4: get capture/compare 4 register value 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fI16-bit\fP or 32-bit value of the capture/compare register (TIMx_CCRy) 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_GET_COUNTER(__HANDLE__)   ((__HANDLE__)\->Instance\->CNT)"
+
+.PP
+Get the TIM Counter Register value on runtime\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fI16-bit\fP or 32-bit value of the timer counter register (TIMx_CNT) 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_GET_FLAG(__HANDLE__, __FLAG__)   (((__HANDLE__)\->Instance\->SR &(__FLAG__)) == (__FLAG__))"
+
+.PP
+Check whether the specified TIM interrupt flag is set or not\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the TIM Handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the TIM interrupt flag to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_FLAG_UPDATE: Update interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_CC1: Capture/Compare 1 interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_CC2: Capture/Compare 2 interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_CC3: Capture/Compare 3 interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_CC4: Capture/Compare 4 interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_COM: Commutation interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_TRIGGER: Trigger interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_BREAK: Break interrupt flag 
+.IP "\(bu" 2
+TIM_FLAG_CC1OF: Capture/Compare 1 overcapture flag 
+.IP "\(bu" 2
+TIM_FLAG_CC2OF: Capture/Compare 2 overcapture flag 
+.IP "\(bu" 2
+TIM_FLAG_CC3OF: Capture/Compare 3 overcapture flag 
+.IP "\(bu" 2
+TIM_FLAG_CC4OF: Capture/Compare 4 overcapture flag 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP new state of \fBFLAG\fP (TRUE or FALSE)\&. 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_GET_ICPRESCALER(__HANDLE__, __CHANNEL__)"
+\fBValue:\fP
+.PP
+.nf
+  (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCMR1 & TIM_CCMR1_IC1PSC) :\
+   ((__CHANNEL__) == TIM_CHANNEL_2) ? (((__HANDLE__)->Instance->CCMR1 & TIM_CCMR1_IC2PSC) >> 8U) :\
+   ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCMR2 & TIM_CCMR2_IC3PSC) :\
+   (((__HANDLE__)->Instance->CCMR2 & TIM_CCMR2_IC4PSC)) >> 8U)
+.fi
+.PP
+Get the TIM Input Capture prescaler on runtime\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>CHANNEL</strong>\fP TIM Channels to be configured\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CHANNEL_1: get input capture 1 prescaler value 
+.IP "\(bu" 2
+TIM_CHANNEL_2: get input capture 2 prescaler value 
+.IP "\(bu" 2
+TIM_CHANNEL_3: get input capture 3 prescaler value 
+.IP "\(bu" 2
+TIM_CHANNEL_4: get input capture 4 prescaler value 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP input capture prescaler can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_ICPSC_DIV1: no prescaler 
+.IP "\(bu" 2
+TIM_ICPSC_DIV2: capture is done once every 2 events 
+.IP "\(bu" 2
+TIM_ICPSC_DIV4: capture is done once every 4 events 
+.IP "\(bu" 2
+TIM_ICPSC_DIV8: capture is done once every 8 events 
+.PP
+.RE
+.PP
+
+.SS "#define __HAL_TIM_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__)"
+\fBValue:\fP
+.PP
+.nf
+                                                             ((((__HANDLE__)->Instance->DIER & (__INTERRUPT__)) \
+                                                             == (__INTERRUPT__)) ? SET : RESET)
+.fi
+.PP
+Check whether the specified TIM interrupt source is enabled or not\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the TIM interrupt source to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_IT_UPDATE: Update interrupt 
+.IP "\(bu" 2
+TIM_IT_CC1: Capture/Compare 1 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC2: Capture/Compare 2 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC3: Capture/Compare 3 interrupt 
+.IP "\(bu" 2
+TIM_IT_CC4: Capture/Compare 4 interrupt 
+.IP "\(bu" 2
+TIM_IT_COM: Commutation interrupt 
+.IP "\(bu" 2
+TIM_IT_TRIGGER: Trigger interrupt 
+.IP "\(bu" 2
+TIM_IT_BREAK: Break interrupt 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP state of TIM_IT (SET or RESET)\&. 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_IS_TIM_COUNTING_DOWN(__HANDLE__)   (((__HANDLE__)\->Instance\->CR1 &(\fBTIM_CR1_DIR\fP)) == (\fBTIM_CR1_DIR\fP))"
+
+.PP
+.nf
+@brief  Indicates whether or not the TIM Counter is used as downcounter.
+@param  __HANDLE__ TIM handle.
+@retval False (Counter used as upcounter) or True (Counter used as downcounter)
+@note This macro is particularly useful to get the counting mode when the timer operates in Center-aligned mode or Encoder
+
+.fi
+.PP
+ mode\&. 
+.SS "#define __HAL_TIM_MOE_DISABLE(__HANDLE__)"
+\fBValue:\fP
+.PP
+.nf
+  do { \
+    if (((__HANDLE__)->Instance->CCER & TIM_CCER_CCxE_MASK) == 0UL) \
+    { \
+      if(((__HANDLE__)->Instance->CCER & TIM_CCER_CCxNE_MASK) == 0UL) \
+      { \
+        (__HANDLE__)->Instance->BDTR &= ~(TIM_BDTR_MOE); \
+      } \
+    } \
+  } while(0)
+.fi
+.PP
+Disable the TIM main Output\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The Main Output Enable of a timer instance is disabled only if all the CCx and CCxN channels have been disabled 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_MOE_DISABLE_UNCONDITIONALLY(__HANDLE__)   (__HANDLE__)\->Instance\->BDTR &= ~(\fBTIM_BDTR_MOE\fP)"
+
+.PP
+Disable the TIM main Output\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The Main Output Enable of a timer instance is disabled unconditionally 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_MOE_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->BDTR|=(\fBTIM_BDTR_MOE\fP))"
+
+.PP
+Enable the TIM main Output\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_RESET_HANDLE_STATE(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_TIM_STATE_RESET\fP)"
+
+.PP
+Reset TIM handle state\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_SET_AUTORELOAD(__HANDLE__, __AUTORELOAD__)"
+\fBValue:\fP
+.PP
+.nf
+  do{                                                    \
+    (__HANDLE__)->Instance->ARR = (__AUTORELOAD__);  \
+    (__HANDLE__)->Init\&.Period = (__AUTORELOAD__);    \
+  } while(0)
+.fi
+.PP
+Set the TIM Autoreload Register value on runtime without calling another time any Init function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>AUTORELOAD</strong>\fP specifies the Counter register new value\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_SET_CAPTUREPOLARITY(__HANDLE__, __CHANNEL__, __POLARITY__)"
+\fBValue:\fP
+.PP
+.nf
+  do{                                                                     \
+    TIM_RESET_CAPTUREPOLARITY((__HANDLE__), (__CHANNEL__));               \
+    TIM_SET_CAPTUREPOLARITY((__HANDLE__), (__CHANNEL__), (__POLARITY__)); \
+  }while(0)
+.fi
+.PP
+Set the TIM Capture x input polarity on runtime\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>CHANNEL</strong>\fP TIM Channels to be configured\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CHANNEL_1: TIM Channel 1 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_2: TIM Channel 2 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_3: TIM Channel 3 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_4: TIM Channel 4 selected 
+.PP
+.br
+\fI<strong>POLARITY</strong>\fP Polarity for TIx source 
+.PD 0
+
+.IP "\(bu" 2
+TIM_INPUTCHANNELPOLARITY_RISING: Rising Edge 
+.IP "\(bu" 2
+TIM_INPUTCHANNELPOLARITY_FALLING: Falling Edge 
+.IP "\(bu" 2
+TIM_INPUTCHANNELPOLARITY_BOTHEDGE: Rising and Falling Edge 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_SET_CLOCKDIVISION(__HANDLE__, __CKD__)"
+\fBValue:\fP
+.PP
+.nf
+  do{                                                   \
+    (__HANDLE__)->Instance->CR1 &= (~TIM_CR1_CKD);  \
+    (__HANDLE__)->Instance->CR1 |= (__CKD__);       \
+    (__HANDLE__)->Init\&.ClockDivision = (__CKD__);   \
+  } while(0)
+.fi
+.PP
+Set the TIM Clock Division value on runtime without calling another time any Init function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>CKD</strong>\fP specifies the clock division value\&. This parameter can be one of the following value: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CLOCKDIVISION_DIV1: tDTS=tCK_INT 
+.IP "\(bu" 2
+TIM_CLOCKDIVISION_DIV2: tDTS=2*tCK_INT 
+.IP "\(bu" 2
+TIM_CLOCKDIVISION_DIV4: tDTS=4*tCK_INT 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_SET_COMPARE(__HANDLE__, __CHANNEL__, __COMPARE__)"
+\fBValue:\fP
+.PP
+.nf
+  (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+   ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2 = (__COMPARE__)) :\
+   ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3 = (__COMPARE__)) :\
+   ((__HANDLE__)->Instance->CCR4 = (__COMPARE__)))
+.fi
+.PP
+Set the TIM Capture Compare Register value on runtime without calling another time ConfigChannel function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>CHANNEL</strong>\fP TIM Channels to be configured\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CHANNEL_1: TIM Channel 1 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_2: TIM Channel 2 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_3: TIM Channel 3 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_4: TIM Channel 4 selected 
+.PP
+.br
+\fI<strong>COMPARE</strong>\fP specifies the Capture Compare register new value\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_SET_COUNTER(__HANDLE__, __COUNTER__)   ((__HANDLE__)\->Instance\->CNT = (__COUNTER__))"
+
+.PP
+Set the TIM Counter Register value on runtime\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>COUNTER</strong>\fP specifies the Counter register new value\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_SET_ICPRESCALER(__HANDLE__, __CHANNEL__, __ICPSC__)"
+\fBValue:\fP
+.PP
+.nf
+  do{                                                    \
+    TIM_RESET_ICPRESCALERVALUE((__HANDLE__), (__CHANNEL__));  \
+    TIM_SET_ICPRESCALERVALUE((__HANDLE__), (__CHANNEL__), (__ICPSC__)); \
+  } while(0)
+.fi
+.PP
+Set the TIM Input Capture prescaler on runtime without calling another time HAL_TIM_IC_ConfigChannel() function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>CHANNEL</strong>\fP TIM Channels to be configured\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_CHANNEL_1: TIM Channel 1 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_2: TIM Channel 2 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_3: TIM Channel 3 selected 
+.IP "\(bu" 2
+TIM_CHANNEL_4: TIM Channel 4 selected 
+.PP
+.br
+\fI<strong>ICPSC</strong>\fP specifies the Input Capture4 prescaler new value\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+TIM_ICPSC_DIV1: no prescaler 
+.IP "\(bu" 2
+TIM_ICPSC_DIV2: capture is done once every 2 events 
+.IP "\(bu" 2
+TIM_ICPSC_DIV4: capture is done once every 4 events 
+.IP "\(bu" 2
+TIM_ICPSC_DIV8: capture is done once every 8 events 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_SET_PRESCALER(__HANDLE__, __PRESC__)   ((__HANDLE__)\->Instance\->PSC = (__PRESC__))"
+
+.PP
+Set the TIM Prescaler on runtime\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.br
+\fI<strong>PRESC</strong>\fP specifies the Prescaler new value\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_URS_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR1&=~\fBTIM_CR1_URS\fP)"
+
+.PP
+Reset the Update Request Source (URS) bit of the TIMx_CR1 register\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+When the URS bit of the TIMx_CR1 register is reset, any of the following events generate an update interrupt or DMA request (if enabled): _ Counter overflow underflow _ Setting the UG bit _ Update generation through the slave mode controller 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_TIM_URS_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR1|= \fBTIM_CR1_URS\fP)"
+
+.PP
+Set the Update Request Source (URS) bit of the TIMx_CR1 register\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP TIM handle\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+When the URS bit of the TIMx_CR1 register is set, only counter overflow/underflow generates an update interrupt or DMA request (if enabled) 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

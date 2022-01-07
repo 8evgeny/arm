@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___i_r_d_a___aliased___macros" xml:lang="en-US">
+<title>HAL IRDA Aliased Macros maintained for legacy purpose</title>
+<indexterm><primary>HAL IRDA Aliased Macros maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___i_r_d_a___aliased___macros_1gae107b46fa75a7f1f5eb0734cbb24e997"/>#define <emphasis role="strong">__IRDA_DISABLE</emphasis>   __HAL_IRDA_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___i_r_d_a___aliased___macros_1ga30e950fea9b8b878eb721ef488572f93"/>#define <emphasis role="strong">__IRDA_ENABLE</emphasis>   __HAL_IRDA_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___i_r_d_a___aliased___macros_1ga914579d3d8a0ebefab093a54a60bdef4"/>#define <emphasis role="strong">__HAL_IRDA_GETCLOCKSOURCE</emphasis>   IRDA_GETCLOCKSOURCE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___i_r_d_a___aliased___macros_1ga5dfede2931b25ae470e8b9222cd7f276"/>#define <emphasis role="strong">__HAL_IRDA_MASK_COMPUTATION</emphasis>   IRDA_MASK_COMPUTATION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___i_r_d_a___aliased___macros_1ga91d8bac965400b5b1e0a9be356a9e477"/>#define <emphasis role="strong">__IRDA_GETCLOCKSOURCE</emphasis>   IRDA_GETCLOCKSOURCE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___i_r_d_a___aliased___macros_1gaf50dbfc5425aee78a33582322b187616"/>#define <emphasis role="strong">__IRDA_MASK_COMPUTATION</emphasis>   IRDA_MASK_COMPUTATION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___i_r_d_a___aliased___macros_1ga152f6e8c07efa028364631d5eab0f9ed"/>#define <emphasis role="strong">IS_IRDA_ONEBIT_SAMPLE</emphasis>   IS_IRDA_ONE_BIT_SAMPLE</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

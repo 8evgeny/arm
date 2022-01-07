@@ -1,0 +1,126 @@
+.TH "HAL_USB_Aliased_Macros" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_USB_Aliased_Macros \- HAL USB Aliased Macros maintained for legacy purpose
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUSB_EXTI_LINE_WAKEUP\fP   USB_WAKEUP_EXTI_LINE"
+.br
+.ti -1c
+.RI "#define \fBUSB_FS_EXTI_TRIGGER_RISING_EDGE\fP   USB_OTG_FS_WAKEUP_EXTI_RISING_EDGE"
+.br
+.ti -1c
+.RI "#define \fBUSB_FS_EXTI_TRIGGER_FALLING_EDGE\fP   USB_OTG_FS_WAKEUP_EXTI_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fBUSB_FS_EXTI_TRIGGER_BOTH_EDGE\fP   USB_OTG_FS_WAKEUP_EXTI_RISING_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fBUSB_FS_EXTI_LINE_WAKEUP\fP   USB_OTG_FS_WAKEUP_EXTI_LINE"
+.br
+.ti -1c
+.RI "#define \fBUSB_HS_EXTI_TRIGGER_RISING_EDGE\fP   USB_OTG_HS_WAKEUP_EXTI_RISING_EDGE"
+.br
+.ti -1c
+.RI "#define \fBUSB_HS_EXTI_TRIGGER_FALLING_EDGE\fP   USB_OTG_HS_WAKEUP_EXTI_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fBUSB_HS_EXTI_TRIGGER_BOTH_EDGE\fP   USB_OTG_HS_WAKEUP_EXTI_RISING_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fBUSB_HS_EXTI_LINE_WAKEUP\fP   USB_OTG_HS_WAKEUP_EXTI_LINE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_EXTI_ENABLE_IT\fP   __HAL_USB_WAKEUP_EXTI_ENABLE_IT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_EXTI_DISABLE_IT\fP   __HAL_USB_WAKEUP_EXTI_DISABLE_IT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_EXTI_GET_FLAG\fP   __HAL_USB_WAKEUP_EXTI_GET_FLAG"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_EXTI_CLEAR_FLAG\fP   __HAL_USB_WAKEUP_EXTI_CLEAR_FLAG"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_EXTI_SET_RISING_EDGE_TRIGGER\fP   __HAL_USB_WAKEUP_EXTI_ENABLE_RISING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_EXTI_SET_FALLING_EDGE_TRIGGER\fP   __HAL_USB_WAKEUP_EXTI_ENABLE_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_EXTI_SET_FALLINGRISING_TRIGGER\fP   __HAL_USB_WAKEUP_EXTI_ENABLE_RISING_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_FS_EXTI_ENABLE_IT\fP   __HAL_USB_OTG_FS_WAKEUP_EXTI_ENABLE_IT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_FS_EXTI_DISABLE_IT\fP   __HAL_USB_OTG_FS_WAKEUP_EXTI_DISABLE_IT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_FS_EXTI_GET_FLAG\fP   __HAL_USB_OTG_FS_WAKEUP_EXTI_GET_FLAG"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_FS_EXTI_CLEAR_FLAG\fP   __HAL_USB_OTG_FS_WAKEUP_EXTI_CLEAR_FLAG"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_FS_EXTI_SET_RISING_EGDE_TRIGGER\fP   __HAL_USB_OTG_FS_WAKEUP_EXTI_ENABLE_RISING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_FS_EXTI_SET_FALLING_EGDE_TRIGGER\fP   __HAL_USB_OTG_FS_WAKEUP_EXTI_ENABLE_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_FS_EXTI_SET_FALLINGRISING_TRIGGER\fP   __HAL_USB_OTG_FS_WAKEUP_EXTI_ENABLE_RISING_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_FS_EXTI_GENERATE_SWIT\fP   __HAL_USB_OTG_FS_WAKEUP_EXTI_GENERATE_SWIT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_HS_EXTI_ENABLE_IT\fP   __HAL_USB_OTG_HS_WAKEUP_EXTI_ENABLE_IT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_HS_EXTI_DISABLE_IT\fP   __HAL_USB_OTG_HS_WAKEUP_EXTI_DISABLE_IT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_HS_EXTI_GET_FLAG\fP   __HAL_USB_OTG_HS_WAKEUP_EXTI_GET_FLAG"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_HS_EXTI_CLEAR_FLAG\fP   __HAL_USB_OTG_HS_WAKEUP_EXTI_CLEAR_FLAG"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_HS_EXTI_SET_RISING_EGDE_TRIGGER\fP   __HAL_USB_OTG_HS_WAKEUP_EXTI_ENABLE_RISING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_HS_EXTI_SET_FALLING_EGDE_TRIGGER\fP   __HAL_USB_OTG_HS_WAKEUP_EXTI_ENABLE_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_HS_EXTI_SET_FALLINGRISING_TRIGGER\fP   __HAL_USB_OTG_HS_WAKEUP_EXTI_ENABLE_RISING_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USB_HS_EXTI_GENERATE_SWIT\fP   __HAL_USB_OTG_HS_WAKEUP_EXTI_GENERATE_SWIT"
+.br
+.ti -1c
+.RI "#define \fBHAL_PCD_ActiveRemoteWakeup\fP   HAL_PCD_ActivateRemoteWakeup"
+.br
+.ti -1c
+.RI "#define \fBHAL_PCD_DeActiveRemoteWakeup\fP   HAL_PCD_DeActivateRemoteWakeup"
+.br
+.ti -1c
+.RI "#define \fBHAL_PCD_SetTxFiFo\fP   HAL_PCDEx_SetTxFiFo"
+.br
+.ti -1c
+.RI "#define \fBHAL_PCD_SetRxFiFo\fP   HAL_PCDEx_SetRxFiFo"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

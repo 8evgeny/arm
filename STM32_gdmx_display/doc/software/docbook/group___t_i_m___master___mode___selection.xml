@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___master___mode___selection" xml:lang="en-US">
+<title>TIM Master Mode Selection</title>
+<indexterm><primary>TIM Master Mode Selection</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___master___mode___selection_1ga32a8e436f2c0818a657b0d3fcf4e872d">TIM_TRGO_RESET</link>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___master___mode___selection_1ga4ac300b0fd24d1e6532e5961680a39a9">TIM_TRGO_ENABLE</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaf3e55308e84106d6501201e66bd46ab6">TIM_CR2_MMS_0</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___master___mode___selection_1ga27521aebd507e562fe7fba6dfc639a67">TIM_TRGO_UPDATE</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga4b1036929b0a4ba5bd5cced9b8e0f4c3">TIM_CR2_MMS_1</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___master___mode___selection_1ga80aa9a9c41de509d99fc4cb492d6513f">TIM_TRGO_OC1</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga4b1036929b0a4ba5bd5cced9b8e0f4c3">TIM_CR2_MMS_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaf3e55308e84106d6501201e66bd46ab6">TIM_CR2_MMS_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___master___mode___selection_1gaed715aa7ec4ad0f7f5d82dde6d964178">TIM_TRGO_OC1REF</link>   <link linkend="_group___peripheral___registers___bits___definition_1gacb74a815afdd856d51cfcf1ddf3fce6a">TIM_CR2_MMS_2</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___master___mode___selection_1gaaedc4b3f4c5c3c8b45a2cf1b73e33c0a">TIM_TRGO_OC2REF</link>   (<link linkend="_group___peripheral___registers___bits___definition_1gacb74a815afdd856d51cfcf1ddf3fce6a">TIM_CR2_MMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaf3e55308e84106d6501201e66bd46ab6">TIM_CR2_MMS_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___master___mode___selection_1ga4bc4791f8b9560950d30078b96d08f55">TIM_TRGO_OC3REF</link>   (<link linkend="_group___peripheral___registers___bits___definition_1gacb74a815afdd856d51cfcf1ddf3fce6a">TIM_CR2_MMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga4b1036929b0a4ba5bd5cced9b8e0f4c3">TIM_CR2_MMS_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___master___mode___selection_1ga7fe6228adec5d1b6f0a8ed8da111db4d">TIM_TRGO_OC4REF</link>   (<link linkend="_group___peripheral___registers___bits___definition_1gacb74a815afdd856d51cfcf1ddf3fce6a">TIM_CR2_MMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga4b1036929b0a4ba5bd5cced9b8e0f4c3">TIM_CR2_MMS_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaf3e55308e84106d6501201e66bd46ab6">TIM_CR2_MMS_0</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___master___mode___selection_1ga4ac300b0fd24d1e6532e5961680a39a9"/>    <section>
+    <title>TIM_TRGO_ENABLE</title>
+<indexterm><primary>TIM_TRGO_ENABLE</primary><secondary>TIM Master Mode Selection</secondary></indexterm>
+<indexterm><primary>TIM Master Mode Selection</primary><secondary>TIM_TRGO_ENABLE</secondary></indexterm>
+<para><computeroutput>#define TIM_TRGO_ENABLE   <link linkend="_group___peripheral___registers___bits___definition_1gaf3e55308e84106d6501201e66bd46ab6">TIM_CR2_MMS_0</link></computeroutput></para>
+<para>TIMx_CR1.CEN bit is used as trigger output (TRGO) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___master___mode___selection_1ga80aa9a9c41de509d99fc4cb492d6513f"/>    <section>
+    <title>TIM_TRGO_OC1</title>
+<indexterm><primary>TIM_TRGO_OC1</primary><secondary>TIM Master Mode Selection</secondary></indexterm>
+<indexterm><primary>TIM Master Mode Selection</primary><secondary>TIM_TRGO_OC1</secondary></indexterm>
+<para><computeroutput>#define TIM_TRGO_OC1   (<link linkend="_group___peripheral___registers___bits___definition_1ga4b1036929b0a4ba5bd5cced9b8e0f4c3">TIM_CR2_MMS_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaf3e55308e84106d6501201e66bd46ab6">TIM_CR2_MMS_0</link>)</computeroutput></para>
+<para>Capture or a compare match 1 is used as trigger output (TRGO) </para>
+    </section><anchor xml:id="_group___t_i_m___master___mode___selection_1gaed715aa7ec4ad0f7f5d82dde6d964178"/>    <section>
+    <title>TIM_TRGO_OC1REF</title>
+<indexterm><primary>TIM_TRGO_OC1REF</primary><secondary>TIM Master Mode Selection</secondary></indexterm>
+<indexterm><primary>TIM Master Mode Selection</primary><secondary>TIM_TRGO_OC1REF</secondary></indexterm>
+<para><computeroutput>#define TIM_TRGO_OC1REF   <link linkend="_group___peripheral___registers___bits___definition_1gacb74a815afdd856d51cfcf1ddf3fce6a">TIM_CR2_MMS_2</link></computeroutput></para>
+<para>OC1REF signal is used as trigger output (TRGO) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___master___mode___selection_1gaaedc4b3f4c5c3c8b45a2cf1b73e33c0a"/>    <section>
+    <title>TIM_TRGO_OC2REF</title>
+<indexterm><primary>TIM_TRGO_OC2REF</primary><secondary>TIM Master Mode Selection</secondary></indexterm>
+<indexterm><primary>TIM Master Mode Selection</primary><secondary>TIM_TRGO_OC2REF</secondary></indexterm>
+<para><computeroutput>#define TIM_TRGO_OC2REF   (<link linkend="_group___peripheral___registers___bits___definition_1gacb74a815afdd856d51cfcf1ddf3fce6a">TIM_CR2_MMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaf3e55308e84106d6501201e66bd46ab6">TIM_CR2_MMS_0</link>)</computeroutput></para>
+<para>OC2REF signal is used as trigger output(TRGO) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___master___mode___selection_1ga4bc4791f8b9560950d30078b96d08f55"/>    <section>
+    <title>TIM_TRGO_OC3REF</title>
+<indexterm><primary>TIM_TRGO_OC3REF</primary><secondary>TIM Master Mode Selection</secondary></indexterm>
+<indexterm><primary>TIM Master Mode Selection</primary><secondary>TIM_TRGO_OC3REF</secondary></indexterm>
+<para><computeroutput>#define TIM_TRGO_OC3REF   (<link linkend="_group___peripheral___registers___bits___definition_1gacb74a815afdd856d51cfcf1ddf3fce6a">TIM_CR2_MMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga4b1036929b0a4ba5bd5cced9b8e0f4c3">TIM_CR2_MMS_1</link>)</computeroutput></para>
+<para>OC3REF signal is used as trigger output(TRGO) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___master___mode___selection_1ga7fe6228adec5d1b6f0a8ed8da111db4d"/>    <section>
+    <title>TIM_TRGO_OC4REF</title>
+<indexterm><primary>TIM_TRGO_OC4REF</primary><secondary>TIM Master Mode Selection</secondary></indexterm>
+<indexterm><primary>TIM Master Mode Selection</primary><secondary>TIM_TRGO_OC4REF</secondary></indexterm>
+<para><computeroutput>#define TIM_TRGO_OC4REF   (<link linkend="_group___peripheral___registers___bits___definition_1gacb74a815afdd856d51cfcf1ddf3fce6a">TIM_CR2_MMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga4b1036929b0a4ba5bd5cced9b8e0f4c3">TIM_CR2_MMS_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaf3e55308e84106d6501201e66bd46ab6">TIM_CR2_MMS_0</link>)</computeroutput></para>
+<para>OC4REF signal is used as trigger output(TRGO) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___master___mode___selection_1ga32a8e436f2c0818a657b0d3fcf4e872d"/>    <section>
+    <title>TIM_TRGO_RESET</title>
+<indexterm><primary>TIM_TRGO_RESET</primary><secondary>TIM Master Mode Selection</secondary></indexterm>
+<indexterm><primary>TIM Master Mode Selection</primary><secondary>TIM_TRGO_RESET</secondary></indexterm>
+<para><computeroutput>#define TIM_TRGO_RESET   0x00000000U</computeroutput></para>
+<para>TIMx_EGR.UG bit is used as trigger output (TRGO) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___master___mode___selection_1ga27521aebd507e562fe7fba6dfc639a67"/>    <section>
+    <title>TIM_TRGO_UPDATE</title>
+<indexterm><primary>TIM_TRGO_UPDATE</primary><secondary>TIM Master Mode Selection</secondary></indexterm>
+<indexterm><primary>TIM Master Mode Selection</primary><secondary>TIM_TRGO_UPDATE</secondary></indexterm>
+<para><computeroutput>#define TIM_TRGO_UPDATE   <link linkend="_group___peripheral___registers___bits___definition_1ga4b1036929b0a4ba5bd5cced9b8e0f4c3">TIM_CR2_MMS_1</link></computeroutput></para>
+<para>Update event is used as trigger output (TRGO) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+</section>
+</section>

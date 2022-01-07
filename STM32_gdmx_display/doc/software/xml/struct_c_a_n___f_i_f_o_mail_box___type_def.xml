@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_c_a_n___f_i_f_o_mail_box___type_def" kind="struct" language="C++" prot="public">
+    <compoundname>CAN_FIFOMailBox_TypeDef</compoundname>
+    <includes refid="stm32f103xb_8h" local="no">stm32f103xb.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_c_a_n___f_i_f_o_mail_box___type_def_1a0acc8eb90b17bef5b9e03c7ddaacfb0b" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t RIR</definition>
+        <argsstring></argsstring>
+        <name>RIR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="217" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_n___f_i_f_o_mail_box___type_def_1a9563d8a88d0db403b8357331bea83a2e" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t RDTR</definition>
+        <argsstring></argsstring>
+        <name>RDTR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="218" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_n___f_i_f_o_mail_box___type_def_1ae1c569688eedd49219cd505b9c22121b" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t RDLR</definition>
+        <argsstring></argsstring>
+        <name>RDLR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="219" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_a_n___f_i_f_o_mail_box___type_def_1a7f11f42ba9d3bc5cd4a4f5ea0214608e" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t RDHR</definition>
+        <argsstring></argsstring>
+        <name>RDHR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="220" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Controller Area Network FIFOMailBox. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="215" column="1" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="216" bodyend="221"/>
+    <listofallmembers>
+      <member refid="struct_c_a_n___f_i_f_o_mail_box___type_def_1a7f11f42ba9d3bc5cd4a4f5ea0214608e" prot="public" virt="non-virtual"><scope>CAN_FIFOMailBox_TypeDef</scope><name>RDHR</name></member>
+      <member refid="struct_c_a_n___f_i_f_o_mail_box___type_def_1ae1c569688eedd49219cd505b9c22121b" prot="public" virt="non-virtual"><scope>CAN_FIFOMailBox_TypeDef</scope><name>RDLR</name></member>
+      <member refid="struct_c_a_n___f_i_f_o_mail_box___type_def_1a9563d8a88d0db403b8357331bea83a2e" prot="public" virt="non-virtual"><scope>CAN_FIFOMailBox_TypeDef</scope><name>RDTR</name></member>
+      <member refid="struct_c_a_n___f_i_f_o_mail_box___type_def_1a0acc8eb90b17bef5b9e03c7ddaacfb0b" prot="public" virt="non-virtual"><scope>CAN_FIFOMailBox_TypeDef</scope><name>RIR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

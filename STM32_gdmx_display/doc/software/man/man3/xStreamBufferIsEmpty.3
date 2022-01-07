@@ -1,0 +1,35 @@
+.TH "xStreamBufferIsEmpty" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xStreamBufferIsEmpty \- xStreamBufferIsEmpty
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+\fBstream_buffer\&.h\fP
+.PP
+.PP
+.nf
+
+BaseType_t xStreamBufferIsEmpty( StreamBufferHandle_t xStreamBuffer );
+.fi
+.PP
+.PP
+Queries a stream buffer to see if it is empty\&. A stream buffer is empty if it does not contain any data\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxStreamBuffer\fP The handle of the stream buffer being queried\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the stream buffer is empty then pdTRUE is returned\&. Otherwise pdFALSE is returned\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

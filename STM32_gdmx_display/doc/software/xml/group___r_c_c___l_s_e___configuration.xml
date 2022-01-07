@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c___l_s_e___configuration" kind="group">
+    <compoundname>RCC_LSE_Configuration</compoundname>
+    <title>LSE Configuration</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___r_c_c___l_s_e___configuration_1ga6b2b48f429e347c1c9c469122c64798b" prot="public" static="no">
+        <name>__HAL_RCC_LSE_CONFIG</name>
+        <param><defname>__STATE__</defname></param>
+        <initializer>                    do{                                                     \
+                      if ((__STATE__) == <ref refid="group___r_c_c___l_s_e___config_1gac981ea636c2f215e4473901e0912f55a" kindref="member">RCC_LSE_ON</ref>)                        \
+                      {                                                     \
+                        SET_BIT(RCC-&gt;BDCR, <ref refid="group___peripheral___registers___bits___definition_1ga00145f8814cb9a5b180d76499d97aead" kindref="member">RCC_BDCR_LSEON</ref>);                   \
+                      }                                                     \
+                      else if ((__STATE__) == <ref refid="group___r_c_c___l_s_e___config_1ga6645c27708d0cad1a4ab61d2abb24c77" kindref="member">RCC_LSE_OFF</ref>)                  \
+                      {                                                     \
+                        CLEAR_BIT(RCC-&gt;BDCR, <ref refid="group___peripheral___registers___bits___definition_1ga00145f8814cb9a5b180d76499d97aead" kindref="member">RCC_BDCR_LSEON</ref>);                 \
+                        CLEAR_BIT(RCC-&gt;BDCR, <ref refid="group___peripheral___registers___bits___definition_1ga542dffd7f8dc4da5401b54d822a22af0" kindref="member">RCC_BDCR_LSEBYP</ref>);                \
+                      }                                                     \
+                      else if ((__STATE__) == <ref refid="group___r_c_c___l_s_e___config_1gaad580157edbae878edbcc83c5a68e767" kindref="member">RCC_LSE_BYPASS</ref>)               \
+                      {                                                     \
+                        SET_BIT(RCC-&gt;BDCR, <ref refid="group___peripheral___registers___bits___definition_1ga542dffd7f8dc4da5401b54d822a22af0" kindref="member">RCC_BDCR_LSEBYP</ref>);                  \
+                        SET_BIT(RCC-&gt;BDCR, <ref refid="group___peripheral___registers___bits___definition_1ga00145f8814cb9a5b180d76499d97aead" kindref="member">RCC_BDCR_LSEON</ref>);                   \
+                      }                                                     \
+                      else                                                  \
+                      {                                                     \
+                        CLEAR_BIT(RCC-&gt;BDCR, <ref refid="group___peripheral___registers___bits___definition_1ga00145f8814cb9a5b180d76499d97aead" kindref="member">RCC_BDCR_LSEON</ref>);                 \
+                        CLEAR_BIT(RCC-&gt;BDCR, <ref refid="group___peripheral___registers___bits___definition_1ga542dffd7f8dc4da5401b54d822a22af0" kindref="member">RCC_BDCR_LSEBYP</ref>);                \
+                      }                                                     \
+                    }while(0U)</initializer>
+        <briefdescription>
+<para>Macro to configure the External Low Speed oscillator (LSE). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Transitions LSE Bypass to LSE On and LSE On to LSE Bypass are not supported by this macro. </para>
+</simplesect>
+<simplesect kind="note"><para>As the LSE is in the Backup domain and write access is denied to this domain after reset, you have to enable write access using HAL_PWR_EnableBkUpAccess() function before to configure the LSE (to be done once after reset). </para>
+</simplesect>
+<simplesect kind="note"><para>After enabling the LSE (RCC_LSE_ON or RCC_LSE_BYPASS), the application software should wait on LSERDY flag to be set indicating that LSE clock is stable and can be used to clock the RTC. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;STATE&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the new state of the LSE. This parameter can be one of the following values: <itemizedlist>
+<listitem><para><ref refid="group___r_c_c___l_s_e___config_1ga6645c27708d0cad1a4ab61d2abb24c77" kindref="member">RCC_LSE_OFF</ref> turn OFF the LSE oscillator, LSERDY flag goes low after 6 LSE oscillator clock cycles. </para>
+</listitem>
+<listitem><para><ref refid="group___r_c_c___l_s_e___config_1gac981ea636c2f215e4473901e0912f55a" kindref="member">RCC_LSE_ON</ref> turn ON the LSE oscillator. </para>
+</listitem>
+<listitem><para><ref refid="group___r_c_c___l_s_e___config_1gaad580157edbae878edbcc83c5a68e767" kindref="member">RCC_LSE_BYPASS</ref> LSE oscillator bypassed with external clock. </para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="800" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="800" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

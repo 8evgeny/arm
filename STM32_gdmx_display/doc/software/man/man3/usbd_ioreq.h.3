@@ -1,0 +1,67 @@
+.TH "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \- Header file for the \fBusbd_ioreq\&.c\fP file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'usbd_def\&.h'\fP
+.br
+\fC#include 'usbd_core\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_CtlSendData\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t *pbuf, uint16_t len)"
+.br
+.RI "USBD_CtlSendData send data on the ctl pipe\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_CtlContinueSendData\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t *pbuf, uint16_t len)"
+.br
+.RI "USBD_CtlContinueSendData continue sending data on the ctl pipe\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_CtlPrepareRx\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t *pbuf, uint16_t len)"
+.br
+.RI "USBD_CtlPrepareRx receive data on the ctl pipe\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_CtlContinueRx\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t *pbuf, uint16_t len)"
+.br
+.RI "USBD_CtlContinueRx continue receive data on the ctl pipe\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_CtlSendStatus\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_CtlSendStatus send zero lzngth packet on the ctl pipe\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_CtlReceiveStatus\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_CtlReceiveStatus receive zero lzngth packet on the ctl pipe\&. "
+.ti -1c
+.RI "uint32_t \fBUSBD_GetRxCount\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t ep_addr)"
+.br
+.RI "USBD_GetRxCount returns the received data length\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file for the \fBusbd_ioreq\&.c\fP file\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2015 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under Ultimate Liberty license SLA0044, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: www\&.st\&.com/SLA0044 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

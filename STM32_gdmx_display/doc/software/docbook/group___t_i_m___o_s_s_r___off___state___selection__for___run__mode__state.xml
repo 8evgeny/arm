@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___o_s_s_r___off___state___selection__for___run__mode__state" xml:lang="en-US">
+<title>TIM OSSR OffState Selection for Run mode state</title>
+<indexterm><primary>TIM OSSR OffState Selection for Run mode state</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___o_s_s_r___off___state___selection__for___run__mode__state_1ga5d21918f173eca946748a1fbc177daa5">TIM_OSSR_ENABLE</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaf9435f36d53c6be1107e57ab6a82c16e">TIM_BDTR_OSSR</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___o_s_s_r___off___state___selection__for___run__mode__state_1gae11820b467ef6d74c90190c8cfce5e73">TIM_OSSR_DISABLE</link>   0x00000000U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___o_s_s_r___off___state___selection__for___run__mode__state_1gae11820b467ef6d74c90190c8cfce5e73"/>    <section>
+    <title>TIM_OSSR_DISABLE</title>
+<indexterm><primary>TIM_OSSR_DISABLE</primary><secondary>TIM OSSR OffState Selection for Run mode state</secondary></indexterm>
+<indexterm><primary>TIM OSSR OffState Selection for Run mode state</primary><secondary>TIM_OSSR_DISABLE</secondary></indexterm>
+<para><computeroutput>#define TIM_OSSR_DISABLE   0x00000000U</computeroutput></para>
+<para>When inactive, OC/OCN outputs are disabled (not controlled any longer by the timer) </para>
+    </section><anchor xml:id="_group___t_i_m___o_s_s_r___off___state___selection__for___run__mode__state_1ga5d21918f173eca946748a1fbc177daa5"/>    <section>
+    <title>TIM_OSSR_ENABLE</title>
+<indexterm><primary>TIM_OSSR_ENABLE</primary><secondary>TIM OSSR OffState Selection for Run mode state</secondary></indexterm>
+<indexterm><primary>TIM OSSR OffState Selection for Run mode state</primary><secondary>TIM_OSSR_ENABLE</secondary></indexterm>
+<para><computeroutput>#define TIM_OSSR_ENABLE   <link linkend="_group___peripheral___registers___bits___definition_1gaf9435f36d53c6be1107e57ab6a82c16e">TIM_BDTR_OSSR</link></computeroutput></para>
+<para>When inactive, OC/OCN outputs are enabled (still controlled by the timer) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+</section>
+</section>

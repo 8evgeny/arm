@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m_ex___exported___functions___group1" xml:lang="en-US">
+<title>Extended Timer Hall Sensor functions</title>
+<indexterm><primary>Extended Timer Hall Sensor functions</primary></indexterm>
+<para>
+
+<para>Timer Hall Sensor functions. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group1_1ga9edc6a00a673eb7c07b0c3cf86a95169"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Init</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, <link linkend="_struct_t_i_m___hall_sensor___init_type_def">TIM_HallSensor_InitTypeDef</link> *sConfig)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group1_1ga61f3c18eb8fe53b65b55ec855072631d"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_DeInit</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group1_1ga88d9e7c4bc86e1a1190fda06e04552ea"/>void <emphasis role="strong">HAL_TIMEx_HallSensor_MspInit</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group1_1gac19734439bdfa549b7fb5d85f3c0720d"/>void <emphasis role="strong">HAL_TIMEx_HallSensor_MspDeInit</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group1_1ga9f4bfa2a4b890a2219ca927bbbb455fc"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Start</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group1_1ga714c2a7a51f4ab61b04df84ab182eb86"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Stop</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group1_1gaf3e7068c5bc6fc74e016cc8e990cbb02"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Start_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group1_1gac6ab7ab0cada425a8d4deb637bd2ad71"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Stop_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group1_1ga3d0d063498f6888d61411d56380f5211"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Start_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t *pData, uint16_t Length)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group1_1gab361d1aa6e0eb244886b93908beded6f"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Stop_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Timer Hall Sensor functions. </para>
+</section>
+</section>

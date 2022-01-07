@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_1739248405804482f2fac2d6ed919cde" kind="dir">
+    <compoundname>build/CMakeFiles/gdmx_display.elf.dir/Middlewares</compoundname>
+    <innerdir refid="dir_44c911d6dc760a5ce2a41260cf96fb9d">build/CMakeFiles/gdmx_display.elf.dir/Middlewares/ST</innerdir>
+    <innerdir refid="dir_97f8413aca0f7ec4ac1727fb19afcbb3">build/CMakeFiles/gdmx_display.elf.dir/Middlewares/Third_Party</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/gdmx_display.elf.dir/Middlewares/"/>
+  </compounddef>
+</doxygen>

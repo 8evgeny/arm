@@ -1,0 +1,189 @@
+\hypertarget{main_8c}{}\doxysection{Src/main.c File Reference}
+\label{main_8c}\index{Src/main.c@{Src/main.c}}
+
+
+Main program body.  
+
+
+{\ttfamily \#include \char`\"{}cmsis\+\_\+os.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usb\+\_\+device.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usbd\+\_\+cdc\+\_\+if.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_ad1f9d42690163f73f73e5b820c81ca14}{MX\+\_\+\+TIM1\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em TIM1 Initialization Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a016544463b4842ced7191baf8f449cea}{Start\+Default\+Task}} (void const $\ast$argument)
+\begin{DoxyCompactList}\small\item\em Function implementing the default\+Task thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_aa5f39a2ded9a08eedd825ab574516207}{usb\+Proceed}} (void const $\ast$argument)
+\begin{DoxyCompactList}\small\item\em Function implementing the usb\+Proc\+Task thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___t_i_m___exported___functions___group9_ga8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} $\ast$htim)
+\begin{DoxyCompactList}\small\item\em Period elapsed callback in non blocking mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS error handler function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a25fc663547539bc49fecc0011bd76ab5}\label{main_8c_a25fc663547539bc49fecc0011bd76ab5}} 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} {\bfseries htim1}
+\item 
+\mbox{\Hypertarget{main_8c_aa658fe134a5d1309d7a15c8116fa142c}\label{main_8c_aa658fe134a5d1309d7a15c8116fa142c}} 
+os\+Thread\+Id {\bfseries default\+Task\+Handle}
+\item 
+\mbox{\Hypertarget{main_8c_a0ef1a80eb9a31084b335d4b71c24e001}\label{main_8c_a0ef1a80eb9a31084b335d4b71c24e001}} 
+uint32\+\_\+t {\bfseries default\+Task\+Buffer} \mbox{[}128\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_aca18732f09ae696fd34b94d393dc9a42}\label{main_8c_aca18732f09ae696fd34b94d393dc9a42}} 
+os\+Static\+Thread\+Def\+\_\+t {\bfseries default\+Task\+Control\+Block}
+\item 
+\mbox{\Hypertarget{main_8c_ae7146be42fae10d8b7577c80e4552747}\label{main_8c_ae7146be42fae10d8b7577c80e4552747}} 
+uint32\+\_\+t {\bfseries my\+Task04\+Buffer} \mbox{[}128\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_a251a509e4b79f96453aff726f0dd22e9}\label{main_8c_a251a509e4b79f96453aff726f0dd22e9}} 
+os\+Static\+Thread\+Def\+\_\+t {\bfseries my\+Task04\+Control\+Block}
+\item 
+\mbox{\Hypertarget{main_8c_a9096afe0438549219d5acfaceeaf7971}\label{main_8c_a9096afe0438549219d5acfaceeaf7971}} 
+os\+Mutex\+Id {\bfseries usb\+Rx\+Mutex\+Handle}
+\item 
+\mbox{\Hypertarget{main_8c_a1486693ac0fa3755a69511340914db1c}\label{main_8c_a1486693ac0fa3755a69511340914db1c}} 
+os\+Static\+Mutex\+Def\+\_\+t {\bfseries usb\+Rx\+Mutex\+Control\+Block}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main program body. 
+
+Main module (source file). \begin{DoxyAuthor}{Author}
+Donskih Dmitry, Arthur Markaryan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02.\+03.\+2019
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2018 -\/ 2021 Donskih Dmitry. All rights reserved.\end{center} }
+
+This software component is licensed by Donskih Dmitry under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS error handler function. 
+
+This function is executed in case of error occurrence. User can add his own implementation to report the HAL error return state. 
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_ad1f9d42690163f73f73e5b820c81ca14}\label{main_8c_ad1f9d42690163f73f73e5b820c81ca14}} 
+\index{main.c@{main.c}!MX\_TIM1\_Init@{MX\_TIM1\_Init}}
+\index{MX\_TIM1\_Init@{MX\_TIM1\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM1\_Init()}{MX\_TIM1\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+TIM1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+TIM1 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a016544463b4842ced7191baf8f449cea}\label{main_8c_a016544463b4842ced7191baf8f449cea}} 
+\index{main.c@{main.c}!StartDefaultTask@{StartDefaultTask}}
+\index{StartDefaultTask@{StartDefaultTask}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{StartDefaultTask()}{StartDefaultTask()}}
+{\footnotesize\ttfamily void Start\+Default\+Task (\begin{DoxyParamCaption}\item[{void const $\ast$}]{argument }\end{DoxyParamCaption})}
+
+
+
+Function implementing the default\+Task thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argument} & Not used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920}} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+Initializes the CPU, AHB and APB busses clocks. 
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_aa5f39a2ded9a08eedd825ab574516207}\label{main_8c_aa5f39a2ded9a08eedd825ab574516207}} 
+\index{main.c@{main.c}!usbProceed@{usbProceed}}
+\index{usbProceed@{usbProceed}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{usbProceed()}{usbProceed()}}
+{\footnotesize\ttfamily void usb\+Proceed (\begin{DoxyParamCaption}\item[{void const $\ast$}]{argument }\end{DoxyParamCaption})}
+
+
+
+Function implementing the usb\+Proc\+Task thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argument} & Not used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

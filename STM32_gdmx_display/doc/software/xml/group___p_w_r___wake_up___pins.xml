@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___p_w_r___wake_up___pins" kind="group">
+    <compoundname>PWR_WakeUp_Pins</compoundname>
+    <title>PWR WakeUp Pins</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___p_w_r___wake_up___pins_1ga0da8e7cbe0826e93b777ae4419a1cd05" prot="public" static="no">
+        <name>PWR_WAKEUP_PIN1</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga7ac8c15a08bbee754ea720b0d4a4f580" kindref="member">PWR_CSR_EWUP</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="118" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

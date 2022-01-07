@@ -1,0 +1,52 @@
+.TH "CORTEX_Private_Macros" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CORTEX_Private_Macros \- CORTEX Private Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIS_NVIC_PRIORITY_GROUP\fP(GROUP)"
+.br
+.ti -1c
+.RI "#define \fBIS_NVIC_PREEMPTION_PRIORITY\fP(PRIORITY)   ((PRIORITY) < 0x10U)"
+.br
+.ti -1c
+.RI "#define \fBIS_NVIC_SUB_PRIORITY\fP(PRIORITY)   ((PRIORITY) < 0x10U)"
+.br
+.ti -1c
+.RI "#define \fBIS_NVIC_DEVICE_IRQ\fP(IRQ)   ((IRQ) >= (\fBIRQn_Type\fP)0x00U)"
+.br
+.ti -1c
+.RI "#define \fBIS_SYSTICK_CLK_SOURCE\fP(SOURCE)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define IS_NVIC_PRIORITY_GROUP(GROUP)"
+\fBValue:\fP
+.PP
+.nf
+                                       (((GROUP) == NVIC_PRIORITYGROUP_0) || \
+                                       ((GROUP) == NVIC_PRIORITYGROUP_1) || \
+                                       ((GROUP) == NVIC_PRIORITYGROUP_2) || \
+                                       ((GROUP) == NVIC_PRIORITYGROUP_3) || \
+                                       ((GROUP) == NVIC_PRIORITYGROUP_4))
+.fi
+.SS "#define IS_SYSTICK_CLK_SOURCE(SOURCE)"
+\fBValue:\fP
+.PP
+.nf
+                                       (((SOURCE) == SYSTICK_CLKSOURCE_HCLK) || \
+                                       ((SOURCE) == SYSTICK_CLKSOURCE_HCLK_DIV8))
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

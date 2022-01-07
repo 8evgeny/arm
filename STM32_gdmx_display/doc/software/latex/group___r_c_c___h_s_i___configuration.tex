@@ -1,0 +1,55 @@
+\hypertarget{group___r_c_c___h_s_i___configuration}{}\doxysection{HSI Configuration}
+\label{group___r_c_c___h_s_i___configuration}\index{HSI Configuration@{HSI Configuration}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___h_s_i___configuration_gaab944f562b53fc74bcc0e4958388fd42}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+HSI\+\_\+\+ENABLE}}()~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) RCC\+\_\+\+CR\+\_\+\+HSION\+\_\+\+BB = ENABLE)
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the Internal High Speed oscillator (HSI). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_c_c___h_s_i___configuration_ga0c0dc8bc0ef58703782f45b4e487c031}\label{group___r_c_c___h_s_i___configuration_ga0c0dc8bc0ef58703782f45b4e487c031}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+HSI\+\_\+\+DISABLE}()~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) RCC\+\_\+\+CR\+\_\+\+HSION\+\_\+\+BB = DISABLE)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___h_s_i___configuration_ga36991d340af7ad14b79f204c748b0e3e}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+HSI\+\_\+\+CALIBRATIONVALUE\+\_\+\+ADJUST}}(\+\_\+\+HSICALIBRATIONVALUE\+\_\+)~          (MODIFY\+\_\+\+REG(RCC-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5cb4397b2095c31660a01b748386aa70}{RCC\+\_\+\+CR\+\_\+\+HSITRIM}}, (uint32\+\_\+t)(\+\_\+\+HSICALIBRATIONVALUE\+\_\+) $<$$<$ RCC\+\_\+\+CR\+\_\+\+HSITRIM\+\_\+\+Pos))
+\begin{DoxyCompactList}\small\item\em Macro to adjust the Internal High Speed oscillator (HSI) calibration value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c___h_s_i___configuration_ga36991d340af7ad14b79f204c748b0e3e}\label{group___r_c_c___h_s_i___configuration_ga36991d340af7ad14b79f204c748b0e3e}} 
+\index{HSI Configuration@{HSI Configuration}!\_\_HAL\_RCC\_HSI\_CALIBRATIONVALUE\_ADJUST@{\_\_HAL\_RCC\_HSI\_CALIBRATIONVALUE\_ADJUST}}
+\index{\_\_HAL\_RCC\_HSI\_CALIBRATIONVALUE\_ADJUST@{\_\_HAL\_RCC\_HSI\_CALIBRATIONVALUE\_ADJUST}!HSI Configuration@{HSI Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_HSI\_CALIBRATIONVALUE\_ADJUST}{\_\_HAL\_RCC\_HSI\_CALIBRATIONVALUE\_ADJUST}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+HSI\+\_\+\+CALIBRATIONVALUE\+\_\+\+ADJUST(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+HSICALIBRATIONVALUE\+\_\+ }\end{DoxyParamCaption})~          (MODIFY\+\_\+\+REG(RCC-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5cb4397b2095c31660a01b748386aa70}{RCC\+\_\+\+CR\+\_\+\+HSITRIM}}, (uint32\+\_\+t)(\+\_\+\+HSICALIBRATIONVALUE\+\_\+) $<$$<$ RCC\+\_\+\+CR\+\_\+\+HSITRIM\+\_\+\+Pos))}
+
+
+
+Macro to adjust the Internal High Speed oscillator (HSI) calibration value. 
+
+\begin{DoxyNote}{Note}
+The calibration is used to compensate for the variations in voltage and temperature that influence the frequency of the internal HSI RC. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$em$>$\+HSICALIBRATIONVALUE$<$/em$>$} & specifies the calibration trimming value. (default is RCC\+\_\+\+HSICALIBRATION\+\_\+\+DEFAULT). This parameter must be a number between 0 and 0x1F. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___r_c_c___h_s_i___configuration_gaab944f562b53fc74bcc0e4958388fd42}\label{group___r_c_c___h_s_i___configuration_gaab944f562b53fc74bcc0e4958388fd42}} 
+\index{HSI Configuration@{HSI Configuration}!\_\_HAL\_RCC\_HSI\_ENABLE@{\_\_HAL\_RCC\_HSI\_ENABLE}}
+\index{\_\_HAL\_RCC\_HSI\_ENABLE@{\_\_HAL\_RCC\_HSI\_ENABLE}!HSI Configuration@{HSI Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_HSI\_ENABLE}{\_\_HAL\_RCC\_HSI\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+HSI\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) RCC\+\_\+\+CR\+\_\+\+HSION\+\_\+\+BB = ENABLE)}
+
+
+
+Macros to enable or disable the Internal High Speed oscillator (HSI). 
+
+\begin{DoxyNote}{Note}
+The HSI is stopped by hardware when entering STOP and STANDBY modes. 
+
+HSI can not be stopped if it is used as system clock source. In this case, you have to select another source of the system clock then stop the HSI. 
+
+After enabling the HSI, the application software should wait on HSIRDY flag to be set indicating that HSI clock is stable and can be used as system clock source. 
+
+When the HSI is stopped, HSIRDY flag goes low after 6 HSI oscillator clock cycles. 
+\end{DoxyNote}

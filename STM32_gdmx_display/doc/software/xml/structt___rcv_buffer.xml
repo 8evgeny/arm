@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structt___rcv_buffer" kind="struct" language="C++" prot="public">
+    <compoundname>t_RcvBuffer</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga906f72055f0ffed78e9b8ce87f5895ed" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t buffer[HD44780_SCREEN_SIZE]</definition>
+        <argsstring>[HD44780_SCREEN_SIZE]</argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="43" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga40221fe8c949b12d0f4ce4d17eb61365" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t inbuff[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>inbuff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="44" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga2b17692dca541534f6dc648df0418f44" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t pos_x</definition>
+        <argsstring></argsstring>
+        <name>pos_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="45" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga30cd9ab2ddfd6732e17326df24680b4b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t pos_y</definition>
+        <argsstring></argsstring>
+        <name>pos_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="45" column="15" bodyfile="Src/usbd_cdc_if.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1gac4c45c981d6573c8d98707d9f5cb9206" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psize</definition>
+        <argsstring></argsstring>
+        <name>psize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="45" column="21" bodyfile="Src/usbd_cdc_if.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga33e829a22d093bf89f5a8bd036bc5be7" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* pdata</definition>
+        <argsstring></argsstring>
+        <name>pdata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="46" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga601140ce8d84bb32af82f9e5e3250393" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t b_pos</definition>
+        <argsstring></argsstring>
+        <name>b_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="47" column="10" bodyfile="Src/usbd_cdc_if.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Src/usbd_cdc_if.c" line="42" column="1" bodyfile="Src/usbd_cdc_if.c" bodystart="42" bodyend="48"/>
+    <listofallmembers>
+      <member refid="group___u_s_b_d___c_d_c___i_f_1ga601140ce8d84bb32af82f9e5e3250393" prot="public" virt="non-virtual"><scope>t_RcvBuffer</scope><name>b_pos</name></member>
+      <member refid="group___u_s_b_d___c_d_c___i_f_1ga906f72055f0ffed78e9b8ce87f5895ed" prot="public" virt="non-virtual"><scope>t_RcvBuffer</scope><name>buffer</name></member>
+      <member refid="group___u_s_b_d___c_d_c___i_f_1ga40221fe8c949b12d0f4ce4d17eb61365" prot="public" virt="non-virtual"><scope>t_RcvBuffer</scope><name>inbuff</name></member>
+      <member refid="group___u_s_b_d___c_d_c___i_f_1ga33e829a22d093bf89f5a8bd036bc5be7" prot="public" virt="non-virtual"><scope>t_RcvBuffer</scope><name>pdata</name></member>
+      <member refid="group___u_s_b_d___c_d_c___i_f_1ga2b17692dca541534f6dc648df0418f44" prot="public" virt="non-virtual"><scope>t_RcvBuffer</scope><name>pos_x</name></member>
+      <member refid="group___u_s_b_d___c_d_c___i_f_1ga30cd9ab2ddfd6732e17326df24680b4b" prot="public" virt="non-virtual"><scope>t_RcvBuffer</scope><name>pos_y</name></member>
+      <member refid="group___u_s_b_d___c_d_c___i_f_1gac4c45c981d6573c8d98707d9f5cb9206" prot="public" virt="non-virtual"><scope>t_RcvBuffer</scope><name>psize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

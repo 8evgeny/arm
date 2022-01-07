@@ -1,0 +1,52 @@
+.TH "uxQueueMessagesWaiting" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+uxQueueMessagesWaiting \- uxQueueMessagesWaiting
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+queue\&. h 
+.PP
+.nf
+UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue );
+.fi
+.PP
+.PP
+Return the number of messages stored in a queue\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxQueue\fP A handle to the queue being queried\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of messages available in the queue\&.
+.RE
+.PP
+queue\&. h 
+.PP
+.nf
+UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue );
+.fi
+.PP
+.PP
+Return the number of free spaces available in a queue\&. This is equal to the number of items that can be sent to the queue before the queue becomes full if no items are removed\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxQueue\fP A handle to the queue being queried\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of spaces available in the queue\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

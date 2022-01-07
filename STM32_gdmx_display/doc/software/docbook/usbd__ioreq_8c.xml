@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__ioreq_8c" xml:lang="en-US">
+<title>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c File Reference</title>
+<indexterm><primary>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c</primary></indexterm>
+<para>
+
+<para>This file provides the IO requests APIs for control endpoints. </para>
+ 
+</para>
+<programlisting>#include &quot;usbd_ioreq.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___private___functions_1gae66e8dc0e24f9d7d23930f6c87605e75">USBD_CtlSendData</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t *pbuf, uint16_t len)</para>
+
+<para>USBD_CtlSendData send data on the ctl pipe. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___private___functions_1gaf07248d84e87cdf14db392f94b369744">USBD_CtlContinueSendData</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t *pbuf, uint16_t len)</para>
+
+<para>USBD_CtlContinueSendData continue sending data on the ctl pipe. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___private___functions_1gabe067dfaa82139b6d3acf5f8cdd5fc91">USBD_CtlPrepareRx</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t *pbuf, uint16_t len)</para>
+
+<para>USBD_CtlPrepareRx receive data on the ctl pipe. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___private___functions_1gaf6cabd5a8d9d527cf6aa64915abb7f2b">USBD_CtlContinueRx</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t *pbuf, uint16_t len)</para>
+
+<para>USBD_CtlContinueRx continue receive data on the ctl pipe. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___private___functions_1ga19e53947fc912c43bcee2c7d7429e8ee">USBD_CtlSendStatus</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev)</para>
+
+<para>USBD_CtlSendStatus send zero lzngth packet on the ctl pipe. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___private___functions_1gad5e847f89ca67a6b2154a72d0aa25e9a">USBD_CtlReceiveStatus</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev)</para>
+
+<para>USBD_CtlReceiveStatus receive zero lzngth packet on the ctl pipe. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___u_s_b_d___i_o_r_e_q___private___functions_1ga1ea167471f0e91676934feb76f67b1c2">USBD_GetRxCount</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t ep_addr)</para>
+
+<para>USBD_GetRxCount returns the received data length. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This file provides the IO requests APIs for control endpoints. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2015 STMicroelectronics. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by ST under Ultimate Liberty license SLA0044, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: www.st.com/SLA0044 </para>
+</section>
+</section>

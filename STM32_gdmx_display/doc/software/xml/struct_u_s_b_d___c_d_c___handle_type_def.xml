@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_u_s_b_d___c_d_c___handle_type_def" kind="struct" language="C++" prot="public">
+    <compoundname>USBD_CDC_HandleTypeDef</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___handle_type_def_1a68bec59828fbd3daf30dc476ee4c931b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t data[CDC_DATA_HS_MAX_PACKET_SIZE/4U]</definition>
+        <argsstring>[CDC_DATA_HS_MAX_PACKET_SIZE/4U]</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="113" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___handle_type_def_1a63e27a95886ac0d71ba38619b67ba163" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CmdOpCode</definition>
+        <argsstring></argsstring>
+        <name>CmdOpCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="114" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___handle_type_def_1a8a973d9b5496ea891721ff5d4209fe7e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CmdLength</definition>
+        <argsstring></argsstring>
+        <name>CmdLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="115" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___handle_type_def_1a449f3e5afc1f8207f86815583fc600ad" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* RxBuffer</definition>
+        <argsstring></argsstring>
+        <name>RxBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="116" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___handle_type_def_1ab82b3e8100e63ef77f2414b23f06b4bf" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* TxBuffer</definition>
+        <argsstring></argsstring>
+        <name>TxBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="117" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___handle_type_def_1ab1af54af647f8e1310699902d8b65a05" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RxLength</definition>
+        <argsstring></argsstring>
+        <name>RxLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="118" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___handle_type_def_1a8b8aa36175552a18f3c0271c372e36b0" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TxLength</definition>
+        <argsstring></argsstring>
+        <name>TxLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="119" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___handle_type_def_1ab9dac0501089aff2133561ada1548c9e" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t TxState</definition>
+        <argsstring></argsstring>
+        <name>TxState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="121" column="17" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___handle_type_def_1abdff449d8c10b12a720fc37879db4f4f" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t RxState</definition>
+        <argsstring></argsstring>
+        <name>RxState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="122" column="17" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="111" column="1" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="112" bodyend="123"/>
+    <listofallmembers>
+      <member refid="struct_u_s_b_d___c_d_c___handle_type_def_1a8a973d9b5496ea891721ff5d4209fe7e" prot="public" virt="non-virtual"><scope>USBD_CDC_HandleTypeDef</scope><name>CmdLength</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___handle_type_def_1a63e27a95886ac0d71ba38619b67ba163" prot="public" virt="non-virtual"><scope>USBD_CDC_HandleTypeDef</scope><name>CmdOpCode</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___handle_type_def_1a68bec59828fbd3daf30dc476ee4c931b" prot="public" virt="non-virtual"><scope>USBD_CDC_HandleTypeDef</scope><name>data</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___handle_type_def_1a449f3e5afc1f8207f86815583fc600ad" prot="public" virt="non-virtual"><scope>USBD_CDC_HandleTypeDef</scope><name>RxBuffer</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___handle_type_def_1ab1af54af647f8e1310699902d8b65a05" prot="public" virt="non-virtual"><scope>USBD_CDC_HandleTypeDef</scope><name>RxLength</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___handle_type_def_1abdff449d8c10b12a720fc37879db4f4f" prot="public" virt="non-virtual"><scope>USBD_CDC_HandleTypeDef</scope><name>RxState</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___handle_type_def_1ab82b3e8100e63ef77f2414b23f06b4bf" prot="public" virt="non-virtual"><scope>USBD_CDC_HandleTypeDef</scope><name>TxBuffer</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___handle_type_def_1a8b8aa36175552a18f3c0271c372e36b0" prot="public" virt="non-virtual"><scope>USBD_CDC_HandleTypeDef</scope><name>TxLength</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___handle_type_def_1ab9dac0501089aff2133561ada1548c9e" prot="public" virt="non-virtual"><scope>USBD_CDC_HandleTypeDef</scope><name>TxState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

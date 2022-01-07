@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___f_l_a_s_h_ex___private___constants" kind="group">
+    <compoundname>FLASHEx_Private_Constants</compoundname>
+    <title>FLASHEx_Private_Constants</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___f_l_a_s_h_ex___private___constants_1ga2329f89a17061e62bf5d160cc0962e5c" prot="public" static="no">
+        <name>FLASH_SIZE_DATA_REGISTER</name>
+        <initializer>0x1FFFF7E0U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="43" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___f_l_a_s_h_ex___private___constants_1ga8683863609a82753ffb7499d219a1de8" prot="public" static="no">
+        <name>OBR_REG_INDEX</name>
+        <initializer>1U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="44" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___f_l_a_s_h_ex___private___constants_1gae39dae7013f649bda7af96a79663b3f1" prot="public" static="no">
+        <name>SR_FLAG_MASK</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral___registers___bits___definition_1ga4b86181a96fd2f1cc3828e9d8d83d368" kindref="member">FLASH_SR_BSY</ref> | <ref refid="group___peripheral___registers___bits___definition_1ga60f40ca765714598a62aa216a5ccd8e4" kindref="member">FLASH_SR_PGERR</ref> | <ref refid="group___peripheral___registers___bits___definition_1ga2e403606e5ac23cb07701aeebc1f73e5" kindref="member">FLASH_SR_WRPRTERR</ref> | <ref refid="group___peripheral___registers___bits___definition_1gae1301c6b487cfefa247c54a576a0c12b" kindref="member">FLASH_SR_EOP</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="45" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

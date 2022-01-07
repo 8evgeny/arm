@@ -1,0 +1,43 @@
+.TH "USBD_CDC_HandleTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USBD_CDC_HandleTypeDef
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBdata\fP [CDC_DATA_HS_MAX_PACKET_SIZE/4U]"
+.br
+.ti -1c
+.RI "uint8_t \fBCmdOpCode\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBCmdLength\fP"
+.br
+.ti -1c
+.RI "uint8_t * \fBRxBuffer\fP"
+.br
+.ti -1c
+.RI "uint8_t * \fBTxBuffer\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRxLength\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBTxLength\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBTxState\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBRxState\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.
