@@ -37,8 +37,8 @@ Thumbs.db
 /build
 /data
 /tools
-
-
+cmake-build-debug/
+.idea/
 # qtcreator generated files
 *.pro.user*
 *.user*
