@@ -25,15 +25,15 @@ message("CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 # Set C compiler flags
 
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --specs=nosys.specs -specs=nano.specs -mcpu=cortex-m3 -mthumb -std=gnu11 -Wall -O0 -ffunction-sections -fdata-sections -fstack-usage -mfloat-abi=soft -Wl,-Map=${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.map" )
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 --specs=nosys.specs -specs=nano.specs -mcpu=cortex-m3 -mthumb -std=gnu11 -Wall -O0 -ffunction-sections -fdata-sections -fstack-usage -mfloat-abi=soft -Wl,-Map=${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.map" )
 #-mcpu=cortex-m3 -std=gnu11 -DGV_INFOBOARD_V1 -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O3 -ffunction-sections -fdata-sections -Wall -fstack-usage --specs=nano.specs -mfloat-abi=soft -mthumb
 
 # Set C++ compiler flags
 #-mcpu=cortex-m3 -std=gnu++14 -DGV_INFOBOARD_V1 -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O3 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage --specs=nano.specs -mfloat-abi=soft -mthumb)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -specs=nosys.specs -specs=nano.specs -mcpu=cortex-m3 -mthumb -std=gnu14 -Wall -O0 -ffunction-sections -fdata-sections -fstack-usage -mfloat-abi=soft -Wl,-Map=${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.map")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -specs=nosys.specs -specs=nano.specs -mcpu=cortex-m3 -mthumb -std=gnu14 -Wall -O0 -ffunction-sections -fdata-sections -fstack-usage -mfloat-abi=soft -Wl,-Map=${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.map")
 # Set linker flags
 set(LINKER_SCRIPT "${PROJECT_SOURCE_DIR}/STM32F103C8TX_FLASH.ld")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--gc-sections -specs=nosys.specs -specs=nano.specs -T${LINKER_SCRIPT} -lm -lnosys -lgcc -lc -lstdc++" CACHE INTERNAL "")
+set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} -Wl,--gc-sections -specs=nosys.specs -specs=nano.specs -T${LINKER_SCRIPT} -lm -lnosys -lgcc -lc -lstdc++" CACHE INTERNAL "")
 
 # Add sources to the project
 set(FREERTOS_DIR Middlewares/Third_Party/FreeRTOS/Source/)
@@ -47,8 +47,8 @@ file(
     "${FREERTOS_DIR}/*.c"
     "${FREERTOS_DIR}/CMSIS_RTOS/*.c"
     "${FREERTOS_DIR}/portable/GCC/ARM_CM3/*.c"
-	"${STM32_USB_Device_DIR}/Core/Src/*.c"
-	"${STM32_USB_Device_DIR}/Class/CDC/Src/*.c"
+    "${STM32_USB_Device_DIR}/Core/Src/*.c"
+    "${STM32_USB_Device_DIR}/Class/CDC/Src/*.c"
 )
 
 add_library(
@@ -78,7 +78,8 @@ target_link_libraries(${PROJECT_NAME}.elf CMSIS)
 set(HEX_FILE ${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.bin)
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
-        COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}
-        COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
-        COMMENT "Building ${HEX_FILE} \nBuilding ${BIN_FILE}")
-		
+    COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}
+    COMMENT "Building ${HEX_FILE}"
+#    COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
+#    COMMENT "\nBuilding ${BIN_FILE}"
+    )
