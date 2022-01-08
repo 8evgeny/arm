@@ -41,23 +41,38 @@ message("CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 
 # Set C compiler flags
 
-
+#-c
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} \
--O3 \
---specs=nosys.specs \
--specs=nano.specs \
 -mcpu=cortex-m3 \
--mthumb \
 -std=gnu11 \
--Wall \
--O0 \
+-DGV_INFOBOARD_V1 \
+-DUSE_HAL_DRIVER \
+-DSTM32F103xB \
+-I../Middlewares/Third_Party/FreeRTOS/Source/include \
+-I../Inc \
+-I../Drivers/CMSIS/Device/ST/STM32F1xx/Include \
+-I../Drivers/CMSIS/Include \
+-I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc \
+-I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy \
+-I../Drivers/STM32F1xx_HAL_Driver/Inc \
+-I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS \
+-I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc \
+-I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 \
+-O3 \
 -ffunction-sections \
 -fdata-sections \
+-Wall \
 -fstack-usage \
+--specs=nano.specs \
 -mfloat-abi=soft \
--Wl,-Map=${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.map")
+-mthumb \
+")
 
-#-mcpu=cortex-m3 -std=gnu11 -DGV_INFOBOARD_V1 -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O3 -ffunction-sections -fdata-sections -Wall -fstack-usage --specs=nano.specs -mfloat-abi=soft -mthumb
+#--specs=nosys.specs \
+#-O0 \
+#-Wl,-Map=${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.map"
+
+
 
 # Set C++ compiler flags
 #-mcpu=cortex-m3 -std=gnu++14 -DGV_INFOBOARD_V1 -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O3 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage --specs=nano.specs -mfloat-abi=soft -mthumb)
