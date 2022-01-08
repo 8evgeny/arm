@@ -1,7 +1,23 @@
 cmake_minimum_required(VERSION 3.6 FATAL_ERROR)
-set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
-# Set cmake configarations
-set(CMAKE_CONFIGURATION_TYPES ${CMAKE_BUILD_TYPE} CACHE STRING "" FORCE)
+  set(CMAKE_SYSTEM_NAME Generic)
+  set(CMAKE_SYSTEM_PROCESSOR arm)
+
+  set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
+# Defines for Linux
+  set(TOOLCHAIN_BIN_DIR "/home/evg/toolchain/gcc-arm-none-eabi-new/bin")
+  set(TARGET_TRIPLET "arm-none-eabi-")
+  set(TOOL_EXECUTABLE_SUFFIX "")
+  set(CMAKE_C_COMPILER "${TOOLCHAIN_BIN_DIR}/${TARGET_TRIPLET}gcc${TOOL_EXECUTABLE_SUFFIX}")
+  set(CMAKE_CXX_COMPILER "${TOOLCHAIN_BIN_DIR}/${TARGET_TRIPLET}g++${TOOL_EXECUTABLE_SUFFIX}")
+  set(CMAKE_ASM_COMPILER "${TOOLCHAIN_BIN_DIR}/${TARGET_TRIPLET}gcc${TOOL_EXECUTABLE_SUFFIX}")
+  set(CMAKE_OBJCOPY "${TOOLCHAIN_BIN_DIR}/${TARGET_TRIPLET}objcopy${TOOL_EXECUTABLE_SUFFIX}" CACHE INTERNAL "objcopy tool")
+  set(CMAKE_OBJDUMP "${TOOLCHAIN_BIN_DIR}/${TARGET_TRIPLET}objdump${TOOL_EXECUTABLE_SUFFIX}" CACHE INTERNAL "objdump tool")
+  set(CMAKE_SIZE "${TOOLCHAIN_BIN_DIR}/${TARGET_TRIPLET}size${TOOL_EXECUTABLE_SUFFIX}" CACHE INTERNAL "size tool")
+  set(CMAKE_DEBUGER "${TOOLCHAIN_BIN_DIR}/${TARGET_TRIPLET}gdb${TOOL_EXECUTABLE_SUFFIX}" CACHE INTERNAL "debuger")
+  set(CMAKE_CPPFILT "${TOOLCHAIN_BIN_DIR}/${TARGET_TRIPLET}c++filt${TOOL_EXECUTABLE_SUFFIX}" CACHE INTERNAL "C++filt")
+
+  # Set cmake configarations
+#set(CMAKE_CONFIGURATION_TYPES ${CMAKE_BUILD_TYPE} CACHE STRING "" FORCE)
 
 # Set the project name and version
 project(gdmx_display VERSION 1.1 LANGUAGES C CXX ASM)
@@ -10,7 +26,8 @@ project(gdmx_display VERSION 1.1 LANGUAGES C CXX ASM)
 add_compile_definitions(STM32F103xB)
 add_compile_definitions(USE_HAL_DRIVER)
 add_compile_definitions(GV_INFOBOARD_V1)
-add_compile_definitions(DEBUG)
+#add_compile_definitions(DEBUG)
+add_compile_definitions(RELEASE)
 
 # Specify the C standard to the project
 set(CMAKE_C_STANDARD 11)
