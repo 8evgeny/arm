@@ -34,7 +34,7 @@ void ADCInit(){
     NVIC_SetPriority(ADC_IRQn, 0);
 
     //Включение прерываний по окончанию преобразования
-    ADC1_ITConfig(ADCx_IT_END_OF_CONVERSION, ENABLE);
+    ADC1_ITConfig(ADC2_IT_END_OF_CONVERSION, ENABLE); //Ошибка в книге
 
     //Включение АЦП1
     ADC1_Cmd(ENABLE);
