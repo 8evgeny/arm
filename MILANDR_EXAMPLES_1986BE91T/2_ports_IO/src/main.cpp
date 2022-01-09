@@ -26,7 +26,8 @@ int main (int argc, char** argv) {
     PORTDInit.PORT_FUNC = PORT_FUNC_PORT;      // Работа а режиме порта ввода-вывода
     PORTDInit.PORT_MODE = PORT_MODE_DIGITAL;   // Цифровой режим
     PORTDInit.PORT_SPEED = PORT_SPEED_SLOW;    // Низкая частота тактования порта
-    PORT_Init(MDR_PORTD, &PORTDInit);          //Инициализация порта D объявленной структурой
+    PORT_Init(MDR_PORTD, &PORTDInit);          // Инициализация порта D объявленной структурой
+
     while(1){
         PORT_SetBits(MDR_PORTD, PORT_Pin_10);  // Установка единицы на 10 пине в порту D
         delay(0xFFFF);                         // Задержка
