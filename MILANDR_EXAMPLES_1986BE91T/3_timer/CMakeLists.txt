@@ -6,7 +6,7 @@ set(TOOLS_PATH /home/evg/toolchain/gcc-arm-none-eabi-new)
 set(CMAKE_C_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-gcc)
 set(CMAKE_CXX_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
 
-project(Milandr_examples_2_ports_IO C CXX)
+project(Milandr_examples_3_timer C CXX)
 
 set(CMAKE_BUILD_TYPE debug)
 #set(CMAKE_BUILD_TYPE release)
