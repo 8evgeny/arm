@@ -1,0 +1,41 @@
+.TH "xMessageBufferReceiveCompletedFromISR" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xMessageBufferReceiveCompletedFromISR \- xMessageBufferReceiveCompletedFromISR
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+\fBmessage_buffer\&.h\fP
+.PP
+.PP
+.nf
+
+BaseType_t xMessageBufferReceiveCompletedFromISR( MessageBufferHandle_t xStreamBuffer, BaseType_t *pxHigherPriorityTaskWoken );
+.fi
+.PP
+.PP
+For advanced users only\&.
+.PP
+The sbRECEIVE_COMPLETED() macro is called from within the FreeRTOS APIs when data is read out of a message buffer or stream buffer\&. If there was a task that was blocked on the message or stream buffer waiting for data to arrive then the sbRECEIVE_COMPLETED() macro sends a notification to the task to remove it from the Blocked state\&. xMessageBufferReceiveCompletedFromISR() does the same thing\&. It is provided to enable application writers to implement their own version of sbRECEIVE_COMPLETED(), and MUST NOT BE USED AT ANY OTHER TIME\&.
+.PP
+See the example implemented in FreeRTOS/Demo/Minimal/MessageBufferAMP\&.c for additional information\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxStreamBuffer\fP The handle of the stream buffer from which data was read\&.
+.br
+\fIpxHigherPriorityTaskWoken\fP *pxHigherPriorityTaskWoken should be initialised to pdFALSE before it is passed into xMessageBufferReceiveCompletedFromISR()\&. If calling xMessageBufferReceiveCompletedFromISR() removes a task from the Blocked state, and the task has a priority above the priority of the currently running task, then *pxHigherPriorityTaskWoken will get set to pdTRUE indicating that a context switch should be performed before exiting the ISR\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If a task was removed from the Blocked state then pdTRUE is returned\&. Otherwise pdFALSE is returned\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

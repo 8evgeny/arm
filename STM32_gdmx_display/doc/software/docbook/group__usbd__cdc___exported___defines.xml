@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__usbd__cdc___exported___defines" xml:lang="en-US">
+<title>Usbd_cdc_Exported_Defines</title>
+<indexterm><primary>Usbd_cdc_Exported_Defines</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga4f4f597c2cc62e7ec1c6ac609b3eb97f"/>#define <emphasis role="strong">CDC_IN_EP</emphasis>   0x81U  /* EP1 for data IN */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga7623890bcaec261a69ba4622909f065c"/>#define <emphasis role="strong">CDC_OUT_EP</emphasis>   0x01U  /* EP1 for data OUT */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1gaeca7f5392ff4fc889eeb511d7d09ce75"/>#define <emphasis role="strong">CDC_CMD_EP</emphasis>   0x82U  /* EP2 for CDC commands */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1gaf7a06817570b273e0573b561467d079e"/>#define <emphasis role="strong">CDC_HS_BINTERVAL</emphasis>   0x10U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga541cf34ef82ecf787cbc4871e825c3a3"/>#define <emphasis role="strong">CDC_FS_BINTERVAL</emphasis>   0x10U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1gae7db58dbfe2496ddba05ab027238a0c5"/>#define <emphasis role="strong">CDC_DATA_HS_MAX_PACKET_SIZE</emphasis>   512U  /* Endpoint IN &amp; OUT Packet size */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga9aeccc7c5ce07c075d2e3da4c49f190c"/>#define <emphasis role="strong">CDC_DATA_FS_MAX_PACKET_SIZE</emphasis>   64U  /* Endpoint IN &amp; OUT Packet size */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1gaf49cf1058cfa7de0867c1fae6de56b89"/>#define <emphasis role="strong">CDC_CMD_PACKET_SIZE</emphasis>   8U  /* Control Endpoint Packet size */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1gaeace2e1a379f1cd527d26b7b713ba7d6"/>#define <emphasis role="strong">USB_CDC_CONFIG_DESC_SIZ</emphasis>   67U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga95a5ef21d7dd72fccf4aba23876d0e8b"/>#define <emphasis role="strong">CDC_DATA_HS_IN_PACKET_SIZE</emphasis>   CDC_DATA_HS_MAX_PACKET_SIZE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1gaa9171457c438566f480e14be07ff01a0"/>#define <emphasis role="strong">CDC_DATA_HS_OUT_PACKET_SIZE</emphasis>   CDC_DATA_HS_MAX_PACKET_SIZE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1gaf5b83dd4c901b61bba2bc41c4916c28b"/>#define <emphasis role="strong">CDC_DATA_FS_IN_PACKET_SIZE</emphasis>   CDC_DATA_FS_MAX_PACKET_SIZE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1gaa15fbc914f64d67118729351b9e46c3c"/>#define <emphasis role="strong">CDC_DATA_FS_OUT_PACKET_SIZE</emphasis>   CDC_DATA_FS_MAX_PACKET_SIZE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga7aaa245703a0a2191c27697715f3727c"/>#define <emphasis role="strong">CDC_SEND_ENCAPSULATED_COMMAND</emphasis>   0x00U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga6170632c774a3163b5a9927cc4e960ec"/>#define <emphasis role="strong">CDC_GET_ENCAPSULATED_RESPONSE</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga893b79445f99070657e8d45f6495b174"/>#define <emphasis role="strong">CDC_SET_COMM_FEATURE</emphasis>   0x02U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1gad0912dac888d01142b225b0c6f8a508f"/>#define <emphasis role="strong">CDC_GET_COMM_FEATURE</emphasis>   0x03U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga6c79b8666110840333ad3785bf7ce87c"/>#define <emphasis role="strong">CDC_CLEAR_COMM_FEATURE</emphasis>   0x04U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1gad07ce089c8757b8d2ff37ddd83dc9351"/>#define <emphasis role="strong">CDC_SET_LINE_CODING</emphasis>   0x20U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga1068ab45668e413d964a01bc36fa2d43"/>#define <emphasis role="strong">CDC_GET_LINE_CODING</emphasis>   0x21U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga11c392243dec4d03970f1eaa1f8053ae"/>#define <emphasis role="strong">CDC_SET_CONTROL_LINE_STATE</emphasis>   0x22U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__usbd__cdc___exported___defines_1ga868c480caf0abda6b458c82281dda8ad"/>#define <emphasis role="strong">CDC_SEND_BREAK</emphasis>   0x23U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h___exported___types" xml:lang="en-US">
+<title>FLASH Exported Types</title>
+<indexterm><primary>FLASH Exported Types</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___process_type_def">FLASH_ProcessTypeDef</link></para>
+
+<para>FLASH handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h___exported___types_1ga2b0268387bc11bcab76be9ce7c43eaaf"/>enum <link linkend="_group___f_l_a_s_h___exported___types_1ga2b0268387bc11bcab76be9ce7c43eaaf">FLASH_ProcedureTypeDef</link> { 
+<emphasis role="strong">FLASH_PROC_NONE</emphasis> = 0U
+, <emphasis role="strong">FLASH_PROC_PAGEERASE</emphasis> = 1U
+, <emphasis role="strong">FLASH_PROC_MASSERASE</emphasis> = 2U
+, <emphasis role="strong">FLASH_PROC_PROGRAMHALFWORD</emphasis> = 3U
+, 
+<emphasis role="strong">FLASH_PROC_PROGRAMWORD</emphasis> = 4U
+, <emphasis role="strong">FLASH_PROC_PROGRAMDOUBLEWORD</emphasis> = 5U
+ }</para>
+
+<para>FLASH Procedure structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

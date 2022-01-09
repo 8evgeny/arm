@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___output___compare___state" xml:lang="en-US">
+<title>TIM Output Compare State</title>
+<indexterm><primary>TIM Output Compare State</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare___state_1ga98fa585adffeb0d3654b47040576c6b7">TIM_OUTPUTSTATE_DISABLE</link>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare___state_1ga114555abc521311f689478a7e0a9ace9">TIM_OUTPUTSTATE_ENABLE</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga3f494b9881e7b97bb2d79f7ad4e79937">TIM_CCER_CC1E</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___output___compare___state_1ga98fa585adffeb0d3654b47040576c6b7"/>    <section>
+    <title>TIM_OUTPUTSTATE_DISABLE</title>
+<indexterm><primary>TIM_OUTPUTSTATE_DISABLE</primary><secondary>TIM Output Compare State</secondary></indexterm>
+<indexterm><primary>TIM Output Compare State</primary><secondary>TIM_OUTPUTSTATE_DISABLE</secondary></indexterm>
+<para><computeroutput>#define TIM_OUTPUTSTATE_DISABLE   0x00000000U</computeroutput></para>
+<para>Capture/Compare 1 output disabled </para>
+    </section><anchor xml:id="_group___t_i_m___output___compare___state_1ga114555abc521311f689478a7e0a9ace9"/>    <section>
+    <title>TIM_OUTPUTSTATE_ENABLE</title>
+<indexterm><primary>TIM_OUTPUTSTATE_ENABLE</primary><secondary>TIM Output Compare State</secondary></indexterm>
+<indexterm><primary>TIM Output Compare State</primary><secondary>TIM_OUTPUTSTATE_ENABLE</secondary></indexterm>
+<para><computeroutput>#define TIM_OUTPUTSTATE_ENABLE   <link linkend="_group___peripheral___registers___bits___definition_1ga3f494b9881e7b97bb2d79f7ad4e79937">TIM_CCER_CC1E</link></computeroutput></para>
+<para>Capture/Compare 1 output enabled </para>
+</section>
+</section>
+</section>

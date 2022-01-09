@@ -1,0 +1,113 @@
+\hypertarget{led_8h}{}\doxysection{Inc/led.h File Reference}
+\label{led_8h}\index{Inc/led.h@{Inc/led.h}}
+
+
+Header for \mbox{\hyperlink{led_8c}{led.\+c}} file.  
+
+
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{led_8h_a50cf228fce8563fc202330b7b4816cb9}{LED\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em LED control module initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{led_8h_a160438dfbbe2b383198647cbcc9a0503}{LED\+\_\+set\+LED1}} (void)
+\begin{DoxyCompactList}\small\item\em Turn on LED \char`\"{}\+Alarm\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{led_8h_a730574f2ed84f2fd20c54babfc73c0ca}{LED\+\_\+reset\+LED1}} (void)
+\begin{DoxyCompactList}\small\item\em Turn off LED \char`\"{}\+Alarm\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{led_8h_ae985eca49a31a26d39db27a7b214f0f5}{LED\+\_\+set\+LED2}} (void)
+\begin{DoxyCompactList}\small\item\em Turn on LED \char`\"{}\+Write\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{led_8h_a09886ae6f7015a329efc7d315aaa6f99}{LED\+\_\+reset\+LED2}} (void)
+\begin{DoxyCompactList}\small\item\em Turn off LED \char`\"{}\+Write\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for \mbox{\hyperlink{led_8c}{led.\+c}} file. 
+
+Led control module (Header file). \begin{DoxyAuthor}{Author}
+Arthur Markaryan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26.\+03.\+2021 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{led_8h_a50cf228fce8563fc202330b7b4816cb9}\label{led_8h_a50cf228fce8563fc202330b7b4816cb9}} 
+\index{led.h@{led.h}!LED\_init@{LED\_init}}
+\index{LED\_init@{LED\_init}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_init()}{LED\_init()}}
+{\footnotesize\ttfamily void LED\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+LED control module initialization. 
+
+GPIO initialization function to drive LEDs. 
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{led_8h_a730574f2ed84f2fd20c54babfc73c0ca}\label{led_8h_a730574f2ed84f2fd20c54babfc73c0ca}} 
+\index{led.h@{led.h}!LED\_resetLED1@{LED\_resetLED1}}
+\index{LED\_resetLED1@{LED\_resetLED1}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_resetLED1()}{LED\_resetLED1()}}
+{\footnotesize\ttfamily void LED\+\_\+reset\+LED1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turn off LED \char`\"{}\+Alarm\char`\"{}. 
+
+LED lighting control function. 
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{led_8h_a09886ae6f7015a329efc7d315aaa6f99}\label{led_8h_a09886ae6f7015a329efc7d315aaa6f99}} 
+\index{led.h@{led.h}!LED\_resetLED2@{LED\_resetLED2}}
+\index{LED\_resetLED2@{LED\_resetLED2}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_resetLED2()}{LED\_resetLED2()}}
+{\footnotesize\ttfamily void LED\+\_\+reset\+LED2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turn off LED \char`\"{}\+Write\char`\"{}. 
+
+LED lighting control function. 
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{led_8h_a160438dfbbe2b383198647cbcc9a0503}\label{led_8h_a160438dfbbe2b383198647cbcc9a0503}} 
+\index{led.h@{led.h}!LED\_setLED1@{LED\_setLED1}}
+\index{LED\_setLED1@{LED\_setLED1}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_setLED1()}{LED\_setLED1()}}
+{\footnotesize\ttfamily void LED\+\_\+set\+LED1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turn on LED \char`\"{}\+Alarm\char`\"{}. 
+
+LED lighting control function. 
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{led_8h_ae985eca49a31a26d39db27a7b214f0f5}\label{led_8h_ae985eca49a31a26d39db27a7b214f0f5}} 
+\index{led.h@{led.h}!LED\_setLED2@{LED\_setLED2}}
+\index{LED\_setLED2@{LED\_setLED2}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_setLED2()}{LED\_setLED2()}}
+{\footnotesize\ttfamily void LED\+\_\+set\+LED2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turn on LED \char`\"{}\+Write\char`\"{}. 
+
+LED lighting control function. 
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}

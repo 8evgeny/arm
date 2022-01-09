@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h___type___program" xml:lang="en-US">
+<title>FLASH Type Program</title>
+<indexterm><primary>FLASH Type Program</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1ga2b607dfc2efd463a8530e327bc755582">FLASH_TYPEPROGRAM_HALFWORD</link>   0x01U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1gadd25c6821539030ba6711e7c0d586c3e">FLASH_TYPEPROGRAM_WORD</link>   0x02U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1gabdc2b0b4d2e66c2be90fafbfbf1e225f">FLASH_TYPEPROGRAM_DOUBLEWORD</link>   0x03U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h___type___program_1gabdc2b0b4d2e66c2be90fafbfbf1e225f"/>    <section>
+    <title>FLASH_TYPEPROGRAM_DOUBLEWORD</title>
+<indexterm><primary>FLASH_TYPEPROGRAM_DOUBLEWORD</primary><secondary>FLASH Type Program</secondary></indexterm>
+<indexterm><primary>FLASH Type Program</primary><secondary>FLASH_TYPEPROGRAM_DOUBLEWORD</secondary></indexterm>
+<para><computeroutput>#define FLASH_TYPEPROGRAM_DOUBLEWORD   0x03U</computeroutput></para>
+<para>Program a double word (64-bit) at a specified address </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___type___program_1ga2b607dfc2efd463a8530e327bc755582"/>    <section>
+    <title>FLASH_TYPEPROGRAM_HALFWORD</title>
+<indexterm><primary>FLASH_TYPEPROGRAM_HALFWORD</primary><secondary>FLASH Type Program</secondary></indexterm>
+<indexterm><primary>FLASH Type Program</primary><secondary>FLASH_TYPEPROGRAM_HALFWORD</secondary></indexterm>
+<para><computeroutput>#define FLASH_TYPEPROGRAM_HALFWORD   0x01U</computeroutput></para>
+<para>Program a half-word (16-bit) at a specified address. </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___type___program_1gadd25c6821539030ba6711e7c0d586c3e"/>    <section>
+    <title>FLASH_TYPEPROGRAM_WORD</title>
+<indexterm><primary>FLASH_TYPEPROGRAM_WORD</primary><secondary>FLASH Type Program</secondary></indexterm>
+<indexterm><primary>FLASH Type Program</primary><secondary>FLASH_TYPEPROGRAM_WORD</secondary></indexterm>
+<para><computeroutput>#define FLASH_TYPEPROGRAM_WORD   0x02U</computeroutput></para>
+<para>Program a word (32-bit) at a specified address. </para>
+</section>
+</section>
+</section>

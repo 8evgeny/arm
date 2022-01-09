@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structx_l_i_s_t" xml:lang="en-US">
+<title>xLIST Struct Reference</title>
+<indexterm><primary>xLIST</primary></indexterm>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structx_l_i_s_t_1a8fa392ba5e75883d007713e1e6c83a76"/>listFIRST_LIST_INTEGRITY_CHECK_VALUE volatile UBaseType_t <emphasis role="strong">uxNumberOfItems</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structx_l_i_s_t_1ae8639154918acc3f75d718480322aa82"/><link linkend="_structx_l_i_s_t___i_t_e_m">ListItem_t</link> *configLIST_VOLATILE <emphasis role="strong">pxIndex</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structx_l_i_s_t_1a83a65be4e3a2bb70855742896126bf63"/><link linkend="_structx_m_i_n_i___l_i_s_t___i_t_e_m">MiniListItem_t</link> <emphasis role="strong">xListEnd</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Middlewares/Third_Party/FreeRTOS/Source/include/list.h</section>

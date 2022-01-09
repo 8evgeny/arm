@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___t_i_m___aliased___macros" xml:lang="en-US">
+<title>HAL TIM Aliased Macros maintained for legacy purpose</title>
+<indexterm><primary>HAL TIM Aliased Macros maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga1f487f25516b3fd87b864f5be8229b7e"/>#define <emphasis role="strong">__HAL_TIM_SetICPrescalerValue</emphasis>   TIM_SET_ICPRESCALERVALUE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1gac171a25ce55eafe62671d40d7397d721"/>#define <emphasis role="strong">__HAL_TIM_ResetICPrescalerValue</emphasis>   TIM_RESET_ICPRESCALERVALUE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga1dd7eae80b853d3526091193e81b4731"/>#define <emphasis role="strong">TIM_GET_ITSTATUS</emphasis>   <link linkend="_group___t_i_m___exported___macros_1ga644babf93470a6eee6bce8906c4da5c5">__HAL_TIM_GET_IT_SOURCE</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1gadd580b2357a85c03653006349721a36e"/>#define <emphasis role="strong">TIM_GET_CLEAR_IT</emphasis>   <link linkend="_group___t_i_m___exported___macros_1gaea68155ce77e591e0c2582def061d6f0">__HAL_TIM_CLEAR_IT</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga5b35f7cd15ac31c7b1a9596ac8521f36"/>#define <emphasis role="strong">__HAL_TIM_GET_ITSTATUS</emphasis>   <link linkend="_group___t_i_m___exported___macros_1ga644babf93470a6eee6bce8906c4da5c5">__HAL_TIM_GET_IT_SOURCE</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga76886ef4a5712e8627ea09ff564cdff2"/>#define <emphasis role="strong">__HAL_TIM_DIRECTION_STATUS</emphasis>   <link linkend="_group___t_i_m___exported___macros_1gac73f5e7669d92971830481e7298e98ba">__HAL_TIM_IS_TIM_COUNTING_DOWN</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga64fdbe2a68fc8459071ee0dcb9096e34"/>#define <emphasis role="strong">__HAL_TIM_PRESCALER</emphasis>   <link linkend="_group___t_i_m___exported___macros_1gafdc5a06eab07e0c24e729fd492bdb27c">__HAL_TIM_SET_PRESCALER</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga23ef14334077dc01d9e6d8bfa6614260"/>#define <emphasis role="strong">__HAL_TIM_SetCounter</emphasis>   <link linkend="_group___t_i_m___exported___macros_1ga9746ac75e4cd25cec1a9ebac8cb82b97">__HAL_TIM_SET_COUNTER</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga074ff6af2efe776a0e76622bf8d4c85a"/>#define <emphasis role="strong">__HAL_TIM_GetCounter</emphasis>   <link linkend="_group___t_i_m___exported___macros_1gaf1af08014b9d06efbbb091d58d47c8ba">__HAL_TIM_GET_COUNTER</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga8857297381807be432e6b6eb98fdb591"/>#define <emphasis role="strong">__HAL_TIM_SetAutoreload</emphasis>   <link linkend="_group___t_i_m___exported___macros_1ga1e6300cab1e34ecaaf490dc7d4812d69">__HAL_TIM_SET_AUTORELOAD</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1gae96afd3a280ee1faf2551537e6618ee4"/>#define <emphasis role="strong">__HAL_TIM_GetAutoreload</emphasis>   <link linkend="_group___t_i_m___exported___macros_1gaa7a5c7645695bad15bacd402513a028a">__HAL_TIM_GET_AUTORELOAD</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga8b8f3cf144c4058ec55e6e3659c6a68f"/>#define <emphasis role="strong">__HAL_TIM_SetClockDivision</emphasis>   <link linkend="_group___t_i_m___exported___macros_1ga8aa84d77c670890408092630f9b2bdc4">__HAL_TIM_SET_CLOCKDIVISION</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1gaaf835e3864f2ba2e2026d417ad0d5e40"/>#define <emphasis role="strong">__HAL_TIM_GetClockDivision</emphasis>   <link linkend="_group___t_i_m___exported___macros_1gae6bc91bb5940bce52828c690f24001b8">__HAL_TIM_GET_CLOCKDIVISION</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga1cb3c9854441539ebe076fba62c36d22"/>#define <emphasis role="strong">__HAL_TIM_SetICPrescaler</emphasis>   <link linkend="_group___t_i_m___exported___macros_1gaeb106399b95ef02cec502f58276a0e92">__HAL_TIM_SET_ICPRESCALER</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1gae8d82e4e04e81f7a023a45b73c9705b7"/>#define <emphasis role="strong">__HAL_TIM_GetICPrescaler</emphasis>   <link linkend="_group___t_i_m___exported___macros_1gabfeec6b3c67a5747c7dbd20aff61d8e2">__HAL_TIM_GET_ICPRESCALER</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga03feb77e8c86f3563d671c1ec2439e76"/>#define <emphasis role="strong">__HAL_TIM_SetCompare</emphasis>   <link linkend="_group___t_i_m___exported___macros_1ga300d0c9624c3b072d3afeb7cef639b66">__HAL_TIM_SET_COMPARE</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga6c5f81acbdba730e0cd6a67f06e97de2"/>#define <emphasis role="strong">__HAL_TIM_GetCompare</emphasis>   <link linkend="_group___t_i_m___exported___macros_1gaa40722f56910966e1da5241b610eed84">__HAL_TIM_GET_COMPARE</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_m___aliased___macros_1ga1e28079e8964fba6a2b3e0484843ddc4"/>#define <emphasis role="strong">TIM_BREAKINPUTSOURCE_DFSDM</emphasis>   TIM_BREAKINPUTSOURCE_DFSDM1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8c" xml:lang="en-US">
+<title>Src/main.c File Reference</title>
+<indexterm><primary>Src/main.c</primary></indexterm>
+<para>
+
+<para>Main program body. </para>
+ 
+</para>
+<programlisting>#include &quot;cmsis_os.h&quot;
+#include &quot;usb_device.h&quot;
+#include &quot;usbd_cdc_if.h&quot;
+#include &quot;main.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link> (void)</para>
+
+<para>The application entry point. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a70af21c671abfcc773614a9a4f63d920">SystemClock_Config</link> (void)</para>
+
+<para>System Clock Configuration. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1ad1f9d42690163f73f73e5b820c81ca14">MX_TIM1_Init</link> (void)</para>
+
+<para>TIM1 Initialization Function. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a016544463b4842ced7191baf8f449cea">StartDefaultTask</link> (void const *argument)</para>
+
+<para>Function implementing the defaultTask thread. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1aa5f39a2ded9a08eedd825ab574516207">usbProceed</link> (void const *argument)</para>
+
+<para>Function implementing the usbProcTask thread. </para>
+</listitem>
+            <listitem><para>void <link linkend="_group___t_i_m___exported___functions___group9_1ga8a3b0ad512a6e6c6157440b68d395eac">HAL_TIM_PeriodElapsedCallback</link> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+
+<para>Period elapsed callback in non blocking mode. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a1730ffe1e560465665eb47d9264826f9">Error_Handler</link> (void)</para>
+
+<para>FreeRTOS error handler function. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_main_8c_1a25fc663547539bc49fecc0011bd76ab5"/><link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> <emphasis role="strong">htim1</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_main_8c_1aa658fe134a5d1309d7a15c8116fa142c"/>osThreadId <emphasis role="strong">defaultTaskHandle</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_main_8c_1a0ef1a80eb9a31084b335d4b71c24e001"/>uint32_t <emphasis role="strong">defaultTaskBuffer</emphasis> [128]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_main_8c_1aca18732f09ae696fd34b94d393dc9a42"/>osStaticThreadDef_t <emphasis role="strong">defaultTaskControlBlock</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_main_8c_1ae7146be42fae10d8b7577c80e4552747"/>uint32_t <emphasis role="strong">myTask04Buffer</emphasis> [128]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_main_8c_1a251a509e4b79f96453aff726f0dd22e9"/>osStaticThreadDef_t <emphasis role="strong">myTask04ControlBlock</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_main_8c_1a9096afe0438549219d5acfaceeaf7971"/>osMutexId <emphasis role="strong">usbRxMutexHandle</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_main_8c_1a1486693ac0fa3755a69511340914db1c"/>osStaticMutexDef_t <emphasis role="strong">usbRxMutexControlBlock</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Main program body. </para>
+
+<para>Main module (source file). <formalpara><title>Author</title>
+
+<para>Donskih Dmitry, Arthur Markaryan </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>02.03.2019</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2018 - 2021 Donskih Dmitry. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by Donskih Dmitry under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main_8c_1a1730ffe1e560465665eb47d9264826f9"/>    <section>
+    <title>Error_Handler()</title>
+<indexterm><primary>Error_Handler</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>Error_Handler</secondary></indexterm>
+<para><computeroutput>void Error_Handler (void )</computeroutput></para><para>
+
+<para>FreeRTOS error handler function. </para>
+</para>
+
+<para>This function is executed in case of error occurrence. User can add his own implementation to report the HAL error return state. 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (void )</computeroutput></para><para>
+
+<para>The application entry point. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>int</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_main_8c_1ad1f9d42690163f73f73e5b820c81ca14"/>    <section>
+    <title>MX_TIM1_Init()</title>
+<indexterm><primary>MX_TIM1_Init</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>MX_TIM1_Init</secondary></indexterm>
+<para><computeroutput>void MX_TIM1_Init (void )</computeroutput></para><para>
+
+<para>TIM1 Initialization Function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_main_8c_1a016544463b4842ced7191baf8f449cea"/>    <section>
+    <title>StartDefaultTask()</title>
+<indexterm><primary>StartDefaultTask</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>StartDefaultTask</secondary></indexterm>
+<para><computeroutput>void StartDefaultTask (void const * argument)</computeroutput></para><para>
+
+<para>Function implementing the defaultTask thread. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>argument</entry>
+                                <entry>
+<para>Not used </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_main_8c_1a70af21c671abfcc773614a9a4f63d920"/>    <section>
+    <title>SystemClock_Config()</title>
+<indexterm><primary>SystemClock_Config</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>SystemClock_Config</secondary></indexterm>
+<para><computeroutput>void SystemClock_Config (void )</computeroutput></para><para>
+
+<para>System Clock Configuration. </para>
+</para>
+
+<para>Initializes the CPU, AHB and APB busses clocks. 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_main_8c_1aa5f39a2ded9a08eedd825ab574516207"/>    <section>
+    <title>usbProceed()</title>
+<indexterm><primary>usbProceed</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>usbProceed</secondary></indexterm>
+<para><computeroutput>void usbProceed (void const * argument)</computeroutput></para><para>
+
+<para>Function implementing the usbProcTask thread. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>argument</entry>
+                                <entry>
+<para>Not used </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___c_d_c___i_f" kind="group">
+    <compoundname>USBD_CDC_IF</compoundname>
+    <title>USBD_CDC_IF</title>
+    <innerclass refid="structt___rcv_buffer" prot="public">t_RcvBuffer</innerclass>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f___exported___defines">USBD_CDC_IF_Exported_Defines</innergroup>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f___exported___types">USBD_CDC_IF_Exported_Types</innergroup>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f___exported___macros">USBD_CDC_IF_Exported_Macros</innergroup>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f___exported___variables">USBD_CDC_IF_Exported_Variables</innergroup>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype">USBD_CDC_IF_Exported_FunctionsPrototype</innergroup>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f___private___types_definitions">USBD_CDC_IF_Private_TypesDefinitions</innergroup>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f___private___defines">USBD_CDC_IF_Private_Defines</innergroup>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f___private___macros">USBD_CDC_IF_Private_Macros</innergroup>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f___private___variables">USBD_CDC_IF_Private_Variables</innergroup>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f___private___function_prototypes">USBD_CDC_IF_Private_FunctionPrototypes</innergroup>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga906f72055f0ffed78e9b8ce87f5895ed" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t buffer[HD44780_SCREEN_SIZE]</definition>
+        <argsstring>[HD44780_SCREEN_SIZE]</argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="43" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga40221fe8c949b12d0f4ce4d17eb61365" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t inbuff[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>inbuff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="44" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga2b17692dca541534f6dc648df0418f44" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t pos_x</definition>
+        <argsstring></argsstring>
+        <name>pos_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="45" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga30cd9ab2ddfd6732e17326df24680b4b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t pos_y</definition>
+        <argsstring></argsstring>
+        <name>pos_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="45" column="15" bodyfile="Src/usbd_cdc_if.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1gac4c45c981d6573c8d98707d9f5cb9206" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psize</definition>
+        <argsstring></argsstring>
+        <name>psize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="45" column="21" bodyfile="Src/usbd_cdc_if.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga33e829a22d093bf89f5a8bd036bc5be7" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* pdata</definition>
+        <argsstring></argsstring>
+        <name>pdata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="46" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga601140ce8d84bb32af82f9e5e3250393" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t b_pos</definition>
+        <argsstring></argsstring>
+        <name>b_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="47" column="10" bodyfile="Src/usbd_cdc_if.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga2810cc0706f03dd8a8fa0539e6ccaa94" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structt___rcv_buffer" kindref="compound">t_RcvBuffer</ref></type>
+        <definition>struct t_RcvBuffer RcvBuffer</definition>
+        <argsstring></argsstring>
+        <name>RcvBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="48" column="10"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f_1ga99394ed19b774f171df96c2848c411ed" prot="public" static="no" mutable="no">
+        <type><ref refid="struct___u_s_b_d___c_d_c___itf" kindref="compound">USBD_CDC_ItfTypeDef</ref></type>
+        <definition>USBD_CDC_ItfTypeDef USBD_Interface_fops_FS</definition>
+        <argsstring></argsstring>
+        <name>USBD_Interface_fops_FS</name>
+        <initializer>=
+{
+  CDC_Init_FS,
+  CDC_DeInit_FS,
+  CDC_Control_FS,
+  CDC_Receive_FS
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CDC Interface callback. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="145" column="21" bodyfile="Src/usbd_cdc_if.c" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f_1ga5137d6201dbdef2bf351c5b4941c24f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t CDC_Transmit_FS</definition>
+        <argsstring>(uint8_t *Buf, uint16_t Len)</argsstring>
+        <name>CDC_Transmit_FS</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>Buf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>Len</declname>
+        </param>
+        <briefdescription>
+<para>CDC_Transmit_FS Data to send over USB IN endpoint are sent over CDC interface through this function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of data to be sent (in bytes) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if all operations are OK else USBD_FAIL or USBD_BUSY </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="299" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="299" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f_1gae6ee2a1ab766ec431c22350f8e19d00c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USBD_CDC_IF_clear</definition>
+        <argsstring>(void)</argsstring>
+        <name>USBD_CDC_IF_clear</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="314" column="6" bodyfile="Src/usbd_cdc_if.c" bodystart="314" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f_1ga2d2da5c6a86b837256c54b4bb42c5a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USBD_CDC_IF_write</definition>
+        <argsstring>(void)</argsstring>
+        <name>USBD_CDC_IF_write</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="321" column="6" bodyfile="Src/usbd_cdc_if.c" bodystart="321" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f_1ga6a894b0133456f4b37f5a9786ab495e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int USBD_CDC_IF_procRcvData</definition>
+        <argsstring>(uint8_t *data, uint16_t size)</argsstring>
+        <name>USBD_CDC_IF_procRcvData</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="333" column="5" bodyfile="Src/usbd_cdc_if.c" bodystart="333" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f_1gaf64b900615ca8a917baebf430f11add9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int USBD_CDC_IF_analyzeRcvData</definition>
+        <argsstring>(void)</argsstring>
+        <name>USBD_CDC_IF_analyzeRcvData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_cdc_if.c" line="393" column="5" bodyfile="Src/usbd_cdc_if.c" bodystart="393" bodyend="449"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Usb VCP device module. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

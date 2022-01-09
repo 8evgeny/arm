@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h___prefetch" xml:lang="en-US">
+<title>FLASH Prefetch</title>
+<indexterm><primary>FLASH Prefetch</primary></indexterm>
+<para>
+
+<para>macros to handle FLASH Prefetch buffer </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___prefetch_1gad36059641057f824516303ea92734e6f">__HAL_FLASH_PREFETCH_BUFFER_ENABLE</link>()   (FLASH-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga5285ab198307213dce0629f9b7c6fc86">FLASH_ACR_PRFTBE</link>)</para>
+
+<para>Enable the FLASH prefetch buffer. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___prefetch_1ga646a4cb92e85659334d14a8c78f0ede8">__HAL_FLASH_PREFETCH_BUFFER_DISABLE</link>()   (FLASH-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga5285ab198307213dce0629f9b7c6fc86">FLASH_ACR_PRFTBE</link>))</para>
+
+<para>Disable the FLASH prefetch buffer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>macros to handle FLASH Prefetch buffer </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h___prefetch_1ga646a4cb92e85659334d14a8c78f0ede8"/>    <section>
+    <title>__HAL_FLASH_PREFETCH_BUFFER_DISABLE</title>
+<indexterm><primary>__HAL_FLASH_PREFETCH_BUFFER_DISABLE</primary><secondary>FLASH Prefetch</secondary></indexterm>
+<indexterm><primary>FLASH Prefetch</primary><secondary>__HAL_FLASH_PREFETCH_BUFFER_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_PREFETCH_BUFFER_DISABLE( )   (FLASH-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga5285ab198307213dce0629f9b7c6fc86">FLASH_ACR_PRFTBE</link>))</computeroutput></para><para>
+
+<para>Disable the FLASH prefetch buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___prefetch_1gad36059641057f824516303ea92734e6f"/>    <section>
+    <title>__HAL_FLASH_PREFETCH_BUFFER_ENABLE</title>
+<indexterm><primary>__HAL_FLASH_PREFETCH_BUFFER_ENABLE</primary><secondary>FLASH Prefetch</secondary></indexterm>
+<indexterm><primary>FLASH Prefetch</primary><secondary>__HAL_FLASH_PREFETCH_BUFFER_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_PREFETCH_BUFFER_ENABLE( )   (FLASH-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga5285ab198307213dce0629f9b7c6fc86">FLASH_ACR_PRFTBE</link>)</computeroutput></para><para>
+
+<para>Enable the FLASH prefetch buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

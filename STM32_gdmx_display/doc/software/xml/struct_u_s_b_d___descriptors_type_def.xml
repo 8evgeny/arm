@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_u_s_b_d___descriptors_type_def" kind="struct" language="C++" prot="public">
+    <compoundname>USBD_DescriptorsTypeDef</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_u_s_b_d___descriptors_type_def_1ab550dc07586f56657f2b017dfde4f49d" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetDeviceDescriptor) (USBD_SpeedTypeDef speed, uint16_t *length)</definition>
+        <argsstring>)(USBD_SpeedTypeDef speed, uint16_t *length)</argsstring>
+        <name>GetDeviceDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="214" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___descriptors_type_def_1a386d2f7940a3708f452d60d10ddef70d" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetLangIDStrDescriptor) (USBD_SpeedTypeDef speed, uint16_t *length)</definition>
+        <argsstring>)(USBD_SpeedTypeDef speed, uint16_t *length)</argsstring>
+        <name>GetLangIDStrDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="215" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___descriptors_type_def_1a64d1606dcc22533e10b0e98c06a07035" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetManufacturerStrDescriptor) (USBD_SpeedTypeDef speed, uint16_t *length)</definition>
+        <argsstring>)(USBD_SpeedTypeDef speed, uint16_t *length)</argsstring>
+        <name>GetManufacturerStrDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="216" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___descriptors_type_def_1ab4dbf8400f2403f311af1a9276e09870" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetProductStrDescriptor) (USBD_SpeedTypeDef speed, uint16_t *length)</definition>
+        <argsstring>)(USBD_SpeedTypeDef speed, uint16_t *length)</argsstring>
+        <name>GetProductStrDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="217" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___descriptors_type_def_1a9493bca6898cfbef9c9939fb34a098da" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetSerialStrDescriptor) (USBD_SpeedTypeDef speed, uint16_t *length)</definition>
+        <argsstring>)(USBD_SpeedTypeDef speed, uint16_t *length)</argsstring>
+        <name>GetSerialStrDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="218" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___descriptors_type_def_1a5b4fde728dbe1a7526691b5cda6f3692" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetConfigurationStrDescriptor) (USBD_SpeedTypeDef speed, uint16_t *length)</definition>
+        <argsstring>)(USBD_SpeedTypeDef speed, uint16_t *length)</argsstring>
+        <name>GetConfigurationStrDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="219" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___descriptors_type_def_1a93c2770edf30c6a1229d3601df9d2960" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetInterfaceStrDescriptor) (USBD_SpeedTypeDef speed, uint16_t *length)</definition>
+        <argsstring>)(USBD_SpeedTypeDef speed, uint16_t *length)</argsstring>
+        <name>GetInterfaceStrDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="220" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="212" column="1" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="213" bodyend="224"/>
+    <listofallmembers>
+      <member refid="struct_u_s_b_d___descriptors_type_def_1a5b4fde728dbe1a7526691b5cda6f3692" prot="public" virt="non-virtual"><scope>USBD_DescriptorsTypeDef</scope><name>GetConfigurationStrDescriptor</name></member>
+      <member refid="struct_u_s_b_d___descriptors_type_def_1ab550dc07586f56657f2b017dfde4f49d" prot="public" virt="non-virtual"><scope>USBD_DescriptorsTypeDef</scope><name>GetDeviceDescriptor</name></member>
+      <member refid="struct_u_s_b_d___descriptors_type_def_1a93c2770edf30c6a1229d3601df9d2960" prot="public" virt="non-virtual"><scope>USBD_DescriptorsTypeDef</scope><name>GetInterfaceStrDescriptor</name></member>
+      <member refid="struct_u_s_b_d___descriptors_type_def_1a386d2f7940a3708f452d60d10ddef70d" prot="public" virt="non-virtual"><scope>USBD_DescriptorsTypeDef</scope><name>GetLangIDStrDescriptor</name></member>
+      <member refid="struct_u_s_b_d___descriptors_type_def_1a64d1606dcc22533e10b0e98c06a07035" prot="public" virt="non-virtual"><scope>USBD_DescriptorsTypeDef</scope><name>GetManufacturerStrDescriptor</name></member>
+      <member refid="struct_u_s_b_d___descriptors_type_def_1ab4dbf8400f2403f311af1a9276e09870" prot="public" virt="non-virtual"><scope>USBD_DescriptorsTypeDef</scope><name>GetProductStrDescriptor</name></member>
+      <member refid="struct_u_s_b_d___descriptors_type_def_1a9493bca6898cfbef9c9939fb34a098da" prot="public" virt="non-virtual"><scope>USBD_DescriptorsTypeDef</scope><name>GetSerialStrDescriptor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_bb6a392354d207333b00bd1cb9328973" kind="dir">
+    <compoundname>Drivers/STM32F1xx_HAL_Driver</compoundname>
+    <innerdir refid="dir_1a1855b043853774b7feae02fcb02080">Drivers/STM32F1xx_HAL_Driver/Inc</innerdir>
+    <innerdir refid="dir_934d29f6e99d76aa15686823274a01c7">Drivers/STM32F1xx_HAL_Driver/Src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/STM32F1xx_HAL_Driver/"/>
+  </compounddef>
+</doxygen>

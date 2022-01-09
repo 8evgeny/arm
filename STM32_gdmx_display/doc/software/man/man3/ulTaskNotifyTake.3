@@ -1,0 +1,53 @@
+.TH "ulTaskNotifyTake" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ulTaskNotifyTake \- ulTaskNotifyTake
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+uint32_t ulTaskNotifyTake( BaseType_t xClearCountOnExit, TickType_t xTicksToWait );
+.fi
+.PP
+.PP
+configUSE_TASK_NOTIFICATIONS must be undefined or defined as 1 for this function to be available\&.
+.PP
+When configUSE_TASK_NOTIFICATIONS is set to one each task has its own private 'notification value', which is a 32-bit unsigned integer (uint32_t)\&.
+.PP
+Events can be sent to a task using an intermediary object\&. Examples of such objects are queues, semaphores, mutexes and event groups\&. Task notifications are a method of sending an event directly to a task without the need for such an intermediary object\&.
+.PP
+A notification sent to a task can optionally perform an action, such as update, overwrite or increment the task's notification value\&. In that way task notifications can be used to send data to a task, or be used as light weight and fast binary or counting semaphores\&.
+.PP
+ulTaskNotifyTake() is intended for use when a task notification is used as a faster and lighter weight binary or counting semaphore alternative\&. Actual FreeRTOS semaphores are taken using the xSemaphoreTake() API function, the equivalent action that instead uses a task notification is ulTaskNotifyTake()\&.
+.PP
+When a task is using its notification value as a binary or counting semaphore other tasks should send notifications to it using the xTaskNotifyGive() macro, or xTaskNotify() function with the eAction parameter set to eIncrement\&.
+.PP
+ulTaskNotifyTake() can either clear the task's notification value to zero on exit, in which case the notification value acts like a binary semaphore, or decrement the task's notification value on exit, in which case the notification value acts like a counting semaphore\&.
+.PP
+A task can use ulTaskNotifyTake() to [optionally] block to wait for a the task's notification value to be non-zero\&. The task does not consume any CPU time while it is in the Blocked state\&.
+.PP
+Where as xTaskNotifyWait() will return when a notification is pending, ulTaskNotifyTake() will return when the task's notification value is not zero\&.
+.PP
+See http://www.FreeRTOS.org/RTOS-task-notifications.html for details\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxClearCountOnExit\fP if xClearCountOnExit is pdFALSE then the task's notification value is decremented when the function exits\&. In this way the notification value acts like a counting semaphore\&. If xClearCountOnExit is not pdFALSE then the task's notification value is cleared to zero when the function exits\&. In this way the notification value acts like a binary semaphore\&.
+.br
+\fIxTicksToWait\fP The maximum amount of time that the task should wait in the Blocked state for the task's notification value to be greater than zero, should the count not already be greater than zero when ulTaskNotifyTake() was called\&. The task will not consume any processing time while it is in the Blocked state\&. This is specified in kernel ticks, the macro pdMS_TO_TICSK( value_in_ms ) can be used to convert a time specified in milliseconds to a time specified in ticks\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The task's notification count before it is either cleared to zero or decremented (see the xClearCountOnExit parameter)\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

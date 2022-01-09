@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___exported___functions___group4" xml:lang="en-US">
+<title>TIM Input Capture functions</title>
+<indexterm><primary>TIM Input Capture functions</primary></indexterm>
+<para>
+
+<para>TIM Input Capture functions. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___t_i_m___exported___functions___group4_1ga342aa1098891f55f59c7867afff589c1"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIM_IC_Init</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m___exported___functions___group4_1ga2fc9af96c4ec45ba9057e182012f3586"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIM_IC_DeInit</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m___exported___functions___group4_1ga202723f23bc46b29b16145f9cceabbbb"/>void <emphasis role="strong">HAL_TIM_IC_MspInit</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m___exported___functions___group4_1gad1aa484ec0f0559908d9d8128614e7ad"/>void <emphasis role="strong">HAL_TIM_IC_MspDeInit</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m___exported___functions___group4_1gaab393018ca6f8fad04a815feb1796ce7"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIM_IC_Start</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m___exported___functions___group4_1ga1b5edb103cb27dbd5380e9b24d12658f"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIM_IC_Stop</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m___exported___functions___group4_1gac0e3515f374ec6b9d30609cd683649d6"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIM_IC_Start_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m___exported___functions___group4_1gaf5664e207667c99ef50378813056e5f6"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIM_IC_Stop_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m___exported___functions___group4_1gac3b7deffff43a8bdc3e2eea42115efff"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIM_IC_Start_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel, uint32_t *pData, uint16_t Length)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m___exported___functions___group4_1ga8e7dc17f058ef9c826774436d68f80b5"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIM_IC_Stop_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>TIM Input Capture functions. </para>
+</section>
+</section>

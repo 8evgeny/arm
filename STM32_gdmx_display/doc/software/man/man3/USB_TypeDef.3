@@ -1,0 +1,154 @@
+.TH "USB_TypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USB_TypeDef \- Universal Serial Bus Full Speed Device\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f103xb\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBEP0R\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVED0\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBEP1R\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVED1\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBEP2R\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVED2\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBEP3R\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVED3\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBEP4R\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVED4\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBEP5R\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVED5\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBEP6R\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVED6\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBEP7R\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVED7\fP [17]"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBCNTR\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVED8\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBISTR\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVED9\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBFNR\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVEDA\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBDADDR\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVEDB\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBBTABLE\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint16_t \fBRESERVEDC\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Universal Serial Bus Full Speed Device\&. 
+.SH "Field Documentation"
+.PP 
+.SS "\fB__IO\fP uint16_t BTABLE"
+Buffer Table address register, Address offset: 0x50 
+.SS "\fB__IO\fP uint16_t CNTR"
+Control register, Address offset: 0x40 
+.SS "\fB__IO\fP uint16_t DADDR"
+Device address register, Address offset: 0x4C 
+.SS "\fB__IO\fP uint16_t EP0R"
+USB Endpoint 0 register, Address offset: 0x00 
+.SS "\fB__IO\fP uint16_t EP1R"
+USB Endpoint 1 register, Address offset: 0x04 
+.SS "\fB__IO\fP uint16_t EP2R"
+USB Endpoint 2 register, Address offset: 0x08 
+.SS "\fB__IO\fP uint16_t EP3R"
+USB Endpoint 3 register, Address offset: 0x0C 
+.SS "\fB__IO\fP uint16_t EP4R"
+USB Endpoint 4 register, Address offset: 0x10 
+.SS "\fB__IO\fP uint16_t EP5R"
+USB Endpoint 5 register, Address offset: 0x14 
+.SS "\fB__IO\fP uint16_t EP6R"
+USB Endpoint 6 register, Address offset: 0x18 
+.SS "\fB__IO\fP uint16_t EP7R"
+USB Endpoint 7 register, Address offset: 0x1C 
+.SS "\fB__IO\fP uint16_t FNR"
+Frame number register, Address offset: 0x48 
+.SS "\fB__IO\fP uint16_t ISTR"
+Interrupt status register, Address offset: 0x44 
+.SS "\fB__IO\fP uint16_t RESERVED0"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVED1"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVED2"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVED3"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVED4"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVED5"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVED6"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVED7[17]"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVED8"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVED9"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVEDA"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVEDB"
+Reserved 
+.SS "\fB__IO\fP uint16_t RESERVEDC"
+Reserved 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

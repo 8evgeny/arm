@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c___h_s_i___config" kind="group">
+    <compoundname>RCC_HSI_Config</compoundname>
+    <title>HSI Config</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___r_c_c___h_s_i___config_1ga1b34d37d3b51afec0758b3ddc7a7e665" prot="public" static="no">
+        <name>RCC_HSI_OFF</name>
+        <initializer>0x00000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HSI clock deactivation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="138" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___h_s_i___config_1ga0bf09ef9e46d5da25cced7b3122f92f5" prot="public" static="no">
+        <name>RCC_HSI_ON</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gaf4fcacf94a97f7d49a70e089b39cf474" kindref="member">RCC_CR_HSION</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HSI clock activation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="139" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___h_s_i___config_1ga03cf582e263fb7e31a7783d8adabd7a0" prot="public" static="no">
+        <name>RCC_HSICALIBRATION_DEFAULT</name>
+        <initializer>0x10U         /* Default HSI calibration trimming value */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="141" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct___u_s_b_d___c_d_c___itf" kind="struct" language="C++" prot="public">
+    <compoundname>_USBD_CDC_Itf</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___u_s_b_d___c_d_c___itf_1a89e3da22039f3a55099f8c78b7ba22f0" prot="public" static="no" mutable="no">
+        <type>int8_t(*</type>
+        <definition>int8_t(* Init) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="103" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___u_s_b_d___c_d_c___itf_1ac67a57e690b61666d3b4165ee504ece2" prot="public" static="no" mutable="no">
+        <type>int8_t(*</type>
+        <definition>int8_t(* DeInit) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>DeInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="104" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___u_s_b_d___c_d_c___itf_1a3b518415690a6f16ab1cdd6e3d8a1c26" prot="public" static="no" mutable="no">
+        <type>int8_t(*</type>
+        <definition>int8_t(* Control) (uint8_t cmd, uint8_t *pbuf, uint16_t length)</definition>
+        <argsstring>)(uint8_t cmd, uint8_t *pbuf, uint16_t length)</argsstring>
+        <name>Control</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="105" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___u_s_b_d___c_d_c___itf_1a98b9e764e14893142360e8d664aa5bde" prot="public" static="no" mutable="no">
+        <type>int8_t(*</type>
+        <definition>int8_t(* Receive) (uint8_t *Buf, uint32_t *Len)</definition>
+        <argsstring>)(uint8_t *Buf, uint32_t *Len)</argsstring>
+        <name>Receive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="106" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="101" column="1" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="102" bodyend="108"/>
+    <listofallmembers>
+      <member refid="struct___u_s_b_d___c_d_c___itf_1a3b518415690a6f16ab1cdd6e3d8a1c26" prot="public" virt="non-virtual"><scope>_USBD_CDC_Itf</scope><name>Control</name></member>
+      <member refid="struct___u_s_b_d___c_d_c___itf_1ac67a57e690b61666d3b4165ee504ece2" prot="public" virt="non-virtual"><scope>_USBD_CDC_Itf</scope><name>DeInit</name></member>
+      <member refid="struct___u_s_b_d___c_d_c___itf_1a89e3da22039f3a55099f8c78b7ba22f0" prot="public" virt="non-virtual"><scope>_USBD_CDC_Itf</scope><name>Init</name></member>
+      <member refid="struct___u_s_b_d___c_d_c___itf_1a98b9e764e14893142360e8d664aa5bde" prot="public" virt="non-virtual"><scope>_USBD_CDC_Itf</scope><name>Receive</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

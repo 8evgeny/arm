@@ -1,0 +1,63 @@
+.TH "PWR_Private_Macros" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PWR_Private_Macros \- PWR Private Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIS_PWR_PVD_LEVEL\fP(LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_PVD_MODE\fP(MODE)"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_WAKEUP_PIN\fP(PIN)   (((PIN) == PWR_WAKEUP_PIN1))"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_REGULATOR\fP(REGULATOR)"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_SLEEP_ENTRY\fP(ENTRY)   (((ENTRY) == PWR_SLEEPENTRY_WFI) || ((ENTRY) == PWR_SLEEPENTRY_WFE))"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_STOP_ENTRY\fP(ENTRY)   (((ENTRY) == PWR_STOPENTRY_WFI) || ((ENTRY) == PWR_STOPENTRY_WFE))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define IS_PWR_PVD_LEVEL(LEVEL)"
+\fBValue:\fP
+.PP
+.nf
+                                 (((LEVEL) == PWR_PVDLEVEL_0) || ((LEVEL) == PWR_PVDLEVEL_1)|| \
+                                 ((LEVEL) == PWR_PVDLEVEL_2) || ((LEVEL) == PWR_PVDLEVEL_3)|| \
+                                 ((LEVEL) == PWR_PVDLEVEL_4) || ((LEVEL) == PWR_PVDLEVEL_5)|| \
+                                 ((LEVEL) == PWR_PVDLEVEL_6) || ((LEVEL) == PWR_PVDLEVEL_7))
+.fi
+.SS "#define IS_PWR_PVD_MODE(MODE)"
+\fBValue:\fP
+.PP
+.nf
+                              (((MODE) == PWR_PVD_MODE_IT_RISING)|| ((MODE) == PWR_PVD_MODE_IT_FALLING) || \
+                              ((MODE) == PWR_PVD_MODE_IT_RISING_FALLING) || ((MODE) == PWR_PVD_MODE_EVENT_RISING) || \
+                              ((MODE) == PWR_PVD_MODE_EVENT_FALLING) || ((MODE) == PWR_PVD_MODE_EVENT_RISING_FALLING) || \
+                              ((MODE) == PWR_PVD_MODE_NORMAL))
+.fi
+.SS "#define IS_PWR_REGULATOR(REGULATOR)"
+\fBValue:\fP
+.PP
+.nf
+                                     (((REGULATOR) == PWR_MAINREGULATOR_ON) || \
+                                     ((REGULATOR) == PWR_LOWPOWERREGULATOR_ON))
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

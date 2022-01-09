@@ -1,0 +1,1974 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="stm32f1xx__hal__gpio__ex_8h" kind="file" language="C++">
+    <compoundname>stm32f1xx_hal_gpio_ex.h</compoundname>
+    <includes refid="stm32f1xx__hal__def_8h" local="yes">stm32f1xx_hal_def.h</includes>
+    <includedby refid="stm32f1xx__hal__gpio_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="3">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="1">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="27">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Inc/usb_device.h</label>
+        <link refid="usb__device_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>Src/buzzer.c</label>
+        <link refid="buzzer_8c"/>
+      </node>
+      <node id="29">
+        <label>Src/usb_device.c</label>
+        <link refid="usb__device_8c"/>
+      </node>
+      <node id="31">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</label>
+        <link refid="usbd__cdc_8c"/>
+      </node>
+      <node id="36">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c</label>
+        <link refid="stm32f1xx__hal__cortex_8c"/>
+      </node>
+      <node id="7">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c</label>
+        <link refid="stm32f1xx__hal__dma_8c"/>
+      </node>
+      <node id="26">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Inc/buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>Src/hd44780.c</label>
+        <link refid="hd44780_8c"/>
+      </node>
+      <node id="18">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c</label>
+        <link refid="stm32f1xx__hal__tim_8c"/>
+      </node>
+      <node id="47">
+        <label>Src/stm32f1xx_hal_timebase_tim.c</label>
+        <link refid="stm32f1xx__hal__timebase__tim_8c"/>
+      </node>
+      <node id="22">
+        <label>Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c</label>
+        <link refid="stm32f1xx__hal_8c"/>
+      </node>
+      <node id="10">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c</label>
+        <link refid="stm32f1xx__hal__flash__ex_8c"/>
+      </node>
+      <node id="33">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c</label>
+        <link refid="usbd__ioreq_8c"/>
+      </node>
+      <node id="11">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c</label>
+        <link refid="stm32f1xx__hal__gpio_8c"/>
+      </node>
+      <node id="32">
+        <label>Src/usbd_conf.c</label>
+        <link refid="usbd__conf_8c"/>
+      </node>
+      <node id="38">
+        <label>Inc/usbd_desc.h</label>
+        <link refid="usbd__desc_8h_source"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c</label>
+        <link refid="stm32f1xx__ll__usb_8c"/>
+      </node>
+      <node id="28">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="30">
+        <label>Src/usbd_cdc_if.c</label>
+        <link refid="usbd__cdc__if_8c"/>
+      </node>
+      <node id="24">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c</label>
+        <link refid="stm32f1xx__hal__pcd__ex_8c"/>
+      </node>
+      <node id="45">
+        <label>Inc/led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c</label>
+        <link refid="stm32f1xx__hal__pwr_8c"/>
+      </node>
+      <node id="16">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c</label>
+        <link refid="stm32f1xx__hal__rcc_8c"/>
+      </node>
+      <node id="9">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c</label>
+        <link refid="stm32f1xx__hal__flash_8c"/>
+      </node>
+      <node id="40">
+        <label>Src/stm32f1xx_it.c</label>
+        <link refid="stm32f1xx__it_8c"/>
+      </node>
+      <node id="35">
+        <label>Src/usbd_desc.c</label>
+        <link refid="usbd__desc_8c"/>
+      </node>
+      <node id="19">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c</label>
+        <link refid="stm32f1xx__hal__tim__ex_8c"/>
+      </node>
+      <node id="12">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8c"/>
+      </node>
+      <node id="43">
+        <label>Inc/hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Inc/stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>Src/led.c</label>
+        <link refid="led_8c"/>
+      </node>
+      <node id="2">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Inc/usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c</label>
+        <link refid="usbd__core_8c"/>
+      </node>
+      <node id="39">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8c"/>
+      </node>
+      <node id="8">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c</label>
+        <link refid="stm32f1xx__hal__exti_8c"/>
+      </node>
+      <node id="1">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>Inc/display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c</label>
+        <link refid="stm32f1xx__hal__pcd_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga1caf81a3226da92f477e6fd15cfef16b" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_0</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gafc55b0764100c312652f8439c76ead93" kindref="member">AFIO_EVCR_PIN_PX0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="54" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae2d151889f9f4b65ce6547aa80dca582" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_1</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga1837985898c39579fb8e2d08a536abc9" kindref="member">AFIO_EVCR_PIN_PX1</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="55" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga20d5efc2e37b380ba6acab899fac25ec" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_2</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gaefeb8141d1a950490ba1546475a800f7" kindref="member">AFIO_EVCR_PIN_PX2</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 2 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="56" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gac6eb85f0eff1513ba213dc9d1c0af35b" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_3</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gaf5f9ed9c7b281ab90977e12567642227" kindref="member">AFIO_EVCR_PIN_PX3</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 3 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="57" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa2a1db689ed0a7b46f5ed773a2e54d54" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_4</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga581b5d39100696da09b2ff97a99972da" kindref="member">AFIO_EVCR_PIN_PX4</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="58" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa96afd6502080bd3d6cd68e6e06e7bfa" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_5</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga8ad484dafff8764ce9ce9d594dd5a013" kindref="member">AFIO_EVCR_PIN_PX5</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 5 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="59" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae9b4ddb2c1bd1c343d396983148f1522" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_6</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga2f3145a544acb1f90a7282ec5a29c157" kindref="member">AFIO_EVCR_PIN_PX6</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 6 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="60" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga999cd9c3ce9821b73e7610f11da7258f" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_7</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga0a96447627679aea8f50ae5c69ad8cf4" kindref="member">AFIO_EVCR_PIN_PX7</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 7 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="61" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaed7094c896c9284edbb2267a74e148a6" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_8</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga08e94e6d3f024d5cb985c77c726ffc2b" kindref="member">AFIO_EVCR_PIN_PX8</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="62" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gacb2d76e8d7197ff9f65634034cb47ca1" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_9</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga02d0b8d6c4a728bb5149eae7f21bb1df" kindref="member">AFIO_EVCR_PIN_PX9</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 9 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="63" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga2890d890882a1d2c32fc2a4d47117bfb" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_10</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga1b6f2cc7e47f2a227bab6776f6e56744" kindref="member">AFIO_EVCR_PIN_PX10</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 10 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="64" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaf36cec461fe61b6060137724f6ad3148" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_11</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga4bbd72a869b61e23731639501e73102e" kindref="member">AFIO_EVCR_PIN_PX11</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 11 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="65" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga736b25c4c65a79dc259a6b7592c46d2a" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_12</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga6f9a1344125a2fad10cf831cafcb6dd8" kindref="member">AFIO_EVCR_PIN_PX12</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 12 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="66" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga990d0bda08e8837940fe244359e04da9" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_13</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga62196f78a13b996b3bcd998ce80998b6" kindref="member">AFIO_EVCR_PIN_PX13</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 13 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="67" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga32432319feb5904520558d1ed5c74c81" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_14</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gadb3233497ca8b69f9ee6be98ac1a5643" kindref="member">AFIO_EVCR_PIN_PX14</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 14 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="68" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga09637caad04c7fb41cf804489e5d6037" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PIN_15</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gab02338e562caabecfd265882afbccfe9" kindref="member">AFIO_EVCR_PIN_PX15</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on pin 15 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="69" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaeb2811674e9647b67a4abd1fe4a117fe" prot="public" static="no">
+        <name>IS_AFIO_EVENTOUT_PIN</name>
+        <param><defname>__PIN__</defname></param>
+        <initializer>                                       (((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga1caf81a3226da92f477e6fd15cfef16b" kindref="member">AFIO_EVENTOUT_PIN_0</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae2d151889f9f4b65ce6547aa80dca582" kindref="member">AFIO_EVENTOUT_PIN_1</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga20d5efc2e37b380ba6acab899fac25ec" kindref="member">AFIO_EVENTOUT_PIN_2</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gac6eb85f0eff1513ba213dc9d1c0af35b" kindref="member">AFIO_EVENTOUT_PIN_3</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa2a1db689ed0a7b46f5ed773a2e54d54" kindref="member">AFIO_EVENTOUT_PIN_4</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa96afd6502080bd3d6cd68e6e06e7bfa" kindref="member">AFIO_EVENTOUT_PIN_5</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae9b4ddb2c1bd1c343d396983148f1522" kindref="member">AFIO_EVENTOUT_PIN_6</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga999cd9c3ce9821b73e7610f11da7258f" kindref="member">AFIO_EVENTOUT_PIN_7</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaed7094c896c9284edbb2267a74e148a6" kindref="member">AFIO_EVENTOUT_PIN_8</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gacb2d76e8d7197ff9f65634034cb47ca1" kindref="member">AFIO_EVENTOUT_PIN_9</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga2890d890882a1d2c32fc2a4d47117bfb" kindref="member">AFIO_EVENTOUT_PIN_10</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaf36cec461fe61b6060137724f6ad3148" kindref="member">AFIO_EVENTOUT_PIN_11</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga736b25c4c65a79dc259a6b7592c46d2a" kindref="member">AFIO_EVENTOUT_PIN_12</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga990d0bda08e8837940fe244359e04da9" kindref="member">AFIO_EVENTOUT_PIN_13</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga32432319feb5904520558d1ed5c74c81" kindref="member">AFIO_EVENTOUT_PIN_14</ref>) || \
+                                       ((__PIN__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga09637caad04c7fb41cf804489e5d6037" kindref="member">AFIO_EVENTOUT_PIN_15</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="71" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga923160935b624e039735fb52e0e3f848" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PORT_A</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga4a85c353b94b1e9d22dd67088b1ac4d3" kindref="member">AFIO_EVCR_PORT_PA</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on port A </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="95" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga6fcb0bbd79fa6194d268c8eda55637b8" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PORT_B</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gad2d0d2c1f1c046bdf055bb99465592ef" kindref="member">AFIO_EVCR_PORT_PB</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on port B </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="96" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1gafed308a7c2b954b28e89b11e4087a6ea" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PORT_C</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga15241a60ec90040d0bb2d1b8c4c6b77f" kindref="member">AFIO_EVCR_PORT_PC</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on port C </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="97" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1gac7639a5273dd5f7be582b41b5d5e71b6" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PORT_D</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga45b10610230c14d7cc6a7fe15dabfc7d" kindref="member">AFIO_EVCR_PORT_PD</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on port D </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="98" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga0aeff714f7ceb462a26915788adddefb" prot="public" static="no">
+        <name>AFIO_EVENTOUT_PORT_E</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gab4931a15c9784e7b7d0e678271cba75a" kindref="member">AFIO_EVCR_PORT_PE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EVENTOUT on port E </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="99" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga9e6c9f1f73af1b6f579f050bd00cc43b" prot="public" static="no">
+        <name>IS_AFIO_EVENTOUT_PORT</name>
+        <param><defname>__PORT__</defname></param>
+        <initializer>                                         (((__PORT__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga923160935b624e039735fb52e0e3f848" kindref="member">AFIO_EVENTOUT_PORT_A</ref>) || \
+                                         ((__PORT__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga6fcb0bbd79fa6194d268c8eda55637b8" kindref="member">AFIO_EVENTOUT_PORT_B</ref>) || \
+                                         ((__PORT__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1gafed308a7c2b954b28e89b11e4087a6ea" kindref="member">AFIO_EVENTOUT_PORT_C</ref>) || \
+                                         ((__PORT__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1gac7639a5273dd5f7be582b41b5d5e71b6" kindref="member">AFIO_EVENTOUT_PORT_D</ref>) || \
+                                         ((__PORT__) == <ref refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga0aeff714f7ceb462a26915788adddefb" kindref="member">AFIO_EVENTOUT_PORT_E</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="101" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gab8c66251f12d7d4b574b1257c73b5c70" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_SPI1_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_ENABLE(<ref refid="group___peripheral___registers___bits___definition_1ga1ffdcd52f5810284a6306fc57daa8f1d" kindref="member">AFIO_MAPR_SPI1_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of SPI1 alternate function NSS, SCK, MISO and MOSI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: Remap (NSS/PA15, SCK/PB3, MISO/PB4, MOSI/PB5) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="124" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga8fceca9b4e97561de6d1a9b6deb28550" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_SPI1_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_DISABLE(<ref refid="group___peripheral___registers___bits___definition_1ga1ffdcd52f5810284a6306fc57daa8f1d" kindref="member">AFIO_MAPR_SPI1_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Disable the remapping of SPI1 alternate function NSS, SCK, MISO and MOSI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: No remap (NSS/PA4, SCK/PA5, MISO/PA6, MOSI/PA7) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="131" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaa792242eacda833df7db47017594e3ea" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_I2C1_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_ENABLE(<ref refid="group___peripheral___registers___bits___definition_1gaede0612a4efdce1e60bc23f6ec00d29a" kindref="member">AFIO_MAPR_I2C1_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of I2C1 alternate function SCL and SDA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: Remap (SCL/PB8, SDA/PB9) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="138" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaec219c2e592b079df38e12bb793de5e5" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_I2C1_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_DISABLE(<ref refid="group___peripheral___registers___bits___definition_1gaede0612a4efdce1e60bc23f6ec00d29a" kindref="member">AFIO_MAPR_I2C1_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Disable the remapping of I2C1 alternate function SCL and SDA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: No remap (SCL/PB6, SDA/PB7) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="145" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga19df3a1377356ba59a8abc04bcf2b859" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_USART1_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_ENABLE(<ref refid="group___peripheral___registers___bits___definition_1ga87539744f607522422b3d5db6d94bd41" kindref="member">AFIO_MAPR_USART1_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of USART1 alternate function TX and RX. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: Remap (TX/PB6, RX/PB7) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="152" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga5fd5cd3f1f121c8c310f6b1a390b7b51" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_USART1_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_DISABLE(<ref refid="group___peripheral___registers___bits___definition_1ga87539744f607522422b3d5db6d94bd41" kindref="member">AFIO_MAPR_USART1_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Disable the remapping of USART1 alternate function TX and RX. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: No remap (TX/PA9, RX/PA10) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="159" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaed981d1451f0a7514a57d9d7a90fba04" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_USART2_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_ENABLE(<ref refid="group___peripheral___registers___bits___definition_1ga439c8d7670cfef18450ff624d19ec525" kindref="member">AFIO_MAPR_USART2_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of USART2 alternate function CTS, RTS, CK, TX and RX. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: Remap (CTS/PD3, RTS/PD4, TX/PD5, RX/PD6, CK/PD7) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="166" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaf72cbf8c2a79923d868d1203b8c133f4" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_USART2_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_DISABLE(<ref refid="group___peripheral___registers___bits___definition_1ga439c8d7670cfef18450ff624d19ec525" kindref="member">AFIO_MAPR_USART2_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Disable the remapping of USART2 alternate function CTS, RTS, CK, TX and RX. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: No remap (CTS/PA0, RTS/PA1, TX/PA2, RX/PA3, CK/PA4) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="173" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaed50d157afc9236c3f6cab368e6fa29b" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_USART3_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1ga7c76f3731fc0fc0004c4d294bc3db3dd" kindref="member">AFIO_MAPR_USART3_REMAP_FULLREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1ga7c76f3731fc0fc0004c4d294bc3db3dd" kindref="member">AFIO_MAPR_USART3_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of USART3 alternate function CTS, RTS, CK, TX and RX. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: Full remap (TX/PD8, RX/PD9, CK/PD10, CTS/PD11, RTS/PD12) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="180" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga176ae8487c80d60664759a295961de31" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_USART3_PARTIAL</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1ga5c6210874efbd3f2b6a56993ecbf6a28" kindref="member">AFIO_MAPR_USART3_REMAP_PARTIALREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1ga7c76f3731fc0fc0004c4d294bc3db3dd" kindref="member">AFIO_MAPR_USART3_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of USART3 alternate function CTS, RTS, CK, TX and RX. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>PARTIAL: Partial remap (TX/PC10, RX/PC11, CK/PC12, CTS/PB13, RTS/PB14) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="187" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga4c86c7456cb7eda460d258245bb2e446" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_USART3_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1ga3073257d802e1b73df5185ea8d463151" kindref="member">AFIO_MAPR_USART3_REMAP_NOREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1ga7c76f3731fc0fc0004c4d294bc3db3dd" kindref="member">AFIO_MAPR_USART3_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Disable the remapping of USART3 alternate function CTS, RTS, CK, TX and RX. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: No remap (TX/PB10, RX/PB11, CK/PB12, CTS/PB13, RTS/PB14) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="194" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaef7a1246d22973634c293094a2418200" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM1_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1gaa097f744cd0b50f5c89f41d05ae36592" kindref="member">AFIO_MAPR_TIM1_REMAP_FULLREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1gaa097f744cd0b50f5c89f41d05ae36592" kindref="member">AFIO_MAPR_TIM1_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of TIM1 alternate function channels 1 to 4, 1N to 3N, external trigger (ETR) and Break input (BKIN) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: Full remap (ETR/PE7, CH1/PE9, CH2/PE11, CH3/PE13, CH4/PE14, BKIN/PE15, CH1N/PE8, CH2N/PE10, CH3N/PE12) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="201" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga4e4fec9496a03c10c94f0f4e8d940b08" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM1_PARTIAL</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1gabf3ca4f106bd35297b1d760b6cbd2408" kindref="member">AFIO_MAPR_TIM1_REMAP_PARTIALREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1gaa097f744cd0b50f5c89f41d05ae36592" kindref="member">AFIO_MAPR_TIM1_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of TIM1 alternate function channels 1 to 4, 1N to 3N, external trigger (ETR) and Break input (BKIN) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>PARTIAL: Partial remap (ETR/PA12, CH1/PA8, CH2/PA9, CH3/PA10, CH4/PA11, BKIN/PA6, CH1N/PA7, CH2N/PB0, CH3N/PB1) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="208" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga0d5d38cb3fbb600d76fdd4625e3d700c" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM1_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1ga1be8a2b8fa5d1c3c77709c888ce496fa" kindref="member">AFIO_MAPR_TIM1_REMAP_NOREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1gaa097f744cd0b50f5c89f41d05ae36592" kindref="member">AFIO_MAPR_TIM1_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Disable the remapping of TIM1 alternate function channels 1 to 4, 1N to 3N, external trigger (ETR) and Break input (BKIN) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: No remap (ETR/PA12, CH1/PA8, CH2/PA9, CH3/PA10, CH4/PA11, BKIN/PB12, CH1N/PB13, CH2N/PB14, CH3N/PB15) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="215" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gad5ea791926cf2e879de0fd08cb129775" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM2_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1ga5a4088220b588dea4f70aae5211d6691" kindref="member">AFIO_MAPR_TIM2_REMAP_FULLREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1ga5a4088220b588dea4f70aae5211d6691" kindref="member">AFIO_MAPR_TIM2_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of TIM2 alternate function channels 1 to 4 and external trigger (ETR) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: Full remap (CH1/ETR/PA15, CH2/PB3, CH3/PB10, CH4/PB11) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="222" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gade6fd88cc370467cff853b404978190a" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM2_PARTIAL_2</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1ga45e2ec28f1d1a368540c5c94515663df" kindref="member">AFIO_MAPR_TIM2_REMAP_PARTIALREMAP2</ref>, <ref refid="group___peripheral___registers___bits___definition_1ga5a4088220b588dea4f70aae5211d6691" kindref="member">AFIO_MAPR_TIM2_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of TIM2 alternate function channels 1 to 4 and external trigger (ETR) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>PARTIAL_2: Partial remap (CH1/ETR/PA0, CH2/PA1, CH3/PB10, CH4/PB11) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="229" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga3ffee1bceaa141be048b7f60c11c0943" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM2_PARTIAL_1</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1ga67298a8506ff100041c5a2a8e4d6658a" kindref="member">AFIO_MAPR_TIM2_REMAP_PARTIALREMAP1</ref>, <ref refid="group___peripheral___registers___bits___definition_1ga5a4088220b588dea4f70aae5211d6691" kindref="member">AFIO_MAPR_TIM2_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of TIM2 alternate function channels 1 to 4 and external trigger (ETR) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>PARTIAL_1: Partial remap (CH1/ETR/PA15, CH2/PB3, CH3/PA2, CH4/PA3) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="236" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga8bf8cf84fc099076c3ec6d7d31dd8abc" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM2_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1ga0d1037409791928fe7dcd1e683901edc" kindref="member">AFIO_MAPR_TIM2_REMAP_NOREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1ga5a4088220b588dea4f70aae5211d6691" kindref="member">AFIO_MAPR_TIM2_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Disable the remapping of TIM2 alternate function channels 1 to 4 and external trigger (ETR) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: No remap (CH1/ETR/PA0, CH2/PA1, CH3/PA2, CH4/PA3) </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="243" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga276fb7e4041131b65c5bf293180dd052" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM3_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1gac236354751e4aaa674e87c886e6bbc71" kindref="member">AFIO_MAPR_TIM3_REMAP_FULLREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1gac236354751e4aaa674e87c886e6bbc71" kindref="member">AFIO_MAPR_TIM3_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of TIM3 alternate function channels 1 to 4. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: Full remap (CH1/PC6, CH2/PC7, CH3/PC8, CH4/PC9) </para>
+</simplesect>
+<simplesect kind="note"><para>TIM3_ETR on PE0 is not re-mapped. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="251" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga207839eb8e1b063b22c2e579faec4183" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM3_PARTIAL</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1gafaf86fec6b88d4db406144faa3eef76c" kindref="member">AFIO_MAPR_TIM3_REMAP_PARTIALREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1gac236354751e4aaa674e87c886e6bbc71" kindref="member">AFIO_MAPR_TIM3_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of TIM3 alternate function channels 1 to 4. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>PARTIAL: Partial remap (CH1/PB4, CH2/PB5, CH3/PB0, CH4/PB1) </para>
+</simplesect>
+<simplesect kind="note"><para>TIM3_ETR on PE0 is not re-mapped. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="259" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gade7c509d371e710403340173b3fbfecd" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM3_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_PARTIAL(<ref refid="group___peripheral___registers___bits___definition_1ga8ef4aa05c5514947de224ca62a438e38" kindref="member">AFIO_MAPR_TIM3_REMAP_NOREMAP</ref>, <ref refid="group___peripheral___registers___bits___definition_1gac236354751e4aaa674e87c886e6bbc71" kindref="member">AFIO_MAPR_TIM3_REMAP_FULLREMAP</ref>)</initializer>
+        <briefdescription>
+<para>Disable the remapping of TIM3 alternate function channels 1 to 4. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: No remap (CH1/PA6, CH2/PA7, CH3/PB0, CH4/PB1) </para>
+</simplesect>
+<simplesect kind="note"><para>TIM3_ETR on PE0 is not re-mapped. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="267" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga9e9a7e0d5132518d81e0316895d4f410" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM4_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_ENABLE(<ref refid="group___peripheral___registers___bits___definition_1ga31d7ee2e14938f50f559a79fc514f277" kindref="member">AFIO_MAPR_TIM4_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of TIM4 alternate function channels 1 to 4. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: Full remap (TIM4_CH1/PD12, TIM4_CH2/PD13, TIM4_CH3/PD14, TIM4_CH4/PD15) </para>
+</simplesect>
+<simplesect kind="note"><para>TIM4_ETR on PE0 is not re-mapped. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="275" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gae59894a1c15940479146c77596176dbe" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_TIM4_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_DISABLE(<ref refid="group___peripheral___registers___bits___definition_1ga31d7ee2e14938f50f559a79fc514f277" kindref="member">AFIO_MAPR_TIM4_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Disable the remapping of TIM4 alternate function channels 1 to 4. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: No remap (TIM4_CH1/PB6, TIM4_CH2/PB7, TIM4_CH3/PB8, TIM4_CH4/PB9) </para>
+</simplesect>
+<simplesect kind="note"><para>TIM4_ETR on PE0 is not re-mapped. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="283" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga556c166ea45a713875b6a179b101fa14" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_PD01_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_ENABLE(<ref refid="group___peripheral___registers___bits___definition_1ga3b8e420451eba867183a37b1e0f82112" kindref="member">AFIO_MAPR_PD01_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Enable the remapping of PD0 and PD1. When the HSE oscillator is not used (application running on internal 8 MHz RC) PD0 and PD1 can be mapped on OSC_IN and OSC_OUT. This is available only on 36, 48 and 64 pins packages (PD0 and PD1 are available on 100-pin and 144-pin packages, no need for remapping). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: PD0 remapped on OSC_IN, PD1 remapped on OSC_OUT. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="318" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gab56e83c0681be2899477e8d9376100ab" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_PD01_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_DISABLE(<ref refid="group___peripheral___registers___bits___definition_1ga3b8e420451eba867183a37b1e0f82112" kindref="member">AFIO_MAPR_PD01_REMAP</ref>)</initializer>
+        <briefdescription>
+<para>Disable the remapping of PD0 and PD1. When the HSE oscillator is not used (application running on internal 8 MHz RC) PD0 and PD1 can be mapped on OSC_IN and OSC_OUT. This is available only on 36, 48 and 64 pins packages (PD0 and PD1 are available on 100-pin and 144-pin packages, no need for remapping). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: No remapping of PD0 and PD1 </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="328" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gae6a3cd6210ca82af1b21a56b46e40835" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_ADC1_ETRGINJ_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_ENABLE(AFIO_MAPR_ADC1_ETRGINJ_REMAP)</initializer>
+        <briefdescription>
+<para>Enable the remapping of ADC1_ETRGINJ (ADC 1 External trigger injected conversion). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: ADC1 External Event injected conversion is connected to TIM8 Channel4. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="408" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gabfe11a5ef987530e111e8e20a11e5be2" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_ADC1_ETRGINJ_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_DISABLE(AFIO_MAPR_ADC1_ETRGINJ_REMAP)</initializer>
+        <briefdescription>
+<para>Disable the remapping of ADC1_ETRGINJ (ADC 1 External trigger injected conversion). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: ADC1 External trigger injected conversion is connected to EXTI15 </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="415" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gad8af529aefe269d0bd67b9c4095bfed8" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_ADC1_ETRGREG_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_ENABLE(AFIO_MAPR_ADC1_ETRGREG_REMAP)</initializer>
+        <briefdescription>
+<para>Enable the remapping of ADC1_ETRGREG (ADC 1 External trigger regular conversion). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: ADC1 External Event regular conversion is connected to TIM8 TRG0. </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="422" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gac48e8a99b97904542ff0b1b9fb7ad8f5" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_ADC1_ETRGREG_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_REMAP_DISABLE(AFIO_MAPR_ADC1_ETRGREG_REMAP)</initializer>
+        <briefdescription>
+<para>Disable the remapping of ADC1_ETRGREG (ADC 1 External trigger regular conversion). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: ADC1 External trigger regular conversion is connected to EXTI11 </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="429" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga9e3b30234057b920408944eecfbd1e40" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_SWJ_ENABLE</name>
+        <param></param>
+        <initializer>AFIO_DBGAFR_CONFIG(<ref refid="group___peripheral___registers___bits___definition_1gaa25695b91d03cf103d3025d959f466d8" kindref="member">AFIO_MAPR_SWJ_CFG_RESET</ref>)</initializer>
+        <briefdescription>
+<para>Enable the Serial wire JTAG configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ENABLE: Full SWJ (JTAG-DP + SW-DP): Reset State </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="470" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="470" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga1febef38fae374565df1b5dfdfd8c906" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_SWJ_NONJTRST</name>
+        <param></param>
+        <initializer>AFIO_DBGAFR_CONFIG(<ref refid="group___peripheral___registers___bits___definition_1gaff8c11cc7f50c04dc5f5f4913030d67b" kindref="member">AFIO_MAPR_SWJ_CFG_NOJNTRST</ref>)</initializer>
+        <briefdescription>
+<para>Enable the Serial wire JTAG configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>NONJTRST: Full SWJ (JTAG-DP + SW-DP) but without NJTRST </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="477" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="477" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga31fc766920d61e6bb176500c0a4077e5" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_SWJ_NOJTAG</name>
+        <param></param>
+        <initializer>AFIO_DBGAFR_CONFIG(<ref refid="group___peripheral___registers___bits___definition_1gad40f243c5ded60dbba9853f5e3c32e04" kindref="member">AFIO_MAPR_SWJ_CFG_JTAGDISABLE</ref>)</initializer>
+        <briefdescription>
+<para>Enable the Serial wire JTAG configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>NOJTAG: JTAG-DP Disabled and SW-DP Enabled </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="485" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga3225ff38abac044926aac7d6f1c84168" prot="public" static="no">
+        <name>__HAL_AFIO_REMAP_SWJ_DISABLE</name>
+        <param></param>
+        <initializer>AFIO_DBGAFR_CONFIG(<ref refid="group___peripheral___registers___bits___definition_1ga23584e8819d890dc3de4ffa54146898e" kindref="member">AFIO_MAPR_SWJ_CFG_DISABLE</ref>)</initializer>
+        <briefdescription>
+<para>Disable the Serial wire JTAG configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DISABLE: JTAG-DP Disabled and SW-DP Disabled </para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="492" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="492" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___private___macros_1gaa73aaa47d1d254916b6ef8266491f275" prot="public" static="no">
+        <name>AFIO_REMAP_ENABLE</name>
+        <param><defname>REMAP_PIN</defname></param>
+        <initializer>                                               do{ uint32_t tmpreg = AFIO-&gt;MAPR; \
+                                               tmpreg |= <ref refid="group___peripheral___registers___bits___definition_1ga1ab89d25a214b239fd90eb466776d4ec" kindref="member">AFIO_MAPR_SWJ_CFG</ref>;  \
+                                               tmpreg |= REMAP_PIN;          \
+                                               AFIO-&gt;MAPR = tmpreg;          \
+                                               }while(0u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="829" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="829" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___private___macros_1ga56995d853e049cab567ff2879a419e08" prot="public" static="no">
+        <name>AFIO_REMAP_DISABLE</name>
+        <param><defname>REMAP_PIN</defname></param>
+        <initializer>                                               do{ uint32_t tmpreg = AFIO-&gt;MAPR;  \
+                                               tmpreg |= <ref refid="group___peripheral___registers___bits___definition_1ga1ab89d25a214b239fd90eb466776d4ec" kindref="member">AFIO_MAPR_SWJ_CFG</ref>;   \
+                                               tmpreg &amp;= ~REMAP_PIN;          \
+                                               AFIO-&gt;MAPR = tmpreg;           \
+                                               }while(0u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="835" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="835" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___private___macros_1gaf18e379f5f94f7fb561ec60894a2c2d2" prot="public" static="no">
+        <name>AFIO_REMAP_PARTIAL</name>
+        <param><defname>REMAP_PIN</defname></param>
+        <param><defname>REMAP_PIN_MASK</defname></param>
+        <initializer>                                                          do{ uint32_t tmpreg = AFIO-&gt;MAPR; \
+                                                          tmpreg &amp;= ~REMAP_PIN_MASK;    \
+                                                          tmpreg |= <ref refid="group___peripheral___registers___bits___definition_1ga1ab89d25a214b239fd90eb466776d4ec" kindref="member">AFIO_MAPR_SWJ_CFG</ref>;  \
+                                                          tmpreg |= REMAP_PIN;          \
+                                                          AFIO-&gt;MAPR = tmpreg;          \
+                                                          }while(0u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="841" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="841" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o_ex___private___macros_1gab222d269617b3d9e8753d636c8fc5e3a" prot="public" static="no">
+        <name>AFIO_DBGAFR_CONFIG</name>
+        <param><defname>DBGAFR_SWJCFG</defname></param>
+        <initializer>                                               do{ uint32_t tmpreg = AFIO-&gt;MAPR;     \
+                                               tmpreg &amp;= ~<ref refid="group___peripheral___registers___bits___definition_1ga0c997a67567a035937dc9e5ce6ad9424" kindref="member">AFIO_MAPR_SWJ_CFG_Msk</ref>; \
+                                               tmpreg |= DBGAFR_SWJCFG;          \
+                                               AFIO-&gt;MAPR = tmpreg;              \
+                                               }while(0u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="848" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" bodystart="848" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___g_p_i_o_ex___exported___functions___group1_1ga9fbe96e2961dc0e5014e47d97de15cc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_GPIOEx_ConfigEventout</definition>
+        <argsstring>(uint32_t GPIO_PortSource, uint32_t GPIO_PinSource)</argsstring>
+        <name>HAL_GPIOEx_ConfigEventout</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>GPIO_PortSource</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>GPIO_PinSource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="868" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" declline="868" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___g_p_i_o_ex___exported___functions___group1_1ga599b3984a9334d6b55bfb6a26aa8cf51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_GPIOEx_EnableEventout</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GPIOEx_EnableEventout</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="869" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" declline="869" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___g_p_i_o_ex___exported___functions___group1_1gab794bd6eb13e63f1c59f222e5c39d8ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_GPIOEx_DisableEventout</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_GPIOEx_DisableEventout</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" line="870" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" declline="870" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of GPIO HAL Extension module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>MCD Application Team</para>
+</simplesect>
+<simplesect kind="attention"><para></para>
+</simplesect>
+<heading level="2"><center><copy/> Copyright (c) 2016 STMicroelectronics. All rights reserved.</center></heading>
+</para>
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STM32F1xx_HAL_GPIO_EX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STM32F1xx_HAL_GPIO_EX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stm32f1xx__hal__def_8h" kindref="compound">stm32f1xx_hal_def.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>types<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>constants<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga1caf81a3226da92f477e6fd15cfef16b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_0<sp/><sp/>AFIO_EVCR_PIN_PX0<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae2d151889f9f4b65ce6547aa80dca582" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_1<sp/><sp/>AFIO_EVCR_PIN_PX1<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga20d5efc2e37b380ba6acab899fac25ec" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_2<sp/><sp/>AFIO_EVCR_PIN_PX2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gac6eb85f0eff1513ba213dc9d1c0af35b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_3<sp/><sp/>AFIO_EVCR_PIN_PX3<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa2a1db689ed0a7b46f5ed773a2e54d54" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_4<sp/><sp/>AFIO_EVCR_PIN_PX4<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaa96afd6502080bd3d6cd68e6e06e7bfa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_5<sp/><sp/>AFIO_EVCR_PIN_PX5<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gae9b4ddb2c1bd1c343d396983148f1522" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_6<sp/><sp/>AFIO_EVCR_PIN_PX6<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga999cd9c3ce9821b73e7610f11da7258f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_7<sp/><sp/>AFIO_EVCR_PIN_PX7<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaed7094c896c9284edbb2267a74e148a6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_8<sp/><sp/>AFIO_EVCR_PIN_PX8<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gacb2d76e8d7197ff9f65634034cb47ca1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_9<sp/><sp/>AFIO_EVCR_PIN_PX9<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga2890d890882a1d2c32fc2a4d47117bfb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_10<sp/>AFIO_EVCR_PIN_PX10<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1gaf36cec461fe61b6060137724f6ad3148" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_11<sp/>AFIO_EVCR_PIN_PX11<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga736b25c4c65a79dc259a6b7592c46d2a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_12<sp/>AFIO_EVCR_PIN_PX12<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga990d0bda08e8837940fe244359e04da9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_13<sp/>AFIO_EVCR_PIN_PX13<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga32432319feb5904520558d1ed5c74c81" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_14<sp/>AFIO_EVCR_PIN_PX14<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_i_n_1ga09637caad04c7fb41cf804489e5d6037" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PIN_15<sp/>AFIO_EVCR_PIN_PX15<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_AFIO_EVENTOUT_PIN(__PIN__)<sp/>(((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_0)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_1)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_2)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_3)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_4)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_5)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_6)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_7)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_8)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_9)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_10)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_11)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_12)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_13)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_14)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>==<sp/>AFIO_EVENTOUT_PIN_15))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga923160935b624e039735fb52e0e3f848" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PORT_A<sp/>AFIO_EVCR_PORT_PA<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga6fcb0bbd79fa6194d268c8eda55637b8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PORT_B<sp/>AFIO_EVCR_PORT_PB<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1gafed308a7c2b954b28e89b11e4087a6ea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PORT_C<sp/>AFIO_EVCR_PORT_PC<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1gac7639a5273dd5f7be582b41b5d5e71b6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PORT_D<sp/>AFIO_EVCR_PORT_PD<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t___p_o_r_t_1ga0aeff714f7ceb462a26915788adddefb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_EVENTOUT_PORT_E<sp/>AFIO_EVCR_PORT_PE<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_AFIO_EVENTOUT_PORT(__PORT__)<sp/>(((__PORT__)<sp/>==<sp/>AFIO_EVENTOUT_PORT_A)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>AFIO_EVENTOUT_PORT_B)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>AFIO_EVENTOUT_PORT_C)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>AFIO_EVENTOUT_PORT_D)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>AFIO_EVENTOUT_PORT_E))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gab8c66251f12d7d4b574b1257c73b5c70" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_SPI1_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_SPI1_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga8fceca9b4e97561de6d1a9b6deb28550" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_SPI1_DISABLE()<sp/><sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_SPI1_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaa792242eacda833df7db47017594e3ea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_I2C1_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_I2C1_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaec219c2e592b079df38e12bb793de5e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_I2C1_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_I2C1_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga19df3a1377356ba59a8abc04bcf2b859" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_USART1_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_USART1_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga5fd5cd3f1f121c8c310f6b1a390b7b51" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_USART1_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_USART1_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaed981d1451f0a7514a57d9d7a90fba04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_USART2_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_USART2_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaf72cbf8c2a79923d868d1203b8c133f4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_USART2_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_USART2_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaed50d157afc9236c3f6cab368e6fa29b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_USART3_ENABLE()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_USART3_REMAP_FULLREMAP,<sp/>AFIO_MAPR_USART3_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga176ae8487c80d60664759a295961de31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_USART3_PARTIAL()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_USART3_REMAP_PARTIALREMAP,<sp/>AFIO_MAPR_USART3_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga4c86c7456cb7eda460d258245bb2e446" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_USART3_DISABLE()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_USART3_REMAP_NOREMAP,<sp/>AFIO_MAPR_USART3_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gaef7a1246d22973634c293094a2418200" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM1_ENABLE()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_TIM1_REMAP_FULLREMAP,<sp/>AFIO_MAPR_TIM1_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga4e4fec9496a03c10c94f0f4e8d940b08" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM1_PARTIAL()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_TIM1_REMAP_PARTIALREMAP,<sp/>AFIO_MAPR_TIM1_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga0d5d38cb3fbb600d76fdd4625e3d700c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM1_DISABLE()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_TIM1_REMAP_NOREMAP,<sp/>AFIO_MAPR_TIM1_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gad5ea791926cf2e879de0fd08cb129775" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM2_ENABLE()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_TIM2_REMAP_FULLREMAP,<sp/>AFIO_MAPR_TIM2_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gade6fd88cc370467cff853b404978190a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM2_PARTIAL_2()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_TIM2_REMAP_PARTIALREMAP2,<sp/>AFIO_MAPR_TIM2_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga3ffee1bceaa141be048b7f60c11c0943" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM2_PARTIAL_1()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_TIM2_REMAP_PARTIALREMAP1,<sp/>AFIO_MAPR_TIM2_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga8bf8cf84fc099076c3ec6d7d31dd8abc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM2_DISABLE()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_TIM2_REMAP_NOREMAP,<sp/>AFIO_MAPR_TIM2_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga276fb7e4041131b65c5bf293180dd052" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM3_ENABLE()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_TIM3_REMAP_FULLREMAP,<sp/>AFIO_MAPR_TIM3_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga207839eb8e1b063b22c2e579faec4183" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM3_PARTIAL()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_TIM3_REMAP_PARTIALREMAP,<sp/>AFIO_MAPR_TIM3_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gade7c509d371e710403340173b3fbfecd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM3_DISABLE()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_TIM3_REMAP_NOREMAP,<sp/>AFIO_MAPR_TIM3_REMAP_FULLREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga9e9a7e0d5132518d81e0316895d4f410" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM4_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_TIM4_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gae59894a1c15940479146c77596176dbe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM4_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_TIM4_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR_CAN_REMAP_REMAP1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_CAN1_1()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_CAN_REMAP_REMAP1,<sp/>AFIO_MAPR_CAN_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_CAN1_2()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_CAN_REMAP_REMAP2,<sp/>AFIO_MAPR_CAN_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_CAN1_3()<sp/><sp/>AFIO_REMAP_PARTIAL(AFIO_MAPR_CAN_REMAP_REMAP3,<sp/>AFIO_MAPR_CAN_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga556c166ea45a713875b6a179b101fa14" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_PD01_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_PD01_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gab56e83c0681be2899477e8d9376100ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_PD01_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_PD01_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR_TIM5CH4_IREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM5CH4_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_TIM5CH4_IREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM5CH4_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_TIM5CH4_IREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR_ETH_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_ETH_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_ETH_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_ETH_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_ETH_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR_CAN2_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_CAN2_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_CAN2_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_CAN2_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_CAN2_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR_MII_RMII_SEL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_ETH_RMII()<sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_MII_RMII_SEL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_ETH_MII()<sp/><sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_MII_RMII_SEL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gae6a3cd6210ca82af1b21a56b46e40835" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_ADC1_ETRGINJ_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_ADC1_ETRGINJ_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="415" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gabfe11a5ef987530e111e8e20a11e5be2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_ADC1_ETRGINJ_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_ADC1_ETRGINJ_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gad8af529aefe269d0bd67b9c4095bfed8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_ADC1_ETRGREG_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_ADC1_ETRGREG_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight></codeline>
+<codeline lineno="429" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1gac48e8a99b97904542ff0b1b9fb7ad8f5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_ADC1_ETRGREG_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_ADC1_ETRGREG_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR_ADC2_ETRGINJ_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_ADC2_ETRGINJ_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_ADC2_ETRGINJ_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_ADC2_ETRGINJ_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_ADC2_ETRGINJ_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>(AFIO_MAPR_ADC2_ETRGREG_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_ADC2_ETRGREG_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_ADC2_ETRGREG_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_ADC2_ETRGREG_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_ADC2_ETRGREG_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="normal"></highlight></codeline>
+<codeline lineno="470" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga9e3b30234057b920408944eecfbd1e40" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_SWJ_ENABLE()<sp/><sp/>AFIO_DBGAFR_CONFIG(AFIO_MAPR_SWJ_CFG_RESET)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight></codeline>
+<codeline lineno="477" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga1febef38fae374565df1b5dfdfd8c906" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_SWJ_NONJTRST()<sp/><sp/>AFIO_DBGAFR_CONFIG(AFIO_MAPR_SWJ_CFG_NOJNTRST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="485" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga31fc766920d61e6bb176500c0a4077e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_SWJ_NOJTAG()<sp/><sp/>AFIO_DBGAFR_CONFIG(AFIO_MAPR_SWJ_CFG_JTAGDISABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492" refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g_1ga3225ff38abac044926aac7d6f1c84168" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_SWJ_DISABLE()<sp/><sp/>AFIO_DBGAFR_CONFIG(AFIO_MAPR_SWJ_CFG_DISABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="493"><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR_SPI3_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_SPI3_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_SPI3_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_SPI3_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_SPI3_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR_TIM2ITR1_IREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_TIM2ITR1_TO_USB()<sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_TIM2ITR1_IREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_TIM2ITR1_TO_ETH()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_TIM2ITR1_IREMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight></codeline>
+<codeline lineno="532"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR_PTP_PPS_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="533"><highlight class="normal"></highlight></codeline>
+<codeline lineno="540"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_ETH_PTP_PPS_ENABLE()<sp/><sp/>AFIO_REMAP_ENABLE(AFIO_MAPR_PTP_PPS_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_ETH_PTP_PPS_DISABLE()<sp/>AFIO_REMAP_DISABLE(AFIO_MAPR_PTP_PPS_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM9_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM9_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM9_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="559"><highlight class="normal"></highlight></codeline>
+<codeline lineno="565"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM9_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM9_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"></highlight></codeline>
+<codeline lineno="568"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM10_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="569"><highlight class="normal"></highlight></codeline>
+<codeline lineno="575"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM10_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM10_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="576"><highlight class="normal"></highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM10_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM10_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="583"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="584"><highlight class="normal"></highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM11_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="591"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM11_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM11_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="592"><highlight class="normal"></highlight></codeline>
+<codeline lineno="598"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM11_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM11_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="599"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="600"><highlight class="normal"></highlight></codeline>
+<codeline lineno="601"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM13_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="602"><highlight class="normal"></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM13_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM13_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight></codeline>
+<codeline lineno="615"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM13_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM13_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="616"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="617"><highlight class="normal"></highlight></codeline>
+<codeline lineno="618"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM14_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="619"><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM14_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM14_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="626"><highlight class="normal"></highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM14_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM14_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="633"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="634"><highlight class="normal"></highlight></codeline>
+<codeline lineno="635"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_FSMC_NADV_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="636"><highlight class="normal"></highlight></codeline>
+<codeline lineno="642"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_FSMCNADV_DISCONNECTED()<sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_FSMC_NADV_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="643"><highlight class="normal"></highlight></codeline>
+<codeline lineno="649"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_FSMCNADV_CONNECTED()<sp/><sp/><sp/><sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_FSMC_NADV_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="650"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM15_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="653"><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM15_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM15_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM15_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM15_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="668"><highlight class="normal"></highlight></codeline>
+<codeline lineno="669"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM16_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="670"><highlight class="normal"></highlight></codeline>
+<codeline lineno="676"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM16_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM16_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="677"><highlight class="normal"></highlight></codeline>
+<codeline lineno="683"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM16_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM16_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="684"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="685"><highlight class="normal"></highlight></codeline>
+<codeline lineno="686"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM17_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="687"><highlight class="normal"></highlight></codeline>
+<codeline lineno="693"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM17_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM17_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="694"><highlight class="normal"></highlight></codeline>
+<codeline lineno="700"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM17_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM17_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="701"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_CEC_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"></highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_CEC_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_CEC_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="711"><highlight class="normal"></highlight></codeline>
+<codeline lineno="717"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_CEC_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_CEC_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="718"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"></highlight></codeline>
+<codeline lineno="720"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM1_DMA_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="721"><highlight class="normal"></highlight></codeline>
+<codeline lineno="727"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM1DMA_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM1_DMA_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="728"><highlight class="normal"></highlight></codeline>
+<codeline lineno="734"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM1DMA_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM1_DMA_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="735"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="736"><highlight class="normal"></highlight></codeline>
+<codeline lineno="737"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM67_DAC_DMA_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight></codeline>
+<codeline lineno="744"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM67DACDMA_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM67_DAC_DMA_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"></highlight></codeline>
+<codeline lineno="751"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM67DACDMA_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM67_DAC_DMA_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="752"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="753"><highlight class="normal"></highlight></codeline>
+<codeline lineno="754"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_TIM12_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="755"><highlight class="normal"></highlight></codeline>
+<codeline lineno="762"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM12_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM12_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="763"><highlight class="normal"></highlight></codeline>
+<codeline lineno="770"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_TIM12_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_TIM12_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="771"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="772"><highlight class="normal"></highlight></codeline>
+<codeline lineno="773"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(AFIO_MAPR2_MISC_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="774"><highlight class="normal"></highlight></codeline>
+<codeline lineno="785"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_MISC_ENABLE()<sp/><sp/>SET_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_MISC_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="786"><highlight class="normal"></highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_AFIO_REMAP_MISC_DISABLE()<sp/>CLEAR_BIT(AFIO-&gt;MAPR2,<sp/>AFIO_MAPR2_MISC_REMAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="798"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="799"><highlight class="normal"></highlight></codeline>
+<codeline lineno="811"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(STM32F101x6)<sp/>||<sp/>defined(STM32F102x6)<sp/>||<sp/>defined(STM32F102xB)<sp/>||<sp/>defined(STM32F103x6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="812"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_GET_INDEX(__GPIOx__)<sp/>(((__GPIOx__)<sp/>==<sp/>(GPIOA))?<sp/>0uL<sp/>:\</highlight></codeline>
+<codeline lineno="813"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__GPIOx__)<sp/>==<sp/>(GPIOB))?<sp/>1uL<sp/>:\</highlight></codeline>
+<codeline lineno="814"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__GPIOx__)<sp/>==<sp/>(GPIOC))?<sp/>2uL<sp/>:3uL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="815"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(STM32F100xB)<sp/>||<sp/>defined(STM32F101xB)<sp/>||<sp/>defined(STM32F103xB)<sp/>||<sp/>defined(STM32F105xC)<sp/>||<sp/>defined(STM32F107xC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="816"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_GET_INDEX(__GPIOx__)<sp/>(((__GPIOx__)<sp/>==<sp/>(GPIOA))?<sp/>0uL<sp/>:\</highlight></codeline>
+<codeline lineno="817"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__GPIOx__)<sp/>==<sp/>(GPIOB))?<sp/>1uL<sp/>:\</highlight></codeline>
+<codeline lineno="818"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__GPIOx__)<sp/>==<sp/>(GPIOC))?<sp/>2uL<sp/>:\</highlight></codeline>
+<codeline lineno="819"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__GPIOx__)<sp/>==<sp/>(GPIOD))?<sp/>3uL<sp/>:4uL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="820"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(STM32F100xE)<sp/>||<sp/>defined(STM32F101xE)<sp/>||<sp/>defined(STM32F101xG)<sp/>||<sp/>defined(STM32F103xE)<sp/>||<sp/>defined(STM32F103xG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="821"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_GET_INDEX(__GPIOx__)<sp/>(((__GPIOx__)<sp/>==<sp/>(GPIOA))?<sp/>0uL<sp/>:\</highlight></codeline>
+<codeline lineno="822"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__GPIOx__)<sp/>==<sp/>(GPIOB))?<sp/>1uL<sp/>:\</highlight></codeline>
+<codeline lineno="823"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__GPIOx__)<sp/>==<sp/>(GPIOC))?<sp/>2uL<sp/>:\</highlight></codeline>
+<codeline lineno="824"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__GPIOx__)<sp/>==<sp/>(GPIOD))?<sp/>3uL<sp/>:\</highlight></codeline>
+<codeline lineno="825"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__GPIOx__)<sp/>==<sp/>(GPIOE))?<sp/>4uL<sp/>:\</highlight></codeline>
+<codeline lineno="826"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__GPIOx__)<sp/>==<sp/>(GPIOF))?<sp/>5uL<sp/>:6uL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="827"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="828"><highlight class="normal"></highlight></codeline>
+<codeline lineno="829"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_REMAP_ENABLE(REMAP_PIN)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/>uint32_t<sp/>tmpreg<sp/>=<sp/>AFIO-&gt;MAPR;<sp/>\</highlight></codeline>
+<codeline lineno="830"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpreg<sp/>|=<sp/>AFIO_MAPR_SWJ_CFG;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="831"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpreg<sp/>|=<sp/>REMAP_PIN;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="832"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AFIO-&gt;MAPR<sp/>=<sp/>tmpreg;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="833"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="834"><highlight class="normal"></highlight></codeline>
+<codeline lineno="835"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_REMAP_DISABLE(REMAP_PIN)<sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/>uint32_t<sp/>tmpreg<sp/>=<sp/>AFIO-&gt;MAPR;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="836"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpreg<sp/>|=<sp/>AFIO_MAPR_SWJ_CFG;<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="837"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpreg<sp/>&amp;=<sp/>~REMAP_PIN;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="838"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AFIO-&gt;MAPR<sp/>=<sp/>tmpreg;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="839"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="840"><highlight class="normal"></highlight></codeline>
+<codeline lineno="841"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_REMAP_PARTIAL(REMAP_PIN,<sp/>REMAP_PIN_MASK)<sp/>do{<sp/>uint32_t<sp/>tmpreg<sp/>=<sp/>AFIO-&gt;MAPR;<sp/>\</highlight></codeline>
+<codeline lineno="842"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpreg<sp/>&amp;=<sp/>~REMAP_PIN_MASK;<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="843"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpreg<sp/>|=<sp/>AFIO_MAPR_SWJ_CFG;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="844"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpreg<sp/>|=<sp/>REMAP_PIN;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="845"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AFIO-&gt;MAPR<sp/>=<sp/>tmpreg;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="846"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="847"><highlight class="normal"></highlight></codeline>
+<codeline lineno="848"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFIO_DBGAFR_CONFIG(DBGAFR_SWJCFG)<sp/><sp/>do{<sp/>uint32_t<sp/>tmpreg<sp/>=<sp/>AFIO-&gt;MAPR;<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="849"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpreg<sp/>&amp;=<sp/>~AFIO_MAPR_SWJ_CFG_Msk;<sp/>\</highlight></codeline>
+<codeline lineno="850"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpreg<sp/>|=<sp/>DBGAFR_SWJCFG;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="851"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AFIO-&gt;MAPR<sp/>=<sp/>tmpreg;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="852"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="853"><highlight class="normal"></highlight></codeline>
+<codeline lineno="858"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>macro<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="859"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>functions<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="860"><highlight class="normal"></highlight></codeline>
+<codeline lineno="868"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_GPIOEx_ConfigEventout(uint32_t<sp/>GPIO_PortSource,<sp/>uint32_t<sp/>GPIO_PinSource);</highlight></codeline>
+<codeline lineno="869"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_GPIOEx_EnableEventout(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="870"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_GPIOEx_DisableEventout(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="871"><highlight class="normal"></highlight></codeline>
+<codeline lineno="888"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="889"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="890"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="891"><highlight class="normal"></highlight></codeline>
+<codeline lineno="892"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>STM32F1xx_HAL_GPIO_EX_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="893"><highlight class="normal"></highlight></codeline>
+<codeline lineno="894"><highlight class="normal"></highlight><highlight class="comment">/************************<sp/>(C)<sp/>COPYRIGHT<sp/>STMicroelectronics<sp/>*****END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h"/>
+  </compounddef>
+</doxygen>

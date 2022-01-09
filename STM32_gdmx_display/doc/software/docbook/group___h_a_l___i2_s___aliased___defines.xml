@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___i2_s___aliased___defines" xml:lang="en-US">
+<title>HAL I2S Aliased Defines maintained for legacy purpose</title>
+<indexterm><primary>HAL I2S Aliased Defines maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___i2_s___aliased___defines_1ga589f7a2d1f758277adfd369c2a3e4188"/>#define <emphasis role="strong">I2S_STANDARD_PHILLIPS</emphasis>   I2S_STANDARD_PHILIPS</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

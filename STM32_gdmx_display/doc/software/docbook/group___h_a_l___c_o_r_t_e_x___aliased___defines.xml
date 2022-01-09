@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___c_o_r_t_e_x___aliased___defines" xml:lang="en-US">
+<title>HAL CORTEX Aliased Defines maintained for legacy purpose</title>
+<indexterm><primary>HAL CORTEX Aliased Defines maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_r_t_e_x___aliased___defines_1gac1aca630ce4888aa3febf24db3d9ce45"/>#define <emphasis role="strong">__HAL_CORTEX_SYSTICKCLK_CONFIG</emphasis>   HAL_SYSTICK_CLKSourceConfig</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

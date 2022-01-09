@@ -1,0 +1,108 @@
+.TH "__DMA_HandleTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DMA_HandleTypeDef \- DMA handle Structure definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_dma\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBDMA_Channel_TypeDef\fP * \fBInstance\fP"
+.br
+.ti -1c
+.RI "\fBDMA_InitTypeDef\fP \fBInit\fP"
+.br
+.ti -1c
+.RI "\fBHAL_LockTypeDef\fP \fBLock\fP"
+.br
+.ti -1c
+.RI "\fBHAL_DMA_StateTypeDef\fP \fBState\fP"
+.br
+.ti -1c
+.RI "void * \fBParent\fP"
+.br
+.ti -1c
+.RI "void(* \fBXferCpltCallback\fP )(struct \fB__DMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void(* \fBXferHalfCpltCallback\fP )(struct \fB__DMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void(* \fBXferErrorCallback\fP )(struct \fB__DMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void(* \fBXferAbortCallback\fP )(struct \fB__DMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBErrorCode\fP"
+.br
+.ti -1c
+.RI "\fBDMA_TypeDef\fP * \fBDmaBaseAddress\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBChannelIndex\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+DMA handle Structure definition\&. 
+.SH "Field Documentation"
+.PP 
+.SS "uint32_t ChannelIndex"
+DMA Channel Index 
+.br
+ 
+.SS "\fBDMA_TypeDef\fP* DmaBaseAddress"
+DMA Channel Base Address 
+.br
+ 
+.SS "\fB__IO\fP uint32_t ErrorCode"
+DMA Error code 
+.br
+ 
+.SS "\fBDMA_InitTypeDef\fP Init"
+DMA communication parameters 
+.br
+ 
+.SS "\fBDMA_Channel_TypeDef\fP* Instance"
+Register base address 
+.br
+ 
+.SS "\fBHAL_LockTypeDef\fP Lock"
+DMA locking object 
+.br
+ 
+.SS "void* Parent"
+Parent object state 
+.br
+ 
+.SS "\fBHAL_DMA_StateTypeDef\fP State"
+DMA transfer state 
+.br
+ 
+.SS "void(* XferAbortCallback) (struct \fB__DMA_HandleTypeDef\fP *hdma)"
+DMA transfer abort callback 
+.br
+ 
+.SS "void(* XferCpltCallback) (struct \fB__DMA_HandleTypeDef\fP *hdma)"
+DMA transfer complete callback 
+.br
+ 
+.SS "void(* XferErrorCallback) (struct \fB__DMA_HandleTypeDef\fP *hdma)"
+DMA transfer error callback 
+.br
+ 
+.SS "void(* XferHalfCpltCallback) (struct \fB__DMA_HandleTypeDef\fP *hdma)"
+DMA Half transfer complete callback 
+.br
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

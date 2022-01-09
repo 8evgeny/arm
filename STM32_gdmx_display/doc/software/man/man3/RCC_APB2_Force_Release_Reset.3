@@ -1,0 +1,83 @@
+.TH "RCC_APB2_Force_Release_Reset" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_APB2_Force_Release_Reset \- APB2 Force Release Reset
+.PP
+ \- Force or release APB2 peripheral reset\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_APB2_FORCE_RESET\fP()   (RCC\->APB2RSTR = 0xFFFFFFFFU)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_AFIO_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (\fBRCC_APB2RSTR_AFIORST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (\fBRCC_APB2RSTR_IOPARST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (\fBRCC_APB2RSTR_IOPBRST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (\fBRCC_APB2RSTR_IOPCRST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOD_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (\fBRCC_APB2RSTR_IOPDRST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (\fBRCC_APB2RSTR_ADC1RST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (\fBRCC_APB2RSTR_TIM1RST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (\fBRCC_APB2RSTR_SPI1RST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (\fBRCC_APB2RSTR_USART1RST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_APB2_RELEASE_RESET\fP()   (RCC\->APB2RSTR = 0x00)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_AFIO_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(\fBRCC_APB2RSTR_AFIORST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(\fBRCC_APB2RSTR_IOPARST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(\fBRCC_APB2RSTR_IOPBRST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(\fBRCC_APB2RSTR_IOPCRST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOD_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(\fBRCC_APB2RSTR_IOPDRST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(\fBRCC_APB2RSTR_ADC1RST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(\fBRCC_APB2RSTR_TIM1RST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(\fBRCC_APB2RSTR_SPI1RST\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(\fBRCC_APB2RSTR_USART1RST\fP))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Force or release APB2 peripheral reset\&. 
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c___l_s_i___config" kind="group">
+    <compoundname>RCC_LSI_Config</compoundname>
+    <title>LSI Config</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___r_c_c___l_s_i___config_1gaa1710927d79a2032f87f039c4a27356a" prot="public" static="no">
+        <name>RCC_LSI_OFF</name>
+        <initializer>0x00000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LSI clock deactivation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="150" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___l_s_i___config_1ga6b364ac3500e60b6bff695ee518c87d6" prot="public" static="no">
+        <name>RCC_LSI_ON</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga803cbf97bda1ebaf9afee2a3c9f0851b" kindref="member">RCC_CSR_LSION</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LSI clock activation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="151" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

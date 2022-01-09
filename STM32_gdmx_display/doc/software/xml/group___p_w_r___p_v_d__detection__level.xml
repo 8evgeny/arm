@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___p_w_r___p_v_d__detection__level" kind="group">
+    <compoundname>PWR_PVD_detection_level</compoundname>
+    <title>PWR PVD detection level</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___p_w_r___p_v_d__detection__level_1gaddf4616a143ac3481f3043f2a4c21c18" prot="public" static="no">
+        <name>PWR_PVDLEVEL_0</name>
+        <initializer>PWR_CR_PLS_2V2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="85" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___p_v_d__detection__level_1ga06e55b20a8777594f1a91ee71fac1f79" prot="public" static="no">
+        <name>PWR_PVDLEVEL_1</name>
+        <initializer>PWR_CR_PLS_2V3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="86" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___p_v_d__detection__level_1gab26bb78650bbaef26ac9f9123c791cc7" prot="public" static="no">
+        <name>PWR_PVDLEVEL_2</name>
+        <initializer>PWR_CR_PLS_2V4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="87" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___p_v_d__detection__level_1ga7b751743b3e29c237e6a0e1d7bdd0503" prot="public" static="no">
+        <name>PWR_PVDLEVEL_3</name>
+        <initializer>PWR_CR_PLS_2V5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="88" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___p_v_d__detection__level_1ga03c0d3ae547deb1a51b8acafac101698" prot="public" static="no">
+        <name>PWR_PVDLEVEL_4</name>
+        <initializer>PWR_CR_PLS_2V6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="89" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___p_v_d__detection__level_1ga46a1476440945c2b6426b4973172f24b" prot="public" static="no">
+        <name>PWR_PVDLEVEL_5</name>
+        <initializer>PWR_CR_PLS_2V7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="90" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___p_v_d__detection__level_1ga5dda7d0ac3fd3d606666455ca3c8f537" prot="public" static="no">
+        <name>PWR_PVDLEVEL_6</name>
+        <initializer>PWR_CR_PLS_2V8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="91" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___p_w_r___p_v_d__detection__level_1ga2c5cd8dd26b13bdf0164c1f7596b4bfd" prot="public" static="no">
+        <name>PWR_PVDLEVEL_7</name>
+        <initializer>PWR_CR_PLS_2V9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="92" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

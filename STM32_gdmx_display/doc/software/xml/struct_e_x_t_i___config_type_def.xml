@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_e_x_t_i___config_type_def" kind="struct" language="C++" prot="public">
+    <compoundname>EXTI_ConfigTypeDef</compoundname>
+    <includes refid="stm32f1xx__hal__exti_8h" local="no">stm32f1xx_hal_exti.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_e_x_t_i___config_type_def_1a9c7a78e876a7dfb279a16029f915463f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Line</definition>
+        <argsstring></argsstring>
+        <name>Line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Exti line to be configured. This parameter can be a value of <ref refid="group___e_x_t_i___line" kindref="compound">EXTI Line</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="68" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_x_t_i___config_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Mode</definition>
+        <argsstring></argsstring>
+        <name>Mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Exit Mode to be configured for a core. This parameter can be a combination of <ref refid="group___e_x_t_i___mode" kindref="compound">EXTI Mode</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="70" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_x_t_i___config_type_def_1a73dd50a4d440463bf9e1cb02b72ac706" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Trigger</definition>
+        <argsstring></argsstring>
+        <name>Trigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Exti Trigger to be configured. This parameter can be a value of <ref refid="group___e_x_t_i___trigger" kindref="compound">EXTI Trigger</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="72" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_x_t_i___config_type_def_1ac9316e39886afa2fee1ff41a6e34c379" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t GPIOSel</definition>
+        <argsstring></argsstring>
+        <name>GPIOSel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Exti GPIO multiplexer selection to be configured. This parameter is only possible for line 0 to 15. It can be a value of <ref refid="group___e_x_t_i___g_p_i_o_sel" kindref="compound">EXTI GPIOSel</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="74" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>EXTI Configuration structure definition. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="66" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="67" bodyend="77"/>
+    <listofallmembers>
+      <member refid="struct_e_x_t_i___config_type_def_1ac9316e39886afa2fee1ff41a6e34c379" prot="public" virt="non-virtual"><scope>EXTI_ConfigTypeDef</scope><name>GPIOSel</name></member>
+      <member refid="struct_e_x_t_i___config_type_def_1a9c7a78e876a7dfb279a16029f915463f" prot="public" virt="non-virtual"><scope>EXTI_ConfigTypeDef</scope><name>Line</name></member>
+      <member refid="struct_e_x_t_i___config_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839" prot="public" virt="non-virtual"><scope>EXTI_ConfigTypeDef</scope><name>Mode</name></member>
+      <member refid="struct_e_x_t_i___config_type_def_1a73dd50a4d440463bf9e1cb02b72ac706" prot="public" virt="non-virtual"><scope>EXTI_ConfigTypeDef</scope><name>Trigger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_o_b___type_def" kind="struct" language="C++" prot="public">
+    <compoundname>OB_TypeDef</compoundname>
+    <includes refid="stm32f103xb_8h" local="no">stm32f103xb.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_o_b___type_def_1ae708f301b866ad2a81ed39efba639aab" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RDP</definition>
+        <argsstring></argsstring>
+        <name>RDP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="344" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_o_b___type_def_1a67442d4e459bba2c40fa62914d78ec1e" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t USER</definition>
+        <argsstring></argsstring>
+        <name>USER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="345" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_o_b___type_def_1a76b31b1239a451ee8f397289265bdf6b" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t Data0</definition>
+        <argsstring></argsstring>
+        <name>Data0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="346" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_o_b___type_def_1aa081efb0cb15b6ffd486d23a89144142" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t Data1</definition>
+        <argsstring></argsstring>
+        <name>Data1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="347" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_o_b___type_def_1ad43c7a196f0eef88b3038383c4f7d903" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t WRP0</definition>
+        <argsstring></argsstring>
+        <name>WRP0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="348" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_o_b___type_def_1ac4e091dcb644dbb5d4a2c7aca7d4fe88" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t WRP1</definition>
+        <argsstring></argsstring>
+        <name>WRP1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="349" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_o_b___type_def_1a05486d021c6761bf5a04f410a1c24e06" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t WRP2</definition>
+        <argsstring></argsstring>
+        <name>WRP2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="350" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_o_b___type_def_1a7d9c1634a4c6027e12345f25d9d15b4d" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t WRP3</definition>
+        <argsstring></argsstring>
+        <name>WRP3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="351" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Option Bytes Registers. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="342" column="1" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="343" bodyend="352"/>
+    <listofallmembers>
+      <member refid="struct_o_b___type_def_1a76b31b1239a451ee8f397289265bdf6b" prot="public" virt="non-virtual"><scope>OB_TypeDef</scope><name>Data0</name></member>
+      <member refid="struct_o_b___type_def_1aa081efb0cb15b6ffd486d23a89144142" prot="public" virt="non-virtual"><scope>OB_TypeDef</scope><name>Data1</name></member>
+      <member refid="struct_o_b___type_def_1ae708f301b866ad2a81ed39efba639aab" prot="public" virt="non-virtual"><scope>OB_TypeDef</scope><name>RDP</name></member>
+      <member refid="struct_o_b___type_def_1a67442d4e459bba2c40fa62914d78ec1e" prot="public" virt="non-virtual"><scope>OB_TypeDef</scope><name>USER</name></member>
+      <member refid="struct_o_b___type_def_1ad43c7a196f0eef88b3038383c4f7d903" prot="public" virt="non-virtual"><scope>OB_TypeDef</scope><name>WRP0</name></member>
+      <member refid="struct_o_b___type_def_1ac4e091dcb644dbb5d4a2c7aca7d4fe88" prot="public" virt="non-virtual"><scope>OB_TypeDef</scope><name>WRP1</name></member>
+      <member refid="struct_o_b___type_def_1a05486d021c6761bf5a04f410a1c24e06" prot="public" virt="non-virtual"><scope>OB_TypeDef</scope><name>WRP2</name></member>
+      <member refid="struct_o_b___type_def_1a7d9c1634a4c6027e12345f25d9d15b4d" prot="public" virt="non-virtual"><scope>OB_TypeDef</scope><name>WRP3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

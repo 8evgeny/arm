@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c" kind="group">
+    <compoundname>RCC</compoundname>
+    <title>RCC</title>
+    <innergroup refid="group___r_c_c___exported___types">RCC Exported Types</innergroup>
+    <innergroup refid="group___r_c_c___exported___constants">RCC Exported Constants</innergroup>
+    <innergroup refid="group___r_c_c___exported___macros">RCC Exported Macros</innergroup>
+    <innergroup refid="group___r_c_c___exported___functions">RCC_Exported_Functions</innergroup>
+    <innergroup refid="group___r_c_c___private___constants">RCC_Private_Constants</innergroup>
+    <innergroup refid="group___r_c_c___private___macros">RCC_Private_Macros</innergroup>
+    <briefdescription>
+<para>RCC HAL module driver. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

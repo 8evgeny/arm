@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex___h_s_e___configuration" xml:lang="en-US">
+<title>HSE Configuration</title>
+<indexterm><primary>HSE Configuration</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c_ex___h_s_e___configuration_1gafc6bfe4fd172ea49871172fa137b60e0">__HAL_RCC_HSE_PREDIV_CONFIG</link>(__HSE_PREDIV_VALUE__)                     MODIFY_REG(RCC-&gt;CFGR,<link linkend="_group___peripheral___registers___bits___definition_1ga39cb6bd06fb93eed1e2fe9da0297810a">RCC_CFGR_PLLXTPRE</link>, (uint32_t)(__HSE_PREDIV_VALUE__))</para>
+
+<para>Macro to configure the External High Speed oscillator (HSE) Predivision factor for PLL. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___h_s_e___configuration_1ga33799456f6dcbcdb9e66374277083d4c"/>#define <link linkend="_group___r_c_c_ex___h_s_e___configuration_1ga33799456f6dcbcdb9e66374277083d4c">__HAL_RCC_HSE_GET_PREDIV</link>()   READ_BIT(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1ga39cb6bd06fb93eed1e2fe9da0297810a">RCC_CFGR_PLLXTPRE</link>)</para>
+
+<para>Macro to get prediv1 factor for PLL. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c_ex___h_s_e___configuration_1gafc6bfe4fd172ea49871172fa137b60e0"/>    <section>
+    <title>__HAL_RCC_HSE_PREDIV_CONFIG</title>
+<indexterm><primary>__HAL_RCC_HSE_PREDIV_CONFIG</primary><secondary>HSE Configuration</secondary></indexterm>
+<indexterm><primary>HSE Configuration</primary><secondary>__HAL_RCC_HSE_PREDIV_CONFIG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_HSE_PREDIV_CONFIG( __HSE_PREDIV_VALUE__)                     MODIFY_REG(RCC-&gt;CFGR,<link linkend="_group___peripheral___registers___bits___definition_1ga39cb6bd06fb93eed1e2fe9da0297810a">RCC_CFGR_PLLXTPRE</link>, (uint32_t)(__HSE_PREDIV_VALUE__))</computeroutput></para><para>
+
+<para>Macro to configure the External High Speed oscillator (HSE) Predivision factor for PLL. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Predivision factor can not be changed if PLL is used as system clock In this case, you have to select another source of the system clock, disable the PLL and then change the HSE predivision factor. </para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;HSE_PREDIV_VALUE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the division value applied to HSE. This parameter must be a number between RCC_HSE_PREDIV_DIV1 and RCC_HSE_PREDIV_DIV2. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,943 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="usbd__cdc_8h" kind="file" language="C++">
+    <compoundname>usbd_cdc.h</compoundname>
+    <includes refid="usbd__ioreq_8h" local="yes">usbd_ioreq.h</includes>
+    <includedby refid="usbd__cdc__if_8h" local="yes">Inc/usbd_cdc_if.h</includedby>
+    <includedby refid="usbd__cdc_8c" local="yes">Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</includedby>
+    <includedby refid="usb__device_8c" local="yes">Src/usb_device.c</includedby>
+    <includedby refid="usbd__conf_8c" local="yes">Src/usbd_conf.c</includedby>
+    <incdepgraph>
+      <node id="22">
+        <label>stm32f1xx_hal_flash.h</label>
+        <link refid="stm32f1xx__hal__flash_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>stm32f1xx_hal_tim_ex.h</label>
+        <link refid="stm32f1xx__hal__tim__ex_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>stm32f1xx_hal_pcd.h</label>
+        <link refid="stm32f1xx__hal__pcd_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="21">
+        <label>stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>stm32f1xx_ll_usb.h</label>
+        <link refid="stm32f1xx__ll__usb_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stddef.h</label>
+      </node>
+      <node id="24">
+        <label>stm32f1xx_hal_pwr.h</label>
+        <link refid="stm32f1xx__hal__pwr_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stm32f1xx_hal_rcc.h</label>
+        <link refid="stm32f1xx__hal__rcc_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>stm32f1xx_hal_dma_ex.h</label>
+        <link refid="stm32f1xx__hal__dma__ex_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="23">
+        <label>stm32f1xx_hal_flash_ex.h</label>
+        <link refid="stm32f1xx__hal__flash__ex_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>stm32f1xx_hal_dma.h</label>
+        <link refid="stm32f1xx__hal__dma_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>stm32f1xx_hal_tim.h</label>
+        <link refid="stm32f1xx__hal__tim_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>stm32f1xx_hal_rcc_ex.h</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+      <node id="18">
+        <label>stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Src/usb_device.c</label>
+        <link refid="usb__device_8c"/>
+      </node>
+      <node id="6">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</label>
+        <link refid="usbd__cdc_8c"/>
+      </node>
+      <node id="1">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Src/usbd_conf.c</label>
+        <link refid="usbd__conf_8c"/>
+      </node>
+      <node id="3">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="5">
+        <label>Src/usbd_cdc_if.c</label>
+        <link refid="usbd__cdc__if_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_u_s_b_d___c_d_c___line_coding_type_def" prot="public">USBD_CDC_LineCodingTypeDef</innerclass>
+    <innerclass refid="struct___u_s_b_d___c_d_c___itf" prot="public">_USBD_CDC_Itf</innerclass>
+    <innerclass refid="struct_u_s_b_d___c_d_c___handle_type_def" prot="public">USBD_CDC_HandleTypeDef</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga4f4f597c2cc62e7ec1c6ac609b3eb97f" prot="public" static="no">
+        <name>CDC_IN_EP</name>
+        <initializer>0x81U  /* EP1 for data IN */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="44" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga7623890bcaec261a69ba4622909f065c" prot="public" static="no">
+        <name>CDC_OUT_EP</name>
+        <initializer>0x01U  /* EP1 for data OUT */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="45" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1gaeca7f5392ff4fc889eeb511d7d09ce75" prot="public" static="no">
+        <name>CDC_CMD_EP</name>
+        <initializer>0x82U  /* EP2 for CDC commands */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="46" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1gaf7a06817570b273e0573b561467d079e" prot="public" static="no">
+        <name>CDC_HS_BINTERVAL</name>
+        <initializer>0x10U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="49" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga541cf34ef82ecf787cbc4871e825c3a3" prot="public" static="no">
+        <name>CDC_FS_BINTERVAL</name>
+        <initializer>0x10U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="53" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1gae7db58dbfe2496ddba05ab027238a0c5" prot="public" static="no">
+        <name>CDC_DATA_HS_MAX_PACKET_SIZE</name>
+        <initializer>512U  /* Endpoint IN &amp; OUT Packet size */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="57" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga9aeccc7c5ce07c075d2e3da4c49f190c" prot="public" static="no">
+        <name>CDC_DATA_FS_MAX_PACKET_SIZE</name>
+        <initializer>64U  /* Endpoint IN &amp; OUT Packet size */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="58" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1gaf49cf1058cfa7de0867c1fae6de56b89" prot="public" static="no">
+        <name>CDC_CMD_PACKET_SIZE</name>
+        <initializer>8U  /* Control Endpoint Packet size */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="59" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1gaeace2e1a379f1cd527d26b7b713ba7d6" prot="public" static="no">
+        <name>USB_CDC_CONFIG_DESC_SIZ</name>
+        <initializer>67U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="61" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga95a5ef21d7dd72fccf4aba23876d0e8b" prot="public" static="no">
+        <name>CDC_DATA_HS_IN_PACKET_SIZE</name>
+        <initializer>CDC_DATA_HS_MAX_PACKET_SIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="62" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1gaa9171457c438566f480e14be07ff01a0" prot="public" static="no">
+        <name>CDC_DATA_HS_OUT_PACKET_SIZE</name>
+        <initializer>CDC_DATA_HS_MAX_PACKET_SIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="63" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1gaf5b83dd4c901b61bba2bc41c4916c28b" prot="public" static="no">
+        <name>CDC_DATA_FS_IN_PACKET_SIZE</name>
+        <initializer>CDC_DATA_FS_MAX_PACKET_SIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="65" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1gaa15fbc914f64d67118729351b9e46c3c" prot="public" static="no">
+        <name>CDC_DATA_FS_OUT_PACKET_SIZE</name>
+        <initializer>CDC_DATA_FS_MAX_PACKET_SIZE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="66" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga7aaa245703a0a2191c27697715f3727c" prot="public" static="no">
+        <name>CDC_SEND_ENCAPSULATED_COMMAND</name>
+        <initializer>0x00U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="71" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga6170632c774a3163b5a9927cc4e960ec" prot="public" static="no">
+        <name>CDC_GET_ENCAPSULATED_RESPONSE</name>
+        <initializer>0x01U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="72" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga893b79445f99070657e8d45f6495b174" prot="public" static="no">
+        <name>CDC_SET_COMM_FEATURE</name>
+        <initializer>0x02U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="73" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1gad0912dac888d01142b225b0c6f8a508f" prot="public" static="no">
+        <name>CDC_GET_COMM_FEATURE</name>
+        <initializer>0x03U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="74" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga6c79b8666110840333ad3785bf7ce87c" prot="public" static="no">
+        <name>CDC_CLEAR_COMM_FEATURE</name>
+        <initializer>0x04U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="75" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1gad07ce089c8757b8d2ff37ddd83dc9351" prot="public" static="no">
+        <name>CDC_SET_LINE_CODING</name>
+        <initializer>0x20U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="76" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga1068ab45668e413d964a01bc36fa2d43" prot="public" static="no">
+        <name>CDC_GET_LINE_CODING</name>
+        <initializer>0x21U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="77" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga11c392243dec4d03970f1eaa1f8053ae" prot="public" static="no">
+        <name>CDC_SET_CONTROL_LINE_STATE</name>
+        <initializer>0x22U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="78" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__usbd__cdc___exported___defines_1ga868c480caf0abda6b458c82281dda8ad" prot="public" static="no">
+        <name>CDC_SEND_BREAK</name>
+        <initializer>0x23U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="79" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___c_o_r_e___exported___variables_1ga9ea5914811159ebdbeac6a7e0596dd9f" prot="public" static="no">
+        <name>USBD_CDC_CLASS</name>
+        <initializer>&amp;USBD_CDC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="141" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__usbd__cdc_1ga61c7c06f80adff14be2358af5e6971f4" prot="public" static="no">
+        <type>struct <ref refid="struct___u_s_b_d___c_d_c___itf" kindref="compound">_USBD_CDC_Itf</ref></type>
+        <definition>typedef struct _USBD_CDC_Itf USBD_CDC_ItfTypeDef</definition>
+        <argsstring></argsstring>
+        <name>USBD_CDC_ItfTypeDef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="108" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___u_s_b_d___c_o_r_e___exported___variables_1ga4ea96ee34eb73d0dae16f02a232e9b5c" prot="public" static="no" mutable="no">
+        <type><ref refid="struct___device__cb" kindref="compound">USBD_ClassTypeDef</ref></type>
+        <definition>USBD_ClassTypeDef USBD_CDC</definition>
+        <argsstring></argsstring>
+        <name>USBD_CDC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="140" column="27" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" bodystart="155" bodyend="-1" declfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" declline="140" declcolumn="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___u_s_b___c_o_r_e___exported___functions_1ga41e2c9c5138449916310eb508a500752" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t USBD_CDC_RegisterInterface</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_CDC_ItfTypeDef *fops)</argsstring>
+        <name>USBD_CDC_RegisterInterface</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="struct___u_s_b_d___c_d_c___itf" kindref="compound">USBD_CDC_ItfTypeDef</ref> *</type>
+          <declname>fops</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CDC_RegisterInterface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fops</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CD Interface callback </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="149" column="10" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" bodystart="810" bodyend="822" declfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" declline="149" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b___c_o_r_e___exported___functions_1gaae40b75b0ccc21281f4aa1e2fbdc0d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t USBD_CDC_SetTxBuffer</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *pbuff, uint16_t length)</argsstring>
+        <name>USBD_CDC_SetTxBuffer</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuff</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CDC_SetTxBuffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pbuff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tx Buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="152" column="10" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" bodystart="830" bodyend="840" declfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" declline="152" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b___c_o_r_e___exported___functions_1gaa8539af2ff78ce9a464def5de05726c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t USBD_CDC_SetRxBuffer</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *pbuff)</argsstring>
+        <name>USBD_CDC_SetRxBuffer</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuff</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CDC_SetRxBuffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pbuff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rx Buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="156" column="10" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" bodystart="849" bodyend="857" declfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" declline="156" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b___c_o_r_e___exported___functions_1ga55dff87863e1c76fd1139016da75903c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t USBD_CDC_ReceivePacket</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_CDC_ReceivePacket</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CDC_ReceivePacket prepare OUT Endpoint for reception. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="159" column="10" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" bodystart="903" bodyend="932" declfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" declline="159" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b___c_o_r_e___exported___functions_1gac6132b25e4ac00c4d918d3d73a3be5c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t USBD_CDC_TransmitPacket</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_CDC_TransmitPacket</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_CDC_TransmitPacket Transmit packet on IN endpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="161" column="10" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" bodystart="865" bodyend="894" declfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" declline="161" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>header file for the <ref refid="usbd__cdc_8c" kindref="compound">usbd_cdc.c</ref> file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>MCD Application Team</para>
+</simplesect>
+<simplesect kind="attention"><para></para>
+</simplesect>
+<heading level="2"><center><copy/> Copyright (c) 2015 STMicroelectronics. All rights reserved.</center></heading>
+</para>
+<para>This software component is licensed by ST under Ultimate Liberty license SLA0044, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: www.st.com/SLA0044 </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__USB_CDC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__USB_CDC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/>&quot;<ref refid="usbd__ioreq_8h" kindref="compound">usbd_ioreq.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_IN_EP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x81U<sp/><sp/></highlight><highlight class="comment">/*<sp/>EP1<sp/>for<sp/>data<sp/>IN<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_OUT_EP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01U<sp/><sp/></highlight><highlight class="comment">/*<sp/>EP1<sp/>for<sp/>data<sp/>OUT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_CMD_EP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x82U<sp/><sp/></highlight><highlight class="comment">/*<sp/>EP2<sp/>for<sp/>CDC<sp/>commands<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CDC_HS_BINTERVAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_HS_BINTERVAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CDC_HS_BINTERVAL<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CDC_FS_BINTERVAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_FS_BINTERVAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CDC_FS_BINTERVAL<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CDC<sp/>Endpoints<sp/>parameters:<sp/>you<sp/>can<sp/>fine<sp/>tune<sp/>these<sp/>values<sp/>depending<sp/>on<sp/>the<sp/>needed<sp/>baudrates<sp/>and<sp/>performance.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_DATA_HS_MAX_PACKET_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>512U<sp/><sp/></highlight><highlight class="comment">/*<sp/>Endpoint<sp/>IN<sp/>&amp;<sp/>OUT<sp/>Packet<sp/>size<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_DATA_FS_MAX_PACKET_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64U<sp/><sp/></highlight><highlight class="comment">/*<sp/>Endpoint<sp/>IN<sp/>&amp;<sp/>OUT<sp/>Packet<sp/>size<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_CMD_PACKET_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8U<sp/><sp/></highlight><highlight class="comment">/*<sp/>Control<sp/>Endpoint<sp/>Packet<sp/>size<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USB_CDC_CONFIG_DESC_SIZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>67U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_DATA_HS_IN_PACKET_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CDC_DATA_HS_MAX_PACKET_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_DATA_HS_OUT_PACKET_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CDC_DATA_HS_MAX_PACKET_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_DATA_FS_IN_PACKET_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CDC_DATA_FS_MAX_PACKET_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_DATA_FS_OUT_PACKET_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CDC_DATA_FS_MAX_PACKET_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*---------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>CDC<sp/>definitions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*---------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_SEND_ENCAPSULATED_COMMAND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_GET_ENCAPSULATED_RESPONSE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_SET_COMM_FEATURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_GET_COMM_FEATURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_CLEAR_COMM_FEATURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_SET_LINE_CODING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x20U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_GET_LINE_CODING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x21U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_SET_CONTROL_LINE_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x22U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDC_SEND_BREAK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x23U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="struct_u_s_b_d___c_d_c___line_coding_type_def" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>uint32_t<sp/>bitrate;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/>format;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/>paritytype;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/>datatype;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}<sp/><ref refid="struct_u_s_b_d___c_d_c___line_coding_type_def" kindref="compound">USBD_CDC_LineCodingTypeDef</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="struct___u_s_b_d___c_d_c___itf" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___u_s_b_d___c_d_c___itf" kindref="compound">_USBD_CDC_Itf</ref></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>int8_t<sp/>(*<sp/>Init)(void);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>int8_t<sp/>(*<sp/>DeInit)(void);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>int8_t<sp/>(*<sp/>Control)(uint8_t<sp/>cmd,<sp/>uint8_t<sp/>*pbuf,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>int8_t<sp/>(*<sp/>Receive)(uint8_t<sp/>*Buf,<sp/>uint32_t<sp/>*Len);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}<sp/><ref refid="struct___u_s_b_d___c_d_c___itf" kindref="compound">USBD_CDC_ItfTypeDef</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="struct_u_s_b_d___c_d_c___handle_type_def" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>uint32_t<sp/>data[CDC_DATA_HS_MAX_PACKET_SIZE<sp/>/<sp/>4U];<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Force<sp/>32bits<sp/>alignment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/>CmdOpCode;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/>CmdLength;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/>*RxBuffer;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/>*TxBuffer;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>uint32_t<sp/>RxLength;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>uint32_t<sp/>TxLength;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><ref refid="core__armv8mbl_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref><sp/>uint32_t<sp/>TxState;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><ref refid="core__armv8mbl_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref><sp/>uint32_t<sp/>RxState;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="struct_u_s_b_d___c_d_c___handle_type_def" kindref="compound">USBD_CDC_HandleTypeDef</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct___device__cb" kindref="compound">USBD_ClassTypeDef</ref><sp/><sp/>USBD_CDC;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USBD_CDC_CLASS<sp/><sp/><sp/><sp/>&amp;USBD_CDC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">uint8_t<sp/><sp/><ref refid="group___u_s_b___c_o_r_e___exported___functions_1ga41e2c9c5138449916310eb508a500752" kindref="member">USBD_CDC_RegisterInterface</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/><sp/>*pdev,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct___u_s_b_d___c_d_c___itf" kindref="compound">USBD_CDC_ItfTypeDef</ref><sp/>*fops);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">uint8_t<sp/><sp/><ref refid="group___u_s_b___c_o_r_e___exported___functions_1gaae40b75b0ccc21281f4aa1e2fbdc0d4f" kindref="member">USBD_CDC_SetTxBuffer</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/><sp/>*pdev,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>*pbuff,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">uint8_t<sp/><sp/><ref refid="group___u_s_b___c_o_r_e___exported___functions_1gaa8539af2ff78ce9a464def5de05726c3" kindref="member">USBD_CDC_SetRxBuffer</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/><sp/>*pdev,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>*pbuff);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">uint8_t<sp/><sp/><ref refid="group___u_s_b___c_o_r_e___exported___functions_1ga55dff87863e1c76fd1139016da75903c" kindref="member">USBD_CDC_ReceivePacket</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">uint8_t<sp/><sp/><ref refid="group___u_s_b___c_o_r_e___exported___functions_1gac6132b25e4ac00c4d918d3d73a3be5c7" kindref="member">USBD_CDC_TransmitPacket</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>__USB_CDC_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">/************************<sp/>(C)<sp/>COPYRIGHT<sp/>STMicroelectronics<sp/>*****END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"/>
+  </compounddef>
+</doxygen>

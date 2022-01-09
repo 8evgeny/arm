@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex___prediv1___factor" xml:lang="en-US">
+<title>HSE Prediv1 Factor</title>
+<indexterm><primary>HSE Prediv1 Factor</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___prediv1___factor_1gaab87e46cf9de9a7bd69b5844e3fb6e8d"/>#define <emphasis role="strong">RCC_HSE_PREDIV_DIV1</emphasis>   0x00000000U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___prediv1___factor_1gaac01eab0da229849f4619a7d69dda65e"/>#define <emphasis role="strong">RCC_HSE_PREDIV_DIV2</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga39cb6bd06fb93eed1e2fe9da0297810a">RCC_CFGR_PLLXTPRE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

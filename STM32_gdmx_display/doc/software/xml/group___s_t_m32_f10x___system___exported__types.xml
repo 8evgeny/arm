@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___s_t_m32_f10x___system___exported__types" kind="group">
+    <compoundname>STM32F10x_System_Exported_types</compoundname>
+    <title>STM32F10x_System_Exported_types</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___s_t_m32_f10x___system___exported__types_1gaa3cd3e43291e81e795d642b79b6088e6" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SystemCoreClock</definition>
+        <argsstring></argsstring>
+        <name>SystemCoreClock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>System Clock Frequency (Core Clock) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h" line="51" column="17" bodyfile="Src/system_stm32f1xx.c" bodystart="123" bodyend="-1" declfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h" declline="51" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_t_m32_f10x___system___exported__types_1ga53cb26d01524d9560f98101a2c597c40" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t AHBPrescTable[16U]</definition>
+        <argsstring>[16U]</argsstring>
+        <name>AHBPrescTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AHB prescalers table values </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h" line="52" column="23" bodyfile="Src/system_stm32f1xx.c" bodystart="124" bodyend="-1" declfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h" declline="52" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_t_m32_f10x___system___exported__types_1gaa93c123312c9273c0928a79f1203f759" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t APBPrescTable[8U]</definition>
+        <argsstring>[8U]</argsstring>
+        <name>APBPrescTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>APB prescalers table values </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h" line="53" column="23" bodyfile="Src/system_stm32f1xx.c" bodystart="125" bodyend="-1" declfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h" declline="53" declcolumn="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

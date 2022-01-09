@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_51fd22500cfdf9779f92a6080dbca33f" kind="dir">
+    <compoundname>build/CMakeFiles/gdmx_display.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src</compoundname>
+    <innerfile refid="usbd__cdc_8c_8obj_8d">usbd_cdc.c.obj.d</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/gdmx_display.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/"/>
+  </compounddef>
+</doxygen>

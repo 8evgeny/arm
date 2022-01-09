@@ -1,0 +1,117 @@
+.TH "Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \- This file provides all the USBD core functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'usbd_core\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_Init\fP (\fBUSBD_HandleTypeDef\fP *pdev, \fBUSBD_DescriptorsTypeDef\fP *pdesc, uint8_t id)"
+.br
+.RI "USBD_Init Initializes the device stack and load the class driver\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_DeInit\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_DeInit Re-Initialize th device library\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_RegisterClass\fP (\fBUSBD_HandleTypeDef\fP *pdev, \fBUSBD_ClassTypeDef\fP *pclass)"
+.br
+.RI "USBD_RegisterClass Link class driver to Device Core\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_Start\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_Start Start the USB Device Core\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_Stop\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_Stop Stop the USB Device Core\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_RunTestMode\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_RunTestMode Launch test mode process\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_SetClassConfig\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t cfgidx)"
+.br
+.RI "USBD_SetClassConfig Configure device and start the interface\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_ClrClassConfig\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t cfgidx)"
+.br
+.RI "USBD_ClrClassConfig Clear current configuration\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_SetupStage\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t *psetup)"
+.br
+.RI "USBD_SetupStage Handle the setup stage\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_DataOutStage\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t epnum, uint8_t *pdata)"
+.br
+.RI "USBD_DataOutStage Handle data OUT stage\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_DataInStage\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t epnum, uint8_t *pdata)"
+.br
+.RI "USBD_DataInStage Handle data in stage\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_Reset\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_LL_Reset Handle Reset event\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_SetSpeed\fP (\fBUSBD_HandleTypeDef\fP *pdev, USBD_SpeedTypeDef speed)"
+.br
+.RI "USBD_LL_Reset Handle Reset event\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_Suspend\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_Suspend Handle Suspend event\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_Resume\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_Resume Handle Resume event\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_SOF\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_SOF Handle SOF event\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_IsoINIncomplete\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t epnum)"
+.br
+.RI "USBD_IsoINIncomplete Handle iso in incomplete event\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_IsoOUTIncomplete\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t epnum)"
+.br
+.RI "USBD_IsoOUTIncomplete Handle iso out incomplete event\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_DevConnected\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_DevConnected Handle device connection event\&. "
+.ti -1c
+.RI "USBD_StatusTypeDef \fBUSBD_LL_DevDisconnected\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_DevDisconnected Handle device disconnection event\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file provides all the USBD core functions\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2015 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under Ultimate Liberty license SLA0044, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: www\&.st\&.com/SLA0044 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

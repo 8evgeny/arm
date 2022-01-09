@@ -1,0 +1,32 @@
+.TH "vStreamBufferDelete" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vStreamBufferDelete \- vStreamBufferDelete
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+\fBstream_buffer\&.h\fP
+.PP
+.PP
+.nf
+
+void vStreamBufferDelete( StreamBufferHandle_t xStreamBuffer );
+.fi
+.PP
+.PP
+Deletes a stream buffer that was previously created using a call to xStreamBufferCreate() or xStreamBufferCreateStatic()\&. If the stream buffer was created using dynamic memory (that is, by xStreamBufferCreate()), then the allocated memory is freed\&.
+.PP
+A stream buffer handle must not be used after the stream buffer has been deleted\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxStreamBuffer\fP The handle of the stream buffer to be deleted\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

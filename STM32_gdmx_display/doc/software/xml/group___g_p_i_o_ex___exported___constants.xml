@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___g_p_i_o_ex___exported___constants" kind="group">
+    <compoundname>GPIOEx_Exported_Constants</compoundname>
+    <title>GPIOEx Exported Constants</title>
+    <innergroup refid="group___g_p_i_o_ex___e_v_e_n_t_o_u_t">EVENTOUT Cortex Configuration</innergroup>
+    <innergroup refid="group___g_p_i_o_ex___a_f_i_o___a_f___r_e_m_a_p_p_i_n_g">Alternate Function Remapping</innergroup>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

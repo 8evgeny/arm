@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype" xml:lang="en-US">
+<title>USBD_IOREQ_Exported_FunctionsPrototype</title>
+<indexterm><primary>USBD_IOREQ_Exported_FunctionsPrototype</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gae66e8dc0e24f9d7d23930f6c87605e75">USBD_CtlSendData</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t *pbuf, uint16_t len)</para>
+
+<para>USBD_CtlSendData send data on the ctl pipe. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gaf07248d84e87cdf14db392f94b369744">USBD_CtlContinueSendData</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t *pbuf, uint16_t len)</para>
+
+<para>USBD_CtlContinueSendData continue sending data on the ctl pipe. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gabe067dfaa82139b6d3acf5f8cdd5fc91">USBD_CtlPrepareRx</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t *pbuf, uint16_t len)</para>
+
+<para>USBD_CtlPrepareRx receive data on the ctl pipe. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gaf6cabd5a8d9d527cf6aa64915abb7f2b">USBD_CtlContinueRx</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t *pbuf, uint16_t len)</para>
+
+<para>USBD_CtlContinueRx continue receive data on the ctl pipe. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1ga19e53947fc912c43bcee2c7d7429e8ee">USBD_CtlSendStatus</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev)</para>
+
+<para>USBD_CtlSendStatus send zero lzngth packet on the ctl pipe. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gad5e847f89ca67a6b2154a72d0aa25e9a">USBD_CtlReceiveStatus</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev)</para>
+
+<para>USBD_CtlReceiveStatus receive zero lzngth packet on the ctl pipe. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1ga1ea167471f0e91676934feb76f67b1c2">USBD_GetRxCount</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t ep_addr)</para>
+
+<para>USBD_GetRxCount returns the received data length. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gaf6cabd5a8d9d527cf6aa64915abb7f2b"/>    <section>
+    <title>USBD_CtlContinueRx()</title>
+<indexterm><primary>USBD_CtlContinueRx</primary><secondary>USBD_IOREQ_Exported_FunctionsPrototype</secondary></indexterm>
+<indexterm><primary>USBD_IOREQ_Exported_FunctionsPrototype</primary><secondary>USBD_CtlContinueRx</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_CtlContinueRx (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> * pdev, uint8_t * pbuf, uint16_t len)</computeroutput></para><para>
+
+<para>USBD_CtlContinueRx continue receive data on the ctl pipe. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pdev</entry>
+                                <entry>
+<para>device instance </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>buff</entry>
+                                <entry>
+<para>pointer to data buffer </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>len</entry>
+                                <entry>
+<para>length of data to be received </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>status</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gaf07248d84e87cdf14db392f94b369744"/>    <section>
+    <title>USBD_CtlContinueSendData()</title>
+<indexterm><primary>USBD_CtlContinueSendData</primary><secondary>USBD_IOREQ_Exported_FunctionsPrototype</secondary></indexterm>
+<indexterm><primary>USBD_IOREQ_Exported_FunctionsPrototype</primary><secondary>USBD_CtlContinueSendData</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_CtlContinueSendData (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> * pdev, uint8_t * pbuf, uint16_t len)</computeroutput></para><para>
+
+<para>USBD_CtlContinueSendData continue sending data on the ctl pipe. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pdev</entry>
+                                <entry>
+<para>device instance </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>buff</entry>
+                                <entry>
+<para>pointer to data buffer </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>len</entry>
+                                <entry>
+<para>length of data to be sent </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>status</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gabe067dfaa82139b6d3acf5f8cdd5fc91"/>    <section>
+    <title>USBD_CtlPrepareRx()</title>
+<indexterm><primary>USBD_CtlPrepareRx</primary><secondary>USBD_IOREQ_Exported_FunctionsPrototype</secondary></indexterm>
+<indexterm><primary>USBD_IOREQ_Exported_FunctionsPrototype</primary><secondary>USBD_CtlPrepareRx</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_CtlPrepareRx (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> * pdev, uint8_t * pbuf, uint16_t len)</computeroutput></para><para>
+
+<para>USBD_CtlPrepareRx receive data on the ctl pipe. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pdev</entry>
+                                <entry>
+<para>device instance </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>buff</entry>
+                                <entry>
+<para>pointer to data buffer </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>len</entry>
+                                <entry>
+<para>length of data to be received </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>status</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gad5e847f89ca67a6b2154a72d0aa25e9a"/>    <section>
+    <title>USBD_CtlReceiveStatus()</title>
+<indexterm><primary>USBD_CtlReceiveStatus</primary><secondary>USBD_IOREQ_Exported_FunctionsPrototype</secondary></indexterm>
+<indexterm><primary>USBD_IOREQ_Exported_FunctionsPrototype</primary><secondary>USBD_CtlReceiveStatus</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_CtlReceiveStatus (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> * pdev)</computeroutput></para><para>
+
+<para>USBD_CtlReceiveStatus receive zero lzngth packet on the ctl pipe. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pdev</entry>
+                                <entry>
+<para>device instance </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>status</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1gae66e8dc0e24f9d7d23930f6c87605e75"/>    <section>
+    <title>USBD_CtlSendData()</title>
+<indexterm><primary>USBD_CtlSendData</primary><secondary>USBD_IOREQ_Exported_FunctionsPrototype</secondary></indexterm>
+<indexterm><primary>USBD_IOREQ_Exported_FunctionsPrototype</primary><secondary>USBD_CtlSendData</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_CtlSendData (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> * pdev, uint8_t * pbuf, uint16_t len)</computeroutput></para><para>
+
+<para>USBD_CtlSendData send data on the ctl pipe. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pdev</entry>
+                                <entry>
+<para>device instance </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>buff</entry>
+                                <entry>
+<para>pointer to data buffer </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>len</entry>
+                                <entry>
+<para>length of data to be sent </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>status</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1ga19e53947fc912c43bcee2c7d7429e8ee"/>    <section>
+    <title>USBD_CtlSendStatus()</title>
+<indexterm><primary>USBD_CtlSendStatus</primary><secondary>USBD_IOREQ_Exported_FunctionsPrototype</secondary></indexterm>
+<indexterm><primary>USBD_IOREQ_Exported_FunctionsPrototype</primary><secondary>USBD_CtlSendStatus</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_CtlSendStatus (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> * pdev)</computeroutput></para><para>
+
+<para>USBD_CtlSendStatus send zero lzngth packet on the ctl pipe. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pdev</entry>
+                                <entry>
+<para>device instance </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>status</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___u_s_b_d___i_o_r_e_q___exported___functions_prototype_1ga1ea167471f0e91676934feb76f67b1c2"/>    <section>
+    <title>USBD_GetRxCount()</title>
+<indexterm><primary>USBD_GetRxCount</primary><secondary>USBD_IOREQ_Exported_FunctionsPrototype</secondary></indexterm>
+<indexterm><primary>USBD_IOREQ_Exported_FunctionsPrototype</primary><secondary>USBD_GetRxCount</secondary></indexterm>
+<para><computeroutput>uint32_t USBD_GetRxCount (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> * pdev, uint8_t ep_addr)</computeroutput></para><para>
+
+<para>USBD_GetRxCount returns the received data length. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pdev</entry>
+                                <entry>
+<para>device instance </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>ep_addr</entry>
+                                <entry>
+<para>endpoint address </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Rx</entry>
+                                <entry>
+<para>Data blength </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

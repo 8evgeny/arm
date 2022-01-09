@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex___m_c_o1___clock___source" xml:lang="en-US">
+<title>MCO1 Clock Source</title>
+<indexterm><primary>MCO1 Clock Source</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___m_c_o1___clock___source_1ga725a16362f3324ef5866dc5a1ff07cf5"/>#define <emphasis role="strong">RCC_MCO1SOURCE_NOCLOCK</emphasis>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gab345908eef02b3029dd78be58baa0c8d">RCC_CFGR_MCO_NOCLOCK</link>)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___m_c_o1___clock___source_1gae8ca2959a1252ecd319843da02c79526"/>#define <emphasis role="strong">RCC_MCO1SOURCE_SYSCLK</emphasis>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaecf3b078108fdaf7e66d15ae71ec4181">RCC_CFGR_MCO_SYSCLK</link>)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___m_c_o1___clock___source_1gad99c388c455852143220397db3730635"/>#define <emphasis role="strong">RCC_MCO1SOURCE_HSI</emphasis>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga91f0ac507b8c4e5d443c107d934cfdb1">RCC_CFGR_MCO_HSI</link>)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___m_c_o1___clock___source_1ga5582d2ab152eb440a6cc3ae4833b043f"/>#define <emphasis role="strong">RCC_MCO1SOURCE_HSE</emphasis>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga183179f1b1763f38ae88f2d8d90acd70">RCC_CFGR_MCO_HSE</link>)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___m_c_o1___clock___source_1ga79d888f2238eaa4e4b8d02b3900ea18b"/>#define <emphasis role="strong">RCC_MCO1SOURCE_PLLCLK</emphasis>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaf501b78192ef13a7016e1f2089c9f8a3">RCC_CFGR_MCO_PLLCLK_DIV2</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

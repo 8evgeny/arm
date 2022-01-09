@@ -1,0 +1,43 @@
+.TH "xQueuePeekFromISR" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xQueuePeekFromISR \- xQueuePeekFromISR
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+queue\&. h 
+.PP
+.nf
+
+BaseType_t xQueuePeekFromISR(
+                                QueueHandle_t xQueue,
+                                void *pvBuffer,
+                            );
+.fi
+.PP
+.PP
+A version of xQueuePeek() that can be called from an interrupt service routine (ISR)\&.
+.PP
+Receive an item from a queue without removing the item from the queue\&. The item is received by copy so a buffer of adequate size must be provided\&. The number of bytes copied into the buffer was defined when the queue was created\&.
+.PP
+Successfully received items remain on the queue so will be returned again by the next call, or a call to xQueueReceive()\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxQueue\fP The handle to the queue from which the item is to be received\&.
+.br
+\fIpvBuffer\fP Pointer to the buffer into which the received item will be copied\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+pdTRUE if an item was successfully received from the queue, otherwise pdFALSE\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

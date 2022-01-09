@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m_ex___exported___functions" xml:lang="en-US">
+<title>TIM Extended Exported Functions</title>
+<indexterm><primary>TIM Extended Exported Functions</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___t_i_m_ex___exported___functions___group1">Extended Timer Hall Sensor functions</link></para>
+
+<para>Timer Hall Sensor functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_ex___exported___functions___group2">Extended Timer Complementary Output Compare functions</link></para>
+
+<para>Timer Complementary Output Compare functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_ex___exported___functions___group3">Extended Timer Complementary PWM functions</link></para>
+
+<para>Timer Complementary PWM functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_ex___exported___functions___group4">Extended Timer Complementary One Pulse functions</link></para>
+
+<para>Timer Complementary One Pulse functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_ex___exported___functions___group5">Extended Peripheral Control functions</link></para>
+
+<para>Peripheral Control functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_ex___exported___functions___group6">Extended Callbacks functions</link></para>
+
+<para>Extended Callbacks functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m_ex___exported___functions___group7">Extended Peripheral State functions</link></para>
+
+<para>Extended Peripheral State functions. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___exported__macros" xml:lang="en-US">
+<title>Exported_macros</title>
+<indexterm><primary>Exported_macros</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___exported__macros_1ga26474f43799fbade9cf300e21dd3a91a"/>#define <emphasis role="strong">SET_BIT</emphasis>(REG,  BIT)   ((REG) |= (BIT))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___exported__macros_1ga133aae6fc0d41bffab39ab223a7001de"/>#define <emphasis role="strong">CLEAR_BIT</emphasis>(REG,  BIT)   ((REG) &amp;= ~(BIT))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___exported__macros_1ga822bb1bb9710d5f2fa6396b84e583c33"/>#define <emphasis role="strong">READ_BIT</emphasis>(REG,  BIT)   ((REG) &amp; (BIT))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___exported__macros_1ga1378fbdda39f40b85420df55f41460ef"/>#define <emphasis role="strong">CLEAR_REG</emphasis>(REG)   ((REG) = (0x0))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___exported__macros_1ga32f78bffcaf6d13023dcd7f05e0c4d57"/>#define <emphasis role="strong">WRITE_REG</emphasis>(REG,  VAL)   ((REG) = (VAL))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___exported__macros_1gae7f188a4d26c9e713a48414783421071"/>#define <emphasis role="strong">READ_REG</emphasis>(REG)   ((REG))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___exported__macros_1ga6553c99f510c3bab8cc0a91602053247"/>#define <emphasis role="strong">MODIFY_REG</emphasis>(REG,  CLEARMASK,  SETMASK)   WRITE_REG((REG), (((READ_REG(REG)) &amp; (~(CLEARMASK))) | (SETMASK)))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___exported__macros_1ga47a8870d71d55cefb3df47cd8c815ec8"/>#define <emphasis role="strong">POSITION_VAL</emphasis>(VAL)   (<link linkend="_group___c_m_s_i_s___core___instruction_interface_1ga5d5bb1527e042be4a9fa5a33f65cc248">__CLZ</link>(<link linkend="_group___c_m_s_i_s___core___instruction_interface_1gaf944a7b7d8fd70164cca27669316bcf7">__RBIT</link>(VAL)))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

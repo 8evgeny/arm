@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___d_m_a__sources" xml:lang="en-US">
+<title>TIM DMA Sources</title>
+<indexterm><primary>TIM DMA Sources</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___d_m_a__sources_1ga45816ad15a4f533027eb202ac0b9aaf5">TIM_DMA_UPDATE</link>   <link linkend="_group___peripheral___registers___bits___definition_1gab9f47792b1c2f123464a2955f445c811">TIM_DIER_UDE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___d_m_a__sources_1ga33b93e8bb82fe8e167b9e9c962c54f83">TIM_DMA_CC1</link>   <link linkend="_group___peripheral___registers___bits___definition_1gae181bb16ec916aba8ba86f58f745fdfd">TIM_DIER_CC1DE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___d_m_a__sources_1ga792f73196a8e7424655592097d7a3fd5">TIM_DMA_CC2</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga58f97064991095b28c91028ca3cca28e">TIM_DIER_CC2DE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___d_m_a__sources_1ga3eb2dadbd3109bced45935fb53deeee1">TIM_DMA_CC3</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga1567bff5dc0564b26a8b3cff1f0fe0a4">TIM_DIER_CC3DE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___d_m_a__sources_1ga59495cf79894dfe5e5b2029863aed956">TIM_DMA_CC4</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaaba034412c54fa07024e516492748614">TIM_DIER_CC4DE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___d_m_a__sources_1gac5f4c56e944bda8ba0c23b97275020ba">TIM_DMA_COM</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga79c3fab9d33de953a0a7f7d6516c73bc">TIM_DIER_COMDE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___d_m_a__sources_1ga21912fd910242e0f63bf9b0953e41c63">TIM_DMA_TRIGGER</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga5a752d4295f100708df9b8be5a7f439d">TIM_DIER_TDE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___d_m_a__sources_1ga33b93e8bb82fe8e167b9e9c962c54f83"/>    <section>
+    <title>TIM_DMA_CC1</title>
+<indexterm><primary>TIM_DMA_CC1</primary><secondary>TIM DMA Sources</secondary></indexterm>
+<indexterm><primary>TIM DMA Sources</primary><secondary>TIM_DMA_CC1</secondary></indexterm>
+<para><computeroutput>#define TIM_DMA_CC1   <link linkend="_group___peripheral___registers___bits___definition_1gae181bb16ec916aba8ba86f58f745fdfd">TIM_DIER_CC1DE</link></computeroutput></para>
+<para>DMA request is triggered by the capture/compare macth 1 event </para>
+    </section><anchor xml:id="_group___t_i_m___d_m_a__sources_1ga792f73196a8e7424655592097d7a3fd5"/>    <section>
+    <title>TIM_DMA_CC2</title>
+<indexterm><primary>TIM_DMA_CC2</primary><secondary>TIM DMA Sources</secondary></indexterm>
+<indexterm><primary>TIM DMA Sources</primary><secondary>TIM_DMA_CC2</secondary></indexterm>
+<para><computeroutput>#define TIM_DMA_CC2   <link linkend="_group___peripheral___registers___bits___definition_1ga58f97064991095b28c91028ca3cca28e">TIM_DIER_CC2DE</link></computeroutput></para>
+<para>DMA request is triggered by the capture/compare macth 2 event event </para>
+    </section><anchor xml:id="_group___t_i_m___d_m_a__sources_1ga3eb2dadbd3109bced45935fb53deeee1"/>    <section>
+    <title>TIM_DMA_CC3</title>
+<indexterm><primary>TIM_DMA_CC3</primary><secondary>TIM DMA Sources</secondary></indexterm>
+<indexterm><primary>TIM DMA Sources</primary><secondary>TIM_DMA_CC3</secondary></indexterm>
+<para><computeroutput>#define TIM_DMA_CC3   <link linkend="_group___peripheral___registers___bits___definition_1ga1567bff5dc0564b26a8b3cff1f0fe0a4">TIM_DIER_CC3DE</link></computeroutput></para>
+<para>DMA request is triggered by the capture/compare macth 3 event event </para>
+    </section><anchor xml:id="_group___t_i_m___d_m_a__sources_1ga59495cf79894dfe5e5b2029863aed956"/>    <section>
+    <title>TIM_DMA_CC4</title>
+<indexterm><primary>TIM_DMA_CC4</primary><secondary>TIM DMA Sources</secondary></indexterm>
+<indexterm><primary>TIM DMA Sources</primary><secondary>TIM_DMA_CC4</secondary></indexterm>
+<para><computeroutput>#define TIM_DMA_CC4   <link linkend="_group___peripheral___registers___bits___definition_1gaaba034412c54fa07024e516492748614">TIM_DIER_CC4DE</link></computeroutput></para>
+<para>DMA request is triggered by the capture/compare macth 4 event event </para>
+    </section><anchor xml:id="_group___t_i_m___d_m_a__sources_1gac5f4c56e944bda8ba0c23b97275020ba"/>    <section>
+    <title>TIM_DMA_COM</title>
+<indexterm><primary>TIM_DMA_COM</primary><secondary>TIM DMA Sources</secondary></indexterm>
+<indexterm><primary>TIM DMA Sources</primary><secondary>TIM_DMA_COM</secondary></indexterm>
+<para><computeroutput>#define TIM_DMA_COM   <link linkend="_group___peripheral___registers___bits___definition_1ga79c3fab9d33de953a0a7f7d6516c73bc">TIM_DIER_COMDE</link></computeroutput></para>
+<para>DMA request is triggered by the commutation event </para>
+    </section><anchor xml:id="_group___t_i_m___d_m_a__sources_1ga21912fd910242e0f63bf9b0953e41c63"/>    <section>
+    <title>TIM_DMA_TRIGGER</title>
+<indexterm><primary>TIM_DMA_TRIGGER</primary><secondary>TIM DMA Sources</secondary></indexterm>
+<indexterm><primary>TIM DMA Sources</primary><secondary>TIM_DMA_TRIGGER</secondary></indexterm>
+<para><computeroutput>#define TIM_DMA_TRIGGER   <link linkend="_group___peripheral___registers___bits___definition_1ga5a752d4295f100708df9b8be5a7f439d">TIM_DIER_TDE</link></computeroutput></para>
+<para>DMA request is triggered by the trigger event </para>
+    </section><anchor xml:id="_group___t_i_m___d_m_a__sources_1ga45816ad15a4f533027eb202ac0b9aaf5"/>    <section>
+    <title>TIM_DMA_UPDATE</title>
+<indexterm><primary>TIM_DMA_UPDATE</primary><secondary>TIM DMA Sources</secondary></indexterm>
+<indexterm><primary>TIM DMA Sources</primary><secondary>TIM_DMA_UPDATE</secondary></indexterm>
+<para><computeroutput>#define TIM_DMA_UPDATE   <link linkend="_group___peripheral___registers___bits___definition_1gab9f47792b1c2f123464a2955f445c811">TIM_DIER_UDE</link></computeroutput></para>
+<para>DMA request is triggered by the update event </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,345 @@
+\hypertarget{hd44780_8h}{}\doxysection{Inc/hd44780.h File Reference}
+\label{hd44780_8h}\index{Inc/hd44780.h@{Inc/hd44780.h}}
+
+
+Модуль \mbox{\hyperlink{hd44780_8h}{hd44780.\+h}} (заголовочный файл).  
+
+
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{hd44780_8h_ad6c5f28bd1fb5d669130af2d32561bab}\label{hd44780_8h_ad6c5f28bd1fb5d669130af2d32561bab}} 
+\#define \mbox{\hyperlink{hd44780_8h_ad6c5f28bd1fb5d669130af2d32561bab}{HD44780\+\_\+\+TIMEOUT\+\_\+\+CONTROL\+\_\+\+ENABLE}}
+\begin{DoxyCompactList}\small\item\em Uncomment if necessary to enable BF LCD timeout control. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8h_a2ec64caf663376703be89a5ee36d4372}\label{hd44780_8h_a2ec64caf663376703be89a5ee36d4372}} 
+\#define \mbox{\hyperlink{hd44780_8h_a2ec64caf663376703be89a5ee36d4372}{HD44780\+\_\+4\+BIT\+\_\+\+BUS\+\_\+\+REQURED}}
+\begin{DoxyCompactList}\small\item\em Uncomment if a 4-\/bit data bus is required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8h_ad62efa6fdf9a81def3c1e839ba926c9b}\label{hd44780_8h_ad62efa6fdf9a81def3c1e839ba926c9b}} 
+\#define \mbox{\hyperlink{hd44780_8h_ad62efa6fdf9a81def3c1e839ba926c9b}{HD44780\+\_\+\+BUSY\+\_\+\+TIMEOUT\+\_\+\+FLAG}}~0x01
+\begin{DoxyCompactList}\small\item\em BF flag timeout for HD44780. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8h_aea65f7cf75dd2099485351a9596231e9}\label{hd44780_8h_aea65f7cf75dd2099485351a9596231e9}} 
+\#define \mbox{\hyperlink{hd44780_8h_aea65f7cf75dd2099485351a9596231e9}{HD44780\+\_\+\+ROW\+\_\+\+SIZE}}~20
+\begin{DoxyCompactList}\small\item\em Number of symbols per row. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8h_a1f3b159c39a6eb32cf369d7f7f4f966f}\label{hd44780_8h_a1f3b159c39a6eb32cf369d7f7f4f966f}} 
+\#define \mbox{\hyperlink{hd44780_8h_a1f3b159c39a6eb32cf369d7f7f4f966f}{HD44780\+\_\+\+ROW\+\_\+\+NUM}}~4
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8h_a0506c770bbd5dd1f1b91001854db05e5}\label{hd44780_8h_a0506c770bbd5dd1f1b91001854db05e5}} 
+\#define {\bfseries HD44780\+\_\+\+SCREEN\+\_\+\+SIZE}~\mbox{\hyperlink{hd44780_8h_aea65f7cf75dd2099485351a9596231e9}{HD44780\+\_\+\+ROW\+\_\+\+SIZE}}$\ast$\mbox{\hyperlink{hd44780_8h_a1f3b159c39a6eb32cf369d7f7f4f966f}{HD44780\+\_\+\+ROW\+\_\+\+NUM}}
+\item 
+\mbox{\Hypertarget{hd44780_8h_a93caa1e3630cad75900f5261835e4d56}\label{hd44780_8h_a93caa1e3630cad75900f5261835e4d56}} 
+\#define \mbox{\hyperlink{hd44780_8h_a93caa1e3630cad75900f5261835e4d56}{HD44780\+\_\+\+LINE1\+\_\+\+START}}~0x00
+\begin{DoxyCompactList}\small\item\em The starting address of the first line of segments. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8h_a6b5d0601d4569184a7f4608b2c0ec6fc}\label{hd44780_8h_a6b5d0601d4569184a7f4608b2c0ec6fc}} 
+\#define \mbox{\hyperlink{hd44780_8h_a6b5d0601d4569184a7f4608b2c0ec6fc}{HD44780\+\_\+\+LINE2\+\_\+\+START}}~0x40
+\begin{DoxyCompactList}\small\item\em The starting address of the second line of segments. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8h_ae65fe8be10774ef3487686efd1f2901f}\label{hd44780_8h_ae65fe8be10774ef3487686efd1f2901f}} 
+\#define {\bfseries HD44780\+\_\+\+ROW1\+\_\+\+START}~\mbox{\hyperlink{hd44780_8h_a93caa1e3630cad75900f5261835e4d56}{HD44780\+\_\+\+LINE1\+\_\+\+START}}
+\item 
+\mbox{\Hypertarget{hd44780_8h_a500c3285414b0b6399a1ca7b898bc4f8}\label{hd44780_8h_a500c3285414b0b6399a1ca7b898bc4f8}} 
+\#define {\bfseries HD44780\+\_\+\+ROW2\+\_\+\+START}~\mbox{\hyperlink{hd44780_8h_a6b5d0601d4569184a7f4608b2c0ec6fc}{HD44780\+\_\+\+LINE2\+\_\+\+START}}
+\item 
+\mbox{\Hypertarget{hd44780_8h_a2e6e41a5157b36f25d1ced8776e07c93}\label{hd44780_8h_a2e6e41a5157b36f25d1ced8776e07c93}} 
+\#define {\bfseries HD44780\+\_\+\+ROW3\+\_\+\+START}~HD44780\+\_\+\+ROW1\+\_\+\+START + \mbox{\hyperlink{hd44780_8h_aea65f7cf75dd2099485351a9596231e9}{HD44780\+\_\+\+ROW\+\_\+\+SIZE}}
+\item 
+\mbox{\Hypertarget{hd44780_8h_a54dbb5d3e248b99f1e422e071302df13}\label{hd44780_8h_a54dbb5d3e248b99f1e422e071302df13}} 
+\#define {\bfseries HD44780\+\_\+\+ROW4\+\_\+\+START}~HD44780\+\_\+\+ROW2\+\_\+\+START + \mbox{\hyperlink{hd44780_8h_aea65f7cf75dd2099485351a9596231e9}{HD44780\+\_\+\+ROW\+\_\+\+SIZE}}
+\item 
+\mbox{\Hypertarget{hd44780_8h_a062f76352b7aa4da7a2ee283f03c0dbf}\label{hd44780_8h_a062f76352b7aa4da7a2ee283f03c0dbf}} 
+\#define {\bfseries HD44780\+\_\+\+RQDATA}()~do\{HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(HD44780\+\_\+\+RS\+\_\+\+GPIO\+\_\+\+Port, HD44780\+\_\+\+RS\+\_\+\+Pin, GPIO\+\_\+\+PIN\+\_\+\+SET);\}while(0)
+\item 
+\mbox{\Hypertarget{hd44780_8h_ab3c7976230d2c111f8a8ccb5320ad898}\label{hd44780_8h_ab3c7976230d2c111f8a8ccb5320ad898}} 
+\#define {\bfseries HD44780\+\_\+\+RQCMD}()~do\{HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(HD44780\+\_\+\+RS\+\_\+\+GPIO\+\_\+\+Port, HD44780\+\_\+\+RS\+\_\+\+Pin, GPIO\+\_\+\+PIN\+\_\+\+RESET);\}while(0)
+\item 
+\mbox{\Hypertarget{hd44780_8h_ad9a8363b60d03e26c91f7a6dba82b460}\label{hd44780_8h_ad9a8363b60d03e26c91f7a6dba82b460}} 
+\#define {\bfseries HD44780\+\_\+\+RQRD}()~do\{HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(HD44780\+\_\+\+RW\+\_\+\+GPIO\+\_\+\+Port, HD44780\+\_\+\+RW\+\_\+\+Pin, GPIO\+\_\+\+PIN\+\_\+\+SET);\}while(0)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a7330679d7adc15414792b6894c6581d3}\label{hd44780_8h_a7330679d7adc15414792b6894c6581d3}} 
+\#define {\bfseries HD44780\+\_\+\+RQWR}()~do\{HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(HD44780\+\_\+\+RW\+\_\+\+GPIO\+\_\+\+Port, HD44780\+\_\+\+RW\+\_\+\+Pin, GPIO\+\_\+\+PIN\+\_\+\+RESET);\}while(0)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a2a602a362f965142744d3c2a56977ccc}\label{hd44780_8h_a2a602a362f965142744d3c2a56977ccc}} 
+\#define {\bfseries HD44780\+\_\+\+STARTSTB}()~do\{HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(HD44780\+\_\+\+EN\+\_\+\+GPIO\+\_\+\+Port, HD44780\+\_\+\+EN\+\_\+\+Pin, GPIO\+\_\+\+PIN\+\_\+\+SET);\}while(0)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a5ee28285951b12054b9e05c5ff54d892}\label{hd44780_8h_a5ee28285951b12054b9e05c5ff54d892}} 
+\#define {\bfseries HD44780\+\_\+\+ENDSTB}()~do\{HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(HD44780\+\_\+\+EN\+\_\+\+GPIO\+\_\+\+Port, HD44780\+\_\+\+EN\+\_\+\+Pin, GPIO\+\_\+\+PIN\+\_\+\+RESET);\}while(0)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a088aef46329d3c2ae4db125b69e0a9ce}\label{hd44780_8h_a088aef46329d3c2ae4db125b69e0a9ce}} 
+\#define {\bfseries HD44780\+\_\+\+BACKLIGHT\+\_\+\+ON}()~do\{\+\_\+\+\_\+asm\+\_\+\+\_\+(\char`\"{}NOP\char`\"{});\}while(0)
+\item 
+\mbox{\Hypertarget{hd44780_8h_af78cef2acc664529627cabe4343c3e9c}\label{hd44780_8h_af78cef2acc664529627cabe4343c3e9c}} 
+\#define {\bfseries HD44780\+\_\+\+BACKLIGHT\+\_\+\+OFF}()~do\{\+\_\+\+\_\+asm\+\_\+\+\_\+(\char`\"{}NOP\char`\"{});\}while(0)
+\item 
+\mbox{\Hypertarget{hd44780_8h_ac426385f79c972de026097619dea0d2e}\label{hd44780_8h_ac426385f79c972de026097619dea0d2e}} 
+\#define {\bfseries HD44780\+\_\+\+CLEAR}()~HD44780\+\_\+write\+Command(0x01)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a82366d314f833e4db3b280386738c430}\label{hd44780_8h_a82366d314f833e4db3b280386738c430}} 
+\#define {\bfseries HD44780\+\_\+\+RESET}()~HD44780\+\_\+write\+Command(0x02)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a2fb5072cc4a6fa69e464197bb4aa93fe}\label{hd44780_8h_a2fb5072cc4a6fa69e464197bb4aa93fe}} 
+\#define {\bfseries HD44780\+\_\+\+AC\+\_\+\+DEC\+\_\+\+MODE}()~HD44780\+\_\+write\+Command(0x04)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a18ccb6a49e3314fbaa60f22b3dcc1e6f}\label{hd44780_8h_a18ccb6a49e3314fbaa60f22b3dcc1e6f}} 
+\#define {\bfseries HD44780\+\_\+\+AC\+\_\+\+INC\+\_\+\+MODE}()~HD44780\+\_\+write\+Command(0x06)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a35501d9637dd73d9c11edebe0c3c079b}\label{hd44780_8h_a35501d9637dd73d9c11edebe0c3c079b}} 
+\#define {\bfseries HD44780\+\_\+\+SHIFT\+\_\+\+LEFT\+\_\+\+MODE}()~HD44780\+\_\+write\+Command(0x05)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a4be012a47c171eee5ed3ac3e8ea07414}\label{hd44780_8h_a4be012a47c171eee5ed3ac3e8ea07414}} 
+\#define {\bfseries HD44780\+\_\+\+SHIFT\+\_\+\+RIGHT\+\_\+\+MODE}()~HD44780\+\_\+write\+Command(0x07)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a5548f4479cfde9439201eec47014a750}\label{hd44780_8h_a5548f4479cfde9439201eec47014a750}} 
+\#define {\bfseries HD44780\+\_\+\+DISPLAY\+\_\+\+ON}()~HD44780\+\_\+write\+Command(0x0C)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a10269e80a1dcb852dda4433eddb39934}\label{hd44780_8h_a10269e80a1dcb852dda4433eddb39934}} 
+\#define {\bfseries HD44780\+\_\+\+DISPLAY\+\_\+\+OFF}()~HD44780\+\_\+write\+Command(0x08)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a9f92dd346a4b837c4d0c828643141d96}\label{hd44780_8h_a9f92dd346a4b837c4d0c828643141d96}} 
+\#define {\bfseries HD44780\+\_\+\+CURSOR\+\_\+\+ON}()~HD44780\+\_\+write\+Command(0x0E)
+\item 
+\mbox{\Hypertarget{hd44780_8h_ab09b341dad6178e43b257a85670aa4dc}\label{hd44780_8h_ab09b341dad6178e43b257a85670aa4dc}} 
+\#define {\bfseries HD44780\+\_\+\+CURSOR\+\_\+\+OFF}()~HD44780\+\_\+write\+Command(0x08)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a65a9926482d689bda35f9bcdb3612beb}\label{hd44780_8h_a65a9926482d689bda35f9bcdb3612beb}} 
+\#define {\bfseries HD44780\+\_\+\+BLANK\+\_\+\+ON}()~HD44780\+\_\+write\+Command(0x0D)
+\item 
+\mbox{\Hypertarget{hd44780_8h_ac8afbfaba2550fa3d82f19a06ba06c23}\label{hd44780_8h_ac8afbfaba2550fa3d82f19a06ba06c23}} 
+\#define {\bfseries HD44780\+\_\+\+BLANK\+\_\+\+OFF}()~HD44780\+\_\+write\+Command(0x08)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a66a03f6b5c15300abd9b8474f051752c}\label{hd44780_8h_a66a03f6b5c15300abd9b8474f051752c}} 
+\#define {\bfseries HD44780\+\_\+\+SET\+\_\+\+CURSOR\+\_\+\+LEFT}()~HD44780\+\_\+write\+Command(0x10)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a08fda8daad463d471d2a392db5b52b30}\label{hd44780_8h_a08fda8daad463d471d2a392db5b52b30}} 
+\#define {\bfseries HD44780\+\_\+\+SET\+\_\+\+CURSOR\+\_\+\+RIGHT}()~HD44780\+\_\+write\+Command(0x14)
+\item 
+\mbox{\Hypertarget{hd44780_8h_adab6f04bfe60a9015350db3730634021}\label{hd44780_8h_adab6f04bfe60a9015350db3730634021}} 
+\#define {\bfseries HD44780\+\_\+\+SET\+\_\+\+DISPLAY\+\_\+\+LEFT}()~HD44780\+\_\+write\+Command(0x18)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a543aeef9ca0bcc9a20fc485407e34b40}\label{hd44780_8h_a543aeef9ca0bcc9a20fc485407e34b40}} 
+\#define {\bfseries HD44780\+\_\+\+SET\+\_\+\+DISPLAY\+\_\+\+RIGHT}()~HD44780\+\_\+write\+Command(0x1C)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a5b08e76d7d54e50cd8ef41bd8f638b6f}\label{hd44780_8h_a5b08e76d7d54e50cd8ef41bd8f638b6f}} 
+\#define {\bfseries HD44780\+\_\+\+SET\+\_\+\+CGR\+\_\+\+ADDR}(a)~HD44780\+\_\+write\+Command(0x40 $\vert$ a)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a15361cbb881231fcda71121d099893ca}\label{hd44780_8h_a15361cbb881231fcda71121d099893ca}} 
+\#define {\bfseries HD44780\+\_\+\+SET\+\_\+\+DDR\+\_\+\+ADDR}(a)~HD44780\+\_\+write\+Command(0x80 $\vert$ a)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a2e2c3dcb997bb422eab30f2680d5c1be}\label{hd44780_8h_a2e2c3dcb997bb422eab30f2680d5c1be}} 
+\#define {\bfseries HD44780\+\_\+\+SETUP}(param)~HD44780\+\_\+write\+Command(0x20 $\vert$ param)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a5380c68bfd7f937513e6387e57e1c32d}\label{hd44780_8h_a5380c68bfd7f937513e6387e57e1c32d}} 
+\#define {\bfseries HD44780\+\_\+\+BUS4}~0
+\item 
+\mbox{\Hypertarget{hd44780_8h_a780ae9605a1610889bbabcb80d15ddf7}\label{hd44780_8h_a780ae9605a1610889bbabcb80d15ddf7}} 
+\#define {\bfseries HD44780\+\_\+\+BUS8}~(1 $<$$<$ 4)
+\item 
+\mbox{\Hypertarget{hd44780_8h_af313af954d0367d6aa75deda3153f73d}\label{hd44780_8h_af313af954d0367d6aa75deda3153f73d}} 
+\#define {\bfseries HD44780\+\_\+1\+ROW}~0
+\item 
+\mbox{\Hypertarget{hd44780_8h_ae48d32e412b2c7d2607c1471acc12a1f}\label{hd44780_8h_ae48d32e412b2c7d2607c1471acc12a1f}} 
+\#define {\bfseries HD44780\+\_\+2\+ROW}~(1 $<$$<$ 3)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a66a8638d3403b1f936a6e220287bb22c}\label{hd44780_8h_a66a8638d3403b1f936a6e220287bb22c}} 
+\#define {\bfseries HD44780\+\_\+5x8\+CHAR}~0
+\item 
+\mbox{\Hypertarget{hd44780_8h_ac1877140c83f72aba4bcbab2bd6dbb49}\label{hd44780_8h_ac1877140c83f72aba4bcbab2bd6dbb49}} 
+\#define {\bfseries HD44780\+\_\+5x10\+CHAR}~(1 $<$$<$ 2)
+\item 
+\mbox{\Hypertarget{hd44780_8h_abc425bf62b492092ea370be0600e05f0}\label{hd44780_8h_abc425bf62b492092ea370be0600e05f0}} 
+\#define {\bfseries HD44780\+\_\+\+PAGE0}~(0x08)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a9928b8ac3576af92f47ddcc607b89551}\label{hd44780_8h_a9928b8ac3576af92f47ddcc607b89551}} 
+\#define {\bfseries HD44780\+\_\+\+PAGE1}~(0x0A)
+\item 
+\mbox{\Hypertarget{hd44780_8h_aa1d7e4edf79d0ab184cadd7ba24bfd06}\label{hd44780_8h_aa1d7e4edf79d0ab184cadd7ba24bfd06}} 
+\#define {\bfseries HD44780\+\_\+\+BUS\+\_\+\+MODE}~HD44780\+\_\+\+BUS4
+\item 
+\mbox{\Hypertarget{hd44780_8h_ae22e5ab2bb9069fb265a6ff8ca5d0254}\label{hd44780_8h_ae22e5ab2bb9069fb265a6ff8ca5d0254}} 
+\#define {\bfseries HD44780\+\_\+\+BUSY\+\_\+\+FLAG}~(1 $<$$<$ 7)
+\item 
+\mbox{\Hypertarget{hd44780_8h_ac13c83ce855f82b34352a6fd5a039af9}\label{hd44780_8h_ac13c83ce855f82b34352a6fd5a039af9}} 
+\#define {\bfseries HD44780\+\_\+\+BUSY\+\_\+\+TIMEOUT\+\_\+us}~1600
+\item 
+\mbox{\Hypertarget{hd44780_8h_ac9e463308fc898467935c22f2542dd19}\label{hd44780_8h_ac9e463308fc898467935c22f2542dd19}} 
+\#define {\bfseries HD44780\+\_\+\+BUSY\+\_\+\+TIMEOUT\+\_\+\+STEP\+\_\+us}~100
+\item 
+\mbox{\Hypertarget{hd44780_8h_a540cf0e4c78833a20d8982c0df7767c0}\label{hd44780_8h_a540cf0e4c78833a20d8982c0df7767c0}} 
+\#define {\bfseries HD44780\+\_\+\+BUSY\+\_\+\+TIMEOUT}~(HD44780\+\_\+\+BUSY\+\_\+\+TIMEOUT\+\_\+us / HD44780\+\_\+\+BUSY\+\_\+\+TIMEOUT\+\_\+\+STEP\+\_\+us)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hd44780_8h_a6eaa253877028275469e5e43602dc8f0}{HD44780\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initial LCD initialization based on HD44780 controller. initial GPIO for control LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hd44780_8h_aaa9f0cbe49cb343a54f40f98c09b0e3b}{HD44780\+\_\+set\+RS}} (uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em The RS line of the LCD is set to LOW / HIGH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hd44780_8h_ad9451dc8757dab4730c66a3182284e16}{HD44780\+\_\+set\+RW}} (uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em The RW line of the LCD is set to LOW / HIGH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hd44780_8h_af9b70fa23fe73f5b06cfe0c3b604adf6}{HD44780\+\_\+set\+EN}} (uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em The EN line of the LCD is set to LOW / HIGH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hd44780_8h_a64ccdfe09ae2e69293cff8d88250ebc4}{HD44780\+\_\+write\+Byte}} (uint8\+\_\+t data, uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em Write cycle for LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hd44780_8h_adf44985254edf6ac35b0e762c6500e6f}{HD44780\+\_\+set\+Data\+Low}} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Цикл чтения из ЖКИ. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8h_a0a62ddf3189809a4d4c681af25033a03}\label{hd44780_8h_a0a62ddf3189809a4d4c681af25033a03}} 
+void {\bfseries HD44780\+\_\+set\+Data\+High} (uint8\+\_\+t data)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a10b6032f7723fc2382f5d131e3d45501}\label{hd44780_8h_a10b6032f7723fc2382f5d131e3d45501}} 
+void {\bfseries HD44780\+\_\+set\+Data\+Bus} (uint8\+\_\+t data)
+\item 
+\mbox{\Hypertarget{hd44780_8h_ab72b8dd729aebe077a5669a143745187}\label{hd44780_8h_ab72b8dd729aebe077a5669a143745187}} 
+void {\bfseries HD44780\+\_\+write\+Command} (uint8\+\_\+t data)
+\item 
+\mbox{\Hypertarget{hd44780_8h_a55dc02a073cd4c9bf392fe4801907882}\label{hd44780_8h_a55dc02a073cd4c9bf392fe4801907882}} 
+void {\bfseries HD44780\+\_\+write\+Data} (uint8\+\_\+t data)
+\item 
+\mbox{\Hypertarget{hd44780_8h_ac14b6c687ba506dc3c2915159f42305c}\label{hd44780_8h_ac14b6c687ba506dc3c2915159f42305c}} 
+void {\bfseries us\+Delay} (uint16\+\_\+t us)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Модуль \mbox{\hyperlink{hd44780_8h}{hd44780.\+h}} (заголовочный файл). 
+
+Модуль драйвера ЖК дисплеем HD44780. \begin{DoxyAuthor}{Author}
+Donskih Dmitry, Артур Маркарян 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02.\+03.\+2019 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2019 -\/ 2021 Donskih Dmitriy. All rights reserved.\end{center} }
+
+This software component is licensed by Donskih Dmitriy under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hd44780_8h_a6eaa253877028275469e5e43602dc8f0}\label{hd44780_8h_a6eaa253877028275469e5e43602dc8f0}} 
+\index{hd44780.h@{hd44780.h}!HD44780\_init@{HD44780\_init}}
+\index{HD44780\_init@{HD44780\_init}!hd44780.h@{hd44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_init()}{HD44780\_init()}}
+{\footnotesize\ttfamily void HD44780\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initial LCD initialization based on HD44780 controller. initial GPIO for control LCD. 
+
+The controller manufacturer recommends the following initialization sequence\+:
+\begin{DoxyEnumerate}
+\item Maintain a pause of at least 15 ms between the establishment of the operating supply voltage ($>$ 4.\+5 V) and the performance of any operations with the controller.
+\item The first operation is to execute the command that selects the bus width (it must be the 0x30 command regardless of which interface you are going to use in the future), and do not check the value of the BF flag before performing this operation.
+\item Hold a pause of at least 4.\+1 ms.
+\item Repeat the command to select the bus width, also without checking the state of the BF flag before.
+\item Hold a pause of at least 100 µs.
+\item Repeat the command to select the bus width, also without checking the state of the BF flag before. These operations are initializing, and are designed to bring the controller to the initial operating mode (i.\+e. to switch to the operating mode with an 8-\/bit data bus) following this normal order (without pauses, but checking the BF flag), the operating modes are initialized , including the command for setting the bus width. 
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{hd44780_8h_adf44985254edf6ac35b0e762c6500e6f}\label{hd44780_8h_adf44985254edf6ac35b0e762c6500e6f}} 
+\index{hd44780.h@{hd44780.h}!HD44780\_setDataLow@{HD44780\_setDataLow}}
+\index{HD44780\_setDataLow@{HD44780\_setDataLow}!hd44780.h@{hd44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_setDataLow()}{HD44780\_setDataLow()}}
+{\footnotesize\ttfamily void HD44780\+\_\+set\+Data\+Low (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Цикл чтения из ЖКИ. 
+
+Перед циклом должны быть произведены установки линий\+: HD44780\+\_\+wire\+\_\+\+RS(команда/данные) HD44780\+\_\+wire\+\_\+\+RW(запись/чение) = 1 \begin{DoxyNote}{Note}
+ПРЕДУПРЕЖДЕНИЕ!!! Во избежание порчи данных в неиспользуемых линиях порта данных ЖКИ в 4-\/х битном режиме, желательно запрещать прерывания, код которых взаимодействует со свободными линиями порта, либо в прерывании запоминать состояние регистров порта, перед внесением изменений, и восстанавливать данные по завершению прерывания.
+\end{DoxyNote}
+Waiting cycle for LCD readiness. 
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 if the LCD is ready and there is no timeout, otherwise 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hd44780_8h_af9b70fa23fe73f5b06cfe0c3b604adf6}\label{hd44780_8h_af9b70fa23fe73f5b06cfe0c3b604adf6}} 
+\index{hd44780.h@{hd44780.h}!HD44780\_setEN@{HD44780\_setEN}}
+\index{HD44780\_setEN@{HD44780\_setEN}!hd44780.h@{hd44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_setEN()}{HD44780\_setEN()}}
+{\footnotesize\ttfamily void HD44780\+\_\+set\+EN (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+The EN line of the LCD is set to LOW / HIGH. 
+
+Function of setting the level on the EN line for LCD. 
+\begin{DoxyParams}{Parameters}
+{\em state} & (0 -\/ start of strobe, 1 -\/ end of strobe). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{hd44780_8h_aaa9f0cbe49cb343a54f40f98c09b0e3b}\label{hd44780_8h_aaa9f0cbe49cb343a54f40f98c09b0e3b}} 
+\index{hd44780.h@{hd44780.h}!HD44780\_setRS@{HD44780\_setRS}}
+\index{HD44780\_setRS@{HD44780\_setRS}!hd44780.h@{hd44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_setRS()}{HD44780\_setRS()}}
+{\footnotesize\ttfamily void HD44780\+\_\+set\+RS (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+The RS line of the LCD is set to LOW / HIGH. 
+
+Function of setting the level on the RS line for LCD. 
+\begin{DoxyParams}{Parameters}
+{\em state} & (0 -\/ requred CMD, 1 -\/ requred DATA) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{hd44780_8h_ad9451dc8757dab4730c66a3182284e16}\label{hd44780_8h_ad9451dc8757dab4730c66a3182284e16}} 
+\index{hd44780.h@{hd44780.h}!HD44780\_setRW@{HD44780\_setRW}}
+\index{HD44780\_setRW@{HD44780\_setRW}!hd44780.h@{hd44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_setRW()}{HD44780\_setRW()}}
+{\footnotesize\ttfamily void HD44780\+\_\+set\+RW (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+The RW line of the LCD is set to LOW / HIGH. 
+
+Function of setting the level on the RW line for LCD. 
+\begin{DoxyParams}{Parameters}
+{\em state} & (0 -\/ write mode, 1 -\/ read mode). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{hd44780_8h_a64ccdfe09ae2e69293cff8d88250ebc4}\label{hd44780_8h_a64ccdfe09ae2e69293cff8d88250ebc4}} 
+\index{hd44780.h@{hd44780.h}!HD44780\_writeByte@{HD44780\_writeByte}}
+\index{HD44780\_writeByte@{HD44780\_writeByte}!hd44780.h@{hd44780.h}}
+\doxysubsubsection{\texorpdfstring{HD44780\_writeByte()}{HD44780\_writeByte()}}
+{\footnotesize\ttfamily void HD44780\+\_\+write\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data,  }\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+Write cycle for LCD. 
+
+Write byte to the LCD data bus (command or data). 
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ byte to be written. \\
+\hline
+{\em state} & -\/ 0 if command byte, 1 -\/ if data. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}

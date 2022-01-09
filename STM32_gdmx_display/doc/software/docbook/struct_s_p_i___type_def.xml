@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_s_p_i___type_def" xml:lang="en-US">
+<title>SPI_TypeDef Struct Reference</title>
+<indexterm><primary>SPI_TypeDef</primary></indexterm>
+<para>
+
+<para>Serial Peripheral Interface. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f103xb.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_s_p_i___type_def_1ab0ec7102960640751d44e92ddac994f0"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">CR1</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_s_p_i___type_def_1afdfa307571967afb1d97943e982b6586"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">CR2</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_s_p_i___type_def_1af6aca2bbd40c0fb6df7c3aebe224a360"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">SR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_s_p_i___type_def_1a3df0d8dfcd1ec958659ffe21eb64fa94"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_s_p_i___type_def_1ace450027b4b33f921dd8edd3425a717c"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">CRCPR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_s_p_i___type_def_1a2cf9dcd9008924334f20f0dc6b57042e"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">RXCRCR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_s_p_i___type_def_1ab4e4328504fd66285df8264d410deefd"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">TXCRCR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_s_p_i___type_def_1aa0c41c8883cb0812d6aaf956c393584b"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">I2SCFGR</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Serial Peripheral Interface. </para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/CMSIS/Device/ST/STM32F1xx/Include/<link linkend="_stm32f103xb_8h">stm32f103xb.h</link></section>
+</section>

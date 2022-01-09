@@ -1,0 +1,33 @@
+.TH "xMessageBufferSpaceAvailable" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xMessageBufferSpaceAvailable \- xMessageBufferSpaceAvailable
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+\fBmessage_buffer\&.h\fP 
+.PP
+.nf
+
+size_t xMessageBufferSpaceAvailable( MessageBufferHandle_t xMessageBuffer ) );
+.fi
+.PP
+ Returns the number of bytes of free space in the message buffer\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxMessageBuffer\fP The handle of the message buffer being queried\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of bytes that can be written to the message buffer before the message buffer would be full\&. When a message is written to the message buffer an additional sizeof( size_t ) bytes are also written to store the message's length\&. sizeof( size_t ) is typically 4 bytes on a 32-bit architecture, so if xMessageBufferSpacesAvailable() returns 10, then the size of the largest message that can be written to the message buffer is 6 bytes\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

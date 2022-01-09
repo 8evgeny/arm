@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___l_t_d_c___aliased___functions" xml:lang="en-US">
+<title>HAL LTDC Aliased Functions maintained for legacy purpose</title>
+<indexterm><primary>HAL LTDC Aliased Functions maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___l_t_d_c___aliased___functions_1ga9db84d8e2888690969d2cb8db7b96d0e"/>#define <emphasis role="strong">HAL_LTDC_LineEvenCallback</emphasis>   HAL_LTDC_LineEventCallback</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___l_t_d_c___aliased___functions_1gad1e34250a1cd7818eb43a6ba601508c2"/>#define <emphasis role="strong">HAL_LTDC_Relaod</emphasis>   HAL_LTDC_Reload</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___l_t_d_c___aliased___functions_1gaab10aa276becaede12de0aa022179a19"/>#define <emphasis role="strong">HAL_LTDC_StructInitFromVideoConfig</emphasis>   HAL_LTDCEx_StructInitFromVideoConfig</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___l_t_d_c___aliased___functions_1gaae7d5975926b94dfa67bff3a3f7cae1c"/>#define <emphasis role="strong">HAL_LTDC_StructInitFromAdaptedCommandConfig</emphasis>   HAL_LTDCEx_StructInitFromAdaptedCommandConfig</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

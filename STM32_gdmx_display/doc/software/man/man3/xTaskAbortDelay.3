@@ -1,0 +1,35 @@
+.TH "xTaskAbortDelay" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xTaskAbortDelay \- xTaskAbortDelay
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+BaseType_t xTaskAbortDelay( TaskHandle_t xTask );
+.fi
+.PP
+.PP
+INCLUDE_xTaskAbortDelay must be defined as 1 in \fBFreeRTOSConfig\&.h\fP for this function to be available\&.
+.PP
+A task will enter the Blocked state when it is waiting for an event\&. The event it is waiting for can be a temporal event (waiting for a time), such as when vTaskDelay() is called, or an event on an object, such as when xQueueReceive() or ulTaskNotifyTake() is called\&. If the handle of a task that is in the Blocked state is used in a call to xTaskAbortDelay() then the task will leave the Blocked state, and return from whichever function call placed the task into the Blocked state\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxTask\fP The handle of the task to remove from the Blocked state\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the task referenced by xTask was not in the Blocked state then pdFAIL is returned\&. Otherwise pdPASS is returned\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

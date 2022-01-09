@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___c_a_n___aliased___defines" xml:lang="en-US">
+<title>HAL CAN Aliased Defines maintained for legacy purpose</title>
+<indexterm><primary>HAL CAN Aliased Defines maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_a_n___aliased___defines_1ga1b3d041dff9fed4dad75ed2a4a0e27e0"/>#define <emphasis role="strong">CAN_FilterFIFO0</emphasis>   CAN_FILTER_FIFO0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_a_n___aliased___defines_1gada8f9b3a9c88f36539aaeb457039e666"/>#define <emphasis role="strong">CAN_FilterFIFO1</emphasis>   CAN_FILTER_FIFO1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_a_n___aliased___defines_1ga0c57058d6d14b2baa24a4895975b1371"/>#define <emphasis role="strong">CAN_IT_RQCP0</emphasis>   CAN_IT_TME</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_a_n___aliased___defines_1ga42e5c8e89e0f06f3250916fcfb21dc22"/>#define <emphasis role="strong">CAN_IT_RQCP1</emphasis>   CAN_IT_TME</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_a_n___aliased___defines_1gacc634c3e29cdc9622081021dcda3127b"/>#define <emphasis role="strong">CAN_IT_RQCP2</emphasis>   CAN_IT_TME</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_a_n___aliased___defines_1ga60a32132df242146efd3e9f7a079f0f0"/>#define <emphasis role="strong">INAK_TIMEOUT</emphasis>   CAN_TIMEOUT_VALUE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_a_n___aliased___defines_1ga1bb8107706c8b4039ac55a122f3c65bb"/>#define <emphasis role="strong">SLAK_TIMEOUT</emphasis>   CAN_TIMEOUT_VALUE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_a_n___aliased___defines_1gad6f04a4437ad8e83b154523f20985796"/>#define <emphasis role="strong">CAN_TXSTATUS_FAILED</emphasis>   ((uint8_t)0x00U)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_a_n___aliased___defines_1ga01cd38ecda448043ba6a7870ab62fc2b"/>#define <emphasis role="strong">CAN_TXSTATUS_OK</emphasis>   ((uint8_t)0x01U)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_a_n___aliased___defines_1gaf63b6b17ef36507122e0eaac8395aa1c"/>#define <emphasis role="strong">CAN_TXSTATUS_PENDING</emphasis>   ((uint8_t)0x02U)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

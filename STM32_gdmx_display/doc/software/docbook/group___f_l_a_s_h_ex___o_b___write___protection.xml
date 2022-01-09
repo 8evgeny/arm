@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h_ex___o_b___write___protection" xml:lang="en-US">
+<title>Option Bytes Write Protection</title>
+<indexterm><primary>Option Bytes Write Protection</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___o_b___write___protection_1ga0cc7fc37c49d200418353f977e35139c">OB_WRP_ALLPAGES</link>   0xFFFFFFFFU</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h_ex___o_b___write___protection_1ga0cc7fc37c49d200418353f977e35139c"/>    <section>
+    <title>OB_WRP_ALLPAGES</title>
+<indexterm><primary>OB_WRP_ALLPAGES</primary><secondary>Option Bytes Write Protection</secondary></indexterm>
+<indexterm><primary>Option Bytes Write Protection</primary><secondary>OB_WRP_ALLPAGES</secondary></indexterm>
+<para><computeroutput>#define OB_WRP_ALLPAGES   0xFFFFFFFFU</computeroutput></para>
+<para>Write protection of all Pages </para>
+</section>
+</section>
+</section>

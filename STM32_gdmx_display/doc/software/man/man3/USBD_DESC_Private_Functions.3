@@ -1,0 +1,179 @@
+.TH "USBD_DESC_Private_Functions" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USBD_DESC_Private_Functions \- USBD_DESC_Private_Functions
+.PP
+ \- Private functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "uint8_t * \fBUSBD_FS_DeviceDescriptor\fP (USBD_SpeedTypeDef speed, uint16_t *length)"
+.br
+.RI "Return the device descriptor\&. "
+.ti -1c
+.RI "uint8_t * \fBUSBD_FS_LangIDStrDescriptor\fP (USBD_SpeedTypeDef speed, uint16_t *length)"
+.br
+.RI "Return the LangID string descriptor\&. "
+.ti -1c
+.RI "uint8_t * \fBUSBD_FS_ProductStrDescriptor\fP (USBD_SpeedTypeDef speed, uint16_t *length)"
+.br
+.RI "Return the product string descriptor\&. "
+.ti -1c
+.RI "uint8_t * \fBUSBD_FS_ManufacturerStrDescriptor\fP (USBD_SpeedTypeDef speed, uint16_t *length)"
+.br
+.RI "Return the manufacturer string descriptor\&. "
+.ti -1c
+.RI "uint8_t * \fBUSBD_FS_SerialStrDescriptor\fP (USBD_SpeedTypeDef speed, uint16_t *length)"
+.br
+.RI "Return the serial number string descriptor\&. "
+.ti -1c
+.RI "uint8_t * \fBUSBD_FS_ConfigStrDescriptor\fP (USBD_SpeedTypeDef speed, uint16_t *length)"
+.br
+.RI "Return the configuration string descriptor\&. "
+.ti -1c
+.RI "uint8_t * \fBUSBD_FS_InterfaceStrDescriptor\fP (USBD_SpeedTypeDef speed, uint16_t *length)"
+.br
+.RI "Return the interface string descriptor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Private functions\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "uint8_t * USBD_FS_ConfigStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)"
+
+.PP
+Return the configuration string descriptor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspeed\fP : Current device speed 
+.br
+\fIlength\fP : Pointer to data length variable 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIPointer\fP to descriptor buffer 
+.RE
+.PP
+
+.SS "uint8_t * USBD_FS_DeviceDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)"
+
+.PP
+Return the device descriptor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspeed\fP : Current device speed 
+.br
+\fIlength\fP : Pointer to data length variable 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIPointer\fP to descriptor buffer 
+.RE
+.PP
+
+.SS "uint8_t * USBD_FS_InterfaceStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)"
+
+.PP
+Return the interface string descriptor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspeed\fP : Current device speed 
+.br
+\fIlength\fP : Pointer to data length variable 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIPointer\fP to descriptor buffer 
+.RE
+.PP
+
+.SS "uint8_t * USBD_FS_LangIDStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)"
+
+.PP
+Return the LangID string descriptor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspeed\fP : Current device speed 
+.br
+\fIlength\fP : Pointer to data length variable 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIPointer\fP to descriptor buffer 
+.RE
+.PP
+
+.SS "uint8_t * USBD_FS_ManufacturerStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)"
+
+.PP
+Return the manufacturer string descriptor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspeed\fP : Current device speed 
+.br
+\fIlength\fP : Pointer to data length variable 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIPointer\fP to descriptor buffer 
+.RE
+.PP
+
+.SS "uint8_t * USBD_FS_ProductStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)"
+
+.PP
+Return the product string descriptor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspeed\fP : Current device speed 
+.br
+\fIlength\fP : Pointer to data length variable 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIPointer\fP to descriptor buffer 
+.RE
+.PP
+
+.SS "uint8_t * USBD_FS_SerialStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)"
+
+.PP
+Return the serial number string descriptor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspeed\fP : Current device speed 
+.br
+\fIlength\fP : Pointer to data length variable 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIPointer\fP to descriptor buffer 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

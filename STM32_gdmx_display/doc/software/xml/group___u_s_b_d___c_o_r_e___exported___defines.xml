@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___c_o_r_e___exported___defines" kind="group">
+    <compoundname>USBD_CORE_Exported_Defines</compoundname>
+    <title>USBD_CORE_Exported_Defines</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___u_s_b_d___c_o_r_e___exported___defines_1gae7364a789408417d945d5ca96679ccf7" prot="public" static="no">
+        <name>USBD_DEBUG_LEVEL</name>
+        <initializer>0U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="48" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

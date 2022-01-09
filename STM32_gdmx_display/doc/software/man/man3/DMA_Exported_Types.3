@@ -1,0 +1,128 @@
+.TH "DMA_Exported_Types" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_Exported_Types \- DMA Exported Types
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBDMA_InitTypeDef\fP"
+.br
+.RI "DMA Configuration Structure definition\&. "
+.ti -1c
+.RI "struct \fB__DMA_HandleTypeDef\fP"
+.br
+.RI "DMA handle Structure definition\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB__DMA_HandleTypeDef\fP \fBDMA_HandleTypeDef\fP"
+.br
+.RI "DMA handle Structure definition\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHAL_DMA_StateTypeDef\fP { \fBHAL_DMA_STATE_RESET\fP = 0x00U, \fBHAL_DMA_STATE_READY\fP = 0x01U, \fBHAL_DMA_STATE_BUSY\fP = 0x02U, \fBHAL_DMA_STATE_TIMEOUT\fP = 0x03U }"
+.br
+.RI "HAL DMA State structures definition\&. "
+.ti -1c
+.RI "enum \fBHAL_DMA_LevelCompleteTypeDef\fP { \fBHAL_DMA_FULL_TRANSFER\fP = 0x00U, \fBHAL_DMA_HALF_TRANSFER\fP = 0x01U }"
+.br
+.RI "HAL DMA Error Code structure definition\&. "
+.ti -1c
+.RI "enum \fBHAL_DMA_CallbackIDTypeDef\fP { \fBHAL_DMA_XFER_CPLT_CB_ID\fP = 0x00U, \fBHAL_DMA_XFER_HALFCPLT_CB_ID\fP = 0x01U, \fBHAL_DMA_XFER_ERROR_CB_ID\fP = 0x02U, \fBHAL_DMA_XFER_ABORT_CB_ID\fP = 0x03U, \fBHAL_DMA_XFER_ALL_CB_ID\fP = 0x04U }"
+.br
+.RI "HAL DMA Callback ID structure definition\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBHAL_DMA_CallbackIDTypeDef\fP"
+
+.PP
+HAL DMA Callback ID structure definition\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIHAL_DMA_XFER_CPLT_CB_ID \fP\fP
+Full transfer 
+.br
+ 
+.TP
+\fB\fIHAL_DMA_XFER_HALFCPLT_CB_ID \fP\fP
+Half transfer 
+.br
+ 
+.TP
+\fB\fIHAL_DMA_XFER_ERROR_CB_ID \fP\fP
+Error 
+.br
+ 
+.TP
+\fB\fIHAL_DMA_XFER_ABORT_CB_ID \fP\fP
+Abort 
+.br
+ 
+.TP
+\fB\fIHAL_DMA_XFER_ALL_CB_ID \fP\fP
+All 
+.br
+ 
+.SS "enum \fBHAL_DMA_LevelCompleteTypeDef\fP"
+
+.PP
+HAL DMA Error Code structure definition\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIHAL_DMA_FULL_TRANSFER \fP\fP
+Full transfer 
+.br
+ 
+.TP
+\fB\fIHAL_DMA_HALF_TRANSFER \fP\fP
+Half Transfer 
+.br
+ 
+.SS "enum \fBHAL_DMA_StateTypeDef\fP"
+
+.PP
+HAL DMA State structures definition\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIHAL_DMA_STATE_RESET \fP\fP
+DMA not yet initialized or disabled 
+.br
+ 
+.TP
+\fB\fIHAL_DMA_STATE_READY \fP\fP
+DMA initialized and ready for use 
+.br
+ 
+.TP
+\fB\fIHAL_DMA_STATE_BUSY \fP\fP
+DMA process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_DMA_STATE_TIMEOUT \fP\fP
+DMA timeout state 
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

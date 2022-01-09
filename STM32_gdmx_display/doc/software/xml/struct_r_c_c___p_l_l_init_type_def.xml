@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_r_c_c___p_l_l_init_type_def" kind="struct" language="C++" prot="public">
+    <compoundname>RCC_PLLInitTypeDef</compoundname>
+    <includes refid="stm32f1xx__hal__rcc_8h" local="no">stm32f1xx_hal_rcc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_r_c_c___p_l_l_init_type_def_1ab3bb33f461bb409576e1c899c962e0b0" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t PLLState</definition>
+        <argsstring></argsstring>
+        <name>PLLState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PLLState: The new state of the PLL. This parameter can be a value of <ref refid="group___r_c_c___p_l_l___config" kindref="compound">PLL Config</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="51" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_c_c___p_l_l_init_type_def_1a418ecda4a355c6a161e4893a7bc1897f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t PLLSource</definition>
+        <argsstring></argsstring>
+        <name>PLLSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PLLSource: PLL entry clock source. This parameter must be a value of <ref refid="group___r_c_c___p_l_l___clock___source" kindref="compound">PLL Clock Source</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="54" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_c_c___p_l_l_init_type_def_1a4a57e48e8e939695ff2a76456e6360ef" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t PLLMUL</definition>
+        <argsstring></argsstring>
+        <name>PLLMUL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PLLMUL: Multiplication factor for PLL VCO input clock This parameter must be a value of <ref refid="group___r_c_c_ex___p_l_l___multiplication___factor" kindref="compound">PLL Multiplication Factor</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="57" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RCC PLL configuration structure definition. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="49" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="50" bodyend="59"/>
+    <listofallmembers>
+      <member refid="struct_r_c_c___p_l_l_init_type_def_1a4a57e48e8e939695ff2a76456e6360ef" prot="public" virt="non-virtual"><scope>RCC_PLLInitTypeDef</scope><name>PLLMUL</name></member>
+      <member refid="struct_r_c_c___p_l_l_init_type_def_1a418ecda4a355c6a161e4893a7bc1897f" prot="public" virt="non-virtual"><scope>RCC_PLLInitTypeDef</scope><name>PLLSource</name></member>
+      <member refid="struct_r_c_c___p_l_l_init_type_def_1ab3bb33f461bb409576e1c899c962e0b0" prot="public" virt="non-virtual"><scope>RCC_PLLInitTypeDef</scope><name>PLLState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

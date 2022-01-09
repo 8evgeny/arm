@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex___m_c_ox___clock___config" xml:lang="en-US">
+<title>RCC Extended MCOx Clock Config</title>
+<indexterm><primary>RCC Extended MCOx Clock Config</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c_ex___m_c_ox___clock___config_1ga7e5f7f1efc92794b6f0e96068240b45e">__HAL_RCC_MCO1_CONFIG</link>(__MCOCLKSOURCE__,  __MCODIV__)                    MODIFY_REG(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1gaf2d7212d83114d355736613e6dc1dbde">RCC_CFGR_MCO</link>, (__MCOCLKSOURCE__))</para>
+
+<para>Macro to configure the MCO clock. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c_ex___m_c_ox___clock___config_1ga7e5f7f1efc92794b6f0e96068240b45e"/>    <section>
+    <title>__HAL_RCC_MCO1_CONFIG</title>
+<indexterm><primary>__HAL_RCC_MCO1_CONFIG</primary><secondary>RCC Extended MCOx Clock Config</secondary></indexterm>
+<indexterm><primary>RCC Extended MCOx Clock Config</primary><secondary>__HAL_RCC_MCO1_CONFIG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_MCO1_CONFIG( __MCOCLKSOURCE__,  __MCODIV__)                    MODIFY_REG(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1gaf2d7212d83114d355736613e6dc1dbde">RCC_CFGR_MCO</link>, (__MCOCLKSOURCE__))</computeroutput></para><para>
+
+<para>Macro to configure the MCO clock. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;MCOCLKSOURCE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the MCO clock source. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>RCC_MCO1SOURCE_NOCLOCK No clock selected as MCO clock </para>
+</listitem>
+<listitem>
+<para>RCC_MCO1SOURCE_SYSCLK System clock (SYSCLK) selected as MCO clock </para>
+</listitem>
+<listitem>
+<para>RCC_MCO1SOURCE_HSI HSI selected as MCO clock </para>
+</listitem>
+<listitem>
+<para>RCC_MCO1SOURCE_HSE HSE selected as MCO clock </para>
+</listitem>
+<listitem>
+<para>RCC_MCO1SOURCE_PLLCLK PLL clock divided by 2 selected as MCO clock </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;MCODIV&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the MCO clock prescaler. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>RCC_MCODIV_1 No division applied on MCO clock source </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

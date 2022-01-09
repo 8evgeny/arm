@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_queue_definition" kind="struct" language="C++" prot="public">
+    <compoundname>QueueDefinition</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_queue_definition_1adfa75f7bc22a3a58a907676c0164a1c1" prot="public" static="no" mutable="no">
+        <type>int8_t *</type>
+        <definition>int8_t* pcHead</definition>
+        <argsstring></argsstring>
+        <name>pcHead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="90" column="8" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1aec0a6e253e1e05c107bf2a77c1bed940" prot="public" static="no" mutable="no">
+        <type>int8_t *</type>
+        <definition>int8_t* pcTail</definition>
+        <argsstring></argsstring>
+        <name>pcTail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="91" column="8" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1aa018576801d60d3a78ffacab53dc8b79" prot="public" static="no" mutable="no">
+        <type>int8_t *</type>
+        <definition>int8_t* pcWriteTo</definition>
+        <argsstring></argsstring>
+        <name>pcWriteTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="92" column="8" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1af716fa534e7d09f91df1fbdd8ab7a693" prot="public" static="no" mutable="no">
+        <type>int8_t *</type>
+        <definition>int8_t* pcReadFrom</definition>
+        <argsstring></argsstring>
+        <name>pcReadFrom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="96" column="8" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1ae3c791284df4f19b849e56f972b13db4" prot="public" static="no" mutable="no">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxRecursiveCallCount</definition>
+        <argsstring></argsstring>
+        <name>uxRecursiveCallCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="97" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1a8848c797a4a2ac14eec7e474c21e6906" prot="public" static="no" mutable="no">
+        <type>union QueueDefinition::@57</type>
+        <definition>union QueueDefinition::@57 u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="98" column="3"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1a5cfd8ae6db5da134ed16405043a0d898" prot="public" static="no" mutable="no">
+        <type><ref refid="structx_l_i_s_t" kindref="compound">List_t</ref></type>
+        <definition>List_t xTasksWaitingToSend</definition>
+        <argsstring></argsstring>
+        <name>xTasksWaitingToSend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="100" column="8" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1a8ad185d9d83713c774e6a897580d8313" prot="public" static="no" mutable="no">
+        <type><ref refid="structx_l_i_s_t" kindref="compound">List_t</ref></type>
+        <definition>List_t xTasksWaitingToReceive</definition>
+        <argsstring></argsstring>
+        <name>xTasksWaitingToReceive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="101" column="8" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1afb61b3f2247402ed3b8b159311c408b7" prot="public" static="no" mutable="no">
+        <type>UBaseType_t</type>
+        <definition>volatile UBaseType_t uxMessagesWaiting</definition>
+        <argsstring></argsstring>
+        <name>uxMessagesWaiting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="103" column="22" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1a619169da78e43281a73fbdf13f9eddfb" prot="public" static="no" mutable="no">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxLength</definition>
+        <argsstring></argsstring>
+        <name>uxLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="104" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1a216cc99516d7f82573f6cb19f5a9f626" prot="public" static="no" mutable="no">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxItemSize</definition>
+        <argsstring></argsstring>
+        <name>uxItemSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="105" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1a2017e9e2e81e1fd301fa88236614653e" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>volatile int8_t cRxLock</definition>
+        <argsstring></argsstring>
+        <name>cRxLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="107" column="17" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_queue_definition_1a77c52e94671f477fd2942db97e20838b" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>volatile int8_t cTxLock</definition>
+        <argsstring></argsstring>
+        <name>cTxLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="108" column="17" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>QueueDefinition</label>
+        <link refid="struct_queue_definition"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>xTasksWaitingToReceive</edgelabel>
+          <edgelabel>xTasksWaitingToSend</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>xMINI_LIST_ITEM</label>
+        <link refid="structx_m_i_n_i___l_i_s_t___i_t_e_m"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>pxNext</edgelabel>
+          <edgelabel>pxPrevious</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xLIST</label>
+        <link refid="structx_l_i_s_t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>xListEnd</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>pxIndex</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>xLIST_ITEM</label>
+        <link refid="structx_l_i_s_t___i_t_e_m"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>pxNext</edgelabel>
+          <edgelabel>pxPrevious</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/queue.c" line="88" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/queue.c" bodystart="89" bodyend="123"/>
+    <listofallmembers>
+      <member refid="struct_queue_definition_1a2017e9e2e81e1fd301fa88236614653e" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>cRxLock</name></member>
+      <member refid="struct_queue_definition_1a77c52e94671f477fd2942db97e20838b" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>cTxLock</name></member>
+      <member refid="struct_queue_definition_1adfa75f7bc22a3a58a907676c0164a1c1" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>pcHead</name></member>
+      <member refid="struct_queue_definition_1af716fa534e7d09f91df1fbdd8ab7a693" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>pcReadFrom</name></member>
+      <member refid="struct_queue_definition_1aec0a6e253e1e05c107bf2a77c1bed940" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>pcTail</name></member>
+      <member refid="struct_queue_definition_1aa018576801d60d3a78ffacab53dc8b79" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>pcWriteTo</name></member>
+      <member refid="struct_queue_definition_1a8848c797a4a2ac14eec7e474c21e6906" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>u</name></member>
+      <member refid="struct_queue_definition_1a216cc99516d7f82573f6cb19f5a9f626" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>uxItemSize</name></member>
+      <member refid="struct_queue_definition_1a619169da78e43281a73fbdf13f9eddfb" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>uxLength</name></member>
+      <member refid="struct_queue_definition_1afb61b3f2247402ed3b8b159311c408b7" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>uxMessagesWaiting</name></member>
+      <member refid="struct_queue_definition_1ae3c791284df4f19b849e56f972b13db4" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>uxRecursiveCallCount</name></member>
+      <member refid="struct_queue_definition_1a8ad185d9d83713c774e6a897580d8313" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>xTasksWaitingToReceive</name></member>
+      <member refid="struct_queue_definition_1a5cfd8ae6db5da134ed16405043a0d898" prot="public" virt="non-virtual"><scope>QueueDefinition</scope><name>xTasksWaitingToSend</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

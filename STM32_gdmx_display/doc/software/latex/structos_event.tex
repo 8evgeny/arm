@@ -1,0 +1,47 @@
+\hypertarget{structos_event}{}\doxysection{os\+Event Struct Reference}
+\label{structos_event}\index{osEvent@{osEvent}}
+
+
+{\ttfamily \#include $<$cmsis\+\_\+os.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structos_event_ad477a289f1f03ac45407b64268d707d3}\label{structos_event_ad477a289f1f03ac45407b64268d707d3}} 
+os\+Status \mbox{\hyperlink{structos_event_ad477a289f1f03ac45407b64268d707d3}{status}}
+\begin{DoxyCompactList}\small\item\em status code\+: event or error information \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structos_event_ad924224263902f0738e7cf7a2bb448a6}\label{structos_event_ad924224263902f0738e7cf7a2bb448a6}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint32\_t \mbox{\hyperlink{structos_event_a9e0a00edabf3b8a5dafff624fff7bbfc}{v}}\\
+\>\>{\em message as 32-\/bit value }\\
+\>void $\ast$ \mbox{\hyperlink{structos_event_a117104b82864d3b23ec174af6d392709}{p}}\\
+\>\>{\em message or mail as void pointer }\\
+\>int32\_t \mbox{\hyperlink{structos_event_ad0dda1bf7e74f1576261d493fba232b6}{signals}}\\
+\>\>{\em signal flags }\\
+\} \mbox{\hyperlink{structos_event_ad924224263902f0738e7cf7a2bb448a6}{value}}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em event value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structos_event_a3ace9121f1502dfa1bfb6612072322bc}\label{structos_event_a3ace9121f1502dfa1bfb6612072322bc}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{structos__mail_q__cb}{osMailQId}} \mbox{\hyperlink{structos_event_ac86175a4b1706bee596f3018322df26e}{mail\_id}}\\
+\>\>{\em mail id obtained by osMailCreate }\\
+\>osMessageQId \mbox{\hyperlink{structos_event_af394cbe21dde7377974e63af38cd87b0}{message\_id}}\\
+\>\>{\em message id obtained by osMessageCreate }\\
+\} \mbox{\hyperlink{structos_event_a3ace9121f1502dfa1bfb6612072322bc}{def}}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em event definition \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Event structure contains detailed information about an event. \begin{DoxyNote}{Note}
+MUST REMAIN UNCHANGED\+: {\bfseries{os\+\_\+event}} shall be consistent in every CMSIS-\/\+RTOS. However the struct may be extended at the end. 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Middlewares/\+Third\+\_\+\+Party/\+Free\+RTOS/\+Source/\+CMSIS\+\_\+\+RTOS/cmsis\+\_\+os.\+h\end{DoxyCompactItemize}

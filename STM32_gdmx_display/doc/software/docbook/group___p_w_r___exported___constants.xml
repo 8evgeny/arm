@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___p_w_r___exported___constants" xml:lang="en-US">
+<title>PWR Exported Constants</title>
+<indexterm><primary>PWR Exported Constants</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___p_w_r___p_v_d__detection__level">PWR PVD detection level</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___p_w_r___p_v_d___mode">PWR PVD Mode</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___p_w_r___wake_up___pins">PWR WakeUp Pins</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___p_w_r___regulator__state__in___s_l_e_e_p___s_t_o_p__mode">PWR Regulator state in SLEEP/STOP mode</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___p_w_r___s_l_e_e_p__mode__entry">PWR SLEEP mode entry</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___p_w_r___s_t_o_p__mode__entry">PWR STOP mode entry</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___p_w_r___flag">PWR Flag</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

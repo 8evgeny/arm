@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___i_w_d_g___aliased___macros" xml:lang="en-US">
+<title>HAL IWDG Aliased Macros maintained for legacy purpose</title>
+<indexterm><primary>HAL IWDG Aliased Macros maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___i_w_d_g___aliased___macros_1ga6854cc0a200e2e37d927e76f643a8f6a"/>#define <emphasis role="strong">__HAL_IWDG_ENABLE_WRITE_ACCESS</emphasis>   IWDG_ENABLE_WRITE_ACCESS</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___i_w_d_g___aliased___macros_1gaf3dfc0b4463f19c4ff31b02ae039861a"/>#define <emphasis role="strong">__HAL_IWDG_DISABLE_WRITE_ACCESS</emphasis>   IWDG_DISABLE_WRITE_ACCESS</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

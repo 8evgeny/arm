@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___s_p_i___aliased___defines" xml:lang="en-US">
+<title>HAL SPI Aliased Defines maintained for legacy purpose</title>
+<indexterm><primary>HAL SPI Aliased Defines maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_p_i___aliased___defines_1ga609b88c83bda8bbb4ba9a7f673c034a2"/>#define <emphasis role="strong">SPI_TIMODE_DISABLED</emphasis>   SPI_TIMODE_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_p_i___aliased___defines_1ga18e6aa4b66deab2bb37a7ada4f9e89ee"/>#define <emphasis role="strong">SPI_TIMODE_ENABLED</emphasis>   SPI_TIMODE_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_p_i___aliased___defines_1ga8b6d5ee09247d44354bf099a44a8e00c"/>#define <emphasis role="strong">SPI_CRCCALCULATION_DISABLED</emphasis>   SPI_CRCCALCULATION_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_p_i___aliased___defines_1gae5a75572823d5dd97c6d1117902c47a1"/>#define <emphasis role="strong">SPI_CRCCALCULATION_ENABLED</emphasis>   SPI_CRCCALCULATION_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_p_i___aliased___defines_1ga7b740c1df3416560df8ced2a55c0e65c"/>#define <emphasis role="strong">SPI_NSS_PULSE_DISABLED</emphasis>   SPI_NSS_PULSE_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_p_i___aliased___defines_1gafde578b0ee1d235743693a73045abc14"/>#define <emphasis role="strong">SPI_NSS_PULSE_ENABLED</emphasis>   SPI_NSS_PULSE_ENABLE</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

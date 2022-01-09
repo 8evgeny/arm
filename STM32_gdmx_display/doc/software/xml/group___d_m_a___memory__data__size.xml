@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___d_m_a___memory__data__size" kind="group">
+    <compoundname>DMA_Memory_data_size</compoundname>
+    <title>DMA Memory data size</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___d_m_a___memory__data__size_1ga9ed07bddf736298eba11508382ea4d51" prot="public" static="no">
+        <name>DMA_MDATAALIGN_BYTE</name>
+        <initializer>0x00000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Memory data alignment: Byte <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="202" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a___memory__data__size_1ga2c7355971c0da34a7ffe50ec87403071" prot="public" static="no">
+        <name>DMA_MDATAALIGN_HALFWORD</name>
+        <initializer>((uint32_t)<ref refid="group___peripheral___registers___bits___definition_1ga600d3f8200fc42ea6e1c7c8abbd327ad" kindref="member">DMA_CCR_MSIZE_0</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Memory data alignment: HalfWord </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="203" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a___memory__data__size_1ga8812da819f18c873249074f3920220b2" prot="public" static="no">
+        <name>DMA_MDATAALIGN_WORD</name>
+        <initializer>((uint32_t)<ref refid="group___peripheral___registers___bits___definition_1ga60b9958fbde96f69160ca7edf92d4c27" kindref="member">DMA_CCR_MSIZE_1</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Memory data alignment: Word <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="204" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

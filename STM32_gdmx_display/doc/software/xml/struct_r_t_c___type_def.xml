@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_r_t_c___type_def" kind="struct" language="C++" prot="public">
+    <compoundname>RTC_TypeDef</compoundname>
+    <includes refid="stm32f103xb_8h" local="no">stm32f103xb.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_r_t_c___type_def_1acc2f82d559cfd955b5a68c1b54c5fc35" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CRH</definition>
+        <argsstring></argsstring>
+        <name>CRH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="446" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_t_c___type_def_1ae3e1b95965ce8c9f06490047cb9967a9" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CRL</definition>
+        <argsstring></argsstring>
+        <name>CRL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="447" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_t_c___type_def_1a6d8529957b9401e614203b2389f290a4" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t PRLH</definition>
+        <argsstring></argsstring>
+        <name>PRLH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="448" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_t_c___type_def_1a4d5d3c1969bb190e095335b98d11c197" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t PRLL</definition>
+        <argsstring></argsstring>
+        <name>PRLL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="449" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_t_c___type_def_1a0c7aed7845db21cbed704a636f53e023" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DIVH</definition>
+        <argsstring></argsstring>
+        <name>DIVH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="450" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_t_c___type_def_1a36bb5c9678921fde2b5bc811d310a8c5" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DIVL</definition>
+        <argsstring></argsstring>
+        <name>DIVL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="451" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_t_c___type_def_1abeeeb09de7999ec993e00d136f679de0" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CNTH</definition>
+        <argsstring></argsstring>
+        <name>CNTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="452" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_t_c___type_def_1aaea1cf878c3e7ab37309e673eb50101b" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CNTL</definition>
+        <argsstring></argsstring>
+        <name>CNTL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="453" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_t_c___type_def_1a2525206b87d6b19a6d0b565c99f711f8" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t ALRH</definition>
+        <argsstring></argsstring>
+        <name>ALRH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="454" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_t_c___type_def_1a13af31dc4addc634ff6d562cd00ac1e6" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t ALRL</definition>
+        <argsstring></argsstring>
+        <name>ALRL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="455" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="455" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Real-Time Clock. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="444" column="1" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="445" bodyend="456"/>
+    <listofallmembers>
+      <member refid="struct_r_t_c___type_def_1a2525206b87d6b19a6d0b565c99f711f8" prot="public" virt="non-virtual"><scope>RTC_TypeDef</scope><name>ALRH</name></member>
+      <member refid="struct_r_t_c___type_def_1a13af31dc4addc634ff6d562cd00ac1e6" prot="public" virt="non-virtual"><scope>RTC_TypeDef</scope><name>ALRL</name></member>
+      <member refid="struct_r_t_c___type_def_1abeeeb09de7999ec993e00d136f679de0" prot="public" virt="non-virtual"><scope>RTC_TypeDef</scope><name>CNTH</name></member>
+      <member refid="struct_r_t_c___type_def_1aaea1cf878c3e7ab37309e673eb50101b" prot="public" virt="non-virtual"><scope>RTC_TypeDef</scope><name>CNTL</name></member>
+      <member refid="struct_r_t_c___type_def_1acc2f82d559cfd955b5a68c1b54c5fc35" prot="public" virt="non-virtual"><scope>RTC_TypeDef</scope><name>CRH</name></member>
+      <member refid="struct_r_t_c___type_def_1ae3e1b95965ce8c9f06490047cb9967a9" prot="public" virt="non-virtual"><scope>RTC_TypeDef</scope><name>CRL</name></member>
+      <member refid="struct_r_t_c___type_def_1a0c7aed7845db21cbed704a636f53e023" prot="public" virt="non-virtual"><scope>RTC_TypeDef</scope><name>DIVH</name></member>
+      <member refid="struct_r_t_c___type_def_1a36bb5c9678921fde2b5bc811d310a8c5" prot="public" virt="non-virtual"><scope>RTC_TypeDef</scope><name>DIVL</name></member>
+      <member refid="struct_r_t_c___type_def_1a6d8529957b9401e614203b2389f290a4" prot="public" virt="non-virtual"><scope>RTC_TypeDef</scope><name>PRLH</name></member>
+      <member refid="struct_r_t_c___type_def_1a4d5d3c1969bb190e095335b98d11c197" prot="public" virt="non-virtual"><scope>RTC_TypeDef</scope><name>PRLL</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

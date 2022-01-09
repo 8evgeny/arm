@@ -1,0 +1,58 @@
+.TH "DBGMCU_Freeze_Unfreeze" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DBGMCU_Freeze_Unfreeze \- Freeze Unfreeze Peripherals in Debug mode
+.PP
+ \- Freeze/Unfreeze Peripherals in Debug mode Note: On devices STM32F10xx8 and STM32F10xxB, STM32F101xC/D/E and STM32F103xC/D/E, STM32F101xF/G and STM32F103xF/G STM32F10xx4 and STM32F10xx6 Debug registers DBGMCU_IDCODE and DBGMCU_CR are accessible only in debug mode (not accessible by the user software in normal mode)\&. Refer to errata sheet of these devices for more details\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_FREEZE_TIM2\fP()   SET_BIT(DBGMCU\->CR, \fBDBGMCU_CR_DBG_TIM2_STOP\fP)"
+.br
+.RI "TIM2 Peripherals Debug mode\&. "
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_UNFREEZE_TIM2\fP()   CLEAR_BIT(DBGMCU\->CR, \fBDBGMCU_CR_DBG_TIM2_STOP\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_FREEZE_TIM3\fP()   SET_BIT(DBGMCU\->CR, \fBDBGMCU_CR_DBG_TIM3_STOP\fP)"
+.br
+.RI "TIM3 Peripherals Debug mode\&. "
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_UNFREEZE_TIM3\fP()   CLEAR_BIT(DBGMCU\->CR, \fBDBGMCU_CR_DBG_TIM3_STOP\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_FREEZE_WWDG\fP()   SET_BIT(DBGMCU\->CR, \fBDBGMCU_CR_DBG_WWDG_STOP\fP)"
+.br
+.RI "WWDG Peripherals Debug mode\&. "
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_UNFREEZE_WWDG\fP()   CLEAR_BIT(DBGMCU\->CR, \fBDBGMCU_CR_DBG_WWDG_STOP\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_FREEZE_IWDG\fP()   SET_BIT(DBGMCU\->CR, \fBDBGMCU_CR_DBG_IWDG_STOP\fP)"
+.br
+.RI "IWDG Peripherals Debug mode\&. "
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_UNFREEZE_IWDG\fP()   CLEAR_BIT(DBGMCU\->CR, \fBDBGMCU_CR_DBG_IWDG_STOP\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_FREEZE_I2C1_TIMEOUT\fP()   SET_BIT(DBGMCU\->CR, \fBDBGMCU_CR_DBG_I2C1_SMBUS_TIMEOUT\fP)"
+.br
+.RI "I2C1 Peripherals Debug mode\&. "
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_UNFREEZE_I2C1_TIMEOUT\fP()   CLEAR_BIT(DBGMCU\->CR, \fBDBGMCU_CR_DBG_I2C1_SMBUS_TIMEOUT\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Freeze/Unfreeze Peripherals in Debug mode Note: On devices STM32F10xx8 and STM32F10xxB, STM32F101xC/D/E and STM32F103xC/D/E, STM32F101xF/G and STM32F103xF/G STM32F10xx4 and STM32F10xx6 Debug registers DBGMCU_IDCODE and DBGMCU_CR are accessible only in debug mode (not accessible by the user software in normal mode)\&. Refer to errata sheet of these devices for more details\&. 
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c_ex___periph___clock___selection" kind="group">
+    <compoundname>RCCEx_Periph_Clock_Selection</compoundname>
+    <title>Periph Clock Selection</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___r_c_c_ex___periph___clock___selection_1gaede03aaafb5319bb39767bf50182406f" prot="public" static="no">
+        <name>RCC_PERIPHCLK_RTC</name>
+        <initializer>0x00000001U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" line="331" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c_ex___periph___clock___selection_1gaa234e496ace2f188b106dc15a95ed6bc" prot="public" static="no">
+        <name>RCC_PERIPHCLK_ADC</name>
+        <initializer>0x00000002U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" line="332" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

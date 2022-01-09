@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___d_e_s_c___private___defines" kind="group">
+    <compoundname>USBD_DESC_Private_Defines</compoundname>
+    <title>USBD_DESC_Private_Defines</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___private___defines_1gac5251397ce2246b546b472cd802e6d62" prot="public" static="no">
+        <name>USBD_VID</name>
+        <initializer>1155</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_desc.c" line="66" column="9" bodyfile="Src/usbd_desc.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___private___defines_1ga070dd542d4d914e86fdf103fa5fdd72f" prot="public" static="no">
+        <name>USBD_LANGID_STRING</name>
+        <initializer>1033</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_desc.c" line="67" column="9" bodyfile="Src/usbd_desc.c" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___private___defines_1gaee0c9fd7e8265b90126028919cd863a6" prot="public" static="no">
+        <name>USBD_MANUFACTURER_STRING</name>
+        <initializer>&quot;Git-Video&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_desc.c" line="68" column="9" bodyfile="Src/usbd_desc.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___private___defines_1gaa6f9e36da39c9881963cabf42df4d216" prot="public" static="no">
+        <name>USBD_PID_FS</name>
+        <initializer>22336</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_desc.c" line="69" column="9" bodyfile="Src/usbd_desc.c" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___private___defines_1gaa11017e20e3a2f1ef891b86212c4b730" prot="public" static="no">
+        <name>USBD_PRODUCT_STRING_FS</name>
+        <initializer>&quot;GDMX-Info panel&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_desc.c" line="70" column="9" bodyfile="Src/usbd_desc.c" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___private___defines_1gaca5e66e8b6c89a896f6ad16f9a68128f" prot="public" static="no">
+        <name>USBD_CONFIGURATION_STRING_FS</name>
+        <initializer>&quot;CDC Config&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_desc.c" line="71" column="9" bodyfile="Src/usbd_desc.c" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___private___defines_1ga2562ccc9162020b79f07d813eba10ddb" prot="public" static="no">
+        <name>USBD_INTERFACE_STRING_FS</name>
+        <initializer>&quot;CDC Interface&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_desc.c" line="72" column="9" bodyfile="Src/usbd_desc.c" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Private defines. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

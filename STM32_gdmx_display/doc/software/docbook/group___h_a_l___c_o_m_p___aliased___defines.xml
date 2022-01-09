@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___c_o_m_p___aliased___defines" xml:lang="en-US">
+<title>HAL COMP Aliased Defines maintained for legacy purpose</title>
+<indexterm><primary>HAL COMP Aliased Defines maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_m_p___aliased___defines_1gab9e0400639ad2179b63e519e08741c05"/>#define <emphasis role="strong">COMP_WINDOWMODE_DISABLED</emphasis>   COMP_WINDOWMODE_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_m_p___aliased___defines_1gab481c80a4a4235ca54d2dd39db70926c"/>#define <emphasis role="strong">COMP_WINDOWMODE_ENABLED</emphasis>   COMP_WINDOWMODE_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_m_p___aliased___defines_1gaa53df1592afaa8d2a7d2f417273a50a7"/>#define <emphasis role="strong">COMP_EXTI_LINE_COMP1_EVENT</emphasis>   COMP_EXTI_LINE_COMP1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_m_p___aliased___defines_1gae128dfe3b90b2c0e51cde7de5987f9ef"/>#define <emphasis role="strong">COMP_EXTI_LINE_COMP2_EVENT</emphasis>   COMP_EXTI_LINE_COMP2</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_m_p___aliased___defines_1ga30c7118ab9b9cbfa8e40870ee9e747b6"/>#define <emphasis role="strong">COMP_EXTI_LINE_COMP3_EVENT</emphasis>   COMP_EXTI_LINE_COMP3</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_m_p___aliased___defines_1ga7e682dbcdc2deedaa2b2854b7256b742"/>#define <emphasis role="strong">COMP_EXTI_LINE_COMP4_EVENT</emphasis>   COMP_EXTI_LINE_COMP4</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_m_p___aliased___defines_1gad0def6714ebe83bd131d6f62f12bf6b7"/>#define <emphasis role="strong">COMP_EXTI_LINE_COMP5_EVENT</emphasis>   COMP_EXTI_LINE_COMP5</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_m_p___aliased___defines_1ga92c1033ac0c380c9f879660af7c62616"/>#define <emphasis role="strong">COMP_EXTI_LINE_COMP6_EVENT</emphasis>   COMP_EXTI_LINE_COMP6</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_m_p___aliased___defines_1ga7f18b1fe252971b1976e906c2c7d4be7"/>#define <emphasis role="strong">COMP_EXTI_LINE_COMP7_EVENT</emphasis>   COMP_EXTI_LINE_COMP7</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___c_o_m_p___aliased___defines_1ga74dbd1a72efdaee104678a256383976f"/>#define <emphasis role="strong">COMP_OUTPUT_COMP6TIM2OCREFCLR</emphasis>   COMP_OUTPUT_COMP6_TIM2OCREFCLR</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___d_e_f___exported___macros" kind="group">
+    <compoundname>USBD_DEF_Exported_Macros</compoundname>
+    <title>USBD_DEF_Exported_Macros</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___u_s_b_d___d_e_f___exported___macros_1ga6353cdd236e585cb110e3fbb9bcb05e8" prot="public" static="no">
+        <name>SWAPBYTE</name>
+        <param><defname>addr</defname></param>
+        <initializer>                               (((uint16_t)(*((uint8_t *)(addr)))) + \
+                               (((uint16_t)(*(((uint8_t *)(addr)) + 1U))) &lt;&lt; 8U))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="272" column="10" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_f___exported___macros_1ga373c90214222e94d07424e7a8d41b92b" prot="public" static="no">
+        <name>LOBYTE</name>
+        <param><defname>x</defname></param>
+        <initializer>((uint8_t)((x) &amp; 0x00FFU))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="275" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_f___exported___macros_1gaa1ba73e45dd29eeb526a52d9a3336f35" prot="public" static="no">
+        <name>HIBYTE</name>
+        <param><defname>x</defname></param>
+        <initializer>((uint8_t)(((x) &amp; 0xFF00U) &gt;&gt; 8U))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="276" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_f___exported___macros_1ga3acffbd305ee72dcd4593c0d8af64a4f" prot="public" static="no">
+        <name>MIN</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a) &lt; (b)) ? (a) : (b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="277" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_f___exported___macros_1gafa99ec4acc4ecb2dc3c2d05da15d0e3f" prot="public" static="no">
+        <name>MAX</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a) &gt; (b)) ? (a) : (b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="278" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_f___exported___macros_1gaaa12b03c58e2eb296bd7aa915ee540f3" prot="public" static="no">
+        <name>__ALIGN_END</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="303" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

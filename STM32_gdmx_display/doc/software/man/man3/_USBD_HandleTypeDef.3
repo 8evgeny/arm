@@ -1,0 +1,79 @@
+.TH "_USBD_HandleTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_USBD_HandleTypeDef
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBid\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdev_config\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdev_default_config\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdev_config_status\fP"
+.br
+.ti -1c
+.RI "USBD_SpeedTypeDef \fBdev_speed\fP"
+.br
+.ti -1c
+.RI "\fBUSBD_EndpointTypeDef\fP \fBep_in\fP [16]"
+.br
+.ti -1c
+.RI "\fBUSBD_EndpointTypeDef\fP \fBep_out\fP [16]"
+.br
+.ti -1c
+.RI "uint32_t \fBep0_state\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBep0_data_len\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdev_state\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdev_old_state\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdev_address\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdev_connection_status\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdev_test_mode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdev_remote_wakeup\fP"
+.br
+.ti -1c
+.RI "\fBUSBD_SetupReqTypedef\fP \fBrequest\fP"
+.br
+.ti -1c
+.RI "\fBUSBD_DescriptorsTypeDef\fP * \fBpDesc\fP"
+.br
+.ti -1c
+.RI "\fBUSBD_ClassTypeDef\fP * \fBpClass\fP"
+.br
+.ti -1c
+.RI "void * \fBpClassData\fP"
+.br
+.ti -1c
+.RI "void * \fBpUserData\fP"
+.br
+.ti -1c
+.RI "void * \fBpData\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

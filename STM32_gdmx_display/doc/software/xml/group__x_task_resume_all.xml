@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__x_task_resume_all" kind="group">
+    <compoundname>xTaskResumeAll</compoundname>
+    <title>xTaskResumeAll</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>task. h <preformatted>BaseType_t xTaskResumeAll( void );</preformatted></para>
+<para>Resumes scheduler activity after it was suspended by a call to vTaskSuspendAll().</para>
+<para>xTaskResumeAll() only resumes the scheduler. It does not unsuspend tasks that were previously suspended by a call to vTaskSuspend().</para>
+<para><simplesect kind="return"><para>If resuming the scheduler caused a context switch then pdTRUE is returned, otherwise pdFALSE is returned.</para>
+</simplesect>
+Example usage: <preformatted>
+void vTask1( void * pvParameters )
+{
+    for( ;; )
+    {
+     // Task code goes here.
+
+     // ...
+
+     // At some point the task wants to perform a long operation during
+     // which it does not want to get swapped out.  It cannot use
+     // taskENTER_CRITICAL ()/taskEXIT_CRITICAL () as the length of the
+     // operation may cause interrupts to be missed - including the
+     // ticks.
+
+     // Prevent the real time kernel swapping out the task.
+     vTaskSuspendAll ();
+
+     // Perform the operation here.  There is no need to use critical
+     // sections as we have all the microcontroller processing time.
+     // During this time interrupts will still operate and the real
+     // time kernel tick count will be maintained.
+
+     // ...
+
+     // The operation is complete.  Restart the kernel.  We want to force
+     // a context switch - but there is no point if resuming the scheduler
+     // caused a context switch already.
+     if( !xTaskResumeAll () )
+     {
+          taskYIELD ();
+     }
+    }
+}
+  </preformatted> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

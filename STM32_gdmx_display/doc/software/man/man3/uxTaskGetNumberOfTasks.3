@@ -1,0 +1,26 @@
+.TH "uxTaskGetNumberOfTasks" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+uxTaskGetNumberOfTasks \- uxTaskGetNumberOfTasks
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+uint16_t uxTaskGetNumberOfTasks( void );
+.fi
+.PP
+.PP
+\fBReturns\fP
+.RS 4
+The number of tasks that the real time kernel is currently managing\&. This includes all ready, blocked and suspended tasks\&. A task that has been deleted but not yet freed by the idle task will also be included in the count\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

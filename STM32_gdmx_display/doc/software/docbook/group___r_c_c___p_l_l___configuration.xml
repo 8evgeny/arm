@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___p_l_l___configuration" xml:lang="en-US">
+<title>PLL Configuration</title>
+<indexterm><primary>PLL Configuration</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c___p_l_l___configuration_1gaaf196a2df41b0bcbc32745c2b218e696">__HAL_RCC_PLL_ENABLE</link>()   (*(<link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) RCC_CR_PLLON_BB = ENABLE)</para>
+
+<para>Macro to enable the main PLL. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___p_l_l___configuration_1ga718a6afcb1492cc2796be78445a7d5ab">__HAL_RCC_PLL_DISABLE</link>()   (*(<link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) RCC_CR_PLLON_BB = DISABLE)</para>
+
+<para>Macro to disable the main PLL. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___p_l_l___configuration_1gadff34131a73367bbf345984ea5fdecca">__HAL_RCC_PLL_CONFIG</link>(__RCC_PLLSOURCE__,  __PLLMUL__)             MODIFY_REG(RCC-&gt;CFGR, (<link linkend="_group___peripheral___registers___bits___definition_1gaba4a5dbbd286f07a97f5aa6e6f3f6a57">RCC_CFGR_PLLSRC</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga9735c088436b547fff3baae2bbaa0426">RCC_CFGR_PLLMULL</link>),((__RCC_PLLSOURCE__) | (__PLLMUL__) ))</para>
+
+<para>Macro to configure the main PLL clock source and multiplication factors. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___p_l_l___configuration_1ga3ea1390f8124e2b3b8d53e95541d6e53">__HAL_RCC_GET_PLL_OSCSOURCE</link>()   ((uint32_t)(READ_BIT(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1gaba4a5dbbd286f07a97f5aa6e6f3f6a57">RCC_CFGR_PLLSRC</link>)))</para>
+
+<para>Get oscillator clock selected as PLL input clock. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c___p_l_l___configuration_1ga3ea1390f8124e2b3b8d53e95541d6e53"/>    <section>
+    <title>__HAL_RCC_GET_PLL_OSCSOURCE</title>
+<indexterm><primary>__HAL_RCC_GET_PLL_OSCSOURCE</primary><secondary>PLL Configuration</secondary></indexterm>
+<indexterm><primary>PLL Configuration</primary><secondary>__HAL_RCC_GET_PLL_OSCSOURCE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_GET_PLL_OSCSOURCE( )   ((uint32_t)(READ_BIT(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1gaba4a5dbbd286f07a97f5aa6e6f3f6a57">RCC_CFGR_PLLSRC</link>)))</computeroutput></para><para>
+
+<para>Get oscillator clock selected as PLL input clock. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>The</entry>
+                                <entry>
+<para>clock source used for PLL entry. The returned value can be one of the following: <itemizedlist>
+<listitem>
+<para><link linkend="_group___r_c_c___p_l_l___clock___source_1ga09fff12a4e92f4da5980321b7f99b632">RCC_PLLSOURCE_HSI_DIV2</link> HSI oscillator clock selected as PLL input clock </para>
+</listitem>
+<listitem>
+<para><link linkend="_group___r_c_c___p_l_l___clock___source_1ga197cea7fe5c2db26fe7fcdb0f99dd4d7">RCC_PLLSOURCE_HSE</link> HSE oscillator clock selected as PLL input clock </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___r_c_c___p_l_l___configuration_1gadff34131a73367bbf345984ea5fdecca"/>    <section>
+    <title>__HAL_RCC_PLL_CONFIG</title>
+<indexterm><primary>__HAL_RCC_PLL_CONFIG</primary><secondary>PLL Configuration</secondary></indexterm>
+<indexterm><primary>PLL Configuration</primary><secondary>__HAL_RCC_PLL_CONFIG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_PLL_CONFIG( __RCC_PLLSOURCE__,  __PLLMUL__)             MODIFY_REG(RCC-&gt;CFGR, (<link linkend="_group___peripheral___registers___bits___definition_1gaba4a5dbbd286f07a97f5aa6e6f3f6a57">RCC_CFGR_PLLSRC</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga9735c088436b547fff3baae2bbaa0426">RCC_CFGR_PLLMULL</link>),((__RCC_PLLSOURCE__) | (__PLLMUL__) ))</computeroutput></para><para>
+
+<para>Macro to configure the main PLL clock source and multiplication factors. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function must be used only when the main PLL is disabled.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;RCC_PLLSOURCE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the PLL entry clock source. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para><link linkend="_group___r_c_c___p_l_l___clock___source_1ga09fff12a4e92f4da5980321b7f99b632">RCC_PLLSOURCE_HSI_DIV2</link> HSI oscillator clock selected as PLL clock entry </para>
+</listitem>
+<listitem>
+<para><link linkend="_group___r_c_c___p_l_l___clock___source_1ga197cea7fe5c2db26fe7fcdb0f99dd4d7">RCC_PLLSOURCE_HSE</link> HSE oscillator clock selected as PLL clock entry </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>&lt;strong&gt;PLLMUL&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the multiplication factor for PLL VCO output clock This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>RCC_PLL_MUL4 PLLVCO = PLL clock entry x 4 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL6 PLLVCO = PLL clock entry x 6 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL2 PLLVCO = PLL clock entry x 2 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL3 PLLVCO = PLL clock entry x 3 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL10 PLLVCO = PLL clock entry x 10 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL11 PLLVCO = PLL clock entry x 11 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL12 PLLVCO = PLL clock entry x 12 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL13 PLLVCO = PLL clock entry x 13 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL14 PLLVCO = PLL clock entry x 14 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL15 PLLVCO = PLL clock entry x 15 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL16 PLLVCO = PLL clock entry x 16 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL8 PLLVCO = PLL clock entry x 8 </para>
+</listitem>
+<listitem>
+<para>RCC_PLL_MUL9 PLLVCO = PLL clock entry x 9 </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___r_c_c___p_l_l___configuration_1ga718a6afcb1492cc2796be78445a7d5ab"/>    <section>
+    <title>__HAL_RCC_PLL_DISABLE</title>
+<indexterm><primary>__HAL_RCC_PLL_DISABLE</primary><secondary>PLL Configuration</secondary></indexterm>
+<indexterm><primary>PLL Configuration</primary><secondary>__HAL_RCC_PLL_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_PLL_DISABLE( )   (*(<link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) RCC_CR_PLLON_BB = DISABLE)</computeroutput></para><para>
+
+<para>Macro to disable the main PLL. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>The main PLL can not be disabled if it is used as system clock source </para>
+</note>
+</para>
+    </section><anchor xml:id="_group___r_c_c___p_l_l___configuration_1gaaf196a2df41b0bcbc32745c2b218e696"/>    <section>
+    <title>__HAL_RCC_PLL_ENABLE</title>
+<indexterm><primary>__HAL_RCC_PLL_ENABLE</primary><secondary>PLL Configuration</secondary></indexterm>
+<indexterm><primary>PLL Configuration</primary><secondary>__HAL_RCC_PLL_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_PLL_ENABLE( )   (*(<link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) RCC_CR_PLLON_BB = ENABLE)</computeroutput></para><para>
+
+<para>Macro to enable the main PLL. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>After enabling the main PLL, the application software should wait on PLLRDY flag to be set indicating that PLL clock is stable and can be used as system clock source. </para>
+
+<para>The main PLL is disabled by hardware when entering STOP and STANDBY modes. </para>
+</note>
+</para>
+</section>
+</section>
+</section>

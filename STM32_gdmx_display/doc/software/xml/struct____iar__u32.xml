@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct____iar__u32" kind="struct" language="C++" prot="public">
+    <compoundname>__iar_u32</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct____iar__u32_1a9e0a00edabf3b8a5dafff624fff7bbfc" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/cmsis_iccarm.h" line="216" column="34" bodyfile="Drivers/CMSIS/Include/cmsis_iccarm.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Include/cmsis_iccarm.h" line="216" column="9" bodyfile="Drivers/CMSIS/Include/cmsis_iccarm.h" bodystart="216" bodyend="216"/>
+    <listofallmembers>
+      <member refid="struct____iar__u32_1a9e0a00edabf3b8a5dafff624fff7bbfc" prot="public" virt="non-virtual"><scope>__iar_u32</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

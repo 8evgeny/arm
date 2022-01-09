@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_u_s_b_d___descriptors_type_def" xml:lang="en-US">
+<title>USBD_DescriptorsTypeDef Struct Reference</title>
+<indexterm><primary>USBD_DescriptorsTypeDef</primary></indexterm>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_u_s_b_d___descriptors_type_def_1ab550dc07586f56657f2b017dfde4f49d"/>uint8_t *(* <emphasis role="strong">GetDeviceDescriptor</emphasis> )(USBD_SpeedTypeDef speed, uint16_t *length)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_u_s_b_d___descriptors_type_def_1a386d2f7940a3708f452d60d10ddef70d"/>uint8_t *(* <emphasis role="strong">GetLangIDStrDescriptor</emphasis> )(USBD_SpeedTypeDef speed, uint16_t *length)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_u_s_b_d___descriptors_type_def_1a64d1606dcc22533e10b0e98c06a07035"/>uint8_t *(* <emphasis role="strong">GetManufacturerStrDescriptor</emphasis> )(USBD_SpeedTypeDef speed, uint16_t *length)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_u_s_b_d___descriptors_type_def_1ab4dbf8400f2403f311af1a9276e09870"/>uint8_t *(* <emphasis role="strong">GetProductStrDescriptor</emphasis> )(USBD_SpeedTypeDef speed, uint16_t *length)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_u_s_b_d___descriptors_type_def_1a9493bca6898cfbef9c9939fb34a098da"/>uint8_t *(* <emphasis role="strong">GetSerialStrDescriptor</emphasis> )(USBD_SpeedTypeDef speed, uint16_t *length)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_u_s_b_d___descriptors_type_def_1a5b4fde728dbe1a7526691b5cda6f3692"/>uint8_t *(* <emphasis role="strong">GetConfigurationStrDescriptor</emphasis> )(USBD_SpeedTypeDef speed, uint16_t *length)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_u_s_b_d___descriptors_type_def_1a93c2770edf30c6a1229d3601df9d2960"/>uint8_t *(* <emphasis role="strong">GetInterfaceStrDescriptor</emphasis> )(USBD_SpeedTypeDef speed, uint16_t *length)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Middlewares/ST/STM32_USB_Device_Library/Core/Inc/<link linkend="_usbd__def_8h">usbd_def.h</link></section>

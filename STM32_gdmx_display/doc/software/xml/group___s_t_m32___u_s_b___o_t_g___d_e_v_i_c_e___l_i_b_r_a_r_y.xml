@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___s_t_m32___u_s_b___o_t_g___d_e_v_i_c_e___l_i_b_r_a_r_y" kind="group">
+    <compoundname>STM32_USB_OTG_DEVICE_LIBRARY</compoundname>
+    <title>STM32_USB_OTG_DEVICE_LIBRARY</title>
+    <innergroup refid="group___u_s_b_d___c_d_c___i_f">USBD_CDC_IF</innergroup>
+    <innergroup refid="group___u_s_b_d___d_e_s_c">USBD_DESC</innergroup>
+    <briefdescription>
+<para>For Usb device. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Usb device library.</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

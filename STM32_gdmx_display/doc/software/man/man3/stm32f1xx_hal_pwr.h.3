@@ -1,0 +1,258 @@
+.TH "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \- Header file of PWR HAL module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f1xx_hal_def\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBPWR_PVDTypeDef\fP"
+.br
+.RI "PWR PVD configuration structure definition\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPWR_EXTI_LINE_PVD\fP   ((uint32_t)0x00010000)"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVDLEVEL_0\fP   PWR_CR_PLS_2V2"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVDLEVEL_1\fP   PWR_CR_PLS_2V3"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVDLEVEL_2\fP   PWR_CR_PLS_2V4"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVDLEVEL_3\fP   PWR_CR_PLS_2V5"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVDLEVEL_4\fP   PWR_CR_PLS_2V6"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVDLEVEL_5\fP   PWR_CR_PLS_2V7"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVDLEVEL_6\fP   PWR_CR_PLS_2V8"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVDLEVEL_7\fP   PWR_CR_PLS_2V9"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_NORMAL\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_IT_RISING\fP   0x00010001U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_IT_FALLING\fP   0x00010002U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_IT_RISING_FALLING\fP   0x00010003U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_EVENT_RISING\fP   0x00020001U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_EVENT_FALLING\fP   0x00020002U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_EVENT_RISING_FALLING\fP   0x00020003U"
+.br
+.ti -1c
+.RI "#define \fBPWR_WAKEUP_PIN1\fP   \fBPWR_CSR_EWUP\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MAINREGULATOR_ON\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBPWR_LOWPOWERREGULATOR_ON\fP   \fBPWR_CR_LPDS\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_SLEEPENTRY_WFI\fP   ((uint8_t)0x01)"
+.br
+.ti -1c
+.RI "#define \fBPWR_SLEEPENTRY_WFE\fP   ((uint8_t)0x02)"
+.br
+.ti -1c
+.RI "#define \fBPWR_STOPENTRY_WFI\fP   ((uint8_t)0x01)"
+.br
+.ti -1c
+.RI "#define \fBPWR_STOPENTRY_WFE\fP   ((uint8_t)0x02)"
+.br
+.ti -1c
+.RI "#define \fBPWR_FLAG_WU\fP   \fBPWR_CSR_WUF\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_FLAG_SB\fP   \fBPWR_CSR_SBF\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_FLAG_PVDO\fP   \fBPWR_CSR_PVDO\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_GET_FLAG\fP(__FLAG__)   ((PWR\->CSR & (__FLAG__)) == (__FLAG__))"
+.br
+.RI "Check PWR flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_CLEAR_FLAG\fP(__FLAG__)   SET_BIT(PWR\->CR, ((__FLAG__) << 2))"
+.br
+.RI "Clear the PWR's pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_ENABLE_IT\fP()   SET_BIT(EXTI\->IMR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Enable interrupt on PVD Exti Line 16\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_DISABLE_IT\fP()   CLEAR_BIT(EXTI\->IMR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Disable interrupt on PVD Exti Line 16\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_ENABLE_EVENT\fP()   SET_BIT(EXTI\->EMR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Enable event on PVD Exti Line 16\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_DISABLE_EVENT\fP()   CLEAR_BIT(EXTI\->EMR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Disable event on PVD Exti Line 16\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP()   SET_BIT(EXTI\->FTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "PVD EXTI line configuration: set falling edge trigger\&. 
+.br
+ "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP()   CLEAR_BIT(EXTI\->FTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Disable the PVD Extended Interrupt Falling Trigger\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP()   SET_BIT(EXTI\->RTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "PVD EXTI line configuration: set rising edge trigger\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP()   CLEAR_BIT(EXTI\->RTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Disable the PVD Extended Interrupt Rising Trigger\&. This parameter can be: "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_FALLING_EDGE\fP()   \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP();\fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP();"
+.br
+.RI "PVD EXTI line configuration: set rising & falling edge trigger\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_FALLING_EDGE\fP()   \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP();\fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP();"
+.br
+.RI "Disable the PVD Extended Interrupt Rising & Falling Trigger\&. This parameter can be: "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_GET_FLAG\fP()   (EXTI\->PR & (\fBPWR_EXTI_LINE_PVD\fP))"
+.br
+.RI "Check whether the specified PVD EXTI interrupt flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_CLEAR_FLAG\fP()   (EXTI\->PR = (\fBPWR_EXTI_LINE_PVD\fP))"
+.br
+.RI "Clear the PVD EXTI flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_GENERATE_SWIT\fP()   SET_BIT(EXTI\->SWIER, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Generate a Software interrupt on selected EXTI line\&. "
+.ti -1c
+.RI "#define \fBIS_PWR_PVD_LEVEL\fP(LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_PVD_MODE\fP(MODE)"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_WAKEUP_PIN\fP(PIN)   (((PIN) == PWR_WAKEUP_PIN1))"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_REGULATOR\fP(REGULATOR)"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_SLEEP_ENTRY\fP(ENTRY)   (((ENTRY) == PWR_SLEEPENTRY_WFI) || ((ENTRY) == PWR_SLEEPENTRY_WFE))"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_STOP_ENTRY\fP(ENTRY)   (((ENTRY) == PWR_STOPENTRY_WFI) || ((ENTRY) == PWR_STOPENTRY_WFE))"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBHAL_PWR_DeInit\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_EnableBkUpAccess\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_DisableBkUpAccess\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_ConfigPVD\fP (\fBPWR_PVDTypeDef\fP *sConfigPVD)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_EnablePVD\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_DisablePVD\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_EnableWakeUpPin\fP (uint32_t WakeUpPinx)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_DisableWakeUpPin\fP (uint32_t WakeUpPinx)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_EnterSTOPMode\fP (uint32_t Regulator, uint8_t STOPEntry)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_EnterSLEEPMode\fP (uint32_t Regulator, uint8_t SLEEPEntry)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_EnterSTANDBYMode\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_EnableSleepOnExit\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_DisableSleepOnExit\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_EnableSEVOnPend\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_DisableSEVOnPend\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_PVD_IRQHandler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_PWR_PVDCallback\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file of PWR HAL module\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2016 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___exported___functions" xml:lang="en-US">
+<title>TIM Exported Functions</title>
+<indexterm><primary>TIM Exported Functions</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___t_i_m___exported___functions___group8">TIM Peripheral Control functions</link></para>
+
+<para>Peripheral Control functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m___exported___functions___group9">TIM Callbacks functions</link></para>
+
+<para>TIM Callbacks functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m___exported___functions___group10">TIM Peripheral State functions</link></para>
+
+<para>Peripheral State functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m___exported___functions___group1">TIM Time Base functions</link></para>
+
+<para>Time Base functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m___exported___functions___group2">TIM Output Compare functions</link></para>
+
+<para>TIM Output Compare functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m___exported___functions___group3">TIM PWM functions</link></para>
+
+<para>TIM PWM functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m___exported___functions___group4">TIM Input Capture functions</link></para>
+
+<para>TIM Input Capture functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m___exported___functions___group5">TIM One Pulse functions</link></para>
+
+<para>TIM One Pulse functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m___exported___functions___group6">TIM Encoder functions</link></para>
+
+<para>TIM Encoder functions. </para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m___exported___functions___group7">TIM IRQ handler management</link></para>
+
+<para>IRQ handler management. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

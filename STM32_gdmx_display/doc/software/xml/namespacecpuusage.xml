@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacecpuusage" kind="namespace" language="Python">
+    <compoundname>cpuusage</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="cpuusage_8py_1a72b7be185a5187b39f946fec92aea55c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>usagelist</definition>
+        <argsstring></argsstring>
+        <name>usagelist</name>
+        <initializer>= psutil.cpu_percent(interval=1, percpu=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpuusage.py" line="5" column="1" bodyfile="cpuusage.py" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cpuusage_8py_1acb559820d9ca11295b4500f179ef6392" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpuusage.py" line="6" column="1" bodyfile="cpuusage.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cpuusage_8py_1af41c9d01b4378f52371581950f5bbca6" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpuusage.py" line="7" column="1" bodyfile="cpuusage.py" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cpuusage.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

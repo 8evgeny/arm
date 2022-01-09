@@ -1,0 +1,9 @@
+INCLUDEPATH += $$DevSupport/inc
+INCLUDEPATH += $$DevSupport/startup/arm
+INCLUDEPATH += $$DevSupport/../../CoreSupport/CM3
+INCLUDEPATH += $$SPL
+INCLUDEPATH += $$SPL/inc
+INCLUDEPATH += $$SPL/src
+INCLUDEPATH += $$SPL/inc/USB_Library
+INCLUDEPATH += $$SPL/../../MDR32Fx/inc
+INCLUDEPATH += /home/evg/SOFT/Github/Arm/CMSIS_Version_5/CMSIS/DAP/Firmware/Validation/MDK5/RTE/_CMSIS_DAP

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___c_o_n_f___exported___defines" kind="group">
+    <compoundname>USBD_CONF_Exported_Defines</compoundname>
+    <title>USBD_CONF_Exported_Defines</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___u_s_b_d___c_o_n_f___exported___defines_1ga121d6d45e8011e1f372a365986126d0e" prot="public" static="no">
+        <name>USBD_MAX_NUM_INTERFACES</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_conf.h" line="66" column="9" bodyfile="Inc/usbd_conf.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___c_o_n_f___exported___defines_1gaef1f76fda5677f5ad43c25a2ba4ebcde" prot="public" static="no">
+        <name>USBD_MAX_NUM_CONFIGURATION</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_conf.h" line="68" column="9" bodyfile="Inc/usbd_conf.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___c_o_n_f___exported___defines_1ga056ff3fee04cffde6a1ccccd566f8682" prot="public" static="no">
+        <name>USBD_MAX_STR_DESC_SIZ</name>
+        <initializer>512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_conf.h" line="70" column="9" bodyfile="Inc/usbd_conf.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___c_o_n_f___exported___defines_1gae7364a789408417d945d5ca96679ccf7" prot="public" static="no">
+        <name>USBD_DEBUG_LEVEL</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_conf.h" line="72" column="9" bodyfile="Inc/usbd_conf.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___c_o_n_f___exported___defines_1ga07065dc40f090f051dd1dd6d5901930a" prot="public" static="no">
+        <name>USBD_SELF_POWERED</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_conf.h" line="74" column="9" bodyfile="Inc/usbd_conf.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___c_o_n_f___exported___defines_1ga4fe01b36d47ddbccd412bcc9bddec5f3" prot="public" static="no">
+        <name>MAX_STATIC_ALLOC_SIZE</name>
+        <initializer>512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_conf.h" line="76" column="9" bodyfile="Inc/usbd_conf.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___c_o_n_f___exported___defines_1ga609db9b232fa154e9b1c86bcdd17e97c" prot="public" static="no">
+        <name>DEVICE_FS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_conf.h" line="80" column="9" bodyfile="Inc/usbd_conf.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines for configuration of the Usb device. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

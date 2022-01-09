@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___d_m_a__mode" kind="group">
+    <compoundname>DMA_mode</compoundname>
+    <title>DMA mode</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___d_m_a__mode_1ga04941acfbbdefc53e1e08133cffa3b8a" prot="public" static="no">
+        <name>DMA_NORMAL</name>
+        <initializer>0x00000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Normal mode <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="212" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__mode_1ga4c4f425cba13edffb3c831c036c91e01" prot="public" static="no">
+        <name>DMA_CIRCULAR</name>
+        <initializer>((uint32_t)<ref refid="group___peripheral___registers___bits___definition_1ga445471396e741418bcd6f63404f4052c" kindref="member">DMA_CCR_CIRC</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Circular mode <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="213" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___output___fast___state" xml:lang="en-US">
+<title>TIM Output Fast State</title>
+<indexterm><primary>TIM Output Fast State</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___fast___state_1ga71429b63f2a6604171ccfd3a91ccf43a">TIM_OCFAST_DISABLE</link>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___fast___state_1ga445a2c0633ac649e816cf7a16b716d61">TIM_OCFAST_ENABLE</link>   <link linkend="_group___peripheral___registers___bits___definition_1gab9c5878e85ce02c22d8a374deebd1b6e">TIM_CCMR1_OC1FE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___output___fast___state_1ga71429b63f2a6604171ccfd3a91ccf43a"/>    <section>
+    <title>TIM_OCFAST_DISABLE</title>
+<indexterm><primary>TIM_OCFAST_DISABLE</primary><secondary>TIM Output Fast State</secondary></indexterm>
+<indexterm><primary>TIM Output Fast State</primary><secondary>TIM_OCFAST_DISABLE</secondary></indexterm>
+<para><computeroutput>#define TIM_OCFAST_DISABLE   0x00000000U</computeroutput></para>
+<para>Output Compare fast disable </para>
+    </section><anchor xml:id="_group___t_i_m___output___fast___state_1ga445a2c0633ac649e816cf7a16b716d61"/>    <section>
+    <title>TIM_OCFAST_ENABLE</title>
+<indexterm><primary>TIM_OCFAST_ENABLE</primary><secondary>TIM Output Fast State</secondary></indexterm>
+<indexterm><primary>TIM Output Fast State</primary><secondary>TIM_OCFAST_ENABLE</secondary></indexterm>
+<para><computeroutput>#define TIM_OCFAST_ENABLE   <link linkend="_group___peripheral___registers___bits___definition_1gab9c5878e85ce02c22d8a374deebd1b6e">TIM_CCMR1_OC1FE</link></computeroutput></para>
+<para>Output Compare fast enable 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+</section>
+</section>

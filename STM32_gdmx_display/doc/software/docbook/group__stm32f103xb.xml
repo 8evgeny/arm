@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__stm32f103xb" xml:lang="en-US">
+<title>Stm32f103xb</title>
+<indexterm><primary>Stm32f103xb</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___configuration__section__for___c_m_s_i_s">Configuration_section_for_CMSIS</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___peripheral__interrupt__number__definition">Peripheral_interrupt_number_definition</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___peripheral__registers__structures">Peripheral_registers_structures</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___peripheral__memory__map">Peripheral_memory_map</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___peripheral__declaration">Peripheral_declaration</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___exported__constants">Exported_constants</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___exported__macro">Exported_macro</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gaa7d642ec0ffe7089d01841fe5992321c"/>#define <emphasis role="strong">ADC1_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a19cf421347f52d547d370887640c158a">ADC1_2_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gad320f1225d1f3a2cbbae89054245387d"/>#define <emphasis role="strong">TIM1_BRK_TIM9_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a53b88408ead2373e64f39fd0c79fa88f">TIM1_BRK_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga13ef57cc5393b59cabf175dc9cfcd7e1"/>#define <emphasis role="strong">TIM9_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a53b88408ead2373e64f39fd0c79fa88f">TIM1_BRK_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga1e385e1c45d40c05a511b0b4e9f2cbd0"/>#define <emphasis role="strong">TIM1_BRK_TIM15_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a53b88408ead2373e64f39fd0c79fa88f">TIM1_BRK_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gadfd8f2eeab275b9828944368c71eea77"/>#define <emphasis role="strong">TIM11_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8ac50e91f8ec34b86d84dec304e2b61a6c">TIM1_TRG_COM_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gadcf1133559100a42249da11f22467b9a"/>#define <emphasis role="strong">TIM1_TRG_COM_TIM11_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8ac50e91f8ec34b86d84dec304e2b61a6c">TIM1_TRG_COM_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga5913663e14ca7e64c34061850222981a"/>#define <emphasis role="strong">TIM1_TRG_COM_TIM17_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8ac50e91f8ec34b86d84dec304e2b61a6c">TIM1_TRG_COM_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga7aef742407797fff471fb0e0e006d858"/>#define <emphasis role="strong">TIM10_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a78ef1a20c5b8e93cb17bf90afc0c5bd9">TIM1_UP_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga9bf8215526df73a9534b84f9ba28cddf"/>#define <emphasis role="strong">TIM1_UP_TIM10_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a78ef1a20c5b8e93cb17bf90afc0c5bd9">TIM1_UP_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga0f3f0e89d961dcc076981f15902aaeed"/>#define <emphasis role="strong">TIM1_UP_TIM16_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a78ef1a20c5b8e93cb17bf90afc0c5bd9">TIM1_UP_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gaf315fc723ea4d21a9e79d8d3d20437e9"/>#define <emphasis role="strong">OTG_FS_WKUP_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a2ad262973688511beafcd1312ce78357">USBWakeUp_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gaf0cf08d17feae0f586b1a6aaf0d6c36d"/>#define <emphasis role="strong">CEC_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a2ad262973688511beafcd1312ce78357">USBWakeUp_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga2601e7e96ae0820e1c9c6891d654ed6c"/>#define <emphasis role="strong">CAN1_TX_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a6baa609f83561f41f7715ff14eeb7d0f">USB_HP_CAN1_TX_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga7b79e8b364f6f1ca0e72ec0d189fdefc"/>#define <emphasis role="strong">USB_HP_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a6baa609f83561f41f7715ff14eeb7d0f">USB_HP_CAN1_TX_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga4ca4c9d78aae513e53643cd6a9ba97ed"/>#define <emphasis role="strong">USB_LP_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a44d80f3b50a6e2526b806ddc87c4ce86">USB_LP_CAN1_RX0_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gac7dffc92c171e414eb981fa219aa38f3"/>#define <emphasis role="strong">CAN1_RX0_IRQn</emphasis>   <link linkend="_group___peripheral__interrupt__number__definition_1gga7e1129cd8a196f4284d41db3e82ad5c8a44d80f3b50a6e2526b806ddc87c4ce86">USB_LP_CAN1_RX0_IRQn</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gacfad9f182b248bceb2ebedd9ae366546"/>#define <emphasis role="strong">ADC1_IRQHandler</emphasis>   ADC1_2_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga8906a1addcbb330ba8ae18733cb1eefe"/>#define <emphasis role="strong">TIM1_BRK_TIM9_IRQHandler</emphasis>   TIM1_BRK_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga07f093ff1d63428cae25f6ef18d1ae71"/>#define <emphasis role="strong">TIM9_IRQHandler</emphasis>   TIM1_BRK_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gac00abc7e88d4df1985f4431d1b7829ff"/>#define <emphasis role="strong">TIM1_BRK_TIM15_IRQHandler</emphasis>   TIM1_BRK_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga8c03aaddc375db375ce87d908825c1b0"/>#define <emphasis role="strong">TIM11_IRQHandler</emphasis>   TIM1_TRG_COM_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga09f7180e6c101ecbd171460a74867b5c"/>#define <emphasis role="strong">TIM1_TRG_COM_TIM11_IRQHandler</emphasis>   TIM1_TRG_COM_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga4ca7d0c2085736b897d6e9dcd1be57b5"/>#define <emphasis role="strong">TIM1_TRG_COM_TIM17_IRQHandler</emphasis>   TIM1_TRG_COM_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga4d5169a4a9c606d71f36e702d5dcafa9"/>#define <emphasis role="strong">TIM10_IRQHandler</emphasis>   TIM1_UP_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga7e36d7869a4d9acd6d4346bfcdbe385a"/>#define <emphasis role="strong">TIM1_UP_TIM10_IRQHandler</emphasis>   TIM1_UP_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga67ca3d710fcd583880327b0f1e2952ce"/>#define <emphasis role="strong">TIM1_UP_TIM16_IRQHandler</emphasis>   TIM1_UP_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga8d10057f3ad0cec6a12f2f593ef8e4c0"/>#define <emphasis role="strong">OTG_FS_WKUP_IRQHandler</emphasis>   USBWakeUp_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gaac468e8a06613c37d2b6f05fe21c2777"/>#define <emphasis role="strong">CEC_IRQHandler</emphasis>   USBWakeUp_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga4fdbecfed2cdeadfec6210f7ec510fbc"/>#define <emphasis role="strong">CAN1_TX_IRQHandler</emphasis>   USB_HP_CAN1_TX_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gab62271824915d04d5350da852b32cd5e"/>#define <emphasis role="strong">USB_HP_IRQHandler</emphasis>   USB_HP_CAN1_TX_IRQHandler</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1gab5032057a517201938fc126d12690f4e"/>#define <emphasis role="strong">USB_LP_IRQHandler</emphasis>   <link linkend="_stm32f1xx__it_8c_1af57bde854fa2b396f29664995a502b19">USB_LP_CAN1_RX0_IRQHandler</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group__stm32f103xb_1ga40873fbdcb268642576f45babaad5c2e"/>#define <emphasis role="strong">CAN1_RX0_IRQHandler</emphasis>   <link linkend="_stm32f1xx__it_8c_1af57bde854fa2b396f29664995a502b19">USB_LP_CAN1_RX0_IRQHandler</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

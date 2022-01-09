@@ -13,12 +13,16 @@
 //---------------------------------
 #include "gpio.h"
 #include "main.h"
-//#include <string>
+#include <string>
+#include <vector>
 //=================================
 int main (int argc, char** argv) {
 	__disable_irq();
-	//SysTick_init();
+//	SysTick_init();
 	RCC_init();
+    std::string aa = "qqq";
+    std::vector<int> vec{1,2,3,45};
+    vec.push_back(55);
 	GPIO_init();
 	__enable_irq();
 	TIM1_init();
@@ -27,8 +31,8 @@ int main (int argc, char** argv) {
 	IWDT_init();
 	//-------------------------------
 	uint8_t Buffer[32];
-	VCom_Configuration();
-    // CDC layer initialization
+    VCom_Configuration();
+//     CDC layer initialization
     USB_CDC_Init(Buffer, 1, SET);
     Setup_CPU_Clock();
     Setup_USB();

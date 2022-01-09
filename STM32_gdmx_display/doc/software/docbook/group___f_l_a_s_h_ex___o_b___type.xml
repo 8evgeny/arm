@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h_ex___o_b___type" xml:lang="en-US">
+<title>Option Bytes Type</title>
+<indexterm><primary>Option Bytes Type</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___o_b___type_1ga48712a166ea192ddcda0f2653679f9ec">OPTIONBYTE_WRP</link>   0x01U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___o_b___type_1ga8f0bdb21ef13bae39d5d8b6619e2df06">OPTIONBYTE_RDP</link>   0x02U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___o_b___type_1gac7d843e666e15c79688a1914e8ffe7a5">OPTIONBYTE_USER</link>   0x04U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___o_b___type_1gad0c29c84acfb46de1708a670529175a5">OPTIONBYTE_DATA</link>   0x08U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h_ex___o_b___type_1gad0c29c84acfb46de1708a670529175a5"/>    <section>
+    <title>OPTIONBYTE_DATA</title>
+<indexterm><primary>OPTIONBYTE_DATA</primary><secondary>Option Bytes Type</secondary></indexterm>
+<indexterm><primary>Option Bytes Type</primary><secondary>OPTIONBYTE_DATA</secondary></indexterm>
+<para><computeroutput>#define OPTIONBYTE_DATA   0x08U</computeroutput></para>
+<para>DATA option byte configuration </para>
+    </section><anchor xml:id="_group___f_l_a_s_h_ex___o_b___type_1ga8f0bdb21ef13bae39d5d8b6619e2df06"/>    <section>
+    <title>OPTIONBYTE_RDP</title>
+<indexterm><primary>OPTIONBYTE_RDP</primary><secondary>Option Bytes Type</secondary></indexterm>
+<indexterm><primary>Option Bytes Type</primary><secondary>OPTIONBYTE_RDP</secondary></indexterm>
+<para><computeroutput>#define OPTIONBYTE_RDP   0x02U</computeroutput></para>
+<para>RDP option byte configuration </para>
+    </section><anchor xml:id="_group___f_l_a_s_h_ex___o_b___type_1gac7d843e666e15c79688a1914e8ffe7a5"/>    <section>
+    <title>OPTIONBYTE_USER</title>
+<indexterm><primary>OPTIONBYTE_USER</primary><secondary>Option Bytes Type</secondary></indexterm>
+<indexterm><primary>Option Bytes Type</primary><secondary>OPTIONBYTE_USER</secondary></indexterm>
+<para><computeroutput>#define OPTIONBYTE_USER   0x04U</computeroutput></para>
+<para>USER option byte configuration </para>
+    </section><anchor xml:id="_group___f_l_a_s_h_ex___o_b___type_1ga48712a166ea192ddcda0f2653679f9ec"/>    <section>
+    <title>OPTIONBYTE_WRP</title>
+<indexterm><primary>OPTIONBYTE_WRP</primary><secondary>Option Bytes Type</secondary></indexterm>
+<indexterm><primary>Option Bytes Type</primary><secondary>OPTIONBYTE_WRP</secondary></indexterm>
+<para><computeroutput>#define OPTIONBYTE_WRP   0x01U</computeroutput></para>
+<para>WRP option byte configuration </para>
+</section>
+</section>
+</section>

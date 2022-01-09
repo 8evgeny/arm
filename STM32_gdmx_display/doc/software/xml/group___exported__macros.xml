@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___exported__macros" kind="group">
+    <compoundname>Exported_macros</compoundname>
+    <title>Exported_macros</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___exported__macros_1ga26474f43799fbade9cf300e21dd3a91a" prot="public" static="no">
+        <name>SET_BIT</name>
+        <param><defname>REG</defname></param>
+        <param><defname>BIT</defname></param>
+        <initializer>((REG) |= (BIT))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="178" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___exported__macros_1ga133aae6fc0d41bffab39ab223a7001de" prot="public" static="no">
+        <name>CLEAR_BIT</name>
+        <param><defname>REG</defname></param>
+        <param><defname>BIT</defname></param>
+        <initializer>((REG) &amp;= ~(BIT))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="180" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___exported__macros_1ga822bb1bb9710d5f2fa6396b84e583c33" prot="public" static="no">
+        <name>READ_BIT</name>
+        <param><defname>REG</defname></param>
+        <param><defname>BIT</defname></param>
+        <initializer>((REG) &amp; (BIT))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="182" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___exported__macros_1ga1378fbdda39f40b85420df55f41460ef" prot="public" static="no">
+        <name>CLEAR_REG</name>
+        <param><defname>REG</defname></param>
+        <initializer>((REG) = (0x0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="184" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___exported__macros_1ga32f78bffcaf6d13023dcd7f05e0c4d57" prot="public" static="no">
+        <name>WRITE_REG</name>
+        <param><defname>REG</defname></param>
+        <param><defname>VAL</defname></param>
+        <initializer>((REG) = (VAL))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="186" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___exported__macros_1gae7f188a4d26c9e713a48414783421071" prot="public" static="no">
+        <name>READ_REG</name>
+        <param><defname>REG</defname></param>
+        <initializer>((REG))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="188" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___exported__macros_1ga6553c99f510c3bab8cc0a91602053247" prot="public" static="no">
+        <name>MODIFY_REG</name>
+        <param><defname>REG</defname></param>
+        <param><defname>CLEARMASK</defname></param>
+        <param><defname>SETMASK</defname></param>
+        <initializer>WRITE_REG((REG), (((READ_REG(REG)) &amp; (~(CLEARMASK))) | (SETMASK)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="190" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___exported__macros_1ga47a8870d71d55cefb3df47cd8c815ec8" prot="public" static="no">
+        <name>POSITION_VAL</name>
+        <param><defname>VAL</defname></param>
+        <initializer>(<ref refid="group___c_m_s_i_s___core___instruction_interface_1ga5d5bb1527e042be4a9fa5a33f65cc248" kindref="member">__CLZ</ref>(<ref refid="group___c_m_s_i_s___core___instruction_interface_1gaf944a7b7d8fd70164cca27669316bcf7" kindref="member">__RBIT</ref>(VAL)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" line="192" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

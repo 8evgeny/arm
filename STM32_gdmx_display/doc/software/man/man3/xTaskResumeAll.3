@@ -1,0 +1,70 @@
+.TH "xTaskResumeAll" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xTaskResumeAll \- xTaskResumeAll
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+BaseType_t xTaskResumeAll( void );
+.fi
+.PP
+.PP
+Resumes scheduler activity after it was suspended by a call to vTaskSuspendAll()\&.
+.PP
+xTaskResumeAll() only resumes the scheduler\&. It does not unsuspend tasks that were previously suspended by a call to vTaskSuspend()\&.
+.PP
+\fBReturns\fP
+.RS 4
+If resuming the scheduler caused a context switch then pdTRUE is returned, otherwise pdFALSE is returned\&.
+.RE
+.PP
+Example usage: 
+.PP
+.nf
+
+void vTask1( void * pvParameters )
+{
+    for( ;; )
+    {
+     // Task code goes here\&.
+
+     // \&.\&.\&.
+
+     // At some point the task wants to perform a long operation during
+     // which it does not want to get swapped out\&.  It cannot use
+     // taskENTER_CRITICAL ()/taskEXIT_CRITICAL () as the length of the
+     // operation may cause interrupts to be missed - including the
+     // ticks\&.
+
+     // Prevent the real time kernel swapping out the task\&.
+     vTaskSuspendAll ();
+
+     // Perform the operation here\&.  There is no need to use critical
+     // sections as we have all the microcontroller processing time\&.
+     // During this time interrupts will still operate and the real
+     // time kernel tick count will be maintained\&.
+
+     // \&.\&.\&.
+
+     // The operation is complete\&.  Restart the kernel\&.  We want to force
+     // a context switch - but there is no point if resuming the scheduler
+     // caused a context switch already\&.
+     if( !xTaskResumeAll () )
+     {
+          taskYIELD ();
+     }
+    }
+}
+  
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

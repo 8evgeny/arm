@@ -1,0 +1,1371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="stm32f1xx__hal__gpio_8h" kind="file" language="C++">
+    <compoundname>stm32f1xx_hal_gpio.h</compoundname>
+    <includes refid="stm32f1xx__hal__def_8h" local="yes">stm32f1xx_hal_def.h</includes>
+    <includes refid="stm32f1xx__hal__gpio__ex_8h" local="yes">stm32f1xx_hal_gpio_ex.h</includes>
+    <includedby refid="stm32f1xx__hal__conf_8h" local="yes">Inc/stm32f1xx_hal_conf.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="3">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="1">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="26">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>Inc/usb_device.h</label>
+        <link refid="usb__device_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>Src/buzzer.c</label>
+        <link refid="buzzer_8c"/>
+      </node>
+      <node id="28">
+        <label>Src/usb_device.c</label>
+        <link refid="usb__device_8c"/>
+      </node>
+      <node id="30">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</label>
+        <link refid="usbd__cdc_8c"/>
+      </node>
+      <node id="35">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c</label>
+        <link refid="stm32f1xx__hal__cortex_8c"/>
+      </node>
+      <node id="6">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c</label>
+        <link refid="stm32f1xx__hal__dma_8c"/>
+      </node>
+      <node id="25">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Inc/buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>Src/hd44780.c</label>
+        <link refid="hd44780_8c"/>
+      </node>
+      <node id="17">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c</label>
+        <link refid="stm32f1xx__hal__tim_8c"/>
+      </node>
+      <node id="46">
+        <label>Src/stm32f1xx_hal_timebase_tim.c</label>
+        <link refid="stm32f1xx__hal__timebase__tim_8c"/>
+      </node>
+      <node id="21">
+        <label>Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c</label>
+        <link refid="stm32f1xx__hal_8c"/>
+      </node>
+      <node id="9">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c</label>
+        <link refid="stm32f1xx__hal__flash__ex_8c"/>
+      </node>
+      <node id="32">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c</label>
+        <link refid="usbd__ioreq_8c"/>
+      </node>
+      <node id="10">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c</label>
+        <link refid="stm32f1xx__hal__gpio_8c"/>
+      </node>
+      <node id="31">
+        <label>Src/usbd_conf.c</label>
+        <link refid="usbd__conf_8c"/>
+      </node>
+      <node id="37">
+        <label>Inc/usbd_desc.h</label>
+        <link refid="usbd__desc_8h_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c</label>
+        <link refid="stm32f1xx__ll__usb_8c"/>
+      </node>
+      <node id="27">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="29">
+        <label>Src/usbd_cdc_if.c</label>
+        <link refid="usbd__cdc__if_8c"/>
+      </node>
+      <node id="23">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c</label>
+        <link refid="stm32f1xx__hal__pcd__ex_8c"/>
+      </node>
+      <node id="44">
+        <label>Inc/led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c</label>
+        <link refid="stm32f1xx__hal__pwr_8c"/>
+      </node>
+      <node id="15">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c</label>
+        <link refid="stm32f1xx__hal__rcc_8c"/>
+      </node>
+      <node id="8">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c</label>
+        <link refid="stm32f1xx__hal__flash_8c"/>
+      </node>
+      <node id="39">
+        <label>Src/stm32f1xx_it.c</label>
+        <link refid="stm32f1xx__it_8c"/>
+      </node>
+      <node id="34">
+        <label>Src/usbd_desc.c</label>
+        <link refid="usbd__desc_8c"/>
+      </node>
+      <node id="18">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c</label>
+        <link refid="stm32f1xx__hal__tim__ex_8c"/>
+      </node>
+      <node id="11">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8c"/>
+      </node>
+      <node id="42">
+        <label>Inc/hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Inc/stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>Src/led.c</label>
+        <link refid="led_8c"/>
+      </node>
+      <node id="1">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Inc/usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c</label>
+        <link refid="usbd__core_8c"/>
+      </node>
+      <node id="38">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8c"/>
+      </node>
+      <node id="7">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c</label>
+        <link refid="stm32f1xx__hal__exti_8c"/>
+      </node>
+      <node id="41">
+        <label>Inc/display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c</label>
+        <link refid="stm32f1xx__hal__pcd_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_g_p_i_o___init_type_def" prot="public">GPIO_InitTypeDef</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga176efbf43a259b7bb0a85a47401505be" prot="public" static="no">
+        <name>GPIO_PIN_0</name>
+        <initializer>((uint16_t)0x0001)  /* Pin 0 selected    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="83" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga6c35af4e75c3cb57bb650feaa7a136b5" prot="public" static="no">
+        <name>GPIO_PIN_1</name>
+        <initializer>((uint16_t)0x0002)  /* Pin 1 selected    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="84" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga6eee38b797a7268f04357dfa2759efd2" prot="public" static="no">
+        <name>GPIO_PIN_2</name>
+        <initializer>((uint16_t)0x0004)  /* Pin 2 selected    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="85" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1gadcaf899c018a0dde572b5af783565c62" prot="public" static="no">
+        <name>GPIO_PIN_3</name>
+        <initializer>((uint16_t)0x0008)  /* Pin 3 selected    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="86" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1gab3871e35868deecd260e586ad70d4b83" prot="public" static="no">
+        <name>GPIO_PIN_4</name>
+        <initializer>((uint16_t)0x0010)  /* Pin 4 selected    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="87" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga01cc9ed93f6fd12fd3403362779aaa18" prot="public" static="no">
+        <name>GPIO_PIN_5</name>
+        <initializer>((uint16_t)0x0020)  /* Pin 5 selected    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="88" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga9089f18f20ec88ee38ce6f27389e6d7e" prot="public" static="no">
+        <name>GPIO_PIN_6</name>
+        <initializer>((uint16_t)0x0040)  /* Pin 6 selected    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="89" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga482cb86c2f036e630661a41e8986bcfe" prot="public" static="no">
+        <name>GPIO_PIN_7</name>
+        <initializer>((uint16_t)0x0080)  /* Pin 7 selected    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="90" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1gaf5eb6a42a4428e236bd4fd08ade71e7a" prot="public" static="no">
+        <name>GPIO_PIN_8</name>
+        <initializer>((uint16_t)0x0100)  /* Pin 8 selected    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="91" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga4c503cb4a0dc0d18261080051d9c2daf" prot="public" static="no">
+        <name>GPIO_PIN_9</name>
+        <initializer>((uint16_t)0x0200)  /* Pin 9 selected    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="92" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1gac102c0123cb8bcadc5b590cd940b9e20" prot="public" static="no">
+        <name>GPIO_PIN_10</name>
+        <initializer>((uint16_t)0x0400)  /* Pin 10 selected   */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="93" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga79f6797ea82c1fb25cd6c0e14e44d312" prot="public" static="no">
+        <name>GPIO_PIN_11</name>
+        <initializer>((uint16_t)0x0800)  /* Pin 11 selected   */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="94" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga95f9ce5911fa8b209defb969db93ced3" prot="public" static="no">
+        <name>GPIO_PIN_12</name>
+        <initializer>((uint16_t)0x1000)  /* Pin 12 selected   */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="95" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga173023dced8f9692ade0f1176558ef70" prot="public" static="no">
+        <name>GPIO_PIN_13</name>
+        <initializer>((uint16_t)0x2000)  /* Pin 13 selected   */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="96" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga315b4dc1a0c1f9021b3d3a8fe9ccc0c3" prot="public" static="no">
+        <name>GPIO_PIN_14</name>
+        <initializer>((uint16_t)0x4000)  /* Pin 14 selected   */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="97" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1ga77be5756e80bcdf18e1aa39b35d1d640" prot="public" static="no">
+        <name>GPIO_PIN_15</name>
+        <initializer>((uint16_t)0x8000)  /* Pin 15 selected   */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="98" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1gac04170878de13aa9785f6bd666c9faa5" prot="public" static="no">
+        <name>GPIO_PIN_All</name>
+        <initializer>((uint16_t)0xFFFF)  /* All pins selected */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="99" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pins__define_1gab135afee57cdef0f647ab153f88b6d2f" prot="public" static="no">
+        <name>GPIO_PIN_MASK</name>
+        <initializer>0x0000FFFFu /* PIN mask for assert test */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="101" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1gaf40bec3146810028a84b628d37d3b391" prot="public" static="no">
+        <name>GPIO_MODE_INPUT</name>
+        <initializer>0x00000000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Input Floating Mode <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="116" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1ga1013838a64cec2f8c88f079c449d1982" prot="public" static="no">
+        <name>GPIO_MODE_OUTPUT_PP</name>
+        <initializer>0x00000001u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Output Push Pull Mode <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="117" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1ga2f91757829f6e9505ec386b840941929" prot="public" static="no">
+        <name>GPIO_MODE_OUTPUT_OD</name>
+        <initializer>0x00000011u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Output Open Drain Mode <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="118" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1ga526c72c5264316fc05c775b6cad4aa6a" prot="public" static="no">
+        <name>GPIO_MODE_AF_PP</name>
+        <initializer>0x00000002u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alternate Function Push Pull Mode <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="119" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1ga282b9fd37c8ef31daba314ffae6bf023" prot="public" static="no">
+        <name>GPIO_MODE_AF_OD</name>
+        <initializer>0x00000012u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alternate Function Open Drain Mode <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="120" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1gadb81109590b66d8e48076820064921b1" prot="public" static="no">
+        <name>GPIO_MODE_AF_INPUT</name>
+        <initializer><ref refid="group___g_p_i_o__mode__define_1gaf40bec3146810028a84b628d37d3b391" kindref="member">GPIO_MODE_INPUT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alternate Function Input Mode <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="121" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1ga7a04f9ab65ad572ad20791a35009220c" prot="public" static="no">
+        <name>GPIO_MODE_ANALOG</name>
+        <initializer>0x00000003u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Analog Mode <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="123" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1ga088659562e68426d9a72821ea4fd8d50" prot="public" static="no">
+        <name>GPIO_MODE_IT_RISING</name>
+        <initializer>0x10110000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External Interrupt Mode with Rising edge trigger detection <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="125" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1gaa166210a6da3ac7e8d7504702520e522" prot="public" static="no">
+        <name>GPIO_MODE_IT_FALLING</name>
+        <initializer>0x10210000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External Interrupt Mode with Falling edge trigger detection <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="126" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1ga0678e61090ed61e91a6496f22ddfb3d1" prot="public" static="no">
+        <name>GPIO_MODE_IT_RISING_FALLING</name>
+        <initializer>0x10310000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External Interrupt Mode with Rising/Falling edge trigger detection <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="127" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1ga97d78b82ea178ff7a4c35aa60b4e9338" prot="public" static="no">
+        <name>GPIO_MODE_EVT_RISING</name>
+        <initializer>0x10120000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External Event Mode with Rising edge trigger detection <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="129" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1gadbfa532b3566783ac6c0e07c2e0ffe5e" prot="public" static="no">
+        <name>GPIO_MODE_EVT_FALLING</name>
+        <initializer>0x10220000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External Event Mode with Falling edge trigger detection <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="130" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__mode__define_1ga1b760771297ed2fc55a6b13071188491" prot="public" static="no">
+        <name>GPIO_MODE_EVT_RISING_FALLING</name>
+        <initializer>0x10320000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External Event Mode with Rising/Falling edge trigger detection <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="131" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__speed__define_1gab7916c4265bfa1b26a5205ea9c1caa4e" prot="public" static="no">
+        <name>GPIO_SPEED_FREQ_LOW</name>
+        <initializer>(<ref refid="group___peripheral___registers___bits___definition_1ga8e03107c8dbdeb512d612bb52d88014e" kindref="member">GPIO_CRL_MODE0_1</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Low speed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="141" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__speed__define_1ga1724a25a9cf00ebf485daeb09cfa1e25" prot="public" static="no">
+        <name>GPIO_SPEED_FREQ_MEDIUM</name>
+        <initializer>(<ref refid="group___peripheral___registers___bits___definition_1ga1facefbe58e0198f424d1e4487af72f6" kindref="member">GPIO_CRL_MODE0_0</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Medium speed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="142" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__speed__define_1gaef5898db71cdb957cd41f940b0087af8" prot="public" static="no">
+        <name>GPIO_SPEED_FREQ_HIGH</name>
+        <initializer>(<ref refid="group___peripheral___registers___bits___definition_1ga2cdd3f5cad389fbe7c96458fb115035b" kindref="member">GPIO_CRL_MODE0</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>High speed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="143" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pull__define_1ga5c2862579882c1cc64e36d38fbd07a4c" prot="public" static="no">
+        <name>GPIO_NOPULL</name>
+        <initializer>0x00000000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No Pull-up or Pull-down activation <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="153" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pull__define_1gae689bc8f5c42d6df7bd54a8dd372e072" prot="public" static="no">
+        <name>GPIO_PULLUP</name>
+        <initializer>0x00000001u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pull-up activation <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="154" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o__pull__define_1ga75d958d0410c36da7f27d1f4f5c36c14" prot="public" static="no">
+        <name>GPIO_PULLDOWN</name>
+        <initializer>0x00000002u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pull-down activation <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="155" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o___exported___macros_1gaae18fc8d92ffa4df2172c78869e712fc" prot="public" static="no">
+        <name>__HAL_GPIO_EXTI_GET_FLAG</name>
+        <param><defname>__EXTI_LINE__</defname></param>
+        <initializer>(EXTI-&gt;PR &amp; (__EXTI_LINE__))</initializer>
+        <briefdescription>
+<para>Checks whether the specified EXTI line flag is set or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;EXTI_LINE&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the EXTI line flag to check. This parameter can be GPIO_PIN_x where x can be(0..15) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new state of <bold>EXTI_LINE</bold> (SET or RESET). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="175" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o___exported___macros_1ga2f28fc349d1812cdc55a77c68d2b278d" prot="public" static="no">
+        <name>__HAL_GPIO_EXTI_CLEAR_FLAG</name>
+        <param><defname>__EXTI_LINE__</defname></param>
+        <initializer>(EXTI-&gt;PR = (__EXTI_LINE__))</initializer>
+        <briefdescription>
+<para>Clears the EXTI&apos;s line pending flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;EXTI_LINE&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the EXTI lines flags to clear. This parameter can be any combination of GPIO_PIN_x where x can be (0..15) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="183" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o___exported___macros_1ga27f0e1f6c38745169d74620f6a178a94" prot="public" static="no">
+        <name>__HAL_GPIO_EXTI_GET_IT</name>
+        <param><defname>__EXTI_LINE__</defname></param>
+        <initializer>(EXTI-&gt;PR &amp; (__EXTI_LINE__))</initializer>
+        <briefdescription>
+<para>Checks whether the specified EXTI line is asserted or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;EXTI_LINE&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the EXTI line to check. This parameter can be GPIO_PIN_x where x can be(0..15) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new state of <bold>EXTI_LINE</bold> (SET or RESET). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="191" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o___exported___macros_1ga2a086506eec826f49b200fba64beb9f1" prot="public" static="no">
+        <name>__HAL_GPIO_EXTI_CLEAR_IT</name>
+        <param><defname>__EXTI_LINE__</defname></param>
+        <initializer>(EXTI-&gt;PR = (__EXTI_LINE__))</initializer>
+        <briefdescription>
+<para>Clears the EXTI&apos;s line pending bits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;EXTI_LINE&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the EXTI lines to clear. This parameter can be any combination of GPIO_PIN_x where x can be (0..15) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="199" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o___exported___macros_1gac50aef6881e1f76032941ead9c9bce61" prot="public" static="no">
+        <name>__HAL_GPIO_EXTI_GENERATE_SWIT</name>
+        <param><defname>__EXTI_LINE__</defname></param>
+        <initializer>(EXTI-&gt;SWIER |= (__EXTI_LINE__))</initializer>
+        <briefdescription>
+<para>Generates a Software interrupt on selected EXTI line. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;EXTI_LINE&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the EXTI line to check. This parameter can be GPIO_PIN_x where x can be(0..15) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="207" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o___private___macros_1ga6da646a4924c5cfae3024c660476f26f" prot="public" static="no">
+        <name>IS_GPIO_PIN_ACTION</name>
+        <param><defname>ACTION</defname></param>
+        <initializer>(((ACTION) == GPIO_PIN_RESET) || ((ACTION) == GPIO_PIN_SET))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="263" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o___private___macros_1gad6ec74e33360395535ad5d91ba6d4781" prot="public" static="no">
+        <name>IS_GPIO_PIN</name>
+        <param><defname>PIN</defname></param>
+        <initializer>(((((uint32_t)PIN) &amp; GPIO_PIN_MASK ) != 0x00u) &amp;&amp; ((((uint32_t)PIN) &amp; ~GPIO_PIN_MASK) == 0x00u))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="264" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o___private___macros_1gacc5fde3eef57ec3c558c11d0011d900c" prot="public" static="no">
+        <name>IS_GPIO_MODE</name>
+        <param><defname>MODE</defname></param>
+        <initializer>                            (((MODE) == <ref refid="group___g_p_i_o__mode__define_1gaf40bec3146810028a84b628d37d3b391" kindref="member">GPIO_MODE_INPUT</ref>)              ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1ga1013838a64cec2f8c88f079c449d1982" kindref="member">GPIO_MODE_OUTPUT_PP</ref>)          ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1ga2f91757829f6e9505ec386b840941929" kindref="member">GPIO_MODE_OUTPUT_OD</ref>)          ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1ga526c72c5264316fc05c775b6cad4aa6a" kindref="member">GPIO_MODE_AF_PP</ref>)              ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1ga282b9fd37c8ef31daba314ffae6bf023" kindref="member">GPIO_MODE_AF_OD</ref>)              ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1ga088659562e68426d9a72821ea4fd8d50" kindref="member">GPIO_MODE_IT_RISING</ref>)          ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1gaa166210a6da3ac7e8d7504702520e522" kindref="member">GPIO_MODE_IT_FALLING</ref>)         ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1ga0678e61090ed61e91a6496f22ddfb3d1" kindref="member">GPIO_MODE_IT_RISING_FALLING</ref>)  ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1ga97d78b82ea178ff7a4c35aa60b4e9338" kindref="member">GPIO_MODE_EVT_RISING</ref>)         ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1gadbfa532b3566783ac6c0e07c2e0ffe5e" kindref="member">GPIO_MODE_EVT_FALLING</ref>)        ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1ga1b760771297ed2fc55a6b13071188491" kindref="member">GPIO_MODE_EVT_RISING_FALLING</ref>) ||\
+                            ((MODE) == <ref refid="group___g_p_i_o__mode__define_1ga7a04f9ab65ad572ad20791a35009220c" kindref="member">GPIO_MODE_ANALOG</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="265" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o___private___macros_1ga888e1f951df2fe9dbf827528051a3a56" prot="public" static="no">
+        <name>IS_GPIO_SPEED</name>
+        <param><defname>SPEED</defname></param>
+        <initializer>                              (((SPEED) == <ref refid="group___g_p_i_o__speed__define_1gab7916c4265bfa1b26a5205ea9c1caa4e" kindref="member">GPIO_SPEED_FREQ_LOW</ref>) || \
+                              ((SPEED) == <ref refid="group___g_p_i_o__speed__define_1ga1724a25a9cf00ebf485daeb09cfa1e25" kindref="member">GPIO_SPEED_FREQ_MEDIUM</ref>) || ((SPEED) == <ref refid="group___g_p_i_o__speed__define_1gaef5898db71cdb957cd41f940b0087af8" kindref="member">GPIO_SPEED_FREQ_HIGH</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="277" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___g_p_i_o___private___macros_1ga1cb9706d23fb79584aae41e5e503f3cd" prot="public" static="no">
+        <name>IS_GPIO_PULL</name>
+        <param><defname>PULL</defname></param>
+        <initializer>                            (((PULL) == <ref refid="group___g_p_i_o__pull__define_1ga5c2862579882c1cc64e36d38fbd07a4c" kindref="member">GPIO_NOPULL</ref>) || ((PULL) == <ref refid="group___g_p_i_o__pull__define_1gae689bc8f5c42d6df7bd54a8dd372e072" kindref="member">GPIO_PULLUP</ref>) || \
+                            ((PULL) == <ref refid="group___g_p_i_o__pull__define_1ga75d958d0410c36da7f27d1f4f5c36c14" kindref="member">GPIO_PULLDOWN</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="279" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43" prot="public" static="no" strong="no">
+        <type></type>
+        <name>GPIO_PinState</name>
+        <enumvalue id="group___g_p_i_o___exported___types_1gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2" prot="public">
+          <name>GPIO_PIN_RESET</name>
+          <initializer>= 0u</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___g_p_i_o___exported___types_1gga5b3ef0486b179415581eb342e0ea6b43a746c062509db3ad1e47beed7527f9f8a" prot="public">
+          <name>GPIO_PIN_SET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>GPIO Bit SET and Bit RESET enumeration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="65" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" bodystart="66" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___g_p_i_o___exported___functions___group1_1ga41bda93b6dd639e4905fdb1454eff98e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_GPIO_Init</definition>
+        <argsstring>(GPIO_TypeDef *GPIOx, GPIO_InitTypeDef *GPIO_Init)</argsstring>
+        <name>HAL_GPIO_Init</name>
+        <param>
+          <type><ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref> *</type>
+          <declname>GPIOx</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_g_p_i_o___init_type_def" kindref="compound">GPIO_InitTypeDef</ref> *</type>
+          <declname>GPIO_Init</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="224" column="7" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" declline="224" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="group___g_p_i_o___exported___functions___group1_1gafe9c756b5aa18961032a3f8aa572959b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_GPIO_DeInit</definition>
+        <argsstring>(GPIO_TypeDef *GPIOx, uint32_t GPIO_Pin)</argsstring>
+        <name>HAL_GPIO_DeInit</name>
+        <param>
+          <type><ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref> *</type>
+          <declname>GPIOx</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>GPIO_Pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="225" column="7" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" declline="225" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="group___g_p_i_o___exported___functions___group2_1gaf2b819ea6551319ddd5670db318d2e4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43" kindref="member">GPIO_PinState</ref></type>
+        <definition>GPIO_PinState HAL_GPIO_ReadPin</definition>
+        <argsstring>(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)</argsstring>
+        <name>HAL_GPIO_ReadPin</name>
+        <param>
+          <type><ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref> *</type>
+          <declname>GPIOx</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>GPIO_Pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="234" column="15" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" declline="234" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="group___g_p_i_o___exported___functions___group2_1gaf4b97bdf533a02f51ef696d43b6da5c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_GPIO_WritePin</definition>
+        <argsstring>(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)</argsstring>
+        <name>HAL_GPIO_WritePin</name>
+        <param>
+          <type><ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref> *</type>
+          <declname>GPIOx</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>GPIO_Pin</declname>
+        </param>
+        <param>
+          <type><ref refid="group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43" kindref="member">GPIO_PinState</ref></type>
+          <declname>PinState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="235" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" declline="235" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___g_p_i_o___exported___functions___group2_1gaf5e0c89f752de5cdedcc30db068133f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_GPIO_TogglePin</definition>
+        <argsstring>(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)</argsstring>
+        <name>HAL_GPIO_TogglePin</name>
+        <param>
+          <type><ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref> *</type>
+          <declname>GPIOx</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>GPIO_Pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="236" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" declline="236" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___g_p_i_o___exported___functions___group2_1gad03c868b4a4fb25883c1bb86d0c7e9ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_GPIO_LockPin</definition>
+        <argsstring>(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)</argsstring>
+        <name>HAL_GPIO_LockPin</name>
+        <param>
+          <type><ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref> *</type>
+          <declname>GPIOx</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>GPIO_Pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="237" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" declline="237" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___g_p_i_o___exported___functions___group2_1gaa5de1ec4ebdd47e3e2b786224adaa9d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_GPIO_EXTI_IRQHandler</definition>
+        <argsstring>(uint16_t GPIO_Pin)</argsstring>
+        <name>HAL_GPIO_EXTI_IRQHandler</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>GPIO_Pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="238" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" declline="238" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___g_p_i_o___exported___functions___group2_1ga0cd91fd3a9608559c2a87a8ba6cba55f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_GPIO_EXTI_Callback</definition>
+        <argsstring>(uint16_t GPIO_Pin)</argsstring>
+        <name>HAL_GPIO_EXTI_Callback</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>GPIO_Pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" line="239" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h" declline="239" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of GPIO HAL module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>MCD Application Team</para>
+</simplesect>
+<simplesect kind="attention"><para></para>
+</simplesect>
+<heading level="2"><center><copy/> Copyright (c) 2016 STMicroelectronics. All rights reserved.</center></heading>
+</para>
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STM32F1xx_HAL_GPIO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STM32F1xx_HAL_GPIO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stm32f1xx__hal__def_8h" kindref="compound">stm32f1xx_hal_def.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>types<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="struct_g_p_i_o___init_type_def" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49" refid="struct_g_p_i_o___init_type_def_1a871d0ab74071724e96b7cc9ae2a7532b" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_g_p_i_o___init_type_def_1a871d0ab74071724e96b7cc9ae2a7532b" kindref="member">Pin</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="struct_g_p_i_o___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_g_p_i_o___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839" kindref="member">Mode</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="struct_g_p_i_o___init_type_def_1a6cdde08eb507b710f8179a4326548e26" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_g_p_i_o___init_type_def_1a6cdde08eb507b710f8179a4326548e26" kindref="member">Pull</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="struct_g_p_i_o___init_type_def_1ad04b2041f59d32492ec36a891418f3fd" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_g_p_i_o___init_type_def_1ad04b2041f59d32492ec36a891418f3fd" kindref="member">Speed</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}<sp/><ref refid="struct_g_p_i_o___init_type_def" kindref="compound">GPIO_InitTypeDef</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>GPIO_PIN_RESET<sp/>=<sp/>0u,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>GPIO_PIN_SET</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}<sp/><ref refid="group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43" kindref="member">GPIO_PinState</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>constants<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0001)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>0<sp/>selected<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0002)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>1<sp/>selected<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0004)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>2<sp/>selected<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0008)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>3<sp/>selected<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0010)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>4<sp/>selected<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0020)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>5<sp/>selected<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_6<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0040)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>6<sp/>selected<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0080)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>7<sp/>selected<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0100)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>8<sp/>selected<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0200)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>9<sp/>selected<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_10<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0400)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>10<sp/>selected<sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_11<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x0800)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>11<sp/>selected<sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_12<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x1000)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>12<sp/>selected<sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_13<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x2000)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>13<sp/>selected<sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_14<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x4000)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>14<sp/>selected<sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_15<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0x8000)<sp/><sp/></highlight><highlight class="comment">/*<sp/>Pin<sp/>15<sp/>selected<sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_All<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint16_t)0xFFFF)<sp/><sp/></highlight><highlight class="comment">/*<sp/>All<sp/>pins<sp/>selected<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPIO_PIN_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0000FFFFu<sp/></highlight><highlight class="comment">/*<sp/>PIN<sp/>mask<sp/>for<sp/>assert<sp/>test<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="group___g_p_i_o__mode__define_1gaf40bec3146810028a84b628d37d3b391" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="group___g_p_i_o__mode__define_1ga1013838a64cec2f8c88f079c449d1982" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_OUTPUT_PP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000001u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="group___g_p_i_o__mode__define_1ga2f91757829f6e9505ec386b840941929" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_OUTPUT_OD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000011u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="group___g_p_i_o__mode__define_1ga526c72c5264316fc05c775b6cad4aa6a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_AF_PP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000002u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="group___g_p_i_o__mode__define_1ga282b9fd37c8ef31daba314ffae6bf023" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_AF_OD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000012u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="group___g_p_i_o__mode__define_1gadb81109590b66d8e48076820064921b1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_AF_INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_MODE_INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="group___g_p_i_o__mode__define_1ga7a04f9ab65ad572ad20791a35009220c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_ANALOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000003u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="group___g_p_i_o__mode__define_1ga088659562e68426d9a72821ea4fd8d50" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_IT_RISING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10110000u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="group___g_p_i_o__mode__define_1gaa166210a6da3ac7e8d7504702520e522" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_IT_FALLING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10210000u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="group___g_p_i_o__mode__define_1ga0678e61090ed61e91a6496f22ddfb3d1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_IT_RISING_FALLING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10310000u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="group___g_p_i_o__mode__define_1ga97d78b82ea178ff7a4c35aa60b4e9338" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_EVT_RISING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10120000u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="group___g_p_i_o__mode__define_1gadbfa532b3566783ac6c0e07c2e0ffe5e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_EVT_FALLING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10220000u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="group___g_p_i_o__mode__define_1ga1b760771297ed2fc55a6b13071188491" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_MODE_EVT_RISING_FALLING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10320000u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="group___g_p_i_o__speed__define_1gab7916c4265bfa1b26a5205ea9c1caa4e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_SPEED_FREQ_LOW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(GPIO_CRL_MODE0_1)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="group___g_p_i_o__speed__define_1ga1724a25a9cf00ebf485daeb09cfa1e25" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_SPEED_FREQ_MEDIUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(GPIO_CRL_MODE0_0)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="group___g_p_i_o__speed__define_1gaef5898db71cdb957cd41f940b0087af8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_SPEED_FREQ_HIGH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(GPIO_CRL_MODE0)<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="group___g_p_i_o__pull__define_1ga5c2862579882c1cc64e36d38fbd07a4c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_NOPULL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="group___g_p_i_o__pull__define_1gae689bc8f5c42d6df7bd54a8dd372e072" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_PULLUP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000001u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="group___g_p_i_o__pull__define_1ga75d958d0410c36da7f27d1f4f5c36c14" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>GPIO_PULLDOWN<sp/><sp/><sp/><sp/><sp/><sp/>0x00000002u<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>macro<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="group___g_p_i_o___exported___macros_1gaae18fc8d92ffa4df2172c78869e712fc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_GPIO_EXTI_GET_FLAG(__EXTI_LINE__)<sp/>(EXTI-&gt;PR<sp/>&amp;<sp/>(__EXTI_LINE__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="group___g_p_i_o___exported___macros_1ga2f28fc349d1812cdc55a77c68d2b278d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_GPIO_EXTI_CLEAR_FLAG(__EXTI_LINE__)<sp/>(EXTI-&gt;PR<sp/>=<sp/>(__EXTI_LINE__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="group___g_p_i_o___exported___macros_1ga27f0e1f6c38745169d74620f6a178a94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_GPIO_EXTI_GET_IT(__EXTI_LINE__)<sp/>(EXTI-&gt;PR<sp/>&amp;<sp/>(__EXTI_LINE__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="group___g_p_i_o___exported___macros_1ga2a086506eec826f49b200fba64beb9f1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_GPIO_EXTI_CLEAR_IT(__EXTI_LINE__)<sp/>(EXTI-&gt;PR<sp/>=<sp/>(__EXTI_LINE__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="group___g_p_i_o___exported___macros_1gac50aef6881e1f76032941ead9c9bce61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_GPIO_EXTI_GENERATE_SWIT(__EXTI_LINE__)<sp/>(EXTI-&gt;SWIER<sp/>|=<sp/>(__EXTI_LINE__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>GPIO<sp/>HAL<sp/>Extension<sp/>module<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stm32f1xx__hal__gpio__ex_8h" kindref="compound">stm32f1xx_hal_gpio_ex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>functions<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Initialization<sp/>and<sp/>de-initialization<sp/>functions<sp/>*****************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>HAL_GPIO_Init(<ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref><sp/><sp/>*GPIOx,<sp/><ref refid="struct_g_p_i_o___init_type_def" kindref="compound">GPIO_InitTypeDef</ref><sp/>*GPIO_Init);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>HAL_GPIO_DeInit(<ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref><sp/><sp/>*GPIOx,<sp/>uint32_t<sp/>GPIO_Pin);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>IO<sp/>operation<sp/>functions<sp/>*****************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><ref refid="group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43" kindref="member">GPIO_PinState</ref><sp/>HAL_GPIO_ReadPin(<ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref><sp/>*GPIOx,<sp/>uint16_t<sp/>GPIO_Pin);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_GPIO_WritePin(<ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref><sp/>*GPIOx,<sp/>uint16_t<sp/>GPIO_Pin,<sp/><ref refid="group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43" kindref="member">GPIO_PinState</ref><sp/>PinState);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_GPIO_TogglePin(<ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref><sp/>*GPIOx,<sp/>uint16_t<sp/>GPIO_Pin);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref><sp/>HAL_GPIO_LockPin(<ref refid="struct_g_p_i_o___type_def" kindref="compound">GPIO_TypeDef</ref><sp/>*GPIOx,<sp/>uint16_t<sp/>GPIO_Pin);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_GPIO_EXTI_IRQHandler(uint16_t<sp/>GPIO_Pin);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_GPIO_EXTI_Callback(uint16_t<sp/>GPIO_Pin);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>types<sp/>-------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>variables<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>constants<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>macros<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GPIO_PIN_ACTION(ACTION)<sp/>(((ACTION)<sp/>==<sp/>GPIO_PIN_RESET)<sp/>||<sp/>((ACTION)<sp/>==<sp/>GPIO_PIN_SET))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GPIO_PIN(PIN)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((((uint32_t)PIN)<sp/>&amp;<sp/>GPIO_PIN_MASK<sp/>)<sp/>!=<sp/>0x00u)<sp/>&amp;&amp;<sp/>((((uint32_t)PIN)<sp/>&amp;<sp/>~GPIO_PIN_MASK)<sp/>==<sp/>0x00u))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GPIO_MODE(MODE)<sp/>(((MODE)<sp/>==<sp/>GPIO_MODE_INPUT)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||\</highlight></codeline>
+<codeline lineno="266"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_OUTPUT_PP)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||\</highlight></codeline>
+<codeline lineno="267"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_OUTPUT_OD)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||\</highlight></codeline>
+<codeline lineno="268"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_AF_PP)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||\</highlight></codeline>
+<codeline lineno="269"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_AF_OD)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||\</highlight></codeline>
+<codeline lineno="270"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_IT_RISING)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||\</highlight></codeline>
+<codeline lineno="271"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_IT_FALLING)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||\</highlight></codeline>
+<codeline lineno="272"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_IT_RISING_FALLING)<sp/><sp/>||\</highlight></codeline>
+<codeline lineno="273"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_EVT_RISING)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||\</highlight></codeline>
+<codeline lineno="274"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_EVT_FALLING)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||\</highlight></codeline>
+<codeline lineno="275"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_EVT_RISING_FALLING)<sp/>||\</highlight></codeline>
+<codeline lineno="276"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((MODE)<sp/>==<sp/>GPIO_MODE_ANALOG))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GPIO_SPEED(SPEED)<sp/>(((SPEED)<sp/>==<sp/>GPIO_SPEED_FREQ_LOW)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="278"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SPEED)<sp/>==<sp/>GPIO_SPEED_FREQ_MEDIUM)<sp/>||<sp/>((SPEED)<sp/>==<sp/>GPIO_SPEED_FREQ_HIGH))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_GPIO_PULL(PULL)<sp/>(((PULL)<sp/>==<sp/>GPIO_NOPULL)<sp/>||<sp/>((PULL)<sp/>==<sp/>GPIO_PULLUP)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="280"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((PULL)<sp/>==<sp/>GPIO_PULLDOWN))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>functions<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>STM32F1xx_HAL_GPIO_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="comment">/************************<sp/>(C)<sp/>COPYRIGHT<sp/>STMicroelectronics<sp/>*****END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"/>
+  </compounddef>
+</doxygen>

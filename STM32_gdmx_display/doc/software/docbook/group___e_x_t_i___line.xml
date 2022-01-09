@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___e_x_t_i___line" xml:lang="en-US">
+<title>EXTI Line</title>
+<indexterm><primary>EXTI Line</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1gac1a9cd58d76e9f497abecc832e3294c8">EXTI_LINE_0</link>   (EXTI_GPIO     | 0x00u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1gaf64b8deca0cf44b4c58d2b4d0fcd2177">EXTI_LINE_1</link>   (EXTI_GPIO     | 0x01u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1gaec48b88f5279b95962682300c0650840">EXTI_LINE_2</link>   (EXTI_GPIO     | 0x02u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga7e223d61dcb2b538040824c0b491d68c">EXTI_LINE_3</link>   (EXTI_GPIO     | 0x03u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1gaf8e1e94adf29806583e68170c1dad7dd">EXTI_LINE_4</link>   (EXTI_GPIO     | 0x04u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1gab7859f0b07e671f71be61d7d301eb909">EXTI_LINE_5</link>   (EXTI_GPIO     | 0x05u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1gaebcb8302f9aae1d54c7aada7ade230c0">EXTI_LINE_6</link>   (EXTI_GPIO     | 0x06u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga32a33e800bf0f754d0337ab30abde810">EXTI_LINE_7</link>   (EXTI_GPIO     | 0x07u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga0bb9322e3cfbe3a256f9e479ba3e5664">EXTI_LINE_8</link>   (EXTI_GPIO     | 0x08u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga714a1411d5dc8bcf6b6efe69396fbccf">EXTI_LINE_9</link>   (EXTI_GPIO     | 0x09u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1gac94dbc4ff94b573f4dd796d60dcd250c">EXTI_LINE_10</link>   (EXTI_GPIO     | 0x0Au)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga301648b2965852f535209429f71e251b">EXTI_LINE_11</link>   (EXTI_GPIO     | 0x0Bu)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga4ff15c98aec7cd3fd0f0c5bd5cfaa501">EXTI_LINE_12</link>   (EXTI_GPIO     | 0x0Cu)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga8e144f1beae1e5d259f5d4aed6a3efe0">EXTI_LINE_13</link>   (EXTI_GPIO     | 0x0Du)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga60b812a0a6fe00af8db8763b8202a463">EXTI_LINE_14</link>   (EXTI_GPIO     | 0x0Eu)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga9e711303de4e32d120d2551dc5c64dd7">EXTI_LINE_15</link>   (EXTI_GPIO     | 0x0Fu)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga92cf76ca2f7a5638944ccd94e842ebb1">EXTI_LINE_16</link>   (EXTI_CONFIG   | 0x10u)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___e_x_t_i___line_1ga9d09e51fda52def20bd23a0c42da3014">EXTI_LINE_17</link>   (EXTI_CONFIG   | 0x11u)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___e_x_t_i___line_1gac1a9cd58d76e9f497abecc832e3294c8"/>    <section>
+    <title>EXTI_LINE_0</title>
+<indexterm><primary>EXTI_LINE_0</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_0</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_0   (EXTI_GPIO     | 0x00u)</computeroutput></para>
+<para>External interrupt line 0 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1gaf64b8deca0cf44b4c58d2b4d0fcd2177"/>    <section>
+    <title>EXTI_LINE_1</title>
+<indexterm><primary>EXTI_LINE_1</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_1</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_1   (EXTI_GPIO     | 0x01u)</computeroutput></para>
+<para>External interrupt line 1 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1gac94dbc4ff94b573f4dd796d60dcd250c"/>    <section>
+    <title>EXTI_LINE_10</title>
+<indexterm><primary>EXTI_LINE_10</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_10</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_10   (EXTI_GPIO     | 0x0Au)</computeroutput></para>
+<para>External interrupt line 10 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga301648b2965852f535209429f71e251b"/>    <section>
+    <title>EXTI_LINE_11</title>
+<indexterm><primary>EXTI_LINE_11</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_11</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_11   (EXTI_GPIO     | 0x0Bu)</computeroutput></para>
+<para>External interrupt line 11 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga4ff15c98aec7cd3fd0f0c5bd5cfaa501"/>    <section>
+    <title>EXTI_LINE_12</title>
+<indexterm><primary>EXTI_LINE_12</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_12</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_12   (EXTI_GPIO     | 0x0Cu)</computeroutput></para>
+<para>External interrupt line 12 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga8e144f1beae1e5d259f5d4aed6a3efe0"/>    <section>
+    <title>EXTI_LINE_13</title>
+<indexterm><primary>EXTI_LINE_13</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_13</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_13   (EXTI_GPIO     | 0x0Du)</computeroutput></para>
+<para>External interrupt line 13 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga60b812a0a6fe00af8db8763b8202a463"/>    <section>
+    <title>EXTI_LINE_14</title>
+<indexterm><primary>EXTI_LINE_14</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_14</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_14   (EXTI_GPIO     | 0x0Eu)</computeroutput></para>
+<para>External interrupt line 14 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga9e711303de4e32d120d2551dc5c64dd7"/>    <section>
+    <title>EXTI_LINE_15</title>
+<indexterm><primary>EXTI_LINE_15</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_15</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_15   (EXTI_GPIO     | 0x0Fu)</computeroutput></para>
+<para>External interrupt line 15 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga92cf76ca2f7a5638944ccd94e842ebb1"/>    <section>
+    <title>EXTI_LINE_16</title>
+<indexterm><primary>EXTI_LINE_16</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_16</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_16   (EXTI_CONFIG   | 0x10u)</computeroutput></para>
+<para>External interrupt line 16 Connected to the PVD Output </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga9d09e51fda52def20bd23a0c42da3014"/>    <section>
+    <title>EXTI_LINE_17</title>
+<indexterm><primary>EXTI_LINE_17</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_17</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_17   (EXTI_CONFIG   | 0x11u)</computeroutput></para>
+<para>External interrupt line 17 Connected to the RTC Alarm event </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1gaec48b88f5279b95962682300c0650840"/>    <section>
+    <title>EXTI_LINE_2</title>
+<indexterm><primary>EXTI_LINE_2</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_2</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_2   (EXTI_GPIO     | 0x02u)</computeroutput></para>
+<para>External interrupt line 2 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga7e223d61dcb2b538040824c0b491d68c"/>    <section>
+    <title>EXTI_LINE_3</title>
+<indexterm><primary>EXTI_LINE_3</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_3</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_3   (EXTI_GPIO     | 0x03u)</computeroutput></para>
+<para>External interrupt line 3 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1gaf8e1e94adf29806583e68170c1dad7dd"/>    <section>
+    <title>EXTI_LINE_4</title>
+<indexterm><primary>EXTI_LINE_4</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_4</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_4   (EXTI_GPIO     | 0x04u)</computeroutput></para>
+<para>External interrupt line 4 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1gab7859f0b07e671f71be61d7d301eb909"/>    <section>
+    <title>EXTI_LINE_5</title>
+<indexterm><primary>EXTI_LINE_5</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_5</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_5   (EXTI_GPIO     | 0x05u)</computeroutput></para>
+<para>External interrupt line 5 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1gaebcb8302f9aae1d54c7aada7ade230c0"/>    <section>
+    <title>EXTI_LINE_6</title>
+<indexterm><primary>EXTI_LINE_6</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_6</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_6   (EXTI_GPIO     | 0x06u)</computeroutput></para>
+<para>External interrupt line 6 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga32a33e800bf0f754d0337ab30abde810"/>    <section>
+    <title>EXTI_LINE_7</title>
+<indexterm><primary>EXTI_LINE_7</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_7</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_7   (EXTI_GPIO     | 0x07u)</computeroutput></para>
+<para>External interrupt line 7 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga0bb9322e3cfbe3a256f9e479ba3e5664"/>    <section>
+    <title>EXTI_LINE_8</title>
+<indexterm><primary>EXTI_LINE_8</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_8</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_8   (EXTI_GPIO     | 0x08u)</computeroutput></para>
+<para>External interrupt line 8 </para>
+    </section><anchor xml:id="_group___e_x_t_i___line_1ga714a1411d5dc8bcf6b6efe69396fbccf"/>    <section>
+    <title>EXTI_LINE_9</title>
+<indexterm><primary>EXTI_LINE_9</primary><secondary>EXTI Line</secondary></indexterm>
+<indexterm><primary>EXTI Line</primary><secondary>EXTI_LINE_9</secondary></indexterm>
+<para><computeroutput>#define EXTI_LINE_9   (EXTI_GPIO     | 0x09u)</computeroutput></para>
+<para>External interrupt line 9 </para>
+</section>
+</section>
+</section>

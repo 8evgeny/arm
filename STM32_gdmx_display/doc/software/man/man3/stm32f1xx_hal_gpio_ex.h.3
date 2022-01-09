@@ -1,0 +1,263 @@
+.TH "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \- Header file of GPIO HAL Extension module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f1xx_hal_def\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_0\fP   \fBAFIO_EVCR_PIN_PX0\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_1\fP   \fBAFIO_EVCR_PIN_PX1\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_2\fP   \fBAFIO_EVCR_PIN_PX2\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_3\fP   \fBAFIO_EVCR_PIN_PX3\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_4\fP   \fBAFIO_EVCR_PIN_PX4\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_5\fP   \fBAFIO_EVCR_PIN_PX5\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_6\fP   \fBAFIO_EVCR_PIN_PX6\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_7\fP   \fBAFIO_EVCR_PIN_PX7\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_8\fP   \fBAFIO_EVCR_PIN_PX8\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_9\fP   \fBAFIO_EVCR_PIN_PX9\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_10\fP   \fBAFIO_EVCR_PIN_PX10\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_11\fP   \fBAFIO_EVCR_PIN_PX11\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_12\fP   \fBAFIO_EVCR_PIN_PX12\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_13\fP   \fBAFIO_EVCR_PIN_PX13\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_14\fP   \fBAFIO_EVCR_PIN_PX14\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PIN_15\fP   \fBAFIO_EVCR_PIN_PX15\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_AFIO_EVENTOUT_PIN\fP(__PIN__)"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PORT_A\fP   \fBAFIO_EVCR_PORT_PA\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PORT_B\fP   \fBAFIO_EVCR_PORT_PB\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PORT_C\fP   \fBAFIO_EVCR_PORT_PC\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PORT_D\fP   \fBAFIO_EVCR_PORT_PD\fP"
+.br
+.ti -1c
+.RI "#define \fBAFIO_EVENTOUT_PORT_E\fP   \fBAFIO_EVCR_PORT_PE\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_AFIO_EVENTOUT_PORT\fP(__PORT__)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_SPI1_ENABLE\fP()   AFIO_REMAP_ENABLE(\fBAFIO_MAPR_SPI1_REMAP\fP)"
+.br
+.RI "Enable the remapping of SPI1 alternate function NSS, SCK, MISO and MOSI\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_SPI1_DISABLE\fP()   AFIO_REMAP_DISABLE(\fBAFIO_MAPR_SPI1_REMAP\fP)"
+.br
+.RI "Disable the remapping of SPI1 alternate function NSS, SCK, MISO and MOSI\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_I2C1_ENABLE\fP()   AFIO_REMAP_ENABLE(\fBAFIO_MAPR_I2C1_REMAP\fP)"
+.br
+.RI "Enable the remapping of I2C1 alternate function SCL and SDA\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_I2C1_DISABLE\fP()   AFIO_REMAP_DISABLE(\fBAFIO_MAPR_I2C1_REMAP\fP)"
+.br
+.RI "Disable the remapping of I2C1 alternate function SCL and SDA\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_USART1_ENABLE\fP()   AFIO_REMAP_ENABLE(\fBAFIO_MAPR_USART1_REMAP\fP)"
+.br
+.RI "Enable the remapping of USART1 alternate function TX and RX\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_USART1_DISABLE\fP()   AFIO_REMAP_DISABLE(\fBAFIO_MAPR_USART1_REMAP\fP)"
+.br
+.RI "Disable the remapping of USART1 alternate function TX and RX\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_USART2_ENABLE\fP()   AFIO_REMAP_ENABLE(\fBAFIO_MAPR_USART2_REMAP\fP)"
+.br
+.RI "Enable the remapping of USART2 alternate function CTS, RTS, CK, TX and RX\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_USART2_DISABLE\fP()   AFIO_REMAP_DISABLE(\fBAFIO_MAPR_USART2_REMAP\fP)"
+.br
+.RI "Disable the remapping of USART2 alternate function CTS, RTS, CK, TX and RX\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_USART3_ENABLE\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_USART3_REMAP_FULLREMAP\fP, \fBAFIO_MAPR_USART3_REMAP_FULLREMAP\fP)"
+.br
+.RI "Enable the remapping of USART3 alternate function CTS, RTS, CK, TX and RX\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_USART3_PARTIAL\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_USART3_REMAP_PARTIALREMAP\fP, \fBAFIO_MAPR_USART3_REMAP_FULLREMAP\fP)"
+.br
+.RI "Enable the remapping of USART3 alternate function CTS, RTS, CK, TX and RX\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_USART3_DISABLE\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_USART3_REMAP_NOREMAP\fP, \fBAFIO_MAPR_USART3_REMAP_FULLREMAP\fP)"
+.br
+.RI "Disable the remapping of USART3 alternate function CTS, RTS, CK, TX and RX\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM1_ENABLE\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_TIM1_REMAP_FULLREMAP\fP, \fBAFIO_MAPR_TIM1_REMAP_FULLREMAP\fP)"
+.br
+.RI "Enable the remapping of TIM1 alternate function channels 1 to 4, 1N to 3N, external trigger (ETR) and Break input (BKIN) "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM1_PARTIAL\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_TIM1_REMAP_PARTIALREMAP\fP, \fBAFIO_MAPR_TIM1_REMAP_FULLREMAP\fP)"
+.br
+.RI "Enable the remapping of TIM1 alternate function channels 1 to 4, 1N to 3N, external trigger (ETR) and Break input (BKIN) "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM1_DISABLE\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_TIM1_REMAP_NOREMAP\fP, \fBAFIO_MAPR_TIM1_REMAP_FULLREMAP\fP)"
+.br
+.RI "Disable the remapping of TIM1 alternate function channels 1 to 4, 1N to 3N, external trigger (ETR) and Break input (BKIN) "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM2_ENABLE\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_TIM2_REMAP_FULLREMAP\fP, \fBAFIO_MAPR_TIM2_REMAP_FULLREMAP\fP)"
+.br
+.RI "Enable the remapping of TIM2 alternate function channels 1 to 4 and external trigger (ETR) "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM2_PARTIAL_2\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_TIM2_REMAP_PARTIALREMAP2\fP, \fBAFIO_MAPR_TIM2_REMAP_FULLREMAP\fP)"
+.br
+.RI "Enable the remapping of TIM2 alternate function channels 1 to 4 and external trigger (ETR) "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM2_PARTIAL_1\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_TIM2_REMAP_PARTIALREMAP1\fP, \fBAFIO_MAPR_TIM2_REMAP_FULLREMAP\fP)"
+.br
+.RI "Enable the remapping of TIM2 alternate function channels 1 to 4 and external trigger (ETR) "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM2_DISABLE\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_TIM2_REMAP_NOREMAP\fP, \fBAFIO_MAPR_TIM2_REMAP_FULLREMAP\fP)"
+.br
+.RI "Disable the remapping of TIM2 alternate function channels 1 to 4 and external trigger (ETR) "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM3_ENABLE\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_TIM3_REMAP_FULLREMAP\fP, \fBAFIO_MAPR_TIM3_REMAP_FULLREMAP\fP)"
+.br
+.RI "Enable the remapping of TIM3 alternate function channels 1 to 4\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM3_PARTIAL\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_TIM3_REMAP_PARTIALREMAP\fP, \fBAFIO_MAPR_TIM3_REMAP_FULLREMAP\fP)"
+.br
+.RI "Enable the remapping of TIM3 alternate function channels 1 to 4\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM3_DISABLE\fP()   AFIO_REMAP_PARTIAL(\fBAFIO_MAPR_TIM3_REMAP_NOREMAP\fP, \fBAFIO_MAPR_TIM3_REMAP_FULLREMAP\fP)"
+.br
+.RI "Disable the remapping of TIM3 alternate function channels 1 to 4\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM4_ENABLE\fP()   AFIO_REMAP_ENABLE(\fBAFIO_MAPR_TIM4_REMAP\fP)"
+.br
+.RI "Enable the remapping of TIM4 alternate function channels 1 to 4\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_TIM4_DISABLE\fP()   AFIO_REMAP_DISABLE(\fBAFIO_MAPR_TIM4_REMAP\fP)"
+.br
+.RI "Disable the remapping of TIM4 alternate function channels 1 to 4\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_PD01_ENABLE\fP()   AFIO_REMAP_ENABLE(\fBAFIO_MAPR_PD01_REMAP\fP)"
+.br
+.RI "Enable the remapping of PD0 and PD1\&. When the HSE oscillator is not used (application running on internal 8 MHz RC) PD0 and PD1 can be mapped on OSC_IN and OSC_OUT\&. This is available only on 36, 48 and 64 pins packages (PD0 and PD1 are available on 100-pin and 144-pin packages, no need for remapping)\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_PD01_DISABLE\fP()   AFIO_REMAP_DISABLE(\fBAFIO_MAPR_PD01_REMAP\fP)"
+.br
+.RI "Disable the remapping of PD0 and PD1\&. When the HSE oscillator is not used (application running on internal 8 MHz RC) PD0 and PD1 can be mapped on OSC_IN and OSC_OUT\&. This is available only on 36, 48 and 64 pins packages (PD0 and PD1 are available on 100-pin and 144-pin packages, no need for remapping)\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_ADC1_ETRGINJ_ENABLE\fP()   AFIO_REMAP_ENABLE(AFIO_MAPR_ADC1_ETRGINJ_REMAP)"
+.br
+.RI "Enable the remapping of ADC1_ETRGINJ (ADC 1 External trigger injected conversion)\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_ADC1_ETRGINJ_DISABLE\fP()   AFIO_REMAP_DISABLE(AFIO_MAPR_ADC1_ETRGINJ_REMAP)"
+.br
+.RI "Disable the remapping of ADC1_ETRGINJ (ADC 1 External trigger injected conversion)\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_ADC1_ETRGREG_ENABLE\fP()   AFIO_REMAP_ENABLE(AFIO_MAPR_ADC1_ETRGREG_REMAP)"
+.br
+.RI "Enable the remapping of ADC1_ETRGREG (ADC 1 External trigger regular conversion)\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_ADC1_ETRGREG_DISABLE\fP()   AFIO_REMAP_DISABLE(AFIO_MAPR_ADC1_ETRGREG_REMAP)"
+.br
+.RI "Disable the remapping of ADC1_ETRGREG (ADC 1 External trigger regular conversion)\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_SWJ_ENABLE\fP()   AFIO_DBGAFR_CONFIG(\fBAFIO_MAPR_SWJ_CFG_RESET\fP)"
+.br
+.RI "Enable the Serial wire JTAG configuration\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_SWJ_NONJTRST\fP()   AFIO_DBGAFR_CONFIG(\fBAFIO_MAPR_SWJ_CFG_NOJNTRST\fP)"
+.br
+.RI "Enable the Serial wire JTAG configuration\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_SWJ_NOJTAG\fP()   AFIO_DBGAFR_CONFIG(\fBAFIO_MAPR_SWJ_CFG_JTAGDISABLE\fP)"
+.br
+.RI "Enable the Serial wire JTAG configuration\&. "
+.ti -1c
+.RI "#define \fB__HAL_AFIO_REMAP_SWJ_DISABLE\fP()   AFIO_DBGAFR_CONFIG(\fBAFIO_MAPR_SWJ_CFG_DISABLE\fP)"
+.br
+.RI "Disable the Serial wire JTAG configuration\&. "
+.ti -1c
+.RI "#define \fBAFIO_REMAP_ENABLE\fP(REMAP_PIN)"
+.br
+.ti -1c
+.RI "#define \fBAFIO_REMAP_DISABLE\fP(REMAP_PIN)"
+.br
+.ti -1c
+.RI "#define \fBAFIO_REMAP_PARTIAL\fP(REMAP_PIN,  REMAP_PIN_MASK)"
+.br
+.ti -1c
+.RI "#define \fBAFIO_DBGAFR_CONFIG\fP(DBGAFR_SWJCFG)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBHAL_GPIOEx_ConfigEventout\fP (uint32_t GPIO_PortSource, uint32_t GPIO_PinSource)"
+.br
+.ti -1c
+.RI "void \fBHAL_GPIOEx_EnableEventout\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_GPIOEx_DisableEventout\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file of GPIO HAL Extension module\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2016 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

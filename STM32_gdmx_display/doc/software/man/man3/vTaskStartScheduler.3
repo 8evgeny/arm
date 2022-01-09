@@ -1,0 +1,42 @@
+.TH "vTaskStartScheduler" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vTaskStartScheduler \- vTaskStartScheduler
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+void vTaskStartScheduler( void );
+.fi
+.PP
+.PP
+Starts the real time kernel tick processing\&. After calling the kernel has control over which tasks are executed and when\&.
+.PP
+See the demo application file \fBmain\&.c\fP for an example of creating tasks and starting the kernel\&.
+.PP
+Example usage: 
+.PP
+.nf
+
+void vAFunction( void )
+{
+    // Create at least one task before starting the kernel\&.
+    xTaskCreate( vTaskCode, 'NAME', STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL );
+
+    // Start the real time kernel with preemption\&.
+    vTaskStartScheduler ();
+
+    // Will not get here unless a task calls vTaskEndScheduler ()
+}
+  
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

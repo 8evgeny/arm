@@ -1,0 +1,1262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="stm32f1xx__hal__exti_8h" kind="file" language="C++">
+    <compoundname>stm32f1xx_hal_exti.h</compoundname>
+    <includes refid="stm32f1xx__hal__def_8h" local="yes">stm32f1xx_hal_def.h</includes>
+    <includedby refid="stm32f1xx__hal__conf_8h" local="yes">Inc/stm32f1xx_hal_conf.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="3">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="2">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="26">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>Inc/usb_device.h</label>
+        <link refid="usb__device_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>Src/buzzer.c</label>
+        <link refid="buzzer_8c"/>
+      </node>
+      <node id="28">
+        <label>Src/usb_device.c</label>
+        <link refid="usb__device_8c"/>
+      </node>
+      <node id="30">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</label>
+        <link refid="usbd__cdc_8c"/>
+      </node>
+      <node id="35">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c</label>
+        <link refid="stm32f1xx__hal__cortex_8c"/>
+      </node>
+      <node id="6">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c</label>
+        <link refid="stm32f1xx__hal__dma_8c"/>
+      </node>
+      <node id="25">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Inc/buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>Src/hd44780.c</label>
+        <link refid="hd44780_8c"/>
+      </node>
+      <node id="17">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c</label>
+        <link refid="stm32f1xx__hal__tim_8c"/>
+      </node>
+      <node id="46">
+        <label>Src/stm32f1xx_hal_timebase_tim.c</label>
+        <link refid="stm32f1xx__hal__timebase__tim_8c"/>
+      </node>
+      <node id="21">
+        <label>Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c</label>
+        <link refid="stm32f1xx__hal_8c"/>
+      </node>
+      <node id="9">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c</label>
+        <link refid="stm32f1xx__hal__flash__ex_8c"/>
+      </node>
+      <node id="32">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c</label>
+        <link refid="usbd__ioreq_8c"/>
+      </node>
+      <node id="10">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c</label>
+        <link refid="stm32f1xx__hal__gpio_8c"/>
+      </node>
+      <node id="31">
+        <label>Src/usbd_conf.c</label>
+        <link refid="usbd__conf_8c"/>
+      </node>
+      <node id="37">
+        <label>Inc/usbd_desc.h</label>
+        <link refid="usbd__desc_8h_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c</label>
+        <link refid="stm32f1xx__ll__usb_8c"/>
+      </node>
+      <node id="27">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="29">
+        <label>Src/usbd_cdc_if.c</label>
+        <link refid="usbd__cdc__if_8c"/>
+      </node>
+      <node id="23">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c</label>
+        <link refid="stm32f1xx__hal__pcd__ex_8c"/>
+      </node>
+      <node id="44">
+        <label>Inc/led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c</label>
+        <link refid="stm32f1xx__hal__pwr_8c"/>
+      </node>
+      <node id="15">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c</label>
+        <link refid="stm32f1xx__hal__rcc_8c"/>
+      </node>
+      <node id="8">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c</label>
+        <link refid="stm32f1xx__hal__flash_8c"/>
+      </node>
+      <node id="39">
+        <label>Src/stm32f1xx_it.c</label>
+        <link refid="stm32f1xx__it_8c"/>
+      </node>
+      <node id="34">
+        <label>Src/usbd_desc.c</label>
+        <link refid="usbd__desc_8c"/>
+      </node>
+      <node id="18">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c</label>
+        <link refid="stm32f1xx__hal__tim__ex_8c"/>
+      </node>
+      <node id="11">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8c"/>
+      </node>
+      <node id="42">
+        <label>Inc/hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Inc/stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>Src/led.c</label>
+        <link refid="led_8c"/>
+      </node>
+      <node id="22">
+        <label>Inc/usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c</label>
+        <link refid="usbd__core_8c"/>
+      </node>
+      <node id="38">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8c"/>
+      </node>
+      <node id="7">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c</label>
+        <link refid="stm32f1xx__hal__exti_8c"/>
+      </node>
+      <node id="41">
+        <label>Inc/display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c</label>
+        <link refid="stm32f1xx__hal__pcd_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_e_x_t_i___handle_type_def" prot="public">EXTI_HandleTypeDef</innerclass>
+    <innerclass refid="struct_e_x_t_i___config_type_def" prot="public">EXTI_ConfigTypeDef</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___e_x_t_i___line_1gac1a9cd58d76e9f497abecc832e3294c8" prot="public" static="no">
+        <name>EXTI_LINE_0</name>
+        <initializer>(EXTI_GPIO     | 0x00u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="91" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1gaf64b8deca0cf44b4c58d2b4d0fcd2177" prot="public" static="no">
+        <name>EXTI_LINE_1</name>
+        <initializer>(EXTI_GPIO     | 0x01u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="92" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1gaec48b88f5279b95962682300c0650840" prot="public" static="no">
+        <name>EXTI_LINE_2</name>
+        <initializer>(EXTI_GPIO     | 0x02u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 2 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="93" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga7e223d61dcb2b538040824c0b491d68c" prot="public" static="no">
+        <name>EXTI_LINE_3</name>
+        <initializer>(EXTI_GPIO     | 0x03u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 3 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="94" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1gaf8e1e94adf29806583e68170c1dad7dd" prot="public" static="no">
+        <name>EXTI_LINE_4</name>
+        <initializer>(EXTI_GPIO     | 0x04u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="95" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1gab7859f0b07e671f71be61d7d301eb909" prot="public" static="no">
+        <name>EXTI_LINE_5</name>
+        <initializer>(EXTI_GPIO     | 0x05u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 5 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="96" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1gaebcb8302f9aae1d54c7aada7ade230c0" prot="public" static="no">
+        <name>EXTI_LINE_6</name>
+        <initializer>(EXTI_GPIO     | 0x06u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 6 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="97" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga32a33e800bf0f754d0337ab30abde810" prot="public" static="no">
+        <name>EXTI_LINE_7</name>
+        <initializer>(EXTI_GPIO     | 0x07u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 7 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="98" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga0bb9322e3cfbe3a256f9e479ba3e5664" prot="public" static="no">
+        <name>EXTI_LINE_8</name>
+        <initializer>(EXTI_GPIO     | 0x08u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="99" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga714a1411d5dc8bcf6b6efe69396fbccf" prot="public" static="no">
+        <name>EXTI_LINE_9</name>
+        <initializer>(EXTI_GPIO     | 0x09u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 9 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="100" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1gac94dbc4ff94b573f4dd796d60dcd250c" prot="public" static="no">
+        <name>EXTI_LINE_10</name>
+        <initializer>(EXTI_GPIO     | 0x0Au)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 10 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="101" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga301648b2965852f535209429f71e251b" prot="public" static="no">
+        <name>EXTI_LINE_11</name>
+        <initializer>(EXTI_GPIO     | 0x0Bu)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 11 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="102" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga4ff15c98aec7cd3fd0f0c5bd5cfaa501" prot="public" static="no">
+        <name>EXTI_LINE_12</name>
+        <initializer>(EXTI_GPIO     | 0x0Cu)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 12 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="103" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga8e144f1beae1e5d259f5d4aed6a3efe0" prot="public" static="no">
+        <name>EXTI_LINE_13</name>
+        <initializer>(EXTI_GPIO     | 0x0Du)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 13 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="104" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga60b812a0a6fe00af8db8763b8202a463" prot="public" static="no">
+        <name>EXTI_LINE_14</name>
+        <initializer>(EXTI_GPIO     | 0x0Eu)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 14 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="105" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga9e711303de4e32d120d2551dc5c64dd7" prot="public" static="no">
+        <name>EXTI_LINE_15</name>
+        <initializer>(EXTI_GPIO     | 0x0Fu)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 15 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="106" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga92cf76ca2f7a5638944ccd94e842ebb1" prot="public" static="no">
+        <name>EXTI_LINE_16</name>
+        <initializer>(EXTI_CONFIG   | 0x10u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 16 Connected to the PVD Output </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="107" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___line_1ga9d09e51fda52def20bd23a0c42da3014" prot="public" static="no">
+        <name>EXTI_LINE_17</name>
+        <initializer>(EXTI_CONFIG   | 0x11u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External interrupt line 17 Connected to the RTC Alarm event </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="108" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___mode_1ga9b50ed09da5b1dd0619d8792f142b049" prot="public" static="no">
+        <name>EXTI_MODE_NONE</name>
+        <initializer>0x00000000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="123" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___mode_1gae1e032ec592296be21f416a79a44f4f5" prot="public" static="no">
+        <name>EXTI_MODE_INTERRUPT</name>
+        <initializer>0x00000001u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="124" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___mode_1ga672fef88f86b5d8a421194e3dac0f2e1" prot="public" static="no">
+        <name>EXTI_MODE_EVENT</name>
+        <initializer>0x00000002u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="125" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___trigger_1gab0a4e8ed945992cb0cf071efe85748c8" prot="public" static="no">
+        <name>EXTI_TRIGGER_NONE</name>
+        <initializer>0x00000000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="133" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___trigger_1ga648bd5d6c2bebd85b5ea85f8af9a2ccc" prot="public" static="no">
+        <name>EXTI_TRIGGER_RISING</name>
+        <initializer>0x00000001u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="134" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___trigger_1ga7461c33165994159edf79a095c227937" prot="public" static="no">
+        <name>EXTI_TRIGGER_FALLING</name>
+        <initializer>0x00000002u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="135" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___trigger_1ga481cea6a2aafe107e5657b65887c81d5" prot="public" static="no">
+        <name>EXTI_TRIGGER_RISING_FALLING</name>
+        <initializer>(EXTI_TRIGGER_RISING | EXTI_TRIGGER_FALLING)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="136" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___g_p_i_o_sel_1ga562f178c10011ea8de3721d400176558" prot="public" static="no">
+        <name>EXTI_GPIOA</name>
+        <initializer>0x00000000u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="145" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___g_p_i_o_sel_1ga226a2e7987e1e808eff168985d378641" prot="public" static="no">
+        <name>EXTI_GPIOB</name>
+        <initializer>0x00000001u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="146" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___g_p_i_o_sel_1gaa74b8f490a793f237c6a55f56ba6e644" prot="public" static="no">
+        <name>EXTI_GPIOC</name>
+        <initializer>0x00000002u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="147" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___g_p_i_o_sel_1ga753afc3084ff070ea6d640b771ed0245" prot="public" static="no">
+        <name>EXTI_GPIOD</name>
+        <initializer>0x00000003u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="148" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___constants_1ga508bbe670f4f32775988b55e6914b6ec" prot="public" static="no">
+        <name>EXTI_PROPERTY_SHIFT</name>
+        <initializer>24u</initializer>
+        <briefdescription>
+<para>EXTI Line property definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="182" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___constants_1ga6f245ca02e17c1798fe43a66ea5b7fa4" prot="public" static="no">
+        <name>EXTI_CONFIG</name>
+        <initializer>(0x02uL &lt;&lt; <ref refid="group___e_x_t_i___private___constants_1ga508bbe670f4f32775988b55e6914b6ec" kindref="member">EXTI_PROPERTY_SHIFT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="183" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___constants_1gacfa322960fc87db022536119cabb4d2a" prot="public" static="no">
+        <name>EXTI_GPIO</name>
+        <initializer>((0x04uL &lt;&lt; <ref refid="group___e_x_t_i___private___constants_1ga508bbe670f4f32775988b55e6914b6ec" kindref="member">EXTI_PROPERTY_SHIFT</ref>) | EXTI_CONFIG)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="184" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___constants_1ga6aa8e044ea8987b6839f419123734e4b" prot="public" static="no">
+        <name>EXTI_PROPERTY_MASK</name>
+        <initializer>(EXTI_CONFIG | EXTI_GPIO)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="185" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___constants_1ga755405defae45017e19a17fd0279869c" prot="public" static="no">
+        <name>EXTI_PIN_MASK</name>
+        <initializer>0x0000001Fu</initializer>
+        <briefdescription>
+<para>EXTI bit usage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="190" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___constants_1ga657f081646b552ee10bdfc7af94b5cdf" prot="public" static="no">
+        <name>EXTI_MODE_MASK</name>
+        <initializer>(EXTI_MODE_EVENT | EXTI_MODE_INTERRUPT)</initializer>
+        <briefdescription>
+<para>EXTI Mask for interrupt &amp; event mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="195" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___constants_1ga3e14df666414849fd5a3907a96a2a892" prot="public" static="no">
+        <name>EXTI_TRIGGER_MASK</name>
+        <initializer>(EXTI_TRIGGER_RISING | EXTI_TRIGGER_FALLING)</initializer>
+        <briefdescription>
+<para>EXTI Mask for trigger possibilities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="200" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___constants_1ga577c4d3186ba6dd303761b23510595ef" prot="public" static="no">
+        <name>EXTI_LINE_NB</name>
+        <initializer>18UL</initializer>
+        <briefdescription>
+<para>EXTI Line number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="210" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___macros_1gab9eb047b8a317ec5f38c9bfcca65744c" prot="public" static="no">
+        <name>IS_EXTI_LINE</name>
+        <param><defname>__LINE__</defname></param>
+        <initializer>                                        ((((__LINE__) &amp; ~(EXTI_PROPERTY_MASK | <ref refid="group___e_x_t_i___private___constants_1ga755405defae45017e19a17fd0279869c" kindref="member">EXTI_PIN_MASK</ref>)) == 0x00u) &amp;&amp; \
+                                        ((((__LINE__) &amp; EXTI_PROPERTY_MASK) == EXTI_CONFIG)   || \
+                                         (((__LINE__) &amp; EXTI_PROPERTY_MASK) == EXTI_GPIO))    &amp;&amp; \
+                                         (((__LINE__) &amp; <ref refid="group___e_x_t_i___private___constants_1ga755405defae45017e19a17fd0279869c" kindref="member">EXTI_PIN_MASK</ref>) &lt; <ref refid="group___e_x_t_i___private___constants_1ga577c4d3186ba6dd303761b23510595ef" kindref="member">EXTI_LINE_NB</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="220" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___macros_1gaa8a0977af667f831424dcd75ecb6709b" prot="public" static="no">
+        <name>IS_EXTI_MODE</name>
+        <param><defname>__LINE__</defname></param>
+        <initializer>                                         ((((__LINE__) &amp; <ref refid="group___e_x_t_i___private___constants_1ga657f081646b552ee10bdfc7af94b5cdf" kindref="member">EXTI_MODE_MASK</ref>) != 0x00u) &amp;&amp; \
+                                         (((__LINE__) &amp; ~<ref refid="group___e_x_t_i___private___constants_1ga657f081646b552ee10bdfc7af94b5cdf" kindref="member">EXTI_MODE_MASK</ref>) == 0x00u))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="225" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___macros_1ga0a4ff8a2705f40043db7c3e5d7cf0059" prot="public" static="no">
+        <name>IS_EXTI_TRIGGER</name>
+        <param><defname>__LINE__</defname></param>
+        <initializer>(((__LINE__) &amp; ~<ref refid="group___e_x_t_i___private___constants_1ga3e14df666414849fd5a3907a96a2a892" kindref="member">EXTI_TRIGGER_MASK</ref>) == 0x00u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="228" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___macros_1ga11d59f58f3608c79dc729205e6421e93" prot="public" static="no">
+        <name>IS_EXTI_PENDING_EDGE</name>
+        <param><defname>__LINE__</defname></param>
+        <initializer>((__LINE__) == EXTI_TRIGGER_RISING_FALLING)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="230" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___macros_1ga74c5ff710e86a50aea20e3ba92cd51e1" prot="public" static="no">
+        <name>IS_EXTI_CONFIG_LINE</name>
+        <param><defname>__LINE__</defname></param>
+        <initializer>(((__LINE__) &amp; EXTI_CONFIG) != 0x00u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="232" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___macros_1ga839c895e37f0e74052194d91ad68a3ae" prot="public" static="no">
+        <name>IS_EXTI_GPIO_PORT</name>
+        <param><defname>__PORT__</defname></param>
+        <initializer>                                         (((__PORT__) == EXTI_GPIOA) || \
+                                         ((__PORT__) == EXTI_GPIOB) || \
+                                         ((__PORT__) == EXTI_GPIOC) || \
+                                         ((__PORT__) == EXTI_GPIOD))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="256" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___e_x_t_i___private___macros_1ga82f191b2ea96948f302dc6c2108ea534" prot="public" static="no">
+        <name>IS_EXTI_GPIO_PIN</name>
+        <param><defname>__PIN__</defname></param>
+        <initializer>((__PIN__) &lt; 16u)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="262" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___e_x_t_i___exported___types_1ga0ff36e8796a6ad3f2fc211e534c54c0e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EXTI_CallbackIDTypeDef</name>
+        <enumvalue id="group___e_x_t_i___exported___types_1gga0ff36e8796a6ad3f2fc211e534c54c0ea9e0259c6eb4e5da890544489f133294b" prot="public">
+          <name>HAL_EXTI_COMMON_CB_ID</name>
+          <initializer>= 0x00U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HAL EXTI common Callback ID enumeration definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="49" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" bodystart="50" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___e_x_t_i___exported___functions___group1_1ga21c31dc6d13f1e32b4352e00ab6ad2b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_EXTI_SetConfigLine</definition>
+        <argsstring>(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig)</argsstring>
+        <name>HAL_EXTI_SetConfigLine</name>
+        <param>
+          <type><ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref> *</type>
+          <declname>hexti</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_e_x_t_i___config_type_def" kindref="compound">EXTI_ConfigTypeDef</ref> *</type>
+          <declname>pExtiConfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="279" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" declline="279" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_i___exported___functions___group1_1gabc6617165a2712df438f38509c8205dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_EXTI_GetConfigLine</definition>
+        <argsstring>(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig)</argsstring>
+        <name>HAL_EXTI_GetConfigLine</name>
+        <param>
+          <type><ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref> *</type>
+          <declname>hexti</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_e_x_t_i___config_type_def" kindref="compound">EXTI_ConfigTypeDef</ref> *</type>
+          <declname>pExtiConfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="280" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" declline="280" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_i___exported___functions___group1_1gae8ed1defdcf965a62618af09c45c7866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_EXTI_ClearConfigLine</definition>
+        <argsstring>(EXTI_HandleTypeDef *hexti)</argsstring>
+        <name>HAL_EXTI_ClearConfigLine</name>
+        <param>
+          <type><ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref> *</type>
+          <declname>hexti</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="281" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" declline="281" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_i___exported___functions___group1_1gacb6ee7e9f2429c3c3a1c99d4fe2d26d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_EXTI_RegisterCallback</definition>
+        <argsstring>(EXTI_HandleTypeDef *hexti, EXTI_CallbackIDTypeDef CallbackID, void(*pPendingCbfn)(void))</argsstring>
+        <name>HAL_EXTI_RegisterCallback</name>
+        <param>
+          <type><ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref> *</type>
+          <declname>hexti</declname>
+        </param>
+        <param>
+          <type><ref refid="group___e_x_t_i___exported___types_1ga0ff36e8796a6ad3f2fc211e534c54c0e" kindref="member">EXTI_CallbackIDTypeDef</ref></type>
+          <declname>CallbackID</declname>
+        </param>
+        <param>
+          <type>void(*)(void)</type>
+          <declname>pPendingCbfn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="282" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" declline="282" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_i___exported___functions___group1_1gaa5856ee92dc1265db144af025673ee46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_EXTI_GetHandle</definition>
+        <argsstring>(EXTI_HandleTypeDef *hexti, uint32_t ExtiLine)</argsstring>
+        <name>HAL_EXTI_GetHandle</name>
+        <param>
+          <type><ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref> *</type>
+          <declname>hexti</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ExtiLine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="283" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" declline="283" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_i___exported___functions___group2_1ga241422a810a8e2aeb0cd8467145d33bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_EXTI_IRQHandler</definition>
+        <argsstring>(EXTI_HandleTypeDef *hexti)</argsstring>
+        <name>HAL_EXTI_IRQHandler</name>
+        <param>
+          <type><ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref> *</type>
+          <declname>hexti</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="293" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" declline="293" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_i___exported___functions___group2_1ga96319c70ad567d85105e4608f8b0887e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_EXTI_GetPending</definition>
+        <argsstring>(EXTI_HandleTypeDef *hexti, uint32_t Edge)</argsstring>
+        <name>HAL_EXTI_GetPending</name>
+        <param>
+          <type><ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref> *</type>
+          <declname>hexti</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Edge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="294" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" declline="294" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_i___exported___functions___group2_1gaa99dea85ad2aea36f0abbe022a82664d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_EXTI_ClearPending</definition>
+        <argsstring>(EXTI_HandleTypeDef *hexti, uint32_t Edge)</argsstring>
+        <name>HAL_EXTI_ClearPending</name>
+        <param>
+          <type><ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref> *</type>
+          <declname>hexti</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Edge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="295" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" declline="295" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___e_x_t_i___exported___functions___group2_1ga6deebffde84bc80fa9ff1b7faa38615a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_EXTI_GenerateSWI</definition>
+        <argsstring>(EXTI_HandleTypeDef *hexti)</argsstring>
+        <name>HAL_EXTI_GenerateSWI</name>
+        <param>
+          <type><ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref> *</type>
+          <declname>hexti</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" line="296" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h" declline="296" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of EXTI HAL module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>MCD Application Team</para>
+</simplesect>
+<simplesect kind="attention"><para></para>
+</simplesect>
+<heading level="2"><center><copy/> Copyright (c) 2019 STMicroelectronics. All rights reserved.</center></heading>
+</para>
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STM32F1xx_HAL_EXTI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STM32F1xx_HAL_EXTI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stm32f1xx__hal__def_8h" kindref="compound">stm32f1xx_hal_def.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>types<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="group___e_x_t_i___exported___types_1ga0ff36e8796a6ad3f2fc211e534c54c0e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>HAL_EXTI_COMMON_CB_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00U</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}<sp/><ref refid="group___e_x_t_i___exported___types_1ga0ff36e8796a6ad3f2fc211e534c54c0e" kindref="member">EXTI_CallbackIDTypeDef</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="struct_e_x_t_i___handle_type_def" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59" refid="struct_e_x_t_i___handle_type_def_1a9c7a78e876a7dfb279a16029f915463f" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_e_x_t_i___handle_type_def_1a9c7a78e876a7dfb279a16029f915463f" kindref="member">Line</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="struct_e_x_t_i___handle_type_def_1aeae0a8364e2078d0c61240a6906fdfd3" refkind="member"><highlight class="normal"><sp/><sp/>void<sp/>(*<sp/>PendingCallback)(void);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/><ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="struct_e_x_t_i___config_type_def" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68" refid="struct_e_x_t_i___config_type_def_1a9c7a78e876a7dfb279a16029f915463f" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_e_x_t_i___config_type_def_1a9c7a78e876a7dfb279a16029f915463f" kindref="member">Line</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="struct_e_x_t_i___config_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_e_x_t_i___config_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839" kindref="member">Mode</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="struct_e_x_t_i___config_type_def_1a73dd50a4d440463bf9e1cb02b72ac706" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_e_x_t_i___config_type_def_1a73dd50a4d440463bf9e1cb02b72ac706" kindref="member">Trigger</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="struct_e_x_t_i___config_type_def_1ac9316e39886afa2fee1ff41a6e34c379" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_e_x_t_i___config_type_def_1ac9316e39886afa2fee1ff41a6e34c379" kindref="member">GPIOSel</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}<sp/><ref refid="struct_e_x_t_i___config_type_def" kindref="compound">EXTI_ConfigTypeDef</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>constants<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="group___e_x_t_i___line_1gac1a9cd58d76e9f497abecc832e3294c8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x00u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="group___e_x_t_i___line_1gaf64b8deca0cf44b4c58d2b4d0fcd2177" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x01u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="group___e_x_t_i___line_1gaec48b88f5279b95962682300c0650840" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x02u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="group___e_x_t_i___line_1ga7e223d61dcb2b538040824c0b491d68c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x03u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="group___e_x_t_i___line_1gaf8e1e94adf29806583e68170c1dad7dd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x04u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="group___e_x_t_i___line_1gab7859f0b07e671f71be61d7d301eb909" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x05u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="group___e_x_t_i___line_1gaebcb8302f9aae1d54c7aada7ade230c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_6<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x06u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="group___e_x_t_i___line_1ga32a33e800bf0f754d0337ab30abde810" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x07u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="group___e_x_t_i___line_1ga0bb9322e3cfbe3a256f9e479ba3e5664" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x08u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="group___e_x_t_i___line_1ga714a1411d5dc8bcf6b6efe69396fbccf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x09u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="group___e_x_t_i___line_1gac94dbc4ff94b573f4dd796d60dcd250c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_10<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x0Au)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="group___e_x_t_i___line_1ga301648b2965852f535209429f71e251b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_11<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x0Bu)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="group___e_x_t_i___line_1ga4ff15c98aec7cd3fd0f0c5bd5cfaa501" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_12<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x0Cu)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="group___e_x_t_i___line_1ga8e144f1beae1e5d259f5d4aed6a3efe0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_13<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x0Du)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="group___e_x_t_i___line_1ga60b812a0a6fe00af8db8763b8202a463" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_14<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x0Eu)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="group___e_x_t_i___line_1ga9e711303de4e32d120d2551dc5c64dd7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_15<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_GPIO<sp/><sp/><sp/><sp/><sp/>|<sp/>0x0Fu)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="group___e_x_t_i___line_1ga92cf76ca2f7a5638944ccd94e842ebb1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_16<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_CONFIG<sp/><sp/><sp/>|<sp/>0x10u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="group___e_x_t_i___line_1ga9d09e51fda52def20bd23a0c42da3014" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_17<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_CONFIG<sp/><sp/><sp/>|<sp/>0x11u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(EXTI_IMR_IM18)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_18<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_CONFIG<sp/><sp/><sp/>|<sp/>0x12u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>EXTI_IMR_IM18<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(EXTI_IMR_IM19)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_19<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_CONFIG<sp/><sp/><sp/>|<sp/>0x13u)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>EXTI_IMR_IM19<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_MODE_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_MODE_INTERRUPT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000001u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_MODE_EVENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000002u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_TRIGGER_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_TRIGGER_RISING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000001u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_TRIGGER_FALLING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000002u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_TRIGGER_RISING_FALLING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_TRIGGER_RISING<sp/>|<sp/>EXTI_TRIGGER_FALLING)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_GPIOA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_GPIOB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000001u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_GPIOC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000002u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_GPIOD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000003u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>(GPIOE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_GPIOE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000004u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>GPIOE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>(GPIOF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_GPIOF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000005u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>GPIOF<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>(GPIOG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_GPIOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000006u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>GPIOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>macro<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>constants<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="group___e_x_t_i___private___constants_1ga508bbe670f4f32775988b55e6914b6ec" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_PROPERTY_SHIFT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>24u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_CONFIG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x02uL<sp/>&lt;&lt;<sp/>EXTI_PROPERTY_SHIFT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_GPIO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((0x04uL<sp/>&lt;&lt;<sp/>EXTI_PROPERTY_SHIFT)<sp/>|<sp/>EXTI_CONFIG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_PROPERTY_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_CONFIG<sp/>|<sp/>EXTI_GPIO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="group___e_x_t_i___private___constants_1ga755405defae45017e19a17fd0279869c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_PIN_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0000001Fu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="group___e_x_t_i___private___constants_1ga657f081646b552ee10bdfc7af94b5cdf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_MODE_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_MODE_EVENT<sp/>|<sp/>EXTI_MODE_INTERRUPT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="group___e_x_t_i___private___constants_1ga3e14df666414849fd5a3907a96a2a892" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_TRIGGER_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EXTI_TRIGGER_RISING<sp/>|<sp/>EXTI_TRIGGER_FALLING)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(EXTI_IMR_IM19)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_NB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20UL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(EXTI_IMR_IM18)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_NB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>19UL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>EXTI_IMR_IM17<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="group___e_x_t_i___private___constants_1ga577c4d3186ba6dd303761b23510595ef" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTI_LINE_NB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>18UL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>EXTI_IMR_IM19<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>macros<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_EXTI_LINE(__LINE__)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((((__LINE__)<sp/>&amp;<sp/>~(EXTI_PROPERTY_MASK<sp/>|<sp/>EXTI_PIN_MASK))<sp/>==<sp/>0x00u)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((((__LINE__)<sp/>&amp;<sp/>EXTI_PROPERTY_MASK)<sp/>==<sp/>EXTI_CONFIG)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="222"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((__LINE__)<sp/>&amp;<sp/>EXTI_PROPERTY_MASK)<sp/>==<sp/>EXTI_GPIO))<sp/><sp/><sp/><sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="223"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((__LINE__)<sp/>&amp;<sp/>EXTI_PIN_MASK)<sp/>&lt;<sp/>EXTI_LINE_NB))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_EXTI_MODE(__LINE__)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((((__LINE__)<sp/>&amp;<sp/>EXTI_MODE_MASK)<sp/>!=<sp/>0x00u)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="226"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((__LINE__)<sp/>&amp;<sp/>~EXTI_MODE_MASK)<sp/>==<sp/>0x00u))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_EXTI_TRIGGER(__LINE__)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((__LINE__)<sp/>&amp;<sp/>~EXTI_TRIGGER_MASK)<sp/>==<sp/>0x00u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_EXTI_PENDING_EDGE(__LINE__)<sp/><sp/>((__LINE__)<sp/>==<sp/>EXTI_TRIGGER_RISING_FALLING)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_EXTI_CONFIG_LINE(__LINE__)<sp/><sp/><sp/>(((__LINE__)<sp/>&amp;<sp/>EXTI_CONFIG)<sp/>!=<sp/>0x00u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>(GPIOG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_EXTI_GPIO_PORT(__PORT__)<sp/><sp/><sp/><sp/><sp/>(((__PORT__)<sp/>==<sp/>EXTI_GPIOA)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="236"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOB)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="237"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOC)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="238"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOD)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="239"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOE)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="240"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOF)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="241"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOG))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>(GPIOF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_EXTI_GPIO_PORT(__PORT__)<sp/><sp/><sp/><sp/><sp/>(((__PORT__)<sp/>==<sp/>EXTI_GPIOA)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="244"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOB)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="245"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOC)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="246"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOD)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="247"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOE)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="248"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOF))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>(GPIOE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_EXTI_GPIO_PORT(__PORT__)<sp/><sp/><sp/><sp/><sp/>(((__PORT__)<sp/>==<sp/>EXTI_GPIOA)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="251"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOB)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="252"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOC)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="253"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOD)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="254"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_EXTI_GPIO_PORT(__PORT__)<sp/><sp/><sp/><sp/><sp/>(((__PORT__)<sp/>==<sp/>EXTI_GPIOA)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="257"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOB)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="258"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOC)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="259"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PORT__)<sp/>==<sp/>EXTI_GPIOD))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>GPIOG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_EXTI_GPIO_PIN(__PIN__)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((__PIN__)<sp/>&lt;<sp/>16u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>functions<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Configuration<sp/>functions<sp/>****************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref><sp/>HAL_EXTI_SetConfigLine(<ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref><sp/>*hexti,<sp/><ref refid="struct_e_x_t_i___config_type_def" kindref="compound">EXTI_ConfigTypeDef</ref><sp/>*pExtiConfig);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref><sp/>HAL_EXTI_GetConfigLine(<ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref><sp/>*hexti,<sp/><ref refid="struct_e_x_t_i___config_type_def" kindref="compound">EXTI_ConfigTypeDef</ref><sp/>*pExtiConfig);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref><sp/>HAL_EXTI_ClearConfigLine(<ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref><sp/>*hexti);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref><sp/>HAL_EXTI_RegisterCallback(<ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref><sp/>*hexti,<sp/><ref refid="group___e_x_t_i___exported___types_1ga0ff36e8796a6ad3f2fc211e534c54c0e" kindref="member">EXTI_CallbackIDTypeDef</ref><sp/>CallbackID,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*pPendingCbfn)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref><sp/>HAL_EXTI_GetHandle(<ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref><sp/>*hexti,<sp/>uint32_t<sp/>ExtiLine);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>IO<sp/>operation<sp/>functions<sp/>*****************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_EXTI_IRQHandler(<ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref><sp/>*hexti);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_EXTI_GetPending(<ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref><sp/>*hexti,<sp/>uint32_t<sp/>Edge);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_EXTI_ClearPending(<ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref><sp/>*hexti,<sp/>uint32_t<sp/>Edge);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_EXTI_GenerateSWI(<ref refid="struct_e_x_t_i___handle_type_def" kindref="compound">EXTI_HandleTypeDef</ref><sp/>*hexti);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>STM32F1xx_HAL_EXTI_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="comment">/************************<sp/>(C)<sp/>COPYRIGHT<sp/>STMicroelectronics<sp/>*****END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,66 @@
+.TH "DMA_InitTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_InitTypeDef \- DMA Configuration Structure definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_dma\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBDirection\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPeriphInc\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMemInc\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPeriphDataAlignment\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMemDataAlignment\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPriority\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+DMA Configuration Structure definition\&. 
+.SH "Field Documentation"
+.PP 
+.SS "uint32_t Direction"
+Specifies if the data will be transferred from memory to peripheral, from memory to memory or from peripheral to memory\&. This parameter can be a value of \fBDMA Data transfer direction\fP 
+.SS "uint32_t MemDataAlignment"
+Specifies the Memory data width\&. This parameter can be a value of \fBDMA Memory data size\fP 
+.SS "uint32_t MemInc"
+Specifies whether the memory address register should be incremented or not\&. This parameter can be a value of \fBDMA Memory incremented mode\fP 
+.SS "uint32_t Mode"
+Specifies the operation mode of the DMAy Channelx\&. This parameter can be a value of \fBDMA mode\fP 
+.PP
+\fBNote\fP
+.RS 4
+The circular buffer mode cannot be used if the memory-to-memory data transfer is configured on the selected Channel 
+.RE
+.PP
+
+.SS "uint32_t PeriphDataAlignment"
+Specifies the Peripheral data width\&. This parameter can be a value of \fBDMA Peripheral data size\fP 
+.SS "uint32_t PeriphInc"
+Specifies whether the Peripheral address register should be incremented or not\&. This parameter can be a value of \fBDMA Peripheral incremented mode\fP 
+.SS "uint32_t Priority"
+Specifies the software priority for the DMAy Channelx\&. This parameter can be a value of \fBDMA Priority level\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

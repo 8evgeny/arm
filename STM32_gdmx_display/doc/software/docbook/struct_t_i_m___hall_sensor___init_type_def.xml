@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_t_i_m___hall_sensor___init_type_def" xml:lang="en-US">
+<title>TIM_HallSensor_InitTypeDef Struct Reference</title>
+<indexterm><primary>TIM_HallSensor_InitTypeDef</primary></indexterm>
+<para>
+
+<para>TIM Hall sensor Configuration Structure definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f1xx_hal_tim_ex.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___hall_sensor___init_type_def_1ac1191c7421a3ca4c53ec7875870812e5">IC1Polarity</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___hall_sensor___init_type_def_1aa913a8df0a4c97fefa87ff760fae10cb">IC1Prescaler</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___hall_sensor___init_type_def_1a5efa2ad5085fe72fb0b5dc2e2fc61def">IC1Filter</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___hall_sensor___init_type_def_1a5d74bf14283eb95439d6d37952274f07">Commutation_Delay</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>TIM Hall sensor Configuration Structure definition. </para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_t_i_m___hall_sensor___init_type_def_1a5d74bf14283eb95439d6d37952274f07"/>    <section>
+    <title>Commutation_Delay</title>
+<indexterm><primary>Commutation_Delay</primary><secondary>TIM_HallSensor_InitTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_HallSensor_InitTypeDef</primary><secondary>Commutation_Delay</secondary></indexterm>
+<para><computeroutput>uint32_t Commutation_Delay</computeroutput></para>
+<para>Specifies the pulse value to be loaded into the Capture Compare Register. This parameter can be a number between Min_Data = 0x0000 and Max_Data = 0xFFFF </para>
+    </section><anchor xml:id="_struct_t_i_m___hall_sensor___init_type_def_1a5efa2ad5085fe72fb0b5dc2e2fc61def"/>    <section>
+    <title>IC1Filter</title>
+<indexterm><primary>IC1Filter</primary><secondary>TIM_HallSensor_InitTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_HallSensor_InitTypeDef</primary><secondary>IC1Filter</secondary></indexterm>
+<para><computeroutput>uint32_t IC1Filter</computeroutput></para>
+<para>Specifies the input capture filter. This parameter can be a number between Min_Data = 0x0 and Max_Data = 0xF </para>
+    </section><anchor xml:id="_struct_t_i_m___hall_sensor___init_type_def_1ac1191c7421a3ca4c53ec7875870812e5"/>    <section>
+    <title>IC1Polarity</title>
+<indexterm><primary>IC1Polarity</primary><secondary>TIM_HallSensor_InitTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_HallSensor_InitTypeDef</primary><secondary>IC1Polarity</secondary></indexterm>
+<para><computeroutput>uint32_t IC1Polarity</computeroutput></para>
+<para>Specifies the active edge of the input signal. This parameter can be a value of <link linkend="_group___t_i_m___input___capture___polarity">TIM Input Capture Polarity</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___hall_sensor___init_type_def_1aa913a8df0a4c97fefa87ff760fae10cb"/>    <section>
+    <title>IC1Prescaler</title>
+<indexterm><primary>IC1Prescaler</primary><secondary>TIM_HallSensor_InitTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_HallSensor_InitTypeDef</primary><secondary>IC1Prescaler</secondary></indexterm>
+<para><computeroutput>uint32_t IC1Prescaler</computeroutput></para>
+<para>Specifies the Input Capture Prescaler. This parameter can be a value of <link linkend="_group___t_i_m___input___capture___prescaler">TIM Input Capture Prescaler</link> </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/STM32F1xx_HAL_Driver/Inc/<link linkend="_stm32f1xx__hal__tim__ex_8h">stm32f1xx_hal_tim_ex.h</link></section>
+</section>

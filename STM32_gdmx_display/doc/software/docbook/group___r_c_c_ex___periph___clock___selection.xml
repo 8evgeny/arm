@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex___periph___clock___selection" xml:lang="en-US">
+<title>Periph Clock Selection</title>
+<indexterm><primary>Periph Clock Selection</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___periph___clock___selection_1gaede03aaafb5319bb39767bf50182406f"/>#define <emphasis role="strong">RCC_PERIPHCLK_RTC</emphasis>   0x00000001U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___periph___clock___selection_1gaa234e496ace2f188b106dc15a95ed6bc"/>#define <emphasis role="strong">RCC_PERIPHCLK_ADC</emphasis>   0x00000002U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

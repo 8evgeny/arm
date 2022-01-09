@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___t_i_m___o_s_s_i___off___state___selection__for___idle__mode__state" kind="group">
+    <compoundname>TIM_OSSI_Off_State_Selection_for_Idle_mode_state</compoundname>
+    <title>TIM OSSI OffState Selection for Idle mode state</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___t_i_m___o_s_s_i___off___state___selection__for___idle__mode__state_1gae5b5901b177cd054cd5503630892680f" prot="public" static="no">
+        <name>TIM_OSSI_ENABLE</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gab1cf04e70ccf3d4aba5afcf2496a411a" kindref="member">TIM_BDTR_OSSI</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When inactive, OC/OCN outputs are enabled (still controlled by the timer) <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="779" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="779" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___t_i_m___o_s_s_i___off___state___selection__for___idle__mode__state_1gab1a20c65a3d24ef770f8a2a14c24130b" prot="public" static="no">
+        <name>TIM_OSSI_DISABLE</name>
+        <initializer>0x00000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When inactive, OC/OCN outputs are disabled (not controlled any longer by the timer) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="780" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="780" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

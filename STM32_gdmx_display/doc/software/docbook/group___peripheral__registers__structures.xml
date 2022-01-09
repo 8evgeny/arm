@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___peripheral__registers__structures" xml:lang="en-US">
+<title>Peripheral_registers_structures</title>
+<indexterm><primary>Peripheral_registers_structures</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_a_d_c___type_def">ADC_TypeDef</link></para>
+
+<para>Analog to Digital Converter 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_a_d_c___common___type_def">ADC_Common_TypeDef</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_b_k_p___type_def">BKP_TypeDef</link></para>
+
+<para>Backup Registers 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_c_a_n___tx_mail_box___type_def">CAN_TxMailBox_TypeDef</link></para>
+
+<para>Controller Area Network TxMailBox. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_c_a_n___f_i_f_o_mail_box___type_def">CAN_FIFOMailBox_TypeDef</link></para>
+
+<para>Controller Area Network FIFOMailBox. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_c_a_n___filter_register___type_def">CAN_FilterRegister_TypeDef</link></para>
+
+<para>Controller Area Network FilterRegister. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_c_a_n___type_def">CAN_TypeDef</link></para>
+
+<para>Controller Area Network. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_c_r_c___type_def">CRC_TypeDef</link></para>
+
+<para>CRC calculation unit. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_d_b_g_m_c_u___type_def">DBGMCU_TypeDef</link></para>
+
+<para>Debug MCU. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_d_m_a___channel___type_def">DMA_Channel_TypeDef</link></para>
+
+<para>DMA Controller. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_d_m_a___type_def">DMA_TypeDef</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_e_x_t_i___type_def">EXTI_TypeDef</link></para>
+
+<para>External Interrupt/Event Controller. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___type_def">FLASH_TypeDef</link></para>
+
+<para>FLASH Registers. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_o_b___type_def">OB_TypeDef</link></para>
+
+<para>Option Bytes Registers. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link></para>
+
+<para>General Purpose I/O. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_a_f_i_o___type_def">AFIO_TypeDef</link></para>
+
+<para>Alternate Function I/O. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i2_c___type_def">I2C_TypeDef</link></para>
+
+<para>Inter Integrated Circuit Interface. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i_w_d_g___type_def">IWDG_TypeDef</link></para>
+
+<para>Independent WATCHDOG. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_p_w_r___type_def">PWR_TypeDef</link></para>
+
+<para>Power Control. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_c_c___type_def">RCC_TypeDef</link></para>
+
+<para>Reset and Clock Control. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_t_c___type_def">RTC_TypeDef</link></para>
+
+<para>Real-Time Clock. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_p_i___type_def">SPI_TypeDef</link></para>
+
+<para>Serial Peripheral Interface. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___type_def">TIM_TypeDef</link></para>
+
+<para>TIM Timers. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_u_s_a_r_t___type_def">USART_TypeDef</link></para>
+
+<para>Universal Synchronous Asynchronous Receiver Transmitter. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_u_s_b___type_def">USB_TypeDef</link></para>
+
+<para>Universal Serial Bus Full Speed Device. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_w_w_d_g___type_def">WWDG_TypeDef</link></para>
+
+<para>Window WATCHDOG. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

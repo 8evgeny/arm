@@ -1,0 +1,600 @@
+.TH "Drivers/CMSIS/Include/core_sc000.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/CMSIS/Include/core_sc000.h \- CMSIS SC000 Core Peripheral Access Layer Header File\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include 'cmsis_version\&.h'\fP
+.br
+\fC#include 'cmsis_compiler\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "union \fBAPSR_Type\fP"
+.br
+.RI "Union type to access the Application Program Status Register (APSR)\&. "
+.ti -1c
+.RI "union \fBIPSR_Type\fP"
+.br
+.RI "Union type to access the Interrupt Program Status Register (IPSR)\&. "
+.ti -1c
+.RI "union \fBxPSR_Type\fP"
+.br
+.RI "Union type to access the Special-Purpose Program Status Registers (xPSR)\&. "
+.ti -1c
+.RI "union \fBCONTROL_Type\fP"
+.br
+.RI "Union type to access the Control Registers (CONTROL)\&. "
+.ti -1c
+.RI "struct \fBNVIC_Type\fP"
+.br
+.RI "Structure type to access the Nested Vectored Interrupt Controller (NVIC)\&. "
+.ti -1c
+.RI "struct \fBSCB_Type\fP"
+.br
+.RI "Structure type to access the System Control Block (SCB)\&. "
+.ti -1c
+.RI "struct \fBSCnSCB_Type\fP"
+.br
+.RI "Structure type to access the System Control and ID Register not in the SCB\&. "
+.ti -1c
+.RI "struct \fBSysTick_Type\fP"
+.br
+.RI "Structure type to access the System Timer (SysTick)\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__CORE_SC000_H_GENERIC\fP"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fB__SC000_CMSIS_VERSION_MAIN\fP   (\fB__CM_CMSIS_VERSION_MAIN\fP)"
+.br
+.ti -1c
+.RI "#define \fB__SC000_CMSIS_VERSION_SUB\fP   (\fB__CM_CMSIS_VERSION_SUB\fP)"
+.br
+.ti -1c
+.RI "#define \fB__SC000_CMSIS_VERSION\fP"
+.br
+.ti -1c
+.RI "#define \fB__CORTEX_SC\fP   (000U)"
+.br
+.ti -1c
+.RI "#define \fB__FPU_USED\fP   0U"
+.br
+.ti -1c
+.RI "#define \fB__CORE_SC000_H_DEPENDANT\fP"
+.br
+.ti -1c
+.RI "#define \fB__I\fP   volatile const"
+.br
+.ti -1c
+.RI "#define \fB__O\fP   volatile"
+.br
+.ti -1c
+.RI "#define \fB__IO\fP   volatile"
+.br
+.ti -1c
+.RI "#define \fB__IM\fP   volatile const      /*! Defines 'read only' structure member permissions */"
+.br
+.ti -1c
+.RI "#define \fB__OM\fP   volatile            /*! Defines 'write only' structure member permissions */"
+.br
+.ti -1c
+.RI "#define \fB__IOM\fP   volatile            /*! Defines 'read / write' structure member permissions */"
+.br
+.ti -1c
+.RI "#define \fBAPSR_N_Pos\fP   31U"
+.br
+.ti -1c
+.RI "#define \fBAPSR_N_Msk\fP   (1UL << \fBAPSR_N_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBAPSR_Z_Pos\fP   30U"
+.br
+.ti -1c
+.RI "#define \fBAPSR_Z_Msk\fP   (1UL << \fBAPSR_Z_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBAPSR_C_Pos\fP   29U"
+.br
+.ti -1c
+.RI "#define \fBAPSR_C_Msk\fP   (1UL << \fBAPSR_C_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBAPSR_V_Pos\fP   28U"
+.br
+.ti -1c
+.RI "#define \fBAPSR_V_Msk\fP   (1UL << \fBAPSR_V_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBIPSR_ISR_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBIPSR_ISR_Msk\fP   (0x1FFUL /*<< \fBIPSR_ISR_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_N_Pos\fP   31U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_N_Msk\fP   (1UL << \fBxPSR_N_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_Z_Pos\fP   30U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_Z_Msk\fP   (1UL << \fBxPSR_Z_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_C_Pos\fP   29U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_C_Msk\fP   (1UL << \fBxPSR_C_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_V_Pos\fP   28U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_V_Msk\fP   (1UL << \fBxPSR_V_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_T_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_T_Msk\fP   (1UL << \fBxPSR_T_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_ISR_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_ISR_Msk\fP   (0x1FFUL /*<< \fBxPSR_ISR_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBCONTROL_SPSEL_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBCONTROL_SPSEL_Msk\fP   (1UL << \fBCONTROL_SPSEL_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_IMPLEMENTER_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_IMPLEMENTER_Msk\fP   (0xFFUL << \fBSCB_CPUID_IMPLEMENTER_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_VARIANT_Pos\fP   20U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_VARIANT_Msk\fP   (0xFUL << \fBSCB_CPUID_VARIANT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_ARCHITECTURE_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_ARCHITECTURE_Msk\fP   (0xFUL << \fBSCB_CPUID_ARCHITECTURE_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_PARTNO_Pos\fP   4U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_PARTNO_Msk\fP   (0xFFFUL << \fBSCB_CPUID_PARTNO_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_REVISION_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_REVISION_Msk\fP   (0xFUL /*<< \fBSCB_CPUID_REVISION_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_NMIPENDSET_Pos\fP   31U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_NMIPENDSET_Msk\fP   (1UL << \fBSCB_ICSR_NMIPENDSET_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSVSET_Pos\fP   28U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSVSET_Msk\fP   (1UL << \fBSCB_ICSR_PENDSVSET_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSVCLR_Pos\fP   27U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSVCLR_Msk\fP   (1UL << \fBSCB_ICSR_PENDSVCLR_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSTSET_Pos\fP   26U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSTSET_Msk\fP   (1UL << \fBSCB_ICSR_PENDSTSET_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSTCLR_Pos\fP   25U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSTCLR_Msk\fP   (1UL << \fBSCB_ICSR_PENDSTCLR_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_ISRPREEMPT_Pos\fP   23U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_ISRPREEMPT_Msk\fP   (1UL << \fBSCB_ICSR_ISRPREEMPT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_ISRPENDING_Pos\fP   22U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_ISRPENDING_Msk\fP   (1UL << \fBSCB_ICSR_ISRPENDING_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_VECTPENDING_Pos\fP   12U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_VECTPENDING_Msk\fP   (0x1FFUL << \fBSCB_ICSR_VECTPENDING_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_VECTACTIVE_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_VECTACTIVE_Msk\fP   (0x1FFUL /*<< \fBSCB_ICSR_VECTACTIVE_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSCB_VTOR_TBLOFF_Pos\fP   7U"
+.br
+.ti -1c
+.RI "#define \fBSCB_VTOR_TBLOFF_Msk\fP   (0x1FFFFFFUL << \fBSCB_VTOR_TBLOFF_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTKEY_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTKEY_Msk\fP   (0xFFFFUL << \fBSCB_AIRCR_VECTKEY_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTKEYSTAT_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTKEYSTAT_Msk\fP   (0xFFFFUL << \fBSCB_AIRCR_VECTKEYSTAT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_ENDIANESS_Pos\fP   15U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_ENDIANESS_Msk\fP   (1UL << \fBSCB_AIRCR_ENDIANESS_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_SYSRESETREQ_Pos\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_SYSRESETREQ_Msk\fP   (1UL << \fBSCB_AIRCR_SYSRESETREQ_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTCLRACTIVE_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTCLRACTIVE_Msk\fP   (1UL << \fBSCB_AIRCR_VECTCLRACTIVE_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SEVONPEND_Pos\fP   4U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SEVONPEND_Msk\fP   (1UL << \fBSCB_SCR_SEVONPEND_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SLEEPDEEP_Pos\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SLEEPDEEP_Msk\fP   (1UL << \fBSCB_SCR_SLEEPDEEP_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SLEEPONEXIT_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SLEEPONEXIT_Msk\fP   (1UL << \fBSCB_SCR_SLEEPONEXIT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_STKALIGN_Pos\fP   9U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_STKALIGN_Msk\fP   (1UL << \fBSCB_CCR_STKALIGN_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_UNALIGN_TRP_Pos\fP   3U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_UNALIGN_TRP_Msk\fP   (1UL << \fBSCB_CCR_UNALIGN_TRP_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_SVCALLPENDED_Pos\fP   15U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_SVCALLPENDED_Msk\fP   (1UL << \fBSCB_SHCSR_SVCALLPENDED_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCnSCB_ACTLR_DISMCYCINT_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSCnSCB_ACTLR_DISMCYCINT_Msk\fP   (1UL /*<< \fBSCnSCB_ACTLR_DISMCYCINT_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_COUNTFLAG_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_COUNTFLAG_Msk\fP   (1UL << \fBSysTick_CTRL_COUNTFLAG_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_CLKSOURCE_Pos\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_CLKSOURCE_Msk\fP   (1UL << \fBSysTick_CTRL_CLKSOURCE_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_TICKINT_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_TICKINT_Msk\fP   (1UL << \fBSysTick_CTRL_TICKINT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_ENABLE_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_ENABLE_Msk\fP   (1UL /*<< \fBSysTick_CTRL_ENABLE_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_LOAD_RELOAD_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_LOAD_RELOAD_Msk\fP   (0xFFFFFFUL /*<< \fBSysTick_LOAD_RELOAD_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_VAL_CURRENT_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_VAL_CURRENT_Msk\fP   (0xFFFFFFUL /*<< \fBSysTick_VAL_CURRENT_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_NOREF_Pos\fP   31U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_NOREF_Msk\fP   (1UL << \fBSysTick_CALIB_NOREF_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_SKEW_Pos\fP   30U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_SKEW_Msk\fP   (1UL << \fBSysTick_CALIB_SKEW_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_TENMS_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_TENMS_Msk\fP   (0xFFFFFFUL /*<< \fBSysTick_CALIB_TENMS_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fB_VAL2FLD\fP(field,  value)   (((uint32_t)(value) << field ## _Pos) & field ## _Msk)"
+.br
+.RI "Mask and shift a bit field value for use in a register bit range\&. "
+.ti -1c
+.RI "#define \fB_FLD2VAL\fP(field,  value)   (((uint32_t)(value) & field ## _Msk) >> field ## _Pos)"
+.br
+.RI "Mask and shift a register value to extract a bit filed value\&. "
+.ti -1c
+.RI "#define \fBSCS_BASE\fP   (0xE000E000UL)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_BASE\fP   (\fBSCS_BASE\fP +  0x0010UL)"
+.br
+.ti -1c
+.RI "#define \fBNVIC_BASE\fP   (\fBSCS_BASE\fP +  0x0100UL)"
+.br
+.ti -1c
+.RI "#define \fBSCB_BASE\fP   (\fBSCS_BASE\fP +  0x0D00UL)"
+.br
+.ti -1c
+.RI "#define \fBSCnSCB\fP   ((\fBSCnSCB_Type\fP    *)     \fBSCS_BASE\fP      )"
+.br
+.ti -1c
+.RI "#define \fBSCB\fP   ((\fBSCB_Type\fP       *)     \fBSCB_BASE\fP      )"
+.br
+.ti -1c
+.RI "#define \fBSysTick\fP   ((\fBSysTick_Type\fP   *)     \fBSysTick_BASE\fP  )"
+.br
+.ti -1c
+.RI "#define \fBNVIC\fP   ((\fBNVIC_Type\fP      *)     \fBNVIC_BASE\fP     )"
+.br
+.ti -1c
+.RI "#define \fBNVIC_EnableIRQ\fP   \fB__NVIC_EnableIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_GetEnableIRQ\fP   \fB__NVIC_GetEnableIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_DisableIRQ\fP   \fB__NVIC_DisableIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_GetPendingIRQ\fP   \fB__NVIC_GetPendingIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_SetPendingIRQ\fP   \fB__NVIC_SetPendingIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_ClearPendingIRQ\fP   \fB__NVIC_ClearPendingIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_SetPriority\fP   \fB__NVIC_SetPriority\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_GetPriority\fP   \fB__NVIC_GetPriority\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_SystemReset\fP   \fB__NVIC_SystemReset\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_SetVector\fP   \fB__NVIC_SetVector\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_GetVector\fP   \fB__NVIC_GetVector\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_USER_IRQ_OFFSET\fP   16"
+.br
+.ti -1c
+.RI "#define \fBEXC_RETURN_HANDLER\fP   (0xFFFFFFF1UL)     /* return to Handler mode, uses MSP after return                               */"
+.br
+.ti -1c
+.RI "#define \fBEXC_RETURN_THREAD_MSP\fP   (0xFFFFFFF9UL)     /* return to Thread mode, uses MSP after return                                */"
+.br
+.ti -1c
+.RI "#define \fBEXC_RETURN_THREAD_PSP\fP   (0xFFFFFFFDUL)     /* return to Thread mode, uses PSP after return                                */"
+.br
+.ti -1c
+.RI "#define \fB_BIT_SHIFT\fP(IRQn)   (  ((((uint32_t)(int32_t)(IRQn))         )      &  0x03UL) * 8UL)"
+.br
+.ti -1c
+.RI "#define \fB_SHP_IDX\fP(IRQn)   ( (((((uint32_t)(int32_t)(IRQn)) & 0x0FUL)\-8UL) >>    2UL)      )"
+.br
+.ti -1c
+.RI "#define \fB_IP_IDX\fP(IRQn)   (   (((uint32_t)(int32_t)(IRQn))                >>    2UL)      )"
+.br
+.in -1c
+.in -1c
+.SS "Functions"
+
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_EnableIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Enable Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fB__NVIC_GetEnableIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Get Interrupt Enable status\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_DisableIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Disable Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fB__NVIC_GetPendingIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Get Pending Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_SetPendingIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Set Pending Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_ClearPendingIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Clear Pending Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_SetPriority\fP (\fBIRQn_Type\fP IRQn, uint32_t priority)"
+.br
+.RI "Set Interrupt Priority\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fB__NVIC_GetPriority\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Get Interrupt Priority\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_SetVector\fP (\fBIRQn_Type\fP IRQn, uint32_t vector)"
+.br
+.RI "Set Interrupt Vector\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fB__NVIC_GetVector\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Get Interrupt Vector\&. "
+.ti -1c
+.RI "__NO_RETURN __STATIC_INLINE void \fB__NVIC_SystemReset\fP (void)"
+.br
+.RI "System Reset\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBSCB_GetFPUType\fP (void)"
+.br
+.RI "get FPU type "
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+CMSIS SC000 Core Peripheral Access Layer Header File\&. 
+
+
+.PP
+\fBVersion\fP
+.RS 4
+V5\&.0\&.5 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+28\&. May 2018 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __CORTEX_SC   (000U)"
+Cortex secure core 
+.SS "#define __FPU_USED   0U"
+__FPU_USED indicates whether an FPU is used or not\&. This core does not support an FPU at all 
+.SS "#define __I   volatile const"
+Defines 'read only' permissions 
+.SS "#define __IO   volatile"
+Defines 'read / write' permissions 
+.SS "#define __O   volatile"
+Defines 'write only' permissions 
+.SS "#define __SC000_CMSIS_VERSION"
+\fBValue:\fP
+.PP
+.nf
+                                      ((__SC000_CMSIS_VERSION_MAIN << 16U) | \
+                                      __SC000_CMSIS_VERSION_SUB           )
+.fi
+
+.PP
+\fBDeprecated\fP
+.RS 4
+CMSIS HAL version number 
+.RE
+.PP
+
+.SS "#define __SC000_CMSIS_VERSION_MAIN   (\fB__CM_CMSIS_VERSION_MAIN\fP)"
+
+.PP
+\fBDeprecated\fP
+.RS 4
+[31:16] CMSIS HAL main version 
+.RE
+.PP
+
+.SS "#define __SC000_CMSIS_VERSION_SUB   (\fB__CM_CMSIS_VERSION_SUB\fP)"
+
+.PP
+\fBDeprecated\fP
+.RS 4
+[15:0] CMSIS HAL sub version 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c___private___macros" kind="group">
+    <compoundname>RCC_Private_Macros</compoundname>
+    <title>RCC_Private_Macros</title>
+    <innergroup refid="group___r_c_c___alias___for___legacy">Alias define maintained for legacy</innergroup>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga13202f72c93b28705bd35aab3cbd951f" prot="public" static="no">
+        <name>IS_RCC_PLLSOURCE</name>
+        <param><defname>__SOURCE__</defname></param>
+        <initializer>                                      (((__SOURCE__) == <ref refid="group___r_c_c___p_l_l___clock___source_1ga09fff12a4e92f4da5980321b7f99b632" kindref="member">RCC_PLLSOURCE_HSI_DIV2</ref>) || \
+                                      ((__SOURCE__) == <ref refid="group___r_c_c___p_l_l___clock___source_1ga197cea7fe5c2db26fe7fcdb0f99dd4d7" kindref="member">RCC_PLLSOURCE_HSE</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1317" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga68584e3b585c1c1770d504a030d0dd34" prot="public" static="no">
+        <name>IS_RCC_OSCILLATORTYPE</name>
+        <param><defname>__OSCILLATOR__</defname></param>
+        <initializer>                                               (((__OSCILLATOR__) == RCC_OSCILLATORTYPE_NONE)                           || \
+                                               (((__OSCILLATOR__) &amp; RCC_OSCILLATORTYPE_HSE) == RCC_OSCILLATORTYPE_HSE) || \
+                                               (((__OSCILLATOR__) &amp; RCC_OSCILLATORTYPE_HSI) == RCC_OSCILLATORTYPE_HSI) || \
+                                               (((__OSCILLATOR__) &amp; RCC_OSCILLATORTYPE_LSI) == RCC_OSCILLATORTYPE_LSI) || \
+                                               (((__OSCILLATOR__) &amp; RCC_OSCILLATORTYPE_LSE) == RCC_OSCILLATORTYPE_LSE))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1319" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga3c9bb7f31e4cd8436a41ae33c8908226" prot="public" static="no">
+        <name>IS_RCC_HSE</name>
+        <param><defname>__HSE__</defname></param>
+        <initializer>                             (((__HSE__) == <ref refid="group___r_c_c___h_s_e___config_1ga1616626d23fbce440398578855df6f97" kindref="member">RCC_HSE_OFF</ref>) || ((__HSE__) == <ref refid="group___r_c_c___h_s_e___config_1gabc4f70a44776c557af20496b04d9a9db" kindref="member">RCC_HSE_ON</ref>) || \
+                             ((__HSE__) == <ref refid="group___r_c_c___h_s_e___config_1ga5ca515db2d5c4d5bdb9ee3d154df2704" kindref="member">RCC_HSE_BYPASS</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1324" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga6c766af016cdc1d63f1ed64c5082737c" prot="public" static="no">
+        <name>IS_RCC_LSE</name>
+        <param><defname>__LSE__</defname></param>
+        <initializer>                             (((__LSE__) == <ref refid="group___r_c_c___l_s_e___config_1ga6645c27708d0cad1a4ab61d2abb24c77" kindref="member">RCC_LSE_OFF</ref>) || ((__LSE__) == <ref refid="group___r_c_c___l_s_e___config_1gac981ea636c2f215e4473901e0912f55a" kindref="member">RCC_LSE_ON</ref>) || \
+                             ((__LSE__) == <ref refid="group___r_c_c___l_s_e___config_1gaad580157edbae878edbcc83c5a68e767" kindref="member">RCC_LSE_BYPASS</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1326" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga230f351a740560f6b51cdc4b7051606e" prot="public" static="no">
+        <name>IS_RCC_HSI</name>
+        <param><defname>__HSI__</defname></param>
+        <initializer>(((__HSI__) == <ref refid="group___r_c_c___h_s_i___config_1ga1b34d37d3b51afec0758b3ddc7a7e665" kindref="member">RCC_HSI_OFF</ref>) || ((__HSI__) == <ref refid="group___r_c_c___h_s_i___config_1ga0bf09ef9e46d5da25cced7b3122f92f5" kindref="member">RCC_HSI_ON</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1328" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga0811e1266f1690c9f967df0129cb9d66" prot="public" static="no">
+        <name>IS_RCC_CALIBRATION_VALUE</name>
+        <param><defname>__VALUE__</defname></param>
+        <initializer>((__VALUE__) &lt;= 0x1FU)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1329" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga2961f77a4ee7870f36d9f7f6729a0608" prot="public" static="no">
+        <name>IS_RCC_LSI</name>
+        <param><defname>__LSI__</defname></param>
+        <initializer>(((__LSI__) == <ref refid="group___r_c_c___l_s_i___config_1gaa1710927d79a2032f87f039c4a27356a" kindref="member">RCC_LSI_OFF</ref>) || ((__LSI__) == <ref refid="group___r_c_c___l_s_i___config_1ga6b364ac3500e60b6bff695ee518c87d6" kindref="member">RCC_LSI_ON</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1330" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga4e8a1f3a151c3011e915df4da312dd73" prot="public" static="no">
+        <name>IS_RCC_PLL</name>
+        <param><defname>__PLL__</defname></param>
+        <initializer>                             (((__PLL__) == <ref refid="group___r_c_c___p_l_l___config_1gae47a612f8e15c32917ee2181362d88f3" kindref="member">RCC_PLL_NONE</ref>) || ((__PLL__) == <ref refid="group___r_c_c___p_l_l___config_1ga3a8d5c8bcb101c6ca1a574729acfa903" kindref="member">RCC_PLL_OFF</ref>) || \
+                             ((__PLL__) == <ref refid="group___r_c_c___p_l_l___config_1gaf86dbee130304ba5760818f56d34ec91" kindref="member">RCC_PLL_ON</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1331" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1gaedf7abbab300ed340b88d5f665910707" prot="public" static="no">
+        <name>IS_RCC_CLOCKTYPE</name>
+        <param><defname>CLK</defname></param>
+        <initializer>                               ((((CLK) &amp; <ref refid="group___r_c_c___system___clock___type_1ga7e721f5bf3fe925f78dae0356165332e" kindref="member">RCC_CLOCKTYPE_SYSCLK</ref>) == <ref refid="group___r_c_c___system___clock___type_1ga7e721f5bf3fe925f78dae0356165332e" kindref="member">RCC_CLOCKTYPE_SYSCLK</ref>) || \
+                               (((CLK) &amp; <ref refid="group___r_c_c___system___clock___type_1gaa5330efbd790632856a2b15851517ef9" kindref="member">RCC_CLOCKTYPE_HCLK</ref>)   == <ref refid="group___r_c_c___system___clock___type_1gaa5330efbd790632856a2b15851517ef9" kindref="member">RCC_CLOCKTYPE_HCLK</ref>)   || \
+                               (((CLK) &amp; <ref refid="group___r_c_c___system___clock___type_1gab00c7b70f0770a616be4b5df45a454c4" kindref="member">RCC_CLOCKTYPE_PCLK1</ref>)  == <ref refid="group___r_c_c___system___clock___type_1gab00c7b70f0770a616be4b5df45a454c4" kindref="member">RCC_CLOCKTYPE_PCLK1</ref>)  || \
+                               (((CLK) &amp; <ref refid="group___r_c_c___system___clock___type_1gaef7e78706e597a6551d71f5f9ad60cc0" kindref="member">RCC_CLOCKTYPE_PCLK2</ref>)  == <ref refid="group___r_c_c___system___clock___type_1gaef7e78706e597a6551d71f5f9ad60cc0" kindref="member">RCC_CLOCKTYPE_PCLK2</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1334" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga7dc6fce00c2191e691fb2b17dd176d65" prot="public" static="no">
+        <name>IS_RCC_SYSCLKSOURCE</name>
+        <param><defname>__SOURCE__</defname></param>
+        <initializer>                                         (((__SOURCE__) == <ref refid="group___r_c_c___system___clock___source_1gaaeeb699502e7d7a9f1b5d57fcf1f5095" kindref="member">RCC_SYSCLKSOURCE_HSI</ref>) || \
+                                         ((__SOURCE__) == <ref refid="group___r_c_c___system___clock___source_1ga9116d0627e1e7f33c48e1357b9a35a1c" kindref="member">RCC_SYSCLKSOURCE_HSE</ref>) || \
+                                         ((__SOURCE__) == <ref refid="group___r_c_c___system___clock___source_1ga5caf08ac71d7dd7e7b2e3e421606aca7" kindref="member">RCC_SYSCLKSOURCE_PLLCLK</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1338" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1gae09fa77206ca9cb1952b7d0ae49c8f4c" prot="public" static="no">
+        <name>IS_RCC_SYSCLKSOURCE_STATUS</name>
+        <param><defname>__SOURCE__</defname></param>
+        <initializer>                                                (((__SOURCE__) == <ref refid="group___r_c_c___system___clock___source___status_1ga0d6c2b0b2d59e6591295649853bb2abd" kindref="member">RCC_SYSCLKSOURCE_STATUS_HSI</ref>) || \
+                                                ((__SOURCE__) == <ref refid="group___r_c_c___system___clock___source___status_1ga3847769265bf19becf7b976a7e908a64" kindref="member">RCC_SYSCLKSOURCE_STATUS_HSE</ref>) || \
+                                                ((__SOURCE__) == <ref refid="group___r_c_c___system___clock___source___status_1ga4f05019ec09da478d084f44dbaad7d6d" kindref="member">RCC_SYSCLKSOURCE_STATUS_PLLCLK</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1341" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga0f01b4d9e55bcb7fcbd2c08f6d7bb5b3" prot="public" static="no">
+        <name>IS_RCC_HCLK</name>
+        <param><defname>__HCLK__</defname></param>
+        <initializer>                               (((__HCLK__) == <ref refid="group___r_c_c___a_h_b___clock___source_1ga226f5bf675015ea677868132b6b83494" kindref="member">RCC_SYSCLK_DIV1</ref>) || ((__HCLK__) == <ref refid="group___r_c_c___a_h_b___clock___source_1gac37c0610458a92e3cb32ec81014625c3" kindref="member">RCC_SYSCLK_DIV2</ref>) || \
+                               ((__HCLK__) == <ref refid="group___r_c_c___a_h_b___clock___source_1ga6fd3652d6853563cdf388a4386b9d22f" kindref="member">RCC_SYSCLK_DIV4</ref>) || ((__HCLK__) == <ref refid="group___r_c_c___a_h_b___clock___source_1ga7def31373854ba9c72bb76b1d13e3aad" kindref="member">RCC_SYSCLK_DIV8</ref>) || \
+                               ((__HCLK__) == <ref refid="group___r_c_c___a_h_b___clock___source_1ga895462b261e03eade3d0139cc1327a51" kindref="member">RCC_SYSCLK_DIV16</ref>) || ((__HCLK__) == <ref refid="group___r_c_c___a_h_b___clock___source_1ga73814b5a7ee000687ec8334637ca5b14" kindref="member">RCC_SYSCLK_DIV64</ref>) || \
+                               ((__HCLK__) == <ref refid="group___r_c_c___a_h_b___clock___source_1ga43eddf4d4160df30548a714dce102ad8" kindref="member">RCC_SYSCLK_DIV128</ref>) || ((__HCLK__) == <ref refid="group___r_c_c___a_h_b___clock___source_1ga94956d6e9c3a78230bf660b838f987e2" kindref="member">RCC_SYSCLK_DIV256</ref>) || \
+                               ((__HCLK__) == <ref refid="group___r_c_c___a_h_b___clock___source_1gabe18a9d55c0858bbfe3db657fb64c76d" kindref="member">RCC_SYSCLK_DIV512</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1344" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga378b8fcc2e64326f6f98b30cb3fc22d9" prot="public" static="no">
+        <name>IS_RCC_PCLK</name>
+        <param><defname>__PCLK__</defname></param>
+        <initializer>                               (((__PCLK__) == <ref refid="group___r_c_c___a_p_b1___a_p_b2___clock___source_1ga8e3fcdef0e5d77bb61a52420fe1e9fbc" kindref="member">RCC_HCLK_DIV1</ref>) || ((__PCLK__) == <ref refid="group___r_c_c___a_p_b1___a_p_b2___clock___source_1ga4d2ebcf280d85e8449a5fb7b994b5169" kindref="member">RCC_HCLK_DIV2</ref>) || \
+                               ((__PCLK__) == <ref refid="group___r_c_c___a_p_b1___a_p_b2___clock___source_1ga85b5f4fd936e22a3f4df5ed756f6e083" kindref="member">RCC_HCLK_DIV4</ref>) || ((__PCLK__) == <ref refid="group___r_c_c___a_p_b1___a_p_b2___clock___source_1gadb18bc60e2c639cb59244bedb54f7bb3" kindref="member">RCC_HCLK_DIV8</ref>) || \
+                               ((__PCLK__) == <ref refid="group___r_c_c___a_p_b1___a_p_b2___clock___source_1ga27ac27d48360121bc2dc68b99dc8845d" kindref="member">RCC_HCLK_DIV16</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1349" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1ga9fa7b8751b8f868f0f1dd55b6efced65" prot="public" static="no">
+        <name>IS_RCC_MCO</name>
+        <param><defname>__MCO__</defname></param>
+        <initializer>((__MCO__) == <ref refid="group___r_c_c___m_c_o___index_1gad9bc2abe13f0d3e62a5f9aa381927eb3" kindref="member">RCC_MCO</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1352" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1gab281379d2f6361a20a082259be63af0f" prot="public" static="no">
+        <name>IS_RCC_MCODIV</name>
+        <param><defname>__DIV__</defname></param>
+        <initializer>(((__DIV__) == RCC_MCODIV_1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1353" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___private___macros_1gacd1d98013cd9a28e8b1544adf931e7b3" prot="public" static="no">
+        <name>IS_RCC_RTCCLKSOURCE</name>
+        <param><defname>__SOURCE__</defname></param>
+        <initializer>                                          (((__SOURCE__) == <ref refid="group___r_c_c___r_t_c___clock___source_1gacce0b2f54d103340d8c3a218e86e295d" kindref="member">RCC_RTCCLKSOURCE_NO_CLK</ref>) || \
+                                          ((__SOURCE__) == <ref refid="group___r_c_c___r_t_c___clock___source_1ga5dca8d63f250a20bd6bc005670d0c150" kindref="member">RCC_RTCCLKSOURCE_LSE</ref>) || \
+                                          ((__SOURCE__) == <ref refid="group___r_c_c___r_t_c___clock___source_1gab47a1afb8b5eef9f20f4772961d0a5f4" kindref="member">RCC_RTCCLKSOURCE_LSI</ref>) || \
+                                          ((__SOURCE__) == <ref refid="group___r_c_c___r_t_c___clock___source_1ga7e022374ec3ceffa94e5bb6310c35c83" kindref="member">RCC_RTCCLKSOURCE_HSE_DIV128</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1354" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1354" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

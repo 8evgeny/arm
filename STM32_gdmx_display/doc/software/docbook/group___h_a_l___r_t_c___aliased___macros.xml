@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___r_t_c___aliased___macros" xml:lang="en-US">
+<title>HAL RTC Aliased Macros maintained for legacy purpose</title>
+<indexterm><primary>HAL RTC Aliased Macros maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1gaf8b41c0f2f096d2e71f304c00d183e4d"/>#define <emphasis role="strong">__HAL_RTC_CLEAR_FLAG</emphasis>   __HAL_RTC_EXTI_CLEAR_FLAG</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1gae758f64dcd336b7e63308d205cd92697"/>#define <emphasis role="strong">__HAL_RTC_DISABLE_IT</emphasis>   __HAL_RTC_EXTI_DISABLE_IT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga530c1a5aba6a657bf37fbfb6fb6c4ebc"/>#define <emphasis role="strong">__HAL_RTC_ENABLE_IT</emphasis>   __HAL_RTC_EXTI_ENABLE_IT</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RTC_EXTI_CLEAR_FLAG</emphasis>(__EXTI_LINE__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RTC_EXTI_ENABLE_IT</emphasis>(__EXTI_LINE__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RTC_EXTI_DISABLE_IT</emphasis>(__EXTI_LINE__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RTC_EXTI_GET_FLAG</emphasis>(__EXTI_LINE__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RTC_EXTI_GENERATE_SWIT</emphasis>(__EXTI_LINE__)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga7e6a2b69bd0cb85a1d44801ccb116e38"/>#define <emphasis role="strong">IS_ALARM</emphasis>   IS_RTC_ALARM</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga927c5de67a80c6ea175db864959df3e0"/>#define <emphasis role="strong">IS_ALARM_MASK</emphasis>   IS_RTC_ALARM_MASK</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga720879737ff77db80e800545672cdb72"/>#define <emphasis role="strong">IS_TAMPER</emphasis>   IS_RTC_TAMPER</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga49cab06ba96add6f8dddac75414b468f"/>#define <emphasis role="strong">IS_TAMPER_ERASE_MODE</emphasis>   IS_RTC_TAMPER_ERASE_MODE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga96d532a9a8a0b283f2fd289355001233"/>#define <emphasis role="strong">IS_TAMPER_FILTER</emphasis>   IS_RTC_TAMPER_FILTER</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1gaa441c6cceeee673784fd5f9dcd1a0334"/>#define <emphasis role="strong">IS_TAMPER_INTERRUPT</emphasis>   IS_RTC_TAMPER_INTERRUPT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga936b760d07038d51cd9a72f1f0456711"/>#define <emphasis role="strong">IS_TAMPER_MASKFLAG_STATE</emphasis>   IS_RTC_TAMPER_MASKFLAG_STATE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1gacaaf7b6159a85289691dea9b0d3a6195"/>#define <emphasis role="strong">IS_TAMPER_PRECHARGE_DURATION</emphasis>   IS_RTC_TAMPER_PRECHARGE_DURATION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1gaf061929111a6987f8a74e09e239d686b"/>#define <emphasis role="strong">IS_TAMPER_PULLUP_STATE</emphasis>   IS_RTC_TAMPER_PULLUP_STATE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga534eeb558f5ddd78594acc82dbc56b9d"/>#define <emphasis role="strong">IS_TAMPER_SAMPLING_FREQ</emphasis>   IS_RTC_TAMPER_SAMPLING_FREQ</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga7da808c5448f1ebf7f29c44dee830446"/>#define <emphasis role="strong">IS_TAMPER_TIMESTAMPONTAMPER_DETECTION</emphasis>   IS_RTC_TAMPER_TIMESTAMPONTAMPER_DETECTION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1gaa0fe0373701cfd583ae46173a60248b2"/>#define <emphasis role="strong">IS_TAMPER_TRIGGER</emphasis>   IS_RTC_TAMPER_TRIGGER</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga85becc3221346e2b872ca8f205776a47"/>#define <emphasis role="strong">IS_WAKEUP_CLOCK</emphasis>   IS_RTC_WAKEUP_CLOCK</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga806f88006a410ad9a990d4b1dff449f4"/>#define <emphasis role="strong">IS_WAKEUP_COUNTER</emphasis>   IS_RTC_WAKEUP_COUNTER</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1gad93d3e4b8add5593e8a4c0ee4b60c659"/>#define <emphasis role="strong">__RTC_WRITEPROTECTION_ENABLE</emphasis>   __HAL_RTC_WRITEPROTECTION_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga50e1d57530318f33dfa59d44c3f086ce"/>#define <emphasis role="strong">__RTC_WRITEPROTECTION_DISABLE</emphasis>   __HAL_RTC_WRITEPROTECTION_DISABLE</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga70c16094f7c10e5991b608df36ce41f8"/>    <section>
+    <title>__HAL_RTC_EXTI_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_RTC_EXTI_CLEAR_FLAG</primary><secondary>HAL RTC Aliased Macros maintained for legacy purpose</secondary></indexterm>
+<indexterm><primary>HAL RTC Aliased Macros maintained for legacy purpose</primary><secondary>__HAL_RTC_EXTI_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_EXTI_CLEAR_FLAG( __EXTI_LINE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__EXTI_LINE__)&#32;==&#32;RTC_EXTI_LINE_ALARM_EVENT)&#32;?&#32;__HAL_RTC_ALARM_EXTI_CLEAR_FLAG()&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__EXTI_LINE__)&#32;==&#32;RTC_EXTI_LINE_WAKEUPTIMER_EVENT)&#32;?&#32;__HAL_RTC_WAKEUPTIMER_EXTI_CLEAR_FLAG()&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RTC_TAMPER_TIMESTAMP_EXTI_CLEAR_FLAG()))
+</programlisting>    </section><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga9b18753e4b04bf550e36d81a6064ba36"/>    <section>
+    <title>__HAL_RTC_EXTI_DISABLE_IT</title>
+<indexterm><primary>__HAL_RTC_EXTI_DISABLE_IT</primary><secondary>HAL RTC Aliased Macros maintained for legacy purpose</secondary></indexterm>
+<indexterm><primary>HAL RTC Aliased Macros maintained for legacy purpose</primary><secondary>__HAL_RTC_EXTI_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_EXTI_DISABLE_IT( __EXTI_LINE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__EXTI_LINE__)&#32;==&#32;RTC_EXTI_LINE_ALARM_EVENT)&#32;?&#32;__HAL_RTC_ALARM_EXTI_DISABLE_IT()&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__EXTI_LINE__)&#32;==&#32;RTC_EXTI_LINE_WAKEUPTIMER_EVENT)&#32;?&#32;__HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_IT()&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RTC_TAMPER_TIMESTAMP_EXTI_DISABLE_IT()))
+</programlisting>    </section><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga16764e0df245c740813dbeb302e67da5"/>    <section>
+    <title>__HAL_RTC_EXTI_ENABLE_IT</title>
+<indexterm><primary>__HAL_RTC_EXTI_ENABLE_IT</primary><secondary>HAL RTC Aliased Macros maintained for legacy purpose</secondary></indexterm>
+<indexterm><primary>HAL RTC Aliased Macros maintained for legacy purpose</primary><secondary>__HAL_RTC_EXTI_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_EXTI_ENABLE_IT( __EXTI_LINE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__EXTI_LINE__)&#32;&#32;==&#32;RTC_EXTI_LINE_ALARM_EVENT)&#32;?&#32;__HAL_RTC_ALARM_EXTI_ENABLE_IT()&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__EXTI_LINE__)&#32;==&#32;RTC_EXTI_LINE_WAKEUPTIMER_EVENT)&#32;?&#32;__HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_IT()&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RTC_TAMPER_TIMESTAMP_EXTI_ENABLE_IT()))
+</programlisting>    </section><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga757e6b82b6c280b6a924c0d8ac4bfef7"/>    <section>
+    <title>__HAL_RTC_EXTI_GENERATE_SWIT</title>
+<indexterm><primary>__HAL_RTC_EXTI_GENERATE_SWIT</primary><secondary>HAL RTC Aliased Macros maintained for legacy purpose</secondary></indexterm>
+<indexterm><primary>HAL RTC Aliased Macros maintained for legacy purpose</primary><secondary>__HAL_RTC_EXTI_GENERATE_SWIT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_EXTI_GENERATE_SWIT( __EXTI_LINE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__EXTI_LINE__)&#32;==&#32;RTC_EXTI_LINE_ALARM_EVENT)&#32;?&#32;__HAL_RTC_ALARM_EXTI_GENERATE_SWIT()&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__EXTI_LINE__)&#32;==&#32;RTC_EXTI_LINE_WAKEUPTIMER_EVENT)&#32;?&#32;__HAL_RTC_WAKEUPTIMER_EXTI_GENERATE_SWIT()&#32;:&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RTC_TAMPER_TIMESTAMP_EXTI_GENERATE_SWIT()))
+</programlisting>    </section><anchor xml:id="_group___h_a_l___r_t_c___aliased___macros_1ga7ff2ab63c65042a0a9ef683d345abf49"/>    <section>
+    <title>__HAL_RTC_EXTI_GET_FLAG</title>
+<indexterm><primary>__HAL_RTC_EXTI_GET_FLAG</primary><secondary>HAL RTC Aliased Macros maintained for legacy purpose</secondary></indexterm>
+<indexterm><primary>HAL RTC Aliased Macros maintained for legacy purpose</primary><secondary>__HAL_RTC_EXTI_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_EXTI_GET_FLAG( __EXTI_LINE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__EXTI_LINE__)&#32;==&#32;RTC_EXTI_LINE_ALARM_EVENT)&#32;?&#32;__HAL_RTC_ALARM_EXTI_GET_FLAG()&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__EXTI_LINE__)&#32;==&#32;RTC_EXTI_LINE_WAKEUPTIMER_EVENT)&#32;?&#32;__HAL_RTC_WAKEUPTIMER_EXTI_GET_FLAG()&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_RTC_TAMPER_TIMESTAMP_EXTI_GET_FLAG()))
+</programlisting></section>
+</section>
+</section>

@@ -1,0 +1,202 @@
+.TH "Peripheral_memory_map" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Peripheral_memory_map \- Peripheral_memory_map
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFLASH_BASE\fP   0x08000000UL"
+.br
+.ti -1c
+.RI "#define \fBFLASH_BANK1_END\fP   0x0801FFFFUL"
+.br
+.ti -1c
+.RI "#define \fBSRAM_BASE\fP   0x20000000UL"
+.br
+.ti -1c
+.RI "#define \fBPERIPH_BASE\fP   0x40000000UL"
+.br
+.ti -1c
+.RI "#define \fBSRAM_BB_BASE\fP   0x22000000UL"
+.br
+.ti -1c
+.RI "#define \fBPERIPH_BB_BASE\fP   0x42000000UL"
+.br
+.ti -1c
+.RI "#define \fBAPB1PERIPH_BASE\fP   \fBPERIPH_BASE\fP"
+.br
+.ti -1c
+.RI "#define \fBAPB2PERIPH_BASE\fP   (\fBPERIPH_BASE\fP + 0x00010000UL)"
+.br
+.ti -1c
+.RI "#define \fBAHBPERIPH_BASE\fP   (\fBPERIPH_BASE\fP + 0x00020000UL)"
+.br
+.ti -1c
+.RI "#define \fBTIM2_BASE\fP   (APB1PERIPH_BASE + 0x00000000UL)"
+.br
+.ti -1c
+.RI "#define \fBTIM3_BASE\fP   (APB1PERIPH_BASE + 0x00000400UL)"
+.br
+.ti -1c
+.RI "#define \fBTIM4_BASE\fP   (APB1PERIPH_BASE + 0x00000800UL)"
+.br
+.ti -1c
+.RI "#define \fBRTC_BASE\fP   (APB1PERIPH_BASE + 0x00002800UL)"
+.br
+.ti -1c
+.RI "#define \fBWWDG_BASE\fP   (APB1PERIPH_BASE + 0x00002C00UL)"
+.br
+.ti -1c
+.RI "#define \fBIWDG_BASE\fP   (APB1PERIPH_BASE + 0x00003000UL)"
+.br
+.ti -1c
+.RI "#define \fBSPI2_BASE\fP   (APB1PERIPH_BASE + 0x00003800UL)"
+.br
+.ti -1c
+.RI "#define \fBUSART2_BASE\fP   (APB1PERIPH_BASE + 0x00004400UL)"
+.br
+.ti -1c
+.RI "#define \fBUSART3_BASE\fP   (APB1PERIPH_BASE + 0x00004800UL)"
+.br
+.ti -1c
+.RI "#define \fBI2C1_BASE\fP   (APB1PERIPH_BASE + 0x00005400UL)"
+.br
+.ti -1c
+.RI "#define \fBI2C2_BASE\fP   (APB1PERIPH_BASE + 0x00005800UL)"
+.br
+.ti -1c
+.RI "#define \fBCAN1_BASE\fP   (APB1PERIPH_BASE + 0x00006400UL)"
+.br
+.ti -1c
+.RI "#define \fBBKP_BASE\fP   (APB1PERIPH_BASE + 0x00006C00UL)"
+.br
+.ti -1c
+.RI "#define \fBPWR_BASE\fP   (APB1PERIPH_BASE + 0x00007000UL)"
+.br
+.ti -1c
+.RI "#define \fBAFIO_BASE\fP   (APB2PERIPH_BASE + 0x00000000UL)"
+.br
+.ti -1c
+.RI "#define \fBEXTI_BASE\fP   (APB2PERIPH_BASE + 0x00000400UL)"
+.br
+.ti -1c
+.RI "#define \fBGPIOA_BASE\fP   (APB2PERIPH_BASE + 0x00000800UL)"
+.br
+.ti -1c
+.RI "#define \fBGPIOB_BASE\fP   (APB2PERIPH_BASE + 0x00000C00UL)"
+.br
+.ti -1c
+.RI "#define \fBGPIOC_BASE\fP   (APB2PERIPH_BASE + 0x00001000UL)"
+.br
+.ti -1c
+.RI "#define \fBGPIOD_BASE\fP   (APB2PERIPH_BASE + 0x00001400UL)"
+.br
+.ti -1c
+.RI "#define \fBGPIOE_BASE\fP   (APB2PERIPH_BASE + 0x00001800UL)"
+.br
+.ti -1c
+.RI "#define \fBADC1_BASE\fP   (APB2PERIPH_BASE + 0x00002400UL)"
+.br
+.ti -1c
+.RI "#define \fBADC2_BASE\fP   (APB2PERIPH_BASE + 0x00002800UL)"
+.br
+.ti -1c
+.RI "#define \fBTIM1_BASE\fP   (APB2PERIPH_BASE + 0x00002C00UL)"
+.br
+.ti -1c
+.RI "#define \fBSPI1_BASE\fP   (APB2PERIPH_BASE + 0x00003000UL)"
+.br
+.ti -1c
+.RI "#define \fBUSART1_BASE\fP   (APB2PERIPH_BASE + 0x00003800UL)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_BASE\fP   (AHBPERIPH_BASE + 0x00000000UL)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel1_BASE\fP   (AHBPERIPH_BASE + 0x00000008UL)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel2_BASE\fP   (AHBPERIPH_BASE + 0x0000001CUL)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel3_BASE\fP   (AHBPERIPH_BASE + 0x00000030UL)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel4_BASE\fP   (AHBPERIPH_BASE + 0x00000044UL)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel5_BASE\fP   (AHBPERIPH_BASE + 0x00000058UL)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel6_BASE\fP   (AHBPERIPH_BASE + 0x0000006CUL)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel7_BASE\fP   (AHBPERIPH_BASE + 0x00000080UL)"
+.br
+.ti -1c
+.RI "#define \fBRCC_BASE\fP   (AHBPERIPH_BASE + 0x00001000UL)"
+.br
+.ti -1c
+.RI "#define \fBCRC_BASE\fP   (AHBPERIPH_BASE + 0x00003000UL)"
+.br
+.ti -1c
+.RI "#define \fBFLASH_R_BASE\fP   (AHBPERIPH_BASE + 0x00002000UL)"
+.br
+.ti -1c
+.RI "#define \fBFLASHSIZE_BASE\fP   0x1FFFF7E0UL"
+.br
+.ti -1c
+.RI "#define \fBUID_BASE\fP   0x1FFFF7E8UL"
+.br
+.ti -1c
+.RI "#define \fBOB_BASE\fP   0x1FFFF800UL"
+.br
+.ti -1c
+.RI "#define \fBDBGMCU_BASE\fP   0xE0042000UL"
+.br
+.ti -1c
+.RI "#define \fBUSB_BASE\fP   (APB1PERIPH_BASE + 0x00005C00UL)"
+.br
+.ti -1c
+.RI "#define \fBUSB_PMAADDR\fP   (APB1PERIPH_BASE + 0x00006000UL)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DBGMCU_BASE   0xE0042000UL"
+Debug MCU registers base address 
+.SS "#define FLASH_BANK1_END   0x0801FFFFUL"
+FLASH END address of bank1 
+.SS "#define FLASH_BASE   0x08000000UL"
+FLASH base address in the alias region 
+.SS "#define FLASH_R_BASE   (AHBPERIPH_BASE + 0x00002000UL)"
+Flash registers base address 
+.SS "#define FLASHSIZE_BASE   0x1FFFF7E0UL"
+FLASH Size register base address 
+.SS "#define OB_BASE   0x1FFFF800UL"
+Flash Option Bytes base address 
+.SS "#define PERIPH_BASE   0x40000000UL"
+Peripheral base address in the alias region 
+.SS "#define PERIPH_BB_BASE   0x42000000UL"
+Peripheral base address in the bit-band region Peripheral memory map 
+.SS "#define SRAM_BASE   0x20000000UL"
+SRAM base address in the alias region 
+.SS "#define SRAM_BB_BASE   0x22000000UL"
+SRAM base address in the bit-band region 
+.SS "#define UID_BASE   0x1FFFF7E8UL"
+Unique device ID register base address 
+.SS "#define USB_BASE   (APB1PERIPH_BASE + 0x00005C00UL)"
+USB_IP Peripheral Registers base address 
+.SS "#define USB_PMAADDR   (APB1PERIPH_BASE + 0x00006000UL)"
+USB_IP Packet Memory Area base address 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

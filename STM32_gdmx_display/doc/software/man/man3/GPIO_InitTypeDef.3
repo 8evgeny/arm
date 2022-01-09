@@ -1,0 +1,44 @@
+.TH "GPIO_InitTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GPIO_InitTypeDef \- GPIO Init structure definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_gpio\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBPin\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPull\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBSpeed\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+GPIO Init structure definition\&. 
+.SH "Field Documentation"
+.PP 
+.SS "uint32_t Mode"
+Specifies the operating mode for the selected pins\&. This parameter can be a value of \fBGPIO mode define\fP 
+.SS "uint32_t Pin"
+Specifies the GPIO pins to be configured\&. This parameter can be any value of \fBGPIO pins define\fP 
+.SS "uint32_t Pull"
+Specifies the Pull-up or Pull-Down activation for the selected pins\&. This parameter can be a value of \fBGPIO pull define\fP 
+.SS "uint32_t Speed"
+Specifies the speed for the selected pins\&. This parameter can be a value of \fBGPIO speed define\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

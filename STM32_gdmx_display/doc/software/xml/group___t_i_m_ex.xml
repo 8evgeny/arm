@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___t_i_m_ex" kind="group">
+    <compoundname>TIMEx</compoundname>
+    <title>TIMEx</title>
+    <innergroup refid="group___t_i_m_ex___exported___types">TIM Extended Exported Types</innergroup>
+    <innergroup refid="group___t_i_m_ex___exported___constants">TIM Extended Exported Constants</innergroup>
+    <innergroup refid="group___t_i_m_ex___exported___macros">TIM Extended Exported Macros</innergroup>
+    <innergroup refid="group___t_i_m_ex___private___macros">TIM Extended Private Macros</innergroup>
+    <innergroup refid="group___t_i_m_ex___exported___functions">TIM Extended Exported Functions</innergroup>
+    <innergroup refid="group___t_i_m_ex___private___functions">TIMEx Private Functions</innergroup>
+    <briefdescription>
+<para>TIM Extended HAL module driver. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

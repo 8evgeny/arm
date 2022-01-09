@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___h_s_i___config" xml:lang="en-US">
+<title>HSI Config</title>
+<indexterm><primary>HSI Config</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c___h_s_i___config_1ga1b34d37d3b51afec0758b3ddc7a7e665">RCC_HSI_OFF</link>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___h_s_i___config_1ga0bf09ef9e46d5da25cced7b3122f92f5">RCC_HSI_ON</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaf4fcacf94a97f7d49a70e089b39cf474">RCC_CR_HSION</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___h_s_i___config_1ga03cf582e263fb7e31a7783d8adabd7a0"/>#define <emphasis role="strong">RCC_HSICALIBRATION_DEFAULT</emphasis>   0x10U         /* Default HSI calibration trimming value */</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c___h_s_i___config_1ga1b34d37d3b51afec0758b3ddc7a7e665"/>    <section>
+    <title>RCC_HSI_OFF</title>
+<indexterm><primary>RCC_HSI_OFF</primary><secondary>HSI Config</secondary></indexterm>
+<indexterm><primary>HSI Config</primary><secondary>RCC_HSI_OFF</secondary></indexterm>
+<para><computeroutput>#define RCC_HSI_OFF   0x00000000U</computeroutput></para>
+<para>HSI clock deactivation </para>
+    </section><anchor xml:id="_group___r_c_c___h_s_i___config_1ga0bf09ef9e46d5da25cced7b3122f92f5"/>    <section>
+    <title>RCC_HSI_ON</title>
+<indexterm><primary>RCC_HSI_ON</primary><secondary>HSI Config</secondary></indexterm>
+<indexterm><primary>HSI Config</primary><secondary>RCC_HSI_ON</secondary></indexterm>
+<para><computeroutput>#define RCC_HSI_ON   <link linkend="_group___peripheral___registers___bits___definition_1gaf4fcacf94a97f7d49a70e089b39cf474">RCC_CR_HSION</link></computeroutput></para>
+<para>HSI clock activation </para>
+</section>
+</section>
+</section>

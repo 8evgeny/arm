@@ -1,0 +1,204 @@
+\hypertarget{hd44780_8c}{}\doxysection{Src/hd44780.c File Reference}
+\label{hd44780_8c}\index{Src/hd44780.c@{Src/hd44780.c}}
+
+
+C library app for 4-\/, 8-\/bit parallel LCD interface.  
+
+
+{\ttfamily \#include \char`\"{}HD44780.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{hd44780_8c_aec6819edb45f4ea15f9c09bb20de58be}\label{hd44780_8c_aec6819edb45f4ea15f9c09bb20de58be}} 
+\#define {\bfseries GET\+\_\+\+GPIO\+\_\+\+BIT}(dat,  weight)~(\mbox{\hyperlink{group___g_p_i_o___exported___types_ga5b3ef0486b179415581eb342e0ea6b43}{GPIO\+\_\+\+Pin\+State}})((dat$>$$>$weight)\&1u)
+\item 
+\mbox{\Hypertarget{hd44780_8c_a248ef55873be7b7ce4d7edb8137b35f1}\label{hd44780_8c_a248ef55873be7b7ce4d7edb8137b35f1}} 
+\#define \mbox{\hyperlink{hd44780_8c_a248ef55873be7b7ce4d7edb8137b35f1}{HD44780\+\_\+\+STROBE\+\_\+\+TIME}}~5
+\begin{DoxyCompactList}\small\item\em LCD time of strobe signal. Must be $>$ 230 ns. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8c_a20cade9b2e9fccce4b1bb1dc59a91a0b}\label{hd44780_8c_a20cade9b2e9fccce4b1bb1dc59a91a0b}} 
+\#define \mbox{\hyperlink{hd44780_8c_a20cade9b2e9fccce4b1bb1dc59a91a0b}{HD44780\+\_\+\+DATA\+\_\+\+LATCH}}~20
+\begin{DoxyCompactList}\small\item\em The settling time of signals on the data bus. Must be $>$ 230 ns. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8c_a1bef69139731d31a4d60c13270f2fd50}\label{hd44780_8c_a1bef69139731d31a4d60c13270f2fd50}} 
+\#define {\bfseries TCMD\+\_\+\+EXEC}~200
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hd44780_8c_a6eaa253877028275469e5e43602dc8f0}{HD44780\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initial LCD initialization based on HD44780 controller. initial GPIO for control LCD. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8c_ab72b8dd729aebe077a5669a143745187}\label{hd44780_8c_ab72b8dd729aebe077a5669a143745187}} 
+void {\bfseries HD44780\+\_\+write\+Command} (uint8\+\_\+t data)
+\item 
+\mbox{\Hypertarget{hd44780_8c_a55dc02a073cd4c9bf392fe4801907882}\label{hd44780_8c_a55dc02a073cd4c9bf392fe4801907882}} 
+void {\bfseries HD44780\+\_\+write\+Data} (uint8\+\_\+t data)
+\item 
+void \mbox{\hyperlink{hd44780_8c_adf44985254edf6ac35b0e762c6500e6f}{HD44780\+\_\+set\+Data\+Low}} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Цикл чтения из ЖКИ. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8c_a0a62ddf3189809a4d4c681af25033a03}\label{hd44780_8c_a0a62ddf3189809a4d4c681af25033a03}} 
+void {\bfseries HD44780\+\_\+set\+Data\+High} (uint8\+\_\+t data)
+\item 
+\mbox{\Hypertarget{hd44780_8c_a10b6032f7723fc2382f5d131e3d45501}\label{hd44780_8c_a10b6032f7723fc2382f5d131e3d45501}} 
+void {\bfseries HD44780\+\_\+set\+Data\+Bus} (uint8\+\_\+t data)
+\item 
+void \mbox{\hyperlink{hd44780_8c_aaa9f0cbe49cb343a54f40f98c09b0e3b}{HD44780\+\_\+set\+RS}} (uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em The RS line of the LCD is set to LOW / HIGH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hd44780_8c_ad9451dc8757dab4730c66a3182284e16}{HD44780\+\_\+set\+RW}} (uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em The RW line of the LCD is set to LOW / HIGH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hd44780_8c_af9b70fa23fe73f5b06cfe0c3b604adf6}{HD44780\+\_\+set\+EN}} (uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em The EN line of the LCD is set to LOW / HIGH. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{hd44780_8c_ac14b6c687ba506dc3c2915159f42305c}\label{hd44780_8c_ac14b6c687ba506dc3c2915159f42305c}} 
+void {\bfseries us\+Delay} (uint16\+\_\+t us)
+\item 
+void \mbox{\hyperlink{hd44780_8c_a64ccdfe09ae2e69293cff8d88250ebc4}{HD44780\+\_\+write\+Byte}} (uint8\+\_\+t data, uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em Write cycle for LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C library app for 4-\/, 8-\/bit parallel LCD interface. 
+
+Driver of HD44780 display. \begin{DoxyAuthor}{Author}
+Donskih Dmitry, Arthur Markaryan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02.\+03.\+2019, 25.\+03.\+2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+
+\end{DoxyCopyright}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2018 -\/ 2021 Donskih Dmitry. All rights reserved.\end{center} }
+
+This software component is licensed by Donskih Dmitry under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hd44780_8c_a6eaa253877028275469e5e43602dc8f0}\label{hd44780_8c_a6eaa253877028275469e5e43602dc8f0}} 
+\index{hd44780.c@{hd44780.c}!HD44780\_init@{HD44780\_init}}
+\index{HD44780\_init@{HD44780\_init}!hd44780.c@{hd44780.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_init()}{HD44780\_init()}}
+{\footnotesize\ttfamily void HD44780\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initial LCD initialization based on HD44780 controller. initial GPIO for control LCD. 
+
+The controller manufacturer recommends the following initialization sequence\+:
+\begin{DoxyEnumerate}
+\item Maintain a pause of at least 15 ms between the establishment of the operating supply voltage ($>$ 4.\+5 V) and the performance of any operations with the controller.
+\item The first operation is to execute the command that selects the bus width (it must be the 0x30 command regardless of which interface you are going to use in the future), and do not check the value of the BF flag before performing this operation.
+\item Hold a pause of at least 4.\+1 ms.
+\item Repeat the command to select the bus width, also without checking the state of the BF flag before.
+\item Hold a pause of at least 100 µs.
+\item Repeat the command to select the bus width, also without checking the state of the BF flag before. These operations are initializing, and are designed to bring the controller to the initial operating mode (i.\+e. to switch to the operating mode with an 8-\/bit data bus) following this normal order (without pauses, but checking the BF flag), the operating modes are initialized , including the command for setting the bus width. 
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{hd44780_8c_adf44985254edf6ac35b0e762c6500e6f}\label{hd44780_8c_adf44985254edf6ac35b0e762c6500e6f}} 
+\index{hd44780.c@{hd44780.c}!HD44780\_setDataLow@{HD44780\_setDataLow}}
+\index{HD44780\_setDataLow@{HD44780\_setDataLow}!hd44780.c@{hd44780.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_setDataLow()}{HD44780\_setDataLow()}}
+{\footnotesize\ttfamily void HD44780\+\_\+set\+Data\+Low (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Цикл чтения из ЖКИ. 
+
+Перед циклом должны быть произведены установки линий\+: HD44780\+\_\+wire\+\_\+\+RS(команда/данные) HD44780\+\_\+wire\+\_\+\+RW(запись/чение) = 1 \begin{DoxyNote}{Note}
+ПРЕДУПРЕЖДЕНИЕ!!! Во избежание порчи данных в неиспользуемых линиях порта данных ЖКИ в 4-\/х битном режиме, желательно запрещать прерывания, код которых взаимодействует со свободными линиями порта, либо в прерывании запоминать состояние регистров порта, перед внесением изменений, и восстанавливать данные по завершению прерывания.
+\end{DoxyNote}
+Waiting cycle for LCD readiness. 
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 if the LCD is ready and there is no timeout, otherwise 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hd44780_8c_af9b70fa23fe73f5b06cfe0c3b604adf6}\label{hd44780_8c_af9b70fa23fe73f5b06cfe0c3b604adf6}} 
+\index{hd44780.c@{hd44780.c}!HD44780\_setEN@{HD44780\_setEN}}
+\index{HD44780\_setEN@{HD44780\_setEN}!hd44780.c@{hd44780.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_setEN()}{HD44780\_setEN()}}
+{\footnotesize\ttfamily void HD44780\+\_\+set\+EN (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+The EN line of the LCD is set to LOW / HIGH. 
+
+Function of setting the level on the EN line for LCD. 
+\begin{DoxyParams}{Parameters}
+{\em state} & (0 -\/ start of strobe, 1 -\/ end of strobe). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{hd44780_8c_aaa9f0cbe49cb343a54f40f98c09b0e3b}\label{hd44780_8c_aaa9f0cbe49cb343a54f40f98c09b0e3b}} 
+\index{hd44780.c@{hd44780.c}!HD44780\_setRS@{HD44780\_setRS}}
+\index{HD44780\_setRS@{HD44780\_setRS}!hd44780.c@{hd44780.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_setRS()}{HD44780\_setRS()}}
+{\footnotesize\ttfamily void HD44780\+\_\+set\+RS (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+The RS line of the LCD is set to LOW / HIGH. 
+
+Function of setting the level on the RS line for LCD. 
+\begin{DoxyParams}{Parameters}
+{\em state} & (0 -\/ requred CMD, 1 -\/ requred DATA) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{hd44780_8c_ad9451dc8757dab4730c66a3182284e16}\label{hd44780_8c_ad9451dc8757dab4730c66a3182284e16}} 
+\index{hd44780.c@{hd44780.c}!HD44780\_setRW@{HD44780\_setRW}}
+\index{HD44780\_setRW@{HD44780\_setRW}!hd44780.c@{hd44780.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_setRW()}{HD44780\_setRW()}}
+{\footnotesize\ttfamily void HD44780\+\_\+set\+RW (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+The RW line of the LCD is set to LOW / HIGH. 
+
+Function of setting the level on the RW line for LCD. 
+\begin{DoxyParams}{Parameters}
+{\em state} & (0 -\/ write mode, 1 -\/ read mode). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{hd44780_8c_a64ccdfe09ae2e69293cff8d88250ebc4}\label{hd44780_8c_a64ccdfe09ae2e69293cff8d88250ebc4}} 
+\index{hd44780.c@{hd44780.c}!HD44780\_writeByte@{HD44780\_writeByte}}
+\index{HD44780\_writeByte@{HD44780\_writeByte}!hd44780.c@{hd44780.c}}
+\doxysubsubsection{\texorpdfstring{HD44780\_writeByte()}{HD44780\_writeByte()}}
+{\footnotesize\ttfamily void HD44780\+\_\+write\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data,  }\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+Write cycle for LCD. 
+
+Write byte to the LCD data bus (command or data). 
+\begin{DoxyParams}{Parameters}
+{\em data} & -\/ byte to be written. \\
+\hline
+{\em state} & -\/ 0 if command byte, 1 -\/ if data. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___c_o_m_p___aliased___macros" kind="group">
+    <compoundname>HAL_COMP_Aliased_Macros</compoundname>
+    <title>HAL COMP Aliased Macros maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___c_o_m_p___aliased___macros_1ga3b6842cbf1a844d87f0ebb50b5322ae9" prot="public" static="no">
+        <name>__HAL_COMP_EXTI_RISING_IT_ENABLE</name>
+        <param><defname>__EXTILINE__</defname></param>
+        <initializer>                                                          (((__EXTILINE__)  == COMP_EXTI_LINE_COMP1) ? __HAL_COMP_COMP1_EXTI_ENABLE_RISING_EDGE() : \
+                                                          __HAL_COMP_COMP2_EXTI_ENABLE_RISING_EDGE())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1906" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1906" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_o_m_p___aliased___macros_1ga234c3825b14ee41458a8a58430a1f448" prot="public" static="no">
+        <name>__HAL_COMP_EXTI_RISING_IT_DISABLE</name>
+        <param><defname>__EXTILINE__</defname></param>
+        <initializer>                                                          (((__EXTILINE__)  == COMP_EXTI_LINE_COMP1) ? __HAL_COMP_COMP1_EXTI_DISABLE_RISING_EDGE() : \
+                                                          __HAL_COMP_COMP2_EXTI_DISABLE_RISING_EDGE())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1908" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1908" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_o_m_p___aliased___macros_1ga1803e81c3920a4c18f752124e15ee6f7" prot="public" static="no">
+        <name>__HAL_COMP_EXTI_FALLING_IT_ENABLE</name>
+        <param><defname>__EXTILINE__</defname></param>
+        <initializer>                                                          (((__EXTILINE__)  == COMP_EXTI_LINE_COMP1) ? __HAL_COMP_COMP1_EXTI_ENABLE_FALLING_EDGE() : \
+                                                          __HAL_COMP_COMP2_EXTI_ENABLE_FALLING_EDGE())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1910" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1910" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_o_m_p___aliased___macros_1ga28220cc53eb0155d2f6d3197a464092b" prot="public" static="no">
+        <name>__HAL_COMP_EXTI_FALLING_IT_DISABLE</name>
+        <param><defname>__EXTILINE__</defname></param>
+        <initializer>                                                          (((__EXTILINE__)  == COMP_EXTI_LINE_COMP1) ? __HAL_COMP_COMP1_EXTI_DISABLE_FALLING_EDGE() : \
+                                                          __HAL_COMP_COMP2_EXTI_DISABLE_FALLING_EDGE())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1912" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1912" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_o_m_p___aliased___macros_1ga582415dabdca3b746b4713f686b6ddf0" prot="public" static="no">
+        <name>__HAL_COMP_EXTI_ENABLE_IT</name>
+        <param><defname>__EXTILINE__</defname></param>
+        <initializer>                                                          (((__EXTILINE__)  == COMP_EXTI_LINE_COMP1) ? __HAL_COMP_COMP1_EXTI_ENABLE_IT() : \
+                                                          __HAL_COMP_COMP2_EXTI_ENABLE_IT())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1914" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1914" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_o_m_p___aliased___macros_1ga50d9fdcb3ccb16b52d567bb3a5821d61" prot="public" static="no">
+        <name>__HAL_COMP_EXTI_DISABLE_IT</name>
+        <param><defname>__EXTILINE__</defname></param>
+        <initializer>                                                          (((__EXTILINE__)  == COMP_EXTI_LINE_COMP1) ? __HAL_COMP_COMP1_EXTI_DISABLE_IT() : \
+                                                          __HAL_COMP_COMP2_EXTI_DISABLE_IT())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1916" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1916" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_o_m_p___aliased___macros_1ga9e0b5c7e3923a1eb153917165210db1a" prot="public" static="no">
+        <name>__HAL_COMP_EXTI_GET_FLAG</name>
+        <param><defname>__FLAG__</defname></param>
+        <initializer>                                                          (((__FLAG__)  == COMP_EXTI_LINE_COMP1) ? __HAL_COMP_COMP1_EXTI_GET_FLAG() : \
+                                                          __HAL_COMP_COMP2_EXTI_GET_FLAG())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1918" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1918" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_o_m_p___aliased___macros_1gaffc3545b10b38016b1d695e6f6aab1f7" prot="public" static="no">
+        <name>__HAL_COMP_EXTI_CLEAR_FLAG</name>
+        <param><defname>__FLAG__</defname></param>
+        <initializer>                                                          (((__FLAG__)  == COMP_EXTI_LINE_COMP1) ? __HAL_COMP_COMP1_EXTI_CLEAR_FLAG() : \
+                                                          __HAL_COMP_COMP2_EXTI_CLEAR_FLAG())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1920" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1920" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_o_m_p___aliased___macros_1ga76e980c077c5398741f133b81091d5e9" prot="public" static="no">
+        <name>__HAL_COMP_GET_EXTI_LINE</name>
+        <initializer>COMP_GET_EXTI_LINE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1924" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1924" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

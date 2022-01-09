@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___event___source" xml:lang="en-US">
+<title>TIM Event Source</title>
+<indexterm><primary>TIM Event Source</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___event___source_1ga6b9d1352735d2ddbafcaa31ae05cd1ee">TIM_EVENTSOURCE_UPDATE</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga16f52a8e9aad153223405b965566ae91">TIM_EGR_UG</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___event___source_1ga529eadf26cd17108dd95b9707a3d0f55">TIM_EVENTSOURCE_CC1</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga0a1318609761df5de5213e9e75b5aa6a">TIM_EGR_CC1G</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___event___source_1ga12e3a98c601f4f288354ac2538050e6b">TIM_EVENTSOURCE_CC2</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga5423de00e86aeb8a4657a509af485055">TIM_EGR_CC2G</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___event___source_1ga1c2faf942ab525b44299ddd0a6d848e4">TIM_EVENTSOURCE_CC3</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga064d2030abccc099ded418fd81d6aa07">TIM_EGR_CC3G</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___event___source_1ga157e43c99e6a1c0097b184cc842b5dfb">TIM_EVENTSOURCE_CC4</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga1c4e5555dd3be8ab1e631d1053f4a305">TIM_EGR_CC4G</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___event___source_1ga5724ce4aaf842a2166edaaff1531c1d1">TIM_EVENTSOURCE_COM</link>   <link linkend="_group___peripheral___registers___bits___definition_1gadb06f8bb364307695c7d6a028391de7b">TIM_EGR_COMG</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___event___source_1ga85573ed76442490db67e4b759fe6d901">TIM_EVENTSOURCE_TRIGGER</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga2eabface433d6adaa2dee3df49852585">TIM_EGR_TG</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___event___source_1ga83d16368fe3172a98c41d7c414780a64">TIM_EVENTSOURCE_BREAK</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga08c5635a0ac0ce5618485319a4fa0f18">TIM_EGR_BG</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___event___source_1ga83d16368fe3172a98c41d7c414780a64"/>    <section>
+    <title>TIM_EVENTSOURCE_BREAK</title>
+<indexterm><primary>TIM_EVENTSOURCE_BREAK</primary><secondary>TIM Event Source</secondary></indexterm>
+<indexterm><primary>TIM Event Source</primary><secondary>TIM_EVENTSOURCE_BREAK</secondary></indexterm>
+<para><computeroutput>#define TIM_EVENTSOURCE_BREAK   <link linkend="_group___peripheral___registers___bits___definition_1ga08c5635a0ac0ce5618485319a4fa0f18">TIM_EGR_BG</link></computeroutput></para>
+<para>A break event is generated </para>
+    </section><anchor xml:id="_group___t_i_m___event___source_1ga529eadf26cd17108dd95b9707a3d0f55"/>    <section>
+    <title>TIM_EVENTSOURCE_CC1</title>
+<indexterm><primary>TIM_EVENTSOURCE_CC1</primary><secondary>TIM Event Source</secondary></indexterm>
+<indexterm><primary>TIM Event Source</primary><secondary>TIM_EVENTSOURCE_CC1</secondary></indexterm>
+<para><computeroutput>#define TIM_EVENTSOURCE_CC1   <link linkend="_group___peripheral___registers___bits___definition_1ga0a1318609761df5de5213e9e75b5aa6a">TIM_EGR_CC1G</link></computeroutput></para>
+<para>A capture/compare event is generated on channel 1 </para>
+    </section><anchor xml:id="_group___t_i_m___event___source_1ga12e3a98c601f4f288354ac2538050e6b"/>    <section>
+    <title>TIM_EVENTSOURCE_CC2</title>
+<indexterm><primary>TIM_EVENTSOURCE_CC2</primary><secondary>TIM Event Source</secondary></indexterm>
+<indexterm><primary>TIM Event Source</primary><secondary>TIM_EVENTSOURCE_CC2</secondary></indexterm>
+<para><computeroutput>#define TIM_EVENTSOURCE_CC2   <link linkend="_group___peripheral___registers___bits___definition_1ga5423de00e86aeb8a4657a509af485055">TIM_EGR_CC2G</link></computeroutput></para>
+<para>A capture/compare event is generated on channel 2 </para>
+    </section><anchor xml:id="_group___t_i_m___event___source_1ga1c2faf942ab525b44299ddd0a6d848e4"/>    <section>
+    <title>TIM_EVENTSOURCE_CC3</title>
+<indexterm><primary>TIM_EVENTSOURCE_CC3</primary><secondary>TIM Event Source</secondary></indexterm>
+<indexterm><primary>TIM Event Source</primary><secondary>TIM_EVENTSOURCE_CC3</secondary></indexterm>
+<para><computeroutput>#define TIM_EVENTSOURCE_CC3   <link linkend="_group___peripheral___registers___bits___definition_1ga064d2030abccc099ded418fd81d6aa07">TIM_EGR_CC3G</link></computeroutput></para>
+<para>A capture/compare event is generated on channel 3 </para>
+    </section><anchor xml:id="_group___t_i_m___event___source_1ga157e43c99e6a1c0097b184cc842b5dfb"/>    <section>
+    <title>TIM_EVENTSOURCE_CC4</title>
+<indexterm><primary>TIM_EVENTSOURCE_CC4</primary><secondary>TIM Event Source</secondary></indexterm>
+<indexterm><primary>TIM Event Source</primary><secondary>TIM_EVENTSOURCE_CC4</secondary></indexterm>
+<para><computeroutput>#define TIM_EVENTSOURCE_CC4   <link linkend="_group___peripheral___registers___bits___definition_1ga1c4e5555dd3be8ab1e631d1053f4a305">TIM_EGR_CC4G</link></computeroutput></para>
+<para>A capture/compare event is generated on channel 4 </para>
+    </section><anchor xml:id="_group___t_i_m___event___source_1ga5724ce4aaf842a2166edaaff1531c1d1"/>    <section>
+    <title>TIM_EVENTSOURCE_COM</title>
+<indexterm><primary>TIM_EVENTSOURCE_COM</primary><secondary>TIM Event Source</secondary></indexterm>
+<indexterm><primary>TIM Event Source</primary><secondary>TIM_EVENTSOURCE_COM</secondary></indexterm>
+<para><computeroutput>#define TIM_EVENTSOURCE_COM   <link linkend="_group___peripheral___registers___bits___definition_1gadb06f8bb364307695c7d6a028391de7b">TIM_EGR_COMG</link></computeroutput></para>
+<para>A commutation event is generated </para>
+    </section><anchor xml:id="_group___t_i_m___event___source_1ga85573ed76442490db67e4b759fe6d901"/>    <section>
+    <title>TIM_EVENTSOURCE_TRIGGER</title>
+<indexterm><primary>TIM_EVENTSOURCE_TRIGGER</primary><secondary>TIM Event Source</secondary></indexterm>
+<indexterm><primary>TIM Event Source</primary><secondary>TIM_EVENTSOURCE_TRIGGER</secondary></indexterm>
+<para><computeroutput>#define TIM_EVENTSOURCE_TRIGGER   <link linkend="_group___peripheral___registers___bits___definition_1ga2eabface433d6adaa2dee3df49852585">TIM_EGR_TG</link></computeroutput></para>
+<para>A trigger event is generated </para>
+    </section><anchor xml:id="_group___t_i_m___event___source_1ga6b9d1352735d2ddbafcaa31ae05cd1ee"/>    <section>
+    <title>TIM_EVENTSOURCE_UPDATE</title>
+<indexterm><primary>TIM_EVENTSOURCE_UPDATE</primary><secondary>TIM Event Source</secondary></indexterm>
+<indexterm><primary>TIM Event Source</primary><secondary>TIM_EVENTSOURCE_UPDATE</secondary></indexterm>
+<para><computeroutput>#define TIM_EVENTSOURCE_UPDATE   <link linkend="_group___peripheral___registers___bits___definition_1ga16f52a8e9aad153223405b965566ae91">TIM_EGR_UG</link></computeroutput></para>
+<para>Reinitialize the counter and generates an update of the registers </para>
+</section>
+</section>
+</section>

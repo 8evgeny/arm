@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___a_p_b1___clock___enable___disable" xml:lang="en-US">
+<title>APB1 Clock Enable Disable</title>
+<indexterm><primary>APB1 Clock Enable Disable</primary></indexterm>
+<para>
+
+<para>Enable or disable the Low Speed APB (APB1) peripheral clock. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">__HAL_RCC_TIM2_CLK_ENABLE</emphasis>()</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RCC_TIM3_CLK_ENABLE</emphasis>()</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RCC_WWDG_CLK_ENABLE</emphasis>()</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RCC_USART2_CLK_ENABLE</emphasis>()</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RCC_I2C1_CLK_ENABLE</emphasis>()</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RCC_BKP_CLK_ENABLE</emphasis>()</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_RCC_PWR_CLK_ENABLE</emphasis>()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1gad2def81b1df0e62cd322ab60b31ba59f"/>#define <emphasis role="strong">__HAL_RCC_TIM2_CLK_DISABLE</emphasis>()   (RCC-&gt;APB1ENR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gacd3966a4d6ae47f06b3c095eaf26a610">RCC_APB1ENR_TIM2EN</link>))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1ga9fb7035f007ec272b725e51018a36b23"/>#define <emphasis role="strong">__HAL_RCC_TIM3_CLK_DISABLE</emphasis>()   (RCC-&gt;APB1ENR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga75bfa33eb00ee30c6e22f7ceea464ac7">RCC_APB1ENR_TIM3EN</link>))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1ga6afa0a633cf2553743a494d97aa5b997"/>#define <emphasis role="strong">__HAL_RCC_WWDG_CLK_DISABLE</emphasis>()   (RCC-&gt;APB1ENR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gaf712b922ee776a972d2efa3da0ea4733">RCC_APB1ENR_WWDGEN</link>))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1ga1edc6c83fbebf8b4265ef9500aa04b04"/>#define <emphasis role="strong">__HAL_RCC_USART2_CLK_DISABLE</emphasis>()   (RCC-&gt;APB1ENR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gab840af4f735ec36419d61c7db3cfa00d">RCC_APB1ENR_USART2EN</link>))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1ga490a853eae72da96aad5379a6e939dd8"/>#define <emphasis role="strong">__HAL_RCC_I2C1_CLK_DISABLE</emphasis>()   (RCC-&gt;APB1ENR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga5ca3afe0c517702b2d1366b692c8db0e">RCC_APB1ENR_I2C1EN</link>))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1ga92487028f056da1dd56871832db91cf6"/>#define <emphasis role="strong">__HAL_RCC_BKP_CLK_DISABLE</emphasis>()   (RCC-&gt;APB1ENR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gad32a0efcb7062b8ffbf77865951d2a54">RCC_APB1ENR_BKPEN</link>))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1gaf3db86d2db2bad45732a742b6a91ea0b"/>#define <emphasis role="strong">__HAL_RCC_PWR_CLK_DISABLE</emphasis>()   (RCC-&gt;APB1ENR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga5c19997ccd28464b80a7c3325da0ca60">RCC_APB1ENR_PWREN</link>))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Enable or disable the Low Speed APB (APB1) peripheral clock. </para>
+
+<para><note><title>Note</title>
+
+<para>After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. </para>
+</note>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1gaffaa413a270a2a8311d54103372aa232"/>    <section>
+    <title>__HAL_RCC_BKP_CLK_ENABLE</title>
+<indexterm><primary>__HAL_RCC_BKP_CLK_ENABLE</primary><secondary>APB1 Clock Enable Disable</secondary></indexterm>
+<indexterm><primary>APB1 Clock Enable Disable</primary><secondary>__HAL_RCC_BKP_CLK_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_BKP_CLK_ENABLE( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__IO&#32;uint32_t&#32;tmpreg;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SET_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1gad32a0efcb7062b8ffbf77865951d2a54">RCC_APB1ENR_BKPEN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Delay&#32;after&#32;an&#32;RCC&#32;peripheral&#32;clock&#32;enabling&#32;*/</emphasis>\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tmpreg&#32;=&#32;READ_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1gad32a0efcb7062b8ffbf77865951d2a54">RCC_APB1ENR_BKPEN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UNUSED(tmpreg);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0U)
+</programlisting>    </section><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1gaaeae5b9e93721dd4e34274600996baeb"/>    <section>
+    <title>__HAL_RCC_I2C1_CLK_ENABLE</title>
+<indexterm><primary>__HAL_RCC_I2C1_CLK_ENABLE</primary><secondary>APB1 Clock Enable Disable</secondary></indexterm>
+<indexterm><primary>APB1 Clock Enable Disable</primary><secondary>__HAL_RCC_I2C1_CLK_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_I2C1_CLK_ENABLE( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__IO&#32;uint32_t&#32;tmpreg;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SET_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga5ca3afe0c517702b2d1366b692c8db0e">RCC_APB1ENR_I2C1EN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Delay&#32;after&#32;an&#32;RCC&#32;peripheral&#32;clock&#32;enabling&#32;*/</emphasis>\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tmpreg&#32;=&#32;READ_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga5ca3afe0c517702b2d1366b692c8db0e">RCC_APB1ENR_I2C1EN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UNUSED(tmpreg);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0U)
+</programlisting>    </section><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1ga6c7399cc977622172aeda52a86ceed92"/>    <section>
+    <title>__HAL_RCC_PWR_CLK_ENABLE</title>
+<indexterm><primary>__HAL_RCC_PWR_CLK_ENABLE</primary><secondary>APB1 Clock Enable Disable</secondary></indexterm>
+<indexterm><primary>APB1 Clock Enable Disable</primary><secondary>__HAL_RCC_PWR_CLK_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_PWR_CLK_ENABLE( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__IO&#32;uint32_t&#32;tmpreg;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SET_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga5c19997ccd28464b80a7c3325da0ca60">RCC_APB1ENR_PWREN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Delay&#32;after&#32;an&#32;RCC&#32;peripheral&#32;clock&#32;enabling&#32;*/</emphasis>\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tmpreg&#32;=&#32;READ_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga5c19997ccd28464b80a7c3325da0ca60">RCC_APB1ENR_PWREN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UNUSED(tmpreg);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0U)
+</programlisting>    </section><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1ga2e895257faa38376b9cdfcd756909a43"/>    <section>
+    <title>__HAL_RCC_TIM2_CLK_ENABLE</title>
+<indexterm><primary>__HAL_RCC_TIM2_CLK_ENABLE</primary><secondary>APB1 Clock Enable Disable</secondary></indexterm>
+<indexterm><primary>APB1 Clock Enable Disable</primary><secondary>__HAL_RCC_TIM2_CLK_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_TIM2_CLK_ENABLE( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__IO&#32;uint32_t&#32;tmpreg;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SET_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1gacd3966a4d6ae47f06b3c095eaf26a610">RCC_APB1ENR_TIM2EN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Delay&#32;after&#32;an&#32;RCC&#32;peripheral&#32;clock&#32;enabling&#32;*/</emphasis>\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tmpreg&#32;=&#32;READ_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1gacd3966a4d6ae47f06b3c095eaf26a610">RCC_APB1ENR_TIM2EN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UNUSED(tmpreg);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0U)
+</programlisting>    </section><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1gaf62d32fdde03df10072d856515692c8d"/>    <section>
+    <title>__HAL_RCC_TIM3_CLK_ENABLE</title>
+<indexterm><primary>__HAL_RCC_TIM3_CLK_ENABLE</primary><secondary>APB1 Clock Enable Disable</secondary></indexterm>
+<indexterm><primary>APB1 Clock Enable Disable</primary><secondary>__HAL_RCC_TIM3_CLK_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_TIM3_CLK_ENABLE( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__IO&#32;uint32_t&#32;tmpreg;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SET_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga75bfa33eb00ee30c6e22f7ceea464ac7">RCC_APB1ENR_TIM3EN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Delay&#32;after&#32;an&#32;RCC&#32;peripheral&#32;clock&#32;enabling&#32;*/</emphasis>\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tmpreg&#32;=&#32;READ_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga75bfa33eb00ee30c6e22f7ceea464ac7">RCC_APB1ENR_TIM3EN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UNUSED(tmpreg);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0U)
+</programlisting>    </section><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1gaaf50c7d2265d978fab8fbb68a518096d"/>    <section>
+    <title>__HAL_RCC_USART2_CLK_ENABLE</title>
+<indexterm><primary>__HAL_RCC_USART2_CLK_ENABLE</primary><secondary>APB1 Clock Enable Disable</secondary></indexterm>
+<indexterm><primary>APB1 Clock Enable Disable</primary><secondary>__HAL_RCC_USART2_CLK_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_USART2_CLK_ENABLE( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__IO&#32;uint32_t&#32;tmpreg;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SET_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1gab840af4f735ec36419d61c7db3cfa00d">RCC_APB1ENR_USART2EN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Delay&#32;after&#32;an&#32;RCC&#32;peripheral&#32;clock&#32;enabling&#32;*/</emphasis>\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tmpreg&#32;=&#32;READ_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1gab840af4f735ec36419d61c7db3cfa00d">RCC_APB1ENR_USART2EN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UNUSED(tmpreg);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0U)
+</programlisting>    </section><anchor xml:id="_group___r_c_c___a_p_b1___clock___enable___disable_1gab0c13cc10b36c32d750be226d2fda3b2"/>    <section>
+    <title>__HAL_RCC_WWDG_CLK_ENABLE</title>
+<indexterm><primary>__HAL_RCC_WWDG_CLK_ENABLE</primary><secondary>APB1 Clock Enable Disable</secondary></indexterm>
+<indexterm><primary>APB1 Clock Enable Disable</primary><secondary>__HAL_RCC_WWDG_CLK_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_WWDG_CLK_ENABLE( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__IO&#32;uint32_t&#32;tmpreg;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SET_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1gaf712b922ee776a972d2efa3da0ea4733">RCC_APB1ENR_WWDGEN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Delay&#32;after&#32;an&#32;RCC&#32;peripheral&#32;clock&#32;enabling&#32;*/</emphasis>\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tmpreg&#32;=&#32;READ_BIT(RCC-&gt;APB1ENR,&#32;<link linkend="_group___peripheral___registers___bits___definition_1gaf712b922ee776a972d2efa3da0ea4733">RCC_APB1ENR_WWDGEN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UNUSED(tmpreg);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0U)
+</programlisting></section>
+</section>
+</section>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___f_l_a_s_h_ex___exported___functions___group2" kind="group">
+    <compoundname>FLASHEx_Exported_Functions_Group2</compoundname>
+    <title>FLASHEx_Exported_Functions_Group2</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___f_l_a_s_h_ex___exported___functions___group2_1ga74d4265b88afed50efe9fda0f025979a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_FLASHEx_OBErase</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_FLASHEx_OBErase</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="761" column="20" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" declline="761" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___f_l_a_s_h_ex___exported___functions___group2_1ga001dd4a8defa9eb24a17c4df5953a41d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_FLASHEx_OBProgram</definition>
+        <argsstring>(FLASH_OBProgramInitTypeDef *pOBInit)</argsstring>
+        <name>HAL_FLASHEx_OBProgram</name>
+        <param>
+          <type><ref refid="struct_f_l_a_s_h___o_b_program_init_type_def" kindref="compound">FLASH_OBProgramInitTypeDef</ref> *</type>
+          <declname>pOBInit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="762" column="20" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" declline="762" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___f_l_a_s_h_ex___exported___functions___group2_1ga6d45d5442b8147533b1100ec40fe75d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_FLASHEx_OBGetConfig</definition>
+        <argsstring>(FLASH_OBProgramInitTypeDef *pOBInit)</argsstring>
+        <name>HAL_FLASHEx_OBGetConfig</name>
+        <param>
+          <type><ref refid="struct_f_l_a_s_h___o_b_program_init_type_def" kindref="compound">FLASH_OBProgramInitTypeDef</ref> *</type>
+          <declname>pOBInit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="763" column="20" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" declline="763" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___f_l_a_s_h_ex___exported___functions___group2_1ga683593291451ae3e0dd1a6426ba72b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_FLASHEx_OBGetUserData</definition>
+        <argsstring>(uint32_t DATAAdress)</argsstring>
+        <name>HAL_FLASHEx_OBGetUserData</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>DATAAdress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="764" column="20" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" declline="764" declcolumn="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

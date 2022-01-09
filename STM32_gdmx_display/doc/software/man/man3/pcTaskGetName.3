@@ -1,0 +1,26 @@
+.TH "pcTaskGetName" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+pcTaskGetName \- pcTaskGetName
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+char *pcTaskGetName( TaskHandle_t xTaskToQuery );
+.fi
+.PP
+.PP
+\fBReturns\fP
+.RS 4
+The text (human readable) name of the task referenced by the handle xTaskToQuery\&. A task can query its own name by either passing in its own handle, or by setting xTaskToQuery to NULL\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

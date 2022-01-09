@@ -1,0 +1,37 @@
+\hypertarget{stm32f1xx__hal__dma__ex_8h}{}\doxysection{Drivers/\+STM32\+F1xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32f1xx\+\_\+hal\+\_\+dma\+\_\+ex.h File Reference}
+\label{stm32f1xx__hal__dma__ex_8h}\index{Drivers/STM32F1xx\_HAL\_Driver/Inc/stm32f1xx\_hal\_dma\_ex.h@{Drivers/STM32F1xx\_HAL\_Driver/Inc/stm32f1xx\_hal\_dma\_ex.h}}
+
+
+Header file of DMA HAL extension module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___low__density___medium__density___product__devices_gae3feef5ea50ff13a6a5b98cb353c87b0}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+TC\+\_\+\+FLAG\+\_\+\+INDEX}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Returns the current DMA Channel transfer complete flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___low__density___medium__density___product__devices_ga0095f5f3166a82bedc67744ac94acfba}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+HT\+\_\+\+FLAG\+\_\+\+INDEX}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Channel half transfer complete flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___low__density___medium__density___product__devices_ga5e765bb3b1c5fc9f1b1abbbb764250bc}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+TE\+\_\+\+FLAG\+\_\+\+INDEX}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Channel transfer error flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___low__density___medium__density___product__devices_ga718c628ea8c112c5b09bc61c52b86e75}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+GI\+\_\+\+FLAG\+\_\+\+INDEX}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Channel Global interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___low__density___medium__density___product__devices_ga798d4b3b3fbd32b95540967bb35b35be}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(DMA1-\/$>$ISR \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Get the DMA Channel pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___low__density___medium__density___product__devices_gabc041fb1c85ea7a3af94e42470ef7f2a}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(DMA1-\/$>$IFCR = (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the DMA Channel pending flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of DMA HAL extension module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2016 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 

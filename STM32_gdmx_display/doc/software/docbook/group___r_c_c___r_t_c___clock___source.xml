@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___r_t_c___clock___source" xml:lang="en-US">
+<title>RTC Clock Source</title>
+<indexterm><primary>RTC Clock Source</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c___r_t_c___clock___source_1gacce0b2f54d103340d8c3a218e86e295d">RCC_RTCCLKSOURCE_NO_CLK</link>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___r_t_c___clock___source_1ga5dca8d63f250a20bd6bc005670d0c150">RCC_RTCCLKSOURCE_LSE</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga07f6cd2e581dabf6d442145603033205">RCC_BDCR_RTCSEL_LSE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___r_t_c___clock___source_1gab47a1afb8b5eef9f20f4772961d0a5f4">RCC_RTCCLKSOURCE_LSI</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga66773d3ffb98fb0c7a72e39a224f1cfd">RCC_BDCR_RTCSEL_LSI</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___r_t_c___clock___source_1ga7e022374ec3ceffa94e5bb6310c35c83">RCC_RTCCLKSOURCE_HSE_DIV128</link>   <link linkend="_group___peripheral___registers___bits___definition_1gac9db61bfa161573b4225c147d4ea0c3e">RCC_BDCR_RTCSEL_HSE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c___r_t_c___clock___source_1ga7e022374ec3ceffa94e5bb6310c35c83"/>    <section>
+    <title>RCC_RTCCLKSOURCE_HSE_DIV128</title>
+<indexterm><primary>RCC_RTCCLKSOURCE_HSE_DIV128</primary><secondary>RTC Clock Source</secondary></indexterm>
+<indexterm><primary>RTC Clock Source</primary><secondary>RCC_RTCCLKSOURCE_HSE_DIV128</secondary></indexterm>
+<para><computeroutput>#define RCC_RTCCLKSOURCE_HSE_DIV128   <link linkend="_group___peripheral___registers___bits___definition_1gac9db61bfa161573b4225c147d4ea0c3e">RCC_BDCR_RTCSEL_HSE</link></computeroutput></para>
+<para>HSE oscillator clock divided by 128 used as RTC clock </para>
+    </section><anchor xml:id="_group___r_c_c___r_t_c___clock___source_1ga5dca8d63f250a20bd6bc005670d0c150"/>    <section>
+    <title>RCC_RTCCLKSOURCE_LSE</title>
+<indexterm><primary>RCC_RTCCLKSOURCE_LSE</primary><secondary>RTC Clock Source</secondary></indexterm>
+<indexterm><primary>RTC Clock Source</primary><secondary>RCC_RTCCLKSOURCE_LSE</secondary></indexterm>
+<para><computeroutput>#define RCC_RTCCLKSOURCE_LSE   <link linkend="_group___peripheral___registers___bits___definition_1ga07f6cd2e581dabf6d442145603033205">RCC_BDCR_RTCSEL_LSE</link></computeroutput></para>
+<para>LSE oscillator clock used as RTC clock </para>
+    </section><anchor xml:id="_group___r_c_c___r_t_c___clock___source_1gab47a1afb8b5eef9f20f4772961d0a5f4"/>    <section>
+    <title>RCC_RTCCLKSOURCE_LSI</title>
+<indexterm><primary>RCC_RTCCLKSOURCE_LSI</primary><secondary>RTC Clock Source</secondary></indexterm>
+<indexterm><primary>RTC Clock Source</primary><secondary>RCC_RTCCLKSOURCE_LSI</secondary></indexterm>
+<para><computeroutput>#define RCC_RTCCLKSOURCE_LSI   <link linkend="_group___peripheral___registers___bits___definition_1ga66773d3ffb98fb0c7a72e39a224f1cfd">RCC_BDCR_RTCSEL_LSI</link></computeroutput></para>
+<para>LSI oscillator clock used as RTC clock </para>
+    </section><anchor xml:id="_group___r_c_c___r_t_c___clock___source_1gacce0b2f54d103340d8c3a218e86e295d"/>    <section>
+    <title>RCC_RTCCLKSOURCE_NO_CLK</title>
+<indexterm><primary>RCC_RTCCLKSOURCE_NO_CLK</primary><secondary>RTC Clock Source</secondary></indexterm>
+<indexterm><primary>RTC Clock Source</primary><secondary>RCC_RTCCLKSOURCE_NO_CLK</secondary></indexterm>
+<para><computeroutput>#define RCC_RTCCLKSOURCE_NO_CLK   0x00000000U</computeroutput></para>
+<para>No clock </para>
+</section>
+</section>
+</section>

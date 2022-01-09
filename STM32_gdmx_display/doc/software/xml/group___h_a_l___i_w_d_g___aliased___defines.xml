@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___i_w_d_g___aliased___defines" kind="group">
+    <compoundname>HAL_IWDG_Aliased_Defines</compoundname>
+    <title>HAL IWDG Aliased Defines maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___i_w_d_g___aliased___defines_1ga830a9a1bad16c7043c86545f4c159a50" prot="public" static="no">
+        <name>KR_KEY_RELOAD</name>
+        <initializer>IWDG_KEY_RELOAD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="778" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="778" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___i_w_d_g___aliased___defines_1gaeaa0dd2da3f9d0cce0d708cfff1df545" prot="public" static="no">
+        <name>KR_KEY_ENABLE</name>
+        <initializer>IWDG_KEY_ENABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="779" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="779" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___i_w_d_g___aliased___defines_1gadf1ad39b6aa3d426f6e7fbf29d088aa5" prot="public" static="no">
+        <name>KR_KEY_EWA</name>
+        <initializer>IWDG_KEY_WRITE_ACCESS_ENABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="780" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="780" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___i_w_d_g___aliased___defines_1gae9cf62ac0d5eda2dd2417c280237e446" prot="public" static="no">
+        <name>KR_KEY_DWA</name>
+        <initializer>IWDG_KEY_WRITE_ACCESS_DISABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="781" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="781" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___e_x_t_i___g_p_i_o_sel" xml:lang="en-US">
+<title>EXTI GPIOSel</title>
+<indexterm><primary>EXTI GPIOSel</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___g_p_i_o_sel_1ga562f178c10011ea8de3721d400176558"/>#define <emphasis role="strong">EXTI_GPIOA</emphasis>   0x00000000u</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___g_p_i_o_sel_1ga226a2e7987e1e808eff168985d378641"/>#define <emphasis role="strong">EXTI_GPIOB</emphasis>   0x00000001u</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___g_p_i_o_sel_1gaa74b8f490a793f237c6a55f56ba6e644"/>#define <emphasis role="strong">EXTI_GPIOC</emphasis>   0x00000002u</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___g_p_i_o_sel_1ga753afc3084ff070ea6d640b771ed0245"/>#define <emphasis role="strong">EXTI_GPIOD</emphasis>   0x00000003u</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

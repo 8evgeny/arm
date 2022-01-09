@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___e_x_t_i___mode" xml:lang="en-US">
+<title>EXTI Mode</title>
+<indexterm><primary>EXTI Mode</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___mode_1ga9b50ed09da5b1dd0619d8792f142b049"/>#define <emphasis role="strong">EXTI_MODE_NONE</emphasis>   0x00000000u</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___mode_1gae1e032ec592296be21f416a79a44f4f5"/>#define <emphasis role="strong">EXTI_MODE_INTERRUPT</emphasis>   0x00000001u</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___mode_1ga672fef88f86b5d8a421194e3dac0f2e1"/>#define <emphasis role="strong">EXTI_MODE_EVENT</emphasis>   0x00000002u</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

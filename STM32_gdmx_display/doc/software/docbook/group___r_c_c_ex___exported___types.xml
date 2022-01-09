@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex___exported___types" xml:lang="en-US">
+<title>RCCEx Exported Types</title>
+<indexterm><primary>RCCEx Exported Types</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_r_c_c___osc_init_type_def">RCC_OscInitTypeDef</link></para>
+
+<para>RCC Internal/External Oscillator (HSE, HSI, LSE and LSI) configuration structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link></para>
+
+<para>RCC extended clocks structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

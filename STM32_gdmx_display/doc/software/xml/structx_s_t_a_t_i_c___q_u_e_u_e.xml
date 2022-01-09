@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structx_s_t_a_t_i_c___q_u_e_u_e" kind="struct" language="C++" prot="public">
+    <compoundname>xSTATIC_QUEUE</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structx_s_t_a_t_i_c___q_u_e_u_e_1ac563d82b4c6a843835118229de328aa7" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* pvDummy1[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>pvDummy1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" line="1048" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" bodystart="1048" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_s_t_a_t_i_c___q_u_e_u_e_1a44b3b17a1410a0bcec9b416f2bc89a96" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* pvDummy2</definition>
+        <argsstring></argsstring>
+        <name>pvDummy2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" line="1052" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" bodystart="1052" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_s_t_a_t_i_c___q_u_e_u_e_1a436a95e9535d609e10778297632bf306" prot="public" static="no" mutable="no">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxDummy2</definition>
+        <argsstring></argsstring>
+        <name>uxDummy2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" line="1053" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" bodystart="1053" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_s_t_a_t_i_c___q_u_e_u_e_1aa34180f29db4d23d825f32285f03ca1e" prot="public" static="no" mutable="no">
+        <type>union xSTATIC_QUEUE::@56</type>
+        <definition>union xSTATIC_QUEUE::@56 u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" line="1054" column="3"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_s_t_a_t_i_c___q_u_e_u_e_1a2ea20ae87a814cd673deba85bbc35e5b" prot="public" static="no" mutable="no">
+        <type><ref refid="structx_s_t_a_t_i_c___l_i_s_t" kindref="compound">StaticList_t</ref></type>
+        <definition>StaticList_t xDummy3[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>xDummy3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" line="1056" column="14" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" bodystart="1056" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_s_t_a_t_i_c___q_u_e_u_e_1a8c2bd4532fb12e9c4ca67d2a5b0afc1a" prot="public" static="no" mutable="no">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxDummy4[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>uxDummy4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" line="1057" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" bodystart="1057" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx_s_t_a_t_i_c___q_u_e_u_e_1aad619753f8d76e096e76fbf07502d2c9" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ucDummy5[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>ucDummy5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" line="1058" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" bodystart="1058" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>xSTATIC_MINI_LIST_ITEM</label>
+        <link refid="structx_s_t_a_t_i_c___m_i_n_i___l_i_s_t___i_t_e_m"/>
+      </node>
+      <node id="1">
+        <label>xSTATIC_QUEUE</label>
+        <link refid="structx_s_t_a_t_i_c___q_u_e_u_e"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>xDummy3</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xSTATIC_LIST</label>
+        <link refid="structx_s_t_a_t_i_c___l_i_s_t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>xDummy3</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" line="1046" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" bodystart="1047" bodyend="1073"/>
+    <listofallmembers>
+      <member refid="structx_s_t_a_t_i_c___q_u_e_u_e_1ac563d82b4c6a843835118229de328aa7" prot="public" virt="non-virtual"><scope>xSTATIC_QUEUE</scope><name>pvDummy1</name></member>
+      <member refid="structx_s_t_a_t_i_c___q_u_e_u_e_1a44b3b17a1410a0bcec9b416f2bc89a96" prot="public" virt="non-virtual"><scope>xSTATIC_QUEUE</scope><name>pvDummy2</name></member>
+      <member refid="structx_s_t_a_t_i_c___q_u_e_u_e_1aa34180f29db4d23d825f32285f03ca1e" prot="public" virt="non-virtual"><scope>xSTATIC_QUEUE</scope><name>u</name></member>
+      <member refid="structx_s_t_a_t_i_c___q_u_e_u_e_1aad619753f8d76e096e76fbf07502d2c9" prot="public" virt="non-virtual"><scope>xSTATIC_QUEUE</scope><name>ucDummy5</name></member>
+      <member refid="structx_s_t_a_t_i_c___q_u_e_u_e_1a436a95e9535d609e10778297632bf306" prot="public" virt="non-virtual"><scope>xSTATIC_QUEUE</scope><name>uxDummy2</name></member>
+      <member refid="structx_s_t_a_t_i_c___q_u_e_u_e_1a8c2bd4532fb12e9c4ca67d2a5b0afc1a" prot="public" virt="non-virtual"><scope>xSTATIC_QUEUE</scope><name>uxDummy4</name></member>
+      <member refid="structx_s_t_a_t_i_c___q_u_e_u_e_1a2ea20ae87a814cd673deba85bbc35e5b" prot="public" virt="non-virtual"><scope>xSTATIC_QUEUE</scope><name>xDummy3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

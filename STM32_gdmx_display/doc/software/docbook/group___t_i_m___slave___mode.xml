@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___slave___mode" xml:lang="en-US">
+<title>TIM Slave mode</title>
+<indexterm><primary>TIM Slave mode</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___slave___mode_1ga3b53e1a85d08f125df4371f86bdaf79b">TIM_SLAVEMODE_DISABLE</link>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___slave___mode_1ga9f28e350c0560dc550f5c0d2f8b39ba7">TIM_SLAVEMODE_RESET</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga63847fc3c71f582403e6301b1229c3ed">TIM_SMCR_SMS_2</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___slave___mode_1ga4501317fcd7649e5ff46db6fe69938e0">TIM_SLAVEMODE_GATED</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga63847fc3c71f582403e6301b1229c3ed">TIM_SMCR_SMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga7d1ebece401aeb12abd466d2eafa78b2">TIM_SMCR_SMS_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___slave___mode_1ga12f8f7b4a16b438f54cf811f0bb0a8a4">TIM_SLAVEMODE_TRIGGER</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga63847fc3c71f582403e6301b1229c3ed">TIM_SMCR_SMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa980a3121ab6cda5a4a42b959da8421e">TIM_SMCR_SMS_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___slave___mode_1ga90dcf32a66dcb250b18da2ff56471328">TIM_SLAVEMODE_EXTERNAL1</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga63847fc3c71f582403e6301b1229c3ed">TIM_SMCR_SMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa980a3121ab6cda5a4a42b959da8421e">TIM_SMCR_SMS_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga7d1ebece401aeb12abd466d2eafa78b2">TIM_SMCR_SMS_0</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___slave___mode_1ga3b53e1a85d08f125df4371f86bdaf79b"/>    <section>
+    <title>TIM_SLAVEMODE_DISABLE</title>
+<indexterm><primary>TIM_SLAVEMODE_DISABLE</primary><secondary>TIM Slave mode</secondary></indexterm>
+<indexterm><primary>TIM Slave mode</primary><secondary>TIM_SLAVEMODE_DISABLE</secondary></indexterm>
+<para><computeroutput>#define TIM_SLAVEMODE_DISABLE   0x00000000U</computeroutput></para>
+<para>Slave mode disabled 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___slave___mode_1ga90dcf32a66dcb250b18da2ff56471328"/>    <section>
+    <title>TIM_SLAVEMODE_EXTERNAL1</title>
+<indexterm><primary>TIM_SLAVEMODE_EXTERNAL1</primary><secondary>TIM Slave mode</secondary></indexterm>
+<indexterm><primary>TIM Slave mode</primary><secondary>TIM_SLAVEMODE_EXTERNAL1</secondary></indexterm>
+<para><computeroutput>#define TIM_SLAVEMODE_EXTERNAL1   (<link linkend="_group___peripheral___registers___bits___definition_1ga63847fc3c71f582403e6301b1229c3ed">TIM_SMCR_SMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa980a3121ab6cda5a4a42b959da8421e">TIM_SMCR_SMS_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga7d1ebece401aeb12abd466d2eafa78b2">TIM_SMCR_SMS_0</link>)</computeroutput></para>
+<para>External Clock Mode 1 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___slave___mode_1ga4501317fcd7649e5ff46db6fe69938e0"/>    <section>
+    <title>TIM_SLAVEMODE_GATED</title>
+<indexterm><primary>TIM_SLAVEMODE_GATED</primary><secondary>TIM Slave mode</secondary></indexterm>
+<indexterm><primary>TIM Slave mode</primary><secondary>TIM_SLAVEMODE_GATED</secondary></indexterm>
+<para><computeroutput>#define TIM_SLAVEMODE_GATED   (<link linkend="_group___peripheral___registers___bits___definition_1ga63847fc3c71f582403e6301b1229c3ed">TIM_SMCR_SMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga7d1ebece401aeb12abd466d2eafa78b2">TIM_SMCR_SMS_0</link>)</computeroutput></para>
+<para>Gated Mode 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___slave___mode_1ga9f28e350c0560dc550f5c0d2f8b39ba7"/>    <section>
+    <title>TIM_SLAVEMODE_RESET</title>
+<indexterm><primary>TIM_SLAVEMODE_RESET</primary><secondary>TIM Slave mode</secondary></indexterm>
+<indexterm><primary>TIM Slave mode</primary><secondary>TIM_SLAVEMODE_RESET</secondary></indexterm>
+<para><computeroutput>#define TIM_SLAVEMODE_RESET   <link linkend="_group___peripheral___registers___bits___definition_1ga63847fc3c71f582403e6301b1229c3ed">TIM_SMCR_SMS_2</link></computeroutput></para>
+<para>Reset Mode 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___slave___mode_1ga12f8f7b4a16b438f54cf811f0bb0a8a4"/>    <section>
+    <title>TIM_SLAVEMODE_TRIGGER</title>
+<indexterm><primary>TIM_SLAVEMODE_TRIGGER</primary><secondary>TIM Slave mode</secondary></indexterm>
+<indexterm><primary>TIM Slave mode</primary><secondary>TIM_SLAVEMODE_TRIGGER</secondary></indexterm>
+<para><computeroutput>#define TIM_SLAVEMODE_TRIGGER   (<link linkend="_group___peripheral___registers___bits___definition_1ga63847fc3c71f582403e6301b1229c3ed">TIM_SMCR_SMS_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa980a3121ab6cda5a4a42b959da8421e">TIM_SMCR_SMS_1</link>)</computeroutput></para>
+<para>Trigger Mode 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+</section>
+</section>

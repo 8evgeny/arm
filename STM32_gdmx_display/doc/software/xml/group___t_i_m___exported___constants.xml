@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___t_i_m___exported___constants" kind="group">
+    <compoundname>TIM_Exported_Constants</compoundname>
+    <title>TIM Exported Constants</title>
+    <innergroup refid="group___t_i_m___clear_input___source">TIM Clear Input Source</innergroup>
+    <innergroup refid="group___t_i_m___d_m_a___base__address">TIM DMA Base Address</innergroup>
+    <innergroup refid="group___t_i_m___event___source">TIM Event Source</innergroup>
+    <innergroup refid="group___t_i_m___input___channel___polarity">TIM Input Channel polarity</innergroup>
+    <innergroup refid="group___t_i_m___e_t_r___polarity">TIM ETR Polarity</innergroup>
+    <innergroup refid="group___t_i_m___e_t_r___prescaler">TIM ETR Prescaler</innergroup>
+    <innergroup refid="group___t_i_m___counter___mode">TIM Counter Mode</innergroup>
+    <innergroup refid="group___t_i_m___clock_division">TIM Clock Division</innergroup>
+    <innergroup refid="group___t_i_m___output___compare___state">TIM Output Compare State</innergroup>
+    <innergroup refid="group___t_i_m___auto_reload_preload">TIM Auto-Reload Preload</innergroup>
+    <innergroup refid="group___t_i_m___output___fast___state">TIM Output Fast State</innergroup>
+    <innergroup refid="group___t_i_m___output___compare___n___state">TIM Complementary Output Compare State</innergroup>
+    <innergroup refid="group___t_i_m___output___compare___polarity">TIM Output Compare Polarity</innergroup>
+    <innergroup refid="group___t_i_m___output___compare___n___polarity">TIM Complementary Output Compare Polarity</innergroup>
+    <innergroup refid="group___t_i_m___output___compare___idle___state">TIM Output Compare Idle State</innergroup>
+    <innergroup refid="group___t_i_m___output___compare___n___idle___state">TIM Complementary Output Compare Idle State</innergroup>
+    <innergroup refid="group___t_i_m___input___capture___polarity">TIM Input Capture Polarity</innergroup>
+    <innergroup refid="group___t_i_m___input___capture___selection">TIM Input Capture Selection</innergroup>
+    <innergroup refid="group___t_i_m___input___capture___prescaler">TIM Input Capture Prescaler</innergroup>
+    <innergroup refid="group___t_i_m___one___pulse___mode">TIM One Pulse Mode</innergroup>
+    <innergroup refid="group___t_i_m___encoder___mode">TIM Encoder Mode</innergroup>
+    <innergroup refid="group___t_i_m___interrupt__definition">TIM interrupt Definition</innergroup>
+    <innergroup refid="group___t_i_m___commutation___source">TIM Commutation Source</innergroup>
+    <innergroup refid="group___t_i_m___d_m_a__sources">TIM DMA Sources</innergroup>
+    <innergroup refid="group___t_i_m___flag__definition">TIM Flag Definition</innergroup>
+    <innergroup refid="group___t_i_m___channel">TIM Channel</innergroup>
+    <innergroup refid="group___t_i_m___clock___source">TIM Clock Source</innergroup>
+    <innergroup refid="group___t_i_m___clock___polarity">TIM Clock Polarity</innergroup>
+    <innergroup refid="group___t_i_m___clock___prescaler">TIM Clock Prescaler</innergroup>
+    <innergroup refid="group___t_i_m___clear_input___polarity">TIM Clear Input Polarity</innergroup>
+    <innergroup refid="group___t_i_m___clear_input___prescaler">TIM Clear Input Prescaler</innergroup>
+    <innergroup refid="group___t_i_m___o_s_s_r___off___state___selection__for___run__mode__state">TIM OSSR OffState Selection for Run mode state</innergroup>
+    <innergroup refid="group___t_i_m___o_s_s_i___off___state___selection__for___idle__mode__state">TIM OSSI OffState Selection for Idle mode state</innergroup>
+    <innergroup refid="group___t_i_m___lock__level">TIM Lock level</innergroup>
+    <innergroup refid="group___t_i_m___break___input__enable__disable">TIM Break Input Enable</innergroup>
+    <innergroup refid="group___t_i_m___break___polarity">TIM Break Input Polarity</innergroup>
+    <innergroup refid="group___t_i_m___a_o_e___bit___set___reset">TIM Automatic Output Enable</innergroup>
+    <innergroup refid="group___t_i_m___master___mode___selection">TIM Master Mode Selection</innergroup>
+    <innergroup refid="group___t_i_m___master___slave___mode">TIM Master/Slave Mode</innergroup>
+    <innergroup refid="group___t_i_m___slave___mode">TIM Slave mode</innergroup>
+    <innergroup refid="group___t_i_m___output___compare__and___p_w_m__modes">TIM Output Compare and PWM Modes</innergroup>
+    <innergroup refid="group___t_i_m___trigger___selection">TIM Trigger Selection</innergroup>
+    <innergroup refid="group___t_i_m___trigger___polarity">TIM Trigger Polarity</innergroup>
+    <innergroup refid="group___t_i_m___trigger___prescaler">TIM Trigger Prescaler</innergroup>
+    <innergroup refid="group___t_i_m___t_i1___selection">TIM TI1 Input Selection</innergroup>
+    <innergroup refid="group___t_i_m___d_m_a___burst___length">TIM DMA Burst Length</innergroup>
+    <innergroup refid="group___d_m_a___handle__index">TIM DMA Handle Index</innergroup>
+    <innergroup refid="group___channel___c_c___state">TIM Capture/Compare Channel State</innergroup>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

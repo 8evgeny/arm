@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_r_c_c___p_l_l_init_type_def" xml:lang="en-US">
+<title>RCC_PLLInitTypeDef Struct Reference</title>
+<indexterm><primary>RCC_PLLInitTypeDef</primary></indexterm>
+<para>
+
+<para>RCC PLL configuration structure definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f1xx_hal_rcc.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___p_l_l_init_type_def_1ab3bb33f461bb409576e1c899c962e0b0">PLLState</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___p_l_l_init_type_def_1a418ecda4a355c6a161e4893a7bc1897f">PLLSource</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___p_l_l_init_type_def_1a4a57e48e8e939695ff2a76456e6360ef">PLLMUL</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>RCC PLL configuration structure definition. </para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_r_c_c___p_l_l_init_type_def_1a4a57e48e8e939695ff2a76456e6360ef"/>    <section>
+    <title>PLLMUL</title>
+<indexterm><primary>PLLMUL</primary><secondary>RCC_PLLInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_PLLInitTypeDef</primary><secondary>PLLMUL</secondary></indexterm>
+<para><computeroutput>uint32_t PLLMUL</computeroutput></para>
+<para>PLLMUL: Multiplication factor for PLL VCO input clock This parameter must be a value of <link linkend="_group___r_c_c_ex___p_l_l___multiplication___factor">PLL Multiplication Factor</link> </para>
+    </section><anchor xml:id="_struct_r_c_c___p_l_l_init_type_def_1a418ecda4a355c6a161e4893a7bc1897f"/>    <section>
+    <title>PLLSource</title>
+<indexterm><primary>PLLSource</primary><secondary>RCC_PLLInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_PLLInitTypeDef</primary><secondary>PLLSource</secondary></indexterm>
+<para><computeroutput>uint32_t PLLSource</computeroutput></para>
+<para>PLLSource: PLL entry clock source. This parameter must be a value of <link linkend="_group___r_c_c___p_l_l___clock___source">PLL Clock Source</link> </para>
+    </section><anchor xml:id="_struct_r_c_c___p_l_l_init_type_def_1ab3bb33f461bb409576e1c899c962e0b0"/>    <section>
+    <title>PLLState</title>
+<indexterm><primary>PLLState</primary><secondary>RCC_PLLInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_PLLInitTypeDef</primary><secondary>PLLState</secondary></indexterm>
+<para><computeroutput>uint32_t PLLState</computeroutput></para>
+<para>PLLState: The new state of the PLL. This parameter can be a value of <link linkend="_group___r_c_c___p_l_l___config">PLL Config</link> </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/STM32F1xx_HAL_Driver/Inc/<link linkend="_stm32f1xx__hal__rcc_8h">stm32f1xx_hal_rcc.h</link></section>
+</section>

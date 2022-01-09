@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___f_l_a_s_h___exported___types" kind="group">
+    <compoundname>FLASH_Exported_Types</compoundname>
+    <title>FLASH Exported Types</title>
+    <innerclass refid="struct_f_l_a_s_h___process_type_def" prot="public">FLASH_ProcessTypeDef</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___f_l_a_s_h___exported___types_1ga2b0268387bc11bcab76be9ce7c43eaaf" prot="public" static="no" strong="no">
+        <type></type>
+        <name>FLASH_ProcedureTypeDef</name>
+        <enumvalue id="group___f_l_a_s_h___exported___types_1gga2b0268387bc11bcab76be9ce7c43eaafa8d1dcf61f621d71484d13ac02f651b3d" prot="public">
+          <name>FLASH_PROC_NONE</name>
+          <initializer>= 0U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___f_l_a_s_h___exported___types_1gga2b0268387bc11bcab76be9ce7c43eaafa60f5b29ffaa88e477958199c079f945f" prot="public">
+          <name>FLASH_PROC_PAGEERASE</name>
+          <initializer>= 1U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___f_l_a_s_h___exported___types_1gga2b0268387bc11bcab76be9ce7c43eaafa1b046d01356b498d6675040f17362f0b" prot="public">
+          <name>FLASH_PROC_MASSERASE</name>
+          <initializer>= 2U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___f_l_a_s_h___exported___types_1gga2b0268387bc11bcab76be9ce7c43eaafa4f383adc9c7cb418c2bcbe175115a3da" prot="public">
+          <name>FLASH_PROC_PROGRAMHALFWORD</name>
+          <initializer>= 3U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___f_l_a_s_h___exported___types_1gga2b0268387bc11bcab76be9ce7c43eaafa81dab33c2d1048925ed82cc344f0cb17" prot="public">
+          <name>FLASH_PROC_PROGRAMWORD</name>
+          <initializer>= 4U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___f_l_a_s_h___exported___types_1gga2b0268387bc11bcab76be9ce7c43eaafa7e71cd5c5f3051d5e6600d95ec092b12" prot="public">
+          <name>FLASH_PROC_PROGRAMDOUBLEWORD</name>
+          <initializer>= 5U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>FLASH Procedure structure definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" line="75" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" bodystart="76" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

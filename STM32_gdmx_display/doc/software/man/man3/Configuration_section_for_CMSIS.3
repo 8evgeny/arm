@@ -1,0 +1,49 @@
+.TH "Configuration_section_for_CMSIS" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Configuration_section_for_CMSIS \- Configuration_section_for_CMSIS
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__CM3_REV\fP   0x0200U"
+.br
+.RI "Configuration of the Cortex-M3 Processor and Core Peripherals\&. "
+.ti -1c
+.RI "#define \fB__MPU_PRESENT\fP   0U"
+.br
+.ti -1c
+.RI "#define \fB__NVIC_PRIO_BITS\fP   4U"
+.br
+.ti -1c
+.RI "#define \fB__Vendor_SysTickConfig\fP   0U"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __CM3_REV   0x0200U"
+
+.PP
+Configuration of the Cortex-M3 Processor and Core Peripherals\&. Core Revision r2p0 
+.br
+ 
+.SS "#define __MPU_PRESENT   0U"
+Other STM32 devices does not provide an MPU 
+.br
+ 
+.SS "#define __NVIC_PRIO_BITS   4U"
+STM32 uses 4 Bits for the Priority Levels 
+.br
+ 
+.SS "#define __Vendor_SysTickConfig   0U"
+Set to 1 if different SysTick Config is used 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

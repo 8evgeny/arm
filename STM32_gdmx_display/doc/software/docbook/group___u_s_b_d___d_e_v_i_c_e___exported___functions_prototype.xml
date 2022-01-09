@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype" xml:lang="en-US">
+<title>USBD_DEVICE_Exported_FunctionsPrototype</title>
+<indexterm><primary>USBD_DEVICE_Exported_FunctionsPrototype</primary></indexterm>
+<para>
+
+<para>Declaration of public functions for Usb device. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype_1gadab4f7fc1db4ce2be073d3913209d2af">MX_USB_DEVICE_Init</link> (void)</para>
+
+<para>MX USB Device library initialization function. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Declaration of public functions for Usb device. </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype_1gadab4f7fc1db4ce2be073d3913209d2af"/>    <section>
+    <title>MX_USB_DEVICE_Init()</title>
+<indexterm><primary>MX_USB_DEVICE_Init</primary><secondary>USBD_DEVICE_Exported_FunctionsPrototype</secondary></indexterm>
+<indexterm><primary>USBD_DEVICE_Exported_FunctionsPrototype</primary><secondary>MX_USB_DEVICE_Init</secondary></indexterm>
+<para><computeroutput>void MX_USB_DEVICE_Init (void )</computeroutput></para><para>
+
+<para>MX USB Device library initialization function. </para>
+</para>
+
+<para>USB Device initialization function.</para>
+
+<para>Init USB device Library, add supported class and start the library. 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

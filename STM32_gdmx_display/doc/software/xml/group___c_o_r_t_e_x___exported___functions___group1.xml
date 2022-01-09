@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___c_o_r_t_e_x___exported___functions___group1" kind="group">
+    <compoundname>CORTEX_Exported_Functions_Group1</compoundname>
+    <title>CORTEX_Exported_Functions_Group1</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1gad9be53e08b1498adea006e5e037f238f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_SetPriorityGrouping</definition>
+        <argsstring>(uint32_t PriorityGroup)</argsstring>
+        <name>HAL_NVIC_SetPriorityGrouping</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>PriorityGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="262" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="262" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1ga8581a82025a4780efd00876a66e3e91b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_SetPriority</definition>
+        <argsstring>(IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t SubPriority)</argsstring>
+        <name>HAL_NVIC_SetPriority</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>PreemptPriority</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>SubPriority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="263" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="263" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1gaaad4492c1b25e006d69948a15790352a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_EnableIRQ</definition>
+        <argsstring>(IRQn_Type IRQn)</argsstring>
+        <name>HAL_NVIC_EnableIRQ</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="264" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="264" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1ga50ca6290e068821cb84aa168f3e13967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_DisableIRQ</definition>
+        <argsstring>(IRQn_Type IRQn)</argsstring>
+        <name>HAL_NVIC_DisableIRQ</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="265" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="265" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1gac83d89028fabdf5d4c38ecf4fbfbefdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_SystemReset</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_NVIC_SystemReset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="266" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="266" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1gac3a3f0d53c315523a8e6e7bcac1940cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_SYSTICK_Config</definition>
+        <argsstring>(uint32_t TicksNumb)</argsstring>
+        <name>HAL_SYSTICK_Config</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>TicksNumb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="267" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="267" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

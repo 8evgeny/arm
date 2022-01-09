@@ -1,0 +1,426 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f1xx__hal__conf_8h" xml:lang="en-US">
+<title>Inc/stm32f1xx_hal_conf.h File Reference</title>
+<indexterm><primary>Inc/stm32f1xx_hal_conf.h</primary></indexterm>
+<para>
+
+<para>HAL configuration file. </para>
+ 
+</para>
+<programlisting>#include &quot;stm32f1xx_hal_rcc.h&quot;
+#include &quot;stm32f1xx_hal_gpio.h&quot;
+#include &quot;stm32f1xx_hal_exti.h&quot;
+#include &quot;stm32f1xx_hal_dma.h&quot;
+#include &quot;stm32f1xx_hal_cortex.h&quot;
+#include &quot;stm32f1xx_hal_flash.h&quot;
+#include &quot;stm32f1xx_hal_pwr.h&quot;
+#include &quot;stm32f1xx_hal_tim.h&quot;
+#include &quot;stm32f1xx_hal_pcd.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a877ae99e8c47a609ea97c888912bf75f"/>#define <link linkend="_stm32f1xx__hal__conf_8h_1a877ae99e8c47a609ea97c888912bf75f">HAL_MODULE_ENABLED</link></para>
+
+<para>This is the list of modules to be used in the HAL driver. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a86165f80d6078719ee0715afe13febf5"/>#define <emphasis role="strong">HAL_GPIO_MODULE_ENABLED</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1abc68645a06297042bf1f4d9f5a59f94b"/>#define <emphasis role="strong">HAL_PCD_MODULE_ENABLED</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a23382b8f04b3e6db2c59dfa1ef5ea4a2"/>#define <emphasis role="strong">HAL_TIM_MODULE_ENABLED</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1aa9b5a3a425901e097de70092dbe31e0f"/>#define <emphasis role="strong">HAL_CORTEX_MODULE_ENABLED</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a6552186102a1131b2849ac55a582945d"/>#define <emphasis role="strong">HAL_DMA_MODULE_ENABLED</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a7112575efe3740911f19a13e6b170fee"/>#define <emphasis role="strong">HAL_FLASH_MODULE_ENABLED</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1aeb359e861d8a92c233c3229657dbcd74"/>#define <emphasis role="strong">HAL_EXTI_MODULE_ENABLED</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a86165f80d6078719ee0715afe13febf5"/>#define <emphasis role="strong">HAL_GPIO_MODULE_ENABLED</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1ab51923c3716977d7923f49cc9d081aa8"/>#define <emphasis role="strong">HAL_PWR_MODULE_ENABLED</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1ac3dd74314ed62ac8575e2f9f48b3ac48"/>#define <emphasis role="strong">HAL_RCC_MODULE_ENABLED</emphasis></para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1aeafcff4f57440c60e64812dddd13e7cb">HSE_VALUE</link>   ((uint32_t)8000000)</para>
+
+<para>Adjust the value of External High Speed oscillator (HSE) used in your application. This value is used by the RCC HAL module to compute the system frequency (when HSE is used as system clock source, directly or through the PLL). 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a68ecbc9b0a1a40a1ec9d18d5e9747c4f">HSE_STARTUP_TIMEOUT</link>   ((uint32_t)100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1aaa8c76e274d0f6dd2cefb5d0b17fbc37">HSI_VALUE</link>   ((uint32_t)8000000)</para>
+
+<para>Internal High Speed oscillator (HSI) value. This value is used by the RCC HAL module to compute the system frequency (when HSI is used as system clock source, directly or through the PLL). </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a4872023e65449c0506aac3ea6bec99e9">LSI_VALUE</link>   40000U</para>
+
+<para>Internal Low Speed oscillator (LSI) value. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a7bbb9d19e5189a6ccd0fb6fa6177d20d">LSE_VALUE</link>   ((uint32_t)32768)</para>
+
+<para>External Low Speed oscillator (LSE) value. This value is used by the UART, RTC HAL module to compute the system frequency. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a85e6fc812dc26f7161a04be2568a5462">LSE_STARTUP_TIMEOUT</link>   ((uint32_t)5000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1aae550dad9f96d52cfce5e539adadbbb4">VDD_VALUE</link>   ((uint32_t)3300)</para>
+
+<para>This is the HAL system configuration section. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1ae27809d4959b9fd5b5d974e3e1c77d2e">TICK_INT_PRIORITY</link>   ((uint32_t)0)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1ad048ac737242c2c2cb9f4a72953d10ce"/>#define <emphasis role="strong">USE_RTOS</emphasis>   0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a13fc0d5e7bb925385c0cc0772ba6a391"/>#define <emphasis role="strong">PREFETCH_ENABLE</emphasis>   1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1acc33abd5393affd16cc4a1397839dfe4"/>#define <emphasis role="strong">USE_HAL_ADC_REGISTER_CALLBACKS</emphasis>   0U /* ADC register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a7f6bf06dfbf91fd866a9d62ab54d0e81"/>#define <emphasis role="strong">USE_HAL_CAN_REGISTER_CALLBACKS</emphasis>   0U /* CAN register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a4b1a233981ef5d96551ea1f08d1a7ea8"/>#define <emphasis role="strong">USE_HAL_CEC_REGISTER_CALLBACKS</emphasis>   0U /* CEC register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1af9580ae862dcc02cee7822030c48d6b8"/>#define <emphasis role="strong">USE_HAL_DAC_REGISTER_CALLBACKS</emphasis>   0U /* DAC register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1aa24a8d7886d3a497a868d5bf2417bfdf"/>#define <emphasis role="strong">USE_HAL_ETH_REGISTER_CALLBACKS</emphasis>   0U /* ETH register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a560b53001fb58138f7da15dbda8f58a6"/>#define <emphasis role="strong">USE_HAL_HCD_REGISTER_CALLBACKS</emphasis>   0U /* HCD register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a99be773f7f62b6277d1c87658e085725"/>#define <emphasis role="strong">USE_HAL_I2C_REGISTER_CALLBACKS</emphasis>   0U /* I2C register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a1bdc791c35b20c7188b3d74fd6c30ebf"/>#define <emphasis role="strong">USE_HAL_I2S_REGISTER_CALLBACKS</emphasis>   0U /* I2S register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1ae595e885d73a91a83fbdc20f7affcd42"/>#define <emphasis role="strong">USE_HAL_MMC_REGISTER_CALLBACKS</emphasis>   0U /* MMC register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a80498b459859528918535b88fed54b28"/>#define <emphasis role="strong">USE_HAL_NAND_REGISTER_CALLBACKS</emphasis>   0U /* NAND register callback disabled      */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a7b38c01bd6621f3da5993d71eb5ff42e"/>#define <emphasis role="strong">USE_HAL_NOR_REGISTER_CALLBACKS</emphasis>   0U /* NOR register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a15d7e736835fdf5b02fe42913329a5ce"/>#define <emphasis role="strong">USE_HAL_PCCARD_REGISTER_CALLBACKS</emphasis>   0U /* PCCARD register callback disabled    */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1afd18c04aa4a4a54446df8083be875a00"/>#define <emphasis role="strong">USE_HAL_PCD_REGISTER_CALLBACKS</emphasis>   0U /* PCD register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a54badbcdb096ce802d2eed981cbbc31a"/>#define <emphasis role="strong">USE_HAL_RTC_REGISTER_CALLBACKS</emphasis>   0U /* RTC register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1acccbc010792c242ce6aae30b7c6f40df"/>#define <emphasis role="strong">USE_HAL_SD_REGISTER_CALLBACKS</emphasis>   0U /* SD register callback disabled        */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a43bb2335641440326db0f05526c1bff9"/>#define <emphasis role="strong">USE_HAL_SMARTCARD_REGISTER_CALLBACKS</emphasis>   0U /* SMARTCARD register callback disabled */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a4a459bcaa046998e6939fc66b0831e96"/>#define <emphasis role="strong">USE_HAL_IRDA_REGISTER_CALLBACKS</emphasis>   0U /* IRDA register callback disabled      */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a5c7c04d57c22f5301f1ea589abc6f35f"/>#define <emphasis role="strong">USE_HAL_SRAM_REGISTER_CALLBACKS</emphasis>   0U /* SRAM register callback disabled      */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a8d8be2d7e4ed5bfc7b64f60ba604c749"/>#define <emphasis role="strong">USE_HAL_SPI_REGISTER_CALLBACKS</emphasis>   0U /* SPI register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a5ef4d67cd7630f6e2e67d17370fbffdb"/>#define <emphasis role="strong">USE_HAL_TIM_REGISTER_CALLBACKS</emphasis>   0U /* TIM register callback disabled       */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a68c6c7c633e6cb378824020ef00a5701"/>#define <emphasis role="strong">USE_HAL_UART_REGISTER_CALLBACKS</emphasis>   0U /* UART register callback disabled      */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1ac79983d623c7f760c5077618a453561b"/>#define <emphasis role="strong">USE_HAL_USART_REGISTER_CALLBACKS</emphasis>   0U /* USART register callback disabled     */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a6879802837c27d8761d8a8fdab626891"/>#define <emphasis role="strong">USE_HAL_WWDG_REGISTER_CALLBACKS</emphasis>   0U /* WWDG register callback disabled      */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1ab84a2e15d360e2644ada09641513a941"/>#define <link linkend="_stm32f1xx__hal__conf_8h_1ab84a2e15d360e2644ada09641513a941">MAC_ADDR0</link>   2</para>
+
+<para>Uncomment the line below to expanse the &quot;assert_param&quot; macro in the HAL drivers code. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a8d14266d76690c530bee01e7e5bb4099"/>#define <emphasis role="strong">MAC_ADDR1</emphasis>   0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a6c5df15bec1d305ed033ad9a85ec803d"/>#define <emphasis role="strong">MAC_ADDR2</emphasis>   0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a08a36ede83ae67498aecf54676be8fc8"/>#define <emphasis role="strong">MAC_ADDR3</emphasis>   0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a41e5cb0b39ad74f0aafb83dbcecf9006"/>#define <emphasis role="strong">MAC_ADDR4</emphasis>   0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a3bcc92663c42ec434f527847bbc4abc1"/>#define <emphasis role="strong">MAC_ADDR5</emphasis>   0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a0cdaf687f7a7f2dba570d5a722990786"/>#define <emphasis role="strong">ETH_RX_BUF_SIZE</emphasis>   ETH_MAX_PACKET_SIZE /* buffer size for receive               */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1af83956dfc1b135c3c92ac409758b6cf4"/>#define <emphasis role="strong">ETH_TX_BUF_SIZE</emphasis>   ETH_MAX_PACKET_SIZE /* buffer size for transmit              */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a62b0f224fa9c4f2e5574c9e52526f751"/>#define <emphasis role="strong">ETH_RXBUFNB</emphasis>   ((uint32_t)8)       /* 4 Rx buffers of size ETH_RX_BUF_SIZE  */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a4ad07ad8fa6f8639ab8ef362390d86c7"/>#define <emphasis role="strong">ETH_TXBUFNB</emphasis>   ((uint32_t)4)       /* 4 Tx buffers of size ETH_TX_BUF_SIZE  */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a25f014091aaba92bdd9d95d0b2f00503"/>#define <emphasis role="strong">DP83848_PHY_ADDRESS</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a0ede6087f7b71403bcddb5d3a8f47ff4"/>#define <emphasis role="strong">PHY_RESET_DELAY</emphasis>   ((uint32_t)0x000000FF)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1abba7114255a2a41b81fdcb2a3702c270"/>#define <emphasis role="strong">PHY_CONFIG_DELAY</emphasis>   ((uint32_t)0x00000FFF)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a9d356ada86535630c403690bef0fb887"/>#define <emphasis role="strong">PHY_READ_TO</emphasis>   ((uint32_t)0x0000FFFF)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a474bf13e28d09b667e41b151140ee39d"/>#define <emphasis role="strong">PHY_WRITE_TO</emphasis>   ((uint32_t)0x0000FFFF)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a8abe1a40c71e68881ec669d59f513fdb">PHY_BCR</link>   ((uint16_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a4b8f2c29a9e74412395e1b1809666838">PHY_BSR</link>   ((uint16_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a6f5048620b3dde8583f7f1118e9de187">PHY_RESET</link>   ((uint16_t)0x8000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a7833d885caa7e29abbebfb90a4b96f86">PHY_LOOPBACK</link>   ((uint16_t)0x4000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a5729771244f68779fc694ba819cd60a5">PHY_FULLDUPLEX_100M</link>   ((uint16_t)0x2100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a1ac901a4ad405241d90a5c10104b8986">PHY_HALFDUPLEX_100M</link>   ((uint16_t)0x2000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a6b6254fd3dacbf1578a9d8058cd86373">PHY_FULLDUPLEX_10M</link>   ((uint16_t)0x0100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a4fa7ca6faf60ee074576ebb6103f8dd4">PHY_HALFDUPLEX_10M</link>   ((uint16_t)0x0000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a9b7f5c8f71047ee449f21562d26b1b43">PHY_AUTONEGOTIATION</link>   ((uint16_t)0x1000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a66c4b69bd08dc25b6730365d3ff740c9">PHY_RESTART_AUTONEGOTIATION</link>   ((uint16_t)0x0200)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1aa0b1e6d4a23470fc1ac4f9222b51f8a0">PHY_POWERDOWN</link>   ((uint16_t)0x0800)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a7d5233295134a385866eb5bdafe2162b">PHY_ISOLATE</link>   ((uint16_t)0x0400)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a36c4dbd5f6df1f5eaefa010929ef9773">PHY_AUTONEGO_COMPLETE</link>   ((uint16_t)0x0020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1ace209074499dbef0b97300da5bd7c707">PHY_LINKED_STATUS</link>   ((uint16_t)0x0004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a057b4d3fb66548d65c291a5b41611be2">PHY_JABBER_DETECTION</link>   ((uint16_t)0x0002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a32b55e84d27cf298a77f54b133cd1acc">PHY_SR</link>   ((uint16_t)0x10U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1a74c081bc55e9ff96bf229f44e96c6155">PHY_SPEED_STATUS</link>   ((uint16_t)0x0002U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_stm32f1xx__hal__conf_8h_1ab928f45585242fde1a8d81a2d9ed22d0">PHY_DUPLEX_STATUS</link>   ((uint16_t)0x0004U)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a4c6fab687afc7ba4469b1b2d34472358"/>#define <emphasis role="strong">USE_SPI_CRC</emphasis>   0U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_stm32f1xx__hal__conf_8h_1a631dea7b230e600555f979c62af1de21"/>#define <link linkend="_stm32f1xx__hal__conf_8h_1a631dea7b230e600555f979c62af1de21">assert_param</link>(expr)   ((void)0U)</para>
+
+<para>Include module&apos;s header file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>HAL configuration file. </para>
+
+<para><caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2019 Donskih Dmitriy. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by Donskih Dmitriy under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_stm32f1xx__hal__conf_8h_1a68ecbc9b0a1a40a1ec9d18d5e9747c4f"/>    <section>
+    <title>HSE_STARTUP_TIMEOUT</title>
+<indexterm><primary>HSE_STARTUP_TIMEOUT</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>HSE_STARTUP_TIMEOUT</secondary></indexterm>
+<para><computeroutput>#define HSE_STARTUP_TIMEOUT   ((uint32_t)100)</computeroutput></para>
+<para>Time out for HSE start up, in ms </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1aeafcff4f57440c60e64812dddd13e7cb"/>    <section>
+    <title>HSE_VALUE</title>
+<indexterm><primary>HSE_VALUE</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>HSE_VALUE</secondary></indexterm>
+<para><computeroutput>#define HSE_VALUE   ((uint32_t)8000000)</computeroutput></para><para>
+
+<para>Adjust the value of External High Speed oscillator (HSE) used in your application. This value is used by the RCC HAL module to compute the system frequency (when HSE is used as system clock source, directly or through the PLL). 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+
+<para>Value of the External oscillator in Hz </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1aaa8c76e274d0f6dd2cefb5d0b17fbc37"/>    <section>
+    <title>HSI_VALUE</title>
+<indexterm><primary>HSI_VALUE</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>HSI_VALUE</secondary></indexterm>
+<para><computeroutput>#define HSI_VALUE   ((uint32_t)8000000)</computeroutput></para><para>
+
+<para>Internal High Speed oscillator (HSI) value. This value is used by the RCC HAL module to compute the system frequency (when HSI is used as system clock source, directly or through the PLL). </para>
+</para>
+
+<para>Value of the Internal oscillator in Hz </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a85e6fc812dc26f7161a04be2568a5462"/>    <section>
+    <title>LSE_STARTUP_TIMEOUT</title>
+<indexterm><primary>LSE_STARTUP_TIMEOUT</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>LSE_STARTUP_TIMEOUT</secondary></indexterm>
+<para><computeroutput>#define LSE_STARTUP_TIMEOUT   ((uint32_t)5000)</computeroutput></para>
+<para>Time out for LSE start up, in ms </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a7bbb9d19e5189a6ccd0fb6fa6177d20d"/>    <section>
+    <title>LSE_VALUE</title>
+<indexterm><primary>LSE_VALUE</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>LSE_VALUE</secondary></indexterm>
+<para><computeroutput>#define LSE_VALUE   ((uint32_t)32768)</computeroutput></para><para>
+
+<para>External Low Speed oscillator (LSE) value. This value is used by the UART, RTC HAL module to compute the system frequency. </para>
+</para>
+
+<para>&lt; Value of the Internal Low Speed oscillator in Hz The real value may vary depending on the variations in voltage and temperature. Value of the External oscillator in Hz </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a4872023e65449c0506aac3ea6bec99e9"/>    <section>
+    <title>LSI_VALUE</title>
+<indexterm><primary>LSI_VALUE</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>LSI_VALUE</secondary></indexterm>
+<para><computeroutput>#define LSI_VALUE   40000U</computeroutput></para><para>
+
+<para>Internal Low Speed oscillator (LSI) value. </para>
+</para>
+
+<para>LSI Typical Value in Hz </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a36c4dbd5f6df1f5eaefa010929ef9773"/>    <section>
+    <title>PHY_AUTONEGO_COMPLETE</title>
+<indexterm><primary>PHY_AUTONEGO_COMPLETE</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_AUTONEGO_COMPLETE</secondary></indexterm>
+<para><computeroutput>#define PHY_AUTONEGO_COMPLETE   ((uint16_t)0x0020)</computeroutput></para>
+<para>Auto-Negotiation process completed 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a9b7f5c8f71047ee449f21562d26b1b43"/>    <section>
+    <title>PHY_AUTONEGOTIATION</title>
+<indexterm><primary>PHY_AUTONEGOTIATION</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_AUTONEGOTIATION</secondary></indexterm>
+<para><computeroutput>#define PHY_AUTONEGOTIATION   ((uint16_t)0x1000)</computeroutput></para>
+<para>Enable auto-negotiation function 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a8abe1a40c71e68881ec669d59f513fdb"/>    <section>
+    <title>PHY_BCR</title>
+<indexterm><primary>PHY_BCR</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_BCR</secondary></indexterm>
+<para><computeroutput>#define PHY_BCR   ((uint16_t)0x00)</computeroutput></para>
+<para>Transceiver Basic Control Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a4b8f2c29a9e74412395e1b1809666838"/>    <section>
+    <title>PHY_BSR</title>
+<indexterm><primary>PHY_BSR</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_BSR</secondary></indexterm>
+<para><computeroutput>#define PHY_BSR   ((uint16_t)0x01)</computeroutput></para>
+<para>Transceiver Basic Status Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1ab928f45585242fde1a8d81a2d9ed22d0"/>    <section>
+    <title>PHY_DUPLEX_STATUS</title>
+<indexterm><primary>PHY_DUPLEX_STATUS</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_DUPLEX_STATUS</secondary></indexterm>
+<para><computeroutput>#define PHY_DUPLEX_STATUS   ((uint16_t)0x0004U)</computeroutput></para>
+<para>PHY Duplex mask 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a5729771244f68779fc694ba819cd60a5"/>    <section>
+    <title>PHY_FULLDUPLEX_100M</title>
+<indexterm><primary>PHY_FULLDUPLEX_100M</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_FULLDUPLEX_100M</secondary></indexterm>
+<para><computeroutput>#define PHY_FULLDUPLEX_100M   ((uint16_t)0x2100)</computeroutput></para>
+<para>Set the full-duplex mode at 100 Mb/s </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a6b6254fd3dacbf1578a9d8058cd86373"/>    <section>
+    <title>PHY_FULLDUPLEX_10M</title>
+<indexterm><primary>PHY_FULLDUPLEX_10M</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_FULLDUPLEX_10M</secondary></indexterm>
+<para><computeroutput>#define PHY_FULLDUPLEX_10M   ((uint16_t)0x0100)</computeroutput></para>
+<para>Set the full-duplex mode at 10 Mb/s 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a1ac901a4ad405241d90a5c10104b8986"/>    <section>
+    <title>PHY_HALFDUPLEX_100M</title>
+<indexterm><primary>PHY_HALFDUPLEX_100M</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_HALFDUPLEX_100M</secondary></indexterm>
+<para><computeroutput>#define PHY_HALFDUPLEX_100M   ((uint16_t)0x2000)</computeroutput></para>
+<para>Set the half-duplex mode at 100 Mb/s </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a4fa7ca6faf60ee074576ebb6103f8dd4"/>    <section>
+    <title>PHY_HALFDUPLEX_10M</title>
+<indexterm><primary>PHY_HALFDUPLEX_10M</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_HALFDUPLEX_10M</secondary></indexterm>
+<para><computeroutput>#define PHY_HALFDUPLEX_10M   ((uint16_t)0x0000)</computeroutput></para>
+<para>Set the half-duplex mode at 10 Mb/s 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a7d5233295134a385866eb5bdafe2162b"/>    <section>
+    <title>PHY_ISOLATE</title>
+<indexterm><primary>PHY_ISOLATE</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_ISOLATE</secondary></indexterm>
+<para><computeroutput>#define PHY_ISOLATE   ((uint16_t)0x0400)</computeroutput></para>
+<para>Isolate PHY from MII 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a057b4d3fb66548d65c291a5b41611be2"/>    <section>
+    <title>PHY_JABBER_DETECTION</title>
+<indexterm><primary>PHY_JABBER_DETECTION</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_JABBER_DETECTION</secondary></indexterm>
+<para><computeroutput>#define PHY_JABBER_DETECTION   ((uint16_t)0x0002)</computeroutput></para>
+<para>Jabber condition detected 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1ace209074499dbef0b97300da5bd7c707"/>    <section>
+    <title>PHY_LINKED_STATUS</title>
+<indexterm><primary>PHY_LINKED_STATUS</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_LINKED_STATUS</secondary></indexterm>
+<para><computeroutput>#define PHY_LINKED_STATUS   ((uint16_t)0x0004)</computeroutput></para>
+<para>Valid link established 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a7833d885caa7e29abbebfb90a4b96f86"/>    <section>
+    <title>PHY_LOOPBACK</title>
+<indexterm><primary>PHY_LOOPBACK</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_LOOPBACK</secondary></indexterm>
+<para><computeroutput>#define PHY_LOOPBACK   ((uint16_t)0x4000)</computeroutput></para>
+<para>Select loop-back mode </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1aa0b1e6d4a23470fc1ac4f9222b51f8a0"/>    <section>
+    <title>PHY_POWERDOWN</title>
+<indexterm><primary>PHY_POWERDOWN</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_POWERDOWN</secondary></indexterm>
+<para><computeroutput>#define PHY_POWERDOWN   ((uint16_t)0x0800)</computeroutput></para>
+<para>Select the power down mode 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a6f5048620b3dde8583f7f1118e9de187"/>    <section>
+    <title>PHY_RESET</title>
+<indexterm><primary>PHY_RESET</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_RESET</secondary></indexterm>
+<para><computeroutput>#define PHY_RESET   ((uint16_t)0x8000)</computeroutput></para>
+<para>PHY Reset </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a66c4b69bd08dc25b6730365d3ff740c9"/>    <section>
+    <title>PHY_RESTART_AUTONEGOTIATION</title>
+<indexterm><primary>PHY_RESTART_AUTONEGOTIATION</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_RESTART_AUTONEGOTIATION</secondary></indexterm>
+<para><computeroutput>#define PHY_RESTART_AUTONEGOTIATION   ((uint16_t)0x0200)</computeroutput></para>
+<para>Restart auto-negotiation function 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a74c081bc55e9ff96bf229f44e96c6155"/>    <section>
+    <title>PHY_SPEED_STATUS</title>
+<indexterm><primary>PHY_SPEED_STATUS</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_SPEED_STATUS</secondary></indexterm>
+<para><computeroutput>#define PHY_SPEED_STATUS   ((uint16_t)0x0002U)</computeroutput></para>
+<para>PHY Speed mask 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1a32b55e84d27cf298a77f54b133cd1acc"/>    <section>
+    <title>PHY_SR</title>
+<indexterm><primary>PHY_SR</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>PHY_SR</secondary></indexterm>
+<para><computeroutput>#define PHY_SR   ((uint16_t)0x10U)</computeroutput></para>
+<para>PHY status register Offset 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1ae27809d4959b9fd5b5d974e3e1c77d2e"/>    <section>
+    <title>TICK_INT_PRIORITY</title>
+<indexterm><primary>TICK_INT_PRIORITY</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>TICK_INT_PRIORITY</secondary></indexterm>
+<para><computeroutput>#define TICK_INT_PRIORITY   ((uint32_t)0)</computeroutput></para>
+<para>tick interrupt priority (lowest by default) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_stm32f1xx__hal__conf_8h_1aae550dad9f96d52cfce5e539adadbbb4"/>    <section>
+    <title>VDD_VALUE</title>
+<indexterm><primary>VDD_VALUE</primary><secondary>stm32f1xx_hal_conf.h</secondary></indexterm>
+<indexterm><primary>stm32f1xx_hal_conf.h</primary><secondary>VDD_VALUE</secondary></indexterm>
+<para><computeroutput>#define VDD_VALUE   ((uint32_t)3300)</computeroutput></para><para>
+
+<para>This is the HAL system configuration section. </para>
+</para>
+
+<para>Value of VDD in mv </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c_ex___exported___constants" kind="group">
+    <compoundname>RCCEx_Exported_Constants</compoundname>
+    <title>RCCEx Exported Constants</title>
+    <innergroup refid="group___r_c_c_ex___periph___clock___selection">Periph Clock Selection</innergroup>
+    <innergroup refid="group___r_c_c_ex___a_d_c___prescaler">ADC Prescaler</innergroup>
+    <innergroup refid="group___r_c_c_ex___prediv1___factor">HSE Prediv1 Factor</innergroup>
+    <innergroup refid="group___r_c_c_ex___p_l_l___multiplication___factor">PLL Multiplication Factor</innergroup>
+    <innergroup refid="group___r_c_c_ex___m_c_o1___clock___source">MCO1 Clock Source</innergroup>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

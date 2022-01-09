@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_s_p_i___type_def" kind="struct" language="C++" prot="public">
+    <compoundname>SPI_TypeDef</compoundname>
+    <includes refid="stm32f103xb_8h" local="no">stm32f103xb.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_s_p_i___type_def_1ab0ec7102960640751d44e92ddac994f0" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CR1</definition>
+        <argsstring></argsstring>
+        <name>CR1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="464" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="464" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i___type_def_1afdfa307571967afb1d97943e982b6586" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CR2</definition>
+        <argsstring></argsstring>
+        <name>CR2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="465" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="465" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i___type_def_1af6aca2bbd40c0fb6df7c3aebe224a360" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t SR</definition>
+        <argsstring></argsstring>
+        <name>SR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="466" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="466" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i___type_def_1a3df0d8dfcd1ec958659ffe21eb64fa94" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR</definition>
+        <argsstring></argsstring>
+        <name>DR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="467" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="467" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i___type_def_1ace450027b4b33f921dd8edd3425a717c" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CRCPR</definition>
+        <argsstring></argsstring>
+        <name>CRCPR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="468" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="468" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i___type_def_1a2cf9dcd9008924334f20f0dc6b57042e" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t RXCRCR</definition>
+        <argsstring></argsstring>
+        <name>RXCRCR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="469" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="469" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i___type_def_1ab4e4328504fd66285df8264d410deefd" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t TXCRCR</definition>
+        <argsstring></argsstring>
+        <name>TXCRCR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="470" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="470" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i___type_def_1aa0c41c8883cb0812d6aaf956c393584b" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t I2SCFGR</definition>
+        <argsstring></argsstring>
+        <name>I2SCFGR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="471" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="471" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Serial Peripheral Interface. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="462" column="1" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="463" bodyend="472"/>
+    <listofallmembers>
+      <member refid="struct_s_p_i___type_def_1ab0ec7102960640751d44e92ddac994f0" prot="public" virt="non-virtual"><scope>SPI_TypeDef</scope><name>CR1</name></member>
+      <member refid="struct_s_p_i___type_def_1afdfa307571967afb1d97943e982b6586" prot="public" virt="non-virtual"><scope>SPI_TypeDef</scope><name>CR2</name></member>
+      <member refid="struct_s_p_i___type_def_1ace450027b4b33f921dd8edd3425a717c" prot="public" virt="non-virtual"><scope>SPI_TypeDef</scope><name>CRCPR</name></member>
+      <member refid="struct_s_p_i___type_def_1a3df0d8dfcd1ec958659ffe21eb64fa94" prot="public" virt="non-virtual"><scope>SPI_TypeDef</scope><name>DR</name></member>
+      <member refid="struct_s_p_i___type_def_1aa0c41c8883cb0812d6aaf956c393584b" prot="public" virt="non-virtual"><scope>SPI_TypeDef</scope><name>I2SCFGR</name></member>
+      <member refid="struct_s_p_i___type_def_1a2cf9dcd9008924334f20f0dc6b57042e" prot="public" virt="non-virtual"><scope>SPI_TypeDef</scope><name>RXCRCR</name></member>
+      <member refid="struct_s_p_i___type_def_1af6aca2bbd40c0fb6df7c3aebe224a360" prot="public" virt="non-virtual"><scope>SPI_TypeDef</scope><name>SR</name></member>
+      <member refid="struct_s_p_i___type_def_1ab4e4328504fd66285df8264d410deefd" prot="public" virt="non-virtual"><scope>SPI_TypeDef</scope><name>TXCRCR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

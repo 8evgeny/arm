@@ -1,0 +1,37 @@
+.TH "TIM_ClockDivision" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_ClockDivision \- TIM Clock Division
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_CLOCKDIVISION_DIV1\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_CLOCKDIVISION_DIV2\fP   \fBTIM_CR1_CKD_0\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_CLOCKDIVISION_DIV4\fP   \fBTIM_CR1_CKD_1\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TIM_CLOCKDIVISION_DIV1   0x00000000U"
+Clock division: tDTS=tCK_INT 
+.br
+ 
+.SS "#define TIM_CLOCKDIVISION_DIV2   \fBTIM_CR1_CKD_0\fP"
+Clock division: tDTS=2*tCK_INT 
+.SS "#define TIM_CLOCKDIVISION_DIV4   \fBTIM_CR1_CKD_1\fP"
+Clock division: tDTS=4*tCK_INT 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

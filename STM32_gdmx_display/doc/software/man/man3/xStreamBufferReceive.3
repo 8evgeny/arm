@@ -1,0 +1,75 @@
+.TH "xStreamBufferReceive" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xStreamBufferReceive \- xStreamBufferReceive
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+\fBstream_buffer\&.h\fP
+.PP
+.PP
+.nf
+
+size_t xStreamBufferReceive( StreamBufferHandle_t xStreamBuffer,
+                             void *pvRxData,
+                             size_t xBufferLengthBytes,
+                             TickType_t xTicksToWait );
+.fi
+.PP
+.PP
+Receives bytes from a stream buffer\&.
+.PP
+\fI\fBNOTE\fP\fP: Uniquely among FreeRTOS objects, the stream buffer implementation (so also the message buffer implementation, as message buffers are built on top of stream buffers) assumes there is only one task or interrupt that will write to the buffer (the writer), and only one task or interrupt that will read from the buffer (the reader)\&. It is safe for the writer and reader to be different tasks or interrupts, but, unlike other FreeRTOS objects, it is not safe to have multiple different writers or multiple different readers\&. If there are to be multiple different writers then the application writer must place each call to a writing API function (such as xStreamBufferSend()) inside a critical section and set the send block time to 0\&. Likewise, if there are to be multiple different readers then the application writer must place each call to a reading API function (such as xStreamBufferRead()) inside a critical section and set the receive block time to 0\&.
+.PP
+Use xStreamBufferReceive() to read from a stream buffer from a task\&. Use xStreamBufferReceiveFromISR() to read from a stream buffer from an interrupt service routine (ISR)\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxStreamBuffer\fP The handle of the stream buffer from which bytes are to be received\&.
+.br
+\fIpvRxData\fP A pointer to the buffer into which the received bytes will be copied\&.
+.br
+\fIxBufferLengthBytes\fP The length of the buffer pointed to by the pvRxData parameter\&. This sets the maximum number of bytes to receive in one call\&. xStreamBufferReceive will return as many bytes as possible up to a maximum set by xBufferLengthBytes\&.
+.br
+\fIxTicksToWait\fP The maximum amount of time the task should remain in the Blocked state to wait for data to become available if the stream buffer is empty\&. xStreamBufferReceive() will return immediately if xTicksToWait is zero\&. The block time is specified in tick periods, so the absolute time it represents is dependent on the tick frequency\&. The macro pdMS_TO_TICKS() can be used to convert a time specified in milliseconds into a time specified in ticks\&. Setting xTicksToWait to portMAX_DELAY will cause the task to wait indefinitely (without timing out), provided INCLUDE_vTaskSuspend is set to 1 in \fBFreeRTOSConfig\&.h\fP\&. A task does not use any CPU time when it is in the Blocked state\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of bytes actually read from the stream buffer, which will be less than xBufferLengthBytes if the call to xStreamBufferReceive() timed out before xBufferLengthBytes were available\&.
+.RE
+.PP
+Example use: 
+.PP
+.nf
+
+void vAFunction( StreamBuffer_t xStreamBuffer )
+{
+uint8_t ucRxData[ 20 ];
+size_t xReceivedBytes;
+const TickType_t xBlockTime = pdMS_TO_TICKS( 20 );
+
+    // Receive up to another sizeof( ucRxData ) bytes from the stream buffer\&.
+    // Wait in the Blocked state (so not using any CPU processing time) for a
+    // maximum of 100ms for the full sizeof( ucRxData ) number of bytes to be
+    // available\&.
+    xReceivedBytes = xStreamBufferReceive( xStreamBuffer,
+                                           ( void * ) ucRxData,
+                                           sizeof( ucRxData ),
+                                           xBlockTime );
+
+    if( xReceivedBytes > 0 )
+    {
+        // A ucRxData contains another xRecievedBytes bytes of data, which can
+        // be processed here\&.\&.\&.\&.
+    }
+}
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

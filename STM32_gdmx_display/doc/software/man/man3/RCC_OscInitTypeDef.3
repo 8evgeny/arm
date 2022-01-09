@@ -1,0 +1,64 @@
+.TH "RCC_OscInitTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_OscInitTypeDef \- RCC Internal/External Oscillator (HSE, HSI, LSE and LSI) configuration structure definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_rcc_ex\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBOscillatorType\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBHSEState\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBHSEPredivValue\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBLSEState\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBHSIState\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBHSICalibrationValue\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBLSIState\fP"
+.br
+.ti -1c
+.RI "\fBRCC_PLLInitTypeDef\fP \fBPLL\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+RCC Internal/External Oscillator (HSE, HSI, LSE and LSI) configuration structure definition\&. 
+.SH "Field Documentation"
+.PP 
+.SS "uint32_t HSEPredivValue"
+The Prediv1 factor value (named PREDIV1 or PLLXTPRE in RM) This parameter can be a value of \fBHSE Prediv1 Factor\fP 
+.SS "uint32_t HSEState"
+The new state of the HSE\&. This parameter can be a value of \fBHSE Config\fP 
+.SS "uint32_t HSICalibrationValue"
+The HSI calibration trimming value (default is RCC_HSICALIBRATION_DEFAULT)\&. This parameter must be a number between Min_Data = 0x00 and Max_Data = 0x1F 
+.SS "uint32_t HSIState"
+The new state of the HSI\&. This parameter can be a value of \fBHSI Config\fP 
+.SS "uint32_t LSEState"
+The new state of the LSE\&. This parameter can be a value of \fBLSE Config\fP 
+.SS "uint32_t LSIState"
+The new state of the LSI\&. This parameter can be a value of \fBLSI Config\fP 
+.SS "uint32_t OscillatorType"
+The oscillators to be configured\&. This parameter can be a value of \fBOscillator Type\fP 
+.SS "\fBRCC_PLLInitTypeDef\fP PLL"
+PLL structure parameters 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

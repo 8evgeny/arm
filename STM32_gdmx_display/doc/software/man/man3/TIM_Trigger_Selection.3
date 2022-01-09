@@ -1,0 +1,81 @@
+.TH "TIM_Trigger_Selection" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Trigger_Selection \- TIM Trigger Selection
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_TS_ITR0\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_TS_ITR1\fP   \fBTIM_SMCR_TS_0\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_TS_ITR2\fP   \fBTIM_SMCR_TS_1\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_TS_ITR3\fP   (\fBTIM_SMCR_TS_0\fP | \fBTIM_SMCR_TS_1\fP)"
+.br
+.ti -1c
+.RI "#define \fBTIM_TS_TI1F_ED\fP   \fBTIM_SMCR_TS_2\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_TS_TI1FP1\fP   (\fBTIM_SMCR_TS_0\fP | \fBTIM_SMCR_TS_2\fP)"
+.br
+.ti -1c
+.RI "#define \fBTIM_TS_TI2FP2\fP   (\fBTIM_SMCR_TS_1\fP | \fBTIM_SMCR_TS_2\fP)"
+.br
+.ti -1c
+.RI "#define \fBTIM_TS_ETRF\fP   (\fBTIM_SMCR_TS_0\fP | \fBTIM_SMCR_TS_1\fP | \fBTIM_SMCR_TS_2\fP)"
+.br
+.ti -1c
+.RI "#define \fBTIM_TS_NONE\fP   0x0000FFFFU"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TIM_TS_ETRF   (\fBTIM_SMCR_TS_0\fP | \fBTIM_SMCR_TS_1\fP | \fBTIM_SMCR_TS_2\fP)"
+Filtered External Trigger input (ETRF) 
+.SS "#define TIM_TS_ITR0   0x00000000U"
+Internal Trigger 0 (ITR0) 
+.br
+ 
+.SS "#define TIM_TS_ITR1   \fBTIM_SMCR_TS_0\fP"
+Internal Trigger 1 (ITR1) 
+.br
+ 
+.SS "#define TIM_TS_ITR2   \fBTIM_SMCR_TS_1\fP"
+Internal Trigger 2 (ITR2) 
+.br
+ 
+.SS "#define TIM_TS_ITR3   (\fBTIM_SMCR_TS_0\fP | \fBTIM_SMCR_TS_1\fP)"
+Internal Trigger 3 (ITR3) 
+.br
+ 
+.SS "#define TIM_TS_NONE   0x0000FFFFU"
+No trigger selected 
+.br
+ 
+.SS "#define TIM_TS_TI1F_ED   \fBTIM_SMCR_TS_2\fP"
+TI1 Edge Detector (TI1F_ED) 
+.br
+ 
+.SS "#define TIM_TS_TI1FP1   (\fBTIM_SMCR_TS_0\fP | \fBTIM_SMCR_TS_2\fP)"
+Filtered Timer Input 1 (TI1FP1) 
+.br
+ 
+.SS "#define TIM_TS_TI2FP2   (\fBTIM_SMCR_TS_1\fP | \fBTIM_SMCR_TS_2\fP)"
+Filtered Timer Input 2 (TI2FP2) 
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

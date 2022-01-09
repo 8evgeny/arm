@@ -1,0 +1,34 @@
+.TH "xEventGroupGetBitsFromISR" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xEventGroupGetBitsFromISR \- xEventGroupGetBitsFromISR
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+\fBevent_groups\&.h\fP 
+.PP
+.nf
+
+   EventBits_t xEventGroupGetBitsFromISR( EventGroupHandle_t xEventGroup );
+.fi
+.PP
+.PP
+A version of xEventGroupGetBits() that can be called from an ISR\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxEventGroup\fP The event group being queried\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The event group bits at the time xEventGroupGetBitsFromISR() was called\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

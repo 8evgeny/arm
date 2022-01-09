@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structos__semaphore__def" kind="struct" language="C++" prot="public">
+    <compoundname>os_semaphore_def</compoundname>
+    <includes refid="cmsis__os_8h" local="no">cmsis_os.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structos__semaphore__def_1a44b7a3baf02bac7ad707e8f2f5eca1ca" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+<para>dummy value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" line="313" column="30" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Semaphore Definition structure contains setup information for a semaphore. <simplesect kind="note"><para>CAN BE CHANGED: <bold><ref refid="structos__semaphore__def" kindref="compound">os_semaphore_def</ref></bold> is implementation specific in every CMSIS-RTOS. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" line="312" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" bodystart="312" bodyend="317"/>
+    <listofallmembers>
+      <member refid="structos__semaphore__def_1a44b7a3baf02bac7ad707e8f2f5eca1ca" prot="public" virt="non-virtual"><scope>os_semaphore_def</scope><name>dummy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

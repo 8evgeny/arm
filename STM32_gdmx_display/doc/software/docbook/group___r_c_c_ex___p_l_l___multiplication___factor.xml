@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor" xml:lang="en-US">
+<title>PLL Multiplication Factor</title>
+<indexterm><primary>PLL Multiplication Factor</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1ga1ebc7b8473983247312ff095c242285f"/>#define <emphasis role="strong">RCC_PLL_MUL2</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gaa19a3c7d27836012150a86fd9c950cdf">RCC_CFGR_PLLMULL2</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1ga4ee529382af73885706795fd81538781"/>#define <emphasis role="strong">RCC_PLL_MUL3</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gaeb4c410e818f5a68d58a723e7355e6e8">RCC_CFGR_PLLMULL3</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1ga2aedc8bc6552d98fb748b58a2379820b"/>#define <emphasis role="strong">RCC_PLL_MUL4</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga6066f758a13c7686d1dc709ac0a7d976">RCC_CFGR_PLLMULL4</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1ga3b2b6019d1b1de880b009ff2a6769f03"/>#define <emphasis role="strong">RCC_PLL_MUL5</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gaf2290e27c9c1b64d2dd076652db40a68">RCC_CFGR_PLLMULL5</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1gae2f8dd748556470dcac6901ac7a3e650"/>#define <emphasis role="strong">RCC_PLL_MUL6</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga5ea3b717fd226bc6ff5a78b711c051eb">RCC_CFGR_PLLMULL6</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1gae215b8ba691fe0ea413c45d56e77eca0"/>#define <emphasis role="strong">RCC_PLL_MUL7</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga6ff8d8dcf3876d1c85657680a64c1696">RCC_CFGR_PLLMULL7</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1gaddfa6ebdecba8c5951a774b271fa82eb"/>#define <emphasis role="strong">RCC_PLL_MUL8</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga95d6580b1595ff2d5c3383218370cfca">RCC_CFGR_PLLMULL8</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1ga653f185ecd0b9b440180433fb1a6ff3d"/>#define <emphasis role="strong">RCC_PLL_MUL9</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga384c396ec051b958c9a5781c13faf7e5">RCC_CFGR_PLLMULL9</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1ga07cdf351bcf4ffc95cd45a28008e43e5"/>#define <emphasis role="strong">RCC_PLL_MUL10</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gae07bb87d09d30874a5eebb32510f647f">RCC_CFGR_PLLMULL10</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1ga33153db08feae4d86a5c170e8a1781bd"/>#define <emphasis role="strong">RCC_PLL_MUL11</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gad338c178459b97d617398dca92b2a699">RCC_CFGR_PLLMULL11</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1gaca5a5ddd829f682dd9a211e6a9be452a"/>#define <emphasis role="strong">RCC_PLL_MUL12</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga79000f4e48edc56ee6ff315b64dcbfa5">RCC_CFGR_PLLMULL12</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1ga9b8d76a17aeb979992e61ec3a1e32a14"/>#define <emphasis role="strong">RCC_PLL_MUL13</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga647a6f3d6de31737ca95de9db3925274">RCC_CFGR_PLLMULL13</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1ga6a96dc75a1fb43fb7f032a4cf34db287"/>#define <emphasis role="strong">RCC_PLL_MUL14</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1ga9ffe33153aa4ffd2fe43439a6d2eaf5c">RCC_CFGR_PLLMULL14</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1gaa75ceb816d75a0d384b67d1bf489bb44"/>#define <emphasis role="strong">RCC_PLL_MUL15</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gaa9afaf1b82cb9c1e9c8b34c5b77b3f17">RCC_CFGR_PLLMULL15</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___p_l_l___multiplication___factor_1ga39bd735dbbdf7f4bbc122b833d2c92f3"/>#define <emphasis role="strong">RCC_PLL_MUL16</emphasis>   <link linkend="_group___peripheral___registers___bits___definition_1gaecd78b92c36f3a3aafc6cc8fbf90a7e7">RCC_CFGR_PLLMULL16</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

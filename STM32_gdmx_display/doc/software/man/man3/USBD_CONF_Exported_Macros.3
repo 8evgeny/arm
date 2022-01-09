@@ -1,0 +1,128 @@
+.TH "USBD_CONF_Exported_Macros" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USBD_CONF_Exported_Macros \- USBD_CONF_Exported_Macros
+.PP
+ \- Aliases\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUSBD_malloc\fP   (uint32_t *)\fBUSBD_static_malloc\fP"
+.br
+.ti -1c
+.RI "#define \fBUSBD_free\fP   \fBUSBD_static_free\fP"
+.br
+.ti -1c
+.RI "#define \fBUSBD_memset\fP   /* Not used */"
+.br
+.ti -1c
+.RI "#define \fBUSBD_memcpy\fP   /* Not used */"
+.br
+.ti -1c
+.RI "#define \fBUSBD_Delay\fP   HAL_Delay"
+.br
+.ti -1c
+.RI "#define \fBUSBD_UsrLog\fP(\&.\&.\&.)"
+.br
+.ti -1c
+.RI "#define \fBUSBD_ErrLog\fP(\&.\&.\&.)"
+.br
+.ti -1c
+.RI "#define \fBUSBD_DbgLog\fP(\&.\&.\&.)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void * \fBUSBD_static_malloc\fP (uint32_t size)"
+.br
+.RI "Static single allocation\&. "
+.ti -1c
+.RI "void \fBUSBD_static_free\fP (void *p)"
+.br
+.RI "Dummy memory free\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Aliases\&. 
+
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define USBD_DbgLog( \&.\&.\&.)"
+\fBValue:\fP
+.PP
+.nf
+                            printf("DEBUG : ") ;\
+                            printf(__VA_ARGS__);\
+                            printf("\n");
+.fi
+.SS "#define USBD_Delay   HAL_Delay"
+Alias for delay\&. 
+.SS "#define USBD_ErrLog( \&.\&.\&.)"
+\fBValue:\fP
+.PP
+.nf
+                            printf("ERROR: ") ;\
+                            printf(__VA_ARGS__);\
+                            printf("\n");
+.fi
+.SS "#define USBD_free   \fBUSBD_static_free\fP"
+Alias for memory release\&. 
+.SS "#define USBD_malloc   (uint32_t *)\fBUSBD_static_malloc\fP"
+Alias for memory allocation\&. 
+.SS "#define USBD_memcpy   /* Not used */"
+Alias for memory copy\&. 
+.SS "#define USBD_memset   /* Not used */"
+Alias for memory set\&. 
+.SS "#define USBD_UsrLog( \&.\&.\&.)"
+\fBValue:\fP
+.PP
+.nf
+                            printf(__VA_ARGS__);\
+                            printf("\n");
+.fi
+.SH "Function Documentation"
+.PP 
+.SS "void USBD_static_free (void * p)"
+
+.PP
+Dummy memory free\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Pointer to allocated memory address 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void* USBD_static_malloc (uint32_t size)"
+
+.PP
+Static single allocation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP Size of allocated memory 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

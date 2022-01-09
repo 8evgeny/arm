@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_heap_region" xml:lang="en-US">
+<title>HeapRegion Struct Reference</title>
+<indexterm><primary>HeapRegion</primary></indexterm>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_heap_region_1a9d602a97428bd849298f05391a13968e"/>uint8_t * <emphasis role="strong">pucStartAddress</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_heap_region_1ab0ed41976d9901576b117bc7981f6c98"/>size_t <emphasis role="strong">xSizeInBytes</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Middlewares/Third_Party/FreeRTOS/Source/include/portable.h</section>

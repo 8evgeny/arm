@@ -1,0 +1,598 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___peripheral__memory__map" kind="group">
+    <compoundname>Peripheral_memory_map</compoundname>
+    <title>Peripheral_memory_map</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga23a9099a5f8fc9c6e253c0eecb2be8db" prot="public" static="no">
+        <name>FLASH_BASE</name>
+        <initializer>0x08000000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FLASH base address in the alias region </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="573" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="573" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga443a2786535d83e32dfdc2b29e379332" prot="public" static="no">
+        <name>FLASH_BANK1_END</name>
+        <initializer>0x0801FFFFUL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FLASH END address of bank1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="574" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="574" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga05e8f3d2e5868754a7cd88614955aecc" prot="public" static="no">
+        <name>SRAM_BASE</name>
+        <initializer>0x20000000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SRAM base address in the alias region </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="575" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="575" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga9171f49478fa86d932f89e78e73b88b0" prot="public" static="no">
+        <name>PERIPH_BASE</name>
+        <initializer>0x40000000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Peripheral base address in the alias region </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="576" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="576" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gad3548b6e2f017f39d399358f3ac98454" prot="public" static="no">
+        <name>SRAM_BB_BASE</name>
+        <initializer>0x22000000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SRAM base address in the bit-band region </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="578" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="578" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" prot="public" static="no">
+        <name>PERIPH_BB_BASE</name>
+        <initializer>0x42000000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Peripheral base address in the bit-band region Peripheral memory map </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="579" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="579" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga45666d911f39addd4c8c0a0ac3388cfb" prot="public" static="no">
+        <name>APB1PERIPH_BASE</name>
+        <initializer><ref refid="group___peripheral__memory__map_1ga9171f49478fa86d932f89e78e73b88b0" kindref="member">PERIPH_BASE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="583" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="583" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga25b99d6065f1c8f751e78f43ade652cb" prot="public" static="no">
+        <name>APB2PERIPH_BASE</name>
+        <initializer>(<ref refid="group___peripheral__memory__map_1ga9171f49478fa86d932f89e78e73b88b0" kindref="member">PERIPH_BASE</ref> + 0x00010000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="584" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="584" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga92eb5d49730765d2abd0f5b09548f9f5" prot="public" static="no">
+        <name>AHBPERIPH_BASE</name>
+        <initializer>(<ref refid="group___peripheral__memory__map_1ga9171f49478fa86d932f89e78e73b88b0" kindref="member">PERIPH_BASE</ref> + 0x00020000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="585" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="585" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga00d0fe6ad532ab32f0f81cafca8d3aa5" prot="public" static="no">
+        <name>TIM2_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00000000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="587" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="587" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gaf0c34a518f87e1e505cd2332e989564a" prot="public" static="no">
+        <name>TIM3_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00000400UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="588" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="588" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga56e2d44b0002f316527b8913866a370d" prot="public" static="no">
+        <name>TIM4_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00000800UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="589" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="589" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga4265e665d56225412e57a61d87417022" prot="public" static="no">
+        <name>RTC_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00002800UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="590" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="590" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga9a5bf4728ab93dea5b569f5b972cbe62" prot="public" static="no">
+        <name>WWDG_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00002C00UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="591" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="591" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga8543ee4997296af5536b007cd4748f55" prot="public" static="no">
+        <name>IWDG_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00003000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="592" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="592" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gac3e357b4c25106ed375fb1affab6bb86" prot="public" static="no">
+        <name>SPI2_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00003800UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="593" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="593" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gade83162a04bca0b15b39018a8e8ec090" prot="public" static="no">
+        <name>USART2_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00004400UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="594" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="594" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gabe0d6539ac0026d598274ee7f45b0251" prot="public" static="no">
+        <name>USART3_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00004800UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="595" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="595" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gacd72dbffb1738ca87c838545c4eb85a3" prot="public" static="no">
+        <name>I2C1_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00005400UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="596" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="596" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga04bda70f25c795fb79f163b633ad4a5d" prot="public" static="no">
+        <name>I2C2_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00005800UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="597" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="597" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gad8e45ea6c032d9fce1b0516fff9d8eaa" prot="public" static="no">
+        <name>CAN1_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00006400UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="598" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gaa15d5a9f40794105397ba5ea567c4ae1" prot="public" static="no">
+        <name>BKP_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00006C00UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="599" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gac691ec23dace8b7a649a25acb110217a" prot="public" static="no">
+        <name>PWR_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00007000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="600" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="600" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga5f7e3eacfcf4c313c25012795148a680" prot="public" static="no">
+        <name>AFIO_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00000000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="601" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="601" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga87371508b3bcdcd98cd1ec629be29061" prot="public" static="no">
+        <name>EXTI_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00000400UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="602" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="602" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gad7723846cc5db8e43a44d78cf21f6efa" prot="public" static="no">
+        <name>GPIOA_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00000800UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="603" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="603" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gac944a89eb789000ece920c0f89cb6a68" prot="public" static="no">
+        <name>GPIOB_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00000C00UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="604" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="604" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga26f267dc35338eef219544c51f1e6b3f" prot="public" static="no">
+        <name>GPIOC_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00001000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="605" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="605" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga1a93ab27129f04064089616910c296ec" prot="public" static="no">
+        <name>GPIOD_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00001400UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="606" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="606" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gab487b1983d936c4fee3e9e88b95aad9d" prot="public" static="no">
+        <name>GPIOE_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00001800UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="607" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="607" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga695c9a2f892363a1c942405c8d351b91" prot="public" static="no">
+        <name>ADC1_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00002400UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="608" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="608" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga6544abc57f9759f610eee09a02442ae6" prot="public" static="no">
+        <name>ADC2_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00002800UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="609" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="609" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gaf8aa324ca5011b8173ab16585ed7324a" prot="public" static="no">
+        <name>TIM1_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00002C00UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="610" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="610" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga50cd8b47929f18b05efbd0f41253bf8d" prot="public" static="no">
+        <name>SPI1_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00003000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="611" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="611" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga86162ab3f740db9026c1320d46938b4d" prot="public" static="no">
+        <name>USART1_BASE</name>
+        <initializer>(APB2PERIPH_BASE + 0x00003800UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="612" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="612" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gab2d8a917a0e4ea99a22ac6ebf279bc72" prot="public" static="no">
+        <name>DMA1_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x00000000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="615" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="615" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga888dbc1608243badeb3554ffedc7364c" prot="public" static="no">
+        <name>DMA1_Channel1_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x00000008UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="616" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="616" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga38a70090eef3687e83fa6ac0c6d22267" prot="public" static="no">
+        <name>DMA1_Channel2_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x0000001CUL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="617" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="617" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga70b3d9f36ca9ce95b4e421c11154fe5d" prot="public" static="no">
+        <name>DMA1_Channel3_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x00000030UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="618" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="618" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga1adc93cd0baf0897202c71110e045692" prot="public" static="no">
+        <name>DMA1_Channel4_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x00000044UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="619" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="619" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gac041a71cd6c1973964f847a68aa14478" prot="public" static="no">
+        <name>DMA1_Channel5_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x00000058UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="620" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="620" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga896c2c7585dd8bc3969cf8561f689d2d" prot="public" static="no">
+        <name>DMA1_Channel6_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x0000006CUL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="621" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="621" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gaeee0d1f77d0db1db533016a09351166c" prot="public" static="no">
+        <name>DMA1_Channel7_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x00000080UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="622" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="622" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga0e681b03f364532055d88f63fec0d99d" prot="public" static="no">
+        <name>RCC_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x00001000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="623" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="623" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga656a447589e785594cbf2f45c835ad7e" prot="public" static="no">
+        <name>CRC_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x00003000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="624" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="624" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga8e21f4845015730c5731763169ec0e9b" prot="public" static="no">
+        <name>FLASH_R_BASE</name>
+        <initializer>(AHBPERIPH_BASE + 0x00002000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flash registers base address </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="626" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="626" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga776d985f2d4d40b588ef6ca9d573af78" prot="public" static="no">
+        <name>FLASHSIZE_BASE</name>
+        <initializer>0x1FFFF7E0UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FLASH Size register base address </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="627" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="627" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga664eda42b83c919b153b07b23348be67" prot="public" static="no">
+        <name>UID_BASE</name>
+        <initializer>0x1FFFF7E8UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique device ID register base address </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="628" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="628" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gab5b5fb155f9ee15dfb6d757da1adc926" prot="public" static="no">
+        <name>OB_BASE</name>
+        <initializer>0x1FFFF800UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flash Option Bytes base address </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="629" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="629" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1ga4adaf4fd82ccc3a538f1f27a70cdbbef" prot="public" static="no">
+        <name>DBGMCU_BASE</name>
+        <initializer>0xE0042000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Debug MCU registers base address </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="633" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="633" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gaa6c4cbed4ddbb3ecd77de93fab2a2e04" prot="public" static="no">
+        <name>USB_BASE</name>
+        <initializer>(APB1PERIPH_BASE + 0x00005C00UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB_IP Peripheral Registers base address </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="636" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="636" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___peripheral__memory__map_1gaf992dfdd5707568c5cb5506e2347e808" prot="public" static="no">
+        <name>USB_PMAADDR</name>
+        <initializer>(APB1PERIPH_BASE + 0x00006000UL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB_IP Packet Memory Area base address </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="637" column="9" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="637" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

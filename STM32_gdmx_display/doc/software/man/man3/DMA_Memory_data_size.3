@@ -1,0 +1,39 @@
+.TH "DMA_Memory_data_size" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_Memory_data_size \- DMA Memory data size
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDMA_MDATAALIGN_BYTE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBDMA_MDATAALIGN_HALFWORD\fP   ((uint32_t)\fBDMA_CCR_MSIZE_0\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA_MDATAALIGN_WORD\fP   ((uint32_t)\fBDMA_CCR_MSIZE_1\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DMA_MDATAALIGN_BYTE   0x00000000U"
+Memory data alignment: Byte 
+.br
+ 
+.SS "#define DMA_MDATAALIGN_HALFWORD   ((uint32_t)\fBDMA_CCR_MSIZE_0\fP)"
+Memory data alignment: HalfWord 
+.SS "#define DMA_MDATAALIGN_WORD   ((uint32_t)\fBDMA_CCR_MSIZE_1\fP)"
+Memory data alignment: Word 
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,1198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_core__sc300_8h" xml:lang="en-US">
+<title>Drivers/CMSIS/Include/core_sc300.h File Reference</title>
+<indexterm><primary>Drivers/CMSIS/Include/core_sc300.h</primary></indexterm>
+<para>
+
+<para>CMSIS SC300 Core Peripheral Access Layer Header File. </para>
+ 
+</para>
+<programlisting>#include &lt;stdint.h&gt;
+#include &quot;cmsis_version.h&quot;
+#include &quot;cmsis_compiler.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>union <link linkend="_union_a_p_s_r___type">APSR_Type</link></para>
+
+<para>Union type to access the Application Program Status Register (APSR). </para>
+</listitem>
+            <listitem><para>union <link linkend="_union_i_p_s_r___type">IPSR_Type</link></para>
+
+<para>Union type to access the Interrupt Program Status Register (IPSR). </para>
+</listitem>
+            <listitem><para>union <link linkend="_unionx_p_s_r___type">xPSR_Type</link></para>
+
+<para>Union type to access the Special-Purpose Program Status Registers (xPSR). </para>
+</listitem>
+            <listitem><para>union <link linkend="_union_c_o_n_t_r_o_l___type">CONTROL_Type</link></para>
+
+<para>Union type to access the Control Registers (CONTROL). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_n_v_i_c___type">NVIC_Type</link></para>
+
+<para>Structure type to access the Nested Vectored Interrupt Controller (NVIC). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_c_b___type">SCB_Type</link></para>
+
+<para>Structure type to access the System Control Block (SCB). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_cn_s_c_b___type">SCnSCB_Type</link></para>
+
+<para>Structure type to access the System Control and ID Register not in the SCB. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_sys_tick___type">SysTick_Type</link></para>
+
+<para>Structure type to access the System Timer (SysTick). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i_t_m___type">ITM_Type</link></para>
+
+<para>Structure type to access the Instrumentation Trace Macrocell Register (ITM). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_d_w_t___type">DWT_Type</link></para>
+
+<para>Structure type to access the Data Watchpoint and Trace Register (DWT). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_p_i___type">TPI_Type</link></para>
+
+<para>Structure type to access the Trace Port Interface Register (TPI). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_core_debug___type">CoreDebug_Type</link></para>
+
+<para>Structure type to access the Core Debug Register (CoreDebug). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+<simplesect><title></title>
+        <itemizedlist>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gafc94dcbaee03e4746ade1f5bb9aaa56d">__NVIC_SetPriorityGrouping</link> (uint32_t PriorityGroup)</para>
+
+<para>Set Priority Grouping. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga9b894af672df4373eb637f8288845c05">__NVIC_GetPriorityGrouping</link> (void)</para>
+
+<para>Get Priority Grouping. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gac90a497bd64286b84552c2c553d3419e">ITM_SendChar</link> (uint32_t ch)</para>
+
+<para>ITM Send Character. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE int32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gac3ee2c30a1ac4ed34c8a866a17decd53">ITM_ReceiveChar</link> (void)</para>
+
+<para>ITM Receive Character. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE int32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae61ce9ca5917735325cd93b0fb21dd29">ITM_CheckChar</link> (void)</para>
+
+<para>ITM Check Character. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</simplesect>
+<simplesect><title></title>
+        <itemizedlist>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga71227e1376cde11eda03fcb62f1b33ea">__NVIC_EnableIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Enable Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaaeb5e7cc0eaad4e2817272e7bf742083">__NVIC_GetEnableIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Interrupt Enable status. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gae016e4c1986312044ee768806537d52f">__NVIC_DisableIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Disable Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga5a92ca5fa801ad7adb92be7257ab9694">__NVIC_GetPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaabefdd4b790b9a7308929938c0c1e1ad">__NVIC_SetPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Set Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga562a86dbdf14827d0fee8fdafb04d191">__NVIC_ClearPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Clear Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaa2837003c28c45abf193fe5e8d27f593">__NVIC_GetActive</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Active Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga505338e23563a9c074910fb14e7d45fd">__NVIC_SetPriority</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn, uint32_t priority)</para>
+
+<para>Set Interrupt Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaeb9dc99c8e7700668813144261b0bc73">__NVIC_GetPriority</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Interrupt Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gadb94ac5d892b376e4f3555ae0418ebac">NVIC_EncodePriority</link> (uint32_t PriorityGroup, uint32_t PreemptPriority, uint32_t SubPriority)</para>
+
+<para>Encode Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga3387607fd8a1a32cccd77d2ac672dd96">NVIC_DecodePriority</link> (uint32_t Priority, uint32_t PriorityGroup, uint32_t *const pPreemptPriority, uint32_t *const pSubPriority)</para>
+
+<para>Decode Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga0df355460bc1783d58f9d72ee4884208">__NVIC_SetVector</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn, uint32_t vector)</para>
+
+<para>Set Interrupt Vector. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga44b665d2afb708121d9b10c76ff00ee5">__NVIC_GetVector</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Interrupt Vector. </para>
+</listitem>
+            <listitem><para>__NO_RETURN __STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga0d9aa2d30fa54b41eb780c16e35b676c">__NVIC_SystemReset</link> (void)</para>
+
+<para>System Reset. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga6bcad99ce80a0e7e4ddc6f2379081756">SCB_GetFPUType</link> (void)</para>
+
+<para>get FPU type </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_core__sc300_8h_1a0e2124db4f74f2b355904314accf1790">__SC300_CMSIS_VERSION_MAIN</link>   (<link linkend="_cmsis__version_8h_1a85987c5fcc1e012d7ac01369ee6ca2b5">__CM_CMSIS_VERSION_MAIN</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__sc300_8h_1a664c9e59952455ddeee28173b864fe9d">__SC300_CMSIS_VERSION_SUB</link>   (<link linkend="_cmsis__version_8h_1a22083cbe7f0606cfd538ec12b2e41608">__CM_CMSIS_VERSION_SUB</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__sc300_8h_1a2f960c3c99ab33e1cf4b5287821c44dd">__SC300_CMSIS_VERSION</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__sc300_8h_1aeaaf66c86e5ae02a0e1fe542cb7f4d8c">__CORTEX_SC</link>   (300U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__sc300_8h_1aa167d0f532a7c2b2e3a6395db2fa0776">__FPU_USED</link>   0U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_core__sc300_8h_1aadad4c0658681cbf7e6381003eb53edd"/>#define <emphasis role="strong">__CORE_SC300_H_DEPENDANT</emphasis></para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__sc300_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link>   volatile const</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__sc300_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link>   volatile</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>   volatile</para>
+</listitem>
+            <listitem><para><anchor xml:id="_core__sc300_8h_1a4cc1649793116d7c2d8afce7a4ffce43"/>#define <emphasis role="strong">__IM</emphasis>   volatile const      /*! Defines &apos;read only&apos; structure member permissions */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_core__sc300_8h_1a0ea2009ed8fd9ef35b48708280fdb758"/>#define <emphasis role="strong">__OM</emphasis>   volatile            /*! Defines &apos;write only&apos; structure member permissions */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_core__sc300_8h_1ab6caba5853a60a17e8e04499b52bf691"/>#define <emphasis role="strong">__IOM</emphasis>   volatile            /*! Defines &apos;read / write&apos; structure member permissions */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gac469528d210043c7bd3f12f0e6824766">APSR_N_Pos</link>   31U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gadbc2cf55a026f661b53fadfcf822cef1">APSR_N_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1gac469528d210043c7bd3f12f0e6824766">APSR_N_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga3661286d108b1aca308d7445685eae3a">APSR_Z_Pos</link>   30U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga1deb4d1aa72bb83d1f79329406f15711">APSR_Z_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga3661286d108b1aca308d7445685eae3a">APSR_Z_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga6cf72aa6f09a168f9e5beda1a4a887b9">APSR_C_Pos</link>   29U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga6d47803fbad455bc10bd1ce59f2f335d">APSR_C_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga6cf72aa6f09a168f9e5beda1a4a887b9">APSR_C_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gac62830f67679ccd11658c4172c3e6ea7">APSR_V_Pos</link>   28U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga33305d6701356bff6890b315fe8b5489">APSR_V_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1gac62830f67679ccd11658c4172c3e6ea7">APSR_V_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga298749e176f12827328bb7b92a6b2411">APSR_Q_Pos</link>   27U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga90ffd4ec4149c2f5dd7747c1533fb002">APSR_Q_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga298749e176f12827328bb7b92a6b2411">APSR_Q_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga0e34027584d02c43811ae908a5ca9adf">IPSR_ISR_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gaf013a4579a64d1f21f56ea9f1b33ab56">IPSR_ISR_Msk</link>   (0x1FFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga0e34027584d02c43811ae908a5ca9adf">IPSR_ISR_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga031eb1b8ebcdb3d602d0b9f2ec82a7ae">xPSR_N_Pos</link>   31U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gaf600f4ff41b62cf2f3b0a59b6d2e93d6">xPSR_N_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga031eb1b8ebcdb3d602d0b9f2ec82a7ae">xPSR_N_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga5869dd608eea73c80f0567d781d2230b">xPSR_Z_Pos</link>   30U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga907599209fba99f579778e662021c4f2">xPSR_Z_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga5869dd608eea73c80f0567d781d2230b">xPSR_Z_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga14adb79b91f6634b351a1b57394e2db6">xPSR_C_Pos</link>   29U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga21e2497255d380f956ca0f48d11d0775">xPSR_C_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga14adb79b91f6634b351a1b57394e2db6">xPSR_C_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gae0cfbb394490db402623d97e6a979e00">xPSR_V_Pos</link>   28U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gab07f94ed3b6ee695f5af719dc27995c2">xPSR_V_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1gae0cfbb394490db402623d97e6a979e00">xPSR_V_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gaabb4178d50676a8f19cf8f727f38ace8">xPSR_Q_Pos</link>   27U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga133ac393c38559ae43ac36383e731dd4">xPSR_Q_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1gaabb4178d50676a8f19cf8f727f38ace8">xPSR_Q_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gaffb36d1bb0280b1caafcf9b00f6a6da0">xPSR_ICI_IT_2_Pos</link>   25U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gaa47c89b028499f8d9ebe6d554439a2b3">xPSR_ICI_IT_2_Msk</link>   (3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1gaffb36d1bb0280b1caafcf9b00f6a6da0">xPSR_ICI_IT_2_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga98d801da9a49cda944f52aeae104dd38">xPSR_T_Pos</link>   24U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga30ae2111816e82d47636a8d4577eb6ee">xPSR_T_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga98d801da9a49cda944f52aeae104dd38">xPSR_T_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gafdcd08cbd7116d65ae1a5b8182dc55ae">xPSR_ICI_IT_1_Pos</link>   10U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gae98918458d70d79b32ce200b55ffe744">xPSR_ICI_IT_1_Msk</link>   (0x3FUL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1gafdcd08cbd7116d65ae1a5b8182dc55ae">xPSR_ICI_IT_1_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga21bff245fb1aef9683f693d9d7bb2233">xPSR_ISR_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gadf8eed87e0081dfe1ef1c78a0ea91afd">xPSR_ISR_Msk</link>   (0x1FFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga21bff245fb1aef9683f693d9d7bb2233">xPSR_ISR_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga07eafc53e609895342c6a530e9d01310">CONTROL_SPSEL_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga70b29840969b06909da21369b0b05b53">CONTROL_SPSEL_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga07eafc53e609895342c6a530e9d01310">CONTROL_SPSEL_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga51b95bc03ec0d815b459bde0b14a5908">CONTROL_nPRIV_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gaef3b20d77acb213338f89ce5e7bc36b0">CONTROL_nPRIV_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga51b95bc03ec0d815b459bde0b14a5908">CONTROL_nPRIV_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___n_v_i_c_1ga9eebe495e2e48d302211108837a2b3e8">NVIC_STIR_INTID_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___n_v_i_c_1gae4060c4dfcebb08871ca4244176ce752">NVIC_STIR_INTID_Msk</link>   (0x1FFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___n_v_i_c_1ga9eebe495e2e48d302211108837a2b3e8">NVIC_STIR_INTID_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga58686b88f94f789d4e6f429fe1ff58cf">SCB_CPUID_IMPLEMENTER_Pos</link>   24U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga0932b31faafd47656a03ced75a31d99b">SCB_CPUID_IMPLEMENTER_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga58686b88f94f789d4e6f429fe1ff58cf">SCB_CPUID_IMPLEMENTER_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga104462bd0815391b4044a70bd15d3a71">SCB_CPUID_VARIANT_Pos</link>   20U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad358dfbd04300afc1824329d128b99e8">SCB_CPUID_VARIANT_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga104462bd0815391b4044a70bd15d3a71">SCB_CPUID_VARIANT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaf8b3236b08fb8e840efb682645fb0e98">SCB_CPUID_ARCHITECTURE_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gafae4a1f27a927338ae9dc51a0e146213">SCB_CPUID_ARCHITECTURE_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaf8b3236b08fb8e840efb682645fb0e98">SCB_CPUID_ARCHITECTURE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga705f68eaa9afb042ca2407dc4e4629ac">SCB_CPUID_PARTNO_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga98e581423ca016680c238c469aba546d">SCB_CPUID_PARTNO_Msk</link>   (0xFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga705f68eaa9afb042ca2407dc4e4629ac">SCB_CPUID_PARTNO_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3c3d9071e574de11fb27ba57034838b1">SCB_CPUID_REVISION_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2ec0448b6483f77e7f5d08b4b81d85df">SCB_CPUID_REVISION_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3c3d9071e574de11fb27ba57034838b1">SCB_CPUID_REVISION_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga750d4b52624a46d71356db4ea769573b">SCB_ICSR_NMIPENDSET_Pos</link>   31U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga340e3f79e9c3607dee9f2c048b6b22e8">SCB_ICSR_NMIPENDSET_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga750d4b52624a46d71356db4ea769573b">SCB_ICSR_NMIPENDSET_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab5ded23d2ab1d5ff7cc7ce746205e9fe">SCB_ICSR_PENDSVSET_Pos</link>   28U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga1e40d93efb402763c8c00ddcc56724ff">SCB_ICSR_PENDSVSET_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gab5ded23d2ab1d5ff7cc7ce746205e9fe">SCB_ICSR_PENDSVSET_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gae218d9022288f89faf57187c4d542ecd">SCB_ICSR_PENDSVCLR_Pos</link>   27U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga4a901ace381d3c1c74ac82b22fae2e1e">SCB_ICSR_PENDSVCLR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gae218d9022288f89faf57187c4d542ecd">SCB_ICSR_PENDSVCLR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga9dbb3358c6167c9c3f85661b90fb2794">SCB_ICSR_PENDSTSET_Pos</link>   26U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga7325b61ea0ec323ef2d5c893b112e546">SCB_ICSR_PENDSTSET_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga9dbb3358c6167c9c3f85661b90fb2794">SCB_ICSR_PENDSTSET_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gadbe25e4b333ece1341beb1a740168fdc">SCB_ICSR_PENDSTCLR_Pos</link>   25U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab241827d2a793269d8cd99b9b28c2157">SCB_ICSR_PENDSTCLR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gadbe25e4b333ece1341beb1a740168fdc">SCB_ICSR_PENDSTCLR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga11cb5b1f9ce167b81f31787a77e575df">SCB_ICSR_ISRPREEMPT_Pos</link>   23U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaa966600396290808d596fe96e92ca2b5">SCB_ICSR_ISRPREEMPT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga11cb5b1f9ce167b81f31787a77e575df">SCB_ICSR_ISRPREEMPT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga10749d92b9b744094b845c2eb46d4319">SCB_ICSR_ISRPENDING_Pos</link>   22U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga056d74fd538e5d36d3be1f28d399c877">SCB_ICSR_ISRPENDING_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga10749d92b9b744094b845c2eb46d4319">SCB_ICSR_ISRPENDING_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gada60c92bf88d6fd21a8f49efa4a127b8">SCB_ICSR_VECTPENDING_Pos</link>   12U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gacb6992e7c7ddc27a370f62878a21ef72">SCB_ICSR_VECTPENDING_Msk</link>   (0x1FFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gada60c92bf88d6fd21a8f49efa4a127b8">SCB_ICSR_VECTPENDING_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga403d154200242629e6d2764bfc12a7ec">SCB_ICSR_RETTOBASE_Pos</link>   11U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaca6fc3f79bb550f64fd7df782ed4a5f6">SCB_ICSR_RETTOBASE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga403d154200242629e6d2764bfc12a7ec">SCB_ICSR_RETTOBASE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gae4f602c7c5c895d5fb687b71b0979fc3">SCB_ICSR_VECTACTIVE_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga5533791a4ecf1b9301c883047b3e8396">SCB_ICSR_VECTACTIVE_Msk</link>   (0x1FFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gae4f602c7c5c895d5fb687b71b0979fc3">SCB_ICSR_VECTACTIVE_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad9720a44320c053883d03b883b955751">SCB_VTOR_TBLBASE_Pos</link>   29U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga778dd0ba178466b2a8877a6b8aa345ee">SCB_VTOR_TBLBASE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gad9720a44320c053883d03b883b955751">SCB_VTOR_TBLBASE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac6a55451ddd38bffcff5a211d29cea78">SCB_VTOR_TBLOFF_Pos</link>   7U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga75e395ed74042923e8c93edf50f0996c">SCB_VTOR_TBLOFF_Msk</link>   (0x3FFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gac6a55451ddd38bffcff5a211d29cea78">SCB_VTOR_TBLOFF_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaaa27c0ba600bf82c3da08c748845b640">SCB_AIRCR_VECTKEY_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga90c7cf0c490e7ae55f9503a7fda1dd22">SCB_AIRCR_VECTKEY_Msk</link>   (0xFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaaa27c0ba600bf82c3da08c748845b640">SCB_AIRCR_VECTKEY_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaec404750ff5ca07f499a3c06b62051ef">SCB_AIRCR_VECTKEYSTAT_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gabacedaefeefc73d666bbe59ece904493">SCB_AIRCR_VECTKEYSTAT_Msk</link>   (0xFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaec404750ff5ca07f499a3c06b62051ef">SCB_AIRCR_VECTKEYSTAT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad31dec98fbc0d33ace63cb1f1a927923">SCB_AIRCR_ENDIANESS_Pos</link>   15U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2f571f93d3d4a6eac9a3040756d3d951">SCB_AIRCR_ENDIANESS_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gad31dec98fbc0d33ace63cb1f1a927923">SCB_AIRCR_ENDIANESS_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaca155deccdeca0f2c76b8100d24196c8">SCB_AIRCR_PRIGROUP_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga8be60fff03f48d0d345868060dc6dae7">SCB_AIRCR_PRIGROUP_Msk</link>   (7UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaca155deccdeca0f2c76b8100d24196c8">SCB_AIRCR_PRIGROUP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaffb2737eca1eac0fc1c282a76a40953c">SCB_AIRCR_SYSRESETREQ_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaae1181119559a5bd36e62afa373fa720">SCB_AIRCR_SYSRESETREQ_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaffb2737eca1eac0fc1c282a76a40953c">SCB_AIRCR_SYSRESETREQ_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaa30a12e892bb696e61626d71359a9029">SCB_AIRCR_VECTCLRACTIVE_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga212c5ab1c1c82c807d30d2307aa8d218">SCB_AIRCR_VECTCLRACTIVE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaa30a12e892bb696e61626d71359a9029">SCB_AIRCR_VECTCLRACTIVE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga0d483d9569cd9d1b46ec0d171b1f18d8">SCB_AIRCR_VECTRESET_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3006e31968bb9725e7b4ee0784d99f7f">SCB_AIRCR_VECTRESET_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga0d483d9569cd9d1b46ec0d171b1f18d8">SCB_AIRCR_VECTRESET_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3bddcec40aeaf3d3a998446100fa0e44">SCB_SCR_SEVONPEND_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gafb98656644a14342e467505f69a997c9">SCB_SCR_SEVONPEND_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3bddcec40aeaf3d3a998446100fa0e44">SCB_SCR_SEVONPEND_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab304f6258ec03bd9a6e7a360515c3cfe">SCB_SCR_SLEEPDEEP_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga77c06a69c63f4b3f6ec1032e911e18e7">SCB_SCR_SLEEPDEEP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gab304f6258ec03bd9a6e7a360515c3cfe">SCB_SCR_SLEEPDEEP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3680a15114d7fdc1e25043b881308fe9">SCB_SCR_SLEEPONEXIT_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga50a243e317b9a70781b02758d45b05ee">SCB_SCR_SLEEPONEXIT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3680a15114d7fdc1e25043b881308fe9">SCB_SCR_SLEEPONEXIT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac2d20a250960a432cc74da59d20e2f86">SCB_CCR_STKALIGN_Pos</link>   9U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga33cf22d3d46af158a03aad25ddea1bcb">SCB_CCR_STKALIGN_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gac2d20a250960a432cc74da59d20e2f86">SCB_CCR_STKALIGN_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga4010a4f9e2a745af1b58abe1f791ebbf">SCB_CCR_BFHFNMIGN_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga89a28cc31cfc7d52d9d7a8fcc69c7eac">SCB_CCR_BFHFNMIGN_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga4010a4f9e2a745af1b58abe1f791ebbf">SCB_CCR_BFHFNMIGN_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac8d512998bb8cd9333fb7627ddf59bba">SCB_CCR_DIV_0_TRP_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gabb9aeac71b3abd8586d0297070f61dcb">SCB_CCR_DIV_0_TRP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gac8d512998bb8cd9333fb7627ddf59bba">SCB_CCR_DIV_0_TRP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac4e4928b864ea10fc24dbbc57d976229">SCB_CCR_UNALIGN_TRP_Pos</link>   3U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga68c96ad594af70c007923979085c99e0">SCB_CCR_UNALIGN_TRP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gac4e4928b864ea10fc24dbbc57d976229">SCB_CCR_UNALIGN_TRP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga789e41f45f59a8cd455fd59fa7652e5e">SCB_CCR_USERSETMPEND_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga4cf59b6343ca962c80e1885710da90aa">SCB_CCR_USERSETMPEND_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga789e41f45f59a8cd455fd59fa7652e5e">SCB_CCR_USERSETMPEND_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab4615f7deb07386350365b10240a3c83">SCB_CCR_NONBASETHRDENA_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gafe0f6be81b35d72d0736a0a1e3b4fbb3">SCB_CCR_NONBASETHRDENA_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gab4615f7deb07386350365b10240a3c83">SCB_CCR_NONBASETHRDENA_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gae71949507636fda388ec11d5c2d30b52">SCB_SHCSR_USGFAULTENA_Pos</link>   18U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga056fb6be590857bbc029bed48b21dd79">SCB_SHCSR_USGFAULTENA_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gae71949507636fda388ec11d5c2d30b52">SCB_SHCSR_USGFAULTENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3d32edbe4a5c0335f808cfc19ec7e844">SCB_SHCSR_BUSFAULTENA_Pos</link>   17U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga43e8cbe619c9980e0d1aacc85d9b9e47">SCB_SHCSR_BUSFAULTENA_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3d32edbe4a5c0335f808cfc19ec7e844">SCB_SHCSR_BUSFAULTENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga685b4564a8760b4506f14ec4307b7251">SCB_SHCSR_MEMFAULTENA_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaf084424fa1f69bea36a1c44899d83d17">SCB_SHCSR_MEMFAULTENA_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga685b4564a8760b4506f14ec4307b7251">SCB_SHCSR_MEMFAULTENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2f93ec9b243f94cdd3e94b8f0bf43641">SCB_SHCSR_SVCALLPENDED_Pos</link>   15U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga6095a7acfbad66f52822b1392be88652">SCB_SHCSR_SVCALLPENDED_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga2f93ec9b243f94cdd3e94b8f0bf43641">SCB_SHCSR_SVCALLPENDED_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaa22551e24a72b65f1e817f7ab462203b">SCB_SHCSR_BUSFAULTPENDED_Pos</link>   14U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga677c23749c4d348f30fb471d1223e783">SCB_SHCSR_BUSFAULTPENDED_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaa22551e24a72b65f1e817f7ab462203b">SCB_SHCSR_BUSFAULTPENDED_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaceb60fe2d8a8cb17fcd1c1f6b5aa924f">SCB_SHCSR_MEMFAULTPENDED_Pos</link>   13U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga9abc6c2e395f9e5af4ce05fc420fb04c">SCB_SHCSR_MEMFAULTPENDED_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaceb60fe2d8a8cb17fcd1c1f6b5aa924f">SCB_SHCSR_MEMFAULTPENDED_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3cf03acf1fdc2edc3b047ddd47ebbf87">SCB_SHCSR_USGFAULTPENDED_Pos</link>   12U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga122b4f732732010895e438803a29d3cc">SCB_SHCSR_USGFAULTPENDED_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3cf03acf1fdc2edc3b047ddd47ebbf87">SCB_SHCSR_USGFAULTPENDED_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaec9ca3b1213c49e2442373445e1697de">SCB_SHCSR_SYSTICKACT_Pos</link>   11U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gafef530088dc6d6bfc9f1893d52853684">SCB_SHCSR_SYSTICKACT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaec9ca3b1213c49e2442373445e1697de">SCB_SHCSR_SYSTICKACT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga9b9fa69ce4c5ce7fe0861dbccfb15939">SCB_SHCSR_PENDSVACT_Pos</link>   10U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gae0e837241a515d4cbadaaae1faa8e039">SCB_SHCSR_PENDSVACT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga9b9fa69ce4c5ce7fe0861dbccfb15939">SCB_SHCSR_PENDSVACT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga8b71cf4c61803752a41c96deb00d26af">SCB_SHCSR_MONITORACT_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaad09b4bc36e9bccccc2e110d20b16e1a">SCB_SHCSR_MONITORACT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga8b71cf4c61803752a41c96deb00d26af">SCB_SHCSR_MONITORACT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga977f5176be2bc8b123873861b38bc02f">SCB_SHCSR_SVCALLACT_Pos</link>   7U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga634c0f69a233475289023ae5cb158fdf">SCB_SHCSR_SVCALLACT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga977f5176be2bc8b123873861b38bc02f">SCB_SHCSR_SVCALLACT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gae06f54f5081f01ed3f6824e451ad3656">SCB_SHCSR_USGFAULTACT_Pos</link>   3U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab3166103b5a5f7931d0df90949c47dfe">SCB_SHCSR_USGFAULTACT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gae06f54f5081f01ed3f6824e451ad3656">SCB_SHCSR_USGFAULTACT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaf272760f2df9ecdd8a5fbbd65c0b767a">SCB_SHCSR_BUSFAULTACT_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga9d7a8b1054b655ad08d85c3c535d4f73">SCB_SHCSR_BUSFAULTACT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaf272760f2df9ecdd8a5fbbd65c0b767a">SCB_SHCSR_BUSFAULTACT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga7c856f79a75dcc1d1517b19a67691803">SCB_SHCSR_MEMFAULTACT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga9147fd4e1b12394ae26eadf900a023a3">SCB_SHCSR_MEMFAULTACT_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga7c856f79a75dcc1d1517b19a67691803">SCB_SHCSR_MEMFAULTACT_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac8e4197b295c8560e68e2d71285c7879">SCB_CFSR_USGFAULTSR_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga565807b1a3f31891f1f967d0fa30d03f">SCB_CFSR_USGFAULTSR_Msk</link>   (0xFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gac8e4197b295c8560e68e2d71285c7879">SCB_CFSR_USGFAULTSR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga555a24f4f57d199f91d1d1ab7c8c3c8a">SCB_CFSR_BUSFAULTSR_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga26dc1ddfdc37a6b92597a6f7e498c1d6">SCB_CFSR_BUSFAULTSR_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga555a24f4f57d199f91d1d1ab7c8c3c8a">SCB_CFSR_BUSFAULTSR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga91f41491cec5b5acca3fbc94efbd799e">SCB_CFSR_MEMFAULTSR_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad46716159a3808c9e7da22067d6bec98">SCB_CFSR_MEMFAULTSR_Msk</link>   (0xFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga91f41491cec5b5acca3fbc94efbd799e">SCB_CFSR_MEMFAULTSR_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaf9a595a3a8e0171473d486b490669165">SCB_CFSR_MMARVALID_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga7c856f79a75dcc1d1517b19a67691803">SCB_SHCSR_MEMFAULTACT_Pos</link> + 7U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga33f17b24b05b0405de908ce185bef5c3">SCB_CFSR_MMARVALID_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaf9a595a3a8e0171473d486b490669165">SCB_CFSR_MMARVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga76517c60f54396e7cf075876e8af7a62">SCB_CFSR_MSTKERR_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga7c856f79a75dcc1d1517b19a67691803">SCB_SHCSR_MEMFAULTACT_Pos</link> + 4U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga30331822fa13db8ee288173cfbcbbf72">SCB_CFSR_MSTKERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga76517c60f54396e7cf075876e8af7a62">SCB_CFSR_MSTKERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga9e5bd9bcd654e271a3e78c5c0a39444d">SCB_CFSR_MUNSTKERR_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga7c856f79a75dcc1d1517b19a67691803">SCB_SHCSR_MEMFAULTACT_Pos</link> + 3U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2d77850270c5ca96e63e456315609876">SCB_CFSR_MUNSTKERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga9e5bd9bcd654e271a3e78c5c0a39444d">SCB_CFSR_MUNSTKERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaa9c22daf6e72e64259673b55ae095725">SCB_CFSR_DACCVIOL_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga7c856f79a75dcc1d1517b19a67691803">SCB_SHCSR_MEMFAULTACT_Pos</link> + 1U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gacd585d5b620c175f80dd99aecbe42bcf">SCB_CFSR_DACCVIOL_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaa9c22daf6e72e64259673b55ae095725">SCB_CFSR_DACCVIOL_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga964f0465dfaca775e31db26e50f395d5">SCB_CFSR_IACCVIOL_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga7c856f79a75dcc1d1517b19a67691803">SCB_SHCSR_MEMFAULTACT_Pos</link> + 0U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac0a8e6525cd6c610f05d99640b40e6b7">SCB_CFSR_IACCVIOL_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga964f0465dfaca775e31db26e50f395d5">SCB_CFSR_IACCVIOL_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga1cdff62f1f5730c14c809fef9009bfbb">SCB_CFSR_BFARVALID_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga555a24f4f57d199f91d1d1ab7c8c3c8a">SCB_CFSR_BUSFAULTSR_Pos</link> + 7U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga56dd2218996bebbf2a38180ae6f9fcf7">SCB_CFSR_BFARVALID_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga1cdff62f1f5730c14c809fef9009bfbb">SCB_CFSR_BFARVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga62a8fe875fb6cc28e0e36ddf27d81a8f">SCB_CFSR_STKERR_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga555a24f4f57d199f91d1d1ab7c8c3c8a">SCB_CFSR_BUSFAULTSR_Pos</link> + 4U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga77076fdfa5941327d4d8f0cb99653872">SCB_CFSR_STKERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga62a8fe875fb6cc28e0e36ddf27d81a8f">SCB_CFSR_STKERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga7f70b590d3d8f11145e4ff20f7c9f3e8">SCB_CFSR_UNSTKERR_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga555a24f4f57d199f91d1d1ab7c8c3c8a">SCB_CFSR_BUSFAULTSR_Pos</link> + 3U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2dfce5c289681884651f92377d09380e">SCB_CFSR_UNSTKERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga7f70b590d3d8f11145e4ff20f7c9f3e8">SCB_CFSR_UNSTKERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaec426f59eb8d75acd48b32953ac154f5">SCB_CFSR_IMPRECISERR_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga555a24f4f57d199f91d1d1ab7c8c3c8a">SCB_CFSR_BUSFAULTSR_Pos</link> + 2U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga6e6b3b643e1c2e14c96f10b42d59fc64">SCB_CFSR_IMPRECISERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaec426f59eb8d75acd48b32953ac154f5">SCB_CFSR_IMPRECISERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaf4744e87d7f6eddbff803977901d6ad0">SCB_CFSR_PRECISERR_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga555a24f4f57d199f91d1d1ab7c8c3c8a">SCB_CFSR_BUSFAULTSR_Pos</link> + 1U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad8fc0d1f80364470e52d3dcf941f38cc">SCB_CFSR_PRECISERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaf4744e87d7f6eddbff803977901d6ad0">SCB_CFSR_PRECISERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad01f4e7c1daa67e2ca8eb4411fd80df4">SCB_CFSR_IBUSERR_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1ga555a24f4f57d199f91d1d1ab7c8c3c8a">SCB_CFSR_BUSFAULTSR_Pos</link> + 0U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2a0907c95aabc4b9d77c3e28d14a717f">SCB_CFSR_IBUSERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gad01f4e7c1daa67e2ca8eb4411fd80df4">SCB_CFSR_IBUSERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaa8fc61d57be3e94db000367f521aa1fc">SCB_CFSR_DIVBYZERO_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1gac8e4197b295c8560e68e2d71285c7879">SCB_CFSR_USGFAULTSR_Pos</link> + 9U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga9d91a0850b4962ad1335b2eadac6777e">SCB_CFSR_DIVBYZERO_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaa8fc61d57be3e94db000367f521aa1fc">SCB_CFSR_DIVBYZERO_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga8836da99a7e569d7a5a79ab4eaa85690">SCB_CFSR_UNALIGNED_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1gac8e4197b295c8560e68e2d71285c7879">SCB_CFSR_USGFAULTSR_Pos</link> + 8U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac7d2aa508a08a2cab97aa8683c87d125">SCB_CFSR_UNALIGNED_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga8836da99a7e569d7a5a79ab4eaa85690">SCB_CFSR_UNALIGNED_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga769b841a38d4e7b8c5e7e74cf0455754">SCB_CFSR_NOCP_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1gac8e4197b295c8560e68e2d71285c7879">SCB_CFSR_USGFAULTSR_Pos</link> + 3U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga6cbafe22a9550ca20427cd7e2f2bed7f">SCB_CFSR_NOCP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga769b841a38d4e7b8c5e7e74cf0455754">SCB_CFSR_NOCP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga526d3cebe0e96962941e5e3a729307c2">SCB_CFSR_INVPC_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1gac8e4197b295c8560e68e2d71285c7879">SCB_CFSR_USGFAULTSR_Pos</link> + 2U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gafd7f0192bfedbde5d313fe7e637f55f1">SCB_CFSR_INVPC_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga526d3cebe0e96962941e5e3a729307c2">SCB_CFSR_INVPC_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga85ecc14a387d790129e9a3fb1312407a">SCB_CFSR_INVSTATE_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1gac8e4197b295c8560e68e2d71285c7879">SCB_CFSR_USGFAULTSR_Pos</link> + 1U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga8088a459ac3900a43a54f5cd4252484d">SCB_CFSR_INVSTATE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga85ecc14a387d790129e9a3fb1312407a">SCB_CFSR_INVSTATE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga28219a6a1ae6b6118ffd1682c362c63d">SCB_CFSR_UNDEFINSTR_Pos</link>   (<link linkend="_group___c_m_s_i_s___s_c_b_1gac8e4197b295c8560e68e2d71285c7879">SCB_CFSR_USGFAULTSR_Pos</link> + 0U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga96e201c8da2bd76df35e184f31b89f1e">SCB_CFSR_UNDEFINSTR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga28219a6a1ae6b6118ffd1682c362c63d">SCB_CFSR_UNDEFINSTR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga300c90cfb7b35c82b4d44ad16c757ffb">SCB_HFSR_DEBUGEVT_Pos</link>   31U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gababd60e94756bb33929d5e6f25d8dba3">SCB_HFSR_DEBUGEVT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga300c90cfb7b35c82b4d44ad16c757ffb">SCB_HFSR_DEBUGEVT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab361e54183a378474cb419ae2a55d6f4">SCB_HFSR_FORCED_Pos</link>   30U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga6560d97ed043bc01152a7247bafa3157">SCB_HFSR_FORCED_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gab361e54183a378474cb419ae2a55d6f4">SCB_HFSR_FORCED_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga77993da8de35adea7bda6a4475f036ab">SCB_HFSR_VECTTBL_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaac5e289211d0a63fe879a9691cb9e1a9">SCB_HFSR_VECTTBL_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga77993da8de35adea7bda6a4475f036ab">SCB_HFSR_VECTTBL_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga13f502fb5ac673df9c287488c40b0c1d">SCB_DFSR_EXTERNAL_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3cba2ec1f588ce0b10b191d6b0d23399">SCB_DFSR_EXTERNAL_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga13f502fb5ac673df9c287488c40b0c1d">SCB_DFSR_EXTERNAL_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad02d3eaf062ac184c18a7889c9b6de57">SCB_DFSR_VCATCH_Pos</link>   3U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gacbb931575c07b324ec793775b7c44d05">SCB_DFSR_VCATCH_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gad02d3eaf062ac184c18a7889c9b6de57">SCB_DFSR_VCATCH_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaccf82364c6d0ed7206f1084277b7cc61">SCB_DFSR_DWTTRAP_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3f7384b8a761704655fd45396a305663">SCB_DFSR_DWTTRAP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaccf82364c6d0ed7206f1084277b7cc61">SCB_DFSR_DWTTRAP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaf28fdce48655f0dcefb383aebf26b050">SCB_DFSR_BKPT_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga609edf8f50bc49adb51ae28bcecefe1f">SCB_DFSR_BKPT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaf28fdce48655f0dcefb383aebf26b050">SCB_DFSR_BKPT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaef4ec28427f9f88ac70a13ae4e541378">SCB_DFSR_HALTED_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga200bcf918d57443b5e29e8ce552e4bdf">SCB_DFSR_HALTED_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaef4ec28427f9f88ac70a13ae4e541378">SCB_DFSR_HALTED_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7">SCnSCB_ICTR_INTLINESNUM_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c">SysTick_CTRL_COUNTFLAG_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373">SysTick_CTRL_CLKSOURCE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027">SysTick_CTRL_TICKINT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f">SysTick_CTRL_ENABLE_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1">SysTick_LOAD_RELOAD_Msk</link>   (0xFFFFFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45">SysTick_VAL_CURRENT_Msk</link>   (0xFFFFFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>   31U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6">SysTick_CALIB_NOREF_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>   30U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431">SysTick_CALIB_SKEW_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e">SysTick_CALIB_TENMS_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e">SysTick_CALIB_TENMS_Msk</link>   (0xFFFFFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e">SysTick_CALIB_TENMS_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga7abe5e590d1611599df87a1884a352e8">ITM_TPR_PRIVMASK_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga168e089d882df325a387aab3a802a46b">ITM_TPR_PRIVMASK_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga7abe5e590d1611599df87a1884a352e8">ITM_TPR_PRIVMASK_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga9174ad4a36052c377cef4e6aba2ed484">ITM_TCR_BUSY_Pos</link>   23U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga43ad7cf33de12f2ef3a412d4f354c60f">ITM_TCR_BUSY_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga9174ad4a36052c377cef4e6aba2ed484">ITM_TCR_BUSY_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1gaca0281de867f33114aac0636f7ce65d3">ITM_TCR_TraceBusID_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga60c20bd9649d1da5a2be8e656ba19a60">ITM_TCR_TraceBusID_Msk</link>   (0x7FUL &lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1gaca0281de867f33114aac0636f7ce65d3">ITM_TCR_TraceBusID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga96c7c7cbc0d98426c408090b41f583f1">ITM_TCR_GTSFREQ_Pos</link>   10U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1gade862cf009827f7f6748fc44c541b067">ITM_TCR_GTSFREQ_Msk</link>   (3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga96c7c7cbc0d98426c408090b41f583f1">ITM_TCR_GTSFREQ_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1gad7bc9ee1732032c6e0de035f0978e473">ITM_TCR_TSPrescale_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga7a723f71bfb0204c264d8dbe8cc7ae52">ITM_TCR_TSPrescale_Msk</link>   (3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1gad7bc9ee1732032c6e0de035f0978e473">ITM_TCR_TSPrescale_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga7a380f0c8078f6560051406583ecd6a5">ITM_TCR_SWOENA_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga97476cb65bab16a328b35f81fd02010a">ITM_TCR_SWOENA_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga7a380f0c8078f6560051406583ecd6a5">ITM_TCR_SWOENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga30e83ebb33aa766070fe3d1f27ae820e">ITM_TCR_DWTENA_Pos</link>   3U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga98ea1c596d43d3633a202f9ee746cf70">ITM_TCR_DWTENA_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga30e83ebb33aa766070fe3d1f27ae820e">ITM_TCR_DWTENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1gaa93a1147a39fc63980d299231252a30e">ITM_TCR_SYNCENA_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1gac89b74a78701c25b442105d7fe2bbefb">ITM_TCR_SYNCENA_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1gaa93a1147a39fc63980d299231252a30e">ITM_TCR_SYNCENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga5aa381845f810114ab519b90753922a1">ITM_TCR_TSENA_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga436b2e8fa24328f48f2da31c00fc9e65">ITM_TCR_TSENA_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga5aa381845f810114ab519b90753922a1">ITM_TCR_TSENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga3286b86004bce7ffe17ee269f87f8d9d">ITM_TCR_ITMENA_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga7dd53e3bff24ac09d94e61cb595cb2d9">ITM_TCR_ITMENA_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga3286b86004bce7ffe17ee269f87f8d9d">ITM_TCR_ITMENA_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga04d3f842ad48f6a9127b4cecc963e1d7">ITM_IWR_ATVALIDM_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga67b969f8f04ed15886727788f0e2ffd7">ITM_IWR_ATVALIDM_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga04d3f842ad48f6a9127b4cecc963e1d7">ITM_IWR_ATVALIDM_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga259edfd1d2e877a62e06d7a240df97f4">ITM_IRR_ATREADYM_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga3dbc3e15f5bde2669cd8121a1fe419b9">ITM_IRR_ATREADYM_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga259edfd1d2e877a62e06d7a240df97f4">ITM_IRR_ATREADYM_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga08de02bf32caf48aaa29f7c68ff5d755">ITM_IMCR_INTEGRATION_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga8838bd3dd04c1a6be97cd946364a3fd2">ITM_IMCR_INTEGRATION_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga08de02bf32caf48aaa29f7c68ff5d755">ITM_IMCR_INTEGRATION_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1gabfae3e570edc8759597311ed6dfb478e">ITM_LSR_ByteAcc_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga91f492b2891bb8b7eac5b58de7b220f4">ITM_LSR_ByteAcc_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1gabfae3e570edc8759597311ed6dfb478e">ITM_LSR_ByteAcc_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1ga144a49e12b83ad9809fdd2769094fdc0">ITM_LSR_Access_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1gac8ae69f11c0311da226c0c8ec40b3d37">ITM_LSR_Access_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1ga144a49e12b83ad9809fdd2769094fdc0">ITM_LSR_Access_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1gaf5740689cf14564d3f3fd91299b6c88d">ITM_LSR_Present_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___i_t_m_1gaa5bc2a7f5f1d69ff819531f5508bb017">ITM_LSR_Present_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___i_t_m_1gaf5740689cf14564d3f3fd91299b6c88d">ITM_LSR_Present_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaac44b9b7d5391a7ffef129b7f6c84cd7">DWT_CTRL_NUMCOMP_Pos</link>   28U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaa3d37d68c2ba73f2026265584c2815e7">DWT_CTRL_NUMCOMP_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1gaac44b9b7d5391a7ffef129b7f6c84cd7">DWT_CTRL_NUMCOMP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaa82840323a2628e7f4a2b09b74fa73fd">DWT_CTRL_NOTRCPKT_Pos</link>   27U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga04d8bb0a065ca38e2e5f13a97e1f7073">DWT_CTRL_NOTRCPKT_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1gaa82840323a2628e7f4a2b09b74fa73fd">DWT_CTRL_NOTRCPKT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gad997b9026715d5609b5a3b144eca42d0">DWT_CTRL_NOEXTTRIG_Pos</link>   26U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gacc7d15edf7a27147c422099ab475953e">DWT_CTRL_NOEXTTRIG_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1gad997b9026715d5609b5a3b144eca42d0">DWT_CTRL_NOEXTTRIG_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga337f6167d960f57f12aa382ffecce522">DWT_CTRL_NOCYCCNT_Pos</link>   25U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaf40c8d7a4fd978034c137e90f714c143">DWT_CTRL_NOCYCCNT_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga337f6167d960f57f12aa382ffecce522">DWT_CTRL_NOCYCCNT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gad52a0e5be84363ab166cc17beca0d048">DWT_CTRL_NOPRFCNT_Pos</link>   24U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gafd8448d7db4bc51f27f202e6e1f27823">DWT_CTRL_NOPRFCNT_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1gad52a0e5be84363ab166cc17beca0d048">DWT_CTRL_NOPRFCNT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga0cb0640aaeb18a626d7823570d5c3cb6">DWT_CTRL_CYCEVTENA_Pos</link>   22U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga40554bd81460e39abf08810f45fac1a2">DWT_CTRL_CYCEVTENA_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga0cb0640aaeb18a626d7823570d5c3cb6">DWT_CTRL_CYCEVTENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga5602b0707f446ce78d88ff2a3a82bfff">DWT_CTRL_FOLDEVTENA_Pos</link>   21U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga717e679d775562ae09185a3776b1582f">DWT_CTRL_FOLDEVTENA_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga5602b0707f446ce78d88ff2a3a82bfff">DWT_CTRL_FOLDEVTENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaea5d1ee72188dc1d57b54c60a9f5233e">DWT_CTRL_LSUEVTENA_Pos</link>   20U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gac47427f455fbc29d4b6f8a479169f2b2">DWT_CTRL_LSUEVTENA_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1gaea5d1ee72188dc1d57b54c60a9f5233e">DWT_CTRL_LSUEVTENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga9c6d62d121164013a8e3ee372f17f3e5">DWT_CTRL_SLEEPEVTENA_Pos</link>   19U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga2f431b3734fb840daf5b361034856da9">DWT_CTRL_SLEEPEVTENA_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga9c6d62d121164013a8e3ee372f17f3e5">DWT_CTRL_SLEEPEVTENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaf4e73f548ae3e945ef8b1d9ff1281544">DWT_CTRL_EXCEVTENA_Pos</link>   18U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gab7ee0def33423b5859ca4030dff63b58">DWT_CTRL_EXCEVTENA_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1gaf4e73f548ae3e945ef8b1d9ff1281544">DWT_CTRL_EXCEVTENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga9fff0b71fb0be1499f5180c6bce1fc8f">DWT_CTRL_CPIEVTENA_Pos</link>   17U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga189089c30aade60b983df17ad2412f6f">DWT_CTRL_CPIEVTENA_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga9fff0b71fb0be1499f5180c6bce1fc8f">DWT_CTRL_CPIEVTENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga05f13b547a9a1e63e003ee0bc6446d0d">DWT_CTRL_EXCTRCENA_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaf4fbb509ab3cbb768f16484c660a24c3">DWT_CTRL_EXCTRCENA_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga05f13b547a9a1e63e003ee0bc6446d0d">DWT_CTRL_EXCTRCENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga1e14afc7790fcb424fcf619e192554c9">DWT_CTRL_PCSAMPLENA_Pos</link>   12U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gafdcf1c86f43fbeaf2780ce797c9ef3d6">DWT_CTRL_PCSAMPLENA_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga1e14afc7790fcb424fcf619e192554c9">DWT_CTRL_PCSAMPLENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga678ef08786edcbef964479217efb9284">DWT_CTRL_SYNCTAP_Pos</link>   10U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaf1e6c3729d56ecadeb6eeff4d225968c">DWT_CTRL_SYNCTAP_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga678ef08786edcbef964479217efb9284">DWT_CTRL_SYNCTAP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaf70b80936c7db60bf84fb6dadb8a3559">DWT_CTRL_CYCTAP_Pos</link>   9U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga6c12e2868b8989a69445646698b8c331">DWT_CTRL_CYCTAP_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1gaf70b80936c7db60bf84fb6dadb8a3559">DWT_CTRL_CYCTAP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga2868c0b28eb13be930afb819f55f6f25">DWT_CTRL_POSTINIT_Pos</link>   5U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gab8cbbee1e1d94d09f9a1f86379a08ee8">DWT_CTRL_POSTINIT_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga2868c0b28eb13be930afb819f55f6f25">DWT_CTRL_POSTINIT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga129bc152febfddd67a0c20c6814cba69">DWT_CTRL_POSTPRESET_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga11d9e1e2a758fdd2657aa68ce61b9c9d">DWT_CTRL_POSTPRESET_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga129bc152febfddd67a0c20c6814cba69">DWT_CTRL_POSTPRESET_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaa4509f5f8514a7200be61691f0e01f10">DWT_CTRL_CYCCNTENA_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga4a9d209dc2a81ea6bfa0ea21331769d3">DWT_CTRL_CYCCNTENA_Msk</link>   (0x1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1gaa4509f5f8514a7200be61691f0e01f10">DWT_CTRL_CYCCNTENA_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga80e9ad8f6a9e2344af8a3cf989bebe3d">DWT_CPICNT_CPICNT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga76f39e7bca3fa86a4dbf7b8f6adb7217">DWT_CPICNT_CPICNT_Msk</link>   (0xFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga80e9ad8f6a9e2344af8a3cf989bebe3d">DWT_CPICNT_CPICNT_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga031c693654030d4cba398b45d2925b1d">DWT_EXCCNT_EXCCNT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga057fa604a107b58a198bbbadb47e69c9">DWT_EXCCNT_EXCCNT_Msk</link>   (0xFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga031c693654030d4cba398b45d2925b1d">DWT_EXCCNT_EXCCNT_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga0371a84a7996dc5852c56afb2676ba1c">DWT_SLEEPCNT_SLEEPCNT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga1e340751d71413fef400a0a1d76cc828">DWT_SLEEPCNT_SLEEPCNT_Msk</link>   (0xFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga0371a84a7996dc5852c56afb2676ba1c">DWT_SLEEPCNT_SLEEPCNT_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gab9394c7911b0b4312a096dad91d53a3d">DWT_LSUCNT_LSUCNT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga2186d7fc9317e20bad61336ee2925615">DWT_LSUCNT_LSUCNT_Msk</link>   (0xFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1gab9394c7911b0b4312a096dad91d53a3d">DWT_LSUCNT_LSUCNT_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga7f8af5ac12d178ba31a516f6ed141455">DWT_FOLDCNT_FOLDCNT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga9cb73d0342d38b14e41027d3c5c02647">DWT_FOLDCNT_FOLDCNT_Msk</link>   (0xFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga7f8af5ac12d178ba31a516f6ed141455">DWT_FOLDCNT_FOLDCNT_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaf798ae34e2b9280ea64f4d9920cd2e7d">DWT_MASK_MASK_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gadd798deb0f1312feab4fb05dcddc229b">DWT_MASK_MASK_Msk</link>   (0x1FUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1gaf798ae34e2b9280ea64f4d9920cd2e7d">DWT_MASK_MASK_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga22c5787493f74a6bacf6ffb103a190ba">DWT_FUNCTION_MATCHED_Pos</link>   24U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gac8b1a655947490280709037808eec8ac">DWT_FUNCTION_MATCHED_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga22c5787493f74a6bacf6ffb103a190ba">DWT_FUNCTION_MATCHED_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga8b75e8ab3ffd5ea2fa762d028dc30e8c">DWT_FUNCTION_DATAVADDR1_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gafdbf5a8c367befe8661a4f6945c83445">DWT_FUNCTION_DATAVADDR1_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga8b75e8ab3ffd5ea2fa762d028dc30e8c">DWT_FUNCTION_DATAVADDR1_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga9854cd8bf16f7dce0fb196a8029b018e">DWT_FUNCTION_DATAVADDR0_Pos</link>   12U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gafc5efbe8f9b51e04aecd00c8a4eb50fb">DWT_FUNCTION_DATAVADDR0_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga9854cd8bf16f7dce0fb196a8029b018e">DWT_FUNCTION_DATAVADDR0_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga0517a186d4d448aa6416440f40fe7a4d">DWT_FUNCTION_DATAVSIZE_Pos</link>   10U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gaab42cbc1e6084c44d5de70971613ea76">DWT_FUNCTION_DATAVSIZE_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga0517a186d4d448aa6416440f40fe7a4d">DWT_FUNCTION_DATAVSIZE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga89d7c48858b4d4de96cdadfac91856a1">DWT_FUNCTION_LNK1ENA_Pos</link>   9U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga64bd419260c3337cacf93607d1ad27ac">DWT_FUNCTION_LNK1ENA_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga89d7c48858b4d4de96cdadfac91856a1">DWT_FUNCTION_LNK1ENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga106f3672cd4be7c7c846e20497ebe5a6">DWT_FUNCTION_DATAVMATCH_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga32af1f1c0fcd2d8d9afd1ad79cd9970e">DWT_FUNCTION_DATAVMATCH_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga106f3672cd4be7c7c846e20497ebe5a6">DWT_FUNCTION_DATAVMATCH_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga4b65d79ca37ae8010b4a726312413efd">DWT_FUNCTION_CYCMATCH_Pos</link>   7U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga8e2ed09bdd33a8f7f7ce0444f5f3bb25">DWT_FUNCTION_CYCMATCH_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga4b65d79ca37ae8010b4a726312413efd">DWT_FUNCTION_CYCMATCH_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga41d5b332216baa8d29561260a1b85659">DWT_FUNCTION_EMITRANGE_Pos</link>   5U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1gad46dd5aba29f2e28d4d3f50b1d291f41">DWT_FUNCTION_EMITRANGE_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga41d5b332216baa8d29561260a1b85659">DWT_FUNCTION_EMITRANGE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga5797b556edde2bbaa4d33dcdb1a891bb">DWT_FUNCTION_FUNCTION_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___d_w_t_1ga3b2cda708755ecf5f921d08b25d774d1">DWT_FUNCTION_FUNCTION_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___d_w_t_1ga5797b556edde2bbaa4d33dcdb1a891bb">DWT_FUNCTION_FUNCTION_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5a82d274eb2df8b0c92dd4ed63535928">TPI_ACPR_PRESCALER_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga4fcacd27208419929921aec8457a8c13">TPI_ACPR_PRESCALER_Msk</link>   (0x1FFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5a82d274eb2df8b0c92dd4ed63535928">TPI_ACPR_PRESCALER_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0f302797b94bb2da24052082ab630858">TPI_SPPR_TXMODE_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaca085c8a954393d70dbd7240bb02cc1f">TPI_SPPR_TXMODE_Msk</link>   (0x3UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga0f302797b94bb2da24052082ab630858">TPI_SPPR_TXMODE_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga9537b8a660cc8803f57cbbee320b2fc8">TPI_FFSR_FtNonStop_Pos</link>   3U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaaa313f980974a8cfc7dac68c4d805ab1">TPI_FFSR_FtNonStop_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga9537b8a660cc8803f57cbbee320b2fc8">TPI_FFSR_FtNonStop_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gad30fde0c058da2ffb2b0a213be7a1b5c">TPI_FFSR_TCPresent_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0d6bfd263ff2fdec72d6ec9415fb1135">TPI_FFSR_TCPresent_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gad30fde0c058da2ffb2b0a213be7a1b5c">TPI_FFSR_TCPresent_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaedf31fd453a878021b542b644e2869d2">TPI_FFSR_FtStopped_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1ab6c3abe1cf6311ee07e7c479ce5f78">TPI_FFSR_FtStopped_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaedf31fd453a878021b542b644e2869d2">TPI_FFSR_FtStopped_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga542ca74a081588273e6d5275ba5da6bf">TPI_FFSR_FlInProg_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga63dfb09259893958962914fc3a9e3824">TPI_FFSR_FlInProg_Msk</link>   (0x1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga542ca74a081588273e6d5275ba5da6bf">TPI_FFSR_FlInProg_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7ea11ba6ea75b541cd82e185c725b5b">TPI_FFCR_TrigIn_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga360b413bc5da61f751546a7133c3e4dd">TPI_FFCR_TrigIn_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7ea11ba6ea75b541cd82e185c725b5b">TPI_FFCR_TrigIn_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga99e58a0960b275a773b245e2b69b9a64">TPI_FFCR_EnFCont_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga27d1ecf2e0ff496df03457a2a97cb2c9">TPI_FFCR_EnFCont_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga99e58a0960b275a773b245e2b69b9a64">TPI_FFCR_EnFCont_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5517fa2ced64efbbd413720329c50b99">TPI_TRIGGER_TRIGGER_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga814227af2b2665a0687bb49345e21110">TPI_TRIGGER_TRIGGER_Msk</link>   (0x1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5517fa2ced64efbbd413720329c50b99">TPI_TRIGGER_TRIGGER_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7e050e9eb6528241ebc6835783b6bae">TPI_FIFO0_ITM_ATVALID_Pos</link>   29U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga94cb2493ed35d2dab7bd4092b88a05bc">TPI_FIFO0_ITM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7e050e9eb6528241ebc6835783b6bae">TPI_FIFO0_ITM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gac2b6f7f13a2fa0be4aa7645a47dcac52">TPI_FIFO0_ITM_bytecount_Pos</link>   27U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga07bafa971b8daf0d63b3f92b9ae7fa16">TPI_FIFO0_ITM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gac2b6f7f13a2fa0be4aa7645a47dcac52">TPI_FIFO0_ITM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga7fdeb3e465ca4aa9e3b2f424ab3bbd1d">TPI_FIFO0_ETM_ATVALID_Pos</link>   26U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga4f0005dc420b28f2369179a935b9a9d3">TPI_FIFO0_ETM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga7fdeb3e465ca4aa9e3b2f424ab3bbd1d">TPI_FIFO0_ETM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga2f738e45386ebf58c4d406f578e7ddaf">TPI_FIFO0_ETM_bytecount_Pos</link>   24U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gad2536b3a935361c68453cd068640af92">TPI_FIFO0_ETM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga2f738e45386ebf58c4d406f578e7ddaf">TPI_FIFO0_ETM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5f0037cc80c65e86d9e94e5005077a48">TPI_FIFO0_ETM2_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa82a7b9b99c990fb12eafb3c84b68254">TPI_FIFO0_ETM2_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5f0037cc80c65e86d9e94e5005077a48">TPI_FIFO0_ETM2_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gac5a2ef4b7f811d1f3d81ec919d794413">TPI_FIFO0_ETM1_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaad9c1a6ed34a70905005a0cc14d5f01b">TPI_FIFO0_ETM1_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gac5a2ef4b7f811d1f3d81ec919d794413">TPI_FIFO0_ETM1_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga48783ce3c695d8c06b1352a526110a87">TPI_FIFO0_ETM0_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaf924f7d1662f3f6c1da12052390cb118">TPI_FIFO0_ETM0_Msk</link>   (0xFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga48783ce3c695d8c06b1352a526110a87">TPI_FIFO0_ETM0_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga36b77b6a6a9808dec534802232ffcaa4">TPI_ITATBCTR2_ATREADY2_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaef520d45da3808f8ffde92b915cd6c7c">TPI_ITATBCTR2_ATREADY2_Msk</link>   (0x1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga36b77b6a6a9808dec534802232ffcaa4">TPI_ITATBCTR2_ATREADY2_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gae0edc53203a2373fef7734be91e6125a">TPI_ITATBCTR2_ATREADY1_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga32573fb2508a35660ab785a85c5b38a7">TPI_ITATBCTR2_ATREADY1_Msk</link>   (0x1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gae0edc53203a2373fef7734be91e6125a">TPI_ITATBCTR2_ATREADY1_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga08edfc862b2c8c415854cc4ae2067dfb">TPI_FIFO1_ITM_ATVALID_Pos</link>   29U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gabc1f6a3b6cac0099d7c01ca949b4dd08">TPI_FIFO1_ITM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga08edfc862b2c8c415854cc4ae2067dfb">TPI_FIFO1_ITM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa22ebf7c86e4f4b2c98cfd0b5981375a">TPI_FIFO1_ITM_bytecount_Pos</link>   27U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gacba2edfc0499828019550141356b0dcb">TPI_FIFO1_ITM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa22ebf7c86e4f4b2c98cfd0b5981375a">TPI_FIFO1_ITM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga3177b8d815cf4a707a2d3d3d5499315d">TPI_FIFO1_ETM_ATVALID_Pos</link>   26U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0e8f29a1e9378d1ceb0708035edbb86d">TPI_FIFO1_ETM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3177b8d815cf4a707a2d3d3d5499315d">TPI_FIFO1_ETM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaab31238152b5691af633a7475eaf1f06">TPI_FIFO1_ETM_bytecount_Pos</link>   24U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab554305459953b80554fdb1908b73291">TPI_FIFO1_ETM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaab31238152b5691af633a7475eaf1f06">TPI_FIFO1_ETM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1828c228f3940005f48fb8dd88ada35b">TPI_FIFO1_ITM2_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gae54512f926ebc00f2e056232aa21d335">TPI_FIFO1_ITM2_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga1828c228f3940005f48fb8dd88ada35b">TPI_FIFO1_ITM2_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaece86ab513bc3d0e0a9dbd82258af49f">TPI_FIFO1_ITM1_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga3347f42828920dfe56e3130ad319a9e6">TPI_FIFO1_ITM1_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaece86ab513bc3d0e0a9dbd82258af49f">TPI_FIFO1_ITM1_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga2188671488417a52abb075bcd4d73440">TPI_FIFO1_ITM0_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga8ae09f544fc1a428797e2a150f14a4c9">TPI_FIFO1_ITM0_Msk</link>   (0xFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga2188671488417a52abb075bcd4d73440">TPI_FIFO1_ITM0_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga3f0249dfcfd58090c08fd4a0adea6b22">TPI_ITATBCTR0_ATREADY2_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaf985067de6e6e68fbbd2350646b9125e">TPI_ITATBCTR0_ATREADY2_Msk</link>   (0x1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3f0249dfcfd58090c08fd4a0adea6b22">TPI_ITATBCTR0_ATREADY2_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaded82241155665db59493d912d44c65c">TPI_ITATBCTR0_ATREADY1_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga21e1f9c5532e75ee2edc8eb4cf69b1f0">TPI_ITATBCTR0_ATREADY1_Msk</link>   (0x1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaded82241155665db59493d912d44c65c">TPI_ITATBCTR0_ATREADY1_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa847adb71a1bc811d2e3190528f495f0">TPI_ITCTRL_Mode_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gad6f87550b468ad0920d5f405bfd3f017">TPI_ITCTRL_Mode_Msk</link>   (0x3UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa847adb71a1bc811d2e3190528f495f0">TPI_ITCTRL_Mode_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga9f46cf1a1708575f56d6b827766277f4">TPI_DEVID_NRZVALID_Pos</link>   11U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gacecc8710a8f6a23a7d1d4f5674daf02a">TPI_DEVID_NRZVALID_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga9f46cf1a1708575f56d6b827766277f4">TPI_DEVID_NRZVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga675534579d9e25477bb38970e3ef973c">TPI_DEVID_MANCVALID_Pos</link>   10U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga4c3ee4b1a34ad1960a6b2d6e7e0ff942">TPI_DEVID_MANCVALID_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga675534579d9e25477bb38970e3ef973c">TPI_DEVID_MANCVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga974cccf4c958b4a45cb71c7b5de39b7b">TPI_DEVID_PTINVALID_Pos</link>   9U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1ca84d62243e475836bba02516ba6b97">TPI_DEVID_PTINVALID_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga974cccf4c958b4a45cb71c7b5de39b7b">TPI_DEVID_PTINVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga3f7da5de2a34be41a092e5eddd22ac4d">TPI_DEVID_MinBufSz_Pos</link>   6U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga939e068ff3f1a65b35187ab34a342cd8">TPI_DEVID_MinBufSz_Msk</link>   (0x7UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3f7da5de2a34be41a092e5eddd22ac4d">TPI_DEVID_MinBufSz_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab382b1296b5efd057be606eb8f768df8">TPI_DEVID_AsynClkIn_Pos</link>   5U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab67830557d2d10be882284275025a2d3">TPI_DEVID_AsynClkIn_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gab382b1296b5efd057be606eb8f768df8">TPI_DEVID_AsynClkIn_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga80ecae7fec479e80e583f545996868ed">TPI_DEVID_NrTraceInput_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gabed454418d2140043cd65ec899abd97f">TPI_DEVID_NrTraceInput_Msk</link>   (0x1FUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga80ecae7fec479e80e583f545996868ed">TPI_DEVID_NrTraceInput_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0c799ff892af5eb3162d152abc00af7a">TPI_DEVTYPE_SubType_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5b2fd7dddaf5f64855d9c0696acd65c1">TPI_DEVTYPE_SubType_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga0c799ff892af5eb3162d152abc00af7a">TPI_DEVTYPE_SubType_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga69c4892d332755a9f64c1680497cebdd">TPI_DEVTYPE_MajorType_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaecbceed6d08ec586403b37ad47b38c88">TPI_DEVTYPE_MajorType_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga69c4892d332755a9f64c1680497cebdd">TPI_DEVTYPE_MajorType_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gac91280edd0ce932665cf75a23d11d842">CoreDebug_DHCSR_DBGKEY_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga1ce997cee15edaafe4aed77751816ffc">CoreDebug_DHCSR_DBGKEY_Msk</link>   (0xFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1gac91280edd0ce932665cf75a23d11d842">CoreDebug_DHCSR_DBGKEY_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga6f934c5427ea057394268e541fa97753">CoreDebug_DHCSR_S_RESET_ST_Pos</link>   25U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gac474394bcceb31a8e09566c90b3f8922">CoreDebug_DHCSR_S_RESET_ST_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga6f934c5427ea057394268e541fa97753">CoreDebug_DHCSR_S_RESET_ST_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga2328118f8b3574c871a53605eb17e730">CoreDebug_DHCSR_S_RETIRE_ST_Pos</link>   24U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga89dceb5325f6bcb36a0473d65fbfcfa6">CoreDebug_DHCSR_S_RETIRE_ST_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga2328118f8b3574c871a53605eb17e730">CoreDebug_DHCSR_S_RETIRE_ST_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga2900dd56a988a4ed27ad664d5642807e">CoreDebug_DHCSR_S_LOCKUP_Pos</link>   19U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga7b67e4506d7f464ef5dafd6219739756">CoreDebug_DHCSR_S_LOCKUP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga2900dd56a988a4ed27ad664d5642807e">CoreDebug_DHCSR_S_LOCKUP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga349ccea33accc705595624c2d334fbcb">CoreDebug_DHCSR_S_SLEEP_Pos</link>   18U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga98d51538e645c2c1a422279cd85a0a25">CoreDebug_DHCSR_S_SLEEP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga349ccea33accc705595624c2d334fbcb">CoreDebug_DHCSR_S_SLEEP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga760a9a0d7f39951dc3f07d01f1f64772">CoreDebug_DHCSR_S_HALT_Pos</link>   17U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga9f881ade3151a73bc5b02b73fe6473ca">CoreDebug_DHCSR_S_HALT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga760a9a0d7f39951dc3f07d01f1f64772">CoreDebug_DHCSR_S_HALT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga20a71871ca8768019c51168c70c3f41d">CoreDebug_DHCSR_S_REGRDY_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gac4cd6f3178de48f473d8903e8c847c07">CoreDebug_DHCSR_S_REGRDY_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga20a71871ca8768019c51168c70c3f41d">CoreDebug_DHCSR_S_REGRDY_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga85747214e2656df6b05ec72e4d22bd6d">CoreDebug_DHCSR_C_SNAPSTALL_Pos</link>   5U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga53aa99b2e39a67622f3b9973e079c2b4">CoreDebug_DHCSR_C_SNAPSTALL_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga85747214e2656df6b05ec72e4d22bd6d">CoreDebug_DHCSR_C_SNAPSTALL_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga0d2907400eb948a4ea3886ca083ec8e3">CoreDebug_DHCSR_C_MASKINTS_Pos</link>   3U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga77fe1ef3c4a729c1c82fb62a94a51c31">CoreDebug_DHCSR_C_MASKINTS_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga0d2907400eb948a4ea3886ca083ec8e3">CoreDebug_DHCSR_C_MASKINTS_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gae1fc39e80de54c0339cbb1b298a9f0f9">CoreDebug_DHCSR_C_STEP_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gae6bda72fbd32cc5734ff3542170dc00d">CoreDebug_DHCSR_C_STEP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1gae1fc39e80de54c0339cbb1b298a9f0f9">CoreDebug_DHCSR_C_STEP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gaddf1d43f8857e4efc3dc4e6b15509692">CoreDebug_DHCSR_C_HALT_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga1d905a3aa594eb2e8bb78bcc4da05b3f">CoreDebug_DHCSR_C_HALT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1gaddf1d43f8857e4efc3dc4e6b15509692">CoreDebug_DHCSR_C_HALT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gab557abb5b172b74d2cf44efb9d824e4e">CoreDebug_DHCSR_C_DEBUGEN_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gab815c741a4fc2a61988cd2fb7594210b">CoreDebug_DHCSR_C_DEBUGEN_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1gab557abb5b172b74d2cf44efb9d824e4e">CoreDebug_DHCSR_C_DEBUGEN_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga51e75942fc0614bc9bb2c0e96fcdda9a">CoreDebug_DCRSR_REGWnR_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga1eef4992d8f84bc6c0dffed1c87f90a5">CoreDebug_DCRSR_REGWnR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga51e75942fc0614bc9bb2c0e96fcdda9a">CoreDebug_DCRSR_REGWnR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga52182c8a9f63a52470244c0bc2064f7b">CoreDebug_DCRSR_REGSEL_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga17cafbd72b55030219ce5609baa7c01d">CoreDebug_DCRSR_REGSEL_Msk</link>   (0x1FUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga52182c8a9f63a52470244c0bc2064f7b">CoreDebug_DCRSR_REGSEL_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga6ff2102b98f86540224819a1b767ba39">CoreDebug_DEMCR_TRCENA_Pos</link>   24U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga5e99652c1df93b441257389f49407834">CoreDebug_DEMCR_TRCENA_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga6ff2102b98f86540224819a1b767ba39">CoreDebug_DEMCR_TRCENA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga341020a3b7450416d72544eaf8e57a64">CoreDebug_DEMCR_MON_REQ_Pos</link>   19U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gae6384cbe8045051186d13ef9cdeace95">CoreDebug_DEMCR_MON_REQ_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga341020a3b7450416d72544eaf8e57a64">CoreDebug_DEMCR_MON_REQ_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga9ae10710684e14a1a534e785ef390e1b">CoreDebug_DEMCR_MON_STEP_Pos</link>   18U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga2ded814556de96fc369de7ae9a7ceb98">CoreDebug_DEMCR_MON_STEP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga9ae10710684e14a1a534e785ef390e1b">CoreDebug_DEMCR_MON_STEP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga1e2f706a59e0d8131279af1c7e152f8d">CoreDebug_DEMCR_MON_PEND_Pos</link>   17U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga68ec55930269fab78e733dcfa32392f8">CoreDebug_DEMCR_MON_PEND_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga1e2f706a59e0d8131279af1c7e152f8d">CoreDebug_DEMCR_MON_PEND_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga802829678f6871863ae9ecf60a10425c">CoreDebug_DEMCR_MON_EN_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gac2b46b9b65bf8d23027f255fc9641977">CoreDebug_DEMCR_MON_EN_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga802829678f6871863ae9ecf60a10425c">CoreDebug_DEMCR_MON_EN_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gaed9f42053031a9a30cd8054623304c0a">CoreDebug_DEMCR_VC_HARDERR_Pos</link>   10U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga803fc98c5bb85f10f0347b23794847d1">CoreDebug_DEMCR_VC_HARDERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1gaed9f42053031a9a30cd8054623304c0a">CoreDebug_DEMCR_VC_HARDERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga22079a6e436f23b90308be97e19cf07e">CoreDebug_DEMCR_VC_INTERR_Pos</link>   9U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gad6815d8e3df302d2f0ff2c2c734ed29a">CoreDebug_DEMCR_VC_INTERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga22079a6e436f23b90308be97e19cf07e">CoreDebug_DEMCR_VC_INTERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gab8e3d8f0f9590a51bbf10f6da3ad6933">CoreDebug_DEMCR_VC_BUSERR_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga9d29546aefe3ca8662a7fe48dd4a5b2b">CoreDebug_DEMCR_VC_BUSERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1gab8e3d8f0f9590a51bbf10f6da3ad6933">CoreDebug_DEMCR_VC_BUSERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga16f0d3d2ce1e1e8cd762d938ac56c4ac">CoreDebug_DEMCR_VC_STATERR_Pos</link>   7U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gaa38b947d77672c48bba1280c0a642e19">CoreDebug_DEMCR_VC_STATERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga16f0d3d2ce1e1e8cd762d938ac56c4ac">CoreDebug_DEMCR_VC_STATERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga10fc7c53bca904c128bc8e1a03072d50">CoreDebug_DEMCR_VC_CHKERR_Pos</link>   6U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga2f98b461d19746ab2febfddebb73da6f">CoreDebug_DEMCR_VC_CHKERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga10fc7c53bca904c128bc8e1a03072d50">CoreDebug_DEMCR_VC_CHKERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gac9d13eb2add61f610d5ced1f7ad2adf8">CoreDebug_DEMCR_VC_NOCPERR_Pos</link>   5U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga03ee58b1b02fdbf21612809034562f1c">CoreDebug_DEMCR_VC_NOCPERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1gac9d13eb2add61f610d5ced1f7ad2adf8">CoreDebug_DEMCR_VC_NOCPERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga444454f7c7748e76cd76c3809c887c41">CoreDebug_DEMCR_VC_MMERR_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1gad420a9b60620584faaca6289e83d3a87">CoreDebug_DEMCR_VC_MMERR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga444454f7c7748e76cd76c3809c887c41">CoreDebug_DEMCR_VC_MMERR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga9fcf09666f7063a7303117aa32a85d5a">CoreDebug_DEMCR_VC_CORERESET_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core_debug_1ga906476e53c1e1487c30f3a1181df9e30">CoreDebug_DEMCR_VC_CORERESET_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___core_debug_1ga9fcf09666f7063a7303117aa32a85d5a">CoreDebug_DEMCR_VC_CORERESET_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link>   (0xE000E000UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gadd76251e412a195ec0a8f47227a8359e">ITM_BASE</link>   (0xE0000000UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gafdab534f961bf8935eb456cb7700dcd2">DWT_BASE</link>   (0xE0001000UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga2b1eeff850a7e418844ca847145a1a68">TPI_BASE</link>   (0xE0040000UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga680604dbcda9e9b31a1639fcffe5230b">CoreDebug_BASE</link>   (0xE000EDF0UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga58effaac0b93006b756d33209e814646">SysTick_BASE</link>   (<link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link> +  0x0010UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gaa0288691785a5f868238e0468b39523d">NVIC_BASE</link>   (<link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link> +  0x0100UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gad55a7ddb8d4b2398b0c1cfec76c0d9fd">SCB_BASE</link>   (<link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link> +  0x0D00UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga9fe0cd2eef83a8adad94490d9ecca63f">SCnSCB</link>   ((<link linkend="_struct_s_cn_s_c_b___type">SCnSCB_Type</link>    *)     <link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link>      )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gaaaf6477c2bde2f00f99e3c2fd1060b01">SCB</link>   ((<link linkend="_struct_s_c_b___type">SCB_Type</link>       *)     <link linkend="_group___c_m_s_i_s__core__base_1gad55a7ddb8d4b2398b0c1cfec76c0d9fd">SCB_BASE</link>      )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gacd96c53beeaff8f603fcda425eb295de">SysTick</link>   ((<link linkend="_struct_sys_tick___type">SysTick_Type</link>   *)     <link linkend="_group___c_m_s_i_s__core__base_1ga58effaac0b93006b756d33209e814646">SysTick_BASE</link>  )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gac8e97e8ce56ae9f57da1363a937f8a17">NVIC</link>   ((<link linkend="_struct_n_v_i_c___type">NVIC_Type</link>      *)     <link linkend="_group___c_m_s_i_s__core__base_1gaa0288691785a5f868238e0468b39523d">NVIC_BASE</link>     )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gabae7cdf882def602cb787bb039ff6a43">ITM</link>   ((<link linkend="_struct_i_t_m___type">ITM_Type</link>       *)     <link linkend="_group___c_m_s_i_s__core__base_1gadd76251e412a195ec0a8f47227a8359e">ITM_BASE</link>      )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gabbe5a060185e1d5afa3f85b14e10a6ce">DWT</link>   ((<link linkend="_struct_d_w_t___type">DWT_Type</link>       *)     <link linkend="_group___c_m_s_i_s__core__base_1gafdab534f961bf8935eb456cb7700dcd2">DWT_BASE</link>      )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga8b4dd00016aed25a0ea54e9a9acd1239">TPI</link>   ((<link linkend="_struct_t_p_i___type">TPI_Type</link>       *)     <link linkend="_group___c_m_s_i_s__core__base_1ga2b1eeff850a7e418844ca847145a1a68">TPI_BASE</link>      )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gab6e30a2b802d9021619dbb0be7f5d63d">CoreDebug</link>   ((<link linkend="_struct_core_debug___type">CoreDebug_Type</link> *)     <link linkend="_group___c_m_s_i_s__core__base_1ga680604dbcda9e9b31a1639fcffe5230b">CoreDebug_BASE</link>)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_SetPriorityGrouping</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gafc94dcbaee03e4746ade1f5bb9aaa56d">__NVIC_SetPriorityGrouping</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetPriorityGrouping</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga9b894af672df4373eb637f8288845c05">__NVIC_GetPriorityGrouping</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_EnableIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga71227e1376cde11eda03fcb62f1b33ea">__NVIC_EnableIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetEnableIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaaeb5e7cc0eaad4e2817272e7bf742083">__NVIC_GetEnableIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_DisableIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gae016e4c1986312044ee768806537d52f">__NVIC_DisableIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetPendingIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga5a92ca5fa801ad7adb92be7257ab9694">__NVIC_GetPendingIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_SetPendingIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaabefdd4b790b9a7308929938c0c1e1ad">__NVIC_SetPendingIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_ClearPendingIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga562a86dbdf14827d0fee8fdafb04d191">__NVIC_ClearPendingIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetActive</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaa2837003c28c45abf193fe5e8d27f593">__NVIC_GetActive</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_SetPriority</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga505338e23563a9c074910fb14e7d45fd">__NVIC_SetPriority</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetPriority</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaeb9dc99c8e7700668813144261b0bc73">__NVIC_GetPriority</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_SystemReset</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga0d9aa2d30fa54b41eb780c16e35b676c">__NVIC_SystemReset</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_SetVector</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga0df355460bc1783d58f9d72ee4884208">__NVIC_SetVector</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetVector</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga44b665d2afb708121d9b10c76ff00ee5">__NVIC_GetVector</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_USER_IRQ_OFFSET</emphasis>   16</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">EXC_RETURN_HANDLER</emphasis>   (0xFFFFFFF1UL)     /* return to Handler mode, uses MSP after return                               */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">EXC_RETURN_THREAD_MSP</emphasis>   (0xFFFFFFF9UL)     /* return to Thread mode, uses MSP after return                                */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">EXC_RETURN_THREAD_PSP</emphasis>   (0xFFFFFFFDUL)     /* return to Thread mode, uses PSP after return                                */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa822cb398ee022b59e9e6c5d7bbb228a">ITM_RXBUFFER_EMPTY</link>   ((int32_t)0x5AA55AA5U)</para>
+</listitem>
+            <listitem><para>volatile int32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8">ITM_RxBuffer</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>CMSIS SC300 Core Peripheral Access Layer Header File. </para>
+
+<para><formalpara><title>Version</title>
+
+<para>V5.0.6 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>04. June 2018 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_core__sc300_8h_1aeaaf66c86e5ae02a0e1fe542cb7f4d8c"/>    <section>
+    <title>__CORTEX_SC</title>
+<indexterm><primary>__CORTEX_SC</primary><secondary>core_sc300.h</secondary></indexterm>
+<indexterm><primary>core_sc300.h</primary><secondary>__CORTEX_SC</secondary></indexterm>
+<para><computeroutput>#define __CORTEX_SC   (300U)</computeroutput></para>
+<para>Cortex secure core </para>
+    </section><anchor xml:id="_core__sc300_8h_1aa167d0f532a7c2b2e3a6395db2fa0776"/>    <section>
+    <title>__FPU_USED</title>
+<indexterm><primary>__FPU_USED</primary><secondary>core_sc300.h</secondary></indexterm>
+<indexterm><primary>core_sc300.h</primary><secondary>__FPU_USED</secondary></indexterm>
+<para><computeroutput>#define __FPU_USED   0U</computeroutput></para>
+<para>__FPU_USED indicates whether an FPU is used or not. This core does not support an FPU at all </para>
+    </section><anchor xml:id="_core__sc300_8h_1af63697ed9952cc71e1225efe205f6cd3"/>    <section>
+    <title>__I</title>
+<indexterm><primary>__I</primary><secondary>core_sc300.h</secondary></indexterm>
+<indexterm><primary>core_sc300.h</primary><secondary>__I</secondary></indexterm>
+<para><computeroutput>#define __I   volatile const</computeroutput></para>
+<para>Defines &apos;read only&apos; permissions </para>
+    </section><anchor xml:id="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be"/>    <section>
+    <title>__IO</title>
+<indexterm><primary>__IO</primary><secondary>core_sc300.h</secondary></indexterm>
+<indexterm><primary>core_sc300.h</primary><secondary>__IO</secondary></indexterm>
+<para><computeroutput>#define __IO   volatile</computeroutput></para>
+<para>Defines &apos;read / write&apos; permissions </para>
+    </section><anchor xml:id="_core__sc300_8h_1a7e25d9380f9ef903923964322e71f2f6"/>    <section>
+    <title>__O</title>
+<indexterm><primary>__O</primary><secondary>core_sc300.h</secondary></indexterm>
+<indexterm><primary>core_sc300.h</primary><secondary>__O</secondary></indexterm>
+<para><computeroutput>#define __O   volatile</computeroutput></para>
+<para>Defines &apos;write only&apos; permissions </para>
+    </section><anchor xml:id="_core__sc300_8h_1a2f960c3c99ab33e1cf4b5287821c44dd"/>    <section>
+    <title>__SC300_CMSIS_VERSION</title>
+<indexterm><primary>__SC300_CMSIS_VERSION</primary><secondary>core_sc300.h</secondary></indexterm>
+<indexterm><primary>core_sc300.h</primary><secondary>__SC300_CMSIS_VERSION</secondary></indexterm>
+<para><computeroutput>#define __SC300_CMSIS_VERSION</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((<link linkend="_core__sc300_8h_1a0e2124db4f74f2b355904314accf1790">__SC300_CMSIS_VERSION_MAIN</link>&#32;&lt;&lt;&#32;16U)&#32;|&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_core__sc300_8h_1a664c9e59952455ddeee28173b864fe9d">__SC300_CMSIS_VERSION_SUB</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
+</programlisting>
+<para><para><link linkend="_deprecated_1_deprecated000036">Deprecated</link> 
+<para>CMSIS HAL version number </para>
+</para></para>
+    </section><anchor xml:id="_core__sc300_8h_1a0e2124db4f74f2b355904314accf1790"/>    <section>
+    <title>__SC300_CMSIS_VERSION_MAIN</title>
+<indexterm><primary>__SC300_CMSIS_VERSION_MAIN</primary><secondary>core_sc300.h</secondary></indexterm>
+<indexterm><primary>core_sc300.h</primary><secondary>__SC300_CMSIS_VERSION_MAIN</secondary></indexterm>
+<para><computeroutput>#define __SC300_CMSIS_VERSION_MAIN   (<link linkend="_cmsis__version_8h_1a85987c5fcc1e012d7ac01369ee6ca2b5">__CM_CMSIS_VERSION_MAIN</link>)</computeroutput></para>
+<para><para><link linkend="_deprecated_1_deprecated000034">Deprecated</link> 
+<para>[31:16] CMSIS HAL main version </para>
+</para></para>
+    </section><anchor xml:id="_core__sc300_8h_1a664c9e59952455ddeee28173b864fe9d"/>    <section>
+    <title>__SC300_CMSIS_VERSION_SUB</title>
+<indexterm><primary>__SC300_CMSIS_VERSION_SUB</primary><secondary>core_sc300.h</secondary></indexterm>
+<indexterm><primary>core_sc300.h</primary><secondary>__SC300_CMSIS_VERSION_SUB</secondary></indexterm>
+<para><computeroutput>#define __SC300_CMSIS_VERSION_SUB   (<link linkend="_cmsis__version_8h_1a22083cbe7f0606cfd538ec12b2e41608">__CM_CMSIS_VERSION_SUB</link>)</computeroutput></para>
+<para><para><link linkend="_deprecated_1_deprecated000035">Deprecated</link> 
+<para>[15:0] CMSIS HAL sub version </para>
+</para></para>
+</section>
+</section>
+</section>

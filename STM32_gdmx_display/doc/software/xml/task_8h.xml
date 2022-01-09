@@ -1,0 +1,2250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="task_8h" kind="file" language="C++">
+    <compoundname>task.h</compoundname>
+    <includes refid="list_8h" local="yes">list.h</includes>
+    <includedby refid="cmsis__os_8h" local="yes">Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h</includedby>
+    <includedby refid="croutine_8c" local="yes">Middlewares/Third_Party/FreeRTOS/Source/croutine.c</includedby>
+    <includedby refid="event__groups_8c" local="yes">Middlewares/Third_Party/FreeRTOS/Source/event_groups.c</includedby>
+    <includedby refid="timers_8h" local="yes">Middlewares/Third_Party/FreeRTOS/Source/include/timers.h</includedby>
+    <includedby refid="port_8c" local="yes">Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c</includedby>
+    <includedby refid="queue_8c" local="yes">Middlewares/Third_Party/FreeRTOS/Source/queue.c</includedby>
+    <includedby refid="stream__buffer_8c" local="yes">Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c</includedby>
+    <includedby refid="tasks_8c" local="yes">Middlewares/Third_Party/FreeRTOS/Source/tasks.c</includedby>
+    <includedby refid="timers_8c" local="yes">Middlewares/Third_Party/FreeRTOS/Source/timers.c</includedby>
+    <includedby refid="freertos_8c" local="yes">Src/freertos.c</includedby>
+    <includedby refid="stm32f1xx__it_8c" local="yes">Src/stm32f1xx_it.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>list.h</label>
+        <link refid="list_8h_source"/>
+      </node>
+      <node id="1">
+        <label>Middlewares/Third_Party/FreeRTOS/Source/include/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h</label>
+        <link refid="cmsis__os_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h</label>
+        <link refid="event__groups_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Middlewares/Third_Party/FreeRTOS/Source/include/timers.h</label>
+        <link refid="timers_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="6">
+        <label>Src/stm32f1xx_it.c</label>
+        <link refid="stm32f1xx__it_8c"/>
+      </node>
+      <node id="1">
+        <label>Middlewares/Third_Party/FreeRTOS/Source/include/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structx_t_i_m_e___o_u_t" prot="public">xTIME_OUT</innerclass>
+    <innerclass refid="structx_m_e_m_o_r_y___r_e_g_i_o_n" prot="public">xMEMORY_REGION</innerclass>
+    <innerclass refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s" prot="public">xTASK_PARAMETERS</innerclass>
+    <innerclass refid="structx_t_a_s_k___s_t_a_t_u_s" prot="public">xTASK_STATUS</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="task_8h_1a3de6ae5641d96a68aa027673b6588016" prot="public" static="no">
+        <name>tskKERNEL_VERSION_NUMBER</name>
+        <initializer>&quot;V10.0.1&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="46" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1a790e0e16f79e71d4791435a31d5b0fc7" prot="public" static="no">
+        <name>tskKERNEL_VERSION_MAJOR</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="47" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1ab0b5ab04d8419227d0a5ac94af6b3639" prot="public" static="no">
+        <name>tskKERNEL_VERSION_MINOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="48" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1a4cb001d5c86f4a8a5272f27227eb3247" prot="public" static="no">
+        <name>tskKERNEL_VERSION_BUILD</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="49" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1a94ed0b9b3b4e8ccc859c322f18583e67" prot="public" static="no">
+        <name>tskIDLE_PRIORITY</name>
+        <initializer>( ( UBaseType_t ) 0U )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines the priority used by the idle task. This must not be modified. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="154" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1a767e474430db1e60056e9678763f9202" prot="public" static="no">
+        <name>taskYIELD</name>
+        <param></param>
+        <initializer>portYIELD()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="164" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1ab7bf0ae866292ba8296091a9d5209689" prot="public" static="no">
+        <name>taskENTER_CRITICAL</name>
+        <param></param>
+        <initializer>portENTER_CRITICAL()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="178" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1acb27098fc27d117f720d96bfdcd2b4c8" prot="public" static="no">
+        <name>taskENTER_CRITICAL_FROM_ISR</name>
+        <param></param>
+        <initializer>portSET_INTERRUPT_MASK_FROM_ISR()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="179" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1aac8f36abc45ac4ee714bd6b81e3b1643" prot="public" static="no">
+        <name>taskEXIT_CRITICAL</name>
+        <param></param>
+        <initializer>portEXIT_CRITICAL()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="193" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1afa2f5acc3c925b6542ecca1acf67a234" prot="public" static="no">
+        <name>taskEXIT_CRITICAL_FROM_ISR</name>
+        <param><defname>x</defname></param>
+        <initializer>portCLEAR_INTERRUPT_MASK_FROM_ISR( x )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="194" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1aa455a648c2224964ee57758b8794198e" prot="public" static="no">
+        <name>taskDISABLE_INTERRUPTS</name>
+        <param></param>
+        <initializer>portDISABLE_INTERRUPTS()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="203" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1a04361ba499e91eb35324e4cba6feea17" prot="public" static="no">
+        <name>taskENABLE_INTERRUPTS</name>
+        <param></param>
+        <initializer>portENABLE_INTERRUPTS()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="213" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1a0cad071ca127a35df93166e9ed5b6ada" prot="public" static="no">
+        <name>taskSCHEDULER_SUSPENDED</name>
+        <initializer>( ( BaseType_t ) 0 )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="218" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1a0923fdaae1bfe42ac5cccd9e9ddca9ed" prot="public" static="no">
+        <name>taskSCHEDULER_NOT_STARTED</name>
+        <initializer>( ( BaseType_t ) 1 )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="219" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1acbb675035741787d29da475b5a887545" prot="public" static="no">
+        <name>taskSCHEDULER_RUNNING</name>
+        <initializer>( ( BaseType_t ) 2 )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="220" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1a0d2d54fb8a64011dfbb54983e4ed06bd" prot="public" static="no">
+        <name>xTaskNotify</name>
+        <param><defname>xTaskToNotify</defname></param>
+        <param><defname>ulValue</defname></param>
+        <param><defname>eAction</defname></param>
+        <initializer>xTaskGenericNotify( ( xTaskToNotify ), ( ulValue ), ( eAction ), NULL )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1766" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="1766" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1aaa80adec29a2eebbfe0a551684a0acca" prot="public" static="no">
+        <name>xTaskNotifyAndQuery</name>
+        <param><defname>xTaskToNotify</defname></param>
+        <param><defname>ulValue</defname></param>
+        <param><defname>eAction</defname></param>
+        <param><defname>pulPreviousNotifyValue</defname></param>
+        <initializer>xTaskGenericNotify( ( xTaskToNotify ), ( ulValue ), ( eAction ), ( pulPreviousNotifyValue ) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1767" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="1767" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1a1ed9129068b96a909356bd0369c5ecb0" prot="public" static="no">
+        <name>xTaskNotifyFromISR</name>
+        <param><defname>xTaskToNotify</defname></param>
+        <param><defname>ulValue</defname></param>
+        <param><defname>eAction</defname></param>
+        <param><defname>pxHigherPriorityTaskWoken</defname></param>
+        <initializer>xTaskGenericNotifyFromISR( ( xTaskToNotify ), ( ulValue ), ( eAction ), NULL, ( pxHigherPriorityTaskWoken ) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1857" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="1857" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1a5c491b42e243a91c7473887d1fb96dd5" prot="public" static="no">
+        <name>xTaskNotifyAndQueryFromISR</name>
+        <param><defname>xTaskToNotify</defname></param>
+        <param><defname>ulValue</defname></param>
+        <param><defname>eAction</defname></param>
+        <param><defname>pulPreviousNotificationValue</defname></param>
+        <param><defname>pxHigherPriorityTaskWoken</defname></param>
+        <initializer>xTaskGenericNotifyFromISR( ( xTaskToNotify ), ( ulValue ), ( eAction ), ( pulPreviousNotificationValue ), ( pxHigherPriorityTaskWoken ) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1858" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="1858" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="task_8h_1ac60cbd05577a3e4f3c3587dd9b213930" prot="public" static="no">
+        <name>xTaskNotifyGive</name>
+        <param><defname>xTaskToNotify</defname></param>
+        <initializer>xTaskGenericNotify( ( xTaskToNotify ), ( 0 ), eIncrement, NULL )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1979" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="1979" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="task_8h_1a1749369458e2282a22e862a619a3892c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>eTaskState</name>
+        <enumvalue id="task_8h_1a1749369458e2282a22e862a619a3892ca83318c0d58e6b2bafaefa1be597fb8b6" prot="public">
+          <name>eRunning</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1a1749369458e2282a22e862a619a3892ca8570b65f331057b2cf92c504f0a2bc83" prot="public">
+          <name>eReady</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1a1749369458e2282a22e862a619a3892cad23d72c68f43b6fff4962ad4154766af" prot="public">
+          <name>eBlocked</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1a1749369458e2282a22e862a619a3892caf35a900d49fdfc2502eefc68fdb70f72" prot="public">
+          <name>eSuspended</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1a1749369458e2282a22e862a619a3892cacef5c6e771d3a07f656e07a13a20ba35" prot="public">
+          <name>eDeleted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1a1749369458e2282a22e862a619a3892cab32c771bb60dc8b502f65b81eef3bd86" prot="public">
+          <name>eInvalid</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="70" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="71" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="enum" id="task_8h_1ae8abc4f7da5b6880467daafbf19cd233" prot="public" static="no" strong="no">
+        <type></type>
+        <name>eNotifyAction</name>
+        <enumvalue id="task_8h_1ae8abc4f7da5b6880467daafbf19cd233abac2b17ab15444724b6f35d47cd0a64a" prot="public">
+          <name>eNoAction</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1ae8abc4f7da5b6880467daafbf19cd233ab7b1af2eeee53ae78eeff37c1cb6f79b" prot="public">
+          <name>eSetBits</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1ae8abc4f7da5b6880467daafbf19cd233a04fb0e98d2400e4cd28f1593bc868822" prot="public">
+          <name>eIncrement</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1ae8abc4f7da5b6880467daafbf19cd233ab61fc296ef909186b5824c823b33e130" prot="public">
+          <name>eSetValueWithOverwrite</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1ae8abc4f7da5b6880467daafbf19cd233acc4dd3fe71b62c751187a2c4c515abac" prot="public">
+          <name>eSetValueWithoutOverwrite</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="81" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="82" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="enum" id="task_8h_1afd168a210ae0f2fb0fca242860a8178e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>eSleepModeStatus</name>
+        <enumvalue id="task_8h_1afd168a210ae0f2fb0fca242860a8178eaba7b1a394c63faa14a85dbb191f1c6f9" prot="public">
+          <name>eAbortSleep</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1afd168a210ae0f2fb0fca242860a8178ea2c539add8104402c6336bc33a660d1d1" prot="public">
+          <name>eStandardSleep</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="task_8h_1afd168a210ae0f2fb0fca242860a8178ea004c4d9f1a2619193750d0e2f18f6046" prot="public">
+          <name>eNoTasksWaitingTimeout</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="142" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="143" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="task_8h_1ae95f44d4cfeb4a599c6cc258d241cb6b" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* TaskHandle_t</definition>
+        <argsstring></argsstring>
+        <name>TaskHandle_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="61" column="15" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="task_8h_1af984026250bf8fece2e0068874d4661d" prot="public" static="no">
+        <type>BaseType_t(*</type>
+        <definition>typedef BaseType_t(* TaskHookFunction_t) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>TaskHookFunction_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="67" column="9" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="task_8h_1a558b407b5433bee1696535e3c4816bdf" prot="public" static="no">
+        <type>struct <ref refid="structx_t_i_m_e___o_u_t" kindref="compound">xTIME_OUT</ref></type>
+        <definition>typedef struct xTIME_OUT TimeOut_t</definition>
+        <argsstring></argsstring>
+        <name>TimeOut_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="97" column="11"/>
+      </memberdef>
+      <memberdef kind="typedef" id="task_8h_1abc1e4d1b3f52e2a9101487e1831b992a" prot="public" static="no">
+        <type>struct <ref refid="structx_m_e_m_o_r_y___r_e_g_i_o_n" kindref="compound">xMEMORY_REGION</ref></type>
+        <definition>typedef struct xMEMORY_REGION MemoryRegion_t</definition>
+        <argsstring></argsstring>
+        <name>MemoryRegion_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="107" column="16"/>
+      </memberdef>
+      <memberdef kind="typedef" id="task_8h_1a388dc3e95bc2a93a2841a8d1e49634f3" prot="public" static="no">
+        <type>struct <ref refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s" kindref="compound">xTASK_PARAMETERS</ref></type>
+        <definition>typedef struct xTASK_PARAMETERS TaskParameters_t</definition>
+        <argsstring></argsstring>
+        <name>TaskParameters_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="124" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="task_8h_1ae5c0c4b9b2c8af5836583b2984ef5b6e" prot="public" static="no">
+        <type>struct <ref refid="structx_t_a_s_k___s_t_a_t_u_s" kindref="compound">xTASK_STATUS</ref></type>
+        <definition>typedef struct xTASK_STATUS TaskStatus_t</definition>
+        <argsstring></argsstring>
+        <name>TaskStatus_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="139" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="task_8h_1ad889595baff9faf9efe02f3696825409" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskAllocateMPURegions</definition>
+        <argsstring>(TaskHandle_t xTask, const MemoryRegion_t *const pxRegions) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskAllocateMPURegions</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structx_m_e_m_o_r_y___r_e_g_i_o_n" kindref="compound">MemoryRegion_t</ref> *const</type>
+          <declname>pxRegions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="656" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="656" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a27ff4ebce26565bef136bda84201ff80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskDelete</definition>
+        <argsstring>(TaskHandle_t xTaskToDelete) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskDelete</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTaskToDelete</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="697" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="697" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1aa154068cecd7f31446a7a84af44ab1a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskDelay</definition>
+        <argsstring>(const TickType_t xTicksToDelay) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskDelay</name>
+        <param>
+          <type>const TickType_t</type>
+          <declname>xTicksToDelay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="749" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="749" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a067da3e949e248096ec6c01f9cb75a47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskDelayUntil</definition>
+        <argsstring>(TickType_t *const pxPreviousWakeTime, const TickType_t xTimeIncrement) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskDelayUntil</name>
+        <param>
+          <type>TickType_t *const</type>
+          <declname>pxPreviousWakeTime</declname>
+        </param>
+        <param>
+          <type>const TickType_t</type>
+          <declname>xTimeIncrement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="808" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="808" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1afefe333df0492c8411c0094badd25185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskAbortDelay</definition>
+        <argsstring>(TaskHandle_t xTask) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskAbortDelay</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="833" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="833" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a3edc3f1a0adc8403f42529bce4ae3446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxTaskPriorityGet</definition>
+        <argsstring>(TaskHandle_t xTask) PRIVILEGED_FUNCTION</argsstring>
+        <name>uxTaskPriorityGet</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="880" column="13" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="880" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1abc808e43d257a47de4b431483c65ea15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxTaskPriorityGetFromISR</definition>
+        <argsstring>(TaskHandle_t xTask) PRIVILEGED_FUNCTION</argsstring>
+        <name>uxTaskPriorityGetFromISR</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>task. h <preformatted>UBaseType_t uxTaskPriorityGetFromISR( TaskHandle_t xTask );</preformatted></para>
+<para>A version of uxTaskPriorityGet() that can be used from an ISR. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="888" column="13" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="888" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a954df77397d616484edb7c58c7760b10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>eTaskState</type>
+        <definition>eTaskState eTaskGetState</definition>
+        <argsstring>(TaskHandle_t xTask) PRIVILEGED_FUNCTION</argsstring>
+        <name>eTaskGetState</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>task. h <preformatted>eTaskState eTaskGetState( TaskHandle_t xTask );</preformatted></para>
+<para>INCLUDE_eTaskGetState must be defined as 1 for this function to be available. See the configuration section for more information.</para>
+<para>Obtain the state of any task. States are encoded by the eTaskState enumerated type.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xTask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle of the task to be queried.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The state of xTask at the time the function was called. Note the state of the task might change between the function being called, and the functions return value being tested by the calling task. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="906" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="906" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1ac08c26d037d0dc685740eec9b2028715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskGetInfo</definition>
+        <argsstring>(TaskHandle_t xTask, TaskStatus_t *pxTaskStatus, BaseType_t xGetFreeStackSpace, eTaskState eState) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskGetInfo</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <param>
+          <type><ref refid="structx_t_a_s_k___s_t_a_t_u_s" kindref="compound">TaskStatus_t</ref> *</type>
+          <declname>pxTaskStatus</declname>
+        </param>
+        <param>
+          <type>BaseType_t</type>
+          <declname>xGetFreeStackSpace</declname>
+        </param>
+        <param>
+          <type>eTaskState</type>
+          <declname>eState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="962" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="962" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a1ee31be76e326e0644dbd6ac40a787b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskPrioritySet</definition>
+        <argsstring>(TaskHandle_t xTask, UBaseType_t uxNewPriority) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskPrioritySet</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <param>
+          <type>UBaseType_t</type>
+          <declname>uxNewPriority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1004" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1004" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a84d4e660b04630be2939d91b3c2412f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskSuspend</definition>
+        <argsstring>(TaskHandle_t xTaskToSuspend) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskSuspend</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTaskToSuspend</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1055" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1055" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a84a1584f29fb7736a1aa72ad5b3e9b44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskResume</definition>
+        <argsstring>(TaskHandle_t xTaskToResume) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskResume</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTaskToResume</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1104" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1104" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1aefbfd37c0661c3062fafd7334bff9aed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskResumeFromISR</definition>
+        <argsstring>(TaskHandle_t xTaskToResume) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskResumeFromISR</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTaskToResume</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1133" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1133" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1aaf9dca1065c60abdeb309d56ab7293cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskStartScheduler</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskStartScheduler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1166" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="1894" bodyend="2011" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1166" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a1651e13c7ccd6273f53a62425ec79a15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskEndScheduler</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskEndScheduler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1222" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2014" bodyend="2022" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1222" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a366b302eba79d10b5ee2a3756f0fcc43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskSuspendAll</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskSuspendAll</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1273" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2025" bodyend="2032" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1273" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a003f8ae6d649225abd030cc76e1c7d0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskResumeAll</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskResumeAll</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1327" column="12" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2098" bodyend="2205" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1327" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a753ecfe23e7386066ecccad5d16422f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TickType_t</type>
+        <definition>TickType_t xTaskGetTickCount</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskGetTickCount</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1342" column="12" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2208" bodyend="2220" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1342" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a092be3fd5752625303c307620be523ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TickType_t</type>
+        <definition>TickType_t xTaskGetTickCountFromISR</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskGetTickCountFromISR</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1358" column="12" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2223" bodyend="2251" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1358" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a70a89a0f07c7db5d695707d1f6f44a4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxTaskGetNumberOfTasks</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>uxTaskGetNumberOfTasks</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1372" column="13" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2254" bodyend="2259" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1372" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1ae2ffb6a591fef808cf10353059b1c2bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* pcTaskGetName</definition>
+        <argsstring>(TaskHandle_t xTaskToQuery) PRIVILEGED_FUNCTION</argsstring>
+        <name>pcTaskGetName</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTaskToQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1385" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2262" bodyend="2271" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1385" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a45b3b1cd0227269609499beeeb8c5c26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TaskHandle_t</type>
+        <definition>TaskHandle_t xTaskGetHandle</definition>
+        <argsstring>(const char *pcNameToQuery) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskGetHandle</name>
+        <param>
+          <type>const char *</type>
+          <declname>pcNameToQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1401" column="14" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1401" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a799967af01d328132cde814e47733437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxTaskGetStackHighWaterMark</definition>
+        <argsstring>(TaskHandle_t xTask) PRIVILEGED_FUNCTION</argsstring>
+        <name>uxTaskGetStackHighWaterMark</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="task_8h_source" kindref="compound">task.h</ref> <preformatted>UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask );</preformatted></para>
+<para>INCLUDE_uxTaskGetStackHighWaterMark must be set to 1 in <ref refid="_free_r_t_o_s_config_8h_source" kindref="compound">FreeRTOSConfig.h</ref> for this function to be available.</para>
+<para>Returns the high water mark of the stack associated with xTask. That is, the minimum free stack space there has been (in words, so on a 32 bit machine a value of 1 means 4 bytes) since the task started. The smaller the returned number the closer the task has come to overflowing its stack.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xTask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle of the task associated with the stack to be checked. Set xTask to NULL to check the stack of the calling task.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The smallest amount of free stack space there has been (in words, so actual spaces on the stack rather than bytes) since the task referenced by xTask was created. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1422" column="13" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1422" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1ab6607e5d8a9664e3aa9fe16efa694e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskCallApplicationTaskHook</definition>
+        <argsstring>(TaskHandle_t xTask, void *pvParameter) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskCallApplicationTaskHook</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pvParameter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="task_8h_source" kindref="compound">task.h</ref> <preformatted>BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask, void *pvParameter );</preformatted></para>
+<para>Calls the hook function associated with xTask. Passing xTask as NULL has the effect of calling the Running tasks (the calling task) hook function.</para>
+<para>pvParameter is passed to the hook function for the task to interpret as it wants. The return value is the value returned by the task hook function registered by the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1475" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1475" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a3d5446a4403457e855cb84b3bba5570a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TaskHandle_t</type>
+        <definition>TaskHandle_t xTaskGetIdleTaskHandle</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskGetIdleTaskHandle</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>xTaskGetIdleTaskHandle() is only available if INCLUDE_xTaskGetIdleTaskHandle is set to 1 in <ref refid="_free_r_t_o_s_config_8h_source" kindref="compound">FreeRTOSConfig.h</ref>.</para>
+<para>Simply returns the handle of the idle task. It is not valid to call xTaskGetIdleTaskHandle() before the scheduler has been started. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1484" column="14" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1484" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1aa4603f3de3d809e9beb18d10fbac005d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxTaskGetSystemState</definition>
+        <argsstring>(TaskStatus_t *const pxTaskStatusArray, const UBaseType_t uxArraySize, uint32_t *const pulTotalRunTime) PRIVILEGED_FUNCTION</argsstring>
+        <name>uxTaskGetSystemState</name>
+        <param>
+          <type><ref refid="structx_t_a_s_k___s_t_a_t_u_s" kindref="compound">TaskStatus_t</ref> *const</type>
+          <declname>pxTaskStatusArray</declname>
+        </param>
+        <param>
+          <type>const UBaseType_t</type>
+          <declname>uxArraySize</declname>
+        </param>
+        <param>
+          <type>uint32_t *const</type>
+          <declname>pulTotalRunTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>configUSE_TRACE_FACILITY must be defined as 1 in <ref refid="_free_r_t_o_s_config_8h_source" kindref="compound">FreeRTOSConfig.h</ref> for uxTaskGetSystemState() to be available.</para>
+<para>uxTaskGetSystemState() populates an TaskStatus_t structure for each task in the system. TaskStatus_t structures contain, among other things, members for the task handle, task name, task priority, task state, and total amount of run time consumed by the task. See the TaskStatus_t structure definition in this file for the full member list.</para>
+<para>NOTE: This function is intended for debugging use only as its use results in the scheduler remaining suspended for an extended period.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pxTaskStatusArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to an array of TaskStatus_t structures. The array must contain at least one TaskStatus_t structure for each task that is under the control of the RTOS. The number of tasks under the control of the RTOS can be determined using the uxTaskGetNumberOfTasks() API function.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uxArraySize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the array pointed to by the pxTaskStatusArray parameter. The size is specified as the number of indexes in the array, or the number of TaskStatus_t structures contained in the array, not by the number of bytes in the array.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pulTotalRunTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If configGENERATE_RUN_TIME_STATS is set to 1 in <ref refid="_free_r_t_o_s_config_8h_source" kindref="compound">FreeRTOSConfig.h</ref> then *pulTotalRunTime is set by uxTaskGetSystemState() to the total run time (as defined by the run time stats clock, see <ulink url="http://www.freertos.org/rtos-run-time-stats.html">http://www.freertos.org/rtos-run-time-stats.html</ulink>) since the target booted. pulTotalRunTime can be set to NULL to omit the total run time information.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of TaskStatus_t structures that were populated by uxTaskGetSystemState(). This should equal the number returned by the uxTaskGetNumberOfTasks() API function, but will be zero if the value passed in the uxArraySize parameter was too small.</para>
+</simplesect>
+Example usage: <preformatted>
+ // This example demonstrates how a human readable table of run time stats
+ // information is generated from raw data provided by uxTaskGetSystemState().
+ // The human readable table is written to pcWriteBuffer
+ void vTaskGetRunTimeStats( char *pcWriteBuffer )
+ {
+ TaskStatus_t *pxTaskStatusArray;
+ volatile UBaseType_t uxArraySize, x;
+ uint32_t ulTotalRunTime, ulStatsAsPercentage;
+
+    // Make sure the write buffer does not contain a string.
+    *pcWriteBuffer = 0x00;
+
+    // Take a snapshot of the number of tasks in case it changes while this
+    // function is executing.
+    uxArraySize = uxTaskGetNumberOfTasks();
+
+    // Allocate a TaskStatus_t structure for each task.  An array could be
+    // allocated statically at compile time.
+    pxTaskStatusArray = pvPortMalloc( uxArraySize * sizeof( TaskStatus_t ) );
+
+    if( pxTaskStatusArray != NULL )
+    {
+        // Generate raw status information about each task.
+        uxArraySize = uxTaskGetSystemState( pxTaskStatusArray, uxArraySize, &amp;ulTotalRunTime );
+
+        // For percentage calculations.
+        ulTotalRunTime /= 100UL;
+
+        // Avoid divide by zero errors.
+        if( ulTotalRunTime &gt; 0 )
+        {
+            // For each populated position in the pxTaskStatusArray array,
+            // format the raw data as human readable ASCII data
+            for( x = 0; x &lt; uxArraySize; x++ )
+            {
+                // What percentage of the total run time has the task used?
+                // This will always be rounded down to the nearest integer.
+                // ulTotalRunTimeDiv100 has already been divided by 100.
+                ulStatsAsPercentage = pxTaskStatusArray[ x ].ulRunTimeCounter / ulTotalRunTime;
+
+                if( ulStatsAsPercentage &gt; 0UL )
+                {
+                    sprintf( pcWriteBuffer, &quot;%s\t\t%lu\t\t%lu%%\r\n&quot;, pxTaskStatusArray[ x ].pcTaskName, pxTaskStatusArray[ x ].ulRunTimeCounter, ulStatsAsPercentage );
+                }
+                else
+                {
+                    // If the percentage is zero here then the task has
+                    // consumed less than 1% of the total run time.
+                    sprintf( pcWriteBuffer, &quot;%s\t\t%lu\t\t&lt;1%%\r\n&quot;, pxTaskStatusArray[ x ].pcTaskName, pxTaskStatusArray[ x ].ulRunTimeCounter );
+                }
+
+                pcWriteBuffer += strlen( ( char * ) pcWriteBuffer );
+            }
+        }
+
+        // The array is no longer needed, free the memory it consumes.
+        vPortFree( pxTaskStatusArray );
+    }
+ }
+ </preformatted> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1583" column="13" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1583" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1ab87abc717f34ddced76802d12588a93d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskList</definition>
+        <argsstring>(char *pcWriteBuffer) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskList</name>
+        <param>
+          <type>char *</type>
+          <declname>pcWriteBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1630" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1630" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a52da9b427041a48dc9f6802e10f151d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskGetRunTimeStats</definition>
+        <argsstring>(char *pcWriteBuffer) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskGetRunTimeStats</name>
+        <param>
+          <type>char *</type>
+          <declname>pcWriteBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1684" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1684" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1aa7bd3a4f3847b83900fd6a9f1bacfe9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskGenericNotify</definition>
+        <argsstring>(TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction, uint32_t *pulPreviousNotificationValue) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskGenericNotify</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTaskToNotify</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ulValue</declname>
+        </param>
+        <param>
+          <type>eNotifyAction</type>
+          <declname>eAction</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pulPreviousNotificationValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1765" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1765" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a959c55f7950abffbc4107ce61ca52e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskGenericNotifyFromISR</definition>
+        <argsstring>(TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction, uint32_t *pulPreviousNotificationValue, BaseType_t *pxHigherPriorityTaskWoken) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskGenericNotifyFromISR</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTaskToNotify</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ulValue</declname>
+        </param>
+        <param>
+          <type>eNotifyAction</type>
+          <declname>eAction</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pulPreviousNotificationValue</declname>
+        </param>
+        <param>
+          <type>BaseType_t *</type>
+          <declname>pxHigherPriorityTaskWoken</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1856" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1856" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a0475fcda9718f403521c270a7270ff93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskNotifyWait</definition>
+        <argsstring>(uint32_t ulBitsToClearOnEntry, uint32_t ulBitsToClearOnExit, uint32_t *pulNotificationValue, TickType_t xTicksToWait) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskNotifyWait</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>ulBitsToClearOnEntry</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>ulBitsToClearOnExit</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pulNotificationValue</declname>
+        </param>
+        <param>
+          <type>TickType_t</type>
+          <declname>xTicksToWait</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="1933" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="1933" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a4a4bcf98ad282a596e13f3f30582a11b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskNotifyGiveFromISR</definition>
+        <argsstring>(TaskHandle_t xTaskToNotify, BaseType_t *pxHigherPriorityTaskWoken) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskNotifyGiveFromISR</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTaskToNotify</declname>
+        </param>
+        <param>
+          <type>BaseType_t *</type>
+          <declname>pxHigherPriorityTaskWoken</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2034" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2034" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a66540bef602522a01a519f776e4c07d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ulTaskNotifyTake</definition>
+        <argsstring>(BaseType_t xClearCountOnExit, TickType_t xTicksToWait) PRIVILEGED_FUNCTION</argsstring>
+        <name>ulTaskNotifyTake</name>
+        <param>
+          <type>BaseType_t</type>
+          <declname>xClearCountOnExit</declname>
+        </param>
+        <param>
+          <type>TickType_t</type>
+          <declname>xTicksToWait</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2103" column="10" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2103" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a4cb6c908a9d2d733e9d519d7dc27bb34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskNotifyStateClear</definition>
+        <argsstring>(TaskHandle_t xTask)</argsstring>
+        <name>xTaskNotifyStateClear</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2119" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2119" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a978e25460ac35706f9ad30b46d9403d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskIncrementTick</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskIncrementTick</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2140" column="12" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2582" bodyend="2751" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2140" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a56ae23bc0dece4522d666959902221ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskPlaceOnEventList</definition>
+        <argsstring>(List_t *const pxEventList, const TickType_t xTicksToWait) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskPlaceOnEventList</name>
+        <param>
+          <type><ref refid="structx_l_i_s_t" kindref="compound">List_t</ref> *const</type>
+          <declname>pxEventList</declname>
+        </param>
+        <param>
+          <type>const TickType_t</type>
+          <declname>xTicksToWait</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2173" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2903" bodyend="2917" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2173" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a9d52fa7b60cc6a7b4fd0846700d7834c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskPlaceOnUnorderedEventList</definition>
+        <argsstring>(List_t *pxEventList, const TickType_t xItemValue, const TickType_t xTicksToWait) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskPlaceOnUnorderedEventList</name>
+        <param>
+          <type><ref refid="structx_l_i_s_t" kindref="compound">List_t</ref> *</type>
+          <declname>pxEventList</declname>
+        </param>
+        <param>
+          <type>const TickType_t</type>
+          <declname>xItemValue</declname>
+        </param>
+        <param>
+          <type>const TickType_t</type>
+          <declname>xTicksToWait</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2174" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2920" bodyend="2941" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2174" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1ada3eb00e16241f5b648184a406a6a6fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskPlaceOnEventListRestricted</definition>
+        <argsstring>(List_t *const pxEventList, TickType_t xTicksToWait, const BaseType_t xWaitIndefinitely) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskPlaceOnEventListRestricted</name>
+        <param>
+          <type><ref refid="structx_l_i_s_t" kindref="compound">List_t</ref> *const</type>
+          <declname>pxEventList</declname>
+        </param>
+        <param>
+          <type>TickType_t</type>
+          <declname>xTicksToWait</declname>
+        </param>
+        <param>
+          <type>const BaseType_t</type>
+          <declname>xWaitIndefinitely</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2187" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2187" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a14513b7dd36055f73fba3c5ebbdc1b06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskRemoveFromEventList</definition>
+        <argsstring>(const List_t *const pxEventList) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskRemoveFromEventList</name>
+        <param>
+          <type>const <ref refid="structx_l_i_s_t" kindref="compound">List_t</ref> *const</type>
+          <declname>pxEventList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2213" column="12" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2977" bodyend="3042" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2213" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a340b9bc9f37c9d4d3fb6e303c3ef311b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskRemoveFromUnorderedEventList</definition>
+        <argsstring>(ListItem_t *pxEventListItem, const TickType_t xItemValue) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskRemoveFromUnorderedEventList</name>
+        <param>
+          <type><ref refid="structx_l_i_s_t___i_t_e_m" kindref="compound">ListItem_t</ref> *</type>
+          <declname>pxEventListItem</declname>
+        </param>
+        <param>
+          <type>const TickType_t</type>
+          <declname>xItemValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2214" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="3045" bodyend="3076" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2214" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a26df422f8d635d5191a3e106fbeeed68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskSwitchContext</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskSwitchContext</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2224" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="2844" bodyend="2900" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2224" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a7793b4bbe45c10d4c5104c126b89e87c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TickType_t</type>
+        <definition>TickType_t uxTaskResetEventItemValue</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>uxTaskResetEventItemValue</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2230" column="12" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="4375" bodyend="4386" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2230" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a85a0f9c9f817b18686efbf8f37c72dfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TaskHandle_t</type>
+        <definition>TaskHandle_t xTaskGetCurrentTaskHandle</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskGetCurrentTaskHandle</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2235" column="14" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2235" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a67155ad4ea2482b5f4597a69f2152be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskSetTimeOutState</definition>
+        <argsstring>(TimeOut_t *const pxTimeOut) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskSetTimeOutState</name>
+        <param>
+          <type><ref refid="structx_t_i_m_e___o_u_t" kindref="compound">TimeOut_t</ref> *const</type>
+          <declname>pxTimeOut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2240" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="3079" bodyend="3088" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2240" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a3b018a85d339e536a6c05748dd666a3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskCheckForTimeOut</definition>
+        <argsstring>(TimeOut_t *const pxTimeOut, TickType_t *const pxTicksToWait) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskCheckForTimeOut</name>
+        <param>
+          <type><ref refid="structx_t_i_m_e___o_u_t" kindref="compound">TimeOut_t</ref> *const</type>
+          <declname>pxTimeOut</declname>
+        </param>
+        <param>
+          <type>TickType_t *const</type>
+          <declname>pxTicksToWait</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2246" column="12" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="3099" bodyend="3159" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2246" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a998c69e37431a3a32c637b31ff60089a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskMissedYield</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskMissedYield</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2252" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="3162" bodyend="3165" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2252" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a0241000e08a261372186d34825a35979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskGetSchedulerState</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskGetSchedulerState</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2258" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2258" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1aa715a488a6014df5a9393ca38c5938c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskPriorityInherit</definition>
+        <argsstring>(TaskHandle_t const pxMutexHolder) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskPriorityInherit</name>
+        <param>
+          <type>TaskHandle_t const</type>
+          <declname>pxMutexHolder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2264" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2264" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a02fe2e1419fd6c35f75a1357c5e5ce22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseType_t</type>
+        <definition>BaseType_t xTaskPriorityDisinherit</definition>
+        <argsstring>(TaskHandle_t const pxMutexHolder) PRIVILEGED_FUNCTION</argsstring>
+        <name>xTaskPriorityDisinherit</name>
+        <param>
+          <type>TaskHandle_t const</type>
+          <declname>pxMutexHolder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2270" column="12" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2270" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1aa11e6a58d2534fe91ed8ee3a02c9b5e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskPriorityDisinheritAfterTimeout</definition>
+        <argsstring>(TaskHandle_t const pxMutexHolder, UBaseType_t uxHighestPriorityWaitingTask) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskPriorityDisinheritAfterTimeout</name>
+        <param>
+          <type>TaskHandle_t const</type>
+          <declname>pxMutexHolder</declname>
+        </param>
+        <param>
+          <type>UBaseType_t</type>
+          <declname>uxHighestPriorityWaitingTask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2280" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2280" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1ad8bb91e2267905f0069918802fa7f8b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UBaseType_t</type>
+        <definition>UBaseType_t uxTaskGetTaskNumber</definition>
+        <argsstring>(TaskHandle_t xTask) PRIVILEGED_FUNCTION</argsstring>
+        <name>uxTaskGetTaskNumber</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2285" column="13" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2285" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1ae48f006277815cb1c534284e29ca8f82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskSetTaskNumber</definition>
+        <argsstring>(TaskHandle_t xTask, const UBaseType_t uxHandle) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskSetTaskNumber</name>
+        <param>
+          <type>TaskHandle_t</type>
+          <declname>xTask</declname>
+        </param>
+        <param>
+          <type>const UBaseType_t</type>
+          <declname>uxHandle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2291" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2291" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a8dda6cb26bb158dd9636873135e63912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskStepTick</definition>
+        <argsstring>(const TickType_t xTicksToJump) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskStepTick</name>
+        <param>
+          <type>const TickType_t</type>
+          <declname>xTicksToJump</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2301" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2301" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1ad185d5a451380c4040888620d9a92ec6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>eSleepModeStatus</type>
+        <definition>eSleepModeStatus eTaskConfirmSleepModeStatus</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>eTaskConfirmSleepModeStatus</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2317" column="18" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2317" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1aa1a0ae86baba1a7edda940a6ecd4cfb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pvTaskIncrementMutexHeldCount</definition>
+        <argsstring>(void) PRIVILEGED_FUNCTION</argsstring>
+        <name>pvTaskIncrementMutexHeldCount</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2323" column="6" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2323" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="task_8h_1a9bff8681d5ed262e71b92805ca0da909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void vTaskInternalSetTimeOutState</definition>
+        <argsstring>(TimeOut_t *const pxTimeOut) PRIVILEGED_FUNCTION</argsstring>
+        <name>vTaskInternalSetTimeOutState</name>
+        <param>
+          <type><ref refid="structx_t_i_m_e___o_u_t" kindref="compound">TimeOut_t</ref> *const</type>
+          <declname>pxTimeOut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" line="2329" column="6" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/tasks.c" bodystart="3091" bodyend="3096" declfile="Middlewares/Third_Party/FreeRTOS/Source/include/task.h" declline="2329" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>FreeRTOS<sp/>Kernel<sp/>V10.0.1</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2017<sp/>Amazon.com,<sp/>Inc.<sp/>or<sp/>its<sp/>affiliates.<sp/><sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy<sp/>of</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,<sp/>FITNESS</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>http://www.FreeRTOS.org</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>http://aws.amazon.com/freertos</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>1<sp/>tab<sp/>==<sp/>4<sp/>spaces!</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INC_TASK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INC_TASK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INC_FREERTOS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>&quot;include<sp/>FreeRTOS.h<sp/>must<sp/>appear<sp/>in<sp/>source<sp/>files<sp/>before<sp/>include<sp/>task.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;list.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*-----------------------------------------------------------</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>MACROS<sp/>AND<sp/>DEFINITIONS</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tskKERNEL_VERSION_NUMBER<sp/>&quot;V10.0.1&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tskKERNEL_VERSION_MAJOR<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tskKERNEL_VERSION_MINOR<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tskKERNEL_VERSION_BUILD<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>TaskHandle_t;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>*<sp/>Defines<sp/>the<sp/>prototype<sp/>to<sp/>which<sp/>the<sp/>application<sp/>task<sp/>hook<sp/>function<sp/>must</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>*<sp/>conform.</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BaseType_t<sp/>(*TaskHookFunction_t)(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Task<sp/>states<sp/>returned<sp/>by<sp/>eTaskGetState.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>eRunning<sp/>=<sp/>0,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>task<sp/>is<sp/>querying<sp/>the<sp/>state<sp/>of<sp/>itself,<sp/>so<sp/>must<sp/>be<sp/>running.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>eReady,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>task<sp/>being<sp/>queried<sp/>is<sp/>in<sp/>a<sp/>read<sp/>or<sp/>pending<sp/>ready<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>eBlocked,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>task<sp/>being<sp/>queried<sp/>is<sp/>in<sp/>the<sp/>Blocked<sp/>state.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>eSuspended,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>task<sp/>being<sp/>queried<sp/>is<sp/>in<sp/>the<sp/>Suspended<sp/>state,<sp/>or<sp/>is<sp/>in<sp/>the<sp/>Blocked<sp/>state<sp/>with<sp/>an<sp/>infinite<sp/>time<sp/>out.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>eDeleted,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>task<sp/>being<sp/>queried<sp/>has<sp/>been<sp/>deleted,<sp/>but<sp/>its<sp/>TCB<sp/>has<sp/>not<sp/>yet<sp/>been<sp/>freed.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>eInvalid<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Used<sp/>as<sp/>an<sp/>&apos;invalid<sp/>state&apos;<sp/>value.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/>eTaskState;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Actions<sp/>that<sp/>can<sp/>be<sp/>performed<sp/>when<sp/>vTaskNotify()<sp/>is<sp/>called.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>eNoAction<sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Notify<sp/>the<sp/>task<sp/>without<sp/>updating<sp/>its<sp/>notify<sp/>value.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>eSetBits,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>bits<sp/>in<sp/>the<sp/>task&apos;s<sp/>notification<sp/>value.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>eIncrement,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Increment<sp/>the<sp/>task&apos;s<sp/>notification<sp/>value.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>eSetValueWithOverwrite,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>the<sp/>task&apos;s<sp/>notification<sp/>value<sp/>to<sp/>a<sp/>specific<sp/>value<sp/>even<sp/>if<sp/>the<sp/>previous<sp/>value<sp/>has<sp/>not<sp/>yet<sp/>been<sp/>read<sp/>by<sp/>the<sp/>task.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>eSetValueWithoutOverwrite<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>the<sp/>task&apos;s<sp/>notification<sp/>value<sp/>if<sp/>the<sp/>previous<sp/>value<sp/>has<sp/>been<sp/>read<sp/>by<sp/>the<sp/>task.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}<sp/>eNotifyAction;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/>*<sp/>Used<sp/>internally<sp/>only.</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="structx_t_i_m_e___o_u_t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structx_t_i_m_e___o_u_t" kindref="compound">xTIME_OUT</ref></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseType_t<sp/>xOverflowCount;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>TickType_t<sp/>xTimeOnEntering;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}<sp/><ref refid="structx_t_i_m_e___o_u_t" kindref="compound">TimeOut_t</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/>*<sp/>Defines<sp/>the<sp/>memory<sp/>ranges<sp/>allocated<sp/>to<sp/>the<sp/>task<sp/>when<sp/>an<sp/>MPU<sp/>is<sp/>used.</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="structx_m_e_m_o_r_y___r_e_g_i_o_n" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structx_m_e_m_o_r_y___r_e_g_i_o_n" kindref="compound">xMEMORY_REGION</ref></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvBaseAddress;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ulLengthInBytes;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ulParameters;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}<sp/><ref refid="structx_m_e_m_o_r_y___r_e_g_i_o_n" kindref="compound">MemoryRegion_t</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/>*<sp/>Parameters<sp/>required<sp/>to<sp/>create<sp/>an<sp/>MPU<sp/>protected<sp/>task.</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s" kindref="compound">xTASK_PARAMETERS</ref></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>TaskFunction_t<sp/>pvTaskCode;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pcName;<sp/><sp/></highlight><highlight class="comment">/*lint<sp/>!e971<sp/>Unqualified<sp/>char<sp/>types<sp/>are<sp/>allowed<sp/>for<sp/>strings<sp/>and<sp/>single<sp/>characters<sp/>only.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>usStackDepth;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvParameters;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>UBaseType_t<sp/>uxPriority;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>StackType_t<sp/>*puxStackBuffer;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structx_m_e_m_o_r_y___r_e_g_i_o_n" kindref="compound">MemoryRegion_t</ref><sp/>xRegions[<sp/>portNUM_CONFIGURABLE_REGIONS<sp/>];</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>(<sp/>(<sp/>portUSING_MPU_WRAPPERS<sp/>==<sp/>1<sp/>)<sp/>&amp;&amp;<sp/>(<sp/>configSUPPORT_STATIC_ALLOCATION<sp/>==<sp/>1<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structx_s_t_a_t_i_c___t_c_b" kindref="compound">StaticTask_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxTaskBuffer;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}<sp/><ref refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s" kindref="compound">TaskParameters_t</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Used<sp/>with<sp/>the<sp/>uxTaskGetSystemState()<sp/>function<sp/>to<sp/>return<sp/>the<sp/>state<sp/>of<sp/>each<sp/>task</highlight></codeline>
+<codeline lineno="127"><highlight class="comment">in<sp/>the<sp/>system.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="structx_t_a_s_k___s_t_a_t_u_s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structx_t_a_s_k___s_t_a_t_u_s" kindref="compound">xTASK_STATUS</ref></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>TaskHandle_t<sp/>xHandle;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>handle<sp/>of<sp/>the<sp/>task<sp/>to<sp/>which<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>information<sp/>in<sp/>the<sp/>structure<sp/>relates.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcTaskName;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>pointer<sp/>to<sp/>the<sp/>task&apos;s<sp/>name.<sp/><sp/>This<sp/>value<sp/>will<sp/>be<sp/>invalid<sp/>if<sp/>the<sp/>task<sp/>was<sp/>deleted<sp/>since<sp/>the<sp/>structure<sp/>was<sp/>populated!<sp/>*/</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*lint<sp/>!e971<sp/>Unqualified<sp/>char<sp/>types<sp/>are<sp/>allowed<sp/>for<sp/>strings<sp/>and<sp/>single<sp/>characters<sp/>only.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>UBaseType_t<sp/>xTaskNumber;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>number<sp/>unique<sp/>to<sp/>the<sp/>task.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>eTaskState<sp/>eCurrentState;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>state<sp/>in<sp/>which<sp/>the<sp/>task<sp/>existed<sp/>when<sp/>the<sp/>structure<sp/>was<sp/>populated.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>UBaseType_t<sp/>uxCurrentPriority;<sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>priority<sp/>at<sp/>which<sp/>the<sp/>task<sp/>was<sp/>running<sp/>(may<sp/>be<sp/>inherited)<sp/>when<sp/>the<sp/>structure<sp/>was<sp/>populated.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>UBaseType_t<sp/>uxBasePriority;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>priority<sp/>to<sp/>which<sp/>the<sp/>task<sp/>will<sp/>return<sp/>if<sp/>the<sp/>task&apos;s<sp/>current<sp/>priority<sp/>has<sp/>been<sp/>inherited<sp/>to<sp/>avoid<sp/>unbounded<sp/>priority<sp/>inversion<sp/>when<sp/>obtaining<sp/>a<sp/>mutex.<sp/><sp/>Only<sp/>valid<sp/>if<sp/>configUSE_MUTEXES<sp/>is<sp/>defined<sp/>as<sp/>1<sp/>in<sp/>FreeRTOSConfig.h.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ulRunTimeCounter;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>total<sp/>run<sp/>time<sp/>allocated<sp/>to<sp/>the<sp/>task<sp/>so<sp/>far,<sp/>as<sp/>defined<sp/>by<sp/>the<sp/>run<sp/>time<sp/>stats<sp/>clock.<sp/><sp/>See<sp/>http://www.freertos.org/rtos-run-time-stats.html.<sp/><sp/>Only<sp/>valid<sp/>when<sp/>configGENERATE_RUN_TIME_STATS<sp/>is<sp/>defined<sp/>as<sp/>1<sp/>in<sp/>FreeRTOSConfig.h.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>StackType_t<sp/>*pxStackBase;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Points<sp/>to<sp/>the<sp/>lowest<sp/>address<sp/>of<sp/>the<sp/>task&apos;s<sp/>stack<sp/>area.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>usStackHighWaterMark;<sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>minimum<sp/>amount<sp/>of<sp/>stack<sp/>space<sp/>that<sp/>has<sp/>remained<sp/>for<sp/>the<sp/>task<sp/>since<sp/>the<sp/>task<sp/>was<sp/>created.<sp/><sp/>The<sp/>closer<sp/>this<sp/>value<sp/>is<sp/>to<sp/>zero<sp/>the<sp/>closer<sp/>the<sp/>task<sp/>has<sp/>come<sp/>to<sp/>overflowing<sp/>its<sp/>stack.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}<sp/><ref refid="structx_t_a_s_k___s_t_a_t_u_s" kindref="compound">TaskStatus_t</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Possible<sp/>return<sp/>values<sp/>for<sp/>eTaskConfirmSleepModeStatus().<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>eAbortSleep<sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>task<sp/>has<sp/>been<sp/>made<sp/>ready<sp/>or<sp/>a<sp/>context<sp/>switch<sp/>pended<sp/>since<sp/>portSUPPORESS_TICKS_AND_SLEEP()<sp/>was<sp/>called<sp/>-<sp/>abort<sp/>entering<sp/>a<sp/>sleep<sp/>mode.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>eStandardSleep,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enter<sp/>a<sp/>sleep<sp/>mode<sp/>that<sp/>will<sp/>not<sp/>last<sp/>any<sp/>longer<sp/>than<sp/>the<sp/>expected<sp/>idle<sp/>time.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>eNoTasksWaitingTimeout<sp/><sp/></highlight><highlight class="comment">/*<sp/>No<sp/>tasks<sp/>are<sp/>waiting<sp/>for<sp/>a<sp/>timeout<sp/>so<sp/>it<sp/>is<sp/>safe<sp/>to<sp/>enter<sp/>a<sp/>sleep<sp/>mode<sp/>that<sp/>can<sp/>only<sp/>be<sp/>exited<sp/>by<sp/>an<sp/>external<sp/>interrupt.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}<sp/>eSleepModeStatus;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tskIDLE_PRIORITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>(<sp/>UBaseType_t<sp/>)<sp/>0U<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>taskYIELD()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>portYIELD()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>taskENTER_CRITICAL()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>portENTER_CRITICAL()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>taskENTER_CRITICAL_FROM_ISR()<sp/>portSET_INTERRUPT_MASK_FROM_ISR()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>taskEXIT_CRITICAL()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>portEXIT_CRITICAL()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>taskEXIT_CRITICAL_FROM_ISR(<sp/>x<sp/>)<sp/>portCLEAR_INTERRUPT_MASK_FROM_ISR(<sp/>x<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>taskDISABLE_INTERRUPTS()<sp/><sp/><sp/><sp/>portDISABLE_INTERRUPTS()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>taskENABLE_INTERRUPTS()<sp/><sp/><sp/><sp/><sp/>portENABLE_INTERRUPTS()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Definitions<sp/>returned<sp/>by<sp/>xTaskGetSchedulerState().<sp/><sp/>taskSCHEDULER_SUSPENDED<sp/>is</highlight></codeline>
+<codeline lineno="216"><highlight class="comment">0<sp/>to<sp/>generate<sp/>more<sp/>optimal<sp/>code<sp/>when<sp/>configASSERT()<sp/>is<sp/>defined<sp/>as<sp/>the<sp/>constant</highlight></codeline>
+<codeline lineno="217"><highlight class="comment">is<sp/>used<sp/>in<sp/>assert()<sp/>statements.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>taskSCHEDULER_SUSPENDED<sp/><sp/><sp/><sp/><sp/>(<sp/>(<sp/>BaseType_t<sp/>)<sp/>0<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>taskSCHEDULER_NOT_STARTED<sp/><sp/><sp/>(<sp/>(<sp/>BaseType_t<sp/>)<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>taskSCHEDULER_RUNNING<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>(<sp/>BaseType_t<sp/>)<sp/>2<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">/*-----------------------------------------------------------</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/>*<sp/>TASK<sp/>CREATION<sp/>API</highlight></codeline>
+<codeline lineno="225"><highlight class="comment"><sp/>*----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="preprocessor">#if(<sp/>configSUPPORT_DYNAMIC_ALLOCATION<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseType_t<sp/>xTaskCreate(<sp/>TaskFunction_t<sp/>pxTaskCode,</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pcName,<sp/><sp/></highlight><highlight class="comment">/*lint<sp/>!e971<sp/>Unqualified<sp/>char<sp/>types<sp/>are<sp/>allowed<sp/>for<sp/>strings<sp/>and<sp/>single<sp/>characters<sp/>only.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>configSTACK_DEPTH_TYPE<sp/>usStackDepth,</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pvParameters,</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UBaseType_t<sp/>uxPriority,</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TaskHandle_t<sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxCreatedTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight><highlight class="preprocessor">#if(<sp/>configSUPPORT_STATIC_ALLOCATION<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/>TaskHandle_t<sp/>xTaskCreateStatic(<sp/>TaskFunction_t<sp/>pxTaskCode,</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pcName,<sp/></highlight><highlight class="comment">/*lint<sp/>!e971<sp/>Unqualified<sp/>char<sp/>types<sp/>are<sp/>allowed<sp/>for<sp/>strings<sp/>and<sp/>single<sp/>characters<sp/>only.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>ulStackDepth,</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pvParameters,</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UBaseType_t<sp/>uxPriority,</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>StackType_t<sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>puxStackBuffer,</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structx_s_t_a_t_i_c___t_c_b" kindref="compound">StaticTask_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxTaskBuffer<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>configSUPPORT_STATIC_ALLOCATION<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"></highlight><highlight class="preprocessor">#if(<sp/>portUSING_MPU_WRAPPERS<sp/>==<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseType_t<sp/>xTaskCreateRestricted(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s" kindref="compound">TaskParameters_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxTaskDefinition,<sp/>TaskHandle_t<sp/>*pxCreatedTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"></highlight></codeline>
+<codeline lineno="606"><highlight class="normal"></highlight><highlight class="preprocessor">#if(<sp/>(<sp/>portUSING_MPU_WRAPPERS<sp/>==<sp/>1<sp/>)<sp/>&amp;&amp;<sp/>(<sp/>configSUPPORT_STATIC_ALLOCATION<sp/>==<sp/>1<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseType_t<sp/>xTaskCreateRestrictedStatic(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s" kindref="compound">TaskParameters_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxTaskDefinition,<sp/>TaskHandle_t<sp/>*pxCreatedTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskAllocateMPURegions(<sp/>TaskHandle_t<sp/>xTask,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structx_m_e_m_o_r_y___r_e_g_i_o_n" kindref="compound">MemoryRegion_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxRegions<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight></codeline>
+<codeline lineno="697"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskDelete(<sp/>TaskHandle_t<sp/>xTaskToDelete<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight><highlight class="comment">/*-----------------------------------------------------------</highlight></codeline>
+<codeline lineno="700"><highlight class="comment"><sp/>*<sp/>TASK<sp/>CONTROL<sp/>API</highlight></codeline>
+<codeline lineno="701"><highlight class="comment"><sp/>*----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight></codeline>
+<codeline lineno="749"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskDelay(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TickType_t<sp/>xTicksToDelay<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"></highlight></codeline>
+<codeline lineno="808"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskDelayUntil(<sp/>TickType_t<sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxPreviousWakeTime,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TickType_t<sp/>xTimeIncrement<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="809"><highlight class="normal"></highlight></codeline>
+<codeline lineno="833"><highlight class="normal">BaseType_t<sp/>xTaskAbortDelay(<sp/>TaskHandle_t<sp/>xTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="834"><highlight class="normal"></highlight></codeline>
+<codeline lineno="880"><highlight class="normal">UBaseType_t<sp/>uxTaskPriorityGet(<sp/>TaskHandle_t<sp/>xTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="881"><highlight class="normal"></highlight></codeline>
+<codeline lineno="888"><highlight class="normal">UBaseType_t<sp/>uxTaskPriorityGetFromISR(<sp/>TaskHandle_t<sp/>xTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="889"><highlight class="normal"></highlight></codeline>
+<codeline lineno="906"><highlight class="normal">eTaskState<sp/>eTaskGetState(<sp/>TaskHandle_t<sp/>xTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="907"><highlight class="normal"></highlight></codeline>
+<codeline lineno="962"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskGetInfo(<sp/>TaskHandle_t<sp/>xTask,<sp/><ref refid="structx_t_a_s_k___s_t_a_t_u_s" kindref="compound">TaskStatus_t</ref><sp/>*pxTaskStatus,<sp/>BaseType_t<sp/>xGetFreeStackSpace,<sp/>eTaskState<sp/>eState<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="963"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1004"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskPrioritySet(<sp/>TaskHandle_t<sp/>xTask,<sp/>UBaseType_t<sp/>uxNewPriority<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1005"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1055"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskSuspend(<sp/>TaskHandle_t<sp/>xTaskToSuspend<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1056"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskResume(<sp/>TaskHandle_t<sp/>xTaskToResume<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1133"><highlight class="normal">BaseType_t<sp/>xTaskResumeFromISR(<sp/>TaskHandle_t<sp/>xTaskToResume<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1135"><highlight class="normal"></highlight><highlight class="comment">/*-----------------------------------------------------------</highlight></codeline>
+<codeline lineno="1136"><highlight class="comment"><sp/>*<sp/>SCHEDULER<sp/>CONTROL</highlight></codeline>
+<codeline lineno="1137"><highlight class="comment"><sp/>*----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1166"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskStartScheduler(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1222"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskEndScheduler(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1273"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskSuspendAll(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1327"><highlight class="normal">BaseType_t<sp/>xTaskResumeAll(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1329"><highlight class="normal"></highlight><highlight class="comment">/*-----------------------------------------------------------</highlight></codeline>
+<codeline lineno="1330"><highlight class="comment"><sp/>*<sp/>TASK<sp/>UTILITIES</highlight></codeline>
+<codeline lineno="1331"><highlight class="comment"><sp/>*----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1342"><highlight class="normal">TickType_t<sp/>xTaskGetTickCount(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1358"><highlight class="normal">TickType_t<sp/>xTaskGetTickCountFromISR(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1372"><highlight class="normal">UBaseType_t<sp/>uxTaskGetNumberOfTasks(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1385"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcTaskGetName(<sp/>TaskHandle_t<sp/>xTaskToQuery<sp/>)<sp/>PRIVILEGED_FUNCTION;<sp/></highlight><highlight class="comment">/*lint<sp/>!e971<sp/>Unqualified<sp/>char<sp/>types<sp/>are<sp/>allowed<sp/>for<sp/>strings<sp/>and<sp/>single<sp/>characters<sp/>only.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1401"><highlight class="normal">TaskHandle_t<sp/>xTaskGetHandle(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcNameToQuery<sp/>)<sp/>PRIVILEGED_FUNCTION;<sp/></highlight><highlight class="comment">/*lint<sp/>!e971<sp/>Unqualified<sp/>char<sp/>types<sp/>are<sp/>allowed<sp/>for<sp/>strings<sp/>and<sp/>single<sp/>characters<sp/>only.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1422"><highlight class="normal">UBaseType_t<sp/>uxTaskGetStackHighWaterMark(<sp/>TaskHandle_t<sp/>xTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1423"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1424"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>When<sp/>using<sp/>trace<sp/>macros<sp/>it<sp/>is<sp/>sometimes<sp/>necessary<sp/>to<sp/>include<sp/>task.h<sp/>before</highlight></codeline>
+<codeline lineno="1425"><highlight class="comment">FreeRTOS.h.<sp/><sp/>When<sp/>this<sp/>is<sp/>done<sp/>TaskHookFunction_t<sp/>will<sp/>not<sp/>yet<sp/>have<sp/>been<sp/>defined,</highlight></codeline>
+<codeline lineno="1426"><highlight class="comment">so<sp/>the<sp/>following<sp/>two<sp/>prototypes<sp/>will<sp/>cause<sp/>a<sp/>compilation<sp/>error.<sp/><sp/>This<sp/>can<sp/>be</highlight></codeline>
+<codeline lineno="1427"><highlight class="comment">fixed<sp/>by<sp/>simply<sp/>guarding<sp/>against<sp/>the<sp/>inclusion<sp/>of<sp/>these<sp/>two<sp/>prototypes<sp/>unless</highlight></codeline>
+<codeline lineno="1428"><highlight class="comment">they<sp/>are<sp/>explicitly<sp/>required<sp/>by<sp/>the<sp/>configUSE_APPLICATION_TASK_TAG<sp/>configuration</highlight></codeline>
+<codeline lineno="1429"><highlight class="comment">constant.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1430"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>configUSE_APPLICATION_TASK_TAG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1431"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>configUSE_APPLICATION_TASK_TAG<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskSetApplicationTaskTag(<sp/>TaskHandle_t<sp/>xTask,<sp/>TaskHookFunction_t<sp/>pxHookFunction<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1441"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TaskHookFunction_t<sp/>xTaskGetApplicationTaskTag(<sp/>TaskHandle_t<sp/>xTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1449"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">/*<sp/>configUSE_APPLICATION_TASK_TAG<sp/>==1<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1450"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ifdef<sp/>configUSE_APPLICATION_TASK_TAG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1451"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1452"><highlight class="normal"></highlight><highlight class="preprocessor">#if(<sp/>configNUM_THREAD_LOCAL_STORAGE_POINTERS<sp/>&gt;<sp/>0<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1454"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Each<sp/>task<sp/>contains<sp/>an<sp/>array<sp/>of<sp/>pointers<sp/>that<sp/>is<sp/>dimensioned<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="1455"><highlight class="comment"><sp/><sp/><sp/><sp/>configNUM_THREAD_LOCAL_STORAGE_POINTERS<sp/>setting<sp/>in<sp/>FreeRTOSConfig.h.<sp/><sp/>The</highlight></codeline>
+<codeline lineno="1456"><highlight class="comment"><sp/><sp/><sp/><sp/>kernel<sp/>does<sp/>not<sp/>use<sp/>the<sp/>pointers<sp/>itself,<sp/>so<sp/>the<sp/>application<sp/>writer<sp/>can<sp/>use</highlight></codeline>
+<codeline lineno="1457"><highlight class="comment"><sp/><sp/><sp/><sp/>the<sp/>pointers<sp/>for<sp/>any<sp/>purpose<sp/>they<sp/>wish.<sp/><sp/>The<sp/>following<sp/>two<sp/>functions<sp/>are</highlight></codeline>
+<codeline lineno="1458"><highlight class="comment"><sp/><sp/><sp/><sp/>used<sp/>to<sp/>set<sp/>and<sp/>query<sp/>a<sp/>pointer<sp/>respectively.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskSetThreadLocalStoragePointer(<sp/>TaskHandle_t<sp/>xTaskToSet,<sp/>BaseType_t<sp/>xIndex,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvValue<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1460"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvTaskGetThreadLocalStoragePointer(<sp/>TaskHandle_t<sp/>xTaskToQuery,<sp/>BaseType_t<sp/>xIndex<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1461"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1462"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1463"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1475"><highlight class="normal">BaseType_t<sp/>xTaskCallApplicationTaskHook(<sp/>TaskHandle_t<sp/>xTask,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvParameter<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1476"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1484"><highlight class="normal">TaskHandle_t<sp/>xTaskGetIdleTaskHandle(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1485"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1583"><highlight class="normal">UBaseType_t<sp/>uxTaskGetSystemState(<sp/><ref refid="structx_t_a_s_k___s_t_a_t_u_s" kindref="compound">TaskStatus_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxTaskStatusArray,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>UBaseType_t<sp/>uxArraySize,<sp/>uint32_t<sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pulTotalRunTime<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1584"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1630"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskList(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pcWriteBuffer<sp/>)<sp/>PRIVILEGED_FUNCTION;<sp/></highlight><highlight class="comment">/*lint<sp/>!e971<sp/>Unqualified<sp/>char<sp/>types<sp/>are<sp/>allowed<sp/>for<sp/>strings<sp/>and<sp/>single<sp/>characters<sp/>only.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1631"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1684"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskGetRunTimeStats(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcWriteBuffer<sp/>)<sp/>PRIVILEGED_FUNCTION;<sp/></highlight><highlight class="comment">/*lint<sp/>!e971<sp/>Unqualified<sp/>char<sp/>types<sp/>are<sp/>allowed<sp/>for<sp/>strings<sp/>and<sp/>single<sp/>characters<sp/>only.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1685"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1765"><highlight class="normal">BaseType_t<sp/>xTaskGenericNotify(<sp/>TaskHandle_t<sp/>xTaskToNotify,<sp/>uint32_t<sp/>ulValue,<sp/>eNotifyAction<sp/>eAction,<sp/>uint32_t<sp/>*pulPreviousNotificationValue<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1766"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xTaskNotify(<sp/>xTaskToNotify,<sp/>ulValue,<sp/>eAction<sp/>)<sp/>xTaskGenericNotify(<sp/>(<sp/>xTaskToNotify<sp/>),<sp/>(<sp/>ulValue<sp/>),<sp/>(<sp/>eAction<sp/>),<sp/>NULL<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1767"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xTaskNotifyAndQuery(<sp/>xTaskToNotify,<sp/>ulValue,<sp/>eAction,<sp/>pulPreviousNotifyValue<sp/>)<sp/>xTaskGenericNotify(<sp/>(<sp/>xTaskToNotify<sp/>),<sp/>(<sp/>ulValue<sp/>),<sp/>(<sp/>eAction<sp/>),<sp/>(<sp/>pulPreviousNotifyValue<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1768"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1856"><highlight class="normal">BaseType_t<sp/>xTaskGenericNotifyFromISR(<sp/>TaskHandle_t<sp/>xTaskToNotify,<sp/>uint32_t<sp/>ulValue,<sp/>eNotifyAction<sp/>eAction,<sp/>uint32_t<sp/>*pulPreviousNotificationValue,<sp/>BaseType_t<sp/>*pxHigherPriorityTaskWoken<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1857"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xTaskNotifyFromISR(<sp/>xTaskToNotify,<sp/>ulValue,<sp/>eAction,<sp/>pxHigherPriorityTaskWoken<sp/>)<sp/>xTaskGenericNotifyFromISR(<sp/>(<sp/>xTaskToNotify<sp/>),<sp/>(<sp/>ulValue<sp/>),<sp/>(<sp/>eAction<sp/>),<sp/>NULL,<sp/>(<sp/>pxHigherPriorityTaskWoken<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1858"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xTaskNotifyAndQueryFromISR(<sp/>xTaskToNotify,<sp/>ulValue,<sp/>eAction,<sp/>pulPreviousNotificationValue,<sp/>pxHigherPriorityTaskWoken<sp/>)<sp/>xTaskGenericNotifyFromISR(<sp/>(<sp/>xTaskToNotify<sp/>),<sp/>(<sp/>ulValue<sp/>),<sp/>(<sp/>eAction<sp/>),<sp/>(<sp/>pulPreviousNotificationValue<sp/>),<sp/>(<sp/>pxHigherPriorityTaskWoken<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1859"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1933"><highlight class="normal">BaseType_t<sp/>xTaskNotifyWait(<sp/>uint32_t<sp/>ulBitsToClearOnEntry,<sp/>uint32_t<sp/>ulBitsToClearOnExit,<sp/>uint32_t<sp/>*pulNotificationValue,<sp/>TickType_t<sp/>xTicksToWait<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="1934"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1979"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xTaskNotifyGive(<sp/>xTaskToNotify<sp/>)<sp/>xTaskGenericNotify(<sp/>(<sp/>xTaskToNotify<sp/>),<sp/>(<sp/>0<sp/>),<sp/>eIncrement,<sp/>NULL<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1980"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2034"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskNotifyGiveFromISR(<sp/>TaskHandle_t<sp/>xTaskToNotify,<sp/>BaseType_t<sp/>*pxHigherPriorityTaskWoken<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2035"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2103"><highlight class="normal">uint32_t<sp/>ulTaskNotifyTake(<sp/>BaseType_t<sp/>xClearCountOnExit,<sp/>TickType_t<sp/>xTicksToWait<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2119"><highlight class="normal">BaseType_t<sp/>xTaskNotifyStateClear(<sp/>TaskHandle_t<sp/>xTask<sp/>);</highlight></codeline>
+<codeline lineno="2120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2121"><highlight class="normal"></highlight><highlight class="comment">/*-----------------------------------------------------------</highlight></codeline>
+<codeline lineno="2122"><highlight class="comment"><sp/>*<sp/>SCHEDULER<sp/>INTERNALS<sp/>AVAILABLE<sp/>FOR<sp/>PORTING<sp/>PURPOSES</highlight></codeline>
+<codeline lineno="2123"><highlight class="comment"><sp/>*----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2125"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2126"><highlight class="comment"><sp/>*<sp/>THIS<sp/>FUNCTION<sp/>MUST<sp/>NOT<sp/>BE<sp/>USED<sp/>FROM<sp/>APPLICATION<sp/>CODE.<sp/><sp/>IT<sp/>IS<sp/>ONLY</highlight></codeline>
+<codeline lineno="2127"><highlight class="comment"><sp/>*<sp/>INTENDED<sp/>FOR<sp/>USE<sp/>WHEN<sp/>IMPLEMENTING<sp/>A<sp/>PORT<sp/>OF<sp/>THE<sp/>SCHEDULER<sp/>AND<sp/>IS</highlight></codeline>
+<codeline lineno="2128"><highlight class="comment"><sp/>*<sp/>AN<sp/>INTERFACE<sp/>WHICH<sp/>IS<sp/>FOR<sp/>THE<sp/>EXCLUSIVE<sp/>USE<sp/>OF<sp/>THE<sp/>SCHEDULER.</highlight></codeline>
+<codeline lineno="2129"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2130"><highlight class="comment"><sp/>*<sp/>Called<sp/>from<sp/>the<sp/>real<sp/>time<sp/>kernel<sp/>tick<sp/>(either<sp/>preemptive<sp/>or<sp/>cooperative),</highlight></codeline>
+<codeline lineno="2131"><highlight class="comment"><sp/>*<sp/>this<sp/>increments<sp/>the<sp/>tick<sp/>count<sp/>and<sp/>checks<sp/>if<sp/>any<sp/>tasks<sp/>that<sp/>are<sp/>blocked</highlight></codeline>
+<codeline lineno="2132"><highlight class="comment"><sp/>*<sp/>for<sp/>a<sp/>finite<sp/>period<sp/>required<sp/>removing<sp/>from<sp/>a<sp/>blocked<sp/>list<sp/>and<sp/>placing<sp/>on</highlight></codeline>
+<codeline lineno="2133"><highlight class="comment"><sp/>*<sp/>a<sp/>ready<sp/>list.<sp/><sp/>If<sp/>a<sp/>non-zero<sp/>value<sp/>is<sp/>returned<sp/>then<sp/>a<sp/>context<sp/>switch<sp/>is</highlight></codeline>
+<codeline lineno="2134"><highlight class="comment"><sp/>*<sp/>required<sp/>because<sp/>either:</highlight></codeline>
+<codeline lineno="2135"><highlight class="comment"><sp/>*<sp/><sp/><sp/>+<sp/>A<sp/>task<sp/>was<sp/>removed<sp/>from<sp/>a<sp/>blocked<sp/>list<sp/>because<sp/>its<sp/>timeout<sp/>had<sp/>expired,</highlight></codeline>
+<codeline lineno="2136"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>or</highlight></codeline>
+<codeline lineno="2137"><highlight class="comment"><sp/>*<sp/><sp/><sp/>+<sp/>Time<sp/>slicing<sp/>is<sp/>in<sp/>use<sp/>and<sp/>there<sp/>is<sp/>a<sp/>task<sp/>of<sp/>equal<sp/>priority<sp/>to<sp/>the</highlight></codeline>
+<codeline lineno="2138"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>currently<sp/>running<sp/>task.</highlight></codeline>
+<codeline lineno="2139"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2140"><highlight class="normal">BaseType_t<sp/>xTaskIncrementTick(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2142"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2143"><highlight class="comment"><sp/>*<sp/>THIS<sp/>FUNCTION<sp/>MUST<sp/>NOT<sp/>BE<sp/>USED<sp/>FROM<sp/>APPLICATION<sp/>CODE.<sp/><sp/>IT<sp/>IS<sp/>AN</highlight></codeline>
+<codeline lineno="2144"><highlight class="comment"><sp/>*<sp/>INTERFACE<sp/>WHICH<sp/>IS<sp/>FOR<sp/>THE<sp/>EXCLUSIVE<sp/>USE<sp/>OF<sp/>THE<sp/>SCHEDULER.</highlight></codeline>
+<codeline lineno="2145"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2146"><highlight class="comment"><sp/>*<sp/>THIS<sp/>FUNCTION<sp/>MUST<sp/>BE<sp/>CALLED<sp/>WITH<sp/>INTERRUPTS<sp/>DISABLED.</highlight></codeline>
+<codeline lineno="2147"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2148"><highlight class="comment"><sp/>*<sp/>Removes<sp/>the<sp/>calling<sp/>task<sp/>from<sp/>the<sp/>ready<sp/>list<sp/>and<sp/>places<sp/>it<sp/>both</highlight></codeline>
+<codeline lineno="2149"><highlight class="comment"><sp/>*<sp/>on<sp/>the<sp/>list<sp/>of<sp/>tasks<sp/>waiting<sp/>for<sp/>a<sp/>particular<sp/>event,<sp/>and<sp/>the</highlight></codeline>
+<codeline lineno="2150"><highlight class="comment"><sp/>*<sp/>list<sp/>of<sp/>delayed<sp/>tasks.<sp/><sp/>The<sp/>task<sp/>will<sp/>be<sp/>removed<sp/>from<sp/>both<sp/>lists</highlight></codeline>
+<codeline lineno="2151"><highlight class="comment"><sp/>*<sp/>and<sp/>replaced<sp/>on<sp/>the<sp/>ready<sp/>list<sp/>should<sp/>either<sp/>the<sp/>event<sp/>occur<sp/>(and</highlight></codeline>
+<codeline lineno="2152"><highlight class="comment"><sp/>*<sp/>there<sp/>be<sp/>no<sp/>higher<sp/>priority<sp/>tasks<sp/>waiting<sp/>on<sp/>the<sp/>same<sp/>event)<sp/>or</highlight></codeline>
+<codeline lineno="2153"><highlight class="comment"><sp/>*<sp/>the<sp/>delay<sp/>period<sp/>expires.</highlight></codeline>
+<codeline lineno="2154"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2155"><highlight class="comment"><sp/>*<sp/>The<sp/>&apos;unordered&apos;<sp/>version<sp/>replaces<sp/>the<sp/>event<sp/>list<sp/>item<sp/>value<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="2156"><highlight class="comment"><sp/>*<sp/>xItemValue<sp/>value,<sp/>and<sp/>inserts<sp/>the<sp/>list<sp/>item<sp/>at<sp/>the<sp/>end<sp/>of<sp/>the<sp/>list.</highlight></codeline>
+<codeline lineno="2157"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2158"><highlight class="comment"><sp/>*<sp/>The<sp/>&apos;ordered&apos;<sp/>version<sp/>uses<sp/>the<sp/>existing<sp/>event<sp/>list<sp/>item<sp/>value<sp/>(which<sp/>is<sp/>the</highlight></codeline>
+<codeline lineno="2159"><highlight class="comment"><sp/>*<sp/>owning<sp/>tasks<sp/>priority)<sp/>to<sp/>insert<sp/>the<sp/>list<sp/>item<sp/>into<sp/>the<sp/>event<sp/>list<sp/>is<sp/>task</highlight></codeline>
+<codeline lineno="2160"><highlight class="comment"><sp/>*<sp/>priority<sp/>order.</highlight></codeline>
+<codeline lineno="2161"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2162"><highlight class="comment"><sp/>*<sp/>@param<sp/>pxEventList<sp/>The<sp/>list<sp/>containing<sp/>tasks<sp/>that<sp/>are<sp/>blocked<sp/>waiting</highlight></codeline>
+<codeline lineno="2163"><highlight class="comment"><sp/>*<sp/>for<sp/>the<sp/>event<sp/>to<sp/>occur.</highlight></codeline>
+<codeline lineno="2164"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2165"><highlight class="comment"><sp/>*<sp/>@param<sp/>xItemValue<sp/>The<sp/>item<sp/>value<sp/>to<sp/>use<sp/>for<sp/>the<sp/>event<sp/>list<sp/>item<sp/>when<sp/>the</highlight></codeline>
+<codeline lineno="2166"><highlight class="comment"><sp/>*<sp/>event<sp/>list<sp/>is<sp/>not<sp/>ordered<sp/>by<sp/>task<sp/>priority.</highlight></codeline>
+<codeline lineno="2167"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2168"><highlight class="comment"><sp/>*<sp/>@param<sp/>xTicksToWait<sp/>The<sp/>maximum<sp/>amount<sp/>of<sp/>time<sp/>that<sp/>the<sp/>task<sp/>should<sp/>wait</highlight></codeline>
+<codeline lineno="2169"><highlight class="comment"><sp/>*<sp/>for<sp/>the<sp/>event<sp/>to<sp/>occur.<sp/><sp/>This<sp/>is<sp/>specified<sp/>in<sp/>kernel<sp/>ticks,the<sp/>constant</highlight></codeline>
+<codeline lineno="2170"><highlight class="comment"><sp/>*<sp/>portTICK_PERIOD_MS<sp/>can<sp/>be<sp/>used<sp/>to<sp/>convert<sp/>kernel<sp/>ticks<sp/>into<sp/>a<sp/>real<sp/>time</highlight></codeline>
+<codeline lineno="2171"><highlight class="comment"><sp/>*<sp/>period.</highlight></codeline>
+<codeline lineno="2172"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2173"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskPlaceOnEventList(<sp/><ref refid="structx_l_i_s_t" kindref="compound">List_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxEventList,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TickType_t<sp/>xTicksToWait<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2174"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskPlaceOnUnorderedEventList(<sp/><ref refid="structx_l_i_s_t" kindref="compound">List_t</ref><sp/>*<sp/>pxEventList,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TickType_t<sp/>xItemValue,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TickType_t<sp/>xTicksToWait<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2176"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2177"><highlight class="comment"><sp/>*<sp/>THIS<sp/>FUNCTION<sp/>MUST<sp/>NOT<sp/>BE<sp/>USED<sp/>FROM<sp/>APPLICATION<sp/>CODE.<sp/><sp/>IT<sp/>IS<sp/>AN</highlight></codeline>
+<codeline lineno="2178"><highlight class="comment"><sp/>*<sp/>INTERFACE<sp/>WHICH<sp/>IS<sp/>FOR<sp/>THE<sp/>EXCLUSIVE<sp/>USE<sp/>OF<sp/>THE<sp/>SCHEDULER.</highlight></codeline>
+<codeline lineno="2179"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2180"><highlight class="comment"><sp/>*<sp/>THIS<sp/>FUNCTION<sp/>MUST<sp/>BE<sp/>CALLED<sp/>WITH<sp/>INTERRUPTS<sp/>DISABLED.</highlight></codeline>
+<codeline lineno="2181"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2182"><highlight class="comment"><sp/>*<sp/>This<sp/>function<sp/>performs<sp/>nearly<sp/>the<sp/>same<sp/>function<sp/>as<sp/>vTaskPlaceOnEventList().</highlight></codeline>
+<codeline lineno="2183"><highlight class="comment"><sp/>*<sp/>The<sp/>difference<sp/>being<sp/>that<sp/>this<sp/>function<sp/>does<sp/>not<sp/>permit<sp/>tasks<sp/>to<sp/>block</highlight></codeline>
+<codeline lineno="2184"><highlight class="comment"><sp/>*<sp/>indefinitely,<sp/>whereas<sp/>vTaskPlaceOnEventList()<sp/>does.</highlight></codeline>
+<codeline lineno="2185"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2186"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2187"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskPlaceOnEventListRestricted(<sp/><ref refid="structx_l_i_s_t" kindref="compound">List_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxEventList,<sp/>TickType_t<sp/>xTicksToWait,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BaseType_t<sp/>xWaitIndefinitely<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2189"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2190"><highlight class="comment"><sp/>*<sp/>THIS<sp/>FUNCTION<sp/>MUST<sp/>NOT<sp/>BE<sp/>USED<sp/>FROM<sp/>APPLICATION<sp/>CODE.<sp/><sp/>IT<sp/>IS<sp/>AN</highlight></codeline>
+<codeline lineno="2191"><highlight class="comment"><sp/>*<sp/>INTERFACE<sp/>WHICH<sp/>IS<sp/>FOR<sp/>THE<sp/>EXCLUSIVE<sp/>USE<sp/>OF<sp/>THE<sp/>SCHEDULER.</highlight></codeline>
+<codeline lineno="2192"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2193"><highlight class="comment"><sp/>*<sp/>THIS<sp/>FUNCTION<sp/>MUST<sp/>BE<sp/>CALLED<sp/>WITH<sp/>INTERRUPTS<sp/>DISABLED.</highlight></codeline>
+<codeline lineno="2194"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2195"><highlight class="comment"><sp/>*<sp/>Removes<sp/>a<sp/>task<sp/>from<sp/>both<sp/>the<sp/>specified<sp/>event<sp/>list<sp/>and<sp/>the<sp/>list<sp/>of<sp/>blocked</highlight></codeline>
+<codeline lineno="2196"><highlight class="comment"><sp/>*<sp/>tasks,<sp/>and<sp/>places<sp/>it<sp/>on<sp/>a<sp/>ready<sp/>queue.</highlight></codeline>
+<codeline lineno="2197"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2198"><highlight class="comment"><sp/>*<sp/>xTaskRemoveFromEventList()/vTaskRemoveFromUnorderedEventList()<sp/>will<sp/>be<sp/>called</highlight></codeline>
+<codeline lineno="2199"><highlight class="comment"><sp/>*<sp/>if<sp/>either<sp/>an<sp/>event<sp/>occurs<sp/>to<sp/>unblock<sp/>a<sp/>task,<sp/>or<sp/>the<sp/>block<sp/>timeout<sp/>period</highlight></codeline>
+<codeline lineno="2200"><highlight class="comment"><sp/>*<sp/>expires.</highlight></codeline>
+<codeline lineno="2201"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2202"><highlight class="comment"><sp/>*<sp/>xTaskRemoveFromEventList()<sp/>is<sp/>used<sp/>when<sp/>the<sp/>event<sp/>list<sp/>is<sp/>in<sp/>task<sp/>priority</highlight></codeline>
+<codeline lineno="2203"><highlight class="comment"><sp/>*<sp/>order.<sp/><sp/>It<sp/>removes<sp/>the<sp/>list<sp/>item<sp/>from<sp/>the<sp/>head<sp/>of<sp/>the<sp/>event<sp/>list<sp/>as<sp/>that<sp/>will</highlight></codeline>
+<codeline lineno="2204"><highlight class="comment"><sp/>*<sp/>have<sp/>the<sp/>highest<sp/>priority<sp/>owning<sp/>task<sp/>of<sp/>all<sp/>the<sp/>tasks<sp/>on<sp/>the<sp/>event<sp/>list.</highlight></codeline>
+<codeline lineno="2205"><highlight class="comment"><sp/>*<sp/>vTaskRemoveFromUnorderedEventList()<sp/>is<sp/>used<sp/>when<sp/>the<sp/>event<sp/>list<sp/>is<sp/>not</highlight></codeline>
+<codeline lineno="2206"><highlight class="comment"><sp/>*<sp/>ordered<sp/>and<sp/>the<sp/>event<sp/>list<sp/>items<sp/>hold<sp/>something<sp/>other<sp/>than<sp/>the<sp/>owning<sp/>tasks</highlight></codeline>
+<codeline lineno="2207"><highlight class="comment"><sp/>*<sp/>priority.<sp/><sp/>In<sp/>this<sp/>case<sp/>the<sp/>event<sp/>list<sp/>item<sp/>value<sp/>is<sp/>updated<sp/>to<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="2208"><highlight class="comment"><sp/>*<sp/>passed<sp/>in<sp/>the<sp/>xItemValue<sp/>parameter.</highlight></codeline>
+<codeline lineno="2209"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2210"><highlight class="comment"><sp/>*<sp/>@return<sp/>pdTRUE<sp/>if<sp/>the<sp/>task<sp/>being<sp/>removed<sp/>has<sp/>a<sp/>higher<sp/>priority<sp/>than<sp/>the<sp/>task</highlight></codeline>
+<codeline lineno="2211"><highlight class="comment"><sp/>*<sp/>making<sp/>the<sp/>call,<sp/>otherwise<sp/>pdFALSE.</highlight></codeline>
+<codeline lineno="2212"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2213"><highlight class="normal">BaseType_t<sp/>xTaskRemoveFromEventList(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structx_l_i_s_t" kindref="compound">List_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxEventList<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2214"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskRemoveFromUnorderedEventList(<sp/><ref refid="structx_l_i_s_t___i_t_e_m" kindref="compound">ListItem_t</ref><sp/>*<sp/>pxEventListItem,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TickType_t<sp/>xItemValue<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2216"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2217"><highlight class="comment"><sp/>*<sp/>THIS<sp/>FUNCTION<sp/>MUST<sp/>NOT<sp/>BE<sp/>USED<sp/>FROM<sp/>APPLICATION<sp/>CODE.<sp/><sp/>IT<sp/>IS<sp/>ONLY</highlight></codeline>
+<codeline lineno="2218"><highlight class="comment"><sp/>*<sp/>INTENDED<sp/>FOR<sp/>USE<sp/>WHEN<sp/>IMPLEMENTING<sp/>A<sp/>PORT<sp/>OF<sp/>THE<sp/>SCHEDULER<sp/>AND<sp/>IS</highlight></codeline>
+<codeline lineno="2219"><highlight class="comment"><sp/>*<sp/>AN<sp/>INTERFACE<sp/>WHICH<sp/>IS<sp/>FOR<sp/>THE<sp/>EXCLUSIVE<sp/>USE<sp/>OF<sp/>THE<sp/>SCHEDULER.</highlight></codeline>
+<codeline lineno="2220"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2221"><highlight class="comment"><sp/>*<sp/>Sets<sp/>the<sp/>pointer<sp/>to<sp/>the<sp/>current<sp/>TCB<sp/>to<sp/>the<sp/>TCB<sp/>of<sp/>the<sp/>highest<sp/>priority<sp/>task</highlight></codeline>
+<codeline lineno="2222"><highlight class="comment"><sp/>*<sp/>that<sp/>is<sp/>ready<sp/>to<sp/>run.</highlight></codeline>
+<codeline lineno="2223"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2224"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskSwitchContext(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2226"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2227"><highlight class="comment"><sp/>*<sp/>THESE<sp/>FUNCTIONS<sp/>MUST<sp/>NOT<sp/>BE<sp/>USED<sp/>FROM<sp/>APPLICATION<sp/>CODE.<sp/><sp/>THEY<sp/>ARE<sp/>USED<sp/>BY</highlight></codeline>
+<codeline lineno="2228"><highlight class="comment"><sp/>*<sp/>THE<sp/>EVENT<sp/>BITS<sp/>MODULE.</highlight></codeline>
+<codeline lineno="2229"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2230"><highlight class="normal">TickType_t<sp/>uxTaskResetEventItemValue(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2232"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2233"><highlight class="comment"><sp/>*<sp/>Return<sp/>the<sp/>handle<sp/>of<sp/>the<sp/>calling<sp/>task.</highlight></codeline>
+<codeline lineno="2234"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2235"><highlight class="normal">TaskHandle_t<sp/>xTaskGetCurrentTaskHandle(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2237"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2238"><highlight class="comment"><sp/>*<sp/>Capture<sp/>the<sp/>current<sp/>time<sp/>status<sp/>for<sp/>future<sp/>reference.</highlight></codeline>
+<codeline lineno="2239"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2240"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskSetTimeOutState(<sp/><ref refid="structx_t_i_m_e___o_u_t" kindref="compound">TimeOut_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxTimeOut<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2242"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2243"><highlight class="comment"><sp/>*<sp/>Compare<sp/>the<sp/>time<sp/>status<sp/>now<sp/>with<sp/>that<sp/>previously<sp/>captured<sp/>to<sp/>see<sp/>if<sp/>the</highlight></codeline>
+<codeline lineno="2244"><highlight class="comment"><sp/>*<sp/>timeout<sp/>has<sp/>expired.</highlight></codeline>
+<codeline lineno="2245"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2246"><highlight class="normal">BaseType_t<sp/>xTaskCheckForTimeOut(<sp/><ref refid="structx_t_i_m_e___o_u_t" kindref="compound">TimeOut_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxTimeOut,<sp/>TickType_t<sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxTicksToWait<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2248"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2249"><highlight class="comment"><sp/>*<sp/>Shortcut<sp/>used<sp/>by<sp/>the<sp/>queue<sp/>implementation<sp/>to<sp/>prevent<sp/>unnecessary<sp/>call<sp/>to</highlight></codeline>
+<codeline lineno="2250"><highlight class="comment"><sp/>*<sp/>taskYIELD();</highlight></codeline>
+<codeline lineno="2251"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2252"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskMissedYield(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2254"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2255"><highlight class="comment"><sp/>*<sp/>Returns<sp/>the<sp/>scheduler<sp/>state<sp/>as<sp/>taskSCHEDULER_RUNNING,</highlight></codeline>
+<codeline lineno="2256"><highlight class="comment"><sp/>*<sp/>taskSCHEDULER_NOT_STARTED<sp/>or<sp/>taskSCHEDULER_SUSPENDED.</highlight></codeline>
+<codeline lineno="2257"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2258"><highlight class="normal">BaseType_t<sp/>xTaskGetSchedulerState(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2260"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2261"><highlight class="comment"><sp/>*<sp/>Raises<sp/>the<sp/>priority<sp/>of<sp/>the<sp/>mutex<sp/>holder<sp/>to<sp/>that<sp/>of<sp/>the<sp/>calling<sp/>task<sp/>should</highlight></codeline>
+<codeline lineno="2262"><highlight class="comment"><sp/>*<sp/>the<sp/>mutex<sp/>holder<sp/>have<sp/>a<sp/>priority<sp/>less<sp/>than<sp/>the<sp/>calling<sp/>task.</highlight></codeline>
+<codeline lineno="2263"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2264"><highlight class="normal">BaseType_t<sp/>xTaskPriorityInherit(<sp/>TaskHandle_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxMutexHolder<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2266"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2267"><highlight class="comment"><sp/>*<sp/>Set<sp/>the<sp/>priority<sp/>of<sp/>a<sp/>task<sp/>back<sp/>to<sp/>its<sp/>proper<sp/>priority<sp/>in<sp/>the<sp/>case<sp/>that<sp/>it</highlight></codeline>
+<codeline lineno="2268"><highlight class="comment"><sp/>*<sp/>inherited<sp/>a<sp/>higher<sp/>priority<sp/>while<sp/>it<sp/>was<sp/>holding<sp/>a<sp/>semaphore.</highlight></codeline>
+<codeline lineno="2269"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2270"><highlight class="normal">BaseType_t<sp/>xTaskPriorityDisinherit(<sp/>TaskHandle_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxMutexHolder<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2272"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2273"><highlight class="comment"><sp/>*<sp/>If<sp/>a<sp/>higher<sp/>priority<sp/>task<sp/>attempting<sp/>to<sp/>obtain<sp/>a<sp/>mutex<sp/>caused<sp/>a<sp/>lower</highlight></codeline>
+<codeline lineno="2274"><highlight class="comment"><sp/>*<sp/>priority<sp/>task<sp/>to<sp/>inherit<sp/>the<sp/>higher<sp/>priority<sp/>task&apos;s<sp/>priority<sp/>-<sp/>but<sp/>the<sp/>higher</highlight></codeline>
+<codeline lineno="2275"><highlight class="comment"><sp/>*<sp/>priority<sp/>task<sp/>then<sp/>timed<sp/>out<sp/>without<sp/>obtaining<sp/>the<sp/>mutex,<sp/>then<sp/>the<sp/>lower</highlight></codeline>
+<codeline lineno="2276"><highlight class="comment"><sp/>*<sp/>priority<sp/>task<sp/>will<sp/>disinherit<sp/>the<sp/>priority<sp/>again<sp/>-<sp/>but<sp/>only<sp/>down<sp/>as<sp/>far<sp/>as</highlight></codeline>
+<codeline lineno="2277"><highlight class="comment"><sp/>*<sp/>the<sp/>highest<sp/>priority<sp/>task<sp/>that<sp/>is<sp/>still<sp/>waiting<sp/>for<sp/>the<sp/>mutex<sp/>(if<sp/>there<sp/>were</highlight></codeline>
+<codeline lineno="2278"><highlight class="comment"><sp/>*<sp/>more<sp/>than<sp/>one<sp/>task<sp/>waiting<sp/>for<sp/>the<sp/>mutex).</highlight></codeline>
+<codeline lineno="2279"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2280"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskPriorityDisinheritAfterTimeout(<sp/>TaskHandle_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxMutexHolder,<sp/>UBaseType_t<sp/>uxHighestPriorityWaitingTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2282"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2283"><highlight class="comment"><sp/>*<sp/>Get<sp/>the<sp/>uxTCBNumber<sp/>assigned<sp/>to<sp/>the<sp/>task<sp/>referenced<sp/>by<sp/>the<sp/>xTask<sp/>parameter.</highlight></codeline>
+<codeline lineno="2284"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2285"><highlight class="normal">UBaseType_t<sp/>uxTaskGetTaskNumber(<sp/>TaskHandle_t<sp/>xTask<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2287"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2288"><highlight class="comment"><sp/>*<sp/>Set<sp/>the<sp/>uxTaskNumber<sp/>of<sp/>the<sp/>task<sp/>referenced<sp/>by<sp/>the<sp/>xTask<sp/>parameter<sp/>to</highlight></codeline>
+<codeline lineno="2289"><highlight class="comment"><sp/>*<sp/>uxHandle.</highlight></codeline>
+<codeline lineno="2290"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2291"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskSetTaskNumber(<sp/>TaskHandle_t<sp/>xTask,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>UBaseType_t<sp/>uxHandle<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2293"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2294"><highlight class="comment"><sp/>*<sp/>Only<sp/>available<sp/>when<sp/>configUSE_TICKLESS_IDLE<sp/>is<sp/>set<sp/>to<sp/>1.</highlight></codeline>
+<codeline lineno="2295"><highlight class="comment"><sp/>*<sp/>If<sp/>tickless<sp/>mode<sp/>is<sp/>being<sp/>used,<sp/>or<sp/>a<sp/>low<sp/>power<sp/>mode<sp/>is<sp/>implemented,<sp/>then</highlight></codeline>
+<codeline lineno="2296"><highlight class="comment"><sp/>*<sp/>the<sp/>tick<sp/>interrupt<sp/>will<sp/>not<sp/>execute<sp/>during<sp/>idle<sp/>periods.<sp/><sp/>When<sp/>this<sp/>is<sp/>the</highlight></codeline>
+<codeline lineno="2297"><highlight class="comment"><sp/>*<sp/>case,<sp/>the<sp/>tick<sp/>count<sp/>value<sp/>maintained<sp/>by<sp/>the<sp/>scheduler<sp/>needs<sp/>to<sp/>be<sp/>kept<sp/>up</highlight></codeline>
+<codeline lineno="2298"><highlight class="comment"><sp/>*<sp/>to<sp/>date<sp/>with<sp/>the<sp/>actual<sp/>execution<sp/>time<sp/>by<sp/>being<sp/>skipped<sp/>forward<sp/>by<sp/>a<sp/>time</highlight></codeline>
+<codeline lineno="2299"><highlight class="comment"><sp/>*<sp/>equal<sp/>to<sp/>the<sp/>idle<sp/>period.</highlight></codeline>
+<codeline lineno="2300"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2301"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskStepTick(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TickType_t<sp/>xTicksToJump<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2303"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2304"><highlight class="comment"><sp/>*<sp/>Only<sp/>avilable<sp/>when<sp/>configUSE_TICKLESS_IDLE<sp/>is<sp/>set<sp/>to<sp/>1.</highlight></codeline>
+<codeline lineno="2305"><highlight class="comment"><sp/>*<sp/>Provided<sp/>for<sp/>use<sp/>within<sp/>portSUPPRESS_TICKS_AND_SLEEP()<sp/>to<sp/>allow<sp/>the<sp/>port</highlight></codeline>
+<codeline lineno="2306"><highlight class="comment"><sp/>*<sp/>specific<sp/>sleep<sp/>function<sp/>to<sp/>determine<sp/>if<sp/>it<sp/>is<sp/>ok<sp/>to<sp/>proceed<sp/>with<sp/>the<sp/>sleep,</highlight></codeline>
+<codeline lineno="2307"><highlight class="comment"><sp/>*<sp/>and<sp/>if<sp/>it<sp/>is<sp/>ok<sp/>to<sp/>proceed,<sp/>if<sp/>it<sp/>is<sp/>ok<sp/>to<sp/>sleep<sp/>indefinitely.</highlight></codeline>
+<codeline lineno="2308"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="2309"><highlight class="comment"><sp/>*<sp/>This<sp/>function<sp/>is<sp/>necessary<sp/>because<sp/>portSUPPRESS_TICKS_AND_SLEEP()<sp/>is<sp/>only</highlight></codeline>
+<codeline lineno="2310"><highlight class="comment"><sp/>*<sp/>called<sp/>with<sp/>the<sp/>scheduler<sp/>suspended,<sp/>not<sp/>from<sp/>within<sp/>a<sp/>critical<sp/>section.<sp/><sp/>It</highlight></codeline>
+<codeline lineno="2311"><highlight class="comment"><sp/>*<sp/>is<sp/>therefore<sp/>possible<sp/>for<sp/>an<sp/>interrupt<sp/>to<sp/>request<sp/>a<sp/>context<sp/>switch<sp/>between</highlight></codeline>
+<codeline lineno="2312"><highlight class="comment"><sp/>*<sp/>portSUPPRESS_TICKS_AND_SLEEP()<sp/>and<sp/>the<sp/>low<sp/>power<sp/>mode<sp/>actually<sp/>being</highlight></codeline>
+<codeline lineno="2313"><highlight class="comment"><sp/>*<sp/>entered.<sp/><sp/>eTaskConfirmSleepModeStatus()<sp/>should<sp/>be<sp/>called<sp/>from<sp/>a<sp/>short</highlight></codeline>
+<codeline lineno="2314"><highlight class="comment"><sp/>*<sp/>critical<sp/>section<sp/>between<sp/>the<sp/>timer<sp/>being<sp/>stopped<sp/>and<sp/>the<sp/>sleep<sp/>mode<sp/>being</highlight></codeline>
+<codeline lineno="2315"><highlight class="comment"><sp/>*<sp/>entered<sp/>to<sp/>ensure<sp/>it<sp/>is<sp/>ok<sp/>to<sp/>proceed<sp/>into<sp/>the<sp/>sleep<sp/>mode.</highlight></codeline>
+<codeline lineno="2316"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2317"><highlight class="normal">eSleepModeStatus<sp/>eTaskConfirmSleepModeStatus(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2319"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2320"><highlight class="comment"><sp/>*<sp/>For<sp/>internal<sp/>use<sp/>only.<sp/><sp/>Increment<sp/>the<sp/>mutex<sp/>held<sp/>count<sp/>when<sp/>a<sp/>mutex<sp/>is</highlight></codeline>
+<codeline lineno="2321"><highlight class="comment"><sp/>*<sp/>taken<sp/>and<sp/>return<sp/>the<sp/>handle<sp/>of<sp/>the<sp/>task<sp/>that<sp/>has<sp/>taken<sp/>the<sp/>mutex.</highlight></codeline>
+<codeline lineno="2322"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2323"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvTaskIncrementMutexHeldCount(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2325"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2326"><highlight class="comment"><sp/>*<sp/>For<sp/>internal<sp/>use<sp/>only.<sp/><sp/>Same<sp/>as<sp/>vTaskSetTimeOutState(),<sp/>but<sp/>without<sp/>a<sp/>critial</highlight></codeline>
+<codeline lineno="2327"><highlight class="comment"><sp/>*<sp/>section.</highlight></codeline>
+<codeline lineno="2328"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2329"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>vTaskInternalSetTimeOutState(<sp/><ref refid="structx_t_i_m_e___o_u_t" kindref="compound">TimeOut_t</ref><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pxTimeOut<sp/>)<sp/>PRIVILEGED_FUNCTION;</highlight></codeline>
+<codeline lineno="2330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2332"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2333"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="2334"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2335"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INC_TASK_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2338"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/include/task.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,32 @@
+.TH "TIM_One_Pulse_Mode" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_One_Pulse_Mode \- TIM One Pulse Mode
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_OPMODE_SINGLE\fP   \fBTIM_CR1_OPM\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_OPMODE_REPETITIVE\fP   0x00000000U"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TIM_OPMODE_REPETITIVE   0x00000000U"
+Counter is not stopped at update event 
+.br
+ 
+.SS "#define TIM_OPMODE_SINGLE   \fBTIM_CR1_OPM\fP"
+Counter stops counting at the next update event 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

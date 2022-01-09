@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_t_i_m___base___init_type_def" xml:lang="en-US">
+<title>TIM_Base_InitTypeDef Struct Reference</title>
+<indexterm><primary>TIM_Base_InitTypeDef</primary></indexterm>
+<para>
+
+<para>TIM Time base Configuration Structure definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f1xx_hal_tim.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___base___init_type_def_1affb82025da5b8d4a06e61f1690460f4d">Prescaler</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___base___init_type_def_1a4b29303489c983d0e9326d7ae0196ceb">CounterMode</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___base___init_type_def_1a49500eef6a2354eeee4adc005bf9cef6">Period</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___base___init_type_def_1a8f20e02ae2774e1523942604315b8e13">ClockDivision</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___base___init_type_def_1a3c2ea8434bbce30aa191a816e27f9c1f">RepetitionCounter</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___base___init_type_def_1a24796ba26d572a0993cb065a02865723">AutoReloadPreload</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>TIM Time base Configuration Structure definition. </para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_t_i_m___base___init_type_def_1a24796ba26d572a0993cb065a02865723"/>    <section>
+    <title>AutoReloadPreload</title>
+<indexterm><primary>AutoReloadPreload</primary><secondary>TIM_Base_InitTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_Base_InitTypeDef</primary><secondary>AutoReloadPreload</secondary></indexterm>
+<para><computeroutput>uint32_t AutoReloadPreload</computeroutput></para>
+<para>Specifies the auto-reload preload. This parameter can be a value of <link linkend="_group___t_i_m___auto_reload_preload">TIM Auto-Reload Preload</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___base___init_type_def_1a8f20e02ae2774e1523942604315b8e13"/>    <section>
+    <title>ClockDivision</title>
+<indexterm><primary>ClockDivision</primary><secondary>TIM_Base_InitTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_Base_InitTypeDef</primary><secondary>ClockDivision</secondary></indexterm>
+<para><computeroutput>uint32_t ClockDivision</computeroutput></para>
+<para>Specifies the clock division. This parameter can be a value of <link linkend="_group___t_i_m___clock_division">TIM Clock Division</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___base___init_type_def_1a4b29303489c983d0e9326d7ae0196ceb"/>    <section>
+    <title>CounterMode</title>
+<indexterm><primary>CounterMode</primary><secondary>TIM_Base_InitTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_Base_InitTypeDef</primary><secondary>CounterMode</secondary></indexterm>
+<para><computeroutput>uint32_t CounterMode</computeroutput></para>
+<para>Specifies the counter mode. This parameter can be a value of <link linkend="_group___t_i_m___counter___mode">TIM Counter Mode</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___base___init_type_def_1a49500eef6a2354eeee4adc005bf9cef6"/>    <section>
+    <title>Period</title>
+<indexterm><primary>Period</primary><secondary>TIM_Base_InitTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_Base_InitTypeDef</primary><secondary>Period</secondary></indexterm>
+<para><computeroutput>uint32_t Period</computeroutput></para>
+<para>Specifies the period value to be loaded into the active Auto-Reload Register at the next update event. This parameter can be a number between Min_Data = 0x0000 and Max_Data = 0xFFFF. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_struct_t_i_m___base___init_type_def_1affb82025da5b8d4a06e61f1690460f4d"/>    <section>
+    <title>Prescaler</title>
+<indexterm><primary>Prescaler</primary><secondary>TIM_Base_InitTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_Base_InitTypeDef</primary><secondary>Prescaler</secondary></indexterm>
+<para><computeroutput>uint32_t Prescaler</computeroutput></para>
+<para>Specifies the prescaler value used to divide the TIM clock. This parameter can be a number between Min_Data = 0x0000 and Max_Data = 0xFFFF </para>
+    </section><anchor xml:id="_struct_t_i_m___base___init_type_def_1a3c2ea8434bbce30aa191a816e27f9c1f"/>    <section>
+    <title>RepetitionCounter</title>
+<indexterm><primary>RepetitionCounter</primary><secondary>TIM_Base_InitTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_Base_InitTypeDef</primary><secondary>RepetitionCounter</secondary></indexterm>
+<para><computeroutput>uint32_t RepetitionCounter</computeroutput></para>
+<para>Specifies the repetition counter value. Each time the RCR downcounter reaches zero, an update event is generated and counting restarts from the RCR value (N). This means in PWM mode that (N+1) corresponds to:<itemizedlist>
+<listitem>
+<para>the number of PWM periods in edge-aligned mode</para>
+</listitem><listitem>
+<para>the number of half PWM period in center-aligned mode GP timers: this parameter must be a number between Min_Data = 0x00 and Max_Data = 0xFF. Advanced timers: this parameter must be a number between Min_Data = 0x0000 and Max_Data = 0xFFFF. </para>
+</listitem></itemizedlist>
+</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/STM32F1xx_HAL_Driver/Inc/<link linkend="_stm32f1xx__hal__tim_8h">stm32f1xx_hal_tim.h</link></section>
+</section>

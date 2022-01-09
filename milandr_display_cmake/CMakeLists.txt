@@ -31,15 +31,17 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -D__START=main \
     --specs=nosys.specs \
     --specs=nano.specs \
-    -fno-exceptions \
-    -D__HEAP_SIZE=0x0C00 \
-    -D__STACK_SIZE=0x0400 \
-    -mfloat-abi=soft \
-    -fno-strict-aliasing \
     ")
+
+
+#-fno-exceptions \
+#-D__HEAP_SIZE=0x0C00 \
+#-D__STACK_SIZE=0x0400 \
+#-mfloat-abi=soft \
+#-fno-strict-aliasing \
+
 #-nostdli
 #-xc
-#-std=c99
 #--target=arm-arm-none-eabi
 #-c
 #-fno-rtti
@@ -48,49 +50,55 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
 #-fshort-wchar
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-    --specs=nosys.specs \
-    --specs=nano.specs \
-    -mcpu=cortex-m3 \
-    -mthumb -std=c++17 \
-    -O3 \
-    -o prog \
-    -D_GNU_SOURCE \
-    -L./libmine \
     -fno-rtti \
     -fno-exceptions \
     -fno-threadsafe-statics \
     -DUSE_MDR1986VE9x \
     -D__STARTUP_CLEAR_BSS \
+    --specs=nano.specs \
+    --specs=nosys.specs \
+    -mcpu=cortex-m3 \
+    -std=c++17 \
+    -Wl,-Map=${PROJECT_NAME}.map \
+    -Wl,--print-memory-usage \
+    -Wl,--defsym=__STACK_SIZE=0x0100 \
+    -Wl,--defsym=__HEAP_SIZE=0x0000 \
+    -Wl,--gc-sections \
+    -ffreestanding \
     ")
+
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
+#    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
+#    ")
+
+#-mthumb \
+#-O3 \
+#-o prog \
+#-D_GNU_SOURCE \
+#-L./libmine \
 
 #-rdynamic
 #-nostdlib
-set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
-    -Wl,-Map=${PROJECT_NAME}.map \
-    -Wl,--gc-sections \
-    -ffunction-sections \
-    -fdata-sections \
-    -fno-strict-aliasing \
-    -mfloat-abi=soft \
-    -Wl,--defsym=__STACK_SIZE=0x0100 \
-    -Wl,--defsym=__HEAP_SIZE=0x0000 \
-    -mthumb \
-    -mcpu=cortex-m3 \
-    -T std-per-lib/../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
-    --specs=nosys.specs \
-    --specs=nano.specs \
-    -Wl,--gc-sections \
-    -ffreestanding \
-    -nostartfiles \
-    -Wl,-Map=example.map
-    ")
 
-#add_definitions("-std=c++17")
-#message ("CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}")
+#set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
+#    -ffunction-sections \
+#    -fdata-sections \
+#    -fno-strict-aliasing \
+#    -mfloat-abi=soft \
+#    -mthumb \
+#    -mcpu=cortex-m3 \
+#    --specs=nosys.specs \
+#    --specs=nano.specs \
+#    -ffreestanding \
+#    -nostartfiles \
+#    ")
+#    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
+
 
 include_directories(
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm
+    ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/CoreSupport/CM3
     ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx
     ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc
@@ -131,38 +139,42 @@ set (SOURCES_DEVICE_SUPPORT
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/startup/arm/system_MDR32F9Qx.c
     )
 
-#add_library(CMSIS
-#    ${SOURCES_SPL}
-#    ${SOURCES_USB}
-#    ${SOURCES_DEVICE_SUPPORT}
-#    )
+set (STARTUP_DEVICE_SUPPORT
+    ../Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/startup_MDR32F9Qx.S
+    )
+
+add_library(CMSIS
+    ${SOURCES_SPL}
+    ${SOURCES_USB}
+    ${SOURCES_DEVICE_SUPPORT}
+    ${STARTUP_DEVICE_SUPPORT}
+    )
 
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
     ${SOURCES_CPP}
-    ${LINKER_SCRIPT}
-    ${SOURCES_SPL}
-    ${SOURCES_USB}
-    ${SOURCES_DEVICE_SUPPORT}
+#    ${SOURCES_SPL}
+#    ${SOURCES_USB}
+#    ${SOURCES_DEVICE_SUPPORT}
     )
 
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE CXX)
 
-#target_link_libraries(${PROJECT_NAME}.elf
-#    ${CMSIS}
-##    m
-#    )
+target_link_libraries(${PROJECT_NAME}.elf
+    CMSIS
+#    m
+    )
 
-set(HEX_FILE ${PROJECT_SOURCE_DIR}/build_release/${PROJECT_NAME}.hex)
-#set(BIN_FILE ${PROJECT_SOURCE_DIR}/build/${PROJECT_NAME}.bin)
+set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
+set(BIN_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.bin)
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}
-#    COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
-#    COMMENT "Building ${HEX_FILE} \nBuilding ${BIN_FILE}")
-     COMMENT "Building ${HEX_FILE} ")
+    COMMENT "Building ${HEX_FILE} ")
 
-
+#add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
+#    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
+#    COMMENT "Building ${BIN_FILE} ")
 
 #include(${CMAKE_SOURCE_DIR}/conanbuildinfo.cmake)
 #include(${CMAKE_SOURCE_DIR}/conanbuildinfo.cmake)

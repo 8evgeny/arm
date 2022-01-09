@@ -1,0 +1,162 @@
+.TH "Drivers/CMSIS/Include/cmsis_iccarm.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/CMSIS/Include/cmsis_iccarm.h \- CMSIS compiler ICCARM (IAR Compiler for Arm) header file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <intrinsics\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fB__iar_u32\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__IAR_FT\fP   _Pragma('inline=forced') __intrinsic"
+.br
+.ti -1c
+.RI "#define \fB__ICCARM_V8\fP   0"
+.br
+.ti -1c
+.RI "#define \fB__ALIGNED\fP(x)"
+.br
+.ti -1c
+.RI "#define \fB__IAR_M0_FAMILY\fP   0"
+.br
+.ti -1c
+.RI "#define \fB__ASM\fP   __asm"
+.br
+.ti -1c
+.RI "#define \fB__INLINE\fP   inline"
+.br
+.ti -1c
+.RI "#define \fB__NO_RETURN\fP   _Pragma('object_attribute=__noreturn')"
+.br
+.ti -1c
+.RI "#define \fB__PACKED\fP   __packed"
+.br
+.ti -1c
+.RI "#define \fB__PACKED_STRUCT\fP   __packed struct"
+.br
+.ti -1c
+.RI "#define \fB__PACKED_UNION\fP   __packed union"
+.br
+.ti -1c
+.RI "#define \fB__RESTRICT\fP   __restrict"
+.br
+.ti -1c
+.RI "#define \fB__STATIC_INLINE\fP   static inline"
+.br
+.ti -1c
+.RI "#define \fB__FORCEINLINE\fP   _Pragma('inline=forced')"
+.br
+.ti -1c
+.RI "#define \fB__STATIC_FORCEINLINE\fP   __FORCEINLINE __STATIC_INLINE"
+.br
+.ti -1c
+.RI "#define \fB__UNALIGNED_UINT16_READ\fP(PTR)   __iar_uint16_read(PTR)"
+.br
+.ti -1c
+.RI "#define \fB__UNALIGNED_UINT16_WRITE\fP(PTR,  VAL)   __iar_uint16_write(PTR,VAL)"
+.br
+.ti -1c
+.RI "#define \fB__UNALIGNED_UINT32_READ\fP(PTR)   __iar_uint32_read(PTR)"
+.br
+.ti -1c
+.RI "#define \fB__UNALIGNED_UINT32_WRITE\fP(PTR,  VAL)   __iar_uint32_write(PTR,VAL)"
+.br
+.ti -1c
+.RI "#define \fB__UNALIGNED_UINT32\fP(PTR)   (((struct \fB__iar_u32\fP *)(PTR))\->v)"
+.br
+.ti -1c
+.RI "#define \fB__USED\fP   _Pragma('__root')"
+.br
+.ti -1c
+.RI "#define \fB__WEAK\fP   _Pragma('__weak')"
+.br
+.ti -1c
+.RI "#define \fB__ICCARM_INTRINSICS_VERSION__\fP   0"
+.br
+.ti -1c
+.RI "#define \fB__get_FPSCR\fP   __cmsis_iar_get_FPSR_not_active"
+.br
+.ti -1c
+.RI "#define \fB__set_FPSCR\fP   __cmsis_iar_set_FPSR_not_active"
+.br
+.ti -1c
+.RI "#define \fB__get_FPSCR\fP()   (0)"
+.br
+.ti -1c
+.RI "#define \fB__set_FPSCR\fP(VALUE)   ((void)VALUE)"
+.br
+.ti -1c
+.RI "#define \fB__enable_irq\fP   __enable_interrupt"
+.br
+.ti -1c
+.RI "#define \fB__disable_irq\fP   __disable_interrupt"
+.br
+.ti -1c
+.RI "#define \fB__NOP\fP   __no_operation"
+.br
+.ti -1c
+.RI "#define \fB__get_xPSR\fP   __get_PSR"
+.br
+.RI "Get xPSR Register\&. "
+.ti -1c
+.RI "#define \fB__BKPT\fP(value)   __asm volatile ('BKPT     %0' : : 'i'(value))"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "__IAR_FT uint16_t \fB__iar_uint16_read\fP (void const *ptr)"
+.br
+.ti -1c
+.RI "__IAR_FT void \fB__iar_uint16_write\fP (void const *ptr, uint16_t val)"
+.br
+.ti -1c
+.RI "__IAR_FT uint32_t \fB__iar_uint32_read\fP (void const *ptr)"
+.br
+.ti -1c
+.RI "__IAR_FT void \fB__iar_uint32_write\fP (void const *ptr, uint32_t val)"
+.br
+.ti -1c
+.RI "__IAR_FT uint32_t \fB__LDREXW\fP (uint32_t volatile *ptr)"
+.br
+.ti -1c
+.RI "__IAR_FT uint32_t \fB__STREXW\fP (uint32_t value, uint32_t volatile *ptr)"
+.br
+.ti -1c
+.RI "__IAR_FT uint32_t \fB__ROR\fP (uint32_t op1, uint32_t op2)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+CMSIS compiler ICCARM (IAR Compiler for Arm) header file\&. 
+
+
+.PP
+\fBVersion\fP
+.RS 4
+V5\&.0\&.7 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+19\&. June 2018 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

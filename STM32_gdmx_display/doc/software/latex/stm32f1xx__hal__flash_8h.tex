@@ -1,0 +1,103 @@
+\hypertarget{stm32f1xx__hal__flash_8h}{}\doxysection{Drivers/\+STM32\+F1xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32f1xx\+\_\+hal\+\_\+flash.h File Reference}
+\label{stm32f1xx__hal__flash_8h}\index{Drivers/STM32F1xx\_HAL\_Driver/Inc/stm32f1xx\_hal\_flash.h@{Drivers/STM32F1xx\_HAL\_Driver/Inc/stm32f1xx\_hal\_flash.h}}
+
+
+Header file of Flash HAL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_f_l_a_s_h___process_type_def}{FLASH\+\_\+\+Process\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em FLASH handle Structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries FLASH\+\_\+\+TIMEOUT\+\_\+\+VALUE}~50000U /$\ast$ 50 s $\ast$/
+\item 
+\#define {\bfseries IS\+\_\+\+FLASH\+\_\+\+TYPEPROGRAM}(VALUE)
+\item 
+\#define {\bfseries IS\+\_\+\+FLASH\+\_\+\+LATENCY}(\+\_\+\+\_\+\+LATENCY\+\_\+\+\_\+)~((\+\_\+\+\_\+\+LATENCY\+\_\+\+\_\+) == \mbox{\hyperlink{group___f_l_a_s_h___latency_ga1276f51e97dc9857ca261fae4eb890f3}{FLASH\+\_\+\+LATENCY\+\_\+0}})
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___error___codes_gae7fb9ee7198d393aba27ade3a9f50a70}{HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+NONE}}~0x00U
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___error___codes_ga516a75e6f98eed9daefa0b442a74c04b}{HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+PROG}}~0x01U
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___error___codes_ga27e871d85f9311272098315bc3723075}{HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+WRP}}~0x02U
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___error___codes_ga9fe984a57c2e92c27c4217468d1b2d93}{HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+OPTV}}~0x04U
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___type___program_ga2b607dfc2efd463a8530e327bc755582}{FLASH\+\_\+\+TYPEPROGRAM\+\_\+\+HALFWORD}}~0x01U
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___type___program_gadd25c6821539030ba6711e7c0d586c3e}{FLASH\+\_\+\+TYPEPROGRAM\+\_\+\+WORD}}~0x02U
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___type___program_gabdc2b0b4d2e66c2be90fafbfbf1e225f}{FLASH\+\_\+\+TYPEPROGRAM\+\_\+\+DOUBLEWORD}}~0x03U
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___latency_ga1276f51e97dc9857ca261fae4eb890f3}{FLASH\+\_\+\+LATENCY\+\_\+0}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___half___cycle_ga65eb4c393cbc94747449b8aab349200a}{\+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+HALF\+\_\+\+CYCLE\+\_\+\+ACCESS\+\_\+\+ENABLE}}()~(FLASH-\/$>$ACR $\vert$= \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6e66d0fa94c019e9c27a3d79e8228cd9}{FLASH\+\_\+\+ACR\+\_\+\+HLFCYA}})
+\begin{DoxyCompactList}\small\item\em Enable the FLASH half cycle access. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___half___cycle_ga2e0c8e2c00a86896027c0cf1c95fbba1}{\+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+HALF\+\_\+\+CYCLE\+\_\+\+ACCESS\+\_\+\+DISABLE}}()~(FLASH-\/$>$ACR \&= ($\sim$\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6e66d0fa94c019e9c27a3d79e8228cd9}{FLASH\+\_\+\+ACR\+\_\+\+HLFCYA}}))
+\begin{DoxyCompactList}\small\item\em Disable the FLASH half cycle access. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___prefetch_gad36059641057f824516303ea92734e6f}{\+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+PREFETCH\+\_\+\+BUFFER\+\_\+\+ENABLE}}()~(FLASH-\/$>$ACR $\vert$= \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5285ab198307213dce0629f9b7c6fc86}{FLASH\+\_\+\+ACR\+\_\+\+PRFTBE}})
+\begin{DoxyCompactList}\small\item\em Enable the FLASH prefetch buffer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___prefetch_ga646a4cb92e85659334d14a8c78f0ede8}{\+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+PREFETCH\+\_\+\+BUFFER\+\_\+\+DISABLE}}()~(FLASH-\/$>$ACR \&= ($\sim$\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5285ab198307213dce0629f9b7c6fc86}{FLASH\+\_\+\+ACR\+\_\+\+PRFTBE}}))
+\begin{DoxyCompactList}\small\item\em Disable the FLASH prefetch buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___f_l_a_s_h___exported___types_ga2b0268387bc11bcab76be9ce7c43eaaf}\label{group___f_l_a_s_h___exported___types_ga2b0268387bc11bcab76be9ce7c43eaaf}} 
+enum \mbox{\hyperlink{group___f_l_a_s_h___exported___types_ga2b0268387bc11bcab76be9ce7c43eaaf}{FLASH\+\_\+\+Procedure\+Type\+Def}} \{ \newline
+{\bfseries FLASH\+\_\+\+PROC\+\_\+\+NONE} = 0U
+, {\bfseries FLASH\+\_\+\+PROC\+\_\+\+PAGEERASE} = 1U
+, {\bfseries FLASH\+\_\+\+PROC\+\_\+\+MASSERASE} = 2U
+, {\bfseries FLASH\+\_\+\+PROC\+\_\+\+PROGRAMHALFWORD} = 3U
+, \newline
+{\bfseries FLASH\+\_\+\+PROC\+\_\+\+PROGRAMWORD} = 4U
+, {\bfseries FLASH\+\_\+\+PROC\+\_\+\+PROGRAMDOUBLEWORD} = 5U
+ \}
+\begin{DoxyCompactList}\small\item\em FLASH Procedure structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+FLASH\+\_\+\+Program} (uint32\+\_\+t Type\+Program, uint32\+\_\+t Address, uint64\+\_\+t Data)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+FLASH\+\_\+\+Program\+\_\+\+IT} (uint32\+\_\+t Type\+Program, uint32\+\_\+t Address, uint64\+\_\+t Data)
+\item 
+void {\bfseries HAL\+\_\+\+FLASH\+\_\+\+IRQHandler} (void)
+\item 
+void {\bfseries HAL\+\_\+\+FLASH\+\_\+\+End\+Of\+Operation\+Callback} (uint32\+\_\+t Return\+Value)
+\item 
+void {\bfseries HAL\+\_\+\+FLASH\+\_\+\+Operation\+Error\+Callback} (uint32\+\_\+t Return\+Value)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+FLASH\+\_\+\+Unlock} (void)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+FLASH\+\_\+\+Lock} (void)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+FLASH\+\_\+\+OB\+\_\+\+Unlock} (void)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+FLASH\+\_\+\+OB\+\_\+\+Lock} (void)
+\item 
+void {\bfseries HAL\+\_\+\+FLASH\+\_\+\+OB\+\_\+\+Launch} (void)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+FLASH\+\_\+\+Get\+Error} (void)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries FLASH\+\_\+\+Wait\+For\+Last\+Operation} (uint32\+\_\+t Timeout)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of Flash HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2016 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 

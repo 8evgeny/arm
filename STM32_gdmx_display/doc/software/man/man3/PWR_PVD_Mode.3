@@ -1,0 +1,55 @@
+.TH "PWR_PVD_Mode" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PWR_PVD_Mode \- PWR PVD Mode
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_NORMAL\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_IT_RISING\fP   0x00010001U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_IT_FALLING\fP   0x00010002U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_IT_RISING_FALLING\fP   0x00010003U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_EVENT_RISING\fP   0x00020001U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_EVENT_FALLING\fP   0x00020002U"
+.br
+.ti -1c
+.RI "#define \fBPWR_PVD_MODE_EVENT_RISING_FALLING\fP   0x00020003U"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define PWR_PVD_MODE_EVENT_FALLING   0x00020002U"
+Event Mode with Falling edge trigger detection 
+.SS "#define PWR_PVD_MODE_EVENT_RISING   0x00020001U"
+Event Mode with Rising edge trigger detection 
+.SS "#define PWR_PVD_MODE_EVENT_RISING_FALLING   0x00020003U"
+Event Mode with Rising/Falling edge trigger detection 
+.SS "#define PWR_PVD_MODE_IT_FALLING   0x00010002U"
+External Interrupt Mode with Falling edge trigger detection 
+.SS "#define PWR_PVD_MODE_IT_RISING   0x00010001U"
+External Interrupt Mode with Rising edge trigger detection 
+.SS "#define PWR_PVD_MODE_IT_RISING_FALLING   0x00010003U"
+External Interrupt Mode with Rising/Falling edge trigger detection 
+.SS "#define PWR_PVD_MODE_NORMAL   0x00000000U"
+basic mode is used 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

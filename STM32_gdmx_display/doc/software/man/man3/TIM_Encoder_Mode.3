@@ -1,0 +1,37 @@
+.TH "TIM_Encoder_Mode" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Encoder_Mode \- TIM Encoder Mode
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_ENCODERMODE_TI1\fP   \fBTIM_SMCR_SMS_0\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_ENCODERMODE_TI2\fP   \fBTIM_SMCR_SMS_1\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_ENCODERMODE_TI12\fP   (\fBTIM_SMCR_SMS_1\fP | \fBTIM_SMCR_SMS_0\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TIM_ENCODERMODE_TI1   \fBTIM_SMCR_SMS_0\fP"
+Quadrature encoder mode 1, x2 mode, counts up/down on TI1FP1 edge depending on TI2FP2 level 
+.br
+ 
+.SS "#define TIM_ENCODERMODE_TI12   (\fBTIM_SMCR_SMS_1\fP | \fBTIM_SMCR_SMS_0\fP)"
+Quadrature encoder mode 3, x4 mode, counts up/down on both TI1FP1 and TI2FP2 edges depending on the level of the other input\&. 
+.SS "#define TIM_ENCODERMODE_TI2   \fBTIM_SMCR_SMS_1\fP"
+Quadrature encoder mode 2, x2 mode, counts up/down on TI2FP2 edge depending on TI1FP1 level\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

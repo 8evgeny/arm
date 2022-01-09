@@ -1,0 +1,1156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_m_s_i_s__core__bitfield" xml:lang="en-US">
+<title>Core register bit field macros</title>
+<indexterm><primary>Core register bit field macros</primary></indexterm>
+<para>
+
+<para>Macros for use with bit field definitions (xxx_Pos, xxx_Msk). </para>
+ 
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___c_m_s_i_s__core__base">Core Definitions</link></para>
+
+<para>Definitions for base addresses, unions, and structures. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Macros for use with bit field definitions (xxx_Pos, xxx_Msk). </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[1/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[2/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[3/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[4/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[5/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[6/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[7/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[8/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[9/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[10/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[11/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444"/>    <section>
+    <title>_FLD2VAL<computeroutput>[12/12]</computeroutput></title>
+<indexterm><primary>_FLD2VAL</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_FLD2VAL</secondary></indexterm>
+<para><computeroutput>#define _FLD2VAL( field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</computeroutput></para><para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of register. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted bit field value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[1/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[2/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[3/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[4/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[5/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[6/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[7/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[8/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[9/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[10/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[11/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e"/>    <section>
+    <title>_VAL2FLD<computeroutput>[12/12]</computeroutput></title>
+<indexterm><primary>_VAL2FLD</primary><secondary>Core register bit field macros</secondary></indexterm>
+<indexterm><primary>Core register bit field macros</primary><secondary>_VAL2FLD</secondary></indexterm>
+<para><computeroutput>#define _VAL2FLD( field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</computeroutput></para><para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>field</entry>
+                                <entry>
+<para>Name of the register bit field. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value of the bit field. This parameter is interpreted as an uint32_t type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Masked and shifted value. </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

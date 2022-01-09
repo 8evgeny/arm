@@ -1,0 +1,83 @@
+.TH "xStreamBufferReceiveFromISR" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xStreamBufferReceiveFromISR \- xStreamBufferReceiveFromISR
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+\fBstream_buffer\&.h\fP
+.PP
+.PP
+.nf
+
+size_t xStreamBufferReceiveFromISR( StreamBufferHandle_t xStreamBuffer,
+                                    void *pvRxData,
+                                    size_t xBufferLengthBytes,
+                                    BaseType_t *pxHigherPriorityTaskWoken );
+.fi
+.PP
+.PP
+An interrupt safe version of the API function that receives bytes from a stream buffer\&.
+.PP
+Use xStreamBufferReceive() to read bytes from a stream buffer from a task\&. Use xStreamBufferReceiveFromISR() to read bytes from a stream buffer from an interrupt service routine (ISR)\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxStreamBuffer\fP The handle of the stream buffer from which a stream is being received\&.
+.br
+\fIpvRxData\fP A pointer to the buffer into which the received bytes are copied\&.
+.br
+\fIxBufferLengthBytes\fP The length of the buffer pointed to by the pvRxData parameter\&. This sets the maximum number of bytes to receive in one call\&. xStreamBufferReceive will return as many bytes as possible up to a maximum set by xBufferLengthBytes\&.
+.br
+\fIpxHigherPriorityTaskWoken\fP It is possible that a stream buffer will have a task blocked on it waiting for space to become available\&. Calling xStreamBufferReceiveFromISR() can make space available, and so cause a task that is waiting for space to leave the Blocked state\&. If calling xStreamBufferReceiveFromISR() causes a task to leave the Blocked state, and the unblocked task has a priority higher than the currently executing task (the task that was interrupted), then, internally, xStreamBufferReceiveFromISR() will set *pxHigherPriorityTaskWoken to pdTRUE\&. If xStreamBufferReceiveFromISR() sets this value to pdTRUE, then normally a context switch should be performed before the interrupt is exited\&. That will ensure the interrupt returns directly to the highest priority Ready state task\&. *pxHigherPriorityTaskWoken should be set to pdFALSE before it is passed into the function\&. See the code example below for an example\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of bytes read from the stream buffer, if any\&.
+.RE
+.PP
+Example use: 
+.PP
+.nf
+
+// A stream buffer that has already been created\&.
+StreamBuffer_t xStreamBuffer;
+
+void vAnInterruptServiceRoutine( void )
+{
+uint8_t ucRxData[ 20 ];
+size_t xReceivedBytes;
+BaseType_t xHigherPriorityTaskWoken = pdFALSE;  // Initialised to pdFALSE\&.
+
+    // Receive the next stream from the stream buffer\&.
+    xReceivedBytes = xStreamBufferReceiveFromISR( xStreamBuffer,
+                                                  ( void * ) ucRxData,
+                                                  sizeof( ucRxData ),
+                                                  &xHigherPriorityTaskWoken );
+
+    if( xReceivedBytes > 0 )
+    {
+        // ucRxData contains xReceivedBytes read from the stream buffer\&.
+        // Process the stream here\&.\&.\&.\&.
+    }
+
+    // If xHigherPriorityTaskWoken was set to pdTRUE inside
+    // xStreamBufferReceiveFromISR() then a task that has a priority above the
+    // priority of the currently executing task was unblocked and a context
+    // switch should be performed to ensure the ISR returns to the unblocked
+    // task\&.  In most FreeRTOS ports this is done by simply passing
+    // xHigherPriorityTaskWoken into taskYIELD_FROM_ISR(), which will test the
+    // variables value, and perform the context switch if necessary\&.  Check the
+    // documentation for the port in use for port specific instructions\&.
+    taskYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+}
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

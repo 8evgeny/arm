@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct___device__cb" kind="struct" language="C++" prot="public">
+    <compoundname>_Device_cb</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___device__cb_1a6766e3508b1115ff28f972cd38ca685e" prot="public" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* Init) (struct _USBD_HandleTypeDef *pdev, uint8_t cfgidx)</definition>
+        <argsstring>)(struct _USBD_HandleTypeDef *pdev, uint8_t cfgidx)</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="172" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1a0c3e05262fdf4d85c4efaf53491887b0" prot="public" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* DeInit) (struct _USBD_HandleTypeDef *pdev, uint8_t cfgidx)</definition>
+        <argsstring>)(struct _USBD_HandleTypeDef *pdev, uint8_t cfgidx)</argsstring>
+        <name>DeInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="173" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1acdac828e3d3ffa0b1cac9851fa8d7f72" prot="public" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* Setup) (struct _USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</definition>
+        <argsstring>)(struct _USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef *req)</argsstring>
+        <name>Setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="175" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1ad1104933798bae825247d5c03e5694d0" prot="public" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* EP0_TxSent) (struct _USBD_HandleTypeDef *pdev)</definition>
+        <argsstring>)(struct _USBD_HandleTypeDef *pdev)</argsstring>
+        <name>EP0_TxSent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="176" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1ae4486c709f99410000a62641d12be2c1" prot="public" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* EP0_RxReady) (struct _USBD_HandleTypeDef *pdev)</definition>
+        <argsstring>)(struct _USBD_HandleTypeDef *pdev)</argsstring>
+        <name>EP0_RxReady</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="177" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1a3200c47f98ebcea09202bd24e6cbe76a" prot="public" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* DataIn) (struct _USBD_HandleTypeDef *pdev, uint8_t epnum)</definition>
+        <argsstring>)(struct _USBD_HandleTypeDef *pdev, uint8_t epnum)</argsstring>
+        <name>DataIn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="179" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1a247be006602782de0a36d0bfb8403e3c" prot="public" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* DataOut) (struct _USBD_HandleTypeDef *pdev, uint8_t epnum)</definition>
+        <argsstring>)(struct _USBD_HandleTypeDef *pdev, uint8_t epnum)</argsstring>
+        <name>DataOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="180" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1a7d7ea8a83453087520c85e0fad187a9a" prot="public" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* SOF) (struct _USBD_HandleTypeDef *pdev)</definition>
+        <argsstring>)(struct _USBD_HandleTypeDef *pdev)</argsstring>
+        <name>SOF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="181" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1a794a6133ea44bef1be7735de3bb0d140" prot="public" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* IsoINIncomplete) (struct _USBD_HandleTypeDef *pdev, uint8_t epnum)</definition>
+        <argsstring>)(struct _USBD_HandleTypeDef *pdev, uint8_t epnum)</argsstring>
+        <name>IsoINIncomplete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="182" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1a26c067fe2f7b53408542f7451a2f8f0d" prot="public" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* IsoOUTIncomplete) (struct _USBD_HandleTypeDef *pdev, uint8_t epnum)</definition>
+        <argsstring>)(struct _USBD_HandleTypeDef *pdev, uint8_t epnum)</argsstring>
+        <name>IsoOUTIncomplete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="183" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1ac8752bfe7926ac4e940c9fc23c3fb3da" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetHSConfigDescriptor) (uint16_t *length)</definition>
+        <argsstring>)(uint16_t *length)</argsstring>
+        <name>GetHSConfigDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="185" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1a9f36421f1c47504abc179a61026713c0" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetFSConfigDescriptor) (uint16_t *length)</definition>
+        <argsstring>)(uint16_t *length)</argsstring>
+        <name>GetFSConfigDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="186" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1a749f59dcd83ea5385b333e6ed5c96ea3" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetOtherSpeedConfigDescriptor) (uint16_t *length)</definition>
+        <argsstring>)(uint16_t *length)</argsstring>
+        <name>GetOtherSpeedConfigDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="187" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___device__cb_1a9974d8ef0c91be29ac0aeacf0884064e" prot="public" static="no" mutable="no">
+        <type>uint8_t *(*</type>
+        <definition>uint8_t*(* GetDeviceQualifierDescriptor) (uint16_t *length)</definition>
+        <argsstring>)(uint16_t *length)</argsstring>
+        <name>GetDeviceQualifierDescriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="188" column="3" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" line="170" column="1" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" bodystart="171" bodyend="193"/>
+    <listofallmembers>
+      <member refid="struct___device__cb_1a3200c47f98ebcea09202bd24e6cbe76a" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>DataIn</name></member>
+      <member refid="struct___device__cb_1a247be006602782de0a36d0bfb8403e3c" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>DataOut</name></member>
+      <member refid="struct___device__cb_1a0c3e05262fdf4d85c4efaf53491887b0" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>DeInit</name></member>
+      <member refid="struct___device__cb_1ae4486c709f99410000a62641d12be2c1" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>EP0_RxReady</name></member>
+      <member refid="struct___device__cb_1ad1104933798bae825247d5c03e5694d0" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>EP0_TxSent</name></member>
+      <member refid="struct___device__cb_1a9974d8ef0c91be29ac0aeacf0884064e" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>GetDeviceQualifierDescriptor</name></member>
+      <member refid="struct___device__cb_1a9f36421f1c47504abc179a61026713c0" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>GetFSConfigDescriptor</name></member>
+      <member refid="struct___device__cb_1ac8752bfe7926ac4e940c9fc23c3fb3da" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>GetHSConfigDescriptor</name></member>
+      <member refid="struct___device__cb_1a749f59dcd83ea5385b333e6ed5c96ea3" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>GetOtherSpeedConfigDescriptor</name></member>
+      <member refid="struct___device__cb_1a6766e3508b1115ff28f972cd38ca685e" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>Init</name></member>
+      <member refid="struct___device__cb_1a794a6133ea44bef1be7735de3bb0d140" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>IsoINIncomplete</name></member>
+      <member refid="struct___device__cb_1a26c067fe2f7b53408542f7451a2f8f0d" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>IsoOUTIncomplete</name></member>
+      <member refid="struct___device__cb_1acdac828e3d3ffa0b1cac9851fa8d7f72" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>Setup</name></member>
+      <member refid="struct___device__cb_1a7d7ea8a83453087520c85e0fad187a9a" prot="public" virt="non-virtual"><scope>_Device_cb</scope><name>SOF</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
