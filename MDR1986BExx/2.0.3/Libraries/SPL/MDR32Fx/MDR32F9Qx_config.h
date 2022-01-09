@@ -52,7 +52,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include <stdint.h>
-#include <RTE_Components.h> // Keil uVision specific inclusion
+//#include <RTE_Components.h> // Keil uVision specific inclusion
 
 /* Uncomment the line corresponding to the target microcontroller */
 /* When using Keil uVision, the definition is set automatically
