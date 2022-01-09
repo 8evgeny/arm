@@ -64,6 +64,7 @@ void TimerInit(){
     TIMER_Cmd(MDR_TIMER1, ENABLE);
 }
 //Процедура обработки прерывания вызванного таймером
+//Вызывается при прерывании от 1 таймера
 void Timer1_IRQHandler() {
     if(TIMER_GetITStatus(MDR_TIMER1, TIMER_STATUS_CNT_ZERO)){
         NextLED();
