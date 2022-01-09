@@ -20,7 +20,7 @@
   ******************************************************************************
   */
 
-#include "HD44780.h"
+#include "hd44780.h"
 
 //#define GDMXPROJ
 #define GET_GPIO_BIT(dat, weight) (GPIO_PinState)((dat>>weight)&1u)	// why?
