@@ -17,22 +17,21 @@
 #define MAX 3 /*Volt*/
 #define SCALE (0xFFF * MAX) / 3.3
 
-PORT_InitTypeDef PORTEInit;
-
+PORT_InitTypeDef PORTEInit;                      //Объявление структуры
 void DACPortInit(){
-    PORT_StructInit(&PORTEInit); //Load defaults
-    RST_CLK_PCLKcmd(RST_CLK_PCLK_PORTE, ENABLE);
-    PORTEInit.PORT_Pin = PORT_Pin_9;
-    PORTEInit.PORT_OE
-        = PORT_OE_OUT;
-    PORTEInit.PORT_MODE = PORT_MODE_ANALOG;
-    PORT_Init(MDR_PORTE, &PORTEInit);
+    PORT_StructInit(&PORTEInit);                 //Загрузка умолчаний
+    RST_CLK_PCLKcmd(RST_CLK_PCLK_PORTE, ENABLE); //Тактование
+    /* Настройка DAC1 (стр.11 спецификации) */
+    PORTEInit.PORT_Pin = PORT_Pin_9;             //Пин 9
+    PORTEInit.PORT_OE  = PORT_OE_OUT;            // Порт E
+    PORTEInit.PORT_MODE = PORT_MODE_ANALOG;      //Режим Аналоговый
+    PORT_Init(MDR_PORTE, &PORTEInit);            //Настройка порта
 }
 
 void DACInit(){
-    RST_CLK_PCLKcmd(RST_CLK_PCLK_DAC, ENABLE);
-    DAC1_Init(DAC1_AVCC);
-    DAC1_Cmd(ENABLE);
+    RST_CLK_PCLKcmd(RST_CLK_PCLK_DAC, ENABLE);   //Тактование
+    DAC1_Init(DAC1_AVCC);                        //Настройка DAC1 на работу с AVCC
+    DAC1_Cmd(ENABLE);                            //Активация DAC1
 }
 
 float a;
