@@ -80,7 +80,6 @@ include_directories(
     ../../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src
     include
     src
-    /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/
     )
 
 set (SOURCES_C
