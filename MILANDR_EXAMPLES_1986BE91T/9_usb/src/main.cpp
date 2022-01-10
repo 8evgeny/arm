@@ -50,7 +50,7 @@ void Setup_CPU_Clock(void)
     // Определение параметров схемы PLL, коэффициент деления внешнего источника тактовой частоты 1,
     //коэффициент умножения 10 (CPU_C1_SEL = HSE)
     RST_CLK_CPU_PLLconfig(RST_CLK_CPU_PLLsrcHSEdiv1, RST_CLK_CPU_PLLmul10);
-    RST_CLK_CPU_PLLcmd(ENABLE);                                   // Разрешение работы PLL
+    RST_CLK_CPU_PLLcmd(ENABLE);                              // Разрешение работы PLL
     if (RST_CLK_CPU_PLLstatus() != SUCCESS)
     {
         while (1){}   //Если внешний источник тактовой частоты не запустился то переходим в бесконечный цикл
@@ -86,25 +86,24 @@ void Setup_USB(void)
 /* Задание конфигурации последовательной линии связи которую может прочитать хост*/
 static void VCom_Configuration(void)
 {
-#ifdef USB_CDC_LINE_CODING_SUPPORTED
-LineCoding.dwDTERate = 115200;
-LineCoding.bCharFormat = 0;
-LineCoding.bParityType = 0;
-LineCoding.bDataBits = 8;
-#endif /* USB_CDC_LINE_CODING_SUPPORTED */
+    #ifdef USB_CDC_LINE_CODING_SUPPORTED
+    LineCoding.dwDTERate = 115200;
+    LineCoding.bCharFormat = 0;
+    LineCoding.bParityType = 0;
+    LineCoding.bDataBits = 8;
+    #endif /* USB_CDC_LINE_CODING_SUPPORTED */
 }
 /*USB_CDC_HANDLE_DATA_RECEIVE implementation - data echoing*/
 
 // Данная процедура автоматически вызывается при приеме данных по USB.
 USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
-USB_Result result;
-/* Передача одного байта назад на устройство */
-result = USB_CDC_SendData(Buffer, Length);
-return USB_SUCCESS;
+    USB_Result result;
+    /* Передача одного байта назад на устройство */
+    result = USB_CDC_SendData(Buffer, Length);
+    return USB_SUCCESS;
 }
 #ifdef USB_CDC_LINE_CODING_SUPPORTED
-
 /* Эти два запроса отправляются хостом, чтобы изменить или прочитать конфигурацию последовательной линии связи, которая включает в себя:
 • Baudrate (скорость передачи данных)
 • Number of stop bits (количество стоп-битов)
@@ -117,30 +116,33 @@ return USB_SUCCESS;
 /* USB_CDC_HANDLE_GET_LINE_CODING implementation example */
 USB_Result USB_CDC_GetLineCoding(uint16_t wINDEX, USB_CDC_LineCoding_TypeDef* DATA)
 {
-assert_param(DATA);
-if (wINDEX != 0)
-{
-    /* Invalid interface */
-    return USB_ERR_INV_REQ;
+    assert_param(DATA);
+    if (wINDEX != 0)
+    {
+        /* Invalid interface */
+        return USB_ERR_INV_REQ;
+    }
+    /* Just store received settings */
+    *DATA = LineCoding;
+    return USB_SUCCESS;
 }
-/* Just store received settings */
-*DATA = LineCoding;
-return USB_SUCCESS;
-}
+
 /* USB_CDC_HANDLE_SET_LINE_CODING implementation example */
 USB_Result USB_CDC_SetLineCoding(uint16_t wINDEX, const USB_CDC_LineCoding_TypeDef* DATA)
 {
-assert_param(DATA);
-if (wINDEX != 0)
-{
-/* Invalid interface */
-return USB_ERR_INV_REQ;
-}
-/* Just send back settings stored earlier */
-LineCoding = *DATA;
-return USB_SUCCESS;
+    assert_param(DATA);
+    if (wINDEX != 0)
+    {
+    /* Invalid interface */
+    return USB_ERR_INV_REQ;
+    }
+    /* Just send back settings stored earlier */
+    LineCoding = *DATA;
+    return USB_SUCCESS;
 }
 #endif /* USB_CDC_LINE_CODING_SUPPORTED */
+
+
 #if 0
 
 #endif
