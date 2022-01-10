@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="buzzer_8h" kind="file" language="C++">
+    <compoundname>buzzer.h</compoundname>
+    <includes refid="stm32f1xx__hal_8h" local="yes">stm32f1xx_hal.h</includes>
+    <includedby refid="main_8h" local="yes">Inc/main.h</includedby>
+    <includedby refid="buzzer_8c" local="yes">Src/buzzer.c</includedby>
+    <incdepgraph>
+      <node id="15">
+        <label>stm32f1xx_hal_flash.h</label>
+        <link refid="stm32f1xx__hal__flash_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>stm32f1xx_hal_tim_ex.h</label>
+        <link refid="stm32f1xx__hal__tim__ex_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>stm32f1xx_hal_pcd.h</label>
+        <link refid="stm32f1xx__hal__pcd_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stm32f1xx_ll_usb.h</label>
+        <link refid="stm32f1xx__ll__usb_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Inc/buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stddef.h</label>
+      </node>
+      <node id="17">
+        <label>stm32f1xx_hal_pwr.h</label>
+        <link refid="stm32f1xx__hal__pwr_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stm32f1xx_hal_rcc.h</label>
+        <link refid="stm32f1xx__hal__rcc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stm32f1xx_hal_dma_ex.h</label>
+        <link refid="stm32f1xx__hal__dma__ex_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="16">
+        <label>stm32f1xx_hal_flash_ex.h</label>
+        <link refid="stm32f1xx__hal__flash__ex_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>stm32f1xx_hal_dma.h</label>
+        <link refid="stm32f1xx__hal__dma_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>stm32f1xx_hal_tim.h</label>
+        <link refid="stm32f1xx__hal__tim_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stm32f1xx_hal_rcc_ex.h</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Inc/usb_device.h</label>
+        <link refid="usb__device_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Src/buzzer.c</label>
+        <link refid="buzzer_8c"/>
+      </node>
+      <node id="9">
+        <label>Src/usb_device.c</label>
+        <link refid="usb__device_8c"/>
+      </node>
+      <node id="11">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</label>
+        <link refid="usbd__cdc_8c"/>
+      </node>
+      <node id="16">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Inc/buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c</label>
+        <link refid="usbd__ioreq_8c"/>
+      </node>
+      <node id="12">
+        <label>Src/usbd_conf.c</label>
+        <link refid="usbd__conf_8c"/>
+      </node>
+      <node id="18">
+        <label>Inc/usbd_desc.h</label>
+        <link refid="usbd__desc_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="10">
+        <label>Src/usbd_cdc_if.c</label>
+        <link refid="usbd__cdc__if_8c"/>
+      </node>
+      <node id="4">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Src/stm32f1xx_it.c</label>
+        <link refid="stm32f1xx__it_8c"/>
+      </node>
+      <node id="15">
+        <label>Src/usbd_desc.c</label>
+        <link refid="usbd__desc_8c"/>
+      </node>
+      <node id="3">
+        <label>Inc/usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c</label>
+        <link refid="usbd__core_8c"/>
+      </node>
+      <node id="19">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="buzzer_8h_1a68f6dbcd53b3d88aaa925588daba83d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BUZZER_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>BUZZER_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Инциализация модуля управления основным питанием. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Функция инициализации модуля управления основным питанием. <parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/buzzer.h" line="47" column="6" bodyfile="Src/buzzer.c" bodystart="26" bodyend="33" declfile="Inc/buzzer.h" declline="47" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="buzzer_8h_1a84d381626ba8322d1dc5216414fcee67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BUZZER_set</definition>
+        <argsstring>(void)</argsstring>
+        <name>BUZZER_set</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Инциализация модуля управления основным питанием. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Функция инициализации модуля управления основным питанием. <parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/buzzer.h" line="52" column="6" bodyfile="Src/buzzer.c" bodystart="36" bodyend="38" declfile="Inc/buzzer.h" declline="52" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="buzzer_8h_1aa36a6a8c2a992c2dae56e5e3699ff92a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BUZZER_reset</definition>
+        <argsstring>(void)</argsstring>
+        <name>BUZZER_reset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Инциализация модуля управления основным питанием. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Функция инициализации модуля управления основным питанием. <parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/buzzer.h" line="57" column="6" bodyfile="Src/buzzer.c" bodystart="41" bodyend="43" declfile="Inc/buzzer.h" declline="57" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header for <ref refid="buzzer_8c" kindref="compound">buzzer.c</ref> file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Buzzer control module (Header file). <simplesect kind="author"><para>Arthur Markaryan </para>
+</simplesect>
+<simplesect kind="date"><para>26.03.2021 \copiright </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_BUZZER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_BUZZER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stm32f1xx__hal_8h" kindref="compound">stm32f1xx_hal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>includes<sp/>----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>defines<sp/>-----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>types<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>constants<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>macro<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>GV_INFOBOARD_V1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Buzzer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUZZER_Pin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_PIN_6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUZZER_GPIO_Port<sp/><sp/><sp/><sp/>GPIOB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>GV_INFOBOARD_V1<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>GV_INFOBOARD_V2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUZZER_Pin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_PIN_14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUZZER_GPIO_Port<sp/><sp/><sp/><sp/>GPIOB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>GV_INFOBOARD_V2<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>functions<sp/>prototypes<sp/>---------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="buzzer_8h_1a68f6dbcd53b3d88aaa925588daba83d8" kindref="member">BUZZER_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="buzzer_8h_1a84d381626ba8322d1dc5216414fcee67" kindref="member">BUZZER_set</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="buzzer_8h_1aa36a6a8c2a992c2dae56e5e3699ff92a" kindref="member">BUZZER_reset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_BUZZER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="Inc/buzzer.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___t_i_m___exported___functions___group3" kind="group">
+    <compoundname>TIM_Exported_Functions_Group3</compoundname>
+    <title>TIM PWM functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group3_1ga25824b2eed564cc37a8983b99a83bdc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_PWM_Init</definition>
+        <argsstring>(TIM_HandleTypeDef *htim)</argsstring>
+        <name>HAL_TIM_PWM_Init</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1812" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1812" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group3_1ga5bb7b197ace5bab9ef120163ff1520bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_PWM_DeInit</definition>
+        <argsstring>(TIM_HandleTypeDef *htim)</argsstring>
+        <name>HAL_TIM_PWM_DeInit</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1813" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1813" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group3_1gaf94d3d2003a4eebed73744ccd5c85974" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_TIM_PWM_MspInit</definition>
+        <argsstring>(TIM_HandleTypeDef *htim)</argsstring>
+        <name>HAL_TIM_PWM_MspInit</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1814" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1814" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group3_1ga3abff1ab9a918c30db77c7890e6e2b07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_TIM_PWM_MspDeInit</definition>
+        <argsstring>(TIM_HandleTypeDef *htim)</argsstring>
+        <name>HAL_TIM_PWM_MspDeInit</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1815" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1815" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group3_1ga11da9bda53a5d21c293bb01da91e592d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_PWM_Start</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t Channel)</argsstring>
+        <name>HAL_TIM_PWM_Start</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1817" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1817" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group3_1gae087011858379feeb770ecb4568829d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_PWM_Stop</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t Channel)</argsstring>
+        <name>HAL_TIM_PWM_Stop</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1818" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1818" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group3_1gaca1f5fbc35101d0fc7e8af31c9a0c26c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_PWM_Start_IT</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t Channel)</argsstring>
+        <name>HAL_TIM_PWM_Start_IT</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1820" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1820" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group3_1ga0559af125dc5fb2bb183a6a4b86808b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_PWM_Stop_IT</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t Channel)</argsstring>
+        <name>HAL_TIM_PWM_Stop_IT</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1821" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1821" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group3_1gaa4b542b3c0ae347ea580c9e7c8e88b17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_PWM_Start_DMA</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length)</argsstring>
+        <name>HAL_TIM_PWM_Start_DMA</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Channel</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>Length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1823" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1823" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group3_1gad77367f9b8d8d17842a913f7d6ce274b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref></type>
+        <definition>HAL_StatusTypeDef HAL_TIM_PWM_Stop_DMA</definition>
+        <argsstring>(TIM_HandleTypeDef *htim, uint32_t Channel)</argsstring>
+        <name>HAL_TIM_PWM_Stop_DMA</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>Channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="1824" column="19" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" declline="1824" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TIM PWM functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

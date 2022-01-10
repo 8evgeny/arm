@@ -1,0 +1,44 @@
+.TH "EXTI_ConfigTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EXTI_ConfigTypeDef \- EXTI Configuration structure definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_exti\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBLine\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBTrigger\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBGPIOSel\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+EXTI Configuration structure definition\&. 
+.SH "Field Documentation"
+.PP 
+.SS "uint32_t GPIOSel"
+The Exti GPIO multiplexer selection to be configured\&. This parameter is only possible for line 0 to 15\&. It can be a value of \fBEXTI GPIOSel\fP 
+.SS "uint32_t Line"
+The Exti line to be configured\&. This parameter can be a value of \fBEXTI Line\fP 
+.SS "uint32_t Mode"
+The Exit Mode to be configured for a core\&. This parameter can be a combination of \fBEXTI Mode\fP 
+.SS "uint32_t Trigger"
+The Exti Trigger to be configured\&. This parameter can be a value of \fBEXTI Trigger\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

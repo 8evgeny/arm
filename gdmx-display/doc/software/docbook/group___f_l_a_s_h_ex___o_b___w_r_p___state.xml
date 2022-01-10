@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h_ex___o_b___w_r_p___state" xml:lang="en-US">
+<title>Option Byte WRP State</title>
+<indexterm><primary>Option Byte WRP State</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___o_b___w_r_p___state_1gaa34eb6205fe554f65a311ee974d5a4ab">OB_WRPSTATE_DISABLE</link>   0x00U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___o_b___w_r_p___state_1ga9fc463145ab57616baa36d95523186a1">OB_WRPSTATE_ENABLE</link>   0x01U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h_ex___o_b___w_r_p___state_1gaa34eb6205fe554f65a311ee974d5a4ab"/>    <section>
+    <title>OB_WRPSTATE_DISABLE</title>
+<indexterm><primary>OB_WRPSTATE_DISABLE</primary><secondary>Option Byte WRP State</secondary></indexterm>
+<indexterm><primary>Option Byte WRP State</primary><secondary>OB_WRPSTATE_DISABLE</secondary></indexterm>
+<para><computeroutput>#define OB_WRPSTATE_DISABLE   0x00U</computeroutput></para>
+<para>Disable the write protection of the desired pages </para>
+    </section><anchor xml:id="_group___f_l_a_s_h_ex___o_b___w_r_p___state_1ga9fc463145ab57616baa36d95523186a1"/>    <section>
+    <title>OB_WRPSTATE_ENABLE</title>
+<indexterm><primary>OB_WRPSTATE_ENABLE</primary><secondary>Option Byte WRP State</secondary></indexterm>
+<indexterm><primary>Option Byte WRP State</primary><secondary>OB_WRPSTATE_ENABLE</secondary></indexterm>
+<para><computeroutput>#define OB_WRPSTATE_ENABLE   0x01U</computeroutput></para>
+<para>Enable the write protection of the desired pagess </para>
+</section>
+</section>
+</section>

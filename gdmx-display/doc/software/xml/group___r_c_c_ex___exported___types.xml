@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c_ex___exported___types" kind="group">
+    <compoundname>RCCEx_Exported_Types</compoundname>
+    <title>RCCEx Exported Types</title>
+    <innerclass refid="struct_r_c_c___osc_init_type_def" prot="public">RCC_OscInitTypeDef</innerclass>
+    <innerclass refid="struct_r_c_c___periph_c_l_k_init_type_def" prot="public">RCC_PeriphCLKInitTypeDef</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_queue_definition" xml:lang="en-US">
+<title>QueueDefinition Struct Reference</title>
+<indexterm><primary>QueueDefinition</primary></indexterm>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1adfa75f7bc22a3a58a907676c0164a1c1"/>int8_t * <emphasis role="strong">pcHead</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1aec0a6e253e1e05c107bf2a77c1bed940"/>int8_t * <emphasis role="strong">pcTail</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1aa018576801d60d3a78ffacab53dc8b79"/>int8_t * <emphasis role="strong">pcWriteTo</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1a8848c797a4a2ac14eec7e474c21e6906"/>union {</para>
+        <itemizedlist>
+            <listitem><para>   int8_t * <emphasis role="strong">pcReadFrom</emphasis></para>
+</listitem>
+            <listitem><para>   UBaseType_t <emphasis role="strong">uxRecursiveCallCount</emphasis></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <emphasis role="strong">u</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1a5cfd8ae6db5da134ed16405043a0d898"/><link linkend="_structx_l_i_s_t">List_t</link> <emphasis role="strong">xTasksWaitingToSend</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1a8ad185d9d83713c774e6a897580d8313"/><link linkend="_structx_l_i_s_t">List_t</link> <emphasis role="strong">xTasksWaitingToReceive</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1afb61b3f2247402ed3b8b159311c408b7"/>volatile UBaseType_t <emphasis role="strong">uxMessagesWaiting</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1a619169da78e43281a73fbdf13f9eddfb"/>UBaseType_t <emphasis role="strong">uxLength</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1a216cc99516d7f82573f6cb19f5a9f626"/>UBaseType_t <emphasis role="strong">uxItemSize</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1a2017e9e2e81e1fd301fa88236614653e"/>volatile int8_t <emphasis role="strong">cRxLock</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_queue_definition_1a77c52e94671f477fd2942db97e20838b"/>volatile int8_t <emphasis role="strong">cTxLock</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Middlewares/Third_Party/FreeRTOS/Source/queue.c</section>

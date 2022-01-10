@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___d_m_a___private___macros" xml:lang="en-US">
+<title>DMA Private Macros</title>
+<indexterm><primary>DMA Private Macros</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">IS_DMA_DIRECTION</emphasis>(DIRECTION)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___d_m_a___private___macros_1ga72ef4033bb3bc2cdfdbe579083b05e32"/>#define <emphasis role="strong">IS_DMA_BUFFER_SIZE</emphasis>(SIZE)   (((SIZE) &gt;= 0x1U) &amp;&amp; ((SIZE) &lt; 0x10000U))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_DMA_PERIPHERAL_INC_STATE</emphasis>(STATE)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_DMA_MEMORY_INC_STATE</emphasis>(STATE)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_DMA_PERIPHERAL_DATA_SIZE</emphasis>(SIZE)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_DMA_MEMORY_DATA_SIZE</emphasis>(SIZE)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_DMA_MODE</emphasis>(MODE)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_DMA_PRIORITY</emphasis>(PRIORITY)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___d_m_a___private___macros_1gae2b02e8e823854bcd7c5746cdd29e70d"/>    <section>
+    <title>IS_DMA_DIRECTION</title>
+<indexterm><primary>IS_DMA_DIRECTION</primary><secondary>DMA Private Macros</secondary></indexterm>
+<indexterm><primary>DMA Private Macros</primary><secondary>IS_DMA_DIRECTION</secondary></indexterm>
+<para><computeroutput>#define IS_DMA_DIRECTION( DIRECTION)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((DIRECTION)&#32;==&#32;<link linkend="_group___d_m_a___data__transfer__direction_1gacb2cbf03ecae6804ae4a6f60a3e37c12">DMA_PERIPH_TO_MEMORY</link>&#32;)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((DIRECTION)&#32;==&#32;<link linkend="_group___d_m_a___data__transfer__direction_1ga9e76fc559a2d5c766c969e6e921b1ee9">DMA_MEMORY_TO_PERIPH</link>)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((DIRECTION)&#32;==&#32;<link linkend="_group___d_m_a___data__transfer__direction_1ga0695035d725855ccf64d2d8452a33810">DMA_MEMORY_TO_MEMORY</link>))
+</programlisting>    </section><anchor xml:id="_group___d_m_a___private___macros_1gac9e3748cebcb16d4ae4206d562bc804c"/>    <section>
+    <title>IS_DMA_MEMORY_DATA_SIZE</title>
+<indexterm><primary>IS_DMA_MEMORY_DATA_SIZE</primary><secondary>DMA Private Macros</secondary></indexterm>
+<indexterm><primary>DMA Private Macros</primary><secondary>IS_DMA_MEMORY_DATA_SIZE</secondary></indexterm>
+<para><computeroutput>#define IS_DMA_MEMORY_DATA_SIZE( SIZE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((SIZE)&#32;==&#32;<link linkend="_group___d_m_a___memory__data__size_1ga9ed07bddf736298eba11508382ea4d51">DMA_MDATAALIGN_BYTE</link>)&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((SIZE)&#32;==&#32;<link linkend="_group___d_m_a___memory__data__size_1ga2c7355971c0da34a7ffe50ec87403071">DMA_MDATAALIGN_HALFWORD</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((SIZE)&#32;==&#32;<link linkend="_group___d_m_a___memory__data__size_1ga8812da819f18c873249074f3920220b2">DMA_MDATAALIGN_WORD</link>&#32;))
+</programlisting>    </section><anchor xml:id="_group___d_m_a___private___macros_1gaa880f39d499d1e80449cf80381e4eb67"/>    <section>
+    <title>IS_DMA_MEMORY_INC_STATE</title>
+<indexterm><primary>IS_DMA_MEMORY_INC_STATE</primary><secondary>DMA Private Macros</secondary></indexterm>
+<indexterm><primary>DMA Private Macros</primary><secondary>IS_DMA_MEMORY_INC_STATE</secondary></indexterm>
+<para><computeroutput>#define IS_DMA_MEMORY_INC_STATE( STATE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((STATE)&#32;==&#32;<link linkend="_group___d_m_a___memory__incremented__mode_1ga43d30885699cc8378562316ff4fed1cd">DMA_MINC_ENABLE</link>)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((STATE)&#32;==&#32;<link linkend="_group___d_m_a___memory__incremented__mode_1ga32625330516c188151743473fad97a33">DMA_MINC_DISABLE</link>))
+</programlisting>    </section><anchor xml:id="_group___d_m_a___private___macros_1gad88ee5030574d6a573904378fb62c7ac"/>    <section>
+    <title>IS_DMA_MODE</title>
+<indexterm><primary>IS_DMA_MODE</primary><secondary>DMA Private Macros</secondary></indexterm>
+<indexterm><primary>DMA Private Macros</primary><secondary>IS_DMA_MODE</secondary></indexterm>
+<para><computeroutput>#define IS_DMA_MODE( MODE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((MODE)&#32;==&#32;<link linkend="_group___d_m_a__mode_1ga04941acfbbdefc53e1e08133cffa3b8a">DMA_NORMAL</link>&#32;)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___d_m_a__mode_1ga4c4f425cba13edffb3c831c036c91e01">DMA_CIRCULAR</link>))
+</programlisting>    </section><anchor xml:id="_group___d_m_a___private___macros_1gad7916e0ae55cdf5efdfa68a09a028037"/>    <section>
+    <title>IS_DMA_PERIPHERAL_DATA_SIZE</title>
+<indexterm><primary>IS_DMA_PERIPHERAL_DATA_SIZE</primary><secondary>DMA Private Macros</secondary></indexterm>
+<indexterm><primary>DMA Private Macros</primary><secondary>IS_DMA_PERIPHERAL_DATA_SIZE</secondary></indexterm>
+<para><computeroutput>#define IS_DMA_PERIPHERAL_DATA_SIZE( SIZE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((SIZE)&#32;==&#32;<link linkend="_group___d_m_a___peripheral__data__size_1ga55b8c8f5ec95f10d26d6c5b1c9136730">DMA_PDATAALIGN_BYTE</link>)&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((SIZE)&#32;==&#32;<link linkend="_group___d_m_a___peripheral__data__size_1gac08bfd907442dba5358830b247135bcc">DMA_PDATAALIGN_HALFWORD</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((SIZE)&#32;==&#32;<link linkend="_group___d_m_a___peripheral__data__size_1gaad50e97cbc4a726660db9c3f42ac93b0">DMA_PDATAALIGN_WORD</link>))
+</programlisting>    </section><anchor xml:id="_group___d_m_a___private___macros_1ga28762105b3f567c16ba79a47e68ff0fa"/>    <section>
+    <title>IS_DMA_PERIPHERAL_INC_STATE</title>
+<indexterm><primary>IS_DMA_PERIPHERAL_INC_STATE</primary><secondary>DMA Private Macros</secondary></indexterm>
+<indexterm><primary>DMA Private Macros</primary><secondary>IS_DMA_PERIPHERAL_INC_STATE</secondary></indexterm>
+<para><computeroutput>#define IS_DMA_PERIPHERAL_INC_STATE( STATE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((STATE)&#32;==&#32;<link linkend="_group___d_m_a___peripheral__incremented__mode_1gab6d84e5805302516d26c06fb4497a346">DMA_PINC_ENABLE</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((STATE)&#32;==&#32;<link linkend="_group___d_m_a___peripheral__incremented__mode_1ga63e2aff2973d1a8f01d5d7b6e4894f39">DMA_PINC_DISABLE</link>))
+</programlisting>    </section><anchor xml:id="_group___d_m_a___private___macros_1gaa1cae2ab458948511596467c87cd02b6"/>    <section>
+    <title>IS_DMA_PRIORITY</title>
+<indexterm><primary>IS_DMA_PRIORITY</primary><secondary>DMA Private Macros</secondary></indexterm>
+<indexterm><primary>DMA Private Macros</primary><secondary>IS_DMA_PRIORITY</secondary></indexterm>
+<para><computeroutput>#define IS_DMA_PRIORITY( PRIORITY)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((PRIORITY)&#32;==&#32;<link linkend="_group___d_m_a___priority__level_1ga0d1ed2bc9229ba3c953002bcf3a72130">DMA_PRIORITY_LOW</link>&#32;)&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((PRIORITY)&#32;==&#32;<link linkend="_group___d_m_a___priority__level_1gad6fbeee76fd4a02cbed64365bb4c1781">DMA_PRIORITY_MEDIUM</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((PRIORITY)&#32;==&#32;<link linkend="_group___d_m_a___priority__level_1ga6b2f5c5e22895f8b4bd52a27ec6cae2a">DMA_PRIORITY_HIGH</link>)&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((PRIORITY)&#32;==&#32;<link linkend="_group___d_m_a___priority__level_1gaed0542331a4d875d1d8d5b2878e9372c">DMA_PRIORITY_VERY_HIGH</link>))
+</programlisting></section>
+</section>
+</section>

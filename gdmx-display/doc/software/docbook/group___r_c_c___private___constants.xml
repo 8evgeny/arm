@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___private___constants" xml:lang="en-US">
+<title>RCC_Private_Constants</title>
+<indexterm><primary>RCC_Private_Constants</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___r_c_c___timeout">RCC Timeout</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___register___offset">Register offsets</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___bit_address___alias_region">BitAddress AliasRegion</link></para>
+
+<para>RCC registers bit address in the alias region. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___constants_1ga1da336203f39dd57462e7f331271f699"/>#define <emphasis role="strong">RCC_CR_BYTE2_ADDRESS</emphasis>   ((uint32_t)(RCC_BASE + RCC_CR_OFFSET + 0x02U))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___constants_1ga97f80d22ba3506a43accbeb9ceb31f51"/>#define <emphasis role="strong">RCC_CIR_BYTE1_ADDRESS</emphasis>   ((uint32_t)(RCC_BASE + RCC_CIR_OFFSET + 0x01U))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___constants_1ga1387fb2dfadb830eb83ab2772c8d2294"/>#define <emphasis role="strong">RCC_CIR_BYTE2_ADDRESS</emphasis>   ((uint32_t)(RCC_BASE + RCC_CIR_OFFSET + 0x02U))</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___constants_1ga56feb1abcd35b22427fa55164c585afa"/>#define <emphasis role="strong">CR_REG_INDEX</emphasis>   ((uint8_t)1)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___constants_1ga114b3e5b2a2cdb5d85f65511fe085a6d"/>#define <emphasis role="strong">BDCR_REG_INDEX</emphasis>   ((uint8_t)2)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___constants_1gab9507f2d9ee5d477b11363b052cd07c8"/>#define <emphasis role="strong">CSR_REG_INDEX</emphasis>   ((uint8_t)3)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___r_c_c___private___constants_1ga80017c6bf8a5c6f53a1a21bb8db93a82"/>#define <emphasis role="strong">RCC_FLAG_MASK</emphasis>   ((uint8_t)0x1F)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

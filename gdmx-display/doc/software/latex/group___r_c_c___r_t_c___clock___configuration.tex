@@ -1,0 +1,107 @@
+\hypertarget{group___r_c_c___r_t_c___clock___configuration}{}\doxysection{RCC RTC Clock Configuration}
+\label{group___r_c_c___r_t_c___clock___configuration}\index{RCC RTC Clock Configuration@{RCC RTC Clock Configuration}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___r_t_c___clock___configuration_ga2d6c4c7e951bfd007d26988fbfe6eaa4}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RTC\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+RTC\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~MODIFY\+\_\+\+REG(RCC-\/$>$BDCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gabe30dbd38f6456990ee641648bc05d40}{RCC\+\_\+\+BDCR\+\_\+\+RTCSEL}}, (\+\_\+\+\_\+\+RTC\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the RTC clock (RTCCLK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___r_t_c___clock___configuration_gad40d00ff1c984ebd011ea9f6e7f93c44}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+RTC\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$BDCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gabe30dbd38f6456990ee641648bc05d40}{RCC\+\_\+\+BDCR\+\_\+\+RTCSEL}}))
+\begin{DoxyCompactList}\small\item\em Macro to get the RTC clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___r_t_c___clock___configuration_gab7cc36427c31da645a0e38e181f8ce0f}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RTC\+\_\+\+ENABLE}}()~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) RCC\+\_\+\+BDCR\+\_\+\+RTCEN\+\_\+\+BB = ENABLE)
+\begin{DoxyCompactList}\small\item\em Macro to enable the the RTC clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___r_t_c___clock___configuration_gaab5eeb81fc9f0c8d4450069f7a751855}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RTC\+\_\+\+DISABLE}}()~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) RCC\+\_\+\+BDCR\+\_\+\+RTCEN\+\_\+\+BB = DISABLE)
+\begin{DoxyCompactList}\small\item\em Macro to disable the the RTC clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___r_t_c___clock___configuration_ga3bf7da608ff985873ca8e248fb1dc4f0}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+BACKUPRESET\+\_\+\+FORCE}}()~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) RCC\+\_\+\+BDCR\+\_\+\+BDRST\+\_\+\+BB = ENABLE)
+\begin{DoxyCompactList}\small\item\em Macro to force the Backup domain reset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_c_c___r_t_c___clock___configuration_ga14f32622c65f4ae239ba8cb00d510321}\label{group___r_c_c___r_t_c___clock___configuration_ga14f32622c65f4ae239ba8cb00d510321}} 
+\#define \mbox{\hyperlink{group___r_c_c___r_t_c___clock___configuration_ga14f32622c65f4ae239ba8cb00d510321}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+BACKUPRESET\+\_\+\+RELEASE}}()~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) RCC\+\_\+\+BDCR\+\_\+\+BDRST\+\_\+\+BB = DISABLE)
+\begin{DoxyCompactList}\small\item\em Macros to release the Backup domain reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c___r_t_c___clock___configuration_ga3bf7da608ff985873ca8e248fb1dc4f0}\label{group___r_c_c___r_t_c___clock___configuration_ga3bf7da608ff985873ca8e248fb1dc4f0}} 
+\index{RCC RTC Clock Configuration@{RCC RTC Clock Configuration}!\_\_HAL\_RCC\_BACKUPRESET\_FORCE@{\_\_HAL\_RCC\_BACKUPRESET\_FORCE}}
+\index{\_\_HAL\_RCC\_BACKUPRESET\_FORCE@{\_\_HAL\_RCC\_BACKUPRESET\_FORCE}!RCC RTC Clock Configuration@{RCC RTC Clock Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_BACKUPRESET\_FORCE}{\_\_HAL\_RCC\_BACKUPRESET\_FORCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+BACKUPRESET\+\_\+\+FORCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) RCC\+\_\+\+BDCR\+\_\+\+BDRST\+\_\+\+BB = ENABLE)}
+
+
+
+Macro to force the Backup domain reset. 
+
+\begin{DoxyNote}{Note}
+This function resets the RTC peripheral (including the backup registers) and the RTC clock source selection in RCC\+\_\+\+BDCR register. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_c_c___r_t_c___clock___configuration_gad40d00ff1c984ebd011ea9f6e7f93c44}\label{group___r_c_c___r_t_c___clock___configuration_gad40d00ff1c984ebd011ea9f6e7f93c44}} 
+\index{RCC RTC Clock Configuration@{RCC RTC Clock Configuration}!\_\_HAL\_RCC\_GET\_RTC\_SOURCE@{\_\_HAL\_RCC\_GET\_RTC\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_RTC\_SOURCE@{\_\_HAL\_RCC\_GET\_RTC\_SOURCE}!RCC RTC Clock Configuration@{RCC RTC Clock Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_RTC\_SOURCE}{\_\_HAL\_RCC\_GET\_RTC\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+RTC\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$BDCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gabe30dbd38f6456990ee641648bc05d40}{RCC\+\_\+\+BDCR\+\_\+\+RTCSEL}}))}
+
+
+
+Macro to get the RTC clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_gacce0b2f54d103340d8c3a218e86e295d}{RCC\+\_\+\+RTCCLKSOURCE\+\_\+\+NO\+\_\+\+CLK}} No clock selected as RTC clock \item \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_ga5dca8d63f250a20bd6bc005670d0c150}{RCC\+\_\+\+RTCCLKSOURCE\+\_\+\+LSE}} LSE selected as RTC clock \item \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_gab47a1afb8b5eef9f20f4772961d0a5f4}{RCC\+\_\+\+RTCCLKSOURCE\+\_\+\+LSI}} LSI selected as RTC clock \item \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_ga7e022374ec3ceffa94e5bb6310c35c83}{RCC\+\_\+\+RTCCLKSOURCE\+\_\+\+HSE\+\_\+\+DIV128}} HSE divided by 128 selected as RTC clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___r_t_c___clock___configuration_ga2d6c4c7e951bfd007d26988fbfe6eaa4}\label{group___r_c_c___r_t_c___clock___configuration_ga2d6c4c7e951bfd007d26988fbfe6eaa4}} 
+\index{RCC RTC Clock Configuration@{RCC RTC Clock Configuration}!\_\_HAL\_RCC\_RTC\_CONFIG@{\_\_HAL\_RCC\_RTC\_CONFIG}}
+\index{\_\_HAL\_RCC\_RTC\_CONFIG@{\_\_HAL\_RCC\_RTC\_CONFIG}!RCC RTC Clock Configuration@{RCC RTC Clock Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_RTC\_CONFIG}{\_\_HAL\_RCC\_RTC\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RTC\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+RTC\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~MODIFY\+\_\+\+REG(RCC-\/$>$BDCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gabe30dbd38f6456990ee641648bc05d40}{RCC\+\_\+\+BDCR\+\_\+\+RTCSEL}}, (\+\_\+\+\_\+\+RTC\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the RTC clock (RTCCLK). 
+
+\begin{DoxyNote}{Note}
+As the RTC clock configuration bits are in the Backup domain and write access is denied to this domain after reset, you have to enable write access using the Power Backup Access macro before to configure the RTC clock source (to be done once after reset). 
+
+Once the RTC clock is configured it can\textquotesingle{}t be changed unless the Backup domain is reset using \mbox{\hyperlink{group___r_c_c___r_t_c___clock___configuration_ga3bf7da608ff985873ca8e248fb1dc4f0}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+BACKUPRESET\+\_\+\+FORCE()}} macro, or by a Power On Reset (POR).
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+RTC\+\_\+\+CLKSOURCE$<$/strong$>$} & specifies the RTC clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_gacce0b2f54d103340d8c3a218e86e295d}{RCC\+\_\+\+RTCCLKSOURCE\+\_\+\+NO\+\_\+\+CLK}} No clock selected as RTC clock \item \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_ga5dca8d63f250a20bd6bc005670d0c150}{RCC\+\_\+\+RTCCLKSOURCE\+\_\+\+LSE}} LSE selected as RTC clock \item \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_gab47a1afb8b5eef9f20f4772961d0a5f4}{RCC\+\_\+\+RTCCLKSOURCE\+\_\+\+LSI}} LSI selected as RTC clock \item \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_ga7e022374ec3ceffa94e5bb6310c35c83}{RCC\+\_\+\+RTCCLKSOURCE\+\_\+\+HSE\+\_\+\+DIV128}} HSE divided by 128 selected as RTC clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If the LSE or LSI is used as RTC clock source, the RTC continues to work in STOP and STANDBY modes, and can be used as wakeup source. However, when the HSE clock is used as RTC clock source, the RTC cannot be used in STOP and STANDBY modes. 
+
+The maximum input clock frequency for RTC is 1MHz (when using HSE as RTC clock source). 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_c_c___r_t_c___clock___configuration_gaab5eeb81fc9f0c8d4450069f7a751855}\label{group___r_c_c___r_t_c___clock___configuration_gaab5eeb81fc9f0c8d4450069f7a751855}} 
+\index{RCC RTC Clock Configuration@{RCC RTC Clock Configuration}!\_\_HAL\_RCC\_RTC\_DISABLE@{\_\_HAL\_RCC\_RTC\_DISABLE}}
+\index{\_\_HAL\_RCC\_RTC\_DISABLE@{\_\_HAL\_RCC\_RTC\_DISABLE}!RCC RTC Clock Configuration@{RCC RTC Clock Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_RTC\_DISABLE}{\_\_HAL\_RCC\_RTC\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RTC\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) RCC\+\_\+\+BDCR\+\_\+\+RTCEN\+\_\+\+BB = DISABLE)}
+
+
+
+Macro to disable the the RTC clock. 
+
+\begin{DoxyNote}{Note}
+These macros must be used only after the RTC clock source was selected. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___r_c_c___r_t_c___clock___configuration_gab7cc36427c31da645a0e38e181f8ce0f}\label{group___r_c_c___r_t_c___clock___configuration_gab7cc36427c31da645a0e38e181f8ce0f}} 
+\index{RCC RTC Clock Configuration@{RCC RTC Clock Configuration}!\_\_HAL\_RCC\_RTC\_ENABLE@{\_\_HAL\_RCC\_RTC\_ENABLE}}
+\index{\_\_HAL\_RCC\_RTC\_ENABLE@{\_\_HAL\_RCC\_RTC\_ENABLE}!RCC RTC Clock Configuration@{RCC RTC Clock Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_RTC\_ENABLE}{\_\_HAL\_RCC\_RTC\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RTC\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~($\ast$(\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) RCC\+\_\+\+BDCR\+\_\+\+RTCEN\+\_\+\+BB = ENABLE)}
+
+
+
+Macro to enable the the RTC clock. 
+
+\begin{DoxyNote}{Note}
+These macros must be used only after the RTC clock source was selected. 
+\end{DoxyNote}

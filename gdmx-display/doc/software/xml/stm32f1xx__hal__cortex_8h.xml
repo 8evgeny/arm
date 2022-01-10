@@ -1,0 +1,1016 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="stm32f1xx__hal__cortex_8h" kind="file" language="C++">
+    <compoundname>stm32f1xx_hal_cortex.h</compoundname>
+    <includes refid="stm32f1xx__hal__def_8h" local="yes">stm32f1xx_hal_def.h</includes>
+    <includedby refid="stm32f1xx__hal__conf_8h" local="yes">Inc/stm32f1xx_hal_conf.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="3">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="2">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="26">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>Inc/usb_device.h</label>
+        <link refid="usb__device_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>Src/buzzer.c</label>
+        <link refid="buzzer_8c"/>
+      </node>
+      <node id="28">
+        <label>Src/usb_device.c</label>
+        <link refid="usb__device_8c"/>
+      </node>
+      <node id="30">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</label>
+        <link refid="usbd__cdc_8c"/>
+      </node>
+      <node id="1">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c</label>
+        <link refid="stm32f1xx__hal__cortex_8c"/>
+      </node>
+      <node id="6">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c</label>
+        <link refid="stm32f1xx__hal__dma_8c"/>
+      </node>
+      <node id="25">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Inc/buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>Src/hd44780.c</label>
+        <link refid="hd44780_8c"/>
+      </node>
+      <node id="17">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c</label>
+        <link refid="stm32f1xx__hal__tim_8c"/>
+      </node>
+      <node id="46">
+        <label>Src/stm32f1xx_hal_timebase_tim.c</label>
+        <link refid="stm32f1xx__hal__timebase__tim_8c"/>
+      </node>
+      <node id="21">
+        <label>Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c</label>
+        <link refid="stm32f1xx__hal_8c"/>
+      </node>
+      <node id="9">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c</label>
+        <link refid="stm32f1xx__hal__flash__ex_8c"/>
+      </node>
+      <node id="32">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c</label>
+        <link refid="usbd__ioreq_8c"/>
+      </node>
+      <node id="10">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c</label>
+        <link refid="stm32f1xx__hal__gpio_8c"/>
+      </node>
+      <node id="31">
+        <label>Src/usbd_conf.c</label>
+        <link refid="usbd__conf_8c"/>
+      </node>
+      <node id="37">
+        <label>Inc/usbd_desc.h</label>
+        <link refid="usbd__desc_8h_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c</label>
+        <link refid="stm32f1xx__ll__usb_8c"/>
+      </node>
+      <node id="27">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="29">
+        <label>Src/usbd_cdc_if.c</label>
+        <link refid="usbd__cdc__if_8c"/>
+      </node>
+      <node id="23">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c</label>
+        <link refid="stm32f1xx__hal__pcd__ex_8c"/>
+      </node>
+      <node id="44">
+        <label>Inc/led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c</label>
+        <link refid="stm32f1xx__hal__pwr_8c"/>
+      </node>
+      <node id="15">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c</label>
+        <link refid="stm32f1xx__hal__rcc_8c"/>
+      </node>
+      <node id="8">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c</label>
+        <link refid="stm32f1xx__hal__flash_8c"/>
+      </node>
+      <node id="39">
+        <label>Src/stm32f1xx_it.c</label>
+        <link refid="stm32f1xx__it_8c"/>
+      </node>
+      <node id="34">
+        <label>Src/usbd_desc.c</label>
+        <link refid="usbd__desc_8c"/>
+      </node>
+      <node id="18">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c</label>
+        <link refid="stm32f1xx__hal__tim__ex_8c"/>
+      </node>
+      <node id="11">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8c"/>
+      </node>
+      <node id="42">
+        <label>Inc/hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Inc/stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>Src/led.c</label>
+        <link refid="led_8c"/>
+      </node>
+      <node id="22">
+        <label>Inc/usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c</label>
+        <link refid="usbd__core_8c"/>
+      </node>
+      <node id="38">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8c"/>
+      </node>
+      <node id="7">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c</label>
+        <link refid="stm32f1xx__hal__exti_8c"/>
+      </node>
+      <node id="41">
+        <label>Inc/display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c</label>
+        <link refid="stm32f1xx__hal__pcd_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___c_o_r_t_e_x___preemption___priority___group_1ga5e97dcff77680602c86e44f23f5ffa1a" prot="public" static="no">
+        <name>NVIC_PRIORITYGROUP_0</name>
+        <initializer>0x00000007U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>0 bits for pre-emption priority 4 bits for subpriority </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="91" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___preemption___priority___group_1ga702227137b010421c3a3b6434005a132" prot="public" static="no">
+        <name>NVIC_PRIORITYGROUP_1</name>
+        <initializer>0x00000006U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 bits for pre-emption priority 3 bits for subpriority </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="93" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___preemption___priority___group_1gaa43a3fd37850c120ce567ab2743d11b4" prot="public" static="no">
+        <name>NVIC_PRIORITYGROUP_2</name>
+        <initializer>0x00000005U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>2 bits for pre-emption priority 2 bits for subpriority </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="95" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___preemption___priority___group_1ga8ddb24962e6f0fc3273139d45d374b09" prot="public" static="no">
+        <name>NVIC_PRIORITYGROUP_3</name>
+        <initializer>0x00000004U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>3 bits for pre-emption priority 1 bits for subpriority </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="97" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___preemption___priority___group_1gae6eab9140204bc938255aa148e597c45" prot="public" static="no">
+        <name>NVIC_PRIORITYGROUP_4</name>
+        <initializer>0x00000003U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>4 bits for pre-emption priority 0 bits for subpriority </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="99" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___sys_tick__clock__source_1ga1fd9b5bada2a8b2425a8523bc0fc7124" prot="public" static="no">
+        <name>SYSTICK_CLKSOURCE_HCLK_DIV8</name>
+        <initializer>0x00000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="107" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___sys_tick__clock__source_1ga6f6582df23b6fbc578325e453b9893b7" prot="public" static="no">
+        <name>SYSTICK_CLKSOURCE_HCLK</name>
+        <initializer>0x00000004U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="108" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___private___macros_1ga6569304a39fe4f91bd59b6a586c8ede9" prot="public" static="no">
+        <name>IS_NVIC_PRIORITY_GROUP</name>
+        <param><defname>GROUP</defname></param>
+        <initializer>                                       (((GROUP) == <ref refid="group___c_o_r_t_e_x___preemption___priority___group_1ga5e97dcff77680602c86e44f23f5ffa1a" kindref="member">NVIC_PRIORITYGROUP_0</ref>) || \
+                                       ((GROUP) == <ref refid="group___c_o_r_t_e_x___preemption___priority___group_1ga702227137b010421c3a3b6434005a132" kindref="member">NVIC_PRIORITYGROUP_1</ref>) || \
+                                       ((GROUP) == <ref refid="group___c_o_r_t_e_x___preemption___priority___group_1gaa43a3fd37850c120ce567ab2743d11b4" kindref="member">NVIC_PRIORITYGROUP_2</ref>) || \
+                                       ((GROUP) == <ref refid="group___c_o_r_t_e_x___preemption___priority___group_1ga8ddb24962e6f0fc3273139d45d374b09" kindref="member">NVIC_PRIORITYGROUP_3</ref>) || \
+                                       ((GROUP) == <ref refid="group___c_o_r_t_e_x___preemption___priority___group_1gae6eab9140204bc938255aa148e597c45" kindref="member">NVIC_PRIORITYGROUP_4</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="306" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___private___macros_1gaf30fd8f5960c2e28a772d8f16bb156dd" prot="public" static="no">
+        <name>IS_NVIC_PREEMPTION_PRIORITY</name>
+        <param><defname>PRIORITY</defname></param>
+        <initializer>((PRIORITY) &lt; 0x10U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="312" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___private___macros_1ga010705bc997dcff935b965b372cba61d" prot="public" static="no">
+        <name>IS_NVIC_SUB_PRIORITY</name>
+        <param><defname>PRIORITY</defname></param>
+        <initializer>((PRIORITY) &lt; 0x10U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="314" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___private___macros_1ga9b8dcac4ed8e88c14d9bb04e369dad6a" prot="public" static="no">
+        <name>IS_NVIC_DEVICE_IRQ</name>
+        <param><defname>IRQ</defname></param>
+        <initializer>((IRQ) &gt;= (<ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref>)0x00U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="316" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c_o_r_t_e_x___private___macros_1ga22d6291f6aed29442cf4cd9098fa0784" prot="public" static="no">
+        <name>IS_SYSTICK_CLK_SOURCE</name>
+        <param><defname>SOURCE</defname></param>
+        <initializer>                                       (((SOURCE) == SYSTICK_CLKSOURCE_HCLK) || \
+                                       ((SOURCE) == SYSTICK_CLKSOURCE_HCLK_DIV8))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="318" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1gad9be53e08b1498adea006e5e037f238f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_SetPriorityGrouping</definition>
+        <argsstring>(uint32_t PriorityGroup)</argsstring>
+        <name>HAL_NVIC_SetPriorityGrouping</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>PriorityGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="262" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="262" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1ga8581a82025a4780efd00876a66e3e91b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_SetPriority</definition>
+        <argsstring>(IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t SubPriority)</argsstring>
+        <name>HAL_NVIC_SetPriority</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>PreemptPriority</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>SubPriority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="263" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="263" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1gaaad4492c1b25e006d69948a15790352a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_EnableIRQ</definition>
+        <argsstring>(IRQn_Type IRQn)</argsstring>
+        <name>HAL_NVIC_EnableIRQ</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="264" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="264" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1ga50ca6290e068821cb84aa168f3e13967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_DisableIRQ</definition>
+        <argsstring>(IRQn_Type IRQn)</argsstring>
+        <name>HAL_NVIC_DisableIRQ</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="265" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="265" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1gac83d89028fabdf5d4c38ecf4fbfbefdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_SystemReset</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_NVIC_SystemReset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="266" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="266" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group1_1gac3a3f0d53c315523a8e6e7bcac1940cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_SYSTICK_Config</definition>
+        <argsstring>(uint32_t TicksNumb)</argsstring>
+        <name>HAL_SYSTICK_Config</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>TicksNumb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="267" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="267" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group2_1gaa02bc953fd4fce22248c491a93c4ce40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_NVIC_GetPriorityGrouping</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_NVIC_GetPriorityGrouping</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="276" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="276" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group2_1ga6a21c9d904b0bcf4cb060f7c5c39b6f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_GetPriority</definition>
+        <argsstring>(IRQn_Type IRQn, uint32_t PriorityGroup, uint32_t *pPreemptPriority, uint32_t *pSubPriority)</argsstring>
+        <name>HAL_NVIC_GetPriority</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>PriorityGroup</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pPreemptPriority</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pSubPriority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="277" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="277" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group2_1ga3bd5802a96f0dcbc00ac3b89b134da3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_NVIC_GetPendingIRQ</definition>
+        <argsstring>(IRQn_Type IRQn)</argsstring>
+        <name>HAL_NVIC_GetPendingIRQ</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="278" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="278" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group2_1gaecf50f6c6d0e1fa5f8bd8c1b45309f18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_SetPendingIRQ</definition>
+        <argsstring>(IRQn_Type IRQn)</argsstring>
+        <name>HAL_NVIC_SetPendingIRQ</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="279" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="279" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group2_1ga0c7d007acf1339ca1bb46f3c6e018ff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_NVIC_ClearPendingIRQ</definition>
+        <argsstring>(IRQn_Type IRQn)</argsstring>
+        <name>HAL_NVIC_ClearPendingIRQ</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="280" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="280" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group2_1gad3f7598e54fb3d74eaf9abedef704c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_NVIC_GetActive</definition>
+        <argsstring>(IRQn_Type IRQn)</argsstring>
+        <name>HAL_NVIC_GetActive</name>
+        <param>
+          <type><ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref></type>
+          <declname>IRQn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="281" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="281" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group2_1ga3284dc8428996f5b6aa6b3b99e643788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_SYSTICK_CLKSourceConfig</definition>
+        <argsstring>(uint32_t CLKSource)</argsstring>
+        <name>HAL_SYSTICK_CLKSourceConfig</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>CLKSource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="282" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="282" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group2_1ga5b66b62383261c1e0acef98d344aa4c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_SYSTICK_IRQHandler</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_SYSTICK_IRQHandler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="283" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="283" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c_o_r_t_e_x___exported___functions___group2_1ga5033855e81ba2071231b60599a3ce9a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_SYSTICK_Callback</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_SYSTICK_Callback</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" line="284" column="6" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h" declline="284" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of CORTEX HAL module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>MCD Application Team</para>
+</simplesect>
+<simplesect kind="attention"><para></para>
+</simplesect>
+<heading level="2"><center><copy/> Copyright (c) 2017 STMicroelectronics. All rights reserved.</center></heading>
+</para>
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__STM32F1xx_HAL_CORTEX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__STM32F1xx_HAL_CORTEX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stm32f1xx__hal__def_8h" kindref="compound">stm32f1xx_hal_def.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>types<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(__MPU_PRESENT<sp/>==<sp/>1U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Enable;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Number;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BaseAddress;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Size;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SubRegionDisable;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TypeExtField;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AccessPermission;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DisableExec;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IsShareable;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IsCacheable;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IsBufferable;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}MPU_Region_InitTypeDef;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__MPU_PRESENT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>constants<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_PRIORITYGROUP_0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000007U<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_PRIORITYGROUP_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000006U<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_PRIORITYGROUP_2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000005U<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_PRIORITYGROUP_3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000004U<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NVIC_PRIORITYGROUP_4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000003U<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYSTICK_CLKSOURCE_HCLK_DIV8<sp/><sp/><sp/><sp/>0x00000000U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYSTICK_CLKSOURCE_HCLK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000004U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(__MPU_PRESENT<sp/>==<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_HFNMI_PRIVDEF_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_HARDFAULT_NMI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPU_CTRL_HFNMIENA_Msk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_PRIVILEGED_DEFAULT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPU_CTRL_PRIVDEFENA_Msk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_HFNMI_PRIVDEF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(MPU_CTRL_HFNMIENA_Msk<sp/>|<sp/>MPU_CTRL_PRIVDEFENA_Msk)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_ENABLE<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x01)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_DISABLE<sp/><sp/><sp/><sp/>((uint8_t)0x00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_INSTRUCTION_ACCESS_ENABLE<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_INSTRUCTION_ACCESS_DISABLE<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x01)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_ACCESS_SHAREABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x01)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_ACCESS_NOT_SHAREABLE<sp/><sp/><sp/><sp/>((uint8_t)0x00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_ACCESS_CACHEABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x01)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_ACCESS_NOT_CACHEABLE<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_ACCESS_BUFFERABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x01)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_ACCESS_NOT_BUFFERABLE<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_TEX_LEVEL0<sp/><sp/><sp/><sp/>((uint8_t)0x00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_TEX_LEVEL1<sp/><sp/><sp/><sp/>((uint8_t)0x01)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_TEX_LEVEL2<sp/><sp/><sp/><sp/>((uint8_t)0x02)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_32B<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x04)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_64B<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x05)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_128B<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x06)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_256B<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x07)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_512B<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x08)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_1KB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x09)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_2KB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x0A)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_4KB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x0B)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_8KB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x0C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_16KB<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x0D)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_32KB<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x0E)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_64KB<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x0F)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_128KB<sp/><sp/><sp/><sp/>((uint8_t)0x10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_256KB<sp/><sp/><sp/><sp/>((uint8_t)0x11)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_512KB<sp/><sp/><sp/><sp/>((uint8_t)0x12)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_1MB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x13)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_2MB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x14)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_4MB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_8MB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x16)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_16MB<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x17)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_32MB<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x18)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_64MB<sp/><sp/><sp/><sp/><sp/>((uint8_t)0x19)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_128MB<sp/><sp/><sp/><sp/>((uint8_t)0x1A)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_256MB<sp/><sp/><sp/><sp/>((uint8_t)0x1B)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_512MB<sp/><sp/><sp/><sp/>((uint8_t)0x1C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_1GB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x1D)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_2GB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x1E)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MPU_REGION_SIZE_4GB<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x1F)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_NO_ACCESS<sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_PRIV_RW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x01)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_PRIV_RW_URO<sp/><sp/><sp/><sp/>((uint8_t)0x02)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_FULL_ACCESS<sp/><sp/><sp/><sp/>((uint8_t)0x03)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_PRIV_RO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint8_t)0x05)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_PRIV_RO_URO<sp/><sp/><sp/><sp/>((uint8_t)0x06)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_NUMBER0<sp/><sp/><sp/><sp/>((uint8_t)0x00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_NUMBER1<sp/><sp/><sp/><sp/>((uint8_t)0x01)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_NUMBER2<sp/><sp/><sp/><sp/>((uint8_t)0x02)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_NUMBER3<sp/><sp/><sp/><sp/>((uint8_t)0x03)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_NUMBER4<sp/><sp/><sp/><sp/>((uint8_t)0x04)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_NUMBER5<sp/><sp/><sp/><sp/>((uint8_t)0x05)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_NUMBER6<sp/><sp/><sp/><sp/>((uint8_t)0x06)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MPU_REGION_NUMBER7<sp/><sp/><sp/><sp/>((uint8_t)0x07)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__MPU_PRESENT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>Macros<sp/>-----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>functions<sp/>--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Initialization<sp/>and<sp/>de-initialization<sp/>functions<sp/>*****************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_NVIC_SetPriorityGrouping(uint32_t<sp/>PriorityGroup);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_NVIC_SetPriority(<ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref><sp/>IRQn,<sp/>uint32_t<sp/>PreemptPriority,<sp/>uint32_t<sp/>SubPriority);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_NVIC_EnableIRQ(<ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref><sp/>IRQn);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_NVIC_DisableIRQ(<ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref><sp/>IRQn);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_NVIC_SystemReset(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">uint32_t<sp/>HAL_SYSTICK_Config(uint32_t<sp/>TicksNumb);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Peripheral<sp/>Control<sp/>functions<sp/>***********************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal">uint32_t<sp/>HAL_NVIC_GetPriorityGrouping(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_NVIC_GetPriority(<ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref><sp/>IRQn,<sp/>uint32_t<sp/>PriorityGroup,<sp/>uint32_t*<sp/>pPreemptPriority,<sp/>uint32_t*<sp/>pSubPriority);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">uint32_t<sp/>HAL_NVIC_GetPendingIRQ(<ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref><sp/>IRQn);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_NVIC_SetPendingIRQ(<ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref><sp/>IRQn);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_NVIC_ClearPendingIRQ(<ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref><sp/>IRQn);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">uint32_t<sp/>HAL_NVIC_GetActive(<ref refid="group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8" kindref="member">IRQn_Type</ref><sp/>IRQn);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_SYSTICK_CLKSourceConfig(uint32_t<sp/>CLKSource);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_SYSTICK_IRQHandler(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_SYSTICK_Callback(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(__MPU_PRESENT<sp/>==<sp/>1U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_MPU_Enable(uint32_t<sp/>MPU_Control);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_MPU_Disable(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HAL_MPU_ConfigRegion(MPU_Region_InitTypeDef<sp/>*MPU_Init);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__MPU_PRESENT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>types<sp/>-------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>variables<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>constants<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>macros<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_NVIC_PRIORITY_GROUP(GROUP)<sp/>(((GROUP)<sp/>==<sp/>NVIC_PRIORITYGROUP_0)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="307"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((GROUP)<sp/>==<sp/>NVIC_PRIORITYGROUP_1)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="308"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((GROUP)<sp/>==<sp/>NVIC_PRIORITYGROUP_2)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="309"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((GROUP)<sp/>==<sp/>NVIC_PRIORITYGROUP_3)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="310"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((GROUP)<sp/>==<sp/>NVIC_PRIORITYGROUP_4))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_NVIC_PREEMPTION_PRIORITY(PRIORITY)<sp/><sp/>((PRIORITY)<sp/>&lt;<sp/>0x10U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_NVIC_SUB_PRIORITY(PRIORITY)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((PRIORITY)<sp/>&lt;<sp/>0x10U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_NVIC_DEVICE_IRQ(IRQ)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((IRQ)<sp/>&gt;=<sp/>(IRQn_Type)0x00U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_SYSTICK_CLK_SOURCE(SOURCE)<sp/>(((SOURCE)<sp/>==<sp/>SYSTICK_CLKSOURCE_HCLK)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="319"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SOURCE)<sp/>==<sp/>SYSTICK_CLKSOURCE_HCLK_DIV8))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(__MPU_PRESENT<sp/>==<sp/>1U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_MPU_REGION_ENABLE(STATE)<sp/>(((STATE)<sp/>==<sp/>MPU_REGION_ENABLE)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="323"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((STATE)<sp/>==<sp/>MPU_REGION_DISABLE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_MPU_INSTRUCTION_ACCESS(STATE)<sp/>(((STATE)<sp/>==<sp/>MPU_INSTRUCTION_ACCESS_ENABLE)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="326"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((STATE)<sp/>==<sp/>MPU_INSTRUCTION_ACCESS_DISABLE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_MPU_ACCESS_SHAREABLE(STATE)<sp/><sp/><sp/>(((STATE)<sp/>==<sp/>MPU_ACCESS_SHAREABLE)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="329"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((STATE)<sp/>==<sp/>MPU_ACCESS_NOT_SHAREABLE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_MPU_ACCESS_CACHEABLE(STATE)<sp/><sp/><sp/>(((STATE)<sp/>==<sp/>MPU_ACCESS_CACHEABLE)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="332"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((STATE)<sp/>==<sp/>MPU_ACCESS_NOT_CACHEABLE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_MPU_ACCESS_BUFFERABLE(STATE)<sp/><sp/><sp/>(((STATE)<sp/>==<sp/>MPU_ACCESS_BUFFERABLE)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="335"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((STATE)<sp/>==<sp/>MPU_ACCESS_NOT_BUFFERABLE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_MPU_TEX_LEVEL(TYPE)<sp/>(((TYPE)<sp/>==<sp/>MPU_TEX_LEVEL0)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="338"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((TYPE)<sp/>==<sp/>MPU_TEX_LEVEL1)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="339"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((TYPE)<sp/>==<sp/>MPU_TEX_LEVEL2))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_MPU_REGION_PERMISSION_ATTRIBUTE(TYPE)<sp/>(((TYPE)<sp/>==<sp/>MPU_REGION_NO_ACCESS)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="342"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((TYPE)<sp/>==<sp/>MPU_REGION_PRIV_RW)<sp/><sp/><sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="343"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((TYPE)<sp/>==<sp/>MPU_REGION_PRIV_RW_URO)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="344"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((TYPE)<sp/>==<sp/>MPU_REGION_FULL_ACCESS)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="345"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((TYPE)<sp/>==<sp/>MPU_REGION_PRIV_RO)<sp/><sp/><sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="346"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((TYPE)<sp/>==<sp/>MPU_REGION_PRIV_RO_URO))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_MPU_REGION_NUMBER(NUMBER)<sp/><sp/><sp/><sp/>(((NUMBER)<sp/>==<sp/>MPU_REGION_NUMBER0)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="349"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((NUMBER)<sp/>==<sp/>MPU_REGION_NUMBER1)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="350"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((NUMBER)<sp/>==<sp/>MPU_REGION_NUMBER2)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="351"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((NUMBER)<sp/>==<sp/>MPU_REGION_NUMBER3)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="352"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((NUMBER)<sp/>==<sp/>MPU_REGION_NUMBER4)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="353"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((NUMBER)<sp/>==<sp/>MPU_REGION_NUMBER5)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="354"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((NUMBER)<sp/>==<sp/>MPU_REGION_NUMBER6)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="355"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((NUMBER)<sp/>==<sp/>MPU_REGION_NUMBER7))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_MPU_REGION_SIZE(SIZE)<sp/><sp/><sp/><sp/>(((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_32B)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="358"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_64B)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="359"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_128B)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="360"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_256B)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="361"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_512B)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="362"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_1KB)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="363"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_2KB)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="364"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_4KB)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="365"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_8KB)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="366"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_16KB)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="367"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_32KB)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="368"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_64KB)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="369"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_128KB)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="370"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_256KB)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="371"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_512KB)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="372"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_1MB)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="373"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_2MB)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="374"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_4MB)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="375"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_8MB)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="376"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_16MB)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="377"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_32MB)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="378"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_64MB)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="379"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_128MB)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="380"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_256MB)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="381"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_512MB)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="382"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_1GB)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="383"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_2GB)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="384"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((SIZE)<sp/>==<sp/>MPU_REGION_SIZE_4GB))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_MPU_SUB_REGION_DISABLE(SUBREGION)<sp/><sp/>((SUBREGION)<sp/>&lt;<sp/>(uint16_t)0x00FF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__MPU_PRESENT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>functions<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__STM32F1xx_HAL_CORTEX_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="comment">/************************<sp/>(C)<sp/>COPYRIGHT<sp/>STMicroelectronics<sp/>*****END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"/>
+  </compounddef>
+</doxygen>

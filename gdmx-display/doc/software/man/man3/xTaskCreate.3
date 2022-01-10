@@ -1,0 +1,92 @@
+.TH "xTaskCreate" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xTaskCreate \- xTaskCreate
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+
+BaseType_t xTaskCreate(
+                          TaskFunction_t pvTaskCode,
+                          const char * const pcName,
+                          configSTACK_DEPTH_TYPE usStackDepth,
+                          void *pvParameters,
+                          UBaseType_t uxPriority,
+                          TaskHandle_t *pvCreatedTask
+                      );
+.fi
+.PP
+.PP
+Create a new task and add it to the list of tasks that are ready to run\&.
+.PP
+Internally, within the FreeRTOS implementation, tasks use two blocks of memory\&. The first block is used to hold the task's data structures\&. The second block is used by the task as its stack\&. If a task is created using xTaskCreate() then both blocks of memory are automatically dynamically allocated inside the xTaskCreate() function\&. (see http://www.freertos.org/a00111.html)\&. If a task is created using xTaskCreateStatic() then the application writer must provide the required memory\&. xTaskCreateStatic() therefore allows a task to be created without using any dynamic memory allocation\&.
+.PP
+See xTaskCreateStatic() for a version that does not use any dynamic memory allocation\&.
+.PP
+xTaskCreate() can only be used to create a task that has unrestricted access to the entire microcontroller memory map\&. Systems that include MPU support can alternatively create an MPU constrained task using xTaskCreateRestricted()\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIpvTaskCode\fP Pointer to the task entry function\&. Tasks must be implemented to never return (i\&.e\&. continuous loop)\&.
+.br
+\fIpcName\fP A descriptive name for the task\&. This is mainly used to facilitate debugging\&. Max length defined by configMAX_TASK_NAME_LEN - default is 16\&.
+.br
+\fIusStackDepth\fP The size of the task stack specified as the number of variables the stack can hold - not the number of bytes\&. For example, if the stack is 16 bits wide and usStackDepth is defined as 100, 200 bytes will be allocated for stack storage\&.
+.br
+\fIpvParameters\fP Pointer that will be used as the parameter for the task being created\&.
+.br
+\fIuxPriority\fP The priority at which the task should run\&. Systems that include MPU support can optionally create tasks in a privileged (system) mode by setting bit portPRIVILEGE_BIT of the priority parameter\&. For example, to create a privileged task at priority 2 the uxPriority parameter should be set to ( 2 | portPRIVILEGE_BIT )\&.
+.br
+\fIpvCreatedTask\fP Used to pass back a handle by which the created task can be referenced\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+pdPASS if the task was successfully created and added to a ready list, otherwise an error code defined in the file \fBprojdefs\&.h\fP
+.RE
+.PP
+Example usage: 
+.PP
+.nf
+
+// Task to be created\&.
+void vTaskCode( void * pvParameters )
+{
+    for( ;; )
+    {
+     // Task code goes here\&.
+    }
+}
+
+// Function that creates a task\&.
+void vOtherFunction( void )
+{
+static uint8_t ucParameterToPass;
+TaskHandle_t xHandle = NULL;
+
+    // Create the task, storing the handle\&.  Note that the passed parameter ucParameterToPass
+    // must exist for the lifetime of the task, so in this case is declared static\&.  If it was just an
+    // an automatic stack variable it might no longer exist, or at least have been corrupted, by the time
+    // the new task attempts to access it\&.
+    xTaskCreate( vTaskCode, 'NAME', STACK_SIZE, &ucParameterToPass, tskIDLE_PRIORITY, &xHandle );
+    configASSERT( xHandle );
+
+    // Use the handle to delete the task\&.
+    if( xHandle != NULL )
+    {
+        vTaskDelete( xHandle );
+    }
+}
+  
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

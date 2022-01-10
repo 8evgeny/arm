@@ -1,0 +1,62 @@
+.TH "TIM_HandleTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_HandleTypeDef \- TIM Time Base Handle Structure definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_tim\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBTIM_TypeDef\fP * \fBInstance\fP"
+.br
+.ti -1c
+.RI "\fBTIM_Base_InitTypeDef\fP \fBInit\fP"
+.br
+.ti -1c
+.RI "\fBHAL_TIM_ActiveChannel\fP \fBChannel\fP"
+.br
+.ti -1c
+.RI "\fBDMA_HandleTypeDef\fP * \fBhdma\fP [7]"
+.br
+.ti -1c
+.RI "\fBHAL_LockTypeDef\fP \fBLock\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP \fBHAL_TIM_StateTypeDef\fP \fBState\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+TIM Time Base Handle Structure definition\&. 
+.SH "Field Documentation"
+.PP 
+.SS "\fBHAL_TIM_ActiveChannel\fP Channel"
+Active channel 
+.br
+ 
+.SS "\fBDMA_HandleTypeDef\fP* hdma[7]"
+DMA Handlers array This array is accessed by a \fBTIM DMA Handle Index\fP 
+.SS "\fBTIM_Base_InitTypeDef\fP Init"
+TIM Time Base required parameters 
+.SS "\fBTIM_TypeDef\fP* Instance"
+Register base address 
+.br
+ 
+.SS "\fBHAL_LockTypeDef\fP Lock"
+Locking object 
+.br
+ 
+.SS "\fB__IO\fP \fBHAL_TIM_StateTypeDef\fP State"
+TIM operation state 
+.br
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

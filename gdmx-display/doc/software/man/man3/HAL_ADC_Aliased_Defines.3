@@ -1,0 +1,159 @@
+.TH "HAL_ADC_Aliased_Defines" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_ADC_Aliased_Defines \- HAL ADC Aliased Defines maintained for legacy purpose
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADC_RESOLUTION12b\fP   ADC_RESOLUTION_12B"
+.br
+.ti -1c
+.RI "#define \fBADC_RESOLUTION10b\fP   ADC_RESOLUTION_10B"
+.br
+.ti -1c
+.RI "#define \fBADC_RESOLUTION8b\fP   ADC_RESOLUTION_8B"
+.br
+.ti -1c
+.RI "#define \fBADC_RESOLUTION6b\fP   ADC_RESOLUTION_6B"
+.br
+.ti -1c
+.RI "#define \fBOVR_DATA_OVERWRITTEN\fP   ADC_OVR_DATA_OVERWRITTEN"
+.br
+.ti -1c
+.RI "#define \fBOVR_DATA_PRESERVED\fP   ADC_OVR_DATA_PRESERVED"
+.br
+.ti -1c
+.RI "#define \fBEOC_SINGLE_CONV\fP   ADC_EOC_SINGLE_CONV"
+.br
+.ti -1c
+.RI "#define \fBEOC_SEQ_CONV\fP   ADC_EOC_SEQ_CONV"
+.br
+.ti -1c
+.RI "#define \fBEOC_SINGLE_SEQ_CONV\fP   ADC_EOC_SINGLE_SEQ_CONV"
+.br
+.ti -1c
+.RI "#define \fBREGULAR_GROUP\fP   ADC_REGULAR_GROUP"
+.br
+.ti -1c
+.RI "#define \fBINJECTED_GROUP\fP   ADC_INJECTED_GROUP"
+.br
+.ti -1c
+.RI "#define \fBREGULAR_INJECTED_GROUP\fP   ADC_REGULAR_INJECTED_GROUP"
+.br
+.ti -1c
+.RI "#define \fBAWD_EVENT\fP   ADC_AWD_EVENT"
+.br
+.ti -1c
+.RI "#define \fBAWD1_EVENT\fP   ADC_AWD1_EVENT"
+.br
+.ti -1c
+.RI "#define \fBAWD2_EVENT\fP   ADC_AWD2_EVENT"
+.br
+.ti -1c
+.RI "#define \fBAWD3_EVENT\fP   ADC_AWD3_EVENT"
+.br
+.ti -1c
+.RI "#define \fBOVR_EVENT\fP   ADC_OVR_EVENT"
+.br
+.ti -1c
+.RI "#define \fBJQOVF_EVENT\fP   ADC_JQOVF_EVENT"
+.br
+.ti -1c
+.RI "#define \fBALL_CHANNELS\fP   ADC_ALL_CHANNELS"
+.br
+.ti -1c
+.RI "#define \fBREGULAR_CHANNELS\fP   ADC_REGULAR_CHANNELS"
+.br
+.ti -1c
+.RI "#define \fBINJECTED_CHANNELS\fP   ADC_INJECTED_CHANNELS"
+.br
+.ti -1c
+.RI "#define \fBSYSCFG_FLAG_SENSOR_ADC\fP   ADC_FLAG_SENSOR"
+.br
+.ti -1c
+.RI "#define \fBSYSCFG_FLAG_VREF_ADC\fP   ADC_FLAG_VREFINT"
+.br
+.ti -1c
+.RI "#define \fBADC_CLOCKPRESCALER_PCLK_DIV1\fP   ADC_CLOCK_SYNC_PCLK_DIV1"
+.br
+.ti -1c
+.RI "#define \fBADC_CLOCKPRESCALER_PCLK_DIV2\fP   ADC_CLOCK_SYNC_PCLK_DIV2"
+.br
+.ti -1c
+.RI "#define \fBADC_CLOCKPRESCALER_PCLK_DIV4\fP   ADC_CLOCK_SYNC_PCLK_DIV4"
+.br
+.ti -1c
+.RI "#define \fBADC_CLOCKPRESCALER_PCLK_DIV6\fP   ADC_CLOCK_SYNC_PCLK_DIV6"
+.br
+.ti -1c
+.RI "#define \fBADC_CLOCKPRESCALER_PCLK_DIV8\fP   ADC_CLOCK_SYNC_PCLK_DIV8"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIG0_T6_TRGO\fP   ADC_EXTERNALTRIGCONV_T6_TRGO"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIG1_T21_CC2\fP   ADC_EXTERNALTRIGCONV_T21_CC2"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIG2_T2_TRGO\fP   ADC_EXTERNALTRIGCONV_T2_TRGO"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIG3_T2_CC4\fP   ADC_EXTERNALTRIGCONV_T2_CC4"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIG4_T22_TRGO\fP   ADC_EXTERNALTRIGCONV_T22_TRGO"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIG7_EXT_IT11\fP   ADC_EXTERNALTRIGCONV_EXT_IT11"
+.br
+.ti -1c
+.RI "#define \fBADC_CLOCK_ASYNC\fP   ADC_CLOCK_ASYNC_DIV1"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIG_EDGE_NONE\fP   ADC_EXTERNALTRIGCONVEDGE_NONE"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIG_EDGE_RISING\fP   ADC_EXTERNALTRIGCONVEDGE_RISING"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIG_EDGE_FALLING\fP   ADC_EXTERNALTRIGCONVEDGE_FALLING"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIG_EDGE_RISINGFALLING\fP   ADC_EXTERNALTRIGCONVEDGE_RISINGFALLING"
+.br
+.ti -1c
+.RI "#define \fBADC_SAMPLETIME_2CYCLE_5\fP   ADC_SAMPLETIME_2CYCLES_5"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_BUSY_REG\fP   HAL_ADC_STATE_REG_BUSY"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_BUSY_INJ\fP   HAL_ADC_STATE_INJ_BUSY"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_EOC_REG\fP   HAL_ADC_STATE_REG_EOC"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_EOC_INJ\fP   HAL_ADC_STATE_INJ_EOC"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_ERROR\fP   HAL_ADC_STATE_ERROR_INTERNAL"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_BUSY\fP   HAL_ADC_STATE_BUSY_INTERNAL"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_AWD\fP   HAL_ADC_STATE_AWD1"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

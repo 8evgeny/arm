@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_w_w_d_g___type_def" kind="struct" language="C++" prot="public">
+    <compoundname>WWDG_TypeDef</compoundname>
+    <includes refid="stm32f103xb_8h" local="no">stm32f103xb.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_w_w_d_g___type_def_1ab40c89c59391aaa9d9a8ec011dd0907a" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CR</definition>
+        <argsstring></argsstring>
+        <name>CR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WWDG Control register, Address offset: 0x00 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="559" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="559" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_w_w_d_g___type_def_1ac011ddcfe531f8e16787ea851c1f3667" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CFR</definition>
+        <argsstring></argsstring>
+        <name>CFR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WWDG Configuration register, Address offset: 0x04 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="560" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="560" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_w_w_d_g___type_def_1af6aca2bbd40c0fb6df7c3aebe224a360" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t SR</definition>
+        <argsstring></argsstring>
+        <name>SR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WWDG Status register, Address offset: 0x08 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="561" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="561" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Window WATCHDOG. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="557" column="1" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="558" bodyend="562"/>
+    <listofallmembers>
+      <member refid="struct_w_w_d_g___type_def_1ac011ddcfe531f8e16787ea851c1f3667" prot="public" virt="non-virtual"><scope>WWDG_TypeDef</scope><name>CFR</name></member>
+      <member refid="struct_w_w_d_g___type_def_1ab40c89c59391aaa9d9a8ec011dd0907a" prot="public" virt="non-virtual"><scope>WWDG_TypeDef</scope><name>CR</name></member>
+      <member refid="struct_w_w_d_g___type_def_1af6aca2bbd40c0fb6df7c3aebe224a360" prot="public" virt="non-virtual"><scope>WWDG_TypeDef</scope><name>SR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

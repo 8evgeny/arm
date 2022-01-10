@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___d_m_a__flag__definitions" kind="group">
+    <compoundname>DMA_flag_definitions</compoundname>
+    <title>DMA flag definitions</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga56f71da03db3e0a5dfad8cdfe46eac5c" prot="public" static="no">
+        <name>DMA_FLAG_GL1</name>
+        <initializer>0x00000001U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="243" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga02b6c752c28b35dba79fa1d2bb55ec06" prot="public" static="no">
+        <name>DMA_FLAG_TC1</name>
+        <initializer>0x00000002U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="244" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga4317f6260e1aecc4f5fe882fc043f606" prot="public" static="no">
+        <name>DMA_FLAG_HT1</name>
+        <initializer>0x00000004U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="245" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga198c0b4984a79514964d3dd5ae546008" prot="public" static="no">
+        <name>DMA_FLAG_TE1</name>
+        <initializer>0x00000008U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="246" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga1c8da546d95df14be19e9b82d0a49ecc" prot="public" static="no">
+        <name>DMA_FLAG_GL2</name>
+        <initializer>0x00000010U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="247" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1gacdf2954f3faf8314811ed39272825ab0" prot="public" static="no">
+        <name>DMA_FLAG_TC2</name>
+        <initializer>0x00000020U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="248" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1gab21f437ec8a55a600e5ca2af9416baba" prot="public" static="no">
+        <name>DMA_FLAG_HT2</name>
+        <initializer>0x00000040U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="249" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga6d81cc881182d35ba7a34c2759cd97f3" prot="public" static="no">
+        <name>DMA_FLAG_TE2</name>
+        <initializer>0x00000080U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="250" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga245f18e8c146baf3596e7340f7ecae3b" prot="public" static="no">
+        <name>DMA_FLAG_GL3</name>
+        <initializer>0x00000100U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="251" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga17463fb2609ad37aebe6955a044e83c7" prot="public" static="no">
+        <name>DMA_FLAG_TC3</name>
+        <initializer>0x00000200U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="252" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1gad28ea63fda2c87dd5e2ec08e0ab407d4" prot="public" static="no">
+        <name>DMA_FLAG_HT3</name>
+        <initializer>0x00000400U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="253" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga3e3d70e09d144c82ffc17d2ece186339" prot="public" static="no">
+        <name>DMA_FLAG_TE3</name>
+        <initializer>0x00000800U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="254" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga4dc75a03066b5e3700cb650daf4731e2" prot="public" static="no">
+        <name>DMA_FLAG_GL4</name>
+        <initializer>0x00001000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="255" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1gafb3f8a8c7048d344865c47e72a598074" prot="public" static="no">
+        <name>DMA_FLAG_TC4</name>
+        <initializer>0x00002000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="256" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga1a766ffe9b0138d6ab42819c1a9206f1" prot="public" static="no">
+        <name>DMA_FLAG_HT4</name>
+        <initializer>0x00004000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="257" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1gab1bb20d71697de115b87319347216a26" prot="public" static="no">
+        <name>DMA_FLAG_TE4</name>
+        <initializer>0x00008000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="258" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga78246e9a0d30e63e4fe5a54207c41a3e" prot="public" static="no">
+        <name>DMA_FLAG_GL5</name>
+        <initializer>0x00010000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="259" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga2e3a81f03ed107dbb60cfa7560c32e97" prot="public" static="no">
+        <name>DMA_FLAG_TC5</name>
+        <initializer>0x00020000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="260" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga3f7bd37a3c6a833a5e8dd011f7ef9acd" prot="public" static="no">
+        <name>DMA_FLAG_HT5</name>
+        <initializer>0x00040000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="261" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga04a05f5cc8f193757d8658d97a857b3a" prot="public" static="no">
+        <name>DMA_FLAG_TE5</name>
+        <initializer>0x00080000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="262" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga2ea0eb984d33f6788a59f49dcd2acee0" prot="public" static="no">
+        <name>DMA_FLAG_GL6</name>
+        <initializer>0x00100000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="263" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga1e3da05635b4165ce2a0075646cc9131" prot="public" static="no">
+        <name>DMA_FLAG_TC6</name>
+        <initializer>0x00200000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="264" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga37e18ea9dab110bafc8de3b6aedabb02" prot="public" static="no">
+        <name>DMA_FLAG_HT6</name>
+        <initializer>0x00400000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="265" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga50e2f489b50cbe42d03a80ca7cd42dad" prot="public" static="no">
+        <name>DMA_FLAG_TE6</name>
+        <initializer>0x00800000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="266" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1gaf4619624c5d2cde7fc58bc4cd400bfc3" prot="public" static="no">
+        <name>DMA_FLAG_GL7</name>
+        <initializer>0x01000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="267" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1gaacfd9fe9de9727dd862aa475b3d5aee8" prot="public" static="no">
+        <name>DMA_FLAG_TC7</name>
+        <initializer>0x02000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="268" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga8216565e4c640761fa93891006d43655" prot="public" static="no">
+        <name>DMA_FLAG_HT7</name>
+        <initializer>0x04000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="269" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___d_m_a__flag__definitions_1ga312e060067bffdf46136be4f7b0b614c" prot="public" static="no">
+        <name>DMA_FLAG_TE7</name>
+        <initializer>0x08000000U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" line="270" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

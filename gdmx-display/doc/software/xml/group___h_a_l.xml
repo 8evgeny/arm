@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l" kind="group">
+    <compoundname>HAL</compoundname>
+    <title>HAL</title>
+    <innergroup refid="group___h_a_l___exported___constants">HAL Exported Constants</innergroup>
+    <innergroup refid="group___h_a_l___exported___macros">HAL Exported Macros</innergroup>
+    <innergroup refid="group___h_a_l___private___variables">HAL Private Variables</innergroup>
+    <innergroup refid="group___h_a_l___private___constants">HAL Private Constants</innergroup>
+    <briefdescription>
+<para>HAL module driver. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

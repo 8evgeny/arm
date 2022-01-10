@@ -1,0 +1,44 @@
+.TH "RCCEx_HSE_Configuration" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCCEx_HSE_Configuration \- HSE Configuration
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_HSE_PREDIV_CONFIG\fP(__HSE_PREDIV_VALUE__)                     MODIFY_REG(RCC\->CFGR,\fBRCC_CFGR_PLLXTPRE\fP, (uint32_t)(__HSE_PREDIV_VALUE__))"
+.br
+.RI "Macro to configure the External High Speed oscillator (HSE) Predivision factor for PLL\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_HSE_GET_PREDIV\fP()   READ_BIT(RCC\->CFGR, \fBRCC_CFGR_PLLXTPRE\fP)"
+.br
+.RI "Macro to get prediv1 factor for PLL\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_RCC_HSE_PREDIV_CONFIG(__HSE_PREDIV_VALUE__)                     MODIFY_REG(RCC\->CFGR,\fBRCC_CFGR_PLLXTPRE\fP, (uint32_t)(__HSE_PREDIV_VALUE__))"
+
+.PP
+Macro to configure the External High Speed oscillator (HSE) Predivision factor for PLL\&. 
+.PP
+\fBNote\fP
+.RS 4
+Predivision factor can not be changed if PLL is used as system clock In this case, you have to select another source of the system clock, disable the PLL and then change the HSE predivision factor\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>HSE_PREDIV_VALUE</strong>\fP specifies the division value applied to HSE\&. This parameter must be a number between RCC_HSE_PREDIV_DIV1 and RCC_HSE_PREDIV_DIV2\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

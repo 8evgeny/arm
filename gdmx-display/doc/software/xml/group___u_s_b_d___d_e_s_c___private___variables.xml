@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___d_e_s_c___private___variables" kind="group">
+    <compoundname>USBD_DESC_Private_Variables</compoundname>
+    <title>USBD_DESC_Private_Variables</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___u_s_b_d___d_e_s_c___private___variables_1gae36d67393118d9d8531a8d633e23a797" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_u_s_b_d___descriptors_type_def" kindref="compound">USBD_DescriptorsTypeDef</ref></type>
+        <definition>USBD_DescriptorsTypeDef FS_Desc</definition>
+        <argsstring></argsstring>
+        <name>FS_Desc</name>
+        <initializer>=
+{
+  <ref refid="group___u_s_b_d___d_e_s_c___private___functions_1ga14798be38c08a37163e53167032485ff" kindref="member">USBD_FS_DeviceDescriptor</ref>
+, <ref refid="group___u_s_b_d___d_e_s_c___private___functions_1gac02628ceb6a6a071e192dcb85063c0cc" kindref="member">USBD_FS_LangIDStrDescriptor</ref>
+, <ref refid="group___u_s_b_d___d_e_s_c___private___functions_1ga6427a671827813efe1a46c3dfcb05683" kindref="member">USBD_FS_ManufacturerStrDescriptor</ref>
+, <ref refid="group___u_s_b_d___d_e_s_c___private___functions_1ga0ec558c0303daabb851d584109a56514" kindref="member">USBD_FS_ProductStrDescriptor</ref>
+, <ref refid="group___u_s_b_d___d_e_s_c___private___functions_1gaad2a1d1451821845eda602a82b1cd213" kindref="member">USBD_FS_SerialStrDescriptor</ref>
+, <ref refid="group___u_s_b_d___d_e_s_c___private___functions_1ga40ed2a0fb60c50a285983a09ba6921d6" kindref="member">USBD_FS_ConfigStrDescriptor</ref>
+, <ref refid="group___u_s_b_d___d_e_s_c___private___functions_1gab248f43276f92d982ab5853111e4fb10" kindref="member">USBD_FS_InterfaceStrDescriptor</ref>
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Descriptor for the Usb device. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_desc.c" line="138" column="25" bodyfile="Src/usbd_desc.c" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___u_s_b_d___d_e_s_c___private___variables_1ga542bfea0b6dcf06e06a505bdc49c7e04" prot="public" static="no" mutable="no">
+        <type>__ALIGN_BEGIN uint8_t USBD_FS_DeviceDesc[USB_LEN_DEV_DESC]</type>
+        <definition>__ALIGN_BEGIN uint8_t USBD_StringSerial [USB_SIZ_STRING_SERIAL] __ALIGN_END</definition>
+        <argsstring></argsstring>
+        <name>__ALIGN_END</name>
+        <initializer>=
+{
+  0x12,                       
+  USB_DESC_TYPE_DEVICE,       
+  0x00,                       
+  0x02,
+  0x02,                       
+  0x02,                       
+  0x00,                       
+  USB_MAX_EP0_SIZE,           
+  LOBYTE(USBD_VID),           
+  HIBYTE(USBD_VID),           
+  LOBYTE(USBD_PID_FS),        
+  HIBYTE(USBD_PID_FS),        
+  0x00,                       
+  0x02,
+  USBD_IDX_MFC_STR,           
+  USBD_IDX_PRODUCT_STR,       
+  USBD_IDX_SERIAL_STR,        
+  USBD_MAX_NUM_CONFIGURATION  
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB standard device descriptor.</para>
+<para>USB lang indentifier descriptor.</para>
+<para>IAR Compiler </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/usbd_desc.c" line="153" column="42" bodyfile="Src/usbd_desc.c" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Private variables. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

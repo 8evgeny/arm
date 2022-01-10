@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f1xx__hal__tim__ex_8h" xml:lang="en-US">
+<title>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h File Reference</title>
+<indexterm><primary>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h</primary></indexterm>
+<para>
+
+<para>Header file of TIM HAL Extended module. </para>
+ 
+</para>
+<programlisting>#include &quot;stm32f1xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_t_i_m___hall_sensor___init_type_def">TIM_HallSensor_InitTypeDef</link></para>
+
+<para>TIM Hall sensor Configuration Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Init</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, <link linkend="_struct_t_i_m___hall_sensor___init_type_def">TIM_HallSensor_InitTypeDef</link> *sConfig)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_DeInit</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_TIMEx_HallSensor_MspInit</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_TIMEx_HallSensor_MspDeInit</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Start</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Stop</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Start_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Stop_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Start_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t *pData, uint16_t Length)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_Stop_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_OCN_Start</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_OCN_Stop</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_OCN_Start_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_OCN_Stop_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_OCN_Start_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel, uint32_t *pData, uint16_t Length)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_OCN_Stop_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_PWMN_Start</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_PWMN_Stop</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_PWMN_Start_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_PWMN_Stop_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_PWMN_Start_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel, uint32_t *pData, uint16_t Length)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_PWMN_Stop_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Channel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_OnePulseN_Start</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t OutputChannel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_OnePulseN_Stop</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t OutputChannel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_OnePulseN_Start_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t OutputChannel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_OnePulseN_Stop_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t OutputChannel)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_ConfigCommutEvent</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t InputTrigger, uint32_t CommutationSource)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_ConfigCommutEvent_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t InputTrigger, uint32_t CommutationSource)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_ConfigCommutEvent_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t InputTrigger, uint32_t CommutationSource)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_MasterConfigSynchronization</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, <link linkend="_struct_t_i_m___master_config_type_def">TIM_MasterConfigTypeDef</link> *sMasterConfig)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_ConfigBreakDeadTime</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, <link linkend="_struct_t_i_m___break_dead_time_config_type_def">TIM_BreakDeadTimeConfigTypeDef</link> *sBreakDeadTimeConfig)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_RemapConfig</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Remap)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_TIMEx_CommutCallback</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_TIMEx_CommutHalfCpltCallback</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_TIMEx_BreakCallback</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para><link linkend="_group___t_i_m___exported___types_1gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</link> <emphasis role="strong">HAL_TIMEx_HallSensor_GetState</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">TIMEx_DMACommutationCplt</emphasis> (<link linkend="_group___d_m_a___exported___types_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">TIMEx_DMACommutationHalfCplt</emphasis> (<link linkend="_group___d_m_a___exported___types_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of TIM HAL Extended module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2016 STMicroelectronics. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+</section>

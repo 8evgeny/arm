@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___e_x_t_i___trigger" xml:lang="en-US">
+<title>EXTI Trigger</title>
+<indexterm><primary>EXTI Trigger</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___trigger_1gab0a4e8ed945992cb0cf071efe85748c8"/>#define <emphasis role="strong">EXTI_TRIGGER_NONE</emphasis>   0x00000000u</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___trigger_1ga648bd5d6c2bebd85b5ea85f8af9a2ccc"/>#define <emphasis role="strong">EXTI_TRIGGER_RISING</emphasis>   0x00000001u</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___trigger_1ga7461c33165994159edf79a095c227937"/>#define <emphasis role="strong">EXTI_TRIGGER_FALLING</emphasis>   0x00000002u</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___e_x_t_i___trigger_1ga481cea6a2aafe107e5657b65887c81d5"/>#define <emphasis role="strong">EXTI_TRIGGER_RISING_FALLING</emphasis>   (EXTI_TRIGGER_RISING | EXTI_TRIGGER_FALLING)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

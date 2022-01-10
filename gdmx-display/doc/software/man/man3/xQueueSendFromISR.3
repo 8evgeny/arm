@@ -1,0 +1,274 @@
+.TH "xQueueSendFromISR" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xQueueSendFromISR \- xQueueSendFromISR
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+queue\&. h 
+.PP
+.nf
+
+BaseType_t xQueueSendToFrontFromISR(
+                                     QueueHandle_t xQueue,
+                                     const void *pvItemToQueue,
+                                     BaseType_t *pxHigherPriorityTaskWoken
+                                  );
+.fi
+.PP
+.PP
+This is a macro that calls xQueueGenericSendFromISR()\&.
+.PP
+Post an item to the front of a queue\&. It is safe to use this macro from within an interrupt service routine\&.
+.PP
+Items are queued by copy not reference so it is preferable to only queue small items, especially when called from an ISR\&. In most cases it would be preferable to store a pointer to the item being queued\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxQueue\fP The handle to the queue on which the item is to be posted\&.
+.br
+\fIpvItemToQueue\fP A pointer to the item that is to be placed on the queue\&. The size of the items the queue will hold was defined when the queue was created, so this many bytes will be copied from pvItemToQueue into the queue storage area\&.
+.br
+\fIpxHigherPriorityTaskWoken\fP xQueueSendToFrontFromISR() will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task\&. If xQueueSendToFromFromISR() sets this value to pdTRUE then a context switch should be requested before the interrupt is exited\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+pdTRUE if the data was successfully sent to the queue, otherwise errQUEUE_FULL\&.
+.RE
+.PP
+Example usage for buffered IO (where the ISR can obtain more than one value per call): 
+.PP
+.nf
+
+void vBufferISR( void )
+{
+char cIn;
+BaseType_t xHigherPrioritTaskWoken;
+
+   // We have not woken a task at the start of the ISR\&.
+   xHigherPriorityTaskWoken = pdFALSE;
+
+   // Loop until the buffer is empty\&.
+   do
+   {
+    // Obtain a byte from the buffer\&.
+    cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );
+
+    // Post the byte\&.
+    xQueueSendToFrontFromISR( xRxQueue, &cIn, &xHigherPriorityTaskWoken );
+
+   } while( portINPUT_BYTE( BUFFER_COUNT ) );
+
+   // Now the buffer is empty we can switch context if necessary\&.
+   if( xHigherPriorityTaskWoken )
+   {
+    taskYIELD ();
+   }
+}
+.fi
+.PP
+.PP
+queue\&. h 
+.PP
+.nf
+
+BaseType_t xQueueSendToBackFromISR(
+                                     QueueHandle_t xQueue,
+                                     const void *pvItemToQueue,
+                                     BaseType_t *pxHigherPriorityTaskWoken
+                                  );
+.fi
+.PP
+.PP
+This is a macro that calls xQueueGenericSendFromISR()\&.
+.PP
+Post an item to the back of a queue\&. It is safe to use this macro from within an interrupt service routine\&.
+.PP
+Items are queued by copy not reference so it is preferable to only queue small items, especially when called from an ISR\&. In most cases it would be preferable to store a pointer to the item being queued\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxQueue\fP The handle to the queue on which the item is to be posted\&.
+.br
+\fIpvItemToQueue\fP A pointer to the item that is to be placed on the queue\&. The size of the items the queue will hold was defined when the queue was created, so this many bytes will be copied from pvItemToQueue into the queue storage area\&.
+.br
+\fIpxHigherPriorityTaskWoken\fP xQueueSendToBackFromISR() will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task\&. If xQueueSendToBackFromISR() sets this value to pdTRUE then a context switch should be requested before the interrupt is exited\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+pdTRUE if the data was successfully sent to the queue, otherwise errQUEUE_FULL\&.
+.RE
+.PP
+Example usage for buffered IO (where the ISR can obtain more than one value per call): 
+.PP
+.nf
+
+void vBufferISR( void )
+{
+char cIn;
+BaseType_t xHigherPriorityTaskWoken;
+
+   // We have not woken a task at the start of the ISR\&.
+   xHigherPriorityTaskWoken = pdFALSE;
+
+   // Loop until the buffer is empty\&.
+   do
+   {
+    // Obtain a byte from the buffer\&.
+    cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );
+
+    // Post the byte\&.
+    xQueueSendToBackFromISR( xRxQueue, &cIn, &xHigherPriorityTaskWoken );
+
+   } while( portINPUT_BYTE( BUFFER_COUNT ) );
+
+   // Now the buffer is empty we can switch context if necessary\&.
+   if( xHigherPriorityTaskWoken )
+   {
+    taskYIELD ();
+   }
+}
+.fi
+.PP
+.PP
+queue\&. h 
+.PP
+.nf
+
+BaseType_t xQueueSendFromISR(
+                                 QueueHandle_t xQueue,
+                                 const void *pvItemToQueue,
+                                 BaseType_t *pxHigherPriorityTaskWoken
+                            );
+.fi
+.PP
+.PP
+This is a macro that calls xQueueGenericSendFromISR()\&. It is included for backward compatibility with versions of FreeRTOS\&.org that did not include the xQueueSendToBackFromISR() and xQueueSendToFrontFromISR() macros\&.
+.PP
+Post an item to the back of a queue\&. It is safe to use this function from within an interrupt service routine\&.
+.PP
+Items are queued by copy not reference so it is preferable to only queue small items, especially when called from an ISR\&. In most cases it would be preferable to store a pointer to the item being queued\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxQueue\fP The handle to the queue on which the item is to be posted\&.
+.br
+\fIpvItemToQueue\fP A pointer to the item that is to be placed on the queue\&. The size of the items the queue will hold was defined when the queue was created, so this many bytes will be copied from pvItemToQueue into the queue storage area\&.
+.br
+\fIpxHigherPriorityTaskWoken\fP xQueueSendFromISR() will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task\&. If xQueueSendFromISR() sets this value to pdTRUE then a context switch should be requested before the interrupt is exited\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+pdTRUE if the data was successfully sent to the queue, otherwise errQUEUE_FULL\&.
+.RE
+.PP
+Example usage for buffered IO (where the ISR can obtain more than one value per call): 
+.PP
+.nf
+
+void vBufferISR( void )
+{
+char cIn;
+BaseType_t xHigherPriorityTaskWoken;
+
+   // We have not woken a task at the start of the ISR\&.
+   xHigherPriorityTaskWoken = pdFALSE;
+
+   // Loop until the buffer is empty\&.
+   do
+   {
+    // Obtain a byte from the buffer\&.
+    cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );
+
+    // Post the byte\&.
+    xQueueSendFromISR( xRxQueue, &cIn, &xHigherPriorityTaskWoken );
+
+   } while( portINPUT_BYTE( BUFFER_COUNT ) );
+
+   // Now the buffer is empty we can switch context if necessary\&.
+   if( xHigherPriorityTaskWoken )
+   {
+    // Actual macro used here is port specific\&.
+    portYIELD_FROM_ISR ();
+   }
+}
+.fi
+.PP
+.PP
+queue\&. h 
+.PP
+.nf
+
+BaseType_t xQueueGenericSendFromISR(
+                                       QueueHandle_t        xQueue,
+                                       const    void    *pvItemToQueue,
+                                       BaseType_t   *pxHigherPriorityTaskWoken,
+                                       BaseType_t   xCopyPosition
+                                   );
+.fi
+.PP
+.PP
+It is preferred that the macros xQueueSendFromISR(), xQueueSendToFrontFromISR() and xQueueSendToBackFromISR() be used in place of calling this function directly\&. xQueueGiveFromISR() is an equivalent for use by semaphores that don't actually copy any data\&.
+.PP
+Post an item on a queue\&. It is safe to use this function from within an interrupt service routine\&.
+.PP
+Items are queued by copy not reference so it is preferable to only queue small items, especially when called from an ISR\&. In most cases it would be preferable to store a pointer to the item being queued\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxQueue\fP The handle to the queue on which the item is to be posted\&.
+.br
+\fIpvItemToQueue\fP A pointer to the item that is to be placed on the queue\&. The size of the items the queue will hold was defined when the queue was created, so this many bytes will be copied from pvItemToQueue into the queue storage area\&.
+.br
+\fIpxHigherPriorityTaskWoken\fP xQueueGenericSendFromISR() will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task\&. If xQueueGenericSendFromISR() sets this value to pdTRUE then a context switch should be requested before the interrupt is exited\&.
+.br
+\fIxCopyPosition\fP Can take the value queueSEND_TO_BACK to place the item at the back of the queue, or queueSEND_TO_FRONT to place the item at the front of the queue (for high priority messages)\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+pdTRUE if the data was successfully sent to the queue, otherwise errQUEUE_FULL\&.
+.RE
+.PP
+Example usage for buffered IO (where the ISR can obtain more than one value per call): 
+.PP
+.nf
+
+void vBufferISR( void )
+{
+char cIn;
+BaseType_t xHigherPriorityTaskWokenByPost;
+
+   // We have not woken a task at the start of the ISR\&.
+   xHigherPriorityTaskWokenByPost = pdFALSE;
+
+   // Loop until the buffer is empty\&.
+   do
+   {
+    // Obtain a byte from the buffer\&.
+    cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );
+
+    // Post each byte\&.
+    xQueueGenericSendFromISR( xRxQueue, &cIn, &xHigherPriorityTaskWokenByPost, queueSEND_TO_BACK );
+
+   } while( portINPUT_BYTE( BUFFER_COUNT ) );
+
+   // Now the buffer is empty we can switch context if necessary\&.  Note that the
+   // name of the yield function required is port specific\&.
+   if( xHigherPriorityTaskWokenByPost )
+   {
+    taskYIELD_YIELD_FROM_ISR();
+   }
+}
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

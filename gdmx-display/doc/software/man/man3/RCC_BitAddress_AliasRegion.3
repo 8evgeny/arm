@@ -1,0 +1,98 @@
+.TH "RCC_BitAddress_AliasRegion" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_BitAddress_AliasRegion \- BitAddress AliasRegion
+.PP
+ \- RCC registers bit address in the alias region\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRCC_CR_OFFSET_BB\fP   (RCC_OFFSET + RCC_CR_OFFSET)"
+.br
+.ti -1c
+.RI "#define \fBRCC_CFGR_OFFSET_BB\fP   (RCC_OFFSET + RCC_CFGR_OFFSET)"
+.br
+.ti -1c
+.RI "#define \fBRCC_CIR_OFFSET_BB\fP   (RCC_OFFSET + RCC_CIR_OFFSET)"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDCR_OFFSET_BB\fP   (RCC_OFFSET + RCC_BDCR_OFFSET)"
+.br
+.ti -1c
+.RI "#define \fBRCC_CSR_OFFSET_BB\fP   (RCC_OFFSET + RCC_CSR_OFFSET)"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSION_BIT_NUMBER\fP   RCC_CR_HSION_Pos"
+.br
+.ti -1c
+.RI "#define \fBRCC_CR_HSION_BB\fP   ((uint32_t)(\fBPERIPH_BB_BASE\fP + (RCC_CR_OFFSET_BB * 32U) + (RCC_HSION_BIT_NUMBER * 4U)))"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSEON_BIT_NUMBER\fP   RCC_CR_HSEON_Pos"
+.br
+.ti -1c
+.RI "#define \fBRCC_CR_HSEON_BB\fP   ((uint32_t)(\fBPERIPH_BB_BASE\fP + (RCC_CR_OFFSET_BB * 32U) + (RCC_HSEON_BIT_NUMBER * 4U)))"
+.br
+.ti -1c
+.RI "#define \fBRCC_CSSON_BIT_NUMBER\fP   RCC_CR_CSSON_Pos"
+.br
+.ti -1c
+.RI "#define \fBRCC_CR_CSSON_BB\fP   ((uint32_t)(\fBPERIPH_BB_BASE\fP + (RCC_CR_OFFSET_BB * 32U) + (RCC_CSSON_BIT_NUMBER * 4U)))"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLLON_BIT_NUMBER\fP   RCC_CR_PLLON_Pos"
+.br
+.ti -1c
+.RI "#define \fBRCC_CR_PLLON_BB\fP   ((uint32_t)(\fBPERIPH_BB_BASE\fP + (RCC_CR_OFFSET_BB * 32U) + (RCC_PLLON_BIT_NUMBER * 4U)))"
+.br
+.ti -1c
+.RI "#define \fBRCC_LSION_BIT_NUMBER\fP   RCC_CSR_LSION_Pos"
+.br
+.ti -1c
+.RI "#define \fBRCC_CSR_LSION_BB\fP   ((uint32_t)(\fBPERIPH_BB_BASE\fP + (RCC_CSR_OFFSET_BB * 32U) + (RCC_LSION_BIT_NUMBER * 4U)))"
+.br
+.ti -1c
+.RI "#define \fBRCC_RMVF_BIT_NUMBER\fP   RCC_CSR_RMVF_Pos"
+.br
+.ti -1c
+.RI "#define \fBRCC_CSR_RMVF_BB\fP   ((uint32_t)(\fBPERIPH_BB_BASE\fP + (RCC_CSR_OFFSET_BB * 32U) + (RCC_RMVF_BIT_NUMBER * 4U)))"
+.br
+.ti -1c
+.RI "#define \fBRCC_LSEON_BIT_NUMBER\fP   RCC_BDCR_LSEON_Pos"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDCR_LSEON_BB\fP   ((uint32_t)(\fBPERIPH_BB_BASE\fP + (RCC_BDCR_OFFSET_BB * 32U) + (RCC_LSEON_BIT_NUMBER * 4U)))"
+.br
+.ti -1c
+.RI "#define \fBRCC_LSEBYP_BIT_NUMBER\fP   RCC_BDCR_LSEBYP_Pos"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDCR_LSEBYP_BB\fP   ((uint32_t)(\fBPERIPH_BB_BASE\fP + (RCC_BDCR_OFFSET_BB * 32U) + (RCC_LSEBYP_BIT_NUMBER * 4U)))"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCEN_BIT_NUMBER\fP   RCC_BDCR_RTCEN_Pos"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDCR_RTCEN_BB\fP   ((uint32_t)(\fBPERIPH_BB_BASE\fP + (RCC_BDCR_OFFSET_BB * 32U) + (RCC_RTCEN_BIT_NUMBER * 4U)))"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDRST_BIT_NUMBER\fP   RCC_BDCR_BDRST_Pos"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDCR_BDRST_BB\fP   ((uint32_t)(\fBPERIPH_BB_BASE\fP + (RCC_BDCR_OFFSET_BB * 32U) + (RCC_BDRST_BIT_NUMBER * 4U)))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+RCC registers bit address in the alias region\&. 
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

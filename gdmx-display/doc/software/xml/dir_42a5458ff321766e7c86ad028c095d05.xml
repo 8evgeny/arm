@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_42a5458ff321766e7c86ad028c095d05" kind="dir">
+    <compoundname>build/CMakeFiles/gdmx_display.elf.dir/Middlewares/ST/STM32_USB_Device_Library</compoundname>
+    <innerdir refid="dir_14d1bb7c132e3c575f1aa462d93614e3">build/CMakeFiles/gdmx_display.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class</innerdir>
+    <innerdir refid="dir_3b712903999a93bddda023c3af974613">build/CMakeFiles/gdmx_display.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/gdmx_display.elf.dir/Middlewares/ST/STM32_USB_Device_Library/"/>
+  </compounddef>
+</doxygen>

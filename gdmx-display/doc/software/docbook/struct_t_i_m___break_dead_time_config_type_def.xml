@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_t_i_m___break_dead_time_config_type_def" xml:lang="en-US">
+<title>TIM_BreakDeadTimeConfigTypeDef Struct Reference</title>
+<indexterm><primary>TIM_BreakDeadTimeConfigTypeDef</primary></indexterm>
+<para>
+
+<para>TIM Break input(s) and Dead time configuration Structure definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f1xx_hal_tim.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___break_dead_time_config_type_def_1af45695121f3b3fe1ab24e8fbdb56d781">OffStateRunMode</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___break_dead_time_config_type_def_1a24f5a355f44432458801392e40a80faa">OffStateIDLEMode</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___break_dead_time_config_type_def_1a5fb4b2ca5382b21df284a2d0ce75d32c">LockLevel</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___break_dead_time_config_type_def_1a5a08cf07668e90bc708f8cccf709f2b4">DeadTime</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___break_dead_time_config_type_def_1a2a1604bd7f46bd571a2507c5f873474f">BreakState</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___break_dead_time_config_type_def_1a9ac85dcd5135063196b8954d9b779aa7">BreakPolarity</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___break_dead_time_config_type_def_1a9832cc0d752f1106cd4fc5a2f0e510c0">BreakFilter</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___break_dead_time_config_type_def_1a811ab6cfce79a2aadab7fc040413c037">AutomaticOutput</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>TIM Break input(s) and Dead time configuration Structure definition. </para>
+
+
+
+<para><note><title>Note</title>
+
+<para>2 break inputs can be configured (BKIN and BKIN2) with configurable filter and polarity. </para>
+</note>
+</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_t_i_m___break_dead_time_config_type_def_1a811ab6cfce79a2aadab7fc040413c037"/>    <section>
+    <title>AutomaticOutput</title>
+<indexterm><primary>AutomaticOutput</primary><secondary>TIM_BreakDeadTimeConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_BreakDeadTimeConfigTypeDef</primary><secondary>AutomaticOutput</secondary></indexterm>
+<para><computeroutput>uint32_t AutomaticOutput</computeroutput></para>
+<para>TIM Automatic Output Enable state This parameter can be a value of <link linkend="_group___t_i_m___a_o_e___bit___set___reset">TIM Automatic Output Enable</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___break_dead_time_config_type_def_1a9832cc0d752f1106cd4fc5a2f0e510c0"/>    <section>
+    <title>BreakFilter</title>
+<indexterm><primary>BreakFilter</primary><secondary>TIM_BreakDeadTimeConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_BreakDeadTimeConfigTypeDef</primary><secondary>BreakFilter</secondary></indexterm>
+<para><computeroutput>uint32_t BreakFilter</computeroutput></para>
+<para>Specifies the break input filter. This parameter can be a number between Min_Data = 0x0 and Max_Data = 0xF </para>
+    </section><anchor xml:id="_struct_t_i_m___break_dead_time_config_type_def_1a9ac85dcd5135063196b8954d9b779aa7"/>    <section>
+    <title>BreakPolarity</title>
+<indexterm><primary>BreakPolarity</primary><secondary>TIM_BreakDeadTimeConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_BreakDeadTimeConfigTypeDef</primary><secondary>BreakPolarity</secondary></indexterm>
+<para><computeroutput>uint32_t BreakPolarity</computeroutput></para>
+<para>TIM Break input polarity This parameter can be a value of <link linkend="_group___t_i_m___break___polarity">TIM Break Input Polarity</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___break_dead_time_config_type_def_1a2a1604bd7f46bd571a2507c5f873474f"/>    <section>
+    <title>BreakState</title>
+<indexterm><primary>BreakState</primary><secondary>TIM_BreakDeadTimeConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_BreakDeadTimeConfigTypeDef</primary><secondary>BreakState</secondary></indexterm>
+<para><computeroutput>uint32_t BreakState</computeroutput></para>
+<para>TIM Break State This parameter can be a value of <link linkend="_group___t_i_m___break___input__enable__disable">TIM Break Input Enable</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___break_dead_time_config_type_def_1a5a08cf07668e90bc708f8cccf709f2b4"/>    <section>
+    <title>DeadTime</title>
+<indexterm><primary>DeadTime</primary><secondary>TIM_BreakDeadTimeConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_BreakDeadTimeConfigTypeDef</primary><secondary>DeadTime</secondary></indexterm>
+<para><computeroutput>uint32_t DeadTime</computeroutput></para>
+<para>TIM dead Time This parameter can be a number between Min_Data = 0x00 and Max_Data = 0xFF </para>
+    </section><anchor xml:id="_struct_t_i_m___break_dead_time_config_type_def_1a5fb4b2ca5382b21df284a2d0ce75d32c"/>    <section>
+    <title>LockLevel</title>
+<indexterm><primary>LockLevel</primary><secondary>TIM_BreakDeadTimeConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_BreakDeadTimeConfigTypeDef</primary><secondary>LockLevel</secondary></indexterm>
+<para><computeroutput>uint32_t LockLevel</computeroutput></para>
+<para>TIM Lock level This parameter can be a value of <link linkend="_group___t_i_m___lock__level">TIM Lock level</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___break_dead_time_config_type_def_1a24f5a355f44432458801392e40a80faa"/>    <section>
+    <title>OffStateIDLEMode</title>
+<indexterm><primary>OffStateIDLEMode</primary><secondary>TIM_BreakDeadTimeConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_BreakDeadTimeConfigTypeDef</primary><secondary>OffStateIDLEMode</secondary></indexterm>
+<para><computeroutput>uint32_t OffStateIDLEMode</computeroutput></para>
+<para>TIM off state in IDLE mode This parameter can be a value of <link linkend="_group___t_i_m___o_s_s_i___off___state___selection__for___idle__mode__state">TIM OSSI OffState Selection for Idle mode state</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___break_dead_time_config_type_def_1af45695121f3b3fe1ab24e8fbdb56d781"/>    <section>
+    <title>OffStateRunMode</title>
+<indexterm><primary>OffStateRunMode</primary><secondary>TIM_BreakDeadTimeConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_BreakDeadTimeConfigTypeDef</primary><secondary>OffStateRunMode</secondary></indexterm>
+<para><computeroutput>uint32_t OffStateRunMode</computeroutput></para>
+<para>TIM off state in run mode This parameter can be a value of <link linkend="_group___t_i_m___o_s_s_r___off___state___selection__for___run__mode__state">TIM OSSR OffState Selection for Run mode state</link> </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/STM32F1xx_HAL_Driver/Inc/<link linkend="_stm32f1xx__hal__tim_8h">stm32f1xx_hal_tim.h</link></section>
+</section>

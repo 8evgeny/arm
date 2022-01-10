@@ -1,0 +1,104 @@
+.TH "RCC_Peripheral_Clock_Enable_Disable" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_Peripheral_Clock_Enable_Disable \- Peripheral Clock Enable Disable
+.PP
+ \- Enable or disable the AHB1 peripheral clock\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SRAM_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_FLITF_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_CRC_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_CLK_DISABLE\fP()   (RCC\->AHBENR &= ~(\fBRCC_AHBENR_DMA1EN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SRAM_CLK_DISABLE\fP()   (RCC\->AHBENR &= ~(\fBRCC_AHBENR_SRAMEN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_FLITF_CLK_DISABLE\fP()   (RCC\->AHBENR &= ~(\fBRCC_AHBENR_FLITFEN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_CRC_CLK_DISABLE\fP()   (RCC\->AHBENR &= ~(\fBRCC_AHBENR_CRCEN\fP))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Enable or disable the AHB1 peripheral clock\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it\&. 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_RCC_CRC_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->AHBENR, RCC_AHBENR_CRCEN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->AHBENR, RCC_AHBENR_CRCEN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_DMA1_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->AHBENR, RCC_AHBENR_DMA1EN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->AHBENR, RCC_AHBENR_DMA1EN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_FLITF_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->AHBENR, RCC_AHBENR_FLITFEN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->AHBENR, RCC_AHBENR_FLITFEN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_SRAM_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->AHBENR, RCC_AHBENR_SRAMEN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->AHBENR, RCC_AHBENR_SRAMEN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

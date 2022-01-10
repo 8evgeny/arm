@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_t_i_m___clock_config_type_def" xml:lang="en-US">
+<title>TIM_ClockConfigTypeDef Struct Reference</title>
+<indexterm><primary>TIM_ClockConfigTypeDef</primary></indexterm>
+<para>
+
+<para>Clock Configuration Handle Structure definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f1xx_hal_tim.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___clock_config_type_def_1afe27815154e535b96e8fa1b4d2fdd596">ClockSource</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___clock_config_type_def_1a765acd064e3a8fb99ec74ae5109fc5ec">ClockPolarity</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___clock_config_type_def_1ab791f8fac403d508e1c53b6f27cf1f24">ClockPrescaler</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_t_i_m___clock_config_type_def_1aed791f661f8bca36911e905631bebfa5">ClockFilter</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Clock Configuration Handle Structure definition. </para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_t_i_m___clock_config_type_def_1aed791f661f8bca36911e905631bebfa5"/>    <section>
+    <title>ClockFilter</title>
+<indexterm><primary>ClockFilter</primary><secondary>TIM_ClockConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_ClockConfigTypeDef</primary><secondary>ClockFilter</secondary></indexterm>
+<para><computeroutput>uint32_t ClockFilter</computeroutput></para>
+<para>TIM clock filter This parameter can be a number between Min_Data = 0x0 and Max_Data = 0xF </para>
+    </section><anchor xml:id="_struct_t_i_m___clock_config_type_def_1a765acd064e3a8fb99ec74ae5109fc5ec"/>    <section>
+    <title>ClockPolarity</title>
+<indexterm><primary>ClockPolarity</primary><secondary>TIM_ClockConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_ClockConfigTypeDef</primary><secondary>ClockPolarity</secondary></indexterm>
+<para><computeroutput>uint32_t ClockPolarity</computeroutput></para>
+<para>TIM clock polarity This parameter can be a value of <link linkend="_group___t_i_m___clock___polarity">TIM Clock Polarity</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___clock_config_type_def_1ab791f8fac403d508e1c53b6f27cf1f24"/>    <section>
+    <title>ClockPrescaler</title>
+<indexterm><primary>ClockPrescaler</primary><secondary>TIM_ClockConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_ClockConfigTypeDef</primary><secondary>ClockPrescaler</secondary></indexterm>
+<para><computeroutput>uint32_t ClockPrescaler</computeroutput></para>
+<para>TIM clock prescaler This parameter can be a value of <link linkend="_group___t_i_m___clock___prescaler">TIM Clock Prescaler</link> </para>
+    </section><anchor xml:id="_struct_t_i_m___clock_config_type_def_1afe27815154e535b96e8fa1b4d2fdd596"/>    <section>
+    <title>ClockSource</title>
+<indexterm><primary>ClockSource</primary><secondary>TIM_ClockConfigTypeDef</secondary></indexterm>
+<indexterm><primary>TIM_ClockConfigTypeDef</primary><secondary>ClockSource</secondary></indexterm>
+<para><computeroutput>uint32_t ClockSource</computeroutput></para>
+<para>TIM clock sources This parameter can be a value of <link linkend="_group___t_i_m___clock___source">TIM Clock Source</link> </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/STM32F1xx_HAL_Driver/Inc/<link linkend="_stm32f1xx__hal__tim_8h">stm32f1xx_hal_tim.h</link></section>
+</section>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___u_s_a_r_t___aliased___macros" xml:lang="en-US">
+<title>HAL USART Aliased Macros maintained for legacy purpose</title>
+<indexterm><primary>HAL USART Aliased Macros maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_s_a_r_t___aliased___macros_1gab99081ba6bb70f397ab2def3f644c3c1"/>#define <emphasis role="strong">__USART_ENABLE_IT</emphasis>   __HAL_USART_ENABLE_IT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_s_a_r_t___aliased___macros_1ga12ae7c59b7d95f0f8606fca7bba57db8"/>#define <emphasis role="strong">__USART_DISABLE_IT</emphasis>   __HAL_USART_DISABLE_IT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_s_a_r_t___aliased___macros_1gae03c01e0ee50608e887842bacbf5b361"/>#define <emphasis role="strong">__USART_ENABLE</emphasis>   __HAL_USART_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_s_a_r_t___aliased___macros_1gac894c090835b348469f36bfed6e78fbd"/>#define <emphasis role="strong">__USART_DISABLE</emphasis>   __HAL_USART_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_s_a_r_t___aliased___macros_1ga0ed768f9a18f877413306078c442a2a5"/>#define <emphasis role="strong">__HAL_USART_GETCLOCKSOURCE</emphasis>   USART_GETCLOCKSOURCE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_s_a_r_t___aliased___macros_1gaa00a53bf6bc2bee096abb57d4ace2384"/>#define <emphasis role="strong">__USART_GETCLOCKSOURCE</emphasis>   USART_GETCLOCKSOURCE</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

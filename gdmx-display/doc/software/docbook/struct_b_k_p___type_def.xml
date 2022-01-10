@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_b_k_p___type_def" xml:lang="en-US">
+<title>BKP_TypeDef Struct Reference</title>
+<indexterm><primary>BKP_TypeDef</primary></indexterm>
+<para>
+
+<para>Backup Registers 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f103xb.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1af86c61a5d38a4fc9cef942a12744486b"/>uint32_t <emphasis role="strong">RESERVED0</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1a4bddb62706c830de59e263433390fcdb"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR1</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1a9effac7d19f2ebb5ee12c3ce9f1803df"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR2</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1a68d30ac2fd332f01053ffce72825b171"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR3</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1ad4799a7d3d3678afbc29fcf623d510ed"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR4</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1a0d74106035c98f6d85139e38a929bcb5"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR5</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1a08d4980767b6b3aa6e49ac0b0ef65eb3"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR6</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1a0fa6ac40e28a7f29faa43f2bda29ef0a"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR7</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1a03f8be5d7c11b47ee08d2fcf2949c233"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR8</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1a7fa71253d3e565d39c9d5a309998cb27"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR9</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1ac9eaa42cf764059ca20a1daf7edba3e0"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">DR10</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1a6b0901e580e8884d2b4c525e43df90c7"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">RTCCR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1ab40c89c59391aaa9d9a8ec011dd0907a"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">CR</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_b_k_p___type_def_1a876dd0a8546697065f406b7543e27af2"/><link linkend="_core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <emphasis role="strong">CSR</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Backup Registers 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/CMSIS/Device/ST/STM32F1xx/Include/<link linkend="_stm32f103xb_8h">stm32f103xb.h</link></section>
+</section>

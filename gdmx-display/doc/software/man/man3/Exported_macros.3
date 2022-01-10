@@ -1,0 +1,42 @@
+.TH "Exported_macros" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Exported_macros \- Exported_macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSET_BIT\fP(REG,  BIT)   ((REG) |= (BIT))"
+.br
+.ti -1c
+.RI "#define \fBCLEAR_BIT\fP(REG,  BIT)   ((REG) &= ~(BIT))"
+.br
+.ti -1c
+.RI "#define \fBREAD_BIT\fP(REG,  BIT)   ((REG) & (BIT))"
+.br
+.ti -1c
+.RI "#define \fBCLEAR_REG\fP(REG)   ((REG) = (0x0))"
+.br
+.ti -1c
+.RI "#define \fBWRITE_REG\fP(REG,  VAL)   ((REG) = (VAL))"
+.br
+.ti -1c
+.RI "#define \fBREAD_REG\fP(REG)   ((REG))"
+.br
+.ti -1c
+.RI "#define \fBMODIFY_REG\fP(REG,  CLEARMASK,  SETMASK)   WRITE_REG((REG), (((READ_REG(REG)) & (~(CLEARMASK))) | (SETMASK)))"
+.br
+.ti -1c
+.RI "#define \fBPOSITION_VAL\fP(VAL)   (\fB__CLZ\fP(\fB__RBIT\fP(VAL)))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

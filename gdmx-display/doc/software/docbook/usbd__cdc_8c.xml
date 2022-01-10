@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__cdc_8c" xml:lang="en-US">
+<title>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c File Reference</title>
+<indexterm><primary>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</primary></indexterm>
+<para>
+
+<para>This file provides the high layer firmware functions to manage the following functionalities of the USB CDC Class: </para>
+ 
+</para>
+<programlisting>#include &quot;usbd_cdc.h&quot;
+#include &quot;usbd_ctlreq.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t * <link linkend="_group___u_s_b_d___c_d_c___private___functions_1gadeffb3571641e96051930f66a43607a8">USBD_CDC_GetDeviceQualifierDescriptor</link> (uint16_t *length)</para>
+
+<para>DeviceQualifierDescriptor return Device Qualifier descriptor. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___u_s_b_d___c_d_c___private___functions_1ga41e2c9c5138449916310eb508a500752">USBD_CDC_RegisterInterface</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, <link linkend="_struct___u_s_b_d___c_d_c___itf">USBD_CDC_ItfTypeDef</link> *fops)</para>
+
+<para>USBD_CDC_RegisterInterface. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___u_s_b_d___c_d_c___private___functions_1gaae40b75b0ccc21281f4aa1e2fbdc0d4f">USBD_CDC_SetTxBuffer</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t *pbuff, uint16_t length)</para>
+
+<para>USBD_CDC_SetTxBuffer. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___u_s_b_d___c_d_c___private___functions_1gaa8539af2ff78ce9a464def5de05726c3">USBD_CDC_SetRxBuffer</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev, uint8_t *pbuff)</para>
+
+<para>USBD_CDC_SetRxBuffer. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___u_s_b_d___c_d_c___private___functions_1gac6132b25e4ac00c4d918d3d73a3be5c7">USBD_CDC_TransmitPacket</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev)</para>
+
+<para>USBD_CDC_TransmitPacket Transmit packet on IN endpoint. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___u_s_b_d___c_d_c___private___functions_1ga55dff87863e1c76fd1139016da75903c">USBD_CDC_ReceivePacket</link> (<link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> *pdev)</para>
+
+<para>USBD_CDC_ReceivePacket prepare OUT Endpoint for reception. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct___device__cb">USBD_ClassTypeDef</link> <emphasis role="strong">USBD_CDC</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This file provides the high layer firmware functions to manage the following functionalities of the USB CDC Class: </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team<itemizedlist>
+<listitem>
+<para>Initialization and Configuration of high and low layer</para>
+</listitem><listitem>
+<para>Enumeration as CDC Device (and enumeration for each implemented memory interface)</para>
+</listitem><listitem>
+<para>OUT/IN data transfer</para>
+</listitem><listitem>
+<para>Command IN transfer (class requests management)</para>
+</listitem><listitem>
+<para>Error management</para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+<literallayout><computeroutput>*
+*          ===================================================================
+*                                CDC Class Driver Description
+*          ===================================================================
+*           This driver manages the &quot;Universal Serial Bus Class Definitions for Communications Devices
+*           Revision 1.2 November 16, 2007&quot; and the sub-protocol specification of &quot;Universal Serial Bus
+*           Communications Class Subclass Specification for PSTN Devices Revision 1.2 February 9, 2007&quot;
+*           This driver implements the following aspects of the specification:
+*             - Device descriptor management
+*             - Configuration descriptor management
+*             - Enumeration as CDC device with 2 data endpoints (IN and OUT) and 1 command endpoint (IN)
+*             - Requests management (as described in section 6.2 in specification)
+*             - Abstract Control Model compliant
+*             - Union Functional collection (using 1 IN endpoint for control)
+*             - Data interface class
+*
+*           These aspects may be enriched or modified for a specific user application.
+*
+*            This driver doesn&apos;t implement the following aspects of the specification
+*            (but it is possible to manage these features with some modifications on this driver):
+*             - Any class-specific aspect relative to communication classes should be managed by user application.
+*             - All communication classes other than PSTN are not managed
+*
+*  </computeroutput></literallayout></para>
+
+<para><caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2015 STMicroelectronics. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by ST under Ultimate Liberty license SLA0044, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: www.st.com/SLA0044 </para>
+</section>
+</section>

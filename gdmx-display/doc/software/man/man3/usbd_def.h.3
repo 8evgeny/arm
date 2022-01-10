@@ -1,0 +1,310 @@
+.TH "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \- General defines for the usb device library\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'usbd_conf\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBusb_setup_req\fP"
+.br
+.ti -1c
+.RI "struct \fB_Device_cb\fP"
+.br
+.ti -1c
+.RI "struct \fBUSBD_DescriptorsTypeDef\fP"
+.br
+.ti -1c
+.RI "struct \fBUSBD_EndpointTypeDef\fP"
+.br
+.ti -1c
+.RI "struct \fB_USBD_HandleTypeDef\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNULL\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_MAX_NUM_INTERFACES\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_MAX_NUM_CONFIGURATION\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_LPM_ENABLED\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_SELF_POWERED\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_SUPPORT_USER_STRING_DESC\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBUSB_LEN_DEV_QUALIFIER_DESC\fP   0x0AU"
+.br
+.ti -1c
+.RI "#define \fBUSB_LEN_DEV_DESC\fP   0x12U"
+.br
+.ti -1c
+.RI "#define \fBUSB_LEN_CFG_DESC\fP   0x09U"
+.br
+.ti -1c
+.RI "#define \fBUSB_LEN_IF_DESC\fP   0x09U"
+.br
+.ti -1c
+.RI "#define \fBUSB_LEN_EP_DESC\fP   0x07U"
+.br
+.ti -1c
+.RI "#define \fBUSB_LEN_OTG_DESC\fP   0x03U"
+.br
+.ti -1c
+.RI "#define \fBUSB_LEN_LANGID_STR_DESC\fP   0x04U"
+.br
+.ti -1c
+.RI "#define \fBUSB_LEN_OTHER_SPEED_DESC_SIZ\fP   0x09U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_IDX_LANGID_STR\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_IDX_MFC_STR\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_IDX_PRODUCT_STR\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_IDX_SERIAL_STR\fP   0x03U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_IDX_CONFIG_STR\fP   0x04U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_IDX_INTERFACE_STR\fP   0x05U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_TYPE_STANDARD\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_TYPE_CLASS\fP   0x20U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_TYPE_VENDOR\fP   0x40U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_TYPE_MASK\fP   0x60U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_RECIPIENT_DEVICE\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_RECIPIENT_INTERFACE\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_RECIPIENT_ENDPOINT\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_RECIPIENT_MASK\fP   0x03U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_GET_STATUS\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_CLEAR_FEATURE\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_SET_FEATURE\fP   0x03U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_SET_ADDRESS\fP   0x05U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_GET_DESCRIPTOR\fP   0x06U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_SET_DESCRIPTOR\fP   0x07U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_GET_CONFIGURATION\fP   0x08U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_SET_CONFIGURATION\fP   0x09U"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_GET_INTERFACE\fP   0x0AU"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_SET_INTERFACE\fP   0x0BU"
+.br
+.ti -1c
+.RI "#define \fBUSB_REQ_SYNCH_FRAME\fP   0x0CU"
+.br
+.ti -1c
+.RI "#define \fBUSB_DESC_TYPE_DEVICE\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBUSB_DESC_TYPE_CONFIGURATION\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBUSB_DESC_TYPE_STRING\fP   0x03U"
+.br
+.ti -1c
+.RI "#define \fBUSB_DESC_TYPE_INTERFACE\fP   0x04U"
+.br
+.ti -1c
+.RI "#define \fBUSB_DESC_TYPE_ENDPOINT\fP   0x05U"
+.br
+.ti -1c
+.RI "#define \fBUSB_DESC_TYPE_DEVICE_QUALIFIER\fP   0x06U"
+.br
+.ti -1c
+.RI "#define \fBUSB_DESC_TYPE_OTHER_SPEED_CONFIGURATION\fP   0x07U"
+.br
+.ti -1c
+.RI "#define \fBUSB_DESC_TYPE_BOS\fP   0x0FU"
+.br
+.ti -1c
+.RI "#define \fBUSB_CONFIG_REMOTE_WAKEUP\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBUSB_CONFIG_SELF_POWERED\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBUSB_FEATURE_EP_HALT\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBUSB_FEATURE_REMOTE_WAKEUP\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBUSB_FEATURE_TEST_MODE\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBUSB_DEVICE_CAPABITY_TYPE\fP   0x10U"
+.br
+.ti -1c
+.RI "#define \fBUSB_HS_MAX_PACKET_SIZE\fP   512U"
+.br
+.ti -1c
+.RI "#define \fBUSB_FS_MAX_PACKET_SIZE\fP   64U"
+.br
+.ti -1c
+.RI "#define \fBUSB_MAX_EP0_SIZE\fP   64U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_STATE_DEFAULT\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_STATE_ADDRESSED\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_STATE_CONFIGURED\fP   0x03U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_STATE_SUSPENDED\fP   0x04U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP0_IDLE\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP0_SETUP\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP0_DATA_IN\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP0_DATA_OUT\fP   0x03U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP0_STATUS_IN\fP   0x04U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP0_STATUS_OUT\fP   0x05U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP0_STALL\fP   0x06U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP_TYPE_CTRL\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP_TYPE_ISOC\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP_TYPE_BULK\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBUSBD_EP_TYPE_INTR\fP   0x03U"
+.br
+.ti -1c
+.RI "#define \fBSWAPBYTE\fP(addr)"
+.br
+.ti -1c
+.RI "#define \fBLOBYTE\fP(x)   ((uint8_t)((x) & 0x00FFU))"
+.br
+.ti -1c
+.RI "#define \fBHIBYTE\fP(x)   ((uint8_t)(((x) & 0xFF00U) >> 8U))"
+.br
+.ti -1c
+.RI "#define \fBMIN\fP(a,  b)   (((a) < (b)) ? (a) : (b))"
+.br
+.ti -1c
+.RI "#define \fBMAX\fP(a,  b)   (((a) > (b)) ? (a) : (b))"
+.br
+.ti -1c
+.RI "#define \fB__ALIGN_END\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBusb_setup_req\fP \fBUSBD_SetupReqTypedef\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_Device_cb\fP \fBUSBD_ClassTypeDef\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_USBD_HandleTypeDef\fP \fBUSBD_HandleTypeDef\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBUSBD_SpeedTypeDef\fP { \fBUSBD_SPEED_HIGH\fP = 0U, \fBUSBD_SPEED_FULL\fP = 1U, \fBUSBD_SPEED_LOW\fP = 2U }"
+.br
+.ti -1c
+.RI "enum \fBUSBD_StatusTypeDef\fP { \fBUSBD_OK\fP = 0U, \fBUSBD_BUSY\fP, \fBUSBD_FAIL\fP }"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+General defines for the usb device library\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2015 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under Ultimate Liberty license SLA0044, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: www\&.st\&.com/SLA0044 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

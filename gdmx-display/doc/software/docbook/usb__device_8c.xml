@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usb__device_8c" xml:lang="en-US">
+<title>Src/usb_device.c File Reference</title>
+<indexterm><primary>Src/usb_device.c</primary></indexterm>
+<para>
+
+<para>: This file implements the USB Device </para>
+ 
+</para>
+<programlisting>#include &quot;usb_device.h&quot;
+#include &quot;usbd_core.h&quot;
+#include &quot;usbd_desc.h&quot;
+#include &quot;usbd_cdc.h&quot;
+#include &quot;usbd_cdc_if.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype_1gadab4f7fc1db4ce2be073d3913209d2af">MX_USB_DEVICE_Init</link> (void)</para>
+
+<para>MX USB Device library initialization function. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct___u_s_b_d___handle_type_def">USBD_HandleTypeDef</link> <emphasis role="strong">hUsbDeviceFS</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>: This file implements the USB Device </para>
+
+<para><formalpara><title>Version</title>
+
+<para>: v2.0_Cube</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2019 Donskih Dmitriy. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by Donskih Dmitriy under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+</section>

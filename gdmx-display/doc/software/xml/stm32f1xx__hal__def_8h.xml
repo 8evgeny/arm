@@ -1,0 +1,878 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="stm32f1xx__hal__def_8h" kind="file" language="C++">
+    <compoundname>stm32f1xx_hal_def.h</compoundname>
+    <includes refid="stm32f1xx_8h" local="yes">stm32f1xx.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includedby refid="stm32f1xx__hal__cortex_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h</includedby>
+    <includedby refid="stm32f1xx__hal__dma_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h</includedby>
+    <includedby refid="stm32f1xx__hal__dma__ex_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h</includedby>
+    <includedby refid="stm32f1xx__hal__exti_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h</includedby>
+    <includedby refid="stm32f1xx__hal__flash_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h</includedby>
+    <includedby refid="stm32f1xx__hal__flash__ex_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h</includedby>
+    <includedby refid="stm32f1xx__hal__gpio_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h</includedby>
+    <includedby refid="stm32f1xx__hal__gpio__ex_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h</includedby>
+    <includedby refid="stm32f1xx__hal__pcd__ex_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h</includedby>
+    <includedby refid="stm32f1xx__hal__pwr_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h</includedby>
+    <includedby refid="stm32f1xx__hal__rcc_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h</includedby>
+    <includedby refid="stm32f1xx__hal__rcc__ex_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h</includedby>
+    <includedby refid="stm32f1xx__hal__tim_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h</includedby>
+    <includedby refid="stm32f1xx__hal__tim__ex_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h</includedby>
+    <includedby refid="stm32f1xx__ll__usb_8h" local="yes">Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="2">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="1">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="27">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h</label>
+        <link refid="stm32f1xx__hal__flash_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Inc/usb_device.h</label>
+        <link refid="usb__device_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>Src/buzzer.c</label>
+        <link refid="buzzer_8c"/>
+      </node>
+      <node id="60">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h</label>
+        <link refid="stm32f1xx__hal__tim__ex_8h"/>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Src/usb_device.c</label>
+        <link refid="usb__device_8c"/>
+      </node>
+      <node id="62">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h</label>
+        <link refid="stm32f1xx__hal__pcd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</label>
+        <link refid="usbd__cdc_8c"/>
+      </node>
+      <node id="2">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h</label>
+        <link refid="stm32f1xx__ll__usb_8h"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c</label>
+        <link refid="stm32f1xx__hal__cortex_8c"/>
+      </node>
+      <node id="7">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c</label>
+        <link refid="stm32f1xx__hal__dma_8c"/>
+      </node>
+      <node id="26">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Inc/buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>Src/hd44780.c</label>
+        <link refid="hd44780_8c"/>
+      </node>
+      <node id="18">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c</label>
+        <link refid="stm32f1xx__hal__tim_8c"/>
+      </node>
+      <node id="47">
+        <label>Src/stm32f1xx_hal_timebase_tim.c</label>
+        <link refid="stm32f1xx__hal__timebase__tim_8c"/>
+      </node>
+      <node id="56">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h</label>
+        <link refid="stm32f1xx__hal__pwr_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Inc/main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c</label>
+        <link refid="stm32f1xx__hal_8c"/>
+      </node>
+      <node id="10">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c</label>
+        <link refid="stm32f1xx__hal__flash__ex_8c"/>
+      </node>
+      <node id="33">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c</label>
+        <link refid="usbd__ioreq_8c"/>
+      </node>
+      <node id="11">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c</label>
+        <link refid="stm32f1xx__hal__gpio_8c"/>
+      </node>
+      <node id="32">
+        <label>Src/usbd_conf.c</label>
+        <link refid="usbd__conf_8c"/>
+      </node>
+      <node id="57">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h</label>
+        <link refid="stm32f1xx__hal__rcc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>Inc/usbd_desc.h</label>
+        <link refid="usbd__desc_8h_source"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h</label>
+        <link refid="stm32f1xx__hal__dma__ex_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c</label>
+        <link refid="stm32f1xx__ll__usb_8c"/>
+      </node>
+      <node id="28">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="30">
+        <label>Src/usbd_cdc_if.c</label>
+        <link refid="usbd__cdc__if_8c"/>
+      </node>
+      <node id="52">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h</label>
+        <link refid="stm32f1xx__hal__flash__ex_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h</label>
+        <link refid="stm32f1xx__hal__dma_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c</label>
+        <link refid="stm32f1xx__hal__pcd__ex_8c"/>
+      </node>
+      <node id="45">
+        <label>Inc/led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h</label>
+        <link refid="stm32f1xx__hal__pcd__ex_8h"/>
+      </node>
+      <node id="15">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c</label>
+        <link refid="stm32f1xx__hal__pwr_8c"/>
+      </node>
+      <node id="16">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c</label>
+        <link refid="stm32f1xx__hal__rcc_8c"/>
+      </node>
+      <node id="9">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c</label>
+        <link refid="stm32f1xx__hal__flash_8c"/>
+      </node>
+      <node id="59">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h</label>
+        <link refid="stm32f1xx__hal__tim_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>Src/stm32f1xx_it.c</label>
+        <link refid="stm32f1xx__it_8c"/>
+      </node>
+      <node id="35">
+        <label>Src/usbd_desc.c</label>
+        <link refid="usbd__desc_8c"/>
+      </node>
+      <node id="19">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c</label>
+        <link refid="stm32f1xx__hal__tim__ex_8c"/>
+      </node>
+      <node id="12">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8c"/>
+      </node>
+      <node id="58">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>Inc/hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Inc/stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>Src/led.c</label>
+        <link refid="led_8c"/>
+      </node>
+      <node id="53">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Inc/usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c</label>
+        <link refid="usbd__core_8c"/>
+      </node>
+      <node id="39">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8c"/>
+      </node>
+      <node id="8">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c</label>
+        <link refid="stm32f1xx__hal__exti_8c"/>
+      </node>
+      <node id="54">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>Inc/display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c</label>
+        <link refid="stm32f1xx__hal__pcd_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="stm32f1xx__hal__def_8h_1aad28bc64749c50dcedd6bf819fdc6974" prot="public" static="no">
+        <name>HAL_MAX_DELAY</name>
+        <initializer>0xFFFFFFFFU</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="59" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stm32f1xx__hal__def_8h_1a5b44dfd2a26f85f7b628b0945daff2c3" prot="public" static="no">
+        <name>HAL_IS_BIT_SET</name>
+        <param><defname>REG</defname></param>
+        <param><defname>BIT</defname></param>
+        <initializer>(((REG) &amp; (BIT)) != 0U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="61" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stm32f1xx__hal__def_8h_1a82637a84fbdca0e2a25496089b549924" prot="public" static="no">
+        <name>HAL_IS_BIT_CLR</name>
+        <param><defname>REG</defname></param>
+        <param><defname>BIT</defname></param>
+        <initializer>(((REG) &amp; (BIT)) == 0U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="62" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stm32f1xx__hal__def_8h_1af5b3b3d0eff8c4cb59d4d3909c247311" prot="public" static="no">
+        <name>__HAL_LINKDMA</name>
+        <param><defname>__HANDLE__</defname></param>
+        <param><defname>__PPP_DMA_FIELD__</defname></param>
+        <param><defname>__DMA_HANDLE__</defname></param>
+        <initializer>                        do{                                                      \
+                              (__HANDLE__)-&gt;__PPP_DMA_FIELD__ = &amp;(__DMA_HANDLE__); \
+                              (__DMA_HANDLE__).Parent = (__HANDLE__);             \
+                          } while(0U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="64" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stm32f1xx__hal__def_8h_1a6bc306171da085f4c7df2c66d2ff8e47" prot="public" static="no">
+        <name>UNUSED</name>
+        <param><defname>X</defname></param>
+        <initializer>(void)X      /* To avoid gcc/g++ warnings */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="70" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stm32f1xx__hal__def_8h_1a5850085e1bb7a96a417756f235b16aea" prot="public" static="no">
+        <name>__HAL_RESET_HANDLE_STATE</name>
+        <param><defname>__HANDLE__</defname></param>
+        <initializer>((__HANDLE__)-&gt;State = 0U)</initializer>
+        <briefdescription>
+<para>Reset the Handle&apos;s State field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;strong&gt;HANDLE&lt;/strong&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the Peripheral Handle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This macro can be used for the following purpose:<itemizedlist>
+<listitem><para>When the Handle is declared as local variable; before passing it as parameter to HAL_PPP_Init() for the first time, it is mandatory to use this macro to set to 0 the Handle&apos;s &quot;State&quot; field. Otherwise, &quot;State&quot; field may have any random value and the first time the function HAL_PPP_Init() is called, the low level hardware initialization will be missed (i.e. HAL_PPP_MspInit() will not be executed).</para>
+</listitem><listitem><para>When there is a need to reconfigure the low level hardware: instead of calling HAL_PPP_DeInit() then HAL_PPP_Init(), user can make a call to this macro then HAL_PPP_Init(). In this later function, when the Handle&apos;s &quot;State&quot; field is set to 0, it will execute the function HAL_PPP_MspInit() which will reconfigure the low level hardware. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="87" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stm32f1xx__hal__def_8h_1ad3d96e1b9022ba76b69eeda91027b36c" prot="public" static="no">
+        <name>__HAL_LOCK</name>
+        <param><defname>__HANDLE__</defname></param>
+        <initializer>                                do{                                        \
+                                    if((__HANDLE__)-&gt;Lock == HAL_LOCKED)   \
+                                    {                                      \
+                                       return HAL_BUSY;                    \
+                                    }                                      \
+                                    else                                   \
+                                    {                                      \
+                                       (__HANDLE__)-&gt;Lock = HAL_LOCKED;    \
+                                    }                                      \
+                                  }while (0U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="93" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stm32f1xx__hal__def_8h_1a7c2c23627aed2bb71d8c1ad071cda004" prot="public" static="no">
+        <name>__HAL_UNLOCK</name>
+        <param><defname>__HANDLE__</defname></param>
+        <initializer>                                  do{                                       \
+                                      (__HANDLE__)-&gt;Lock = HAL_UNLOCKED;    \
+                                    }while (0U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="105" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="stm32f1xx__hal__def_8h_1aaa12b03c58e2eb296bd7aa915ee540f3" prot="public" static="no">
+        <name>__ALIGN_END</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="131" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>HAL_StatusTypeDef</name>
+        <enumvalue id="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632" prot="public">
+          <name>HAL_OK</name>
+          <initializer>= 0x00U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4" prot="public">
+          <name>HAL_ERROR</name>
+          <initializer>= 0x01U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7" prot="public">
+          <name>HAL_BUSY</name>
+          <initializer>= 0x02U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478fa00c89549bc881c35e8e4cd9e718337e5" prot="public">
+          <name>HAL_TIMEOUT</name>
+          <initializer>= 0x03U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HAL Status structures definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="41" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="enum" id="stm32f1xx__hal__def_8h_1ab367482e943333a1299294eadaad284b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>HAL_LockTypeDef</name>
+        <enumvalue id="stm32f1xx__hal__def_8h_1ab367482e943333a1299294eadaad284ba9bd487430440139444e6e7ff226005c0" prot="public">
+          <name>HAL_UNLOCKED</name>
+          <initializer>= 0x00U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="stm32f1xx__hal__def_8h_1ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d" prot="public">
+          <name>HAL_LOCKED</name>
+          <initializer>= 0x01U</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>HAL Lock structures definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" line="52" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h" bodystart="53" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains HAL common defines, enumeration, macros and structures definitions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>MCD Application Team</para>
+</simplesect>
+<simplesect kind="attention"><para></para>
+</simplesect>
+<heading level="2"><center><copy/> Copyright (c) 2017 STMicroelectronics. All rights reserved.</center></heading>
+</para>
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__STM32F1xx_HAL_DEF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__STM32F1xx_HAL_DEF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stm32f1xx_8h" kindref="compound">stm32f1xx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(USE_HAL_LEGACY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stm32__hal__legacy_8h" kindref="compound">Legacy/stm32_hal_legacy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>types<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>HAL_OK<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00U,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>HAL_ERROR<sp/><sp/><sp/><sp/>=<sp/>0x01U,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>HAL_BUSY<sp/><sp/><sp/><sp/><sp/>=<sp/>0x02U,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>HAL_TIMEOUT<sp/><sp/>=<sp/>0x03U</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/><ref refid="stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f" kindref="member">HAL_StatusTypeDef</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="stm32f1xx__hal__def_8h_1ab367482e943333a1299294eadaad284b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>HAL_UNLOCKED<sp/>=<sp/>0x00U,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>HAL_LOCKED<sp/><sp/><sp/>=<sp/>0x01U</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}<sp/><ref refid="stm32f1xx__hal__def_8h_1ab367482e943333a1299294eadaad284b" kindref="member">HAL_LockTypeDef</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Exported<sp/>macro<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HAL_MAX_DELAY<sp/><sp/><sp/><sp/><sp/><sp/>0xFFFFFFFFU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HAL_IS_BIT_SET(REG,<sp/>BIT)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((REG)<sp/>&amp;<sp/>(BIT))<sp/>!=<sp/>0U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HAL_IS_BIT_CLR(REG,<sp/>BIT)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((REG)<sp/>&amp;<sp/>(BIT))<sp/>==<sp/>0U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_LINKDMA(__HANDLE__,<sp/>__PPP_DMA_FIELD__,<sp/>__DMA_HANDLE__)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(__HANDLE__)-&gt;__PPP_DMA_FIELD__<sp/>=<sp/>&amp;(__DMA_HANDLE__);<sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(__DMA_HANDLE__).Parent<sp/>=<sp/>(__HANDLE__);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>while(0U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UNUSED(X)<sp/>(void)X<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>To<sp/>avoid<sp/>gcc/g++<sp/>warnings<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="stm32f1xx__hal__def_8h_1a5850085e1bb7a96a417756f235b16aea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_RESET_HANDLE_STATE(__HANDLE__)<sp/>((__HANDLE__)-&gt;State<sp/>=<sp/>0U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(USE_RTOS<sp/>==<sp/>1U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Reserved<sp/>for<sp/>future<sp/>use<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;USE_RTOS<sp/>should<sp/>be<sp/>0<sp/>in<sp/>the<sp/>current<sp/>HAL<sp/>release&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_LOCK(__HANDLE__)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if((__HANDLE__)-&gt;Lock<sp/>==<sp/>HAL_LOCKED)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>HAL_BUSY;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(__HANDLE__)-&gt;Lock<sp/>=<sp/>HAL_LOCKED;<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while<sp/>(0U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__HAL_UNLOCK(__HANDLE__)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(__HANDLE__)-&gt;Lock<sp/>=<sp/>HAL_UNLOCKED;<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while<sp/>(0U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>USE_RTOS<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>(<sp/>__GNUC__<sp/>)<sp/>&amp;&amp;<sp/>!defined<sp/>(__CC_ARM)<sp/></highlight><highlight class="comment">/*<sp/>GNU<sp/>Compiler<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__weak</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__weak<sp/><sp/><sp/>__attribute__((weak))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__weak<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__packed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__packed<sp/>__attribute__((__packed__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__packed<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__GNUC__<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Macro<sp/>to<sp/>get<sp/>variable<sp/>aligned<sp/>on<sp/>4-bytes,<sp/>for<sp/>__ICCARM__<sp/>the<sp/>directive<sp/>&quot;#pragma<sp/>data_alignment=4&quot;<sp/>must<sp/>be<sp/>used<sp/>instead<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>(<sp/>__GNUC__<sp/>)<sp/>&amp;&amp;<sp/>!defined<sp/>(__CC_ARM)<sp/></highlight><highlight class="comment">/*<sp/>GNU<sp/>Compiler<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__ALIGN_END</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ALIGN_END<sp/><sp/><sp/><sp/>__attribute__<sp/>((aligned<sp/>(4)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__ALIGN_END<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__ALIGN_BEGIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ALIGN_BEGIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__ALIGN_BEGIN<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__ALIGN_END</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ALIGN_END</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__ALIGN_END<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__ALIGN_BEGIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/><sp/><sp/>(__CC_ARM)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ARM<sp/>Compiler<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ALIGN_BEGIN<sp/><sp/><sp/><sp/>__align(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>(__ICCARM__)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>IAR<sp/>Compiler<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ALIGN_BEGIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__CC_ARM<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__ALIGN_BEGIN<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__GNUC__<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>(<sp/>__CC_ARM<sp/><sp/><sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ARM<sp/>Compiler</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/>------------</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/>RAM<sp/>functions<sp/>are<sp/>defined<sp/>using<sp/>the<sp/>toolchain<sp/>options.</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/>Functions<sp/>that<sp/>are<sp/>executed<sp/>in<sp/>RAM<sp/>should<sp/>reside<sp/>in<sp/>a<sp/>separate<sp/>source<sp/>module.</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/><sp/>Using<sp/>the<sp/>&apos;Options<sp/>for<sp/>File&apos;<sp/>dialog<sp/>you<sp/>can<sp/>simply<sp/>change<sp/>the<sp/>&apos;Code<sp/>/<sp/>Const&apos;</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/><sp/>area<sp/>of<sp/>a<sp/>module<sp/>to<sp/>a<sp/>memory<sp/>space<sp/>in<sp/>physical<sp/>RAM.</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/>Available<sp/>memory<sp/>areas<sp/>are<sp/>declared<sp/>in<sp/>the<sp/>&apos;Target&apos;<sp/>tab<sp/>of<sp/>the<sp/>&apos;Options<sp/>for<sp/>Target&apos;</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/>dialog.</highlight></codeline>
+<codeline lineno="155"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__RAM_FUNC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>(<sp/>__ICCARM__<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ICCARM<sp/>Compiler</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/><sp/>---------------</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/><sp/><sp/>RAM<sp/>functions<sp/>are<sp/>defined<sp/>using<sp/>a<sp/>specific<sp/>toolchain<sp/>keyword<sp/>&quot;__ramfunc&quot;.</highlight></codeline>
+<codeline lineno="162"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__RAM_FUNC<sp/>__ramfunc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/><sp/><sp/>(<sp/><sp/>__GNUC__<sp/><sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GNU<sp/>Compiler</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/>------------</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/>RAM<sp/>functions<sp/>are<sp/>defined<sp/>using<sp/>a<sp/>specific<sp/>toolchain<sp/>attribute</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/>&quot;__attribute__((section(&quot;.RamFunc&quot;)))&quot;.</highlight></codeline>
+<codeline lineno="170"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__RAM_FUNC<sp/>__attribute__((section(&quot;.RamFunc&quot;</highlight><highlight class="normal">)))</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>(<sp/>__CC_ARM<sp/><sp/><sp/>)<sp/>||<sp/>defined<sp/><sp/><sp/>(<sp/><sp/>__GNUC__<sp/><sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ARM<sp/>&amp;<sp/>GNUCompiler</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/><sp/>----------------</highlight></codeline>
+<codeline lineno="181"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__NOINLINE<sp/>__attribute__<sp/>(<sp/>(noinline)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>(<sp/>__ICCARM__<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ICCARM<sp/>Compiler</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/><sp/><sp/>---------------</highlight></codeline>
+<codeline lineno="187"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__NOINLINE<sp/>_Pragma(&quot;optimize<sp/>=<sp/>no_inline&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>___STM32F1xx_HAL_DEF<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="comment">/************************<sp/>(C)<sp/>COPYRIGHT<sp/>STMicroelectronics<sp/>*****END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"/>
+  </compounddef>
+</doxygen>

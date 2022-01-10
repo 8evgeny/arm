@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l" xml:lang="en-US">
+<title>HAL</title>
+<indexterm><primary>HAL</primary></indexterm>
+<para>
+
+<para>HAL module driver. </para>
+ 
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___h_a_l___exported___constants">HAL Exported Constants</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___h_a_l___exported___macros">HAL Exported Macros</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___h_a_l___private___variables">HAL Private Variables</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___h_a_l___private___constants">HAL Private Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>HAL module driver. </para>
+</section>
+</section>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_0f5c9b04ce1b98f5214264caa3539ed7" kind="dir">
+    <compoundname>Debug/Middlewares/Third_Party</compoundname>
+    <innerdir refid="dir_a61175024ba46a9897dab3ab008dcae2">Debug/Middlewares/Third_Party/FreeRTOS</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Debug/Middlewares/Third_Party/"/>
+  </compounddef>
+</doxygen>

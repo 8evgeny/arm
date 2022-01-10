@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___u_s_b_d___d_e_s_c___exported___constants" kind="group">
+    <compoundname>USBD_DESC_Exported_Constants</compoundname>
+    <title>USBD_DESC_Exported_Constants</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___exported___constants_1gacba0623797117dcaf178232d734c9c24" prot="public" static="no">
+        <name>DEVICE_ID1</name>
+        <initializer>(<ref refid="group___peripheral__memory__map_1ga664eda42b83c919b153b07b23348be67" kindref="member">UID_BASE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_desc.h" line="49" column="17" bodyfile="Inc/usbd_desc.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___exported___constants_1gacb8818cd7029deb2affd8a8a482bc86a" prot="public" static="no">
+        <name>DEVICE_ID2</name>
+        <initializer>(<ref refid="group___peripheral__memory__map_1ga664eda42b83c919b153b07b23348be67" kindref="member">UID_BASE</ref> + 0x4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_desc.h" line="50" column="17" bodyfile="Inc/usbd_desc.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___exported___constants_1ga2b63a0afba377e3cf5a76f78abb2a970" prot="public" static="no">
+        <name>DEVICE_ID3</name>
+        <initializer>(<ref refid="group___peripheral__memory__map_1ga664eda42b83c919b153b07b23348be67" kindref="member">UID_BASE</ref> + 0x8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_desc.h" line="51" column="17" bodyfile="Inc/usbd_desc.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___d_e_s_c___exported___constants_1ga76287dc6e5f3cf4566406bd9b2eb7a2f" prot="public" static="no">
+        <name>USB_SIZ_STRING_SERIAL</name>
+        <initializer>0x1A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_desc.h" line="53" column="10" bodyfile="Inc/usbd_desc.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Constants. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

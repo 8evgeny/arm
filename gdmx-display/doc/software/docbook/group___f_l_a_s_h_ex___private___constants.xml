@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h_ex___private___constants" xml:lang="en-US">
+<title>FLASHEx_Private_Constants</title>
+<indexterm><primary>FLASHEx_Private_Constants</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h_ex___private___constants_1ga2329f89a17061e62bf5d160cc0962e5c"/>#define <emphasis role="strong">FLASH_SIZE_DATA_REGISTER</emphasis>   0x1FFFF7E0U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h_ex___private___constants_1ga8683863609a82753ffb7499d219a1de8"/>#define <emphasis role="strong">OBR_REG_INDEX</emphasis>   1U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___f_l_a_s_h_ex___private___constants_1gae39dae7013f649bda7af96a79663b3f1"/>#define <emphasis role="strong">SR_FLAG_MASK</emphasis>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga4b86181a96fd2f1cc3828e9d8d83d368">FLASH_SR_BSY</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga60f40ca765714598a62aa216a5ccd8e4">FLASH_SR_PGERR</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga2e403606e5ac23cb07701aeebc1f73e5">FLASH_SR_WRPRTERR</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae1301c6b487cfefa247c54a576a0c12b">FLASH_SR_EOP</link>))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_core__cm1_8h" xml:lang="en-US">
+<title>Drivers/CMSIS/Include/core_cm1.h File Reference</title>
+<indexterm><primary>Drivers/CMSIS/Include/core_cm1.h</primary></indexterm>
+<para>
+
+<para>CMSIS Cortex-M1 Core Peripheral Access Layer Header File. </para>
+ 
+</para>
+<programlisting>#include &lt;stdint.h&gt;
+#include &quot;cmsis_version.h&quot;
+#include &quot;cmsis_compiler.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>union <link linkend="_union_a_p_s_r___type">APSR_Type</link></para>
+
+<para>Union type to access the Application Program Status Register (APSR). </para>
+</listitem>
+            <listitem><para>union <link linkend="_union_i_p_s_r___type">IPSR_Type</link></para>
+
+<para>Union type to access the Interrupt Program Status Register (IPSR). </para>
+</listitem>
+            <listitem><para>union <link linkend="_unionx_p_s_r___type">xPSR_Type</link></para>
+
+<para>Union type to access the Special-Purpose Program Status Registers (xPSR). </para>
+</listitem>
+            <listitem><para>union <link linkend="_union_c_o_n_t_r_o_l___type">CONTROL_Type</link></para>
+
+<para>Union type to access the Control Registers (CONTROL). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_n_v_i_c___type">NVIC_Type</link></para>
+
+<para>Structure type to access the Nested Vectored Interrupt Controller (NVIC). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_c_b___type">SCB_Type</link></para>
+
+<para>Structure type to access the System Control Block (SCB). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_cn_s_c_b___type">SCnSCB_Type</link></para>
+
+<para>Structure type to access the System Control and ID Register not in the SCB. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_sys_tick___type">SysTick_Type</link></para>
+
+<para>Structure type to access the System Timer (SysTick). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_core__cm1_8h_1abc34497ea83652681983a6ad178fb8c2"/>#define <emphasis role="strong">__CORE_CM1_H_GENERIC</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title></title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_core__cm1_8h_1ab6ddd130b9f1f7ac55bfc1379ff020c5">__CM1_CMSIS_VERSION_MAIN</link>   (<link linkend="_cmsis__version_8h_1a85987c5fcc1e012d7ac01369ee6ca2b5">__CM_CMSIS_VERSION_MAIN</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm1_8h_1aa771981ad7c673c8c9c49e163bbfc8b3">__CM1_CMSIS_VERSION_SUB</link>   (<link linkend="_cmsis__version_8h_1a22083cbe7f0606cfd538ec12b2e41608">__CM_CMSIS_VERSION_SUB</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm1_8h_1a6854d2a637d0e642d95fc78bff79c989">__CM1_CMSIS_VERSION</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm1_8h_1a63ea62503c88acab19fcf3d5743009e3">__CORTEX_M</link>   (1U)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm1_8h_1aa167d0f532a7c2b2e3a6395db2fa0776">__FPU_USED</link>   0U</para>
+</listitem>
+            <listitem><para><anchor xml:id="_core__cm1_8h_1a6c607f922505e2666d6671b84bbda615"/>#define <emphasis role="strong">__CORE_CM1_H_DEPENDANT</emphasis></para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm1_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link>   volatile const</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm1_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link>   volatile</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm1_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>   volatile</para>
+</listitem>
+            <listitem><para><anchor xml:id="_core__cm1_8h_1a4cc1649793116d7c2d8afce7a4ffce43"/>#define <emphasis role="strong">__IM</emphasis>   volatile const      /*! Defines &apos;read only&apos; structure member permissions */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_core__cm1_8h_1a0ea2009ed8fd9ef35b48708280fdb758"/>#define <emphasis role="strong">__OM</emphasis>   volatile            /*! Defines &apos;write only&apos; structure member permissions */</para>
+</listitem>
+            <listitem><para><anchor xml:id="_core__cm1_8h_1ab6caba5853a60a17e8e04499b52bf691"/>#define <emphasis role="strong">__IOM</emphasis>   volatile            /*! Defines &apos;read / write&apos; structure member permissions */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gac469528d210043c7bd3f12f0e6824766">APSR_N_Pos</link>   31U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gadbc2cf55a026f661b53fadfcf822cef1">APSR_N_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1gac469528d210043c7bd3f12f0e6824766">APSR_N_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga3661286d108b1aca308d7445685eae3a">APSR_Z_Pos</link>   30U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga1deb4d1aa72bb83d1f79329406f15711">APSR_Z_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga3661286d108b1aca308d7445685eae3a">APSR_Z_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga6cf72aa6f09a168f9e5beda1a4a887b9">APSR_C_Pos</link>   29U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga6d47803fbad455bc10bd1ce59f2f335d">APSR_C_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga6cf72aa6f09a168f9e5beda1a4a887b9">APSR_C_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gac62830f67679ccd11658c4172c3e6ea7">APSR_V_Pos</link>   28U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga33305d6701356bff6890b315fe8b5489">APSR_V_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1gac62830f67679ccd11658c4172c3e6ea7">APSR_V_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga0e34027584d02c43811ae908a5ca9adf">IPSR_ISR_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gaf013a4579a64d1f21f56ea9f1b33ab56">IPSR_ISR_Msk</link>   (0x1FFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga0e34027584d02c43811ae908a5ca9adf">IPSR_ISR_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga031eb1b8ebcdb3d602d0b9f2ec82a7ae">xPSR_N_Pos</link>   31U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gaf600f4ff41b62cf2f3b0a59b6d2e93d6">xPSR_N_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga031eb1b8ebcdb3d602d0b9f2ec82a7ae">xPSR_N_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga5869dd608eea73c80f0567d781d2230b">xPSR_Z_Pos</link>   30U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga907599209fba99f579778e662021c4f2">xPSR_Z_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga5869dd608eea73c80f0567d781d2230b">xPSR_Z_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga14adb79b91f6634b351a1b57394e2db6">xPSR_C_Pos</link>   29U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga21e2497255d380f956ca0f48d11d0775">xPSR_C_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga14adb79b91f6634b351a1b57394e2db6">xPSR_C_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gae0cfbb394490db402623d97e6a979e00">xPSR_V_Pos</link>   28U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gab07f94ed3b6ee695f5af719dc27995c2">xPSR_V_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1gae0cfbb394490db402623d97e6a979e00">xPSR_V_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga98d801da9a49cda944f52aeae104dd38">xPSR_T_Pos</link>   24U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga30ae2111816e82d47636a8d4577eb6ee">xPSR_T_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga98d801da9a49cda944f52aeae104dd38">xPSR_T_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga21bff245fb1aef9683f693d9d7bb2233">xPSR_ISR_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1gadf8eed87e0081dfe1ef1c78a0ea91afd">xPSR_ISR_Msk</link>   (0x1FFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga21bff245fb1aef9683f693d9d7bb2233">xPSR_ISR_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga07eafc53e609895342c6a530e9d01310">CONTROL_SPSEL_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga70b29840969b06909da21369b0b05b53">CONTROL_SPSEL_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___c_o_r_e_1ga07eafc53e609895342c6a530e9d01310">CONTROL_SPSEL_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga58686b88f94f789d4e6f429fe1ff58cf">SCB_CPUID_IMPLEMENTER_Pos</link>   24U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga0932b31faafd47656a03ced75a31d99b">SCB_CPUID_IMPLEMENTER_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga58686b88f94f789d4e6f429fe1ff58cf">SCB_CPUID_IMPLEMENTER_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga104462bd0815391b4044a70bd15d3a71">SCB_CPUID_VARIANT_Pos</link>   20U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad358dfbd04300afc1824329d128b99e8">SCB_CPUID_VARIANT_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga104462bd0815391b4044a70bd15d3a71">SCB_CPUID_VARIANT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaf8b3236b08fb8e840efb682645fb0e98">SCB_CPUID_ARCHITECTURE_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gafae4a1f27a927338ae9dc51a0e146213">SCB_CPUID_ARCHITECTURE_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaf8b3236b08fb8e840efb682645fb0e98">SCB_CPUID_ARCHITECTURE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga705f68eaa9afb042ca2407dc4e4629ac">SCB_CPUID_PARTNO_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga98e581423ca016680c238c469aba546d">SCB_CPUID_PARTNO_Msk</link>   (0xFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga705f68eaa9afb042ca2407dc4e4629ac">SCB_CPUID_PARTNO_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3c3d9071e574de11fb27ba57034838b1">SCB_CPUID_REVISION_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2ec0448b6483f77e7f5d08b4b81d85df">SCB_CPUID_REVISION_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3c3d9071e574de11fb27ba57034838b1">SCB_CPUID_REVISION_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga750d4b52624a46d71356db4ea769573b">SCB_ICSR_NMIPENDSET_Pos</link>   31U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga340e3f79e9c3607dee9f2c048b6b22e8">SCB_ICSR_NMIPENDSET_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga750d4b52624a46d71356db4ea769573b">SCB_ICSR_NMIPENDSET_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab5ded23d2ab1d5ff7cc7ce746205e9fe">SCB_ICSR_PENDSVSET_Pos</link>   28U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga1e40d93efb402763c8c00ddcc56724ff">SCB_ICSR_PENDSVSET_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gab5ded23d2ab1d5ff7cc7ce746205e9fe">SCB_ICSR_PENDSVSET_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gae218d9022288f89faf57187c4d542ecd">SCB_ICSR_PENDSVCLR_Pos</link>   27U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga4a901ace381d3c1c74ac82b22fae2e1e">SCB_ICSR_PENDSVCLR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gae218d9022288f89faf57187c4d542ecd">SCB_ICSR_PENDSVCLR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga9dbb3358c6167c9c3f85661b90fb2794">SCB_ICSR_PENDSTSET_Pos</link>   26U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga7325b61ea0ec323ef2d5c893b112e546">SCB_ICSR_PENDSTSET_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga9dbb3358c6167c9c3f85661b90fb2794">SCB_ICSR_PENDSTSET_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gadbe25e4b333ece1341beb1a740168fdc">SCB_ICSR_PENDSTCLR_Pos</link>   25U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab241827d2a793269d8cd99b9b28c2157">SCB_ICSR_PENDSTCLR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gadbe25e4b333ece1341beb1a740168fdc">SCB_ICSR_PENDSTCLR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga11cb5b1f9ce167b81f31787a77e575df">SCB_ICSR_ISRPREEMPT_Pos</link>   23U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaa966600396290808d596fe96e92ca2b5">SCB_ICSR_ISRPREEMPT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga11cb5b1f9ce167b81f31787a77e575df">SCB_ICSR_ISRPREEMPT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga10749d92b9b744094b845c2eb46d4319">SCB_ICSR_ISRPENDING_Pos</link>   22U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga056d74fd538e5d36d3be1f28d399c877">SCB_ICSR_ISRPENDING_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga10749d92b9b744094b845c2eb46d4319">SCB_ICSR_ISRPENDING_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gada60c92bf88d6fd21a8f49efa4a127b8">SCB_ICSR_VECTPENDING_Pos</link>   12U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gacb6992e7c7ddc27a370f62878a21ef72">SCB_ICSR_VECTPENDING_Msk</link>   (0x1FFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gada60c92bf88d6fd21a8f49efa4a127b8">SCB_ICSR_VECTPENDING_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gae4f602c7c5c895d5fb687b71b0979fc3">SCB_ICSR_VECTACTIVE_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga5533791a4ecf1b9301c883047b3e8396">SCB_ICSR_VECTACTIVE_Msk</link>   (0x1FFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gae4f602c7c5c895d5fb687b71b0979fc3">SCB_ICSR_VECTACTIVE_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaaa27c0ba600bf82c3da08c748845b640">SCB_AIRCR_VECTKEY_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga90c7cf0c490e7ae55f9503a7fda1dd22">SCB_AIRCR_VECTKEY_Msk</link>   (0xFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaaa27c0ba600bf82c3da08c748845b640">SCB_AIRCR_VECTKEY_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaec404750ff5ca07f499a3c06b62051ef">SCB_AIRCR_VECTKEYSTAT_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gabacedaefeefc73d666bbe59ece904493">SCB_AIRCR_VECTKEYSTAT_Msk</link>   (0xFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaec404750ff5ca07f499a3c06b62051ef">SCB_AIRCR_VECTKEYSTAT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad31dec98fbc0d33ace63cb1f1a927923">SCB_AIRCR_ENDIANESS_Pos</link>   15U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2f571f93d3d4a6eac9a3040756d3d951">SCB_AIRCR_ENDIANESS_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gad31dec98fbc0d33ace63cb1f1a927923">SCB_AIRCR_ENDIANESS_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaffb2737eca1eac0fc1c282a76a40953c">SCB_AIRCR_SYSRESETREQ_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaae1181119559a5bd36e62afa373fa720">SCB_AIRCR_SYSRESETREQ_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaffb2737eca1eac0fc1c282a76a40953c">SCB_AIRCR_SYSRESETREQ_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaa30a12e892bb696e61626d71359a9029">SCB_AIRCR_VECTCLRACTIVE_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga212c5ab1c1c82c807d30d2307aa8d218">SCB_AIRCR_VECTCLRACTIVE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaa30a12e892bb696e61626d71359a9029">SCB_AIRCR_VECTCLRACTIVE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3bddcec40aeaf3d3a998446100fa0e44">SCB_SCR_SEVONPEND_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gafb98656644a14342e467505f69a997c9">SCB_SCR_SEVONPEND_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3bddcec40aeaf3d3a998446100fa0e44">SCB_SCR_SEVONPEND_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab304f6258ec03bd9a6e7a360515c3cfe">SCB_SCR_SLEEPDEEP_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga77c06a69c63f4b3f6ec1032e911e18e7">SCB_SCR_SLEEPDEEP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gab304f6258ec03bd9a6e7a360515c3cfe">SCB_SCR_SLEEPDEEP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3680a15114d7fdc1e25043b881308fe9">SCB_SCR_SLEEPONEXIT_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga50a243e317b9a70781b02758d45b05ee">SCB_SCR_SLEEPONEXIT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3680a15114d7fdc1e25043b881308fe9">SCB_SCR_SLEEPONEXIT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac2d20a250960a432cc74da59d20e2f86">SCB_CCR_STKALIGN_Pos</link>   9U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga33cf22d3d46af158a03aad25ddea1bcb">SCB_CCR_STKALIGN_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gac2d20a250960a432cc74da59d20e2f86">SCB_CCR_STKALIGN_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac4e4928b864ea10fc24dbbc57d976229">SCB_CCR_UNALIGN_TRP_Pos</link>   3U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga68c96ad594af70c007923979085c99e0">SCB_CCR_UNALIGN_TRP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gac4e4928b864ea10fc24dbbc57d976229">SCB_CCR_UNALIGN_TRP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2f93ec9b243f94cdd3e94b8f0bf43641">SCB_SHCSR_SVCALLPENDED_Pos</link>   15U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga6095a7acfbad66f52822b1392be88652">SCB_SHCSR_SVCALLPENDED_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga2f93ec9b243f94cdd3e94b8f0bf43641">SCB_SHCSR_SVCALLPENDED_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gae4360bc2810b8486ccf74e7a853e1458">SCnSCB_ACTLR_ITCMUAEN_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga034b71340cb2e5455624b715d70cb36b">SCnSCB_ACTLR_ITCMUAEN_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gae4360bc2810b8486ccf74e7a853e1458">SCnSCB_ACTLR_ITCMUAEN_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gad5d71c0786cdb8a28f322b545d218aa7">SCnSCB_ACTLR_ITCMLAEN_Pos</link>   3U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga96ed7dd2124586ddd816973d665d2014">SCnSCB_ACTLR_ITCMLAEN_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gad5d71c0786cdb8a28f322b545d218aa7">SCnSCB_ACTLR_ITCMLAEN_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>   16U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c">SysTick_CTRL_COUNTFLAG_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373">SysTick_CTRL_CLKSOURCE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027">SysTick_CTRL_TICKINT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f">SysTick_CTRL_ENABLE_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1">SysTick_LOAD_RELOAD_Msk</link>   (0xFFFFFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45">SysTick_VAL_CURRENT_Msk</link>   (0xFFFFFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>   31U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6">SysTick_CALIB_NOREF_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>   30U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431">SysTick_CALIB_SKEW_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e">SysTick_CALIB_TENMS_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e">SysTick_CALIB_TENMS_Msk</link>   (0xFFFFFFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e">SysTick_CALIB_TENMS_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga286e3b913dbd236c7f48ea70c8821f4e">_VAL2FLD</link>(field,  value)   (((uint32_t)(value) &lt;&lt; field ## _Pos) &amp; field ## _Msk)</para>
+
+<para>Mask and shift a bit field value for use in a register bit range. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__bitfield_1ga139b6e261c981f014f386927ca4a8444">_FLD2VAL</link>(field,  value)   (((uint32_t)(value) &amp; field ## _Msk) &gt;&gt; field ## _Pos)</para>
+
+<para>Mask and shift a register value to extract a bit filed value. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link>   (0xE000E000UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga58effaac0b93006b756d33209e814646">SysTick_BASE</link>   (<link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link> +  0x0010UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gaa0288691785a5f868238e0468b39523d">NVIC_BASE</link>   (<link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link> +  0x0100UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gad55a7ddb8d4b2398b0c1cfec76c0d9fd">SCB_BASE</link>   (<link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link> +  0x0D00UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga9fe0cd2eef83a8adad94490d9ecca63f">SCnSCB</link>   ((<link linkend="_struct_s_cn_s_c_b___type">SCnSCB_Type</link>    *)     <link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link>      )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gaaaf6477c2bde2f00f99e3c2fd1060b01">SCB</link>   ((<link linkend="_struct_s_c_b___type">SCB_Type</link>       *)     <link linkend="_group___c_m_s_i_s__core__base_1gad55a7ddb8d4b2398b0c1cfec76c0d9fd">SCB_BASE</link>      )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gacd96c53beeaff8f603fcda425eb295de">SysTick</link>   ((<link linkend="_struct_sys_tick___type">SysTick_Type</link>   *)     <link linkend="_group___c_m_s_i_s__core__base_1ga58effaac0b93006b756d33209e814646">SysTick_BASE</link>  )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gac8e97e8ce56ae9f57da1363a937f8a17">NVIC</link>   ((<link linkend="_struct_n_v_i_c___type">NVIC_Type</link>      *)     <link linkend="_group___c_m_s_i_s__core__base_1gaa0288691785a5f868238e0468b39523d">NVIC_BASE</link>     )</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_SetPriorityGrouping</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gafc94dcbaee03e4746ade1f5bb9aaa56d">__NVIC_SetPriorityGrouping</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetPriorityGrouping</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga9b894af672df4373eb637f8288845c05">__NVIC_GetPriorityGrouping</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_EnableIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga71227e1376cde11eda03fcb62f1b33ea">__NVIC_EnableIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetEnableIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaaeb5e7cc0eaad4e2817272e7bf742083">__NVIC_GetEnableIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_DisableIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gae016e4c1986312044ee768806537d52f">__NVIC_DisableIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetPendingIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga5a92ca5fa801ad7adb92be7257ab9694">__NVIC_GetPendingIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_SetPendingIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaabefdd4b790b9a7308929938c0c1e1ad">__NVIC_SetPendingIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_ClearPendingIRQ</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga562a86dbdf14827d0fee8fdafb04d191">__NVIC_ClearPendingIRQ</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_SetPriority</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga505338e23563a9c074910fb14e7d45fd">__NVIC_SetPriority</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetPriority</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaeb9dc99c8e7700668813144261b0bc73">__NVIC_GetPriority</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_SystemReset</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga0d9aa2d30fa54b41eb780c16e35b676c">__NVIC_SystemReset</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_SetVector</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga0df355460bc1783d58f9d72ee4884208">__NVIC_SetVector</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_GetVector</emphasis>   <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga44b665d2afb708121d9b10c76ff00ee5">__NVIC_GetVector</link></para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">NVIC_USER_IRQ_OFFSET</emphasis>   16</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">EXC_RETURN_HANDLER</emphasis>   (0xFFFFFFF1UL)     /* return to Handler mode, uses MSP after return                               */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">EXC_RETURN_THREAD_MSP</emphasis>   (0xFFFFFFF9UL)     /* return to Thread mode, uses MSP after return                                */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">EXC_RETURN_THREAD_PSP</emphasis>   (0xFFFFFFFDUL)     /* return to Thread mode, uses PSP after return                                */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">_BIT_SHIFT</emphasis>(IRQn)   (  ((((uint32_t)(int32_t)(IRQn))         )      &amp;  0x03UL) * 8UL)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">_SHP_IDX</emphasis>(IRQn)   ( (((((uint32_t)(int32_t)(IRQn)) &amp; 0x0FUL)-8UL) &gt;&gt;    2UL)      )</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">_IP_IDX</emphasis>(IRQn)   (   (((uint32_t)(int32_t)(IRQn))                &gt;&gt;    2UL)      )</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__NVIC_SetPriorityGrouping</emphasis>(X)   (void)(X)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__NVIC_GetPriorityGrouping</emphasis>()   (0U)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+<simplesect><title></title>
+        <itemizedlist>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga71227e1376cde11eda03fcb62f1b33ea">__NVIC_EnableIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Enable Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaaeb5e7cc0eaad4e2817272e7bf742083">__NVIC_GetEnableIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Interrupt Enable status. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gae016e4c1986312044ee768806537d52f">__NVIC_DisableIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Disable Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga5a92ca5fa801ad7adb92be7257ab9694">__NVIC_GetPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaabefdd4b790b9a7308929938c0c1e1ad">__NVIC_SetPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Set Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga562a86dbdf14827d0fee8fdafb04d191">__NVIC_ClearPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Clear Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga505338e23563a9c074910fb14e7d45fd">__NVIC_SetPriority</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn, uint32_t priority)</para>
+
+<para>Set Interrupt Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaeb9dc99c8e7700668813144261b0bc73">__NVIC_GetPriority</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Interrupt Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gadb94ac5d892b376e4f3555ae0418ebac">NVIC_EncodePriority</link> (uint32_t PriorityGroup, uint32_t PreemptPriority, uint32_t SubPriority)</para>
+
+<para>Encode Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga3387607fd8a1a32cccd77d2ac672dd96">NVIC_DecodePriority</link> (uint32_t Priority, uint32_t PriorityGroup, uint32_t *const pPreemptPriority, uint32_t *const pSubPriority)</para>
+
+<para>Decode Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga0df355460bc1783d58f9d72ee4884208">__NVIC_SetVector</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn, uint32_t vector)</para>
+
+<para>Set Interrupt Vector. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga44b665d2afb708121d9b10c76ff00ee5">__NVIC_GetVector</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Interrupt Vector. </para>
+</listitem>
+            <listitem><para>__NO_RETURN __STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga0d9aa2d30fa54b41eb780c16e35b676c">__NVIC_SystemReset</link> (void)</para>
+
+<para>System Reset. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga6bcad99ce80a0e7e4ddc6f2379081756">SCB_GetFPUType</link> (void)</para>
+
+<para>get FPU type </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>CMSIS Cortex-M1 Core Peripheral Access Layer Header File. </para>
+
+<para><formalpara><title>Version</title>
+
+<para>V1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>23. July 2018 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_core__cm1_8h_1a6854d2a637d0e642d95fc78bff79c989"/>    <section>
+    <title>__CM1_CMSIS_VERSION</title>
+<indexterm><primary>__CM1_CMSIS_VERSION</primary><secondary>core_cm1.h</secondary></indexterm>
+<indexterm><primary>core_cm1.h</primary><secondary>__CM1_CMSIS_VERSION</secondary></indexterm>
+<para><computeroutput>#define __CM1_CMSIS_VERSION</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((<link linkend="_core__cm1_8h_1ab6ddd130b9f1f7ac55bfc1379ff020c5">__CM1_CMSIS_VERSION_MAIN</link>&#32;&lt;&lt;&#32;16U)&#32;|&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_core__cm1_8h_1aa771981ad7c673c8c9c49e163bbfc8b3">__CM1_CMSIS_VERSION_SUB</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
+</programlisting>
+<para><para><link linkend="_deprecated_1_deprecated000015">Deprecated</link> 
+<para>CMSIS HAL version number </para>
+</para></para>
+    </section><anchor xml:id="_core__cm1_8h_1ab6ddd130b9f1f7ac55bfc1379ff020c5"/>    <section>
+    <title>__CM1_CMSIS_VERSION_MAIN</title>
+<indexterm><primary>__CM1_CMSIS_VERSION_MAIN</primary><secondary>core_cm1.h</secondary></indexterm>
+<indexterm><primary>core_cm1.h</primary><secondary>__CM1_CMSIS_VERSION_MAIN</secondary></indexterm>
+<para><computeroutput>#define __CM1_CMSIS_VERSION_MAIN   (<link linkend="_cmsis__version_8h_1a85987c5fcc1e012d7ac01369ee6ca2b5">__CM_CMSIS_VERSION_MAIN</link>)</computeroutput></para>
+<para><para><link linkend="_deprecated_1_deprecated000013">Deprecated</link> 
+<para>[31:16] CMSIS HAL main version </para>
+</para></para>
+    </section><anchor xml:id="_core__cm1_8h_1aa771981ad7c673c8c9c49e163bbfc8b3"/>    <section>
+    <title>__CM1_CMSIS_VERSION_SUB</title>
+<indexterm><primary>__CM1_CMSIS_VERSION_SUB</primary><secondary>core_cm1.h</secondary></indexterm>
+<indexterm><primary>core_cm1.h</primary><secondary>__CM1_CMSIS_VERSION_SUB</secondary></indexterm>
+<para><computeroutput>#define __CM1_CMSIS_VERSION_SUB   (<link linkend="_cmsis__version_8h_1a22083cbe7f0606cfd538ec12b2e41608">__CM_CMSIS_VERSION_SUB</link>)</computeroutput></para>
+<para><para><link linkend="_deprecated_1_deprecated000014">Deprecated</link> 
+<para>[15:0] CMSIS HAL sub version </para>
+</para></para>
+    </section><anchor xml:id="_core__cm1_8h_1a63ea62503c88acab19fcf3d5743009e3"/>    <section>
+    <title>__CORTEX_M</title>
+<indexterm><primary>__CORTEX_M</primary><secondary>core_cm1.h</secondary></indexterm>
+<indexterm><primary>core_cm1.h</primary><secondary>__CORTEX_M</secondary></indexterm>
+<para><computeroutput>#define __CORTEX_M   (1U)</computeroutput></para>
+<para>Cortex-M Core </para>
+    </section><anchor xml:id="_core__cm1_8h_1aa167d0f532a7c2b2e3a6395db2fa0776"/>    <section>
+    <title>__FPU_USED</title>
+<indexterm><primary>__FPU_USED</primary><secondary>core_cm1.h</secondary></indexterm>
+<indexterm><primary>core_cm1.h</primary><secondary>__FPU_USED</secondary></indexterm>
+<para><computeroutput>#define __FPU_USED   0U</computeroutput></para>
+<para>__FPU_USED indicates whether an FPU is used or not. This core does not support an FPU at all </para>
+    </section><anchor xml:id="_core__cm1_8h_1af63697ed9952cc71e1225efe205f6cd3"/>    <section>
+    <title>__I</title>
+<indexterm><primary>__I</primary><secondary>core_cm1.h</secondary></indexterm>
+<indexterm><primary>core_cm1.h</primary><secondary>__I</secondary></indexterm>
+<para><computeroutput>#define __I   volatile const</computeroutput></para>
+<para>Defines &apos;read only&apos; permissions </para>
+    </section><anchor xml:id="_core__cm1_8h_1aec43007d9998a0a0e01faede4133d6be"/>    <section>
+    <title>__IO</title>
+<indexterm><primary>__IO</primary><secondary>core_cm1.h</secondary></indexterm>
+<indexterm><primary>core_cm1.h</primary><secondary>__IO</secondary></indexterm>
+<para><computeroutput>#define __IO   volatile</computeroutput></para>
+<para>Defines &apos;read / write&apos; permissions </para>
+    </section><anchor xml:id="_core__cm1_8h_1a7e25d9380f9ef903923964322e71f2f6"/>    <section>
+    <title>__O</title>
+<indexterm><primary>__O</primary><secondary>core_cm1.h</secondary></indexterm>
+<indexterm><primary>core_cm1.h</primary><secondary>__O</secondary></indexterm>
+<para><computeroutput>#define __O   volatile</computeroutput></para>
+<para>Defines &apos;write only&apos; permissions </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_u_s_b_d___c_d_c___line_coding_type_def" kind="struct" language="C++" prot="public">
+    <compoundname>USBD_CDC_LineCodingTypeDef</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___line_coding_type_def_1a32678c62007e0748dae550bd1007a07d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t bitrate</definition>
+        <argsstring></argsstring>
+        <name>bitrate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="95" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___line_coding_type_def_1a7864fd50d470f893524181b4a59d9828" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t format</definition>
+        <argsstring></argsstring>
+        <name>format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="96" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___line_coding_type_def_1acb7eeb4fa9bb2adff4ef66250ee4828b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t paritytype</definition>
+        <argsstring></argsstring>
+        <name>paritytype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="97" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b_d___c_d_c___line_coding_type_def_1ae6ca1fa85104808563864d1036142b02" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t datatype</definition>
+        <argsstring></argsstring>
+        <name>datatype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="98" column="12" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" line="93" column="1" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" bodystart="94" bodyend="99"/>
+    <listofallmembers>
+      <member refid="struct_u_s_b_d___c_d_c___line_coding_type_def_1a32678c62007e0748dae550bd1007a07d" prot="public" virt="non-virtual"><scope>USBD_CDC_LineCodingTypeDef</scope><name>bitrate</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___line_coding_type_def_1ae6ca1fa85104808563864d1036142b02" prot="public" virt="non-virtual"><scope>USBD_CDC_LineCodingTypeDef</scope><name>datatype</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___line_coding_type_def_1a7864fd50d470f893524181b4a59d9828" prot="public" virt="non-virtual"><scope>USBD_CDC_LineCodingTypeDef</scope><name>format</name></member>
+      <member refid="struct_u_s_b_d___c_d_c___line_coding_type_def_1acb7eeb4fa9bb2adff4ef66250ee4828b" prot="public" virt="non-virtual"><scope>USBD_CDC_LineCodingTypeDef</scope><name>paritytype</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

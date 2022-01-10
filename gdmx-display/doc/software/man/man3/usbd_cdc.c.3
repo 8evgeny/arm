@@ -1,0 +1,109 @@
+.TH "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c \- This file provides the high layer firmware functions to manage the following functionalities of the USB CDC Class:  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'usbd_cdc\&.h'\fP
+.br
+\fC#include 'usbd_ctlreq\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "uint8_t * \fBUSBD_CDC_GetDeviceQualifierDescriptor\fP (uint16_t *length)"
+.br
+.RI "DeviceQualifierDescriptor return Device Qualifier descriptor\&. "
+.ti -1c
+.RI "uint8_t \fBUSBD_CDC_RegisterInterface\fP (\fBUSBD_HandleTypeDef\fP *pdev, \fBUSBD_CDC_ItfTypeDef\fP *fops)"
+.br
+.RI "USBD_CDC_RegisterInterface\&. "
+.ti -1c
+.RI "uint8_t \fBUSBD_CDC_SetTxBuffer\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t *pbuff, uint16_t length)"
+.br
+.RI "USBD_CDC_SetTxBuffer\&. "
+.ti -1c
+.RI "uint8_t \fBUSBD_CDC_SetRxBuffer\fP (\fBUSBD_HandleTypeDef\fP *pdev, uint8_t *pbuff)"
+.br
+.RI "USBD_CDC_SetRxBuffer\&. "
+.ti -1c
+.RI "uint8_t \fBUSBD_CDC_TransmitPacket\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_CDC_TransmitPacket Transmit packet on IN endpoint\&. "
+.ti -1c
+.RI "uint8_t \fBUSBD_CDC_ReceivePacket\fP (\fBUSBD_HandleTypeDef\fP *pdev)"
+.br
+.RI "USBD_CDC_ReceivePacket prepare OUT Endpoint for reception\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBUSBD_ClassTypeDef\fP \fBUSBD_CDC\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file provides the high layer firmware functions to manage the following functionalities of the USB CDC Class: 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.IP "\(bu" 2
+Initialization and Configuration of high and low layer
+.IP "\(bu" 2
+Enumeration as CDC Device (and enumeration for each implemented memory interface)
+.IP "\(bu" 2
+OUT/IN data transfer
+.IP "\(bu" 2
+Command IN transfer (class requests management)
+.IP "\(bu" 2
+Error management
+.PP
+.RE
+.PP
+.PP
+.nf
+*
+*          ===================================================================
+*                                CDC Class Driver Description
+*          ===================================================================
+*           This driver manages the "Universal Serial Bus Class Definitions for Communications Devices
+*           Revision 1.2 November 16, 2007" and the sub-protocol specification of "Universal Serial Bus
+*           Communications Class Subclass Specification for PSTN Devices Revision 1.2 February 9, 2007"
+*           This driver implements the following aspects of the specification:
+*             - Device descriptor management
+*             - Configuration descriptor management
+*             - Enumeration as CDC device with 2 data endpoints (IN and OUT) and 1 command endpoint (IN)
+*             - Requests management (as described in section 6.2 in specification)
+*             - Abstract Control Model compliant
+*             - Union Functional collection (using 1 IN endpoint for control)
+*             - Data interface class
+*
+*           These aspects may be enriched or modified for a specific user application.
+*
+*            This driver doesn't implement the following aspects of the specification
+*            (but it is possible to manage these features with some modifications on this driver):
+*             - Any class-specific aspect relative to communication classes should be managed by user application.
+*             - All communication classes other than PSTN are not managed
+*
+*  .fi
+.PP
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2015 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under Ultimate Liberty license SLA0044, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: www\&.st\&.com/SLA0044 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

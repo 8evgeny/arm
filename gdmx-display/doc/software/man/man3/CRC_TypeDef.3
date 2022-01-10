@@ -1,0 +1,49 @@
+.TH "CRC_TypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CRC_TypeDef \- CRC calculation unit\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f103xb\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBDR\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint8_t \fBIDR\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBRESERVED0\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBRESERVED1\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBCR\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+CRC calculation unit\&. 
+.SH "Field Documentation"
+.PP 
+.SS "\fB__IO\fP uint32_t CR"
+CRC Control register, Address offset: 0x08 
+.SS "\fB__IO\fP uint32_t DR"
+CRC Data register, Address offset: 0x00 
+.SS "\fB__IO\fP uint8_t IDR"
+CRC Independent data register, Address offset: 0x04 
+.SS "uint8_t RESERVED0"
+Reserved, Address offset: 0x05 
+.SS "uint16_t RESERVED1"
+Reserved, Address offset: 0x06 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

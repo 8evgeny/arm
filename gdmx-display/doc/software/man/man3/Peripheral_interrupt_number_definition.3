@@ -1,0 +1,289 @@
+.TH "Peripheral_interrupt_number_definition" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Peripheral_interrupt_number_definition \- Peripheral_interrupt_number_definition
+.SH SYNOPSIS
+.br
+.PP
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBIRQn_Type\fP { \fBNonMaskableInt_IRQn\fP = -14, \fBHardFault_IRQn\fP = -13, \fBMemoryManagement_IRQn\fP = -12, \fBBusFault_IRQn\fP = -11, \fBUsageFault_IRQn\fP = -10, \fBSVCall_IRQn\fP = -5, \fBDebugMonitor_IRQn\fP = -4, \fBPendSV_IRQn\fP = -2, \fBSysTick_IRQn\fP = -1, \fBWWDG_IRQn\fP = 0, \fBPVD_IRQn\fP = 1, \fBTAMPER_IRQn\fP = 2, \fBRTC_IRQn\fP = 3, \fBFLASH_IRQn\fP = 4, \fBRCC_IRQn\fP = 5, \fBEXTI0_IRQn\fP = 6, \fBEXTI1_IRQn\fP = 7, \fBEXTI2_IRQn\fP = 8, \fBEXTI3_IRQn\fP = 9, \fBEXTI4_IRQn\fP = 10, \fBDMA1_Channel1_IRQn\fP = 11, \fBDMA1_Channel2_IRQn\fP = 12, \fBDMA1_Channel3_IRQn\fP = 13, \fBDMA1_Channel4_IRQn\fP = 14, \fBDMA1_Channel5_IRQn\fP = 15, \fBDMA1_Channel6_IRQn\fP = 16, \fBDMA1_Channel7_IRQn\fP = 17, \fBADC1_2_IRQn\fP = 18, \fBUSB_HP_CAN1_TX_IRQn\fP = 19, \fBUSB_LP_CAN1_RX0_IRQn\fP = 20, \fBCAN1_RX1_IRQn\fP = 21, \fBCAN1_SCE_IRQn\fP = 22, \fBEXTI9_5_IRQn\fP = 23, \fBTIM1_BRK_IRQn\fP = 24, \fBTIM1_UP_IRQn\fP = 25, \fBTIM1_TRG_COM_IRQn\fP = 26, \fBTIM1_CC_IRQn\fP = 27, \fBTIM2_IRQn\fP = 28, \fBTIM3_IRQn\fP = 29, \fBTIM4_IRQn\fP = 30, \fBI2C1_EV_IRQn\fP = 31, \fBI2C1_ER_IRQn\fP = 32, \fBI2C2_EV_IRQn\fP = 33, \fBI2C2_ER_IRQn\fP = 34, \fBSPI1_IRQn\fP = 35, \fBSPI2_IRQn\fP = 36, \fBUSART1_IRQn\fP = 37, \fBUSART2_IRQn\fP = 38, \fBUSART3_IRQn\fP = 39, \fBEXTI15_10_IRQn\fP = 40, \fBRTC_Alarm_IRQn\fP = 41, \fBUSBWakeUp_IRQn\fP = 42 }"
+.br
+.RI "STM32F10x Interrupt Number Definition, according to the selected device in \fBLibrary_configuration_section\fP\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBIRQn_Type\fP"
+
+.PP
+STM32F10x Interrupt Number Definition, according to the selected device in \fBLibrary_configuration_section\fP\&. < Interrupt Number Definition 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINonMaskableInt_IRQn \fP\fP
+2 Non Maskable Interrupt 
+.br
+ 
+.TP
+\fB\fIHardFault_IRQn \fP\fP
+3 Cortex-M3 Hard Fault Interrupt 
+.br
+ 
+.TP
+\fB\fIMemoryManagement_IRQn \fP\fP
+4 Cortex-M3 Memory Management Interrupt 
+.br
+ 
+.TP
+\fB\fIBusFault_IRQn \fP\fP
+5 Cortex-M3 Bus Fault Interrupt 
+.br
+ 
+.TP
+\fB\fIUsageFault_IRQn \fP\fP
+6 Cortex-M3 Usage Fault Interrupt 
+.br
+ 
+.TP
+\fB\fISVCall_IRQn \fP\fP
+11 Cortex-M3 SV Call Interrupt 
+.br
+ 
+.TP
+\fB\fIDebugMonitor_IRQn \fP\fP
+12 Cortex-M3 Debug Monitor Interrupt 
+.br
+ 
+.TP
+\fB\fIPendSV_IRQn \fP\fP
+14 Cortex-M3 Pend SV Interrupt 
+.br
+ 
+.TP
+\fB\fISysTick_IRQn \fP\fP
+15 Cortex-M3 System Tick Interrupt 
+.br
+ 
+.TP
+\fB\fIWWDG_IRQn \fP\fP
+Window WatchDog Interrupt 
+.br
+ 
+.TP
+\fB\fIPVD_IRQn \fP\fP
+PVD through EXTI Line detection Interrupt 
+.br
+ 
+.TP
+\fB\fITAMPER_IRQn \fP\fP
+Tamper Interrupt 
+.br
+ 
+.TP
+\fB\fIRTC_IRQn \fP\fP
+RTC global Interrupt 
+.br
+ 
+.TP
+\fB\fIFLASH_IRQn \fP\fP
+FLASH global Interrupt 
+.br
+ 
+.TP
+\fB\fIRCC_IRQn \fP\fP
+RCC global Interrupt 
+.br
+ 
+.TP
+\fB\fIEXTI0_IRQn \fP\fP
+EXTI Line0 Interrupt 
+.br
+ 
+.TP
+\fB\fIEXTI1_IRQn \fP\fP
+EXTI Line1 Interrupt 
+.br
+ 
+.TP
+\fB\fIEXTI2_IRQn \fP\fP
+EXTI Line2 Interrupt 
+.br
+ 
+.TP
+\fB\fIEXTI3_IRQn \fP\fP
+EXTI Line3 Interrupt 
+.br
+ 
+.TP
+\fB\fIEXTI4_IRQn \fP\fP
+EXTI Line4 Interrupt 
+.br
+ 
+.TP
+\fB\fIDMA1_Channel1_IRQn \fP\fP
+DMA1 Channel 1 global Interrupt 
+.br
+ 
+.TP
+\fB\fIDMA1_Channel2_IRQn \fP\fP
+DMA1 Channel 2 global Interrupt 
+.br
+ 
+.TP
+\fB\fIDMA1_Channel3_IRQn \fP\fP
+DMA1 Channel 3 global Interrupt 
+.br
+ 
+.TP
+\fB\fIDMA1_Channel4_IRQn \fP\fP
+DMA1 Channel 4 global Interrupt 
+.br
+ 
+.TP
+\fB\fIDMA1_Channel5_IRQn \fP\fP
+DMA1 Channel 5 global Interrupt 
+.br
+ 
+.TP
+\fB\fIDMA1_Channel6_IRQn \fP\fP
+DMA1 Channel 6 global Interrupt 
+.br
+ 
+.TP
+\fB\fIDMA1_Channel7_IRQn \fP\fP
+DMA1 Channel 7 global Interrupt 
+.br
+ 
+.TP
+\fB\fIADC1_2_IRQn \fP\fP
+ADC1 and ADC2 global Interrupt 
+.br
+ 
+.TP
+\fB\fIUSB_HP_CAN1_TX_IRQn \fP\fP
+USB Device High Priority or CAN1 TX Interrupts 
+.br
+ 
+.TP
+\fB\fIUSB_LP_CAN1_RX0_IRQn \fP\fP
+USB Device Low Priority or CAN1 RX0 Interrupts 
+.br
+ 
+.TP
+\fB\fICAN1_RX1_IRQn \fP\fP
+CAN1 RX1 Interrupt 
+.br
+ 
+.TP
+\fB\fICAN1_SCE_IRQn \fP\fP
+CAN1 SCE Interrupt 
+.br
+ 
+.TP
+\fB\fIEXTI9_5_IRQn \fP\fP
+External Line[9:5] Interrupts 
+.br
+ 
+.TP
+\fB\fITIM1_BRK_IRQn \fP\fP
+TIM1 Break Interrupt 
+.br
+ 
+.TP
+\fB\fITIM1_UP_IRQn \fP\fP
+TIM1 Update Interrupt 
+.br
+ 
+.TP
+\fB\fITIM1_TRG_COM_IRQn \fP\fP
+TIM1 Trigger and Commutation Interrupt 
+.br
+ 
+.TP
+\fB\fITIM1_CC_IRQn \fP\fP
+TIM1 Capture Compare Interrupt 
+.br
+ 
+.TP
+\fB\fITIM2_IRQn \fP\fP
+TIM2 global Interrupt 
+.br
+ 
+.TP
+\fB\fITIM3_IRQn \fP\fP
+TIM3 global Interrupt 
+.br
+ 
+.TP
+\fB\fITIM4_IRQn \fP\fP
+TIM4 global Interrupt 
+.br
+ 
+.TP
+\fB\fII2C1_EV_IRQn \fP\fP
+I2C1 Event Interrupt 
+.br
+ 
+.TP
+\fB\fII2C1_ER_IRQn \fP\fP
+I2C1 Error Interrupt 
+.br
+ 
+.TP
+\fB\fII2C2_EV_IRQn \fP\fP
+I2C2 Event Interrupt 
+.br
+ 
+.TP
+\fB\fII2C2_ER_IRQn \fP\fP
+I2C2 Error Interrupt 
+.br
+ 
+.TP
+\fB\fISPI1_IRQn \fP\fP
+SPI1 global Interrupt 
+.br
+ 
+.TP
+\fB\fISPI2_IRQn \fP\fP
+SPI2 global Interrupt 
+.br
+ 
+.TP
+\fB\fIUSART1_IRQn \fP\fP
+USART1 global Interrupt 
+.br
+ 
+.TP
+\fB\fIUSART2_IRQn \fP\fP
+USART2 global Interrupt 
+.br
+ 
+.TP
+\fB\fIUSART3_IRQn \fP\fP
+USART3 global Interrupt 
+.br
+ 
+.TP
+\fB\fIEXTI15_10_IRQn \fP\fP
+External Line[15:10] Interrupts 
+.br
+ 
+.TP
+\fB\fIRTC_Alarm_IRQn \fP\fP
+RTC Alarm through EXTI Line Interrupt 
+.br
+ 
+.TP
+\fB\fIUSBWakeUp_IRQn \fP\fP
+USB Device WakeUp from suspend through EXTI Line Interrupt 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

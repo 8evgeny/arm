@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_b_k_p___type_def" kind="struct" language="C++" prot="public">
+    <compoundname>BKP_TypeDef</compoundname>
+    <includes refid="stm32f103xb_8h" local="no">stm32f103xb.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1af86c61a5d38a4fc9cef942a12744486b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RESERVED0</definition>
+        <argsstring></argsstring>
+        <name>RESERVED0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="183" column="13" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1a4bddb62706c830de59e263433390fcdb" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR1</definition>
+        <argsstring></argsstring>
+        <name>DR1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="184" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1a9effac7d19f2ebb5ee12c3ce9f1803df" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR2</definition>
+        <argsstring></argsstring>
+        <name>DR2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="185" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1a68d30ac2fd332f01053ffce72825b171" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR3</definition>
+        <argsstring></argsstring>
+        <name>DR3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="186" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1ad4799a7d3d3678afbc29fcf623d510ed" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR4</definition>
+        <argsstring></argsstring>
+        <name>DR4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="187" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1a0d74106035c98f6d85139e38a929bcb5" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR5</definition>
+        <argsstring></argsstring>
+        <name>DR5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="188" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1a08d4980767b6b3aa6e49ac0b0ef65eb3" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR6</definition>
+        <argsstring></argsstring>
+        <name>DR6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="189" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1a0fa6ac40e28a7f29faa43f2bda29ef0a" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR7</definition>
+        <argsstring></argsstring>
+        <name>DR7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="190" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1a03f8be5d7c11b47ee08d2fcf2949c233" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR8</definition>
+        <argsstring></argsstring>
+        <name>DR8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="191" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1a7fa71253d3e565d39c9d5a309998cb27" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR9</definition>
+        <argsstring></argsstring>
+        <name>DR9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="192" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1ac9eaa42cf764059ca20a1daf7edba3e0" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t DR10</definition>
+        <argsstring></argsstring>
+        <name>DR10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="193" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1a6b0901e580e8884d2b4c525e43df90c7" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t RTCCR</definition>
+        <argsstring></argsstring>
+        <name>RTCCR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="194" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1ab40c89c59391aaa9d9a8ec011dd0907a" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CR</definition>
+        <argsstring></argsstring>
+        <name>CR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="195" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_k_p___type_def_1a876dd0a8546697065f406b7543e27af2" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint32_t</type>
+        <definition>__IO uint32_t CSR</definition>
+        <argsstring></argsstring>
+        <name>CSR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="196" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Backup Registers <linebreak/>
+ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="181" column="1" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="182" bodyend="197"/>
+    <listofallmembers>
+      <member refid="struct_b_k_p___type_def_1ab40c89c59391aaa9d9a8ec011dd0907a" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>CR</name></member>
+      <member refid="struct_b_k_p___type_def_1a876dd0a8546697065f406b7543e27af2" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>CSR</name></member>
+      <member refid="struct_b_k_p___type_def_1a4bddb62706c830de59e263433390fcdb" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>DR1</name></member>
+      <member refid="struct_b_k_p___type_def_1ac9eaa42cf764059ca20a1daf7edba3e0" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>DR10</name></member>
+      <member refid="struct_b_k_p___type_def_1a9effac7d19f2ebb5ee12c3ce9f1803df" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>DR2</name></member>
+      <member refid="struct_b_k_p___type_def_1a68d30ac2fd332f01053ffce72825b171" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>DR3</name></member>
+      <member refid="struct_b_k_p___type_def_1ad4799a7d3d3678afbc29fcf623d510ed" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>DR4</name></member>
+      <member refid="struct_b_k_p___type_def_1a0d74106035c98f6d85139e38a929bcb5" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>DR5</name></member>
+      <member refid="struct_b_k_p___type_def_1a08d4980767b6b3aa6e49ac0b0ef65eb3" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>DR6</name></member>
+      <member refid="struct_b_k_p___type_def_1a0fa6ac40e28a7f29faa43f2bda29ef0a" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>DR7</name></member>
+      <member refid="struct_b_k_p___type_def_1a03f8be5d7c11b47ee08d2fcf2949c233" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>DR8</name></member>
+      <member refid="struct_b_k_p___type_def_1a7fa71253d3e565d39c9d5a309998cb27" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>DR9</name></member>
+      <member refid="struct_b_k_p___type_def_1af86c61a5d38a4fc9cef942a12744486b" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>RESERVED0</name></member>
+      <member refid="struct_b_k_p___type_def_1a6b0901e580e8884d2b4c525e43df90c7" prot="public" virt="non-virtual"><scope>BKP_TypeDef</scope><name>RTCCR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

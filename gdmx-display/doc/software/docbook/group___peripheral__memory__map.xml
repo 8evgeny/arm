@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___peripheral__memory__map" xml:lang="en-US">
+<title>Peripheral_memory_map</title>
+<indexterm><primary>Peripheral_memory_map</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1ga23a9099a5f8fc9c6e253c0eecb2be8db">FLASH_BASE</link>   0x08000000UL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1ga443a2786535d83e32dfdc2b29e379332">FLASH_BANK1_END</link>   0x0801FFFFUL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1ga05e8f3d2e5868754a7cd88614955aecc">SRAM_BASE</link>   0x20000000UL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1ga9171f49478fa86d932f89e78e73b88b0">PERIPH_BASE</link>   0x40000000UL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1gad3548b6e2f017f39d399358f3ac98454">SRAM_BB_BASE</link>   0x22000000UL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link>   0x42000000UL</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga45666d911f39addd4c8c0a0ac3388cfb"/>#define <emphasis role="strong">APB1PERIPH_BASE</emphasis>   <link linkend="_group___peripheral__memory__map_1ga9171f49478fa86d932f89e78e73b88b0">PERIPH_BASE</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga25b99d6065f1c8f751e78f43ade652cb"/>#define <emphasis role="strong">APB2PERIPH_BASE</emphasis>   (<link linkend="_group___peripheral__memory__map_1ga9171f49478fa86d932f89e78e73b88b0">PERIPH_BASE</link> + 0x00010000UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga92eb5d49730765d2abd0f5b09548f9f5"/>#define <emphasis role="strong">AHBPERIPH_BASE</emphasis>   (<link linkend="_group___peripheral__memory__map_1ga9171f49478fa86d932f89e78e73b88b0">PERIPH_BASE</link> + 0x00020000UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga00d0fe6ad532ab32f0f81cafca8d3aa5"/>#define <emphasis role="strong">TIM2_BASE</emphasis>   (APB1PERIPH_BASE + 0x00000000UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gaf0c34a518f87e1e505cd2332e989564a"/>#define <emphasis role="strong">TIM3_BASE</emphasis>   (APB1PERIPH_BASE + 0x00000400UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga56e2d44b0002f316527b8913866a370d"/>#define <emphasis role="strong">TIM4_BASE</emphasis>   (APB1PERIPH_BASE + 0x00000800UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga4265e665d56225412e57a61d87417022"/>#define <emphasis role="strong">RTC_BASE</emphasis>   (APB1PERIPH_BASE + 0x00002800UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga9a5bf4728ab93dea5b569f5b972cbe62"/>#define <emphasis role="strong">WWDG_BASE</emphasis>   (APB1PERIPH_BASE + 0x00002C00UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga8543ee4997296af5536b007cd4748f55"/>#define <emphasis role="strong">IWDG_BASE</emphasis>   (APB1PERIPH_BASE + 0x00003000UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gac3e357b4c25106ed375fb1affab6bb86"/>#define <emphasis role="strong">SPI2_BASE</emphasis>   (APB1PERIPH_BASE + 0x00003800UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gade83162a04bca0b15b39018a8e8ec090"/>#define <emphasis role="strong">USART2_BASE</emphasis>   (APB1PERIPH_BASE + 0x00004400UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gabe0d6539ac0026d598274ee7f45b0251"/>#define <emphasis role="strong">USART3_BASE</emphasis>   (APB1PERIPH_BASE + 0x00004800UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gacd72dbffb1738ca87c838545c4eb85a3"/>#define <emphasis role="strong">I2C1_BASE</emphasis>   (APB1PERIPH_BASE + 0x00005400UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga04bda70f25c795fb79f163b633ad4a5d"/>#define <emphasis role="strong">I2C2_BASE</emphasis>   (APB1PERIPH_BASE + 0x00005800UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gad8e45ea6c032d9fce1b0516fff9d8eaa"/>#define <emphasis role="strong">CAN1_BASE</emphasis>   (APB1PERIPH_BASE + 0x00006400UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gaa15d5a9f40794105397ba5ea567c4ae1"/>#define <emphasis role="strong">BKP_BASE</emphasis>   (APB1PERIPH_BASE + 0x00006C00UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gac691ec23dace8b7a649a25acb110217a"/>#define <emphasis role="strong">PWR_BASE</emphasis>   (APB1PERIPH_BASE + 0x00007000UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga5f7e3eacfcf4c313c25012795148a680"/>#define <emphasis role="strong">AFIO_BASE</emphasis>   (APB2PERIPH_BASE + 0x00000000UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga87371508b3bcdcd98cd1ec629be29061"/>#define <emphasis role="strong">EXTI_BASE</emphasis>   (APB2PERIPH_BASE + 0x00000400UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gad7723846cc5db8e43a44d78cf21f6efa"/>#define <emphasis role="strong">GPIOA_BASE</emphasis>   (APB2PERIPH_BASE + 0x00000800UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gac944a89eb789000ece920c0f89cb6a68"/>#define <emphasis role="strong">GPIOB_BASE</emphasis>   (APB2PERIPH_BASE + 0x00000C00UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga26f267dc35338eef219544c51f1e6b3f"/>#define <emphasis role="strong">GPIOC_BASE</emphasis>   (APB2PERIPH_BASE + 0x00001000UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga1a93ab27129f04064089616910c296ec"/>#define <emphasis role="strong">GPIOD_BASE</emphasis>   (APB2PERIPH_BASE + 0x00001400UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gab487b1983d936c4fee3e9e88b95aad9d"/>#define <emphasis role="strong">GPIOE_BASE</emphasis>   (APB2PERIPH_BASE + 0x00001800UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga695c9a2f892363a1c942405c8d351b91"/>#define <emphasis role="strong">ADC1_BASE</emphasis>   (APB2PERIPH_BASE + 0x00002400UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga6544abc57f9759f610eee09a02442ae6"/>#define <emphasis role="strong">ADC2_BASE</emphasis>   (APB2PERIPH_BASE + 0x00002800UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gaf8aa324ca5011b8173ab16585ed7324a"/>#define <emphasis role="strong">TIM1_BASE</emphasis>   (APB2PERIPH_BASE + 0x00002C00UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga50cd8b47929f18b05efbd0f41253bf8d"/>#define <emphasis role="strong">SPI1_BASE</emphasis>   (APB2PERIPH_BASE + 0x00003000UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga86162ab3f740db9026c1320d46938b4d"/>#define <emphasis role="strong">USART1_BASE</emphasis>   (APB2PERIPH_BASE + 0x00003800UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gab2d8a917a0e4ea99a22ac6ebf279bc72"/>#define <emphasis role="strong">DMA1_BASE</emphasis>   (AHBPERIPH_BASE + 0x00000000UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga888dbc1608243badeb3554ffedc7364c"/>#define <emphasis role="strong">DMA1_Channel1_BASE</emphasis>   (AHBPERIPH_BASE + 0x00000008UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga38a70090eef3687e83fa6ac0c6d22267"/>#define <emphasis role="strong">DMA1_Channel2_BASE</emphasis>   (AHBPERIPH_BASE + 0x0000001CUL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga70b3d9f36ca9ce95b4e421c11154fe5d"/>#define <emphasis role="strong">DMA1_Channel3_BASE</emphasis>   (AHBPERIPH_BASE + 0x00000030UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga1adc93cd0baf0897202c71110e045692"/>#define <emphasis role="strong">DMA1_Channel4_BASE</emphasis>   (AHBPERIPH_BASE + 0x00000044UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gac041a71cd6c1973964f847a68aa14478"/>#define <emphasis role="strong">DMA1_Channel5_BASE</emphasis>   (AHBPERIPH_BASE + 0x00000058UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga896c2c7585dd8bc3969cf8561f689d2d"/>#define <emphasis role="strong">DMA1_Channel6_BASE</emphasis>   (AHBPERIPH_BASE + 0x0000006CUL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1gaeee0d1f77d0db1db533016a09351166c"/>#define <emphasis role="strong">DMA1_Channel7_BASE</emphasis>   (AHBPERIPH_BASE + 0x00000080UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga0e681b03f364532055d88f63fec0d99d"/>#define <emphasis role="strong">RCC_BASE</emphasis>   (AHBPERIPH_BASE + 0x00001000UL)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__memory__map_1ga656a447589e785594cbf2f45c835ad7e"/>#define <emphasis role="strong">CRC_BASE</emphasis>   (AHBPERIPH_BASE + 0x00003000UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1ga8e21f4845015730c5731763169ec0e9b">FLASH_R_BASE</link>   (AHBPERIPH_BASE + 0x00002000UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1ga776d985f2d4d40b588ef6ca9d573af78">FLASHSIZE_BASE</link>   0x1FFFF7E0UL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1ga664eda42b83c919b153b07b23348be67">UID_BASE</link>   0x1FFFF7E8UL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1gab5b5fb155f9ee15dfb6d757da1adc926">OB_BASE</link>   0x1FFFF800UL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1ga4adaf4fd82ccc3a538f1f27a70cdbbef">DBGMCU_BASE</link>   0xE0042000UL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1gaa6c4cbed4ddbb3ecd77de93fab2a2e04">USB_BASE</link>   (APB1PERIPH_BASE + 0x00005C00UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___peripheral__memory__map_1gaf992dfdd5707568c5cb5506e2347e808">USB_PMAADDR</link>   (APB1PERIPH_BASE + 0x00006000UL)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___peripheral__memory__map_1ga4adaf4fd82ccc3a538f1f27a70cdbbef"/>    <section>
+    <title>DBGMCU_BASE</title>
+<indexterm><primary>DBGMCU_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>DBGMCU_BASE</secondary></indexterm>
+<para><computeroutput>#define DBGMCU_BASE   0xE0042000UL</computeroutput></para>
+<para>Debug MCU registers base address </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1ga443a2786535d83e32dfdc2b29e379332"/>    <section>
+    <title>FLASH_BANK1_END</title>
+<indexterm><primary>FLASH_BANK1_END</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>FLASH_BANK1_END</secondary></indexterm>
+<para><computeroutput>#define FLASH_BANK1_END   0x0801FFFFUL</computeroutput></para>
+<para>FLASH END address of bank1 </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1ga23a9099a5f8fc9c6e253c0eecb2be8db"/>    <section>
+    <title>FLASH_BASE</title>
+<indexterm><primary>FLASH_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>FLASH_BASE</secondary></indexterm>
+<para><computeroutput>#define FLASH_BASE   0x08000000UL</computeroutput></para>
+<para>FLASH base address in the alias region </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1ga8e21f4845015730c5731763169ec0e9b"/>    <section>
+    <title>FLASH_R_BASE</title>
+<indexterm><primary>FLASH_R_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>FLASH_R_BASE</secondary></indexterm>
+<para><computeroutput>#define FLASH_R_BASE   (AHBPERIPH_BASE + 0x00002000UL)</computeroutput></para>
+<para>Flash registers base address </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1ga776d985f2d4d40b588ef6ca9d573af78"/>    <section>
+    <title>FLASHSIZE_BASE</title>
+<indexterm><primary>FLASHSIZE_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>FLASHSIZE_BASE</secondary></indexterm>
+<para><computeroutput>#define FLASHSIZE_BASE   0x1FFFF7E0UL</computeroutput></para>
+<para>FLASH Size register base address </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1gab5b5fb155f9ee15dfb6d757da1adc926"/>    <section>
+    <title>OB_BASE</title>
+<indexterm><primary>OB_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>OB_BASE</secondary></indexterm>
+<para><computeroutput>#define OB_BASE   0x1FFFF800UL</computeroutput></para>
+<para>Flash Option Bytes base address </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1ga9171f49478fa86d932f89e78e73b88b0"/>    <section>
+    <title>PERIPH_BASE</title>
+<indexterm><primary>PERIPH_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>PERIPH_BASE</secondary></indexterm>
+<para><computeroutput>#define PERIPH_BASE   0x40000000UL</computeroutput></para>
+<para>Peripheral base address in the alias region </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a"/>    <section>
+    <title>PERIPH_BB_BASE</title>
+<indexterm><primary>PERIPH_BB_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>PERIPH_BB_BASE</secondary></indexterm>
+<para><computeroutput>#define PERIPH_BB_BASE   0x42000000UL</computeroutput></para>
+<para>Peripheral base address in the bit-band region Peripheral memory map </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1ga05e8f3d2e5868754a7cd88614955aecc"/>    <section>
+    <title>SRAM_BASE</title>
+<indexterm><primary>SRAM_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>SRAM_BASE</secondary></indexterm>
+<para><computeroutput>#define SRAM_BASE   0x20000000UL</computeroutput></para>
+<para>SRAM base address in the alias region </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1gad3548b6e2f017f39d399358f3ac98454"/>    <section>
+    <title>SRAM_BB_BASE</title>
+<indexterm><primary>SRAM_BB_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>SRAM_BB_BASE</secondary></indexterm>
+<para><computeroutput>#define SRAM_BB_BASE   0x22000000UL</computeroutput></para>
+<para>SRAM base address in the bit-band region </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1ga664eda42b83c919b153b07b23348be67"/>    <section>
+    <title>UID_BASE</title>
+<indexterm><primary>UID_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>UID_BASE</secondary></indexterm>
+<para><computeroutput>#define UID_BASE   0x1FFFF7E8UL</computeroutput></para>
+<para>Unique device ID register base address </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1gaa6c4cbed4ddbb3ecd77de93fab2a2e04"/>    <section>
+    <title>USB_BASE</title>
+<indexterm><primary>USB_BASE</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>USB_BASE</secondary></indexterm>
+<para><computeroutput>#define USB_BASE   (APB1PERIPH_BASE + 0x00005C00UL)</computeroutput></para>
+<para>USB_IP Peripheral Registers base address </para>
+    </section><anchor xml:id="_group___peripheral__memory__map_1gaf992dfdd5707568c5cb5506e2347e808"/>    <section>
+    <title>USB_PMAADDR</title>
+<indexterm><primary>USB_PMAADDR</primary><secondary>Peripheral_memory_map</secondary></indexterm>
+<indexterm><primary>Peripheral_memory_map</primary><secondary>USB_PMAADDR</secondary></indexterm>
+<para><computeroutput>#define USB_PMAADDR   (APB1PERIPH_BASE + 0x00006000UL)</computeroutput></para>
+<para>USB_IP Packet Memory Area base address </para>
+</section>
+</section>
+</section>

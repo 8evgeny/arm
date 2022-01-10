@@ -1,0 +1,194 @@
+.TH "RCC_APB2_Clock_Enable_Disable" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_APB2_Clock_Enable_Disable \- APB2 Clock Enable Disable
+.PP
+ \- Enable or disable the High Speed APB (APB2) peripheral clock\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_AFIO_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOD_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_AFIO_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(\fBRCC_APB2ENR_AFIOEN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(\fBRCC_APB2ENR_IOPAEN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(\fBRCC_APB2ENR_IOPBEN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(\fBRCC_APB2ENR_IOPCEN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOD_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(\fBRCC_APB2ENR_IOPDEN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(\fBRCC_APB2ENR_ADC1EN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(\fBRCC_APB2ENR_TIM1EN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(\fBRCC_APB2ENR_SPI1EN\fP))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(\fBRCC_APB2ENR_USART1EN\fP))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Enable or disable the High Speed APB (APB2) peripheral clock\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it\&. 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_RCC_ADC1_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->APB2ENR, RCC_APB2ENR_ADC1EN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->APB2ENR, RCC_APB2ENR_ADC1EN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_AFIO_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->APB2ENR, RCC_APB2ENR_AFIOEN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->APB2ENR, RCC_APB2ENR_AFIOEN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_GPIOA_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPAEN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPAEN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_GPIOB_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPBEN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPBEN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_GPIOC_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPCEN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPCEN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_GPIOD_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPDEN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPDEN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_SPI1_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->APB2ENR, RCC_APB2ENR_SPI1EN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->APB2ENR, RCC_APB2ENR_SPI1EN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_TIM1_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->APB2ENR, RCC_APB2ENR_TIM1EN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->APB2ENR, RCC_APB2ENR_TIM1EN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SS "#define __HAL_RCC_USART1_CLK_ENABLE()"
+\fBValue:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg; \
+                                        SET_BIT(RCC->APB2ENR, RCC_APB2ENR_USART1EN);\
+                                        /* Delay after an RCC peripheral clock enabling */\
+                                        tmpreg = READ_BIT(RCC->APB2ENR, RCC_APB2ENR_USART1EN);\
+                                        UNUSED(tmpreg); \
+                                      } while(0U)
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

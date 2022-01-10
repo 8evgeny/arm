@@ -1,0 +1,35 @@
+.TH "xStreamBufferSpacesAvailable" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xStreamBufferSpacesAvailable \- xStreamBufferSpacesAvailable
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+\fBstream_buffer\&.h\fP
+.PP
+.PP
+.nf
+
+size_t xStreamBufferSpacesAvailable( StreamBufferHandle_t xStreamBuffer );
+.fi
+.PP
+.PP
+Queries a stream buffer to see how much free space it contains, which is equal to the amount of data that can be sent to the stream buffer before it is full\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxStreamBuffer\fP The handle of the stream buffer being queried\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of bytes that can be written to the stream buffer before the stream buffer would be full\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

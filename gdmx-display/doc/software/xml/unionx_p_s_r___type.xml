@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="unionx_p_s_r___type" kind="union" language="C++" prot="public">
+    <compoundname>xPSR_Type</compoundname>
+    <includes refid="core__armv8mbl_8h" local="no">core_armv8mbl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ISR</definition>
+        <argsstring></argsstring>
+        <name>ISR</name>
+        <bitfield>9</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 0.. 8 Exception number </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="285" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mbl.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _reserved0</definition>
+        <argsstring></argsstring>
+        <name>_reserved0</name>
+        <bitfield>15</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 9..23 Reserved</para>
+<para>bit: 9..15 Reserved</para>
+<para>bit: 9 Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="286" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mbl.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 24 Thumb bit (read 0)</para>
+<para>bit: 24 Thumb bit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="287" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mbl.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _reserved1</definition>
+        <argsstring></argsstring>
+        <name>_reserved1</name>
+        <bitfield>3</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 25..27 Reserved</para>
+<para>bit: 20..23 Reserved</para>
+<para>bit: 16..23 Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="288" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mbl.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t V</definition>
+        <argsstring></argsstring>
+        <name>V</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 28 Overflow condition code flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="289" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mbl.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t C</definition>
+        <argsstring></argsstring>
+        <name>C</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 29 Carry condition code flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="290" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mbl.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Z</definition>
+        <argsstring></argsstring>
+        <name>Z</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 30 Zero condition code flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="291" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mbl.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t N</definition>
+        <argsstring></argsstring>
+        <name>N</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 31 Negative condition code flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="292" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mbl.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1ga61873807b9abee3dfa090c036e580d2e" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@2</type>
+        <definition>struct xPSR_Type::@2 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="293" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type used for word access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="294" column="12" bodyfile="Drivers/CMSIS/Include/core_armv8mbl.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1gaa91800ec6e90e457c7a1acd1f2e17099" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t GE</definition>
+        <argsstring></argsstring>
+        <name>GE</name>
+        <bitfield>4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 16..19 Greater than or Equal flags </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mml.h" line="377" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mml.h" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1ga76485660fe8ad98cdc71ddd7cb0ed777" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t IT</definition>
+        <argsstring></argsstring>
+        <name>IT</name>
+        <bitfield>2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 25..26 saved IT state (read 0) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mml.h" line="380" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mml.h" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Q</definition>
+        <argsstring></argsstring>
+        <name>Q</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 27 Saturation condition flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mml.h" line="381" column="14" bodyfile="Drivers/CMSIS/Include/core_armv8mml.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1ga099a9d84f93a99d3cf3b3f7471e84135" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@6</type>
+        <definition>struct xPSR_Type::@6 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_armv8mml.h" line="386" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1gaf49c84711c1d030fdf91db1b6d63b515" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@11</type>
+        <definition>struct xPSR_Type::@11 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_cm0.h" line="259" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1ga331a60b885f4c78da7ca570384d4fdce" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@15</type>
+        <definition>struct xPSR_Type::@15 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_cm0plus.h" line="270" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1gad2c6abf86ebe8085365f6d5d9f68e458" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@19</type>
+        <definition>struct xPSR_Type::@19 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_cm1.h" line="259" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1ga96f71e80609de7ea148c19682381ba2a" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@23</type>
+        <definition>struct xPSR_Type::@23 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_cm23.h" line="293" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1gabedfacab5e6f9c329bfa0051cb88a9d3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ICI_IT_1</definition>
+        <argsstring></argsstring>
+        <name>ICI_IT_1</name>
+        <bitfield>6</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 10..15 ICI/IT part 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_cm3.h" line="264" column="14" bodyfile="Drivers/CMSIS/Include/core_cm3.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1gae1df616880ca701154eba05e747605df" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ICI_IT_2</definition>
+        <argsstring></argsstring>
+        <name>ICI_IT_2</name>
+        <bitfield>2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bit: 25..26 ICI/IT part 2 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_cm3.h" line="267" column="14" bodyfile="Drivers/CMSIS/Include/core_cm3.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1ga56262e8660c5e24c01007ebda7daa275" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@27</type>
+        <definition>struct xPSR_Type::@27 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_cm3.h" line="273" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1gae2d0789dd34a84784b44cc80ef05a5b1" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@32</type>
+        <definition>struct xPSR_Type::@32 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_cm33.h" line="386" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1gaad4e68e7c3caae55e10de068e64e4318" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@37</type>
+        <definition>struct xPSR_Type::@37 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_cm4.h" line="332" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1gabb5d7305531f032ce51fe410df31dd2f" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@42</type>
+        <definition>struct xPSR_Type::@42 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_cm7.h" line="347" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s___core___sys_tick_functions_1gab0a3fe241e69ce3d69e06bc89c588023" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@47</type>
+        <definition>struct xPSR_Type::@47 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_sc000.h" line="265" column="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___c_m_s_i_s__core___debug_functions_1gafe2558a98b1f8be2e5b9927f5575223b" prot="public" static="no" mutable="no">
+        <type>struct xPSR_Type::@51</type>
+        <definition>struct xPSR_Type::@51 b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure used for bit access </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Include/core_sc300.h" line="273" column="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Union type to access the Special-Purpose Program Status Registers (xPSR). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Include/core_armv8mbl.h" line="281" column="1" bodyfile="Drivers/CMSIS/Include/core_armv8mbl.h" bodystart="282" bodyend="295"/>
+    <listofallmembers>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>_reserved0</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>_reserved1</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1ga61873807b9abee3dfa090c036e580d2e" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1ga099a9d84f93a99d3cf3b3f7471e84135" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1gaf49c84711c1d030fdf91db1b6d63b515" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1ga331a60b885f4c78da7ca570384d4fdce" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1gad2c6abf86ebe8085365f6d5d9f68e458" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1ga96f71e80609de7ea148c19682381ba2a" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1ga56262e8660c5e24c01007ebda7daa275" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1gae2d0789dd34a84784b44cc80ef05a5b1" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1gaad4e68e7c3caae55e10de068e64e4318" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1gabb5d7305531f032ce51fe410df31dd2f" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1gab0a3fe241e69ce3d69e06bc89c588023" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1gafe2558a98b1f8be2e5b9927f5575223b" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>b</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>C</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1gaa91800ec6e90e457c7a1acd1f2e17099" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>GE</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1gabedfacab5e6f9c329bfa0051cb88a9d3" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>ICI_IT_1</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1gae1df616880ca701154eba05e747605df" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>ICI_IT_2</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>ISR</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1ga76485660fe8ad98cdc71ddd7cb0ed777" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>IT</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>N</name></member>
+      <member refid="group___c_m_s_i_s__core___debug_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>Q</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>T</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>V</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>w</name></member>
+      <member refid="group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e" prot="public" virt="non-virtual"><scope>xPSR_Type</scope><name>Z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

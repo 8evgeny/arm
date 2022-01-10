@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___c_a_n___aliased___defines" kind="group">
+    <compoundname>HAL_CAN_Aliased_Defines</compoundname>
+    <title>HAL CAN Aliased Defines maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___c_a_n___aliased___defines_1ga1b3d041dff9fed4dad75ed2a4a0e27e0" prot="public" static="no">
+        <name>CAN_FilterFIFO0</name>
+        <initializer>CAN_FILTER_FIFO0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1202" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_a_n___aliased___defines_1gada8f9b3a9c88f36539aaeb457039e666" prot="public" static="no">
+        <name>CAN_FilterFIFO1</name>
+        <initializer>CAN_FILTER_FIFO1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1203" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_a_n___aliased___defines_1ga0c57058d6d14b2baa24a4895975b1371" prot="public" static="no">
+        <name>CAN_IT_RQCP0</name>
+        <initializer>CAN_IT_TME</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1204" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_a_n___aliased___defines_1ga42e5c8e89e0f06f3250916fcfb21dc22" prot="public" static="no">
+        <name>CAN_IT_RQCP1</name>
+        <initializer>CAN_IT_TME</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1205" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_a_n___aliased___defines_1gacc634c3e29cdc9622081021dcda3127b" prot="public" static="no">
+        <name>CAN_IT_RQCP2</name>
+        <initializer>CAN_IT_TME</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1206" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_a_n___aliased___defines_1ga60a32132df242146efd3e9f7a079f0f0" prot="public" static="no">
+        <name>INAK_TIMEOUT</name>
+        <initializer>CAN_TIMEOUT_VALUE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1207" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_a_n___aliased___defines_1ga1bb8107706c8b4039ac55a122f3c65bb" prot="public" static="no">
+        <name>SLAK_TIMEOUT</name>
+        <initializer>CAN_TIMEOUT_VALUE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1208" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_a_n___aliased___defines_1gad6f04a4437ad8e83b154523f20985796" prot="public" static="no">
+        <name>CAN_TXSTATUS_FAILED</name>
+        <initializer>((uint8_t)0x00U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1209" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_a_n___aliased___defines_1ga01cd38ecda448043ba6a7870ab62fc2b" prot="public" static="no">
+        <name>CAN_TXSTATUS_OK</name>
+        <initializer>((uint8_t)0x01U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1210" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___c_a_n___aliased___defines_1gaf63b6b17ef36507122e0eaac8395aa1c" prot="public" static="no">
+        <name>CAN_TXSTATUS_PENDING</name>
+        <initializer>((uint8_t)0x02U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1211" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1211" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

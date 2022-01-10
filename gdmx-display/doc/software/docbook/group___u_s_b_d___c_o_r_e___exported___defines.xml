@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___c_o_r_e___exported___defines" xml:lang="en-US">
+<title>USBD_CORE_Exported_Defines</title>
+<indexterm><primary>USBD_CORE_Exported_Defines</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___u_s_b_d___c_o_r_e___exported___defines_1gae7364a789408417d945d5ca96679ccf7"/>#define <emphasis role="strong">USBD_DEBUG_LEVEL</emphasis>   0U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

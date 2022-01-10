@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___t_i_m_ex___exported___functions___group7" kind="group">
+    <compoundname>TIMEx_Exported_Functions_Group7</compoundname>
+    <title>Extended Peripheral State functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___t_i_m_ex___exported___functions___group7_1ga69d56afa939909717370413d35311dbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___t_i_m___exported___types_1gae0994cf5970e56ca4903e9151f40010c" kindref="member">HAL_TIM_StateTypeDef</ref></type>
+        <definition>HAL_TIM_StateTypeDef HAL_TIMEx_HallSensor_GetState</definition>
+        <argsstring>(TIM_HandleTypeDef *htim)</argsstring>
+        <name>HAL_TIMEx_HallSensor_GetState</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h" line="225" column="22" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h" declline="225" declcolumn="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Extended Peripheral State functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

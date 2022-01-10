@@ -1,0 +1,51 @@
+.TH "EventGroup" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EventGroup \- EventGroup
+.SH SYNOPSIS
+.br
+.PP
+.SS "Modules"
+
+.in +1c
+.ti -1c
+.RI "\fBEventGroupHandle_t\fP"
+.br
+.ti -1c
+.RI "\fBxEventGroupCreate\fP"
+.br
+.ti -1c
+.RI "\fBxEventGroupWaitBits\fP"
+.br
+.ti -1c
+.RI "\fBxEventGroupClearBits\fP"
+.br
+.ti -1c
+.RI "\fBxEventGroupClearBitsFromISR\fP"
+.br
+.ti -1c
+.RI "\fBxEventGroupSetBits\fP"
+.br
+.ti -1c
+.RI "\fBxEventGroupSetBitsFromISR\fP"
+.br
+.ti -1c
+.RI "\fBxEventGroupSync\fP"
+.br
+.ti -1c
+.RI "\fBxEventGroupGetBits\fP"
+.br
+.ti -1c
+.RI "\fBxEventGroupGetBitsFromISR\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An event group is a collection of bits to which an application can assign a meaning\&. For example, an application may create an event group to convey the status of various CAN bus related events in which bit 0 might mean 'A CAN
+message has been received and is ready for processing', bit 1 might mean "The application has queued a message that is ready for sending onto the CAN network', and bit 2 might mean 'It is time to send a SYNC message onto the CAN network" etc\&. A task can then test the bit values to see which events are active, and optionally enter the Blocked state to wait for a specified bit or a group of specified bits to be active\&. To continue the CAN bus example, a CAN controlling task can enter the Blocked state (and therefore not consume any processing time) until either bit 0, bit 1 or bit 2 are active, at which time the bit that was actually active would inform the task which action it had to take (process a received message, send a message, or send a SYNC)\&.
+.PP
+The event groups implementation contains intelligence to avoid race conditions that would otherwise occur were an application to use a simple variable for the same purpose\&. This is particularly important with respect to when a bit within an event group is to be cleared, and when bits have to be set and then tested atomically - as is the case where event groups are used to create a synchronisation point between multiple tasks (a 'rendezvous')\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

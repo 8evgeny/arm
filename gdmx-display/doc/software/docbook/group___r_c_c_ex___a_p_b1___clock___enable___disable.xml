@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex___a_p_b1___clock___enable___disable" xml:lang="en-US">
+<title>APB1 Clock Enable Disable</title>
+<indexterm><primary>APB1 Clock Enable Disable</primary></indexterm>
+<para>
+
+<para>Enable or disable the Low Speed APB (APB1) peripheral clock. </para>
+ 
+</para>
+
+<para>Enable or disable the Low Speed APB (APB1) peripheral clock. </para>
+
+<para><note><title>Note</title>
+
+<para>After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. </para>
+</note>
+</para>
+</section>

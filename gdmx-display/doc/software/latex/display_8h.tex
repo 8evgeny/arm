@@ -1,0 +1,415 @@
+\hypertarget{display_8h}{}\doxysection{Inc/display.h File Reference}
+\label{display_8h}\index{Inc/display.h@{Inc/display.h}}
+
+
+Display module (header file).  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hd44780.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{display_8h_a92ebc8b690017a2fc1ecd6991de36efc}\label{display_8h_a92ebc8b690017a2fc1ecd6991de36efc}} 
+\#define \mbox{\hyperlink{display_8h_a92ebc8b690017a2fc1ecd6991de36efc}{DISPLAY\+\_\+\+REFRESH\+\_\+\+INTERVAL}}~60
+\begin{DoxyCompactList}\small\item\em Display video page render interval, ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Framebuffer parameters}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{display_8h_a993a4d4222351be0e7c6b094a655ce51}\label{display_8h_a993a4d4222351be0e7c6b094a655ce51}} 
+\#define \mbox{\hyperlink{display_8h_a993a4d4222351be0e7c6b094a655ce51}{DISPLAY\+\_\+\+ROW\+\_\+\+SIZE}}~\mbox{\hyperlink{hd44780_8h_aea65f7cf75dd2099485351a9596231e9}{HD44780\+\_\+\+ROW\+\_\+\+SIZE}}
+\begin{DoxyCompactList}\small\item\em Number of characters per line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{display_8h_ab45d61bf18ecf084278962fa9ad43389}\label{display_8h_ab45d61bf18ecf084278962fa9ad43389}} 
+\#define \mbox{\hyperlink{display_8h_ab45d61bf18ecf084278962fa9ad43389}{DISPLAY\+\_\+\+ROW\+\_\+\+NUM}}~\mbox{\hyperlink{hd44780_8h_a1f3b159c39a6eb32cf369d7f7f4f966f}{HD44780\+\_\+\+ROW\+\_\+\+NUM}}
+\begin{DoxyCompactList}\small\item\em Number of lines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{display_8h_a7ffe3a1eb9de5d766a71c82b9e29479e}{DISPLAY\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Display initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_af2d9b11fc11add9c5b2067065173490f}{DISPLAY\+\_\+clear}} (void)
+\begin{DoxyCompactList}\small\item\em Display clear. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a3a58c2de5330df44cba322688012fc5d}{DISPLAY\+\_\+set\+Render\+Buffer}} (uint8\+\_\+t $\ast$$\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Setting the display buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a184eeb79104d99b29c02ade191eb5da8}{DISPLAY\+\_\+set\+Cursor\+Mode}} (uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Cursor mode control. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{display_8h_a92df0fd966747a290d3b8a8ac00e36c7}{DISPLAY\+\_\+move\+Cursor\+XY}} (uint8\+\_\+t X, uint8\+\_\+t Y)
+\begin{DoxyCompactList}\small\item\em Moves the cursor to the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a529c2e8347c655d37fd7f3142b667b1c}{DISPLAY\+\_\+print\+Symbol}} (uint8\+\_\+t Symbol)
+\begin{DoxyCompactList}\small\item\em Print the character at the current position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a716e554a372718233ed84482c9d6fddc}{DISPLAY\+\_\+print\+Symbol\+XY}} (uint8\+\_\+t X, uint8\+\_\+t Y, uint8\+\_\+t Symbol)
+\begin{DoxyCompactList}\small\item\em Printing a character at the current position from FLASH memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a78ee696bc155ce1e387e51cd2de725ce}{DISPLAY\+\_\+print\+String}} (uint8\+\_\+t $\ast$String)
+\begin{DoxyCompactList}\small\item\em Print a character at a specified position from FLASH memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{display_8h_a97ffb57b84ae6310716e699958818aef}\label{display_8h_a97ffb57b84ae6310716e699958818aef}} 
+void {\bfseries DISPLAY\+\_\+print\+Screen} (uint8\+\_\+t $\ast$Screen)
+\item 
+void \mbox{\hyperlink{display_8h_aaed284eab9e3f3045d2919e28ffa32e2}{DISPLAY\+\_\+print\+String\+XY}} (uint8\+\_\+t X, uint8\+\_\+t Y, uint8\+\_\+t $\ast$String)
+\begin{DoxyCompactList}\small\item\em Print a string from FLASH memory at the current position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a0d6aec7669ccd3945ae03a20ba054b60}{DISPLAY\+\_\+put\+Symbol\+XYTo\+Render\+Buffer}} (uint8\+\_\+t X, uint8\+\_\+t Y, uint8\+\_\+t Symbol)
+\begin{DoxyCompactList}\small\item\em Printing a line from FLASH memory to position X, Y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a4b74a845ba968c15b1d1904d012b6100}{DISPLAY\+\_\+put\+String\+XYTo\+Render\+Buffer}} (uint8\+\_\+t X, uint8\+\_\+t Y, uint8\+\_\+t $\ast$String)
+\begin{DoxyCompactList}\small\item\em Function for printing a string in Render\+Buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_aa9a5c1a970aa5de34d3304971e2fc2ee}{DISPLAY\+\_\+printuint8\+\_\+t}} (uint8\+\_\+t Value)
+\begin{DoxyCompactList}\small\item\em Function of printing an unsigned integer number on the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_ae9559572c2911e6486eecb935cc4d6d8}{DISPLAY\+\_\+print\+XYuint8\+\_\+t}} (uint8\+\_\+t X, uint8\+\_\+t Y, uint8\+\_\+t Value)
+\begin{DoxyCompactList}\small\item\em Function of printing an unsigned integer number on the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a8a290b3726a83ce8446812044feb7fa6}{DISPLAY\+\_\+printuint16\+\_\+t}} (uint16\+\_\+t Value)
+\begin{DoxyCompactList}\small\item\em Function of printing an unsigned integer number on the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a2b92f13e36779f17acbfafeb4c7c5653}{DISPLAY\+\_\+print\+XYuint16\+\_\+t}} (uint8\+\_\+t X, uint8\+\_\+t Y, uint16\+\_\+t Value)
+\begin{DoxyCompactList}\small\item\em Function of printing an unsigned integer number on the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a9b19caa251ad2b621967249c19483af1}{DISPLAY\+\_\+run}} (void)
+\begin{DoxyCompactList}\small\item\em Display render function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Display module (header file). 
+
+Display module (source file).
+
+Display control module. \begin{DoxyAuthor}{Author}
+Arthur Markaryan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31.\+03.\+2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+~\newline
+ 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{display_8h_af2d9b11fc11add9c5b2067065173490f}\label{display_8h_af2d9b11fc11add9c5b2067065173490f}} 
+\index{display.h@{display.h}!DISPLAY\_clear@{DISPLAY\_clear}}
+\index{DISPLAY\_clear@{DISPLAY\_clear}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_clear()}{DISPLAY\_clear()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Display clear. 
+
+Display cleaning function. \mbox{\Hypertarget{display_8h_a7ffe3a1eb9de5d766a71c82b9e29479e}\label{display_8h_a7ffe3a1eb9de5d766a71c82b9e29479e}} 
+\index{display.h@{display.h}!DISPLAY\_init@{DISPLAY\_init}}
+\index{DISPLAY\_init@{DISPLAY\_init}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_init()}{DISPLAY\_init()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Display initialization. 
+
+Display control module initialization function. \mbox{\Hypertarget{display_8h_a92df0fd966747a290d3b8a8ac00e36c7}\label{display_8h_a92df0fd966747a290d3b8a8ac00e36c7}} 
+\index{display.h@{display.h}!DISPLAY\_moveCursorXY@{DISPLAY\_moveCursorXY}}
+\index{DISPLAY\_moveCursorXY@{DISPLAY\_moveCursorXY}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_moveCursorXY()}{DISPLAY\_moveCursorXY()}}
+{\footnotesize\ttfamily uint8\+\_\+t DISPLAY\+\_\+move\+Cursor\+XY (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{X,  }\item[{uint8\+\_\+t}]{Y }\end{DoxyParamCaption})}
+
+
+
+Moves the cursor to the specified position. 
+
+The function of moving the cursor to the X, Y position. 
+\begin{DoxyParams}{Parameters}
+{\em X} & -\/ coordinate of familiarity along the X axis (from 0 to N). \\
+\hline
+{\em Y} & -\/ coordinate of familiarity along the Y axis (from 0 to N). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display. 
+\end{DoxyNote}
+\mbox{\Hypertarget{display_8h_a78ee696bc155ce1e387e51cd2de725ce}\label{display_8h_a78ee696bc155ce1e387e51cd2de725ce}} 
+\index{display.h@{display.h}!DISPLAY\_printString@{DISPLAY\_printString}}
+\index{DISPLAY\_printString@{DISPLAY\_printString}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_printString()}{DISPLAY\_printString()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+print\+String (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{String }\end{DoxyParamCaption})}
+
+
+
+Print a character at a specified position from FLASH memory. 
+
+The function of printing a character from FLASH memory to position X, Y. 
+\begin{DoxyParams}{Parameters}
+{\em X} & -\/ coordinate of familiarity along the X axis (from 0 to N). \\
+\hline
+{\em Y} & -\/ coordinate of familiarity along the Y axis (from 0 to N). \\
+\hline
+{\em ptr\+Symbol} & -\/ pointer to the displayed symbol in FLASH memory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display.
+\end{DoxyNote}
+Print a string.
+
+Function of printing the string at the current cursor position on the display. 
+\begin{DoxyParams}{Parameters}
+{\em String} & -\/ the string to be printed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display. 
+\end{DoxyNote}
+\mbox{\Hypertarget{display_8h_aaed284eab9e3f3045d2919e28ffa32e2}\label{display_8h_aaed284eab9e3f3045d2919e28ffa32e2}} 
+\index{display.h@{display.h}!DISPLAY\_printStringXY@{DISPLAY\_printStringXY}}
+\index{DISPLAY\_printStringXY@{DISPLAY\_printStringXY}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_printStringXY()}{DISPLAY\_printStringXY()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+print\+String\+XY (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{X,  }\item[{uint8\+\_\+t}]{Y,  }\item[{uint8\+\_\+t $\ast$}]{String }\end{DoxyParamCaption})}
+
+
+
+Print a string from FLASH memory at the current position. 
+
+Function of printing a string from FLASH memory at the current cursor position on the display. 
+\begin{DoxyParams}{Parameters}
+{\em String} & -\/ the string to be printed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display.
+\end{DoxyNote}
+Print the string at the specified position.
+
+The function of printing a line to position X, Y. 
+\begin{DoxyParams}{Parameters}
+{\em X} & -\/ coordinate of familiarity along the X axis (from 0 to N). \\
+\hline
+{\em Y} & -\/ coordinate of familiarity along the Y axis (from 0 to N). \\
+\hline
+{\em String} & -\/ the string to be printed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display. 
+\end{DoxyNote}
+\mbox{\Hypertarget{display_8h_a529c2e8347c655d37fd7f3142b667b1c}\label{display_8h_a529c2e8347c655d37fd7f3142b667b1c}} 
+\index{display.h@{display.h}!DISPLAY\_printSymbol@{DISPLAY\_printSymbol}}
+\index{DISPLAY\_printSymbol@{DISPLAY\_printSymbol}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_printSymbol()}{DISPLAY\_printSymbol()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+print\+Symbol (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Symbol }\end{DoxyParamCaption})}
+
+
+
+Print the character at the current position. 
+
+The function of printing a character at the current cursor position on the display. 
+\begin{DoxyParams}{Parameters}
+{\em Symbol} & -\/ the displayed symbol. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8h_a716e554a372718233ed84482c9d6fddc}\label{display_8h_a716e554a372718233ed84482c9d6fddc}} 
+\index{display.h@{display.h}!DISPLAY\_printSymbolXY@{DISPLAY\_printSymbolXY}}
+\index{DISPLAY\_printSymbolXY@{DISPLAY\_printSymbolXY}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_printSymbolXY()}{DISPLAY\_printSymbolXY()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+print\+Symbol\+XY (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{X,  }\item[{uint8\+\_\+t}]{Y,  }\item[{uint8\+\_\+t}]{Symbol }\end{DoxyParamCaption})}
+
+
+
+Printing a character at the current position from FLASH memory. 
+
+The function of printing a character at the current cursor position on the display. 
+\begin{DoxyParams}{Parameters}
+{\em ptr\+Symbol} & -\/ pointer to the displayed symbol in FLASH memory.\\
+\hline
+\end{DoxyParams}
+Prints a character at the specified position.
+
+The function of printing a character in the X, Y position. 
+\begin{DoxyParams}{Parameters}
+{\em X} & -\/ coordinate of familiarity along the X axis (from 0 to N). \\
+\hline
+{\em Y} & -\/ coordinate of familiarity along the Y axis (from 0 to N). \\
+\hline
+{\em Symbol} & -\/ the displayed symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display. 
+\end{DoxyNote}
+\mbox{\Hypertarget{display_8h_a8a290b3726a83ce8446812044feb7fa6}\label{display_8h_a8a290b3726a83ce8446812044feb7fa6}} 
+\index{display.h@{display.h}!DISPLAY\_printuint16\_t@{DISPLAY\_printuint16\_t}}
+\index{DISPLAY\_printuint16\_t@{DISPLAY\_printuint16\_t}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_printuint16\_t()}{DISPLAY\_printuint16\_t()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+printuint16\+\_\+t (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Value }\end{DoxyParamCaption})}
+
+
+
+Function of printing an unsigned integer number on the display. 
+
+Function of printing an \char`\"{}uint16\+\_\+t\char`\"{} number on the display from current position. 
+\begin{DoxyParams}{Parameters}
+{\em Value} & -\/ the unsigned integer number to be printed on the display. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8h_aa9a5c1a970aa5de34d3304971e2fc2ee}\label{display_8h_aa9a5c1a970aa5de34d3304971e2fc2ee}} 
+\index{display.h@{display.h}!DISPLAY\_printuint8\_t@{DISPLAY\_printuint8\_t}}
+\index{DISPLAY\_printuint8\_t@{DISPLAY\_printuint8\_t}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_printuint8\_t()}{DISPLAY\_printuint8\_t()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+printuint8\+\_\+t (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Value }\end{DoxyParamCaption})}
+
+
+
+Function of printing an unsigned integer number on the display. 
+
+Function of printing an \char`\"{}uint8\+\_\+t\char`\"{} number on the display from current position. 
+\begin{DoxyParams}{Parameters}
+{\em Value} & -\/ the unsigned integer number to be printed on the display. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8h_a2b92f13e36779f17acbfafeb4c7c5653}\label{display_8h_a2b92f13e36779f17acbfafeb4c7c5653}} 
+\index{display.h@{display.h}!DISPLAY\_printXYuint16\_t@{DISPLAY\_printXYuint16\_t}}
+\index{DISPLAY\_printXYuint16\_t@{DISPLAY\_printXYuint16\_t}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_printXYuint16\_t()}{DISPLAY\_printXYuint16\_t()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+print\+XYuint16\+\_\+t (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{X,  }\item[{uint8\+\_\+t}]{Y,  }\item[{uint16\+\_\+t}]{Value }\end{DoxyParamCaption})}
+
+
+
+Function of printing an unsigned integer number on the display. 
+
+Function of printing an \char`\"{}uint16\+\_\+t\char`\"{} number on the display from position from the of X, Y. 
+\begin{DoxyParams}{Parameters}
+{\em X} & -\/ coordinate of familiarity along the X axis (from 0 to N). \\
+\hline
+{\em Y} & -\/ coordinate of familiarity along the Y axis (from 0 to N). \\
+\hline
+{\em Value} & -\/ the unsigned integer number to be printed on the display. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display. 
+\end{DoxyNote}
+\mbox{\Hypertarget{display_8h_ae9559572c2911e6486eecb935cc4d6d8}\label{display_8h_ae9559572c2911e6486eecb935cc4d6d8}} 
+\index{display.h@{display.h}!DISPLAY\_printXYuint8\_t@{DISPLAY\_printXYuint8\_t}}
+\index{DISPLAY\_printXYuint8\_t@{DISPLAY\_printXYuint8\_t}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_printXYuint8\_t()}{DISPLAY\_printXYuint8\_t()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+print\+XYuint8\+\_\+t (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{X,  }\item[{uint8\+\_\+t}]{Y,  }\item[{uint8\+\_\+t}]{Value }\end{DoxyParamCaption})}
+
+
+
+Function of printing an unsigned integer number on the display. 
+
+Function of printing an \char`\"{}uint8\+\_\+t\char`\"{} number on the display from position from the of X, Y. 
+\begin{DoxyParams}{Parameters}
+{\em X} & -\/ coordinate of familiarity along the X axis (from 0 to N). \\
+\hline
+{\em Y} & -\/ coordinate of familiarity along the Y axis (from 0 to N). \\
+\hline
+{\em Value} & -\/ the unsigned integer number to be printed on the display. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display. 
+\end{DoxyNote}
+\mbox{\Hypertarget{display_8h_a4b74a845ba968c15b1d1904d012b6100}\label{display_8h_a4b74a845ba968c15b1d1904d012b6100}} 
+\index{display.h@{display.h}!DISPLAY\_putStringXYToRenderBuffer@{DISPLAY\_putStringXYToRenderBuffer}}
+\index{DISPLAY\_putStringXYToRenderBuffer@{DISPLAY\_putStringXYToRenderBuffer}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_putStringXYToRenderBuffer()}{DISPLAY\_putStringXYToRenderBuffer()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+put\+String\+XYTo\+Render\+Buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{X,  }\item[{uint8\+\_\+t}]{Y,  }\item[{uint8\+\_\+t $\ast$}]{String }\end{DoxyParamCaption})}
+
+
+
+Function for printing a string in Render\+Buffer. 
+
+The function of printing a string in Render\+Buffer at position X, Y. 
+\begin{DoxyParams}{Parameters}
+{\em X} & -\/ coordinate of familiarity along the X axis (from 0 to N). \\
+\hline
+{\em Y} & -\/ coordinate of familiarity along the Y axis (from 0 to N). \\
+\hline
+{\em String} & -\/ the string to be printed to the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display. 
+\end{DoxyNote}
+\mbox{\Hypertarget{display_8h_a0d6aec7669ccd3945ae03a20ba054b60}\label{display_8h_a0d6aec7669ccd3945ae03a20ba054b60}} 
+\index{display.h@{display.h}!DISPLAY\_putSymbolXYToRenderBuffer@{DISPLAY\_putSymbolXYToRenderBuffer}}
+\index{DISPLAY\_putSymbolXYToRenderBuffer@{DISPLAY\_putSymbolXYToRenderBuffer}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_putSymbolXYToRenderBuffer()}{DISPLAY\_putSymbolXYToRenderBuffer()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+put\+Symbol\+XYTo\+Render\+Buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{X,  }\item[{uint8\+\_\+t}]{Y,  }\item[{uint8\+\_\+t}]{Symbol }\end{DoxyParamCaption})}
+
+
+
+Printing a line from FLASH memory to position X, Y. 
+
+Function of printing a line from FLASH memory to position X, Y on the display. 
+\begin{DoxyParams}{Parameters}
+{\em X} & -\/ coordinate of familiarity along the X axis (from 0 to N). \\
+\hline
+{\em Y} & -\/ coordinate of familiarity along the Y axis (from 0 to N). \\
+\hline
+{\em String} & -\/ string to be printed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display.
+\end{DoxyNote}
+The function of printing a character in Render\+Buffer.
+
+The function to print a character in Render\+Buffer at X, Y position. 
+\begin{DoxyParams}{Parameters}
+{\em X} & -\/ coordinate of familiarity along the X axis (from 0 to N). \\
+\hline
+{\em Y} & -\/ coordinate of familiarity along the Y axis (from 0 to N). \\
+\hline
+{\em Symbol} & -\/ the symbol to be printed into the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The origin is in the upper left corner of the display. 
+\end{DoxyNote}
+\mbox{\Hypertarget{display_8h_a9b19caa251ad2b621967249c19483af1}\label{display_8h_a9b19caa251ad2b621967249c19483af1}} 
+\index{display.h@{display.h}!DISPLAY\_run@{DISPLAY\_run}}
+\index{DISPLAY\_run@{DISPLAY\_run}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_run()}{DISPLAY\_run()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Display render function. 
+
+A function that renders the framebuffer to the display. 
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{display_8h_a184eeb79104d99b29c02ade191eb5da8}\label{display_8h_a184eeb79104d99b29c02ade191eb5da8}} 
+\index{display.h@{display.h}!DISPLAY\_setCursorMode@{DISPLAY\_setCursorMode}}
+\index{DISPLAY\_setCursorMode@{DISPLAY\_setCursorMode}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_setCursorMode()}{DISPLAY\_setCursorMode()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+set\+Cursor\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Cursor mode control. 
+
+A function that controls the mode of the cursor. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & -\/ cursor operation mode. Bit0 -\/ On / Off, Bit1 -\/ Blank\+On / Blank\+Off. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8h_a3a58c2de5330df44cba322688012fc5d}\label{display_8h_a3a58c2de5330df44cba322688012fc5d}} 
+\index{display.h@{display.h}!DISPLAY\_setRenderBuffer@{DISPLAY\_setRenderBuffer}}
+\index{DISPLAY\_setRenderBuffer@{DISPLAY\_setRenderBuffer}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_setRenderBuffer()}{DISPLAY\_setRenderBuffer()}}
+{\footnotesize\ttfamily void DISPLAY\+\_\+set\+Render\+Buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$$\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Setting the display buffer. 
+
+Display buffer setting function. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ Pointer to a two-\/dimensional buffer of displayed information. \\
+\hline
+\end{DoxyParams}

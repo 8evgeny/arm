@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>README</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ulink url="https://www.code-inspector.com"><image type="html" name="https://www.code-inspector.com/project/19367/score/svg" alt="Code Grade" inline="yes"></image>
+</ulink> <ulink url="https://www.code-inspector.com"><image type="html" name="https://www.code-inspector.com/project/19367/status/svg" alt="Code Grade" inline="yes"></image>
+</ulink></para>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md0">
+<title>GDMXDisplay</title>
+<para>Display 4 GDMX video registrator (a part of GITVideo SURV project)</para>
+<para>Just an USB LCD output terminal (ttyACM type) </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_97f8413aca0f7ec4ac1727fb19afcbb3" kind="dir">
+    <compoundname>build/CMakeFiles/gdmx_display.elf.dir/Middlewares/Third_Party</compoundname>
+    <innerdir refid="dir_b2f5273ac9f6f35b6fd77d9de8fe90fe">build/CMakeFiles/gdmx_display.elf.dir/Middlewares/Third_Party/FreeRTOS</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/gdmx_display.elf.dir/Middlewares/Third_Party/"/>
+  </compounddef>
+</doxygen>

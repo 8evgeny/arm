@@ -1,0 +1,30 @@
+.TH "TIM_AOE_Bit_Set_Reset" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_AOE_Bit_Set_Reset \- TIM Automatic Output Enable
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_AUTOMATICOUTPUT_DISABLE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_AUTOMATICOUTPUT_ENABLE\fP   \fBTIM_BDTR_AOE\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TIM_AUTOMATICOUTPUT_DISABLE   0x00000000U"
+MOE can be set only by software 
+.SS "#define TIM_AUTOMATICOUTPUT_ENABLE   \fBTIM_BDTR_AOE\fP"
+MOE can be set by software or automatically at the next update event (if none of the break inputs BRK and BRK2 is active) 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

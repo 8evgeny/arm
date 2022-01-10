@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c___system___clock___source___status" kind="group">
+    <compoundname>RCC_System_Clock_Source_Status</compoundname>
+    <title>System Clock Source Status</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___r_c_c___system___clock___source___status_1ga0d6c2b0b2d59e6591295649853bb2abd" prot="public" static="no">
+        <name>RCC_SYSCLKSOURCE_STATUS_HSI</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga6764639cf221e1ebc0b5448dcaed590a" kindref="member">RCC_CFGR_SWS_HSI</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HSI used as system clock </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="194" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___system___clock___source___status_1ga3847769265bf19becf7b976a7e908a64" prot="public" static="no">
+        <name>RCC_SYSCLKSOURCE_STATUS_HSE</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gae09a0202f441c1a43e69c62331d50a08" kindref="member">RCC_CFGR_SWS_HSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HSE used as system clock </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="195" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___system___clock___source___status_1ga4f05019ec09da478d084f44dbaad7d6d" prot="public" static="no">
+        <name>RCC_SYSCLKSOURCE_STATUS_PLLCLK</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga2c67e2279804a83ef24438267d9d4a6c" kindref="member">RCC_CFGR_SWS_PLL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PLL used as system clock </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="196" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

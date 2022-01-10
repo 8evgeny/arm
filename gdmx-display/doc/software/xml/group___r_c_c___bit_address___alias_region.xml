@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___r_c_c___bit_address___alias_region" kind="group">
+    <compoundname>RCC_BitAddress_AliasRegion</compoundname>
+    <title>BitAddress AliasRegion</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gacda2a01fba2f4f6b28d6533aef2f2396" prot="public" static="no">
+        <name>RCC_CR_OFFSET_BB</name>
+        <initializer>(RCC_OFFSET + RCC_CR_OFFSET)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1233" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gaff4bdac027bca99768bdbdd4bd794abc" prot="public" static="no">
+        <name>RCC_CFGR_OFFSET_BB</name>
+        <initializer>(RCC_OFFSET + RCC_CFGR_OFFSET)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1234" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gae509d1d4d3915d2d95b0c141e09a8fd2" prot="public" static="no">
+        <name>RCC_CIR_OFFSET_BB</name>
+        <initializer>(RCC_OFFSET + RCC_CIR_OFFSET)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1235" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga3dc42f75899d92ca31a9ca30609ac43a" prot="public" static="no">
+        <name>RCC_BDCR_OFFSET_BB</name>
+        <initializer>(RCC_OFFSET + RCC_BDCR_OFFSET)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1236" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gad07932326df75b09ed7c43233a7c6666" prot="public" static="no">
+        <name>RCC_CSR_OFFSET_BB</name>
+        <initializer>(RCC_OFFSET + RCC_CSR_OFFSET)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1237" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga9bf60daa74224ea82d3df7e08d4533f1" prot="public" static="no">
+        <name>RCC_HSION_BIT_NUMBER</name>
+        <initializer>RCC_CR_HSION_Pos</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1241" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gabd3eca3cc8b1501f9d8a62c4a0ebcfe7" prot="public" static="no">
+        <name>RCC_CR_HSION_BB</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" kindref="member">PERIPH_BB_BASE</ref> + (RCC_CR_OFFSET_BB * 32U) + (RCC_HSION_BIT_NUMBER * 4U)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1242" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gaa9092b285e421195958ef49d9396b321" prot="public" static="no">
+        <name>RCC_HSEON_BIT_NUMBER</name>
+        <initializer>RCC_CR_HSEON_Pos</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1244" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gabefdd36d54615fa5771dccb9985ec3b6" prot="public" static="no">
+        <name>RCC_CR_HSEON_BB</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" kindref="member">PERIPH_BB_BASE</ref> + (RCC_CR_OFFSET_BB * 32U) + (RCC_HSEON_BIT_NUMBER * 4U)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1245" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gaa8a1695db870d271a9e79bf0272ec8b6" prot="public" static="no">
+        <name>RCC_CSSON_BIT_NUMBER</name>
+        <initializer>RCC_CR_CSSON_Pos</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1247" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga37c353c62ad303e661e99f20dcc6d1f0" prot="public" static="no">
+        <name>RCC_CR_CSSON_BB</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" kindref="member">PERIPH_BB_BASE</ref> + (RCC_CR_OFFSET_BB * 32U) + (RCC_CSSON_BIT_NUMBER * 4U)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1248" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gaed4c77e51cc821b9645cb7874bf5861b" prot="public" static="no">
+        <name>RCC_PLLON_BIT_NUMBER</name>
+        <initializer>RCC_CR_PLLON_Pos</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1250" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga0b0a8f171b66cc0d767716ba23ad3c6f" prot="public" static="no">
+        <name>RCC_CR_PLLON_BB</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" kindref="member">PERIPH_BB_BASE</ref> + (RCC_CR_OFFSET_BB * 32U) + (RCC_PLLON_BIT_NUMBER * 4U)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1251" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga577ffeb20561aa8395fe5327807b5709" prot="public" static="no">
+        <name>RCC_LSION_BIT_NUMBER</name>
+        <initializer>RCC_CSR_LSION_Pos</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1255" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gac34a2d63deae3efc65e66f8fb3c26dae" prot="public" static="no">
+        <name>RCC_CSR_LSION_BB</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" kindref="member">PERIPH_BB_BASE</ref> + (RCC_CSR_OFFSET_BB * 32U) + (RCC_LSION_BIT_NUMBER * 4U)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1256" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga6cd8836230fcbaf491e9713233690611" prot="public" static="no">
+        <name>RCC_RMVF_BIT_NUMBER</name>
+        <initializer>RCC_CSR_RMVF_Pos</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1259" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga40f8ee2c5fa801d0b72ae230578dd77b" prot="public" static="no">
+        <name>RCC_CSR_RMVF_BB</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" kindref="member">PERIPH_BB_BASE</ref> + (RCC_CSR_OFFSET_BB * 32U) + (RCC_RMVF_BIT_NUMBER * 4U)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1260" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga16e388a406aa93969e2713dd2e0d43e7" prot="public" static="no">
+        <name>RCC_LSEON_BIT_NUMBER</name>
+        <initializer>RCC_BDCR_LSEON_Pos</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1264" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gaf8dc69c1e125aaaba41c6e2f9e2121be" prot="public" static="no">
+        <name>RCC_BDCR_LSEON_BB</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" kindref="member">PERIPH_BB_BASE</ref> + (RCC_BDCR_OFFSET_BB * 32U) + (RCC_LSEON_BIT_NUMBER * 4U)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1265" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga099cfa567c89f8643f7671d84ba18a7b" prot="public" static="no">
+        <name>RCC_LSEBYP_BIT_NUMBER</name>
+        <initializer>RCC_BDCR_LSEBYP_Pos</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1268" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gaf47f797e830f0ed3209a792cf96bf8fc" prot="public" static="no">
+        <name>RCC_BDCR_LSEBYP_BB</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" kindref="member">PERIPH_BB_BASE</ref> + (RCC_BDCR_OFFSET_BB * 32U) + (RCC_LSEBYP_BIT_NUMBER * 4U)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1269" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1gac4074d20c157f0892c6effb8bf22c8d7" prot="public" static="no">
+        <name>RCC_RTCEN_BIT_NUMBER</name>
+        <initializer>RCC_BDCR_RTCEN_Pos</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1272" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga583ba8653153b48a06473d0a331f781d" prot="public" static="no">
+        <name>RCC_BDCR_RTCEN_BB</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" kindref="member">PERIPH_BB_BASE</ref> + (RCC_BDCR_OFFSET_BB * 32U) + (RCC_RTCEN_BIT_NUMBER * 4U)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1273" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga68b0f7a13e733453c7efcd66a6ee251d" prot="public" static="no">
+        <name>RCC_BDRST_BIT_NUMBER</name>
+        <initializer>RCC_BDCR_BDRST_Pos</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1276" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___r_c_c___bit_address___alias_region_1ga5e5805d3c5b9ad3ebc13e030e5fdd86c" prot="public" static="no">
+        <name>RCC_BDCR_BDRST_BB</name>
+        <initializer>((uint32_t)(<ref refid="group___peripheral__memory__map_1gaed7efc100877000845c236ccdc9e144a" kindref="member">PERIPH_BB_BASE</ref> + (RCC_BDCR_OFFSET_BB * 32U) + (RCC_BDRST_BIT_NUMBER * 4U)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" line="1277" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h" bodystart="1277" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RCC registers bit address in the alias region. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

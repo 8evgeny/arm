@@ -1,0 +1,77 @@
+.TH "RCC_LSE_Configuration" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_LSE_Configuration \- LSE Configuration
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_LSE_CONFIG\fP(__STATE__)"
+.br
+.RI "Macro to configure the External Low Speed oscillator (LSE)\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_RCC_LSE_CONFIG(__STATE__)"
+\fBValue:\fP
+.PP
+.nf
+                    do{                                                     \
+                      if ((__STATE__) == RCC_LSE_ON)                        \
+                      {                                                     \
+                        SET_BIT(RCC->BDCR, RCC_BDCR_LSEON);                   \
+                      }                                                     \
+                      else if ((__STATE__) == RCC_LSE_OFF)                  \
+                      {                                                     \
+                        CLEAR_BIT(RCC->BDCR, RCC_BDCR_LSEON);                 \
+                        CLEAR_BIT(RCC->BDCR, RCC_BDCR_LSEBYP);                \
+                      }                                                     \
+                      else if ((__STATE__) == RCC_LSE_BYPASS)               \
+                      {                                                     \
+                        SET_BIT(RCC->BDCR, RCC_BDCR_LSEBYP);                  \
+                        SET_BIT(RCC->BDCR, RCC_BDCR_LSEON);                   \
+                      }                                                     \
+                      else                                                  \
+                      {                                                     \
+                        CLEAR_BIT(RCC->BDCR, RCC_BDCR_LSEON);                 \
+                        CLEAR_BIT(RCC->BDCR, RCC_BDCR_LSEBYP);                \
+                      }                                                     \
+                    }while(0U)
+.fi
+.PP
+Macro to configure the External Low Speed oscillator (LSE)\&. 
+.PP
+\fBNote\fP
+.RS 4
+Transitions LSE Bypass to LSE On and LSE On to LSE Bypass are not supported by this macro\&. 
+.PP
+As the LSE is in the Backup domain and write access is denied to this domain after reset, you have to enable write access using \fBHAL_PWR_EnableBkUpAccess()\fP function before to configure the LSE (to be done once after reset)\&. 
+.PP
+After enabling the LSE (RCC_LSE_ON or RCC_LSE_BYPASS), the application software should wait on LSERDY flag to be set indicating that LSE clock is stable and can be used to clock the RTC\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>STATE</strong>\fP specifies the new state of the LSE\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_LSE_OFF\fP turn OFF the LSE oscillator, LSERDY flag goes low after 6 LSE oscillator clock cycles\&. 
+.IP "\(bu" 2
+\fBRCC_LSE_ON\fP turn ON the LSE oscillator\&. 
+.IP "\(bu" 2
+\fBRCC_LSE_BYPASS\fP LSE oscillator bypassed with external clock\&. 
+.PP
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

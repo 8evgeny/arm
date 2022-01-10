@@ -1,0 +1,132 @@
+.TH "RCC_PLL_Configuration" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_PLL_Configuration \- PLL Configuration
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLL_ENABLE\fP()   (*(\fB__IO\fP uint32_t *) RCC_CR_PLLON_BB = ENABLE)"
+.br
+.RI "Macro to enable the main PLL\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLL_DISABLE\fP()   (*(\fB__IO\fP uint32_t *) RCC_CR_PLLON_BB = DISABLE)"
+.br
+.RI "Macro to disable the main PLL\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLL_CONFIG\fP(__RCC_PLLSOURCE__,  __PLLMUL__)             MODIFY_REG(RCC\->CFGR, (\fBRCC_CFGR_PLLSRC\fP | \fBRCC_CFGR_PLLMULL\fP),((__RCC_PLLSOURCE__) | (__PLLMUL__) ))"
+.br
+.RI "Macro to configure the main PLL clock source and multiplication factors\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_PLL_OSCSOURCE\fP()   ((uint32_t)(READ_BIT(RCC\->CFGR, \fBRCC_CFGR_PLLSRC\fP)))"
+.br
+.RI "Get oscillator clock selected as PLL input clock\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_RCC_GET_PLL_OSCSOURCE()   ((uint32_t)(READ_BIT(RCC\->CFGR, \fBRCC_CFGR_PLLSRC\fP)))"
+
+.PP
+Get oscillator clock selected as PLL input clock\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP clock source used for PLL entry\&. The returned value can be one of the following: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_PLLSOURCE_HSI_DIV2\fP HSI oscillator clock selected as PLL input clock 
+.IP "\(bu" 2
+\fBRCC_PLLSOURCE_HSE\fP HSE oscillator clock selected as PLL input clock 
+.PP
+.RE
+.PP
+
+.SS "#define __HAL_RCC_PLL_CONFIG(__RCC_PLLSOURCE__, __PLLMUL__)             MODIFY_REG(RCC\->CFGR, (\fBRCC_CFGR_PLLSRC\fP | \fBRCC_CFGR_PLLMULL\fP),((__RCC_PLLSOURCE__) | (__PLLMUL__) ))"
+
+.PP
+Macro to configure the main PLL clock source and multiplication factors\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function must be used only when the main PLL is disabled\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>RCC_PLLSOURCE</strong>\fP specifies the PLL entry clock source\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_PLLSOURCE_HSI_DIV2\fP HSI oscillator clock selected as PLL clock entry 
+.IP "\(bu" 2
+\fBRCC_PLLSOURCE_HSE\fP HSE oscillator clock selected as PLL clock entry 
+.PP
+.br
+\fI<strong>PLLMUL</strong>\fP specifies the multiplication factor for PLL VCO output clock This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_PLL_MUL4\fP PLLVCO = PLL clock entry x 4 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL6\fP PLLVCO = PLL clock entry x 6 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL2\fP PLLVCO = PLL clock entry x 2 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL3\fP PLLVCO = PLL clock entry x 3 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL10\fP PLLVCO = PLL clock entry x 10 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL11\fP PLLVCO = PLL clock entry x 11 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL12\fP PLLVCO = PLL clock entry x 12 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL13\fP PLLVCO = PLL clock entry x 13 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL14\fP PLLVCO = PLL clock entry x 14 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL15\fP PLLVCO = PLL clock entry x 15 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL16\fP PLLVCO = PLL clock entry x 16 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL8\fP PLLVCO = PLL clock entry x 8 
+.IP "\(bu" 2
+\fBRCC_PLL_MUL9\fP PLLVCO = PLL clock entry x 9 
+.PP
+.RE
+.PP
+
+.SS "#define __HAL_RCC_PLL_DISABLE()   (*(\fB__IO\fP uint32_t *) RCC_CR_PLLON_BB = DISABLE)"
+
+.PP
+Macro to disable the main PLL\&. 
+.PP
+\fBNote\fP
+.RS 4
+The main PLL can not be disabled if it is used as system clock source 
+.RE
+.PP
+
+.SS "#define __HAL_RCC_PLL_ENABLE()   (*(\fB__IO\fP uint32_t *) RCC_CR_PLLON_BB = ENABLE)"
+
+.PP
+Macro to enable the main PLL\&. 
+.PP
+\fBNote\fP
+.RS 4
+After enabling the main PLL, the application software should wait on PLLRDY flag to be set indicating that PLL clock is stable and can be used as system clock source\&. 
+.PP
+The main PLL is disabled by hardware when entering STOP and STANDBY modes\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

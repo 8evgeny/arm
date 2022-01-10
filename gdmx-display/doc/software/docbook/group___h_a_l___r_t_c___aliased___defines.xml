@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___r_t_c___aliased___defines" xml:lang="en-US">
+<title>HAL RTC Aliased Defines maintained for legacy purpose</title>
+<indexterm><primary>HAL RTC Aliased Defines maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga1adf0882a1368a3cef0edc34dcf8d34e"/>#define <emphasis role="strong">FORMAT_BIN</emphasis>   RTC_FORMAT_BIN</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga950fc88b539cc9a8cf66aab2ee860fe1"/>#define <emphasis role="strong">FORMAT_BCD</emphasis>   RTC_FORMAT_BCD</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga242adf20d2422fd1ae7715b8acd82623"/>#define <emphasis role="strong">RTC_ALARMSUBSECONDMASK_None</emphasis>   RTC_ALARMSUBSECONDMASK_NONE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga55d9466b1ec35bce5df17af28e142014"/>#define <emphasis role="strong">RTC_TAMPERERASEBACKUP_DISABLED</emphasis>   RTC_TAMPER_ERASE_BACKUP_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1gad032982f8c14ffd4864df3ebfee45f70"/>#define <emphasis role="strong">RTC_TAMPERMASK_FLAG_DISABLED</emphasis>   RTC_TAMPERMASK_FLAG_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1gac03d2b586cb1c5c471697b57864e7bc8"/>#define <emphasis role="strong">RTC_TAMPERMASK_FLAG_ENABLED</emphasis>   RTC_TAMPERMASK_FLAG_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga968bde232135b78ff974d5523890860d"/>#define <emphasis role="strong">RTC_MASKTAMPERFLAG_DISABLED</emphasis>   RTC_TAMPERMASK_FLAG_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1gab9424e57ef6067b1d7f5030ee45192d5"/>#define <emphasis role="strong">RTC_MASKTAMPERFLAG_ENABLED</emphasis>   RTC_TAMPERMASK_FLAG_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga4a78a492baabe7132ddfcf94cf7805c0"/>#define <emphasis role="strong">RTC_TAMPERERASEBACKUP_ENABLED</emphasis>   RTC_TAMPER_ERASE_BACKUP_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1gad52c576aeb40eeeed3274e6a8c5cf83a"/>#define <emphasis role="strong">RTC_TAMPER1_2_INTERRUPT</emphasis>   RTC_ALL_TAMPER_INTERRUPT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga30a97d2cbfeca6b663b9f116e13c511a"/>#define <emphasis role="strong">RTC_TAMPER1_2_3_INTERRUPT</emphasis>   RTC_ALL_TAMPER_INTERRUPT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga86b6c9d9b06b1ab23722bf02799adfca"/>#define <emphasis role="strong">RTC_TIMESTAMPPIN_PC13</emphasis>   RTC_TIMESTAMPPIN_DEFAULT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga8d806818f1fcdaf744042a19563a8052"/>#define <emphasis role="strong">RTC_TIMESTAMPPIN_PA0</emphasis>   RTC_TIMESTAMPPIN_POS1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga06c626929730d0b055830978be00b438"/>#define <emphasis role="strong">RTC_TIMESTAMPPIN_PI8</emphasis>   RTC_TIMESTAMPPIN_POS1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga8bed03c3348ec3005e7b80e73fd13cc0"/>#define <emphasis role="strong">RTC_TIMESTAMPPIN_PC1</emphasis>   RTC_TIMESTAMPPIN_POS2</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga677d55aef2a7915a4a75befab8a5abaf"/>#define <emphasis role="strong">RTC_OUTPUT_REMAP_PC13</emphasis>   RTC_OUTPUT_REMAP_NONE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1gac67309963a2eaf95230e716c8e3f0377"/>#define <emphasis role="strong">RTC_OUTPUT_REMAP_PB14</emphasis>   RTC_OUTPUT_REMAP_POS1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1gae3219018581da1cc5687fe218d3f2a2d"/>#define <emphasis role="strong">RTC_OUTPUT_REMAP_PB2</emphasis>   RTC_OUTPUT_REMAP_POS1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga203603ca0741ea3f23beca505a121351"/>#define <emphasis role="strong">RTC_TAMPERPIN_PC13</emphasis>   RTC_TAMPERPIN_DEFAULT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga0eddec9c4aeae415fe983c2940a45a9d"/>#define <emphasis role="strong">RTC_TAMPERPIN_PA0</emphasis>   RTC_TAMPERPIN_POS1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___r_t_c___aliased___defines_1ga281fbac5fa3ba4677a329635519f2bb5"/>#define <emphasis role="strong">RTC_TAMPERPIN_PI8</emphasis>   RTC_TAMPERPIN_POS1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

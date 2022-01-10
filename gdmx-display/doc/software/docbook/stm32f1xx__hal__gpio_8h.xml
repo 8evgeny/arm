@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f1xx__hal__gpio_8h" xml:lang="en-US">
+<title>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h File Reference</title>
+<indexterm><primary>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h</primary></indexterm>
+<para>
+
+<para>Header file of GPIO HAL module. </para>
+ 
+</para>
+<programlisting>#include &quot;stm32f1xx_hal_def.h&quot;
+#include &quot;stm32f1xx_hal_gpio_ex.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_g_p_i_o___init_type_def">GPIO_InitTypeDef</link></para>
+
+<para>GPIO Init structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_0</emphasis>   ((uint16_t)0x0001)  /* Pin 0 selected    */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_1</emphasis>   ((uint16_t)0x0002)  /* Pin 1 selected    */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_2</emphasis>   ((uint16_t)0x0004)  /* Pin 2 selected    */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_3</emphasis>   ((uint16_t)0x0008)  /* Pin 3 selected    */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_4</emphasis>   ((uint16_t)0x0010)  /* Pin 4 selected    */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_5</emphasis>   ((uint16_t)0x0020)  /* Pin 5 selected    */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_6</emphasis>   ((uint16_t)0x0040)  /* Pin 6 selected    */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_7</emphasis>   ((uint16_t)0x0080)  /* Pin 7 selected    */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_8</emphasis>   ((uint16_t)0x0100)  /* Pin 8 selected    */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_9</emphasis>   ((uint16_t)0x0200)  /* Pin 9 selected    */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_10</emphasis>   ((uint16_t)0x0400)  /* Pin 10 selected   */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_11</emphasis>   ((uint16_t)0x0800)  /* Pin 11 selected   */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_12</emphasis>   ((uint16_t)0x1000)  /* Pin 12 selected   */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_13</emphasis>   ((uint16_t)0x2000)  /* Pin 13 selected   */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_14</emphasis>   ((uint16_t)0x4000)  /* Pin 14 selected   */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_15</emphasis>   ((uint16_t)0x8000)  /* Pin 15 selected   */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_All</emphasis>   ((uint16_t)0xFFFF)  /* All pins selected */</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GPIO_PIN_MASK</emphasis>   0x0000FFFFu /* PIN mask for assert test */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1gaf40bec3146810028a84b628d37d3b391">GPIO_MODE_INPUT</link>   0x00000000u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1ga1013838a64cec2f8c88f079c449d1982">GPIO_MODE_OUTPUT_PP</link>   0x00000001u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1ga2f91757829f6e9505ec386b840941929">GPIO_MODE_OUTPUT_OD</link>   0x00000011u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1ga526c72c5264316fc05c775b6cad4aa6a">GPIO_MODE_AF_PP</link>   0x00000002u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1ga282b9fd37c8ef31daba314ffae6bf023">GPIO_MODE_AF_OD</link>   0x00000012u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1gadb81109590b66d8e48076820064921b1">GPIO_MODE_AF_INPUT</link>   <link linkend="_group___g_p_i_o__mode__define_1gaf40bec3146810028a84b628d37d3b391">GPIO_MODE_INPUT</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1ga7a04f9ab65ad572ad20791a35009220c">GPIO_MODE_ANALOG</link>   0x00000003u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1ga088659562e68426d9a72821ea4fd8d50">GPIO_MODE_IT_RISING</link>   0x10110000u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1gaa166210a6da3ac7e8d7504702520e522">GPIO_MODE_IT_FALLING</link>   0x10210000u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1ga0678e61090ed61e91a6496f22ddfb3d1">GPIO_MODE_IT_RISING_FALLING</link>   0x10310000u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1ga97d78b82ea178ff7a4c35aa60b4e9338">GPIO_MODE_EVT_RISING</link>   0x10120000u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1gadbfa532b3566783ac6c0e07c2e0ffe5e">GPIO_MODE_EVT_FALLING</link>   0x10220000u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__mode__define_1ga1b760771297ed2fc55a6b13071188491">GPIO_MODE_EVT_RISING_FALLING</link>   0x10320000u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__speed__define_1gab7916c4265bfa1b26a5205ea9c1caa4e">GPIO_SPEED_FREQ_LOW</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga8e03107c8dbdeb512d612bb52d88014e">GPIO_CRL_MODE0_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__speed__define_1ga1724a25a9cf00ebf485daeb09cfa1e25">GPIO_SPEED_FREQ_MEDIUM</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga1facefbe58e0198f424d1e4487af72f6">GPIO_CRL_MODE0_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__speed__define_1gaef5898db71cdb957cd41f940b0087af8">GPIO_SPEED_FREQ_HIGH</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga2cdd3f5cad389fbe7c96458fb115035b">GPIO_CRL_MODE0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__pull__define_1ga5c2862579882c1cc64e36d38fbd07a4c">GPIO_NOPULL</link>   0x00000000u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__pull__define_1gae689bc8f5c42d6df7bd54a8dd372e072">GPIO_PULLUP</link>   0x00000001u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o__pull__define_1ga75d958d0410c36da7f27d1f4f5c36c14">GPIO_PULLDOWN</link>   0x00000002u</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o___exported___macros_1gaae18fc8d92ffa4df2172c78869e712fc">__HAL_GPIO_EXTI_GET_FLAG</link>(__EXTI_LINE__)   (EXTI-&gt;PR &amp; (__EXTI_LINE__))</para>
+
+<para>Checks whether the specified EXTI line flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o___exported___macros_1ga2f28fc349d1812cdc55a77c68d2b278d">__HAL_GPIO_EXTI_CLEAR_FLAG</link>(__EXTI_LINE__)   (EXTI-&gt;PR = (__EXTI_LINE__))</para>
+
+<para>Clears the EXTI&apos;s line pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o___exported___macros_1ga27f0e1f6c38745169d74620f6a178a94">__HAL_GPIO_EXTI_GET_IT</link>(__EXTI_LINE__)   (EXTI-&gt;PR &amp; (__EXTI_LINE__))</para>
+
+<para>Checks whether the specified EXTI line is asserted or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o___exported___macros_1ga2a086506eec826f49b200fba64beb9f1">__HAL_GPIO_EXTI_CLEAR_IT</link>(__EXTI_LINE__)   (EXTI-&gt;PR = (__EXTI_LINE__))</para>
+
+<para>Clears the EXTI&apos;s line pending bits. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o___exported___macros_1gac50aef6881e1f76032941ead9c9bce61">__HAL_GPIO_EXTI_GENERATE_SWIT</link>(__EXTI_LINE__)   (EXTI-&gt;SWIER |= (__EXTI_LINE__))</para>
+
+<para>Generates a Software interrupt on selected EXTI line. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_GPIO_PIN_ACTION</emphasis>(ACTION)   (((ACTION) == GPIO_PIN_RESET) || ((ACTION) == GPIO_PIN_SET))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_GPIO_PIN</emphasis>(PIN)   (((((uint32_t)PIN) &amp; GPIO_PIN_MASK ) != 0x00u) &amp;&amp; ((((uint32_t)PIN) &amp; ~GPIO_PIN_MASK) == 0x00u))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_GPIO_MODE</emphasis>(MODE)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_GPIO_SPEED</emphasis>(SPEED)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_GPIO_PULL</emphasis>(PULL)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43"/>enum <link linkend="_group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link> { <emphasis role="strong">GPIO_PIN_RESET</emphasis> = 0u
+, <emphasis role="strong">GPIO_PIN_SET</emphasis>
+ }</para>
+
+<para>GPIO Bit SET and Bit RESET enumeration. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <emphasis role="strong">HAL_GPIO_Init</emphasis> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, <link linkend="_struct_g_p_i_o___init_type_def">GPIO_InitTypeDef</link> *GPIO_Init)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_GPIO_DeInit</emphasis> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint32_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para><link linkend="_group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link> <emphasis role="strong">HAL_GPIO_ReadPin</emphasis> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_GPIO_WritePin</emphasis> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin, <link linkend="_group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link> PinState)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_GPIO_TogglePin</emphasis> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_GPIO_LockPin</emphasis> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_GPIO_EXTI_IRQHandler</emphasis> (uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_GPIO_EXTI_Callback</emphasis> (uint16_t GPIO_Pin)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of GPIO HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2016 STMicroelectronics. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+</section>

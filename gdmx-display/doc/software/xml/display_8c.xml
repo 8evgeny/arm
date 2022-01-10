@@ -1,0 +1,1408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="display_8c" kind="file" language="C++">
+    <compoundname>display.c</compoundname>
+    <includes refid="display_8h" local="yes">display.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Src/display.c</label>
+        <link refid="display_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>stm32f1xx_hal_flash.h</label>
+        <link refid="stm32f1xx__hal__flash_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>stm32f1xx_hal_tim_ex.h</label>
+        <link refid="stm32f1xx__hal__tim__ex_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>stm32f1xx_hal_pcd.h</label>
+        <link refid="stm32f1xx__hal__pcd_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="17">
+        <label>stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>stm32f1xx_ll_usb.h</label>
+        <link refid="stm32f1xx__ll__usb_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stddef.h</label>
+      </node>
+      <node id="20">
+        <label>stm32f1xx_hal_pwr.h</label>
+        <link refid="stm32f1xx__hal__pwr_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stm32f1xx_hal_rcc.h</label>
+        <link refid="stm32f1xx__hal__rcc_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stm32f1xx_hal_dma_ex.h</label>
+        <link refid="stm32f1xx__hal__dma__ex_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="19">
+        <label>stm32f1xx_hal_flash_ex.h</label>
+        <link refid="stm32f1xx__hal__flash__ex_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>stm32f1xx_hal_dma.h</label>
+        <link refid="stm32f1xx__hal__dma_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stm32f1xx_hal_tim.h</label>
+        <link refid="stm32f1xx__hal__tim_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stm32f1xx_hal_rcc_ex.h</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="14">
+        <label>stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="display_8c_1a908d7e38124ec476cf551cb99005ec79" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>volatile uint16_t DISPLAY_Counter</definition>
+        <argsstring></argsstring>
+        <name>DISPLAY_Counter</name>
+        <briefdescription>
+<para>Tick counter before display refresh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="18" column="19" bodyfile="Src/display.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="display_8c_1a6f93b4f9bb1e90f0d8a4fa8fcb324bd6" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>volatile uint8_t DISPLAY_RenderEnable</definition>
+        <argsstring></argsstring>
+        <name>DISPLAY_RenderEnable</name>
+        <briefdescription>
+<para>Render permission flag with DISPLAY_REFRESH_INTERVAL interval. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="21" column="18" bodyfile="Src/display.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="display_8c_1af8647feebaa37223414a0c6df1495d4a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>volatile uint8_t DISPLAY_RenderFlag</definition>
+        <argsstring></argsstring>
+        <name>DISPLAY_RenderFlag</name>
+        <briefdescription>
+<para>Display process flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="24" column="18" bodyfile="Src/display.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="display_8c_1a60a7c7c68fa27afdd67267e6f1b5f8e7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>volatile uint8_t DISPLAY_RenderStep</definition>
+        <argsstring></argsstring>
+        <name>DISPLAY_RenderStep</name>
+        <briefdescription>
+<para>Variable that stores the current step of displaying a character from the display buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="27" column="18" bodyfile="Src/display.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="display_8c_1a96a21577c739edf01c72c665e558729e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>volatile uint8_t DISPLAY_RenderBuffer[DISPLAY_ROW_NUM][DISPLAY_ROW_SIZE]</definition>
+        <argsstring>[DISPLAY_ROW_NUM][DISPLAY_ROW_SIZE]</argsstring>
+        <name>DISPLAY_RenderBuffer</name>
+        <briefdescription>
+<para>Display Buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="30" column="18" bodyfile="Src/display.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="display_8c_1af5cc78f170427239db1522e915e92fae" prot="public" static="no" mutable="no">
+        <type><ref refid="display_8h_1a529c2e8347c655d37fd7f3142b667b1c" kindref="member">DISPLAY_printSymbol</ref> *</type>
+        <definition>DISPLAY_printSymbol* ptrSymbol</definition>
+        <argsstring></argsstring>
+        <name>ptrSymbol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="261" column="1" bodyfile="Src/display.c" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="display_8c_1a9bdc76892e3f45aff38d571269b61fa6" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SringEndFlag</definition>
+        <argsstring></argsstring>
+        <name>SringEndFlag</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="299" column="9" bodyfile="Src/display.c" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="display_8c_1a7ffe3a1eb9de5d766a71c82b9e29479e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>DISPLAY_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Display initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Display control module initialization function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="42" column="6" bodyfile="Src/display.c" bodystart="42" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1af2d9b11fc11add9c5b2067065173490f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_clear</definition>
+        <argsstring>(void)</argsstring>
+        <name>DISPLAY_clear</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Display clear. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Display cleaning function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="107" column="6" bodyfile="Src/display.c" bodystart="107" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a3a58c2de5330df44cba322688012fc5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_setRenderBuffer</definition>
+        <argsstring>(uint8_t **buffer)</argsstring>
+        <name>DISPLAY_setRenderBuffer</name>
+        <param>
+          <type>uint8_t **</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Setting the display buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Display buffer setting function. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to a two-dimensional buffer of displayed information. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="129" column="6" bodyfile="Src/display.c" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a184eeb79104d99b29c02ade191eb5da8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_setCursorMode</definition>
+        <argsstring>(uint8_t mode)</argsstring>
+        <name>DISPLAY_setCursorMode</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Cursor mode control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A function that controls the mode of the cursor. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- cursor operation mode. Bit0 - On / Off, Bit1 - BlankOn / BlankOff. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="134" column="6" bodyfile="Src/display.c" bodystart="134" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a92df0fd966747a290d3b8a8ac00e36c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t DISPLAY_moveCursorXY</definition>
+        <argsstring>(uint8_t X, uint8_t Y)</argsstring>
+        <name>DISPLAY_moveCursorXY</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Y</declname>
+        </param>
+        <briefdescription>
+<para>Moves the cursor to the specified position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function of moving the cursor to the X, Y position. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the X axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the Y axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="159" column="9" bodyfile="Src/display.c" bodystart="159" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a529c2e8347c655d37fd7f3142b667b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_printSymbol</definition>
+        <argsstring>(uint8_t Symbol)</argsstring>
+        <name>DISPLAY_printSymbol</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>Symbol</declname>
+        </param>
+        <briefdescription>
+<para>Print the character at the current position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function of printing a character at the current cursor position on the display. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the displayed symbol. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="221" column="6" bodyfile="Src/display.c" bodystart="221" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a716e554a372718233ed84482c9d6fddc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_printSymbolXY</definition>
+        <argsstring>(uint8_t X, uint8_t Y, uint8_t Symbol)</argsstring>
+        <name>DISPLAY_printSymbolXY</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Symbol</declname>
+        </param>
+        <briefdescription>
+<para>Printing a character at the current position from FLASH memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function of printing a character at the current cursor position on the display. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptrSymbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to the displayed symbol in FLASH memory.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Prints a character at the specified position.</para>
+<para>The function of printing a character in the X, Y position. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the X axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the Y axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the displayed symbol. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="247" column="6" bodyfile="Src/display.c" bodystart="247" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a358f8f3ceffdf2e0f8df251a4305b4f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DISPLAY_moveCursorXY</definition>
+        <argsstring>(X, Y)</argsstring>
+        <name>DISPLAY_moveCursorXY</name>
+        <param>
+          <type>X</type>
+        </param>
+        <param>
+          <type>Y</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="260" column="1" declfile="Src/display.c" declline="260" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a78ee696bc155ce1e387e51cd2de725ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_printString</definition>
+        <argsstring>(uint8_t *String)</argsstring>
+        <name>DISPLAY_printString</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+<para>Print a character at a specified position from FLASH memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function of printing a character from FLASH memory to position X, Y. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the X axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the Y axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptrSymbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to the displayed symbol in FLASH memory. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display.</para>
+</simplesect>
+Print a string.</para>
+<para>Function of printing the string at the current cursor position on the display. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the string to be printed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="265" column="6" bodyfile="Src/display.c" bodystart="265" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a97ffb57b84ae6310716e699958818aef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_printScreen</definition>
+        <argsstring>(uint8_t *Screen)</argsstring>
+        <name>DISPLAY_printScreen</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>Screen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="272" column="6" bodyfile="Src/display.c" bodystart="272" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1afe3b925dfddfb9fdd70bbe50870df606" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>for</definition>
+        <argsstring>(uint8_t i=0;i&lt; DISPLAY_ROW_SIZE;i++)</argsstring>
+        <name>for</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="300" column="1" bodyfile="Src/display.c" bodystart="300" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1aaed284eab9e3f3045d2919e28ffa32e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_printStringXY</definition>
+        <argsstring>(uint8_t X, uint8_t Y, uint8_t *String)</argsstring>
+        <name>DISPLAY_printStringXY</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+<para>Print a string from FLASH memory at the current position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Function of printing a string from FLASH memory at the current cursor position on the display. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the string to be printed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display.</para>
+</simplesect>
+Print the string at the specified position.</para>
+<para>The function of printing a line to position X, Y. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the X axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the Y axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the string to be printed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="312" column="6" bodyfile="Src/display.c" bodystart="312" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a382d4e291f4ae46cde7a19ed9c14b647" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DISPLAY_printStringFromFlash</definition>
+        <argsstring>(String)</argsstring>
+        <name>DISPLAY_printStringFromFlash</name>
+        <param>
+          <type>String</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="326" column="1" declfile="Src/display.c" declline="326" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a0d6aec7669ccd3945ae03a20ba054b60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_putSymbolXYToRenderBuffer</definition>
+        <argsstring>(uint8_t X, uint8_t Y, uint8_t Symbol)</argsstring>
+        <name>DISPLAY_putSymbolXYToRenderBuffer</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Symbol</declname>
+        </param>
+        <briefdescription>
+<para>Printing a line from FLASH memory to position X, Y. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Function of printing a line from FLASH memory to position X, Y on the display. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the X axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the Y axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string to be printed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display.</para>
+</simplesect>
+The function of printing a character in RenderBuffer.</para>
+<para>The function to print a character in RenderBuffer at X, Y position. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the X axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the Y axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the symbol to be printed into the buffer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="330" column="6" bodyfile="Src/display.c" bodystart="330" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a4b74a845ba968c15b1d1904d012b6100" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_putStringXYToRenderBuffer</definition>
+        <argsstring>(uint8_t X, uint8_t Y, uint8_t *String)</argsstring>
+        <name>DISPLAY_putStringXYToRenderBuffer</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+<para>Function for printing a string in RenderBuffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function of printing a string in RenderBuffer at position X, Y. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the X axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the Y axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the string to be printed to the buffer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="335" column="6" bodyfile="Src/display.c" bodystart="335" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1aa9a5c1a970aa5de34d3304971e2fc2ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_printuint8_t</definition>
+        <argsstring>(uint8_t Value)</argsstring>
+        <name>DISPLAY_printuint8_t</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Function of printing an unsigned integer number on the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Function of printing an &quot;uint8_t&quot; number on the display from current position. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the unsigned integer number to be printed on the display. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="340" column="6" bodyfile="Src/display.c" bodystart="340" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1ae9559572c2911e6486eecb935cc4d6d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_printXYuint8_t</definition>
+        <argsstring>(uint8_t X, uint8_t Y, uint8_t Value)</argsstring>
+        <name>DISPLAY_printXYuint8_t</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Function of printing an unsigned integer number on the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Function of printing an &quot;uint8_t&quot; number on the display from position from the of X, Y. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the X axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the Y axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the unsigned integer number to be printed on the display. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="347" column="6" bodyfile="Src/display.c" bodystart="347" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a8a290b3726a83ce8446812044feb7fa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_printuint16_t</definition>
+        <argsstring>(uint16_t Value)</argsstring>
+        <name>DISPLAY_printuint16_t</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Function of printing an unsigned integer number on the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Function of printing an &quot;uint16_t&quot; number on the display from current position. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the unsigned integer number to be printed on the display. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="353" column="6" bodyfile="Src/display.c" bodystart="353" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a2b92f13e36779f17acbfafeb4c7c5653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_printXYuint16_t</definition>
+        <argsstring>(uint8_t X, uint8_t Y, uint16_t Value)</argsstring>
+        <name>DISPLAY_printXYuint16_t</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>Value</declname>
+        </param>
+        <briefdescription>
+<para>Function of printing an unsigned integer number on the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Function of printing an &quot;uint16_t&quot; number on the display from position from the of X, Y. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the X axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- coordinate of familiarity along the Y axis (from 0 to N). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the unsigned integer number to be printed on the display. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The origin is in the upper left corner of the display. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="360" column="6" bodyfile="Src/display.c" bodystart="360" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="display_8c_1a9b19caa251ad2b621967249c19483af1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DISPLAY_run</definition>
+        <argsstring>(void)</argsstring>
+        <name>DISPLAY_run</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Display render function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A function that renders the framebuffer to the display. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/display.c" line="367" column="6" bodyfile="Src/display.c" bodystart="367" bodyend="386"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="display_8h" kindref="compound">display.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//------------------------Constant<sp/>definitions--------------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//------------------------Variable<sp/>definitions--------------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint16_t<sp/>DISPLAY_Counter;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>DISPLAY_RenderEnable;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>DISPLAY_RenderFlag;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>DISPLAY_RenderStep;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>DISPLAY_RenderBuffer[<ref refid="display_8h_1ab45d61bf18ecf084278962fa9ad43389" kindref="member">DISPLAY_ROW_NUM</ref>][<ref refid="display_8h_1a993a4d4222351be0e7c6b094a655ce51" kindref="member">DISPLAY_ROW_SIZE</ref>];</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Variables<sp/>for<sp/>the<sp/>needs<sp/>of<sp/>the<sp/>LCD<sp/>emulator.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_DISPLAY_IN_TERMINAL</highlight></codeline>
+<codeline lineno="35"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>DISPLAY_X<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>DISPLAY_Y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//-----------------------Function<sp/>implementations-----------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>display.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a7ffe3a1eb9de5d766a71c82b9e29479e" kindref="member">DISPLAY_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_DISPLAY_IN_TERMINAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>DISPLAY<sp/>EMULATOR<sp/>\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;+----------------+\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;+----------------+\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Place<sp/>the<sp/>cursor<sp/>in<sp/>the<sp/>upper<sp/>left<sp/>corner.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(4<sp/>==<sp/>HD44780_ROW_NUM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[5A&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cursor<sp/>Up<sp/>for<sp/>5<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#elif(2<sp/>==<sp/>HD44780_ROW_NUM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[3A&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cursor<sp/>Up<sp/>for<sp/>3<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#elif(1<sp/>==<sp/>HD44780_ROW_NUM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[1A&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cursor<sp/>Up<sp/>for<sp/>1<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Undefined<sp/>LCD.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>Unknown<sp/>HD44780<sp/>format</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="comment">//#if<sp/>(4<sp/>==<sp/>HD44780_ROW_NUM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[1C&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cursor<sp/>Right<sp/>for<sp/>1<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>DISPLAY_X<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>DISPLAY_Y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>LCD<sp/>Driver<sp/>Initialization<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hd44780_8h_1a6eaa253877028275469e5e43602dc8f0" kindref="member">HD44780_init</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>the<sp/>indicator<sp/>enters<sp/>the<sp/>operating<sp/>mode<sp/>with<sp/>the<sp/>set<sp/>interface<sp/>type<sp/>and<sp/>you<sp/>can<sp/>send<sp/>commands<sp/>as<sp/>usual.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>HD44780_SETUP(HD44780_BUS4<sp/>|<sp/>HD44780_PAGE1);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>HD44780_DISPLAY_ON();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>HD44780_CLEAR();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>HD44780_AC_INC_MODE();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Turn<sp/>on<sp/>the<sp/>screen<sp/>backlight<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>HD44780_BACKLIGHT_ON();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>cursor<sp/>on<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>HD44780_CURSOR_ON();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tick<sp/>counter<sp/>initialization<sp/>before<sp/>display<sp/>refresh.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>DISPLAY_Counter<sp/>=<sp/><ref refid="display_8h_1a92ebc8b690017a2fc1ecd6991de36efc" kindref="member">DISPLAY_REFRESH_INTERVAL</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialization<sp/>of<sp/>the<sp/>display<sp/>process<sp/>flag.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>DISPLAY_RenderFlag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialization<sp/>of<sp/>a<sp/>variable<sp/>that<sp/>stores<sp/>the<sp/>current<sp/>display<sp/>step<sp/>of<sp/>the<sp/>character<sp/>from<sp/>the<sp/>display<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>DISPLAY_RenderStep<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialization<sp/>of<sp/>framebuffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint8_t<sp/>i=0;<sp/>i&lt;<ref refid="display_8h_1ab45d61bf18ecf084278962fa9ad43389" kindref="member">DISPLAY_ROW_NUM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint8_t<sp/>j=0;<sp/>j&lt;<ref refid="display_8h_1a993a4d4222351be0e7c6b094a655ce51" kindref="member">DISPLAY_ROW_SIZE</ref>;<sp/>j++){</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DISPLAY_RenderBuffer[i][j]<sp/>=<sp/>0x20;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Disable<sp/>rendering<sp/>with<sp/>the<sp/>DISPLAY_REFRESH_INTERVAL<sp/>interval.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>DISPLAY_RenderEnable<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Clearing<sp/>the<sp/>didplay.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1af2d9b11fc11add9c5b2067065173490f" kindref="member">DISPLAY_clear</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_DISPLAY_IN_TERMINAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Place<sp/>the<sp/>cursor<sp/>in<sp/>the<sp/>upper<sp/>left<sp/>corner.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(DISPLAY_X<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[%dD&quot;</highlight><highlight class="normal">,<sp/>DISPLAY_X);</highlight><highlight class="comment">//<sp/>Left</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>DISPLAY_X<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(DISPLAY_Y)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[%dA&quot;</highlight><highlight class="normal">,<sp/>DISPLAY_Y);</highlight><highlight class="comment">//<sp/>Up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>DISPLAY_Y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[%dD&quot;</highlight><highlight class="normal">,<sp/>16);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Left</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[%dB&quot;</highlight><highlight class="normal">,<sp/>1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Down</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[%dD&quot;</highlight><highlight class="normal">,<sp/>16);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Left</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[%dA&quot;</highlight><highlight class="normal">,<sp/>1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>HD44780_CLEAR();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Display<sp/>buffer<sp/>setting<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a3a58c2de5330df44cba322688012fc5d" kindref="member">DISPLAY_setRenderBuffer</ref>(uint8_t<sp/>**buffer){</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TO<sp/>DO...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>function<sp/>that<sp/>controls<sp/>the<sp/>mode<sp/>of<sp/>the<sp/>cursor.<sp/>Bit0<sp/>-<sp/>On<sp/>/<sp/>Off,<sp/>Bit1<sp/>-<sp/>BlankOn<sp/>/<sp/>BlankOff.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a184eeb79104d99b29c02ade191eb5da8" kindref="member">DISPLAY_setCursorMode</ref>(uint8_t<sp/>mode){</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_DISPLAY_IN_TERMINAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TO<sp/>DO...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Turn<sp/>the<sp/>cursor<sp/>on<sp/>or<sp/>off.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mode<sp/>&amp;<sp/>0x01){</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HD44780_CURSOR_ON();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HD44780_CURSOR_OFF();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delay<sp/>100<sp/>us.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>usDelay(100);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Turn<sp/>cursor<sp/>blinking<sp/>on<sp/>or<sp/>off.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mode<sp/>&amp;<sp/>0x02){</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HD44780_BLANK_ON();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HD44780_BLANK_OFF();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delay<sp/>100<sp/>us.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>usDelay(100);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>function<sp/>of<sp/>moving<sp/>the<sp/>cursor<sp/>to<sp/>the<sp/>X,<sp/>Y<sp/>position.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">uint8_t<sp/><ref refid="display_8h_1a92df0fd966747a290d3b8a8ac00e36c7" kindref="member">DISPLAY_moveCursorXY</ref>(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y){</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_DISPLAY_IN_TERMINAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((X<sp/>&gt;=0)<sp/>&amp;&amp;<sp/>(X<sp/>&lt;<sp/><ref refid="display_8h_1a993a4d4222351be0e7c6b094a655ce51" kindref="member">DISPLAY_ROW_SIZE</ref>)){</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(X<sp/>&gt;<sp/>DISPLAY_X){</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[%dC&quot;</highlight><highlight class="normal">,<sp/>X<sp/>-<sp/>DISPLAY_X);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(X<sp/>&lt;<sp/>DISPLAY_X){</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[%dD&quot;</highlight><highlight class="normal">,<sp/>DISPLAY_X<sp/>-<sp/>X);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Left</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DISPLAY_X<sp/>=<sp/>X;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/>0x01;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((Y<sp/>&gt;=0)<sp/>&amp;&amp;<sp/>(Y<sp/>&lt;<sp/><ref refid="display_8h_1ab45d61bf18ecf084278962fa9ad43389" kindref="member">DISPLAY_ROW_NUM</ref>)){</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Y<sp/>&gt;<sp/>DISPLAY_Y){</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[%dB&quot;</highlight><highlight class="normal">,<sp/>Y<sp/>-<sp/>DISPLAY_Y);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Down</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Y<sp/>&lt;<sp/>DISPLAY_Y){</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;\x1B[%dA&quot;</highlight><highlight class="normal">,<sp/>DISPLAY_Y<sp/>-<sp/>Y);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DISPLAY_Y<sp/>=<sp/>Y;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/>0x02;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(Y){</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#if(DISPLAY_ROW_NUM<sp/>&gt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HD44780_SET_DDR_ADDR((uint8_t)(HD44780_ROW1_START+X));</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#if(DISPLAY_ROW_NUM<sp/>&gt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HD44780_SET_DDR_ADDR((uint8_t)(HD44780_ROW2_START+X));</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#if(DISPLAY_ROW_NUM<sp/>&gt;<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HD44780_SET_DDR_ADDR((uint8_t)(HD44780_ROW3_START+X));</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HD44780_SET_DDR_ADDR((uint8_t)(HD44780_ROW4_START+X));</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delay<sp/>100<sp/>us.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>usDelay(100);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>function<sp/>of<sp/>printing<sp/>a<sp/>character<sp/>at<sp/>the<sp/>current<sp/>cursor<sp/>position<sp/>on<sp/>the<sp/>display.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a529c2e8347c655d37fd7f3142b667b1c" kindref="member">DISPLAY_printSymbol</ref>(uint8_t<sp/>Symbol){</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_DISPLAY_IN_TERMINAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(DISPLAY_X<sp/>&lt;<sp/><ref refid="display_8h_1a993a4d4222351be0e7c6b094a655ce51" kindref="member">DISPLAY_ROW_SIZE</ref>){</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,<sp/>Symbol);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DISPLAY_X++;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Display<sp/>the<sp/>symbol<sp/>at<sp/>the<sp/>current<sp/>position.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>HD44780_writeData(Symbol);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delay<sp/>100<sp/>us.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>usDelay(100);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>function<sp/>of<sp/>printing<sp/>a<sp/>character<sp/>at<sp/>the<sp/>current<sp/>cursor<sp/>position<sp/>on<sp/>the<sp/>display<sp/>from<sp/>Flash<sp/>memory.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DISPLAY_printSymbolFromFlash(__FLASH_STRING<sp/>ptrSymbol){</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Display<sp/>the<sp/>symbol<sp/>at<sp/>the<sp/>current<sp/>position.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>HD44780_writeData(Symbol);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delay<sp/>100<sp/>us.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>usDelay(100);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>function<sp/>of<sp/>printing<sp/>a<sp/>character<sp/>on<sp/>the<sp/>display<sp/>in<sp/>position<sp/>X,<sp/>Y.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a716e554a372718233ed84482c9d6fddc" kindref="member">DISPLAY_printSymbolXY</ref>(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y,<sp/>uint8_t<sp/>Symbol){</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a92df0fd966747a290d3b8a8ac00e36c7" kindref="member">DISPLAY_moveCursorXY</ref>(X,<sp/>Y);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a529c2e8347c655d37fd7f3142b667b1c" kindref="member">DISPLAY_printSymbol</ref>(Symbol);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>function<sp/>of<sp/>printing<sp/>a<sp/>character<sp/>from<sp/>FLASH<sp/>memory<sp/>on<sp/>the<sp/>display<sp/>to<sp/>position<sp/>X,<sp/>Y.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__TI_COMPILER_VERSION__)<sp/>||<sp/>defined(__IAR_SYSTEMS_ICC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DISPLAY_printSymbolXYFromFlash(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y,<sp/>__flash<sp/>uint8_t<sp/>*ptrSymbol){</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DISPLAY_printSymbolXYFromFlash(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ptrSymbol){</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>Compiler<sp/>not<sp/>supported!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a92df0fd966747a290d3b8a8ac00e36c7" kindref="member">DISPLAY_moveCursorXY</ref>(X,<sp/>Y);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a529c2e8347c655d37fd7f3142b667b1c" kindref="member">DISPLAY_printSymbol</ref>(*ptrSymbol);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>of<sp/>printing<sp/>the<sp/>String<sp/>at<sp/>the<sp/>current<sp/>cursor<sp/>position<sp/>on<sp/>the<sp/>display.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a78ee696bc155ce1e387e51cd2de725ce" kindref="member">DISPLAY_printString</ref>(uint8_t<sp/>*String){</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(0<sp/>!=<sp/>*String){</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="display_8h_1a529c2e8347c655d37fd7f3142b667b1c" kindref="member">DISPLAY_printSymbol</ref>(*String++);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>of<sp/>printing<sp/>the<sp/>Screen<sp/>from<sp/>the<sp/>(0,<sp/>0)<sp/>position<sp/>on<sp/>the<sp/>display.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DISPLAY_printScreen(uint8_t<sp/>*Screen){</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>x<sp/>=<sp/>0,<sp/>y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a92df0fd966747a290d3b8a8ac00e36c7" kindref="member">DISPLAY_moveCursorXY</ref>(x,<sp/>y);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(0<sp/>!=<sp/>*Screen){</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="display_8h_1a529c2e8347c655d37fd7f3142b667b1c" kindref="member">DISPLAY_printSymbol</ref>(*Screen++);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(x&lt;<ref refid="hd44780_8h_1aea65f7cf75dd2099485351a9596231e9" kindref="member">HD44780_ROW_SIZE</ref>-1){</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x++;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x=0;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(y&lt;<ref refid="hd44780_8h_1a1f3b159c39a6eb32cf369d7f7f4f966f" kindref="member">HD44780_ROW_NUM</ref>-1){</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y++;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="display_8h_1a92df0fd966747a290d3b8a8ac00e36c7" kindref="member">DISPLAY_moveCursorXY</ref>(x,<sp/>y);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y=0;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>of<sp/>printing<sp/>the<sp/>String<sp/>from<sp/>FLASH<sp/>memory<sp/>at<sp/>the<sp/>current<sp/>cursor<sp/>position<sp/>on<sp/>the<sp/>display.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__TI_COMPILER_VERSION__)<sp/>||<sp/>defined(__IAR_SYSTEMS_ICC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DISPLAY_printStringFromFlash(__flash<sp/>uint8_t<sp/>*String){</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DISPLAY_printStringFromFlash(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String){</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>Compiler<sp/>not<sp/>supported!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>SringEndFlag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint8_t<sp/>i=0;<sp/>i&lt;<ref refid="display_8h_1a993a4d4222351be0e7c6b094a655ce51" kindref="member">DISPLAY_ROW_SIZE</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(String[i]<sp/>==<sp/>0)SringEndFlag<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if(!SringEndFlag)HD44780_put(String[i]);<sp/>else<sp/>HD44780_put(0x20);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!SringEndFlag)<ref refid="hd44780_8h_1a64ccdfe09ae2e69293cff8d88250ebc4" kindref="member">HD44780_writeByte</ref>(String[i],<sp/>1);<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>HD44780_writeData(0x20);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delay<sp/>100<sp/>us.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usDelay(100);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>of<sp/>printing<sp/>the<sp/>String<sp/>on<sp/>the<sp/>display<sp/>at<sp/>the<sp/>X,<sp/>Y<sp/>position.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1aaed284eab9e3f3045d2919e28ffa32e2" kindref="member">DISPLAY_printStringXY</ref>(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y,<sp/>uint8_t<sp/>*String){</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a92df0fd966747a290d3b8a8ac00e36c7" kindref="member">DISPLAY_moveCursorXY</ref>(X,<sp/>Y);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a78ee696bc155ce1e387e51cd2de725ce" kindref="member">DISPLAY_printString</ref>(String);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>of<sp/>printing<sp/>the<sp/>String<sp/>from<sp/>FLASH<sp/>memory<sp/>on<sp/>the<sp/>display<sp/>at<sp/>the<sp/>X,<sp/>Y<sp/>position.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__TI_COMPILER_VERSION__)<sp/>||<sp/>defined(__IAR_SYSTEMS_ICC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DISPLAY_printStringXYFromFlash(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y,<sp/>__flash<sp/>uint8_t<sp/>*String){</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DISPLAY_printStringXYFromFlash(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String){</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>Compiler<sp/>not<sp/>supported!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a92df0fd966747a290d3b8a8ac00e36c7" kindref="member">DISPLAY_moveCursorXY</ref>(X,<sp/>Y);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>DISPLAY_printStringFromFlash(String);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>function<sp/>of<sp/>printing<sp/>a<sp/>character<sp/>in<sp/>RenderBuffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a0d6aec7669ccd3945ae03a20ba054b60" kindref="member">DISPLAY_putSymbolXYToRenderBuffer</ref>(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y,<sp/>uint8_t<sp/>Symbol){</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>DISPLAY_RenderBuffer[Y][X]<sp/>=<sp/>Symbol;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>for<sp/>printing<sp/>a<sp/>string<sp/>in<sp/>RenderBuffer.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a4b74a845ba968c15b1d1904d012b6100" kindref="member">DISPLAY_putStringXYToRenderBuffer</ref>(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y,<sp/>uint8_t<sp/>*String){</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TO<sp/>DO...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>function<sp/>to<sp/>print<sp/>an<sp/>unsigned<sp/>integer<sp/>uint8_t<sp/>to<sp/>the<sp/>display.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1aa9a5c1a970aa5de34d3304971e2fc2ee" kindref="member">DISPLAY_printuint8_t</ref>(uint8_t<sp/>Value){</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>Str[4]<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(Str,<sp/></highlight><highlight class="stringliteral">&quot;%u&quot;</highlight><highlight class="normal">,<sp/>Value);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a78ee696bc155ce1e387e51cd2de725ce" kindref="member">DISPLAY_printString</ref>((uint8_t*)Str);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>of<sp/>printing<sp/>an<sp/>unsigned<sp/>integer<sp/>number<sp/>uint8_t<sp/>on<sp/>the<sp/>display<sp/>from<sp/>FLASH<sp/>memory<sp/>at<sp/>the<sp/>X,<sp/>Y<sp/>position.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1ae9559572c2911e6486eecb935cc4d6d8" kindref="member">DISPLAY_printXYuint8_t</ref>(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y,<sp/>uint8_t<sp/>Value){</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a92df0fd966747a290d3b8a8ac00e36c7" kindref="member">DISPLAY_moveCursorXY</ref>(X,<sp/>Y);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1aa9a5c1a970aa5de34d3304971e2fc2ee" kindref="member">DISPLAY_printuint8_t</ref>(Value);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>function<sp/>to<sp/>print<sp/>an<sp/>unsigned<sp/>integer<sp/>uint16_t<sp/>to<sp/>the<sp/>display.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a8a290b3726a83ce8446812044feb7fa6" kindref="member">DISPLAY_printuint16_t</ref>(uint16_t<sp/>Value){</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>Str[6]<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(Str,<sp/></highlight><highlight class="stringliteral">&quot;%u&quot;</highlight><highlight class="normal">,<sp/>Value);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a78ee696bc155ce1e387e51cd2de725ce" kindref="member">DISPLAY_printString</ref>((uint8_t*)Str);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>of<sp/>printing<sp/>an<sp/>unsigned<sp/>integer<sp/>number<sp/>uint16_t<sp/>on<sp/>the<sp/>display<sp/>from<sp/>FLASH<sp/>memory<sp/>at<sp/>the<sp/>X,<sp/>Y<sp/>position.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a2b92f13e36779f17acbfafeb4c7c5653" kindref="member">DISPLAY_printXYuint16_t</ref>(uint8_t<sp/>X,<sp/>uint8_t<sp/>Y,<sp/>uint16_t<sp/>Value){</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a92df0fd966747a290d3b8a8ac00e36c7" kindref="member">DISPLAY_moveCursorXY</ref>(X,<sp/>Y);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a8a290b3726a83ce8446812044feb7fa6" kindref="member">DISPLAY_printuint16_t</ref>(Value);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Display<sp/>display<sp/>function.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TO<sp/>DO:<sp/>SHOULD<sp/>BE<sp/>REDUCED<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>runtime!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="display_8h_1a9b19caa251ad2b621967249c19483af1" kindref="member">DISPLAY_run</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="369"><highlight class="comment"><sp/><sp/><sp/><sp/>//if(DisplayRenderStep<sp/>&lt;<sp/>32){</highlight></codeline>
+<codeline lineno="370"><highlight class="comment"><sp/><sp/><sp/><sp/>if(DISPLAY_RenderStep<sp/>&lt;<sp/>32){</highlight></codeline>
+<codeline lineno="371"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UCHAR<sp/>PY<sp/>=<sp/>(DisplayRenderStep<sp/>&amp;<sp/>0x10);</highlight></codeline>
+<codeline lineno="372"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SWAP(PY);</highlight></codeline>
+<codeline lineno="373"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//if(DisplayRenderStep<sp/>==<sp/>0x00)<sp/>DisplayRefreshCounter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="374"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(DisplayRenderStep<sp/>==<sp/>0x00)<sp/>DISPLAY_Counter<sp/>=<sp/>DISPLAY_REFRESH_INTERVAL;</highlight></codeline>
+<codeline lineno="375"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(UCHAR<sp/>i=0;<sp/>i&lt;4;<sp/>i++){</highlight></codeline>
+<codeline lineno="376"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moveDisplayCursorXY((DisplayRenderStep<sp/>&amp;<sp/>0x0F),<sp/>PY);</highlight></codeline>
+<codeline lineno="377"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printSymbol(DisplayRenderBuffer[PY][(DisplayRenderStep<sp/>&amp;<sp/>0x0F)]);</highlight></codeline>
+<codeline lineno="378"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DisplayRenderStep++;</highlight></codeline>
+<codeline lineno="379"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="380"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moveDisplayCursorXY(17,0);</highlight></codeline>
+<codeline lineno="381"><highlight class="comment"><sp/><sp/><sp/><sp/>}else{</highlight></codeline>
+<codeline lineno="382"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DisplayRenderStep<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="383"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DisplayRenderFlag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="384"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="385"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Src/display.c"/>
+  </compounddef>
+</doxygen>

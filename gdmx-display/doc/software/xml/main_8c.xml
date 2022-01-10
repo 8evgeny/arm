@@ -1,0 +1,1014 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="main_8c" kind="file" language="C++">
+    <compoundname>main.c</compoundname>
+    <includes refid="cmsis__os_8h" local="yes">cmsis_os.h</includes>
+    <includes refid="usb__device_8h" local="yes">usb_device.h</includes>
+    <includes refid="usbd__cdc__if_8h" local="yes">usbd_cdc_if.h</includes>
+    <includes refid="main_8h" local="yes">main.h</includes>
+    <incdepgraph>
+      <node id="48">
+        <label>usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>stm32f1xx_hal_flash.h</label>
+        <link refid="stm32f1xx__hal__flash_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>projdefs.h</label>
+        <link refid="projdefs_8h_source"/>
+      </node>
+      <node id="18">
+        <label>usb_device.h</label>
+        <link refid="usb__device_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>stm32f1xx_hal_tim_ex.h</label>
+        <link refid="stm32f1xx__hal__tim__ex_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>stm32f1xx_hal_pcd.h</label>
+        <link refid="stm32f1xx__hal__pcd_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="41">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3">
+        <label>FreeRTOS.h</label>
+        <link refid="_free_r_t_o_s_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>semphr.h</label>
+        <link refid="semphr_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cmsis_os.h</label>
+        <link refid="cmsis__os_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>stm32f1xx_ll_usb.h</label>
+        <link refid="stm32f1xx__ll__usb_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>event_groups.h</label>
+        <link refid="event__groups_8h_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="14">
+        <label>timers.h</label>
+        <link refid="timers_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>stm32f1xx_hal_pwr.h</label>
+        <link refid="stm32f1xx__hal__pwr_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>stm32f1xx_hal_rcc.h</label>
+        <link refid="stm32f1xx__hal__rcc_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>stm32f1xx_hal_dma_ex.h</label>
+        <link refid="stm32f1xx__hal__dma__ex_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mpu_wrappers.h</label>
+        <link refid="mpu__wrappers_8h_source"/>
+      </node>
+      <node id="19">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="42">
+        <label>string.h</label>
+      </node>
+      <node id="8">
+        <label>portable.h</label>
+        <link refid="portable_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>list.h</label>
+        <link refid="list_8h_source"/>
+      </node>
+      <node id="15">
+        <label>queue.h</label>
+        <link refid="queue_8h_source"/>
+      </node>
+      <node id="32">
+        <label>stm32f1xx_hal_flash_ex.h</label>
+        <link refid="stm32f1xx__hal__flash__ex_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>stm32f1xx_hal_dma.h</label>
+        <link refid="stm32f1xx__hal__dma_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FreeRTOSConfig.h</label>
+        <link refid="_free_r_t_o_s_config_8h_source"/>
+      </node>
+      <node id="34">
+        <label>stm32f1xx_hal_tim.h</label>
+        <link refid="stm32f1xx__hal__tim_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>deprecated_definitions.h</label>
+        <link refid="deprecated__definitions_8h_source"/>
+      </node>
+      <node id="24">
+        <label>stm32f1xx_hal_rcc_ex.h</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>task.h</label>
+        <link refid="task_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>stdio.h</label>
+      </node>
+      <node id="27">
+        <label>stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>portmacro.h</label>
+        <link refid="portmacro_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8c_1a25fc663547539bc49fecc0011bd76ab5" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref></type>
+        <definition>TIM_HandleTypeDef htim1</definition>
+        <argsstring></argsstring>
+        <name>htim1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="39" column="19" bodyfile="Src/main.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1aa658fe134a5d1309d7a15c8116fa142c" prot="public" static="no" mutable="no">
+        <type>osThreadId</type>
+        <definition>osThreadId defaultTaskHandle</definition>
+        <argsstring></argsstring>
+        <name>defaultTaskHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="46" column="12" bodyfile="Src/main.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a0ef1a80eb9a31084b335d4b71c24e001" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t defaultTaskBuffer[128]</definition>
+        <argsstring>[128]</argsstring>
+        <name>defaultTaskBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="47" column="10" bodyfile="Src/main.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1aca18732f09ae696fd34b94d393dc9a42" prot="public" static="no" mutable="no">
+        <type>osStaticThreadDef_t</type>
+        <definition>osStaticThreadDef_t defaultTaskControlBlock</definition>
+        <argsstring></argsstring>
+        <name>defaultTaskControlBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="48" column="21" bodyfile="Src/main.c" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1abb18ed41ec02639c22e1811d9766d9b8" prot="public" static="yes" mutable="no">
+        <type>osThreadId</type>
+        <definition>osThreadId usbProcTaskHandle</definition>
+        <argsstring></argsstring>
+        <name>usbProcTaskHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="50" column="19" bodyfile="Src/main.c" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1ae7146be42fae10d8b7577c80e4552747" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t myTask04Buffer[128]</definition>
+        <argsstring>[128]</argsstring>
+        <name>myTask04Buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="51" column="10" bodyfile="Src/main.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a251a509e4b79f96453aff726f0dd22e9" prot="public" static="no" mutable="no">
+        <type>osStaticThreadDef_t</type>
+        <definition>osStaticThreadDef_t myTask04ControlBlock</definition>
+        <argsstring></argsstring>
+        <name>myTask04ControlBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="52" column="21" bodyfile="Src/main.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a9096afe0438549219d5acfaceeaf7971" prot="public" static="no" mutable="no">
+        <type>osMutexId</type>
+        <definition>osMutexId usbRxMutexHandle</definition>
+        <argsstring></argsstring>
+        <name>usbRxMutexHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="54" column="11" bodyfile="Src/main.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a1486693ac0fa3755a69511340914db1c" prot="public" static="no" mutable="no">
+        <type>osStaticMutexDef_t</type>
+        <definition>osStaticMutexDef_t usbRxMutexControlBlock</definition>
+        <argsstring></argsstring>
+        <name>usbRxMutexControlBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="55" column="20" bodyfile="Src/main.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>The application entry point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="63" column="5" bodyfile="Src/main.c" bodystart="63" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a70af21c671abfcc773614a9a4f63d920" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemClock_Config</definition>
+        <argsstring>(void)</argsstring>
+        <name>SystemClock_Config</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>System Clock Configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the CPU, AHB and APB busses clocks. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="142" column="6" bodyfile="Src/main.c" bodystart="142" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1ad1f9d42690163f73f73e5b820c81ca14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MX_TIM1_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>MX_TIM1_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>TIM1 Initialization Function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="183" column="7" bodyfile="Src/main.c" bodystart="183" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a016544463b4842ced7191baf8f449cea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StartDefaultTask</definition>
+        <argsstring>(void const *argument)</argsstring>
+        <name>StartDefaultTask</name>
+        <param>
+          <type>void const *</type>
+          <declname>argument</declname>
+        </param>
+        <briefdescription>
+<para>Function implementing the defaultTask thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Not used </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="226" column="6" bodyfile="Src/main.c" bodystart="226" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1aa5f39a2ded9a08eedd825ab574516207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void usbProceed</definition>
+        <argsstring>(void const *argument)</argsstring>
+        <name>usbProceed</name>
+        <param>
+          <type>void const *</type>
+          <declname>argument</declname>
+        </param>
+        <briefdescription>
+<para>Function implementing the usbProcTask thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Not used </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="250" column="6" bodyfile="Src/main.c" bodystart="250" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="group___t_i_m___exported___functions___group9_1ga8a3b0ad512a6e6c6157440b68d395eac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HAL_TIM_PeriodElapsedCallback</definition>
+        <argsstring>(TIM_HandleTypeDef *htim)</argsstring>
+        <name>HAL_TIM_PeriodElapsedCallback</name>
+        <param>
+          <type><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref> *</type>
+          <declname>htim</declname>
+        </param>
+        <briefdescription>
+<para>Period elapsed callback in non blocking mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is called when TIM4 interrupt took place, inside HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment a global variable &quot;uwTick&quot; used as application time base. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>htim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: TIM handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="269" column="6" bodyfile="Src/main.c" bodystart="269" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a1730ffe1e560465665eb47d9264826f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Error_Handler</definition>
+        <argsstring>(void)</argsstring>
+        <name>Error_Handler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>FreeRTOS error handler function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is executed in case of error occurrence. User can add his own implementation to report the HAL error return state. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/main.c" line="277" column="6" bodyfile="Src/main.c" bodystart="277" bodyend="280"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Main program body. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Main module (source file). <simplesect kind="author"><para>Donskih Dmitry, Arthur Markaryan </para>
+</simplesect>
+<simplesect kind="date"><para>02.03.2019</para>
+</simplesect>
+<simplesect kind="attention"><para></para>
+</simplesect>
+<heading level="2"><center><copy/> Copyright (c) 2018 - 2021 Donskih Dmitry. All rights reserved.</center></heading>
+</para>
+<para>This software component is licensed by Donskih Dmitry under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cmsis_os.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="usb__device_8h" kindref="compound">usb_device.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="usbd__cdc__if_8h" kindref="compound">usbd_cdc_if.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>includes<sp/>----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="main_8h" kindref="compound">main.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>typedef<sp/>-----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>define<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>macro<sp/>-------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>variables<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref><sp/>htim1;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*const<sp/>char<sp/>test[]=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/>System<sp/>Loaded<sp/><sp/><sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;;</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">osThreadId<sp/>defaultTaskHandle;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">uint32_t<sp/>defaultTaskBuffer[<sp/>128<sp/>];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">osStaticThreadDef_t<sp/>defaultTaskControlBlock;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>osThreadId<sp/>usbProcTaskHandle;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">uint32_t<sp/>myTask04Buffer[<sp/>128<sp/>];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">osStaticThreadDef_t<sp/>myTask04ControlBlock;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">osMutexId<sp/>usbRxMutexHandle;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">osStaticMutexDef_t<sp/>usbRxMutexControlBlock;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>user<sp/>code<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>MCU<sp/>Configuration--------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reset<sp/>of<sp/>all<sp/>peripherals,<sp/>Initializes<sp/>the<sp/>Flash<sp/>interface<sp/>and<sp/>the<sp/>Systick.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_Init();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>the<sp/>system<sp/>clock<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1a70af21c671abfcc773614a9a4f63d920" kindref="member">SystemClock_Config</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GPIO<sp/>Ports<sp/>Clock<sp/>Enable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>__HAL_RCC_GPIOD_CLK_ENABLE();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>__HAL_RCC_GPIOA_CLK_ENABLE();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>__HAL_RCC_GPIOB_CLK_ENABLE();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>System<sp/>timer<sp/>for<sp/>FreeRTOS<sp/>initialization<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8c_1ad1f9d42690163f73f73e5b820c81ca14" kindref="member">MX_TIM1_Init</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Initialize<sp/>all<sp/>configured<sp/>peripherals</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>GPIO<sp/>pin<sp/>for<sp/>Leds<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="led_8h_1a50cf228fce8563fc202330b7b4816cb9" kindref="member">LED_init</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>GPIO<sp/>pin<sp/>for<sp/>Buzzer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="buzzer_8h_1a68f6dbcd53b3d88aaa925588daba83d8" kindref="member">BUZZER_init</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>GPIO<sp/>pins<sp/>and<sp/>startup<sp/>sequence<sp/>for<sp/>LCD<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a7ffe3a1eb9de5d766a71c82b9e29479e" kindref="member">DISPLAY_init</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>the<sp/>mutex(es)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>definition<sp/>and<sp/>creation<sp/>of<sp/>usbRxMutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>osMutexStaticDef(usbRxMutex,<sp/>&amp;usbRxMutexControlBlock);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>usbRxMutexHandle<sp/>=<sp/>osMutexCreate(osMutex(usbRxMutex));</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>RTOS_MUTEX<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>add<sp/>mutexes,<sp/>...<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>RTOS_MUTEX<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>RTOS_SEMAPHORES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>add<sp/>semaphores,<sp/>...<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>RTOS_SEMAPHORES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>RTOS_TIMERS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>start<sp/>timers,<sp/>add<sp/>new<sp/>ones,<sp/>...<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>RTOS_TIMERS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>RTOS_QUEUES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>add<sp/>queues,<sp/>...<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>RTOS_QUEUES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>the<sp/>thread(s)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>definition<sp/>and<sp/>creation<sp/>of<sp/>defaultTask<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>osThreadStaticDef(defaultTask,<sp/><ref refid="main_8c_1a016544463b4842ced7191baf8f449cea" kindref="member">StartDefaultTask</ref>,<sp/>osPriorityNormal,<sp/>0,<sp/>128,<sp/>defaultTaskBuffer,<sp/>&amp;defaultTaskControlBlock);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>defaultTaskHandle<sp/>=<sp/>osThreadCreate(osThread(defaultTask),<sp/>NULL);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>definition<sp/>and<sp/>creation<sp/>of<sp/>usbProcTask<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>osThreadStaticDef(usbProcTask,<sp/><ref refid="main_8c_1aa5f39a2ded9a08eedd825ab574516207" kindref="member">usbProceed</ref>,<sp/>osPriorityNormal,<sp/>0,<sp/>128,<sp/>myTask04Buffer,<sp/>&amp;myTask04ControlBlock);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>usbProcTaskHandle<sp/>=<sp/>osThreadCreate(osThread(usbProcTask),<sp/>NULL);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>RTOS_THREADS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>add<sp/>threads,<sp/>...<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>RTOS_THREADS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Start<sp/>scheduler<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>osKernelStart();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>should<sp/>never<sp/>get<sp/>here<sp/>as<sp/>control<sp/>is<sp/>now<sp/>taken<sp/>by<sp/>the<sp/>scheduler<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Infinite<sp/>loop<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>WHILE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>System<sp/>Clock<sp/>Configuration<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a70af21c671abfcc773614a9a4f63d920" kindref="member">SystemClock_Config</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_r_c_c___osc_init_type_def" kindref="compound">RCC_OscInitTypeDef</ref><sp/>RCC_OscInitStruct<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_r_c_c___clk_init_type_def" kindref="compound">RCC_ClkInitTypeDef</ref><sp/>RCC_ClkInitStruct<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_r_c_c___periph_c_l_k_init_type_def" kindref="compound">RCC_PeriphCLKInitTypeDef</ref><sp/>PeriphClkInit<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_OscInitStruct.<ref refid="struct_r_c_c___osc_init_type_def_1a23b9d1da2a92936c618d2416406275a3" kindref="member">OscillatorType</ref><sp/>=<sp/>RCC_OSCILLATORTYPE_HSE;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_OscInitStruct.<ref refid="struct_r_c_c___osc_init_type_def_1ad499b1bbeeb8096235b534a9bfa53c9d" kindref="member">HSEState</ref><sp/>=<sp/><ref refid="group___r_c_c___h_s_e___config_1gabc4f70a44776c557af20496b04d9a9db" kindref="member">RCC_HSE_ON</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_OscInitStruct.<ref refid="struct_r_c_c___osc_init_type_def_1a92007c1d01624a71cb277bf05b8d9a14" kindref="member">HSEPredivValue</ref><sp/>=<sp/>RCC_HSE_PREDIV_DIV1;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_OscInitStruct.<ref refid="struct_r_c_c___osc_init_type_def_1a49183e0be5cf522de0fa1968df0bf0d7" kindref="member">HSIState</ref><sp/>=<sp/><ref refid="group___r_c_c___h_s_i___config_1ga0bf09ef9e46d5da25cced7b3122f92f5" kindref="member">RCC_HSI_ON</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_OscInitStruct.<ref refid="struct_r_c_c___osc_init_type_def_1a7ec4025786fa81e2a4bfc42832c0eddf" kindref="member">PLL</ref>.<ref refid="struct_r_c_c___p_l_l_init_type_def_1ab3bb33f461bb409576e1c899c962e0b0" kindref="member">PLLState</ref><sp/>=<sp/><ref refid="group___r_c_c___p_l_l___config_1gaf86dbee130304ba5760818f56d34ec91" kindref="member">RCC_PLL_ON</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_OscInitStruct.<ref refid="struct_r_c_c___osc_init_type_def_1a7ec4025786fa81e2a4bfc42832c0eddf" kindref="member">PLL</ref>.<ref refid="struct_r_c_c___p_l_l_init_type_def_1a418ecda4a355c6a161e4893a7bc1897f" kindref="member">PLLSource</ref><sp/>=<sp/><ref refid="group___r_c_c___p_l_l___clock___source_1ga197cea7fe5c2db26fe7fcdb0f99dd4d7" kindref="member">RCC_PLLSOURCE_HSE</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_OscInitStruct.<ref refid="struct_r_c_c___osc_init_type_def_1a7ec4025786fa81e2a4bfc42832c0eddf" kindref="member">PLL</ref>.<ref refid="struct_r_c_c___p_l_l_init_type_def_1a4a57e48e8e939695ff2a76456e6360ef" kindref="member">PLLMUL</ref><sp/>=<sp/>RCC_PLL_MUL9;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_RCC_OscConfig(&amp;RCC_OscInitStruct)<sp/>!=<sp/>HAL_OK)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1a1730ffe1e560465665eb47d9264826f9" kindref="member">Error_Handler</ref>();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_ClkInitStruct.<ref refid="struct_r_c_c___clk_init_type_def_1afe92b105bff8e698233c286bb3018384" kindref="member">ClockType</ref><sp/>=<sp/><ref refid="group___r_c_c___system___clock___type_1gaa5330efbd790632856a2b15851517ef9" kindref="member">RCC_CLOCKTYPE_HCLK</ref><sp/>|<sp/><ref refid="group___r_c_c___system___clock___type_1ga7e721f5bf3fe925f78dae0356165332e" kindref="member">RCC_CLOCKTYPE_SYSCLK</ref><sp/>|<sp/><ref refid="group___r_c_c___system___clock___type_1gab00c7b70f0770a616be4b5df45a454c4" kindref="member">RCC_CLOCKTYPE_PCLK1</ref><sp/>|<sp/><ref refid="group___r_c_c___system___clock___type_1gaef7e78706e597a6551d71f5f9ad60cc0" kindref="member">RCC_CLOCKTYPE_PCLK2</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_ClkInitStruct.<ref refid="struct_r_c_c___clk_init_type_def_1a02b70c23b593a55814d887f483ea0871" kindref="member">SYSCLKSource</ref><sp/>=<sp/><ref refid="group___r_c_c___system___clock___source_1ga5caf08ac71d7dd7e7b2e3e421606aca7" kindref="member">RCC_SYSCLKSOURCE_PLLCLK</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_ClkInitStruct.<ref refid="struct_r_c_c___clk_init_type_def_1a082c91ea9f270509aca7ae6ec42c2a54" kindref="member">AHBCLKDivider</ref><sp/>=<sp/><ref refid="group___r_c_c___a_h_b___clock___source_1ga226f5bf675015ea677868132b6b83494" kindref="member">RCC_SYSCLK_DIV1</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_ClkInitStruct.<ref refid="struct_r_c_c___clk_init_type_def_1a994aca51c40decfc340e045da1a6ca19" kindref="member">APB1CLKDivider</ref><sp/>=<sp/><ref refid="group___r_c_c___a_p_b1___a_p_b2___clock___source_1ga4d2ebcf280d85e8449a5fb7b994b5169" kindref="member">RCC_HCLK_DIV2</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>RCC_ClkInitStruct.<ref refid="struct_r_c_c___clk_init_type_def_1a9bbc30e9f4ddf462bc1fa6ea273eb4db" kindref="member">APB2CLKDivider</ref><sp/>=<sp/><ref refid="group___r_c_c___a_p_b1___a_p_b2___clock___source_1ga8e3fcdef0e5d77bb61a52420fe1e9fbc" kindref="member">RCC_HCLK_DIV1</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_RCC_ClockConfig(&amp;RCC_ClkInitStruct,<sp/>FLASH_LATENCY_2)<sp/>!=<sp/>HAL_OK)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1a1730ffe1e560465665eb47d9264826f9" kindref="member">Error_Handler</ref>();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>PeriphClkInit.<ref refid="struct_r_c_c___periph_c_l_k_init_type_def_1a82dae3f6a5ae6c184bd1b95a88d41fc2" kindref="member">PeriphClockSelection</ref><sp/>=<sp/>RCC_PERIPHCLK_USB;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>PeriphClkInit.UsbClockSelection<sp/>=<sp/>RCC_USBCLKSOURCE_PLL_DIV1_5;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_RCCEx_PeriphCLKConfig(&amp;PeriphClkInit)<sp/>!=<sp/>HAL_OK)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1a1730ffe1e560465665eb47d9264826f9" kindref="member">Error_Handler</ref>();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="comment">/*static*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1ad1f9d42690163f73f73e5b820c81ca14" kindref="member">MX_TIM1_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_t_i_m___clock_config_type_def" kindref="compound">TIM_ClockConfigTypeDef</ref><sp/>sClockSourceConfig<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_t_i_m___master_config_type_def" kindref="compound">TIM_MasterConfigTypeDef</ref><sp/>sMasterConfig<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>htim1.<ref refid="struct_t_i_m___handle_type_def_1a4076faade36875a6a05767135bb70b86" kindref="member">Instance</ref><sp/>=<sp/>TIM1;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>htim1.<ref refid="struct_t_i_m___handle_type_def_1a21046dd4833b51c8e3f5c82ea134d03c" kindref="member">Init</ref>.<ref refid="struct_t_i_m___base___init_type_def_1affb82025da5b8d4a06e61f1690460f4d" kindref="member">Prescaler</ref><sp/>=<sp/>72;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>htim1.<ref refid="struct_t_i_m___handle_type_def_1a21046dd4833b51c8e3f5c82ea134d03c" kindref="member">Init</ref>.<ref refid="struct_t_i_m___base___init_type_def_1a4b29303489c983d0e9326d7ae0196ceb" kindref="member">CounterMode</ref><sp/>=<sp/><ref refid="group___t_i_m___counter___mode_1ga9eb9ab91119c2c76d4db453d599c0b7d" kindref="member">TIM_COUNTERMODE_UP</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>htim1.<ref refid="struct_t_i_m___handle_type_def_1a21046dd4833b51c8e3f5c82ea134d03c" kindref="member">Init</ref>.<ref refid="struct_t_i_m___base___init_type_def_1a49500eef6a2354eeee4adc005bf9cef6" kindref="member">Period</ref><sp/>=<sp/>0xffff;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>htim1.<ref refid="struct_t_i_m___handle_type_def_1a21046dd4833b51c8e3f5c82ea134d03c" kindref="member">Init</ref>.<ref refid="struct_t_i_m___base___init_type_def_1a8f20e02ae2774e1523942604315b8e13" kindref="member">ClockDivision</ref><sp/>=<sp/><ref refid="group___t_i_m___clock_division_1ga309297ccd407a836ede6a42d4dc479c1" kindref="member">TIM_CLOCKDIVISION_DIV1</ref>;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>htim1.<ref refid="struct_t_i_m___handle_type_def_1a21046dd4833b51c8e3f5c82ea134d03c" kindref="member">Init</ref>.<ref refid="struct_t_i_m___base___init_type_def_1a3c2ea8434bbce30aa191a816e27f9c1f" kindref="member">RepetitionCounter</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>htim1.<ref refid="struct_t_i_m___handle_type_def_1a21046dd4833b51c8e3f5c82ea134d03c" kindref="member">Init</ref>.<ref refid="struct_t_i_m___base___init_type_def_1a24796ba26d572a0993cb065a02865723" kindref="member">AutoReloadPreload</ref><sp/>=<sp/><ref refid="group___t_i_m___auto_reload_preload_1gaaa36f0c74b1d1ec83b0c105bfedfa309" kindref="member">TIM_AUTORELOAD_PRELOAD_ENABLE</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_TIM_Base_Init(&amp;htim1)<sp/>!=<sp/>HAL_OK)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1a1730ffe1e560465665eb47d9264826f9" kindref="member">Error_Handler</ref>();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>sClockSourceConfig.<ref refid="struct_t_i_m___clock_config_type_def_1afe27815154e535b96e8fa1b4d2fdd596" kindref="member">ClockSource</ref><sp/>=<sp/><ref refid="group___t_i_m___clock___source_1ga9b398a201d8b6a4f200ebde86b1d8f3a" kindref="member">TIM_CLOCKSOURCE_INTERNAL</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_TIM_ConfigClockSource(&amp;htim1,<sp/>&amp;sClockSourceConfig)<sp/>!=<sp/>HAL_OK)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1a1730ffe1e560465665eb47d9264826f9" kindref="member">Error_Handler</ref>();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>sMasterConfig.<ref refid="struct_t_i_m___master_config_type_def_1aafb70c2c7a9a93a3dad59a350df2b00f" kindref="member">MasterOutputTrigger</ref><sp/>=<sp/><ref refid="group___t_i_m___master___mode___selection_1ga32a8e436f2c0818a657b0d3fcf4e872d" kindref="member">TIM_TRGO_RESET</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>sMasterConfig.<ref refid="struct_t_i_m___master_config_type_def_1aa17903ecbee15ce7a6d51de5e9602d3f" kindref="member">MasterSlaveMode</ref><sp/>=<sp/><ref refid="group___t_i_m___master___slave___mode_1ga58ff99ef1d6d6f187e3615f9d3ec3b8b" kindref="member">TIM_MASTERSLAVEMODE_DISABLE</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAL_TIMEx_MasterConfigSynchronization(&amp;htim1,<sp/>&amp;sMasterConfig)<sp/>!=<sp/>HAL_OK)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8c_1a1730ffe1e560465665eb47d9264826f9" kindref="member">Error_Handler</ref>();</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_TIM_Base_Start(&amp;htim1);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a016544463b4842ced7191baf8f449cea" kindref="member">StartDefaultTask</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*<sp/>argument)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>init<sp/>code<sp/>for<sp/>USB_DEVICE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype_1gadab4f7fc1db4ce2be073d3913209d2af" kindref="member">MX_USB_DEVICE_Init</ref>();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>init<sp/>code<sp/>for<sp/>LCD<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="display_8h_1a7ffe3a1eb9de5d766a71c82b9e29479e" kindref="member">DISPLAY_init</ref>();</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>init<sp/>code<sp/>for<sp/>LEDs<sp/>and<sp/>Buzzer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="led_8h_1a730574f2ed84f2fd20c54babfc73c0ca" kindref="member">LED_resetLED1</ref>();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="led_8h_1a09886ae6f7015a329efc7d315aaa6f99" kindref="member">LED_resetLED2</ref>();</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="buzzer_8h_1aa36a6a8c2a992c2dae56e5e3699ff92a" kindref="member">BUZZER_reset</ref>();</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>osDelay(50);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>osThreadSetPriority(usbProcTaskHandle,osPriorityNormal);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>osThreadTerminate(defaultTaskHandle);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1aa5f39a2ded9a08eedd825ab574516207" kindref="member">usbProceed</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*<sp/>argument)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>osDelay(1000);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*char<sp/>*Str<sp/>=<sp/>&quot;Test\n&quot;;//<sp/>Temp<sp/>for<sp/>debug</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CDC_Transmit_FS((uint8_t*)Str,<sp/>sizeof(Str));<sp/><sp/><sp/><sp/>//<sp/>Temp<sp/>for<sp/>debug*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___t_i_m___exported___functions___group9_1ga8a3b0ad512a6e6c6157440b68d395eac" kindref="member">HAL_TIM_PeriodElapsedCallback</ref>(<ref refid="struct_t_i_m___handle_type_def" kindref="compound">TIM_HandleTypeDef</ref><sp/>*htim)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(htim-&gt;<ref refid="struct_t_i_m___handle_type_def_1a4076faade36875a6a05767135bb70b86" kindref="member">Instance</ref><sp/>==<sp/>TIM4)<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HAL_IncTick();</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>FreeRTOS<sp/>error<sp/>handler<sp/>function.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8c_1a1730ffe1e560465665eb47d9264826f9" kindref="member">Error_Handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>osThreadTerminate(usbProcTaskHandle);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>USE_FULL_ASSERT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>assert_failed(uint8_t<sp/>*file,<sp/>uint32_t<sp/>line)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>6<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>User<sp/>can<sp/>add<sp/>his<sp/>own<sp/>implementation<sp/>to<sp/>report<sp/>the<sp/>file<sp/>name<sp/>and<sp/>line<sp/>number,</highlight></codeline>
+<codeline lineno="294"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>tex:<sp/>printf(&quot;Wrong<sp/>parameters<sp/>value:<sp/>file<sp/>%s<sp/>on<sp/>line<sp/>%d\r\n&quot;,<sp/>file,<sp/>line)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>6<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>USE_FULL_ASSERT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="Src/main.c"/>
+  </compounddef>
+</doxygen>

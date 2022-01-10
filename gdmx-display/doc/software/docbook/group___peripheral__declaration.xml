@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___peripheral__declaration" xml:lang="en-US">
+<title>Peripheral_declaration</title>
+<indexterm><primary>Peripheral_declaration</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga3cfac9f2e43673f790f8668d48b4b92b"/>#define <emphasis role="strong">TIM2</emphasis>   ((<link linkend="_struct_t_i_m___type_def">TIM_TypeDef</link> *)TIM2_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga61ee4c391385607d7af432b63905fcc9"/>#define <emphasis role="strong">TIM3</emphasis>   ((<link linkend="_struct_t_i_m___type_def">TIM_TypeDef</link> *)TIM3_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga91a09bad8bdc7a1cb3d85cf49c94c8ec"/>#define <emphasis role="strong">TIM4</emphasis>   ((<link linkend="_struct_t_i_m___type_def">TIM_TypeDef</link> *)TIM4_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga5359a088f5d8b20ce74d920e46059304"/>#define <emphasis role="strong">RTC</emphasis>   ((<link linkend="_struct_r_t_c___type_def">RTC_TypeDef</link> *)RTC_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga9821fd01757986612ddb8982e2fe27f1"/>#define <emphasis role="strong">WWDG</emphasis>   ((<link linkend="_struct_w_w_d_g___type_def">WWDG_TypeDef</link> *)WWDG_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gad16b79dd94ee85d261d08a8ee94187e7"/>#define <emphasis role="strong">IWDG</emphasis>   ((<link linkend="_struct_i_w_d_g___type_def">IWDG_TypeDef</link> *)IWDG_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gaf2c3d8ce359dcfbb2261e07ed42af72b"/>#define <emphasis role="strong">SPI2</emphasis>   ((<link linkend="_struct_s_p_i___type_def">SPI_TypeDef</link> *)SPI2_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gaf114a9eab03ca08a6fb720e511595930"/>#define <emphasis role="strong">USART2</emphasis>   ((<link linkend="_struct_u_s_a_r_t___type_def">USART_TypeDef</link> *)USART2_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga2350115553c1fe0a7bc14e6a7ec6a225"/>#define <emphasis role="strong">USART3</emphasis>   ((<link linkend="_struct_u_s_a_r_t___type_def">USART_TypeDef</link> *)USART3_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gab45d257574da6fe1f091cc45b7eda6cc"/>#define <emphasis role="strong">I2C1</emphasis>   ((<link linkend="_struct_i2_c___type_def">I2C_TypeDef</link> *)I2C1_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gafa60ac20c1921ef1002083bb3e1f5d16"/>#define <emphasis role="strong">I2C2</emphasis>   ((<link linkend="_struct_i2_c___type_def">I2C_TypeDef</link> *)I2C2_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga779bf099075a999d1074357fccbd466b"/>#define <emphasis role="strong">USB</emphasis>   ((<link linkend="_struct_u_s_b___type_def">USB_TypeDef</link> *)<link linkend="_group___peripheral__memory__map_1gaa6c4cbed4ddbb3ecd77de93fab2a2e04">USB_BASE</link>)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga4964ecb6a5c689aaf8ee2832b8093aac"/>#define <emphasis role="strong">CAN1</emphasis>   ((<link linkend="_struct_c_a_n___type_def">CAN_TypeDef</link> *)CAN1_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gaa38716de06974ea948ad34ef7bfee00b"/>#define <emphasis role="strong">BKP</emphasis>   ((<link linkend="_struct_b_k_p___type_def">BKP_TypeDef</link> *)BKP_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga04651c526497822a859942b928e57f8e"/>#define <emphasis role="strong">PWR</emphasis>   ((<link linkend="_struct_p_w_r___type_def">PWR_TypeDef</link> *)PWR_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga582e09473429414015b1de90cf767fa8"/>#define <emphasis role="strong">AFIO</emphasis>   ((<link linkend="_struct_a_f_i_o___type_def">AFIO_TypeDef</link> *)AFIO_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac"/>#define <emphasis role="strong">EXTI</emphasis>   ((<link linkend="_struct_e_x_t_i___type_def">EXTI_TypeDef</link> *)EXTI_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gac485358099728ddae050db37924dd6b7"/>#define <emphasis role="strong">GPIOA</emphasis>   ((<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *)GPIOA_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga68b66ac73be4c836db878a42e1fea3cd"/>#define <emphasis role="strong">GPIOB</emphasis>   ((<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *)GPIOB_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga2dca03332d620196ba943bc2346eaa08"/>#define <emphasis role="strong">GPIOC</emphasis>   ((<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *)GPIOC_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga7580b1a929ea9df59725ba9c18eba6ac"/>#define <emphasis role="strong">GPIOD</emphasis>   ((<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *)GPIOD_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gae04bdb5e8acc47cab1d0532e6b0d0763"/>#define <emphasis role="strong">GPIOE</emphasis>   ((<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *)GPIOE_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga90d2d5c526ce5c0a551f533eccbee71a"/>#define <emphasis role="strong">ADC1</emphasis>   ((<link linkend="_struct_a_d_c___type_def">ADC_TypeDef</link> *)ADC1_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gac5503ae96c26b4475226f96715a1bf1e"/>#define <emphasis role="strong">ADC2</emphasis>   ((<link linkend="_struct_a_d_c___type_def">ADC_TypeDef</link> *)ADC2_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gaf14f3ee44d5eab3d8f7dac1006cb5582"/>#define <emphasis role="strong">ADC12_COMMON</emphasis>   ((<link linkend="_struct_a_d_c___common___type_def">ADC_Common_TypeDef</link> *)ADC1_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga2e87451fea8dc9380056d3cfc5ed81fb"/>#define <emphasis role="strong">TIM1</emphasis>   ((<link linkend="_struct_t_i_m___type_def">TIM_TypeDef</link> *)TIM1_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gad483be344a28ac800be8f03654a9612f"/>#define <emphasis role="strong">SPI1</emphasis>   ((<link linkend="_struct_s_p_i___type_def">SPI_TypeDef</link> *)SPI1_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga92871691058ff7ccffd7635930cb08da"/>#define <emphasis role="strong">USART1</emphasis>   ((<link linkend="_struct_u_s_a_r_t___type_def">USART_TypeDef</link> *)USART1_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gacc16d2a5937f7585320a98f7f6b578f9"/>#define <emphasis role="strong">DMA1</emphasis>   ((<link linkend="_struct_d_m_a___type_def">DMA_TypeDef</link> *)DMA1_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gac83c5be824be1c02716e2522e80ddf7a"/>#define <emphasis role="strong">DMA1_Channel1</emphasis>   ((<link linkend="_struct_d_m_a___channel___type_def">DMA_Channel_TypeDef</link> *)DMA1_Channel1_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga23d7631dd10c645e06971b2543ba2949"/>#define <emphasis role="strong">DMA1_Channel2</emphasis>   ((<link linkend="_struct_d_m_a___channel___type_def">DMA_Channel_TypeDef</link> *)DMA1_Channel2_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gacf7b6093a37b306d7f1f50b2f200f0d0"/>#define <emphasis role="strong">DMA1_Channel3</emphasis>   ((<link linkend="_struct_d_m_a___channel___type_def">DMA_Channel_TypeDef</link> *)DMA1_Channel3_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gad2c42743316bf64da557130061b1f56a"/>#define <emphasis role="strong">DMA1_Channel4</emphasis>   ((<link linkend="_struct_d_m_a___channel___type_def">DMA_Channel_TypeDef</link> *)DMA1_Channel4_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga06ff98ddef3c962795d2e2444004abff"/>#define <emphasis role="strong">DMA1_Channel5</emphasis>   ((<link linkend="_struct_d_m_a___channel___type_def">DMA_Channel_TypeDef</link> *)DMA1_Channel5_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gac013c4376e4797831b5ddd2a09519df8"/>#define <emphasis role="strong">DMA1_Channel6</emphasis>   ((<link linkend="_struct_d_m_a___channel___type_def">DMA_Channel_TypeDef</link> *)DMA1_Channel6_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga4f9c23b3d1add93ed206b5c9afa5cda3"/>#define <emphasis role="strong">DMA1_Channel7</emphasis>   ((<link linkend="_struct_d_m_a___channel___type_def">DMA_Channel_TypeDef</link> *)DMA1_Channel7_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga74944438a086975793d26ae48d5882d4"/>#define <emphasis role="strong">RCC</emphasis>   ((<link linkend="_struct_r_c_c___type_def">RCC_TypeDef</link> *)RCC_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga4381bb54c2dbc34500521165aa7b89b1"/>#define <emphasis role="strong">CRC</emphasis>   ((<link linkend="_struct_c_r_c___type_def">CRC_TypeDef</link> *)CRC_BASE)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b"/>#define <emphasis role="strong">FLASH</emphasis>   ((<link linkend="_struct_f_l_a_s_h___type_def">FLASH_TypeDef</link> *)<link linkend="_group___peripheral__memory__map_1ga8e21f4845015730c5731763169ec0e9b">FLASH_R_BASE</link>)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1gad2d5f875cdc6d696735f20fa23a895c3"/>#define <emphasis role="strong">OB</emphasis>   ((<link linkend="_struct_o_b___type_def">OB_TypeDef</link> *)<link linkend="_group___peripheral__memory__map_1gab5b5fb155f9ee15dfb6d757da1adc926">OB_BASE</link>)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4"/>#define <emphasis role="strong">DBGMCU</emphasis>   ((<link linkend="_struct_d_b_g_m_c_u___type_def">DBGMCU_TypeDef</link> *)<link linkend="_group___peripheral__memory__map_1ga4adaf4fd82ccc3a538f1f27a70cdbbef">DBGMCU_BASE</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

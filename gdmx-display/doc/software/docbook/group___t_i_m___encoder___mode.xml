@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___encoder___mode" xml:lang="en-US">
+<title>TIM Encoder Mode</title>
+<indexterm><primary>TIM Encoder Mode</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___encoder___mode_1gaff047abefa78b0f0a7bbd0f648905d7d">TIM_ENCODERMODE_TI1</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga7d1ebece401aeb12abd466d2eafa78b2">TIM_SMCR_SMS_0</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___encoder___mode_1ga9166e985a35358cb3ed942c2a36e018d">TIM_ENCODERMODE_TI2</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaa980a3121ab6cda5a4a42b959da8421e">TIM_SMCR_SMS_1</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___encoder___mode_1ga8046f1021dc578551fcff88891239e67">TIM_ENCODERMODE_TI12</link>   (<link linkend="_group___peripheral___registers___bits___definition_1gaa980a3121ab6cda5a4a42b959da8421e">TIM_SMCR_SMS_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga7d1ebece401aeb12abd466d2eafa78b2">TIM_SMCR_SMS_0</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___encoder___mode_1gaff047abefa78b0f0a7bbd0f648905d7d"/>    <section>
+    <title>TIM_ENCODERMODE_TI1</title>
+<indexterm><primary>TIM_ENCODERMODE_TI1</primary><secondary>TIM Encoder Mode</secondary></indexterm>
+<indexterm><primary>TIM Encoder Mode</primary><secondary>TIM_ENCODERMODE_TI1</secondary></indexterm>
+<para><computeroutput>#define TIM_ENCODERMODE_TI1   <link linkend="_group___peripheral___registers___bits___definition_1ga7d1ebece401aeb12abd466d2eafa78b2">TIM_SMCR_SMS_0</link></computeroutput></para>
+<para>Quadrature encoder mode 1, x2 mode, counts up/down on TI1FP1 edge depending on TI2FP2 level 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___encoder___mode_1ga8046f1021dc578551fcff88891239e67"/>    <section>
+    <title>TIM_ENCODERMODE_TI12</title>
+<indexterm><primary>TIM_ENCODERMODE_TI12</primary><secondary>TIM Encoder Mode</secondary></indexterm>
+<indexterm><primary>TIM Encoder Mode</primary><secondary>TIM_ENCODERMODE_TI12</secondary></indexterm>
+<para><computeroutput>#define TIM_ENCODERMODE_TI12   (<link linkend="_group___peripheral___registers___bits___definition_1gaa980a3121ab6cda5a4a42b959da8421e">TIM_SMCR_SMS_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga7d1ebece401aeb12abd466d2eafa78b2">TIM_SMCR_SMS_0</link>)</computeroutput></para>
+<para>Quadrature encoder mode 3, x4 mode, counts up/down on both TI1FP1 and TI2FP2 edges depending on the level of the other input. </para>
+    </section><anchor xml:id="_group___t_i_m___encoder___mode_1ga9166e985a35358cb3ed942c2a36e018d"/>    <section>
+    <title>TIM_ENCODERMODE_TI2</title>
+<indexterm><primary>TIM_ENCODERMODE_TI2</primary><secondary>TIM Encoder Mode</secondary></indexterm>
+<indexterm><primary>TIM Encoder Mode</primary><secondary>TIM_ENCODERMODE_TI2</secondary></indexterm>
+<para><computeroutput>#define TIM_ENCODERMODE_TI2   <link linkend="_group___peripheral___registers___bits___definition_1gaa980a3121ab6cda5a4a42b959da8421e">TIM_SMCR_SMS_1</link></computeroutput></para>
+<para>Quadrature encoder mode 2, x2 mode, counts up/down on TI2FP2 edge depending on TI1FP1 level. </para>
+</section>
+</section>
+</section>

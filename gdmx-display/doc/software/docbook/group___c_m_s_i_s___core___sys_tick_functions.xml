@@ -1,0 +1,2333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_m_s_i_s___core___sys_tick_functions" xml:lang="en-US">
+<title>SysTick Functions</title>
+<indexterm><primary>SysTick Functions</primary></indexterm>
+<para>
+
+<para>Functions that configure the System. </para>
+ 
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___c_m_s_i_s__core___debug_functions">ITM Functions</link></para>
+
+<para>Functions that access the ITM debug interface. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga84de5f534817cdbf8bd9064080effca2">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b">w</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e920e9d2e9a2738f8face0863888c0e">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b">w</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga61873807b9abee3dfa090c036e580d2e">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b">w</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5d690aa9e65fccaa320e1b8613f502c9">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b">w</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga040b60157eb7348b9325cb804333c48f">ISER</link> [16U]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga4e715edc749310cecbc19fa91c81fc7f"/>uint32_t <emphasis role="strong">RESERVED0</emphasis> [16U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae7aedd01fc75b7b98c6ef887cc21245b">ICER</link> [16U]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga3323ebb4ecad890dcf5e5dc126205312"/>uint32_t <emphasis role="strong">RSERVED1</emphasis> [16U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga19081cde0360514d37cefa9b5fdfc0fe">ISPR</link> [16U]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7743c8252af4b0bd8a8440f66d859cf5"/>uint32_t <emphasis role="strong">RESERVED2</emphasis> [16U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaf27404125e8333bfac9a13da10f924ca">ICPR</link> [16U]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaa4bffe09d298bc1210833fde1d290086"/>uint32_t <emphasis role="strong">RESERVED3</emphasis> [16U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga12dfc70e0aa06804ff91817c6a3c7d6e">IABR</link> [16U]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga0701d75c5b133d8d5a4436097a202236"/>uint32_t <emphasis role="strong">RESERVED4</emphasis> [16U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaddfcdde1da9ca4b87b4b8068b5df0dda">ITNS</link> [16U]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabd5ef8d9e3caace25094ac684840b270"/>uint32_t <emphasis role="strong">RESERVED5</emphasis> [16U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd53101944a852be90c412cdbcd7b9cc">IPR</link> [124U]</para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gadbf8292503748ba6421a523bdee6819d">CPUID</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaced895d6aba03d72b0d865fcc5ce44ee">ICSR</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaf86c61a5d38a4fc9cef942a12744486b"/>uint32_t <emphasis role="strong">RESERVED0</emphasis></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga9b6ccd9c0c0865f8facad77ea37240b0">AIRCR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacac65f229cb3fcb5369a0a9e0393b8c0">SCR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad68b5c1f2d9845ef4247cf2d9b041336">CCR</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac4ac04e673b5b8320d53f7b0947db902"/>uint32_t <emphasis role="strong">RESERVED1</emphasis></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga4b11478e02fe77786479537279482f45">SHPR</link> [2U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga44ad5c292dbd77e72f310902375a8a06">SHCSR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac81efc171e9852a36caeb47122bfec5b">CTRL</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga0c1333686137b7e25a46bd548a5b5bc3">LOAD</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae7a655a853654127f3dfb7fa32c3f457">VAL</link></para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaedf0dff29a9cacdaa2fb7eec6b116a13">CALIB</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac81efc171e9852a36caeb47122bfec5b">CTRL</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga67a4fc1b84d0b73e6db59fadf990f3a4"/>uint32_t <emphasis role="strong">RESERVED0</emphasis> [6U]</para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga72e52fffe9ac6af0ee15877e2d5dac41">PCSR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5d0c69187f8abc99ecbde49431cf0050">COMP0</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaaa45b15c650670f4f84000a1f419ca00"/>uint32_t <emphasis role="strong">RESERVED1</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad3c69d206a52a85165eb7bd8077b0608">FUNCTION0</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga093dc351b7db0476c625f462acb9fd7f"/>uint32_t <emphasis role="strong">RESERVED2</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaf9126caaf63b99d6df5d1e040c96e2ab">COMP1</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga9cc84ea2573359cd11acd5779e5a1261"/>uint32_t <emphasis role="strong">RESERVED3</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae8f02e32e101c4cc61115d271fa12ffb">FUNCTION1</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga1defe18fe95571e383d754b13d3f6c51"/>uint32_t <emphasis role="strong">RESERVED4</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaeeb1e36001c60a167399683280d6ec39">COMP2</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga171526446695fcdbfaf7992e567f881d"/>uint32_t <emphasis role="strong">RESERVED5</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga8ba3cc103077080ae3c0fc41e87d1197">FUNCTION2</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5009eeafbfdd33771613e8f36c4e6a34"/>uint32_t <emphasis role="strong">RESERVED6</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga20b0b62a3576ee88db4a7c065cd988ac">COMP3</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga0dbbc4810d588e942a16caeea77da414"/>uint32_t <emphasis role="strong">RESERVED7</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gafbfaba1d10558329868c6c55f91f82df">FUNCTION3</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaf6560e8bddb551e45119bc49bcd1c52f"/>uint32_t <emphasis role="strong">RESERVED8</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga8ea52ce87f7d0225db1b5ba91313f4b7">COMP4</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gadd96c3a797009b4a2ff376fb8b5ef965"/>uint32_t <emphasis role="strong">RESERVED9</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac6e22e104dd39b27e256b2850de70521">FUNCTION4</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga41c96adf03a0ce2e5e1b0795b006cec9"/>uint32_t <emphasis role="strong">RESERVED10</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga290e024c0b0f35317de6363a4135c3bc">COMP5</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gab50f65d78de18f6c1162b71c63ef90cf"/>uint32_t <emphasis role="strong">RESERVED11</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga9b7aee338904a0499cdfbc375a1e9f07">FUNCTION5</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae36f3b1c21c12e0c9e76a8bf2146222f"/>uint32_t <emphasis role="strong">RESERVED12</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga263131067f0ad2d04a2711962a455bfa">COMP6</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac6fc010c08497aab8a67940de4cdf947"/>uint32_t <emphasis role="strong">RESERVED13</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gab783d2034e8b4ee931a01929aa7f4372">FUNCTION6</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga70fcdd25167c77e7fc085a2afa91471a"/>uint32_t <emphasis role="strong">RESERVED14</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga26932a20b1cd18331bbe245caf8a6a92">COMP7</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga04bbc458fccb219217113583d8e1cf0d"/>uint32_t <emphasis role="strong">RESERVED15</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga16e2f314ca3e2bf3383b81ec9a03a436">FUNCTION7</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga1c18d707653399d2228813bdf7cf6ffb"/>uint32_t <emphasis role="strong">RESERVED16</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga9b9d9bb4b4ecab022a3d88d9cae6b5e0">COMP8</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaba61874f0eac372a611c3163ca61369c"/>uint32_t <emphasis role="strong">RESERVED17</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabe84d144b85c8dae18f7dc6d290a04ea">FUNCTION8</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga21a175d13003bf8a59534104ad4699fb"/>uint32_t <emphasis role="strong">RESERVED18</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga4e090c0e6b818b63724c774f38ccab14">COMP9</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaf476d7901cd2a48e4ecd52d471a9c07a"/>uint32_t <emphasis role="strong">RESERVED19</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga70ada7a7062083e68edb96698f25ba6e">FUNCTION9</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaf337378e1922d523d03560693d76ec67"/>uint32_t <emphasis role="strong">RESERVED20</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga8d5685c2bd0db66c3adaf19bc10a1150">COMP10</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga485451d515c8b75eefaf7e5f4dcc7c3a"/>uint32_t <emphasis role="strong">RESERVED21</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga87175ae057853babe4b55c2bf32ff933">FUNCTION10</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaa681df6cc7c4648ad03416ceb3ad0002"/>uint32_t <emphasis role="strong">RESERVED22</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gab5e5be1f4cce832413b02bd6eb8175f6">COMP11</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga214d76797c9fe16de56e22f950f55662"/>uint32_t <emphasis role="strong">RESERVED23</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga8e6200039c3ad48f811bd3dac9733523">FUNCTION11</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga831c72f73ca4a91bc1014ab528a93fc8"/>uint32_t <emphasis role="strong">RESERVED24</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga73bbb409205cd8ae8438c8a58998d205">COMP12</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga2249e45a0457ba4cb8acf37632535c7a"/>uint32_t <emphasis role="strong">RESERVED25</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga46eae26a5823b24ae4211b6b8f27ecf0">FUNCTION12</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga32a257dafeefc6d32acbfb46c907cc8b"/>uint32_t <emphasis role="strong">RESERVED26</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga8e7c69cbac19ef0b26b0ae0cc928da36">COMP13</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gab2616eeaef16e043f78f8fd70c28343b"/>uint32_t <emphasis role="strong">RESERVED27</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga72376480973424928cdc455caf65ff17">FUNCTION13</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaa01a9b92d0df2a2c48314908696bc327"/>uint32_t <emphasis role="strong">RESERVED28</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaf5930659b3107c17fa71e61803d63f97">COMP14</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga943f635a1ccfae4b50c837b540c1dda7"/>uint32_t <emphasis role="strong">RESERVED29</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaa11d2375486524bb0503fb100a5350af">FUNCTION14</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7d80a58642fbf3d12fd3fe56edcd58be"/>uint32_t <emphasis role="strong">RESERVED30</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae55e0087f992cfd56003fc3fe1394cb0">COMP15</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga425a2332a06a717c38a5997b14425eb2"/>uint32_t <emphasis role="strong">RESERVED31</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac08524fa409351f1dedf993cc2d3b2b7">FUNCTION15</link></para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga1585b32a1ab860d0d77803475d08c7c6">SSPSR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabf4a378b17278d98d2a5f9315fce7a5e">CSPSR</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaa57754b8f88bb376d184aaf6fe74f391"/>uint32_t <emphasis role="strong">RESERVED0</emphasis> [2U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga49a770cf0b7ec970f919f8ac22634fff">ACPR</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga4d91e8d0f8791a2d137be359e6ca669f"/>uint32_t <emphasis role="strong">RESERVED1</emphasis> [55U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae9673e1acb75a46ed9852fd7a557cb7d">SPPR</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad34dc93fd7d41ef2c3365292cc8a178d"/>uint32_t <emphasis role="strong">RESERVED2</emphasis> [131U]</para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a049b49e9da6772d38166397ce8fc70">FFSR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gafe3ca1410c32188d26be24c4ee9e180c">FFCR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga3fbc5c84a2a24bd6195e970ff8898024">PSCR</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5d2f5426c1c8dfd973687938ed24b45d"/>uint32_t <emphasis role="strong">RESERVED3</emphasis> [809U]</para>
+</listitem>
+            <listitem><para>__OM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacc9e51f871c357a9094105435b150d13">LAR</link></para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7219432d03f6cd1d220f4fe10aef4880">LSR</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac383eaddb064c33eacf2d60480c3eb71"/>uint32_t <emphasis role="strong">RESERVED4</emphasis> [4U]</para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaee6e8f4171b9024d763ba87f3ce92e73">TYPE</link></para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga81f643aff0e4bed2638a618e2b1fd3bb">DEVTYPE</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga94ca828091a9226ab6684fbf30e52909">DHCSR</link></para>
+</listitem>
+            <listitem><para>__OM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gab74a9ec90ad18e4f7a20362d362b754a">DCRSR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad1dbd0dd98b6d9327f70545e0081ddbf">DCRDR</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaa99de5f8c609f10c25ed51f57b2edd74">DEMCR</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga1defe18fe95571e383d754b13d3f6c51"/>uint32_t <emphasis role="strong">RESERVED4</emphasis> [1U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga65047e5b8051fa0c84200f8229a155b3">DAUTHCTRL</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2916e1173ded6e0fc26e8445e72a6087">DSCSR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7315cbd65fff89b9f8be36ac08cc5fc9">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad98f0eb4127072e96e7b5cbd97914e12">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaf49c84711c1d030fdf91db1b6d63b515">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gadcaacbb12a2397ba3145a73d7d80ec3f">b</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga1787506107747d2dedae05295d3532da">IP</link> [8U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaa043193516e3fc0abbf58ce7cf8cfb4e">SHP</link> [2U]</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga00851734f9545a0a7e7a328226a3f5cc">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga4adb8021a7ef1568e93a46d0325de738">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga331a60b885f4c78da7ca570384d4fdce">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga839870b8be70ac6687709b46cc1a4281">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga155224c8703c5227e075d53ad8d675af">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaad70e10fcb3afbcb25ab1cf8234ff4ca">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad2c6abf86ebe8085365f6d5d9f68e458">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga023a5445c54a860a9d009f1420683c23">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga121c12e5db26933b8531f9b76c56494b">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga9362b257457e0a869a7deab198b0b089">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga96f71e80609de7ea148c19682381ba2a">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaf41f9e062b40d912db146642e7cac6b7">b</link></para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5590387d8f44b477fd69951a737b0d7e">TRIGGER</link></para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga986b12d0c4f33d326504fe705228bd7b">ITFTTD0</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga97fb8816ad001f4910de095aa17d9db5">ITATBCTR2</link></para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga9954c088735caa505adc113f6c64d812">ITATBCTR0</link></para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga4ab517b49e30734dced6bed9befb1f4a">ITFTTD1</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae6b7f224b1c19c636148f991cc8db611">ITCTRL</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae024db200dd6038b38de69abd513f40c"/>uint32_t <emphasis role="strong">RESERVED5</emphasis> [39U]</para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga974d17c9a0b0b1b894e9707d158b0fbe">CLAIMSET</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga1f74caab7b0a7afa848c63ce8ebc6a6f">CLAIMCLR</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga49f51f1c090eb2cda74363bbfc3b385b"/>uint32_t <emphasis role="strong">RESERVED7</emphasis> [8U]</para>
+</listitem>
+            <listitem><para>__IM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaaed316dacef669454fa035e04ee90eca">DEVID</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:28</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga671315fe5d07987e628f1bafefc3e96d">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga3726ddd7cd544d22298d8815e63c3208">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:3</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gab0a3fe241e69ce3d69e06bc89c588023">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga38e16d844d0b34cd2e6d3d9901940f00">b</link></para>
+</listitem>
+            <listitem><para>__IOM uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaaddfff3b57de6faf60bfcc938c7229c9">SFCR</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Functions that configure the System. </para>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[1/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0..27 Reserved</para>
+
+<para>bit: 0..15 Reserved</para>
+
+<para>bit: 0..26 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[2/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[3/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[4/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[5/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..23 Reserved</para>
+
+<para>bit: 9..15 Reserved</para>
+
+<para>bit: 9 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[6/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..23 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[7/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[8/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[9/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..23 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[10/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0 Reserved</para>
+
+<para>bit: 3..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[11/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[12/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[13/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[14/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..23 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[15/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[16/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[17/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..23 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[18/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[19/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[20/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[21/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..23 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[22/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[23/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[24/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..23 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/>    <section>
+    <title>_reserved0<computeroutput>[25/25]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[1/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 25..27 Reserved</para>
+
+<para>bit: 20..23 Reserved</para>
+
+<para>bit: 16..23 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[2/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 25..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[3/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 2..31 Reserved</para>
+
+<para>bit: 4..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[4/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 2..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[5/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 25..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[6/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 2..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[7/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 25..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[8/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 2..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[9/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 25..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[10/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 2..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[11/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 25..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[12/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 2..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[13/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 25..27 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/>    <section>
+    <title>_reserved1<computeroutput>[14/14]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 2..31 Reserved </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga49a770cf0b7ec970f919f8ac22634fff"/>    <section>
+    <title>ACPR</title>
+<indexterm><primary>ACPR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ACPR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t ACPR</computeroutput></para>
+<para>Offset: 0x010 (R/W) Asynchronous Clock Prescaler Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga9b6ccd9c0c0865f8facad77ea37240b0"/>    <section>
+    <title>AIRCR</title>
+<indexterm><primary>AIRCR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>AIRCR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t AIRCR</computeroutput></para>
+<para>Offset: 0x00C (R/W) Application Interrupt and Reset Control Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga84de5f534817cdbf8bd9064080effca2"/>    <section>
+    <title><computeroutput>[1/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e920e9d2e9a2738f8face0863888c0e"/>    <section>
+    <title><computeroutput>[2/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga61873807b9abee3dfa090c036e580d2e"/>    <section>
+    <title><computeroutput>[3/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5d690aa9e65fccaa320e1b8613f502c9"/>    <section>
+    <title><computeroutput>[4/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7315cbd65fff89b9f8be36ac08cc5fc9"/>    <section>
+    <title><computeroutput>[5/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad98f0eb4127072e96e7b5cbd97914e12"/>    <section>
+    <title><computeroutput>[6/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaf49c84711c1d030fdf91db1b6d63b515"/>    <section>
+    <title><computeroutput>[7/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gadcaacbb12a2397ba3145a73d7d80ec3f"/>    <section>
+    <title><computeroutput>[8/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga00851734f9545a0a7e7a328226a3f5cc"/>    <section>
+    <title><computeroutput>[9/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga4adb8021a7ef1568e93a46d0325de738"/>    <section>
+    <title><computeroutput>[10/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga331a60b885f4c78da7ca570384d4fdce"/>    <section>
+    <title><computeroutput>[11/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga839870b8be70ac6687709b46cc1a4281"/>    <section>
+    <title><computeroutput>[12/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga155224c8703c5227e075d53ad8d675af"/>    <section>
+    <title><computeroutput>[13/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaad70e10fcb3afbcb25ab1cf8234ff4ca"/>    <section>
+    <title><computeroutput>[14/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad2c6abf86ebe8085365f6d5d9f68e458"/>    <section>
+    <title><computeroutput>[15/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga023a5445c54a860a9d009f1420683c23"/>    <section>
+    <title><computeroutput>[16/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga121c12e5db26933b8531f9b76c56494b"/>    <section>
+    <title><computeroutput>[17/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga9362b257457e0a869a7deab198b0b089"/>    <section>
+    <title><computeroutput>[18/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga96f71e80609de7ea148c19682381ba2a"/>    <section>
+    <title><computeroutput>[19/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaf41f9e062b40d912db146642e7cac6b7"/>    <section>
+    <title><computeroutput>[20/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga671315fe5d07987e628f1bafefc3e96d"/>    <section>
+    <title><computeroutput>[21/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga3726ddd7cd544d22298d8815e63c3208"/>    <section>
+    <title><computeroutput>[22/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gab0a3fe241e69ce3d69e06bc89c588023"/>    <section>
+    <title><computeroutput>[23/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga38e16d844d0b34cd2e6d3d9901940f00"/>    <section>
+    <title><computeroutput>[24/24]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct { ... }  b</computeroutput></para>
+<para>Structure used for bit access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[1/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[2/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[3/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[4/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[5/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[6/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[7/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[8/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[9/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[10/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[11/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[12/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[13/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/>    <section>
+    <title>C<computeroutput>[14/14]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaedf0dff29a9cacdaa2fb7eec6b116a13"/>    <section>
+    <title>CALIB</title>
+<indexterm><primary>CALIB</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>CALIB</secondary></indexterm>
+<para><computeroutput>__IM uint32_t CALIB</computeroutput></para>
+<para>Offset: 0x00C (R/ ) SysTick Calibration Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad68b5c1f2d9845ef4247cf2d9b041336"/>    <section>
+    <title>CCR</title>
+<indexterm><primary>CCR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>CCR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t CCR</computeroutput></para>
+<para>Offset: 0x014 (R/W) Configuration Control Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga1f74caab7b0a7afa848c63ce8ebc6a6f"/>    <section>
+    <title>CLAIMCLR</title>
+<indexterm><primary>CLAIMCLR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>CLAIMCLR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t CLAIMCLR</computeroutput></para>
+<para>Offset: 0xFA4 (R/W) Claim tag clear </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga974d17c9a0b0b1b894e9707d158b0fbe"/>    <section>
+    <title>CLAIMSET</title>
+<indexterm><primary>CLAIMSET</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>CLAIMSET</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t CLAIMSET</computeroutput></para>
+<para>Offset: 0xFA0 (R/W) Claim tag set </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5d0c69187f8abc99ecbde49431cf0050"/>    <section>
+    <title>COMP0</title>
+<indexterm><primary>COMP0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP0</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP0</computeroutput></para>
+<para>Offset: 0x020 (R/W) Comparator Register 0 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaf9126caaf63b99d6df5d1e040c96e2ab"/>    <section>
+    <title>COMP1</title>
+<indexterm><primary>COMP1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP1</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP1</computeroutput></para>
+<para>Offset: 0x030 (R/W) Comparator Register 1 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga8d5685c2bd0db66c3adaf19bc10a1150"/>    <section>
+    <title>COMP10</title>
+<indexterm><primary>COMP10</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP10</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP10</computeroutput></para>
+<para>Offset: 0x0C0 (R/W) Comparator Register 10 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gab5e5be1f4cce832413b02bd6eb8175f6"/>    <section>
+    <title>COMP11</title>
+<indexterm><primary>COMP11</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP11</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP11</computeroutput></para>
+<para>Offset: 0x0D0 (R/W) Comparator Register 11 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga73bbb409205cd8ae8438c8a58998d205"/>    <section>
+    <title>COMP12</title>
+<indexterm><primary>COMP12</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP12</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP12</computeroutput></para>
+<para>Offset: 0x0E0 (R/W) Comparator Register 12 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga8e7c69cbac19ef0b26b0ae0cc928da36"/>    <section>
+    <title>COMP13</title>
+<indexterm><primary>COMP13</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP13</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP13</computeroutput></para>
+<para>Offset: 0x0F0 (R/W) Comparator Register 13 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaf5930659b3107c17fa71e61803d63f97"/>    <section>
+    <title>COMP14</title>
+<indexterm><primary>COMP14</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP14</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP14</computeroutput></para>
+<para>Offset: 0x100 (R/W) Comparator Register 14 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae55e0087f992cfd56003fc3fe1394cb0"/>    <section>
+    <title>COMP15</title>
+<indexterm><primary>COMP15</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP15</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP15</computeroutput></para>
+<para>Offset: 0x110 (R/W) Comparator Register 15 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaeeb1e36001c60a167399683280d6ec39"/>    <section>
+    <title>COMP2</title>
+<indexterm><primary>COMP2</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP2</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP2</computeroutput></para>
+<para>Offset: 0x040 (R/W) Comparator Register 2 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga20b0b62a3576ee88db4a7c065cd988ac"/>    <section>
+    <title>COMP3</title>
+<indexterm><primary>COMP3</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP3</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP3</computeroutput></para>
+<para>Offset: 0x050 (R/W) Comparator Register 3 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga8ea52ce87f7d0225db1b5ba91313f4b7"/>    <section>
+    <title>COMP4</title>
+<indexterm><primary>COMP4</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP4</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP4</computeroutput></para>
+<para>Offset: 0x060 (R/W) Comparator Register 4 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga290e024c0b0f35317de6363a4135c3bc"/>    <section>
+    <title>COMP5</title>
+<indexterm><primary>COMP5</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP5</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP5</computeroutput></para>
+<para>Offset: 0x070 (R/W) Comparator Register 5 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga263131067f0ad2d04a2711962a455bfa"/>    <section>
+    <title>COMP6</title>
+<indexterm><primary>COMP6</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP6</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP6</computeroutput></para>
+<para>Offset: 0x080 (R/W) Comparator Register 6 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga26932a20b1cd18331bbe245caf8a6a92"/>    <section>
+    <title>COMP7</title>
+<indexterm><primary>COMP7</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP7</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP7</computeroutput></para>
+<para>Offset: 0x090 (R/W) Comparator Register 7 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga9b9d9bb4b4ecab022a3d88d9cae6b5e0"/>    <section>
+    <title>COMP8</title>
+<indexterm><primary>COMP8</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP8</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP8</computeroutput></para>
+<para>Offset: 0x0A0 (R/W) Comparator Register 8 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga4e090c0e6b818b63724c774f38ccab14"/>    <section>
+    <title>COMP9</title>
+<indexterm><primary>COMP9</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>COMP9</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t COMP9</computeroutput></para>
+<para>Offset: 0x0B0 (R/W) Comparator Register 9 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gadbf8292503748ba6421a523bdee6819d"/>    <section>
+    <title>CPUID</title>
+<indexterm><primary>CPUID</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>CPUID</secondary></indexterm>
+<para><computeroutput>__IM uint32_t CPUID</computeroutput></para>
+<para>Offset: 0x000 (R/ ) CPUID Base Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabf4a378b17278d98d2a5f9315fce7a5e"/>    <section>
+    <title>CSPSR</title>
+<indexterm><primary>CSPSR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>CSPSR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t CSPSR</computeroutput></para>
+<para>Offset: 0x004 (R/W) Current Parallel Port Sizes Register</para>
+
+<para>Offset: 0x004 (R/W) Current Parallel Port Size Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac81efc171e9852a36caeb47122bfec5b"/>    <section>
+    <title>CTRL<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>CTRL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>CTRL</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t CTRL</computeroutput></para>
+<para>Offset: 0x000 (R/W) SysTick Control and Status Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac81efc171e9852a36caeb47122bfec5b"/>    <section>
+    <title>CTRL<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>CTRL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>CTRL</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t CTRL</computeroutput></para>
+<para>Offset: 0x000 (R/W) Control Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga65047e5b8051fa0c84200f8229a155b3"/>    <section>
+    <title>DAUTHCTRL</title>
+<indexterm><primary>DAUTHCTRL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>DAUTHCTRL</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t DAUTHCTRL</computeroutput></para>
+<para>Offset: 0x014 (R/W) Debug Authentication Control Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad1dbd0dd98b6d9327f70545e0081ddbf"/>    <section>
+    <title>DCRDR</title>
+<indexterm><primary>DCRDR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>DCRDR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t DCRDR</computeroutput></para>
+<para>Offset: 0x008 (R/W) Debug Core Register Data Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gab74a9ec90ad18e4f7a20362d362b754a"/>    <section>
+    <title>DCRSR</title>
+<indexterm><primary>DCRSR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>DCRSR</secondary></indexterm>
+<para><computeroutput>__OM uint32_t DCRSR</computeroutput></para>
+<para>Offset: 0x004 ( /W) Debug Core Register Selector Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaa99de5f8c609f10c25ed51f57b2edd74"/>    <section>
+    <title>DEMCR</title>
+<indexterm><primary>DEMCR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>DEMCR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t DEMCR</computeroutput></para>
+<para>Offset: 0x00C (R/W) Debug Exception and Monitor Control Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaaed316dacef669454fa035e04ee90eca"/>    <section>
+    <title>DEVID</title>
+<indexterm><primary>DEVID</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>DEVID</secondary></indexterm>
+<para><computeroutput>__IM uint32_t DEVID</computeroutput></para>
+<para>Offset: 0xFC8 (R/ ) Device Configuration Register</para>
+
+<para>Offset: 0xFC8 (R/ ) TPIU_DEVID </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga81f643aff0e4bed2638a618e2b1fd3bb"/>    <section>
+    <title>DEVTYPE</title>
+<indexterm><primary>DEVTYPE</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>DEVTYPE</secondary></indexterm>
+<para><computeroutput>__IM uint32_t DEVTYPE</computeroutput></para>
+<para>Offset: 0xFCC (R/ ) Device Type Register</para>
+
+<para>Offset: 0xFCC (R/ ) Device Type Identifier Register</para>
+
+<para>Offset: 0xFCC (R/ ) TPIU_DEVTYPE </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga94ca828091a9226ab6684fbf30e52909"/>    <section>
+    <title>DHCSR</title>
+<indexterm><primary>DHCSR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>DHCSR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t DHCSR</computeroutput></para>
+<para>Offset: 0x000 (R/W) Debug Halting Control and Status Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga2916e1173ded6e0fc26e8445e72a6087"/>    <section>
+    <title>DSCSR</title>
+<indexterm><primary>DSCSR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>DSCSR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t DSCSR</computeroutput></para>
+<para>Offset: 0x018 (R/W) Debug Security Control and Status Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gafe3ca1410c32188d26be24c4ee9e180c"/>    <section>
+    <title>FFCR</title>
+<indexterm><primary>FFCR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FFCR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FFCR</computeroutput></para>
+<para>Offset: 0x304 (R/W) Formatter and Flush Control Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a049b49e9da6772d38166397ce8fc70"/>    <section>
+    <title>FFSR</title>
+<indexterm><primary>FFSR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FFSR</secondary></indexterm>
+<para><computeroutput>__IM uint32_t FFSR</computeroutput></para>
+<para>Offset: 0x300 (R/ ) Formatter and Flush Status Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad3c69d206a52a85165eb7bd8077b0608"/>    <section>
+    <title>FUNCTION0</title>
+<indexterm><primary>FUNCTION0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION0</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION0</computeroutput></para>
+<para>Offset: 0x028 (R/W) Function Register 0 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae8f02e32e101c4cc61115d271fa12ffb"/>    <section>
+    <title>FUNCTION1</title>
+<indexterm><primary>FUNCTION1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION1</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION1</computeroutput></para>
+<para>Offset: 0x038 (R/W) Function Register 1 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga87175ae057853babe4b55c2bf32ff933"/>    <section>
+    <title>FUNCTION10</title>
+<indexterm><primary>FUNCTION10</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION10</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION10</computeroutput></para>
+<para>Offset: 0x0C8 (R/W) Function Register 10 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga8e6200039c3ad48f811bd3dac9733523"/>    <section>
+    <title>FUNCTION11</title>
+<indexterm><primary>FUNCTION11</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION11</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION11</computeroutput></para>
+<para>Offset: 0x0D8 (R/W) Function Register 11 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga46eae26a5823b24ae4211b6b8f27ecf0"/>    <section>
+    <title>FUNCTION12</title>
+<indexterm><primary>FUNCTION12</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION12</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION12</computeroutput></para>
+<para>Offset: 0x0E8 (R/W) Function Register 12 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga72376480973424928cdc455caf65ff17"/>    <section>
+    <title>FUNCTION13</title>
+<indexterm><primary>FUNCTION13</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION13</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION13</computeroutput></para>
+<para>Offset: 0x0F8 (R/W) Function Register 13 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaa11d2375486524bb0503fb100a5350af"/>    <section>
+    <title>FUNCTION14</title>
+<indexterm><primary>FUNCTION14</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION14</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION14</computeroutput></para>
+<para>Offset: 0x108 (R/W) Function Register 14 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac08524fa409351f1dedf993cc2d3b2b7"/>    <section>
+    <title>FUNCTION15</title>
+<indexterm><primary>FUNCTION15</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION15</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION15</computeroutput></para>
+<para>Offset: 0x118 (R/W) Function Register 15 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga8ba3cc103077080ae3c0fc41e87d1197"/>    <section>
+    <title>FUNCTION2</title>
+<indexterm><primary>FUNCTION2</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION2</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION2</computeroutput></para>
+<para>Offset: 0x048 (R/W) Function Register 2 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gafbfaba1d10558329868c6c55f91f82df"/>    <section>
+    <title>FUNCTION3</title>
+<indexterm><primary>FUNCTION3</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION3</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION3</computeroutput></para>
+<para>Offset: 0x058 (R/W) Function Register 3 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gac6e22e104dd39b27e256b2850de70521"/>    <section>
+    <title>FUNCTION4</title>
+<indexterm><primary>FUNCTION4</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION4</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION4</computeroutput></para>
+<para>Offset: 0x068 (R/W) Function Register 4 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga9b7aee338904a0499cdfbc375a1e9f07"/>    <section>
+    <title>FUNCTION5</title>
+<indexterm><primary>FUNCTION5</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION5</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION5</computeroutput></para>
+<para>Offset: 0x078 (R/W) Function Register 5 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gab783d2034e8b4ee931a01929aa7f4372"/>    <section>
+    <title>FUNCTION6</title>
+<indexterm><primary>FUNCTION6</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION6</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION6</computeroutput></para>
+<para>Offset: 0x088 (R/W) Function Register 6 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga16e2f314ca3e2bf3383b81ec9a03a436"/>    <section>
+    <title>FUNCTION7</title>
+<indexterm><primary>FUNCTION7</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION7</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION7</computeroutput></para>
+<para>Offset: 0x098 (R/W) Function Register 7 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabe84d144b85c8dae18f7dc6d290a04ea"/>    <section>
+    <title>FUNCTION8</title>
+<indexterm><primary>FUNCTION8</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION8</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION8</computeroutput></para>
+<para>Offset: 0x0A8 (R/W) Function Register 8 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga70ada7a7062083e68edb96698f25ba6e"/>    <section>
+    <title>FUNCTION9</title>
+<indexterm><primary>FUNCTION9</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>FUNCTION9</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t FUNCTION9</computeroutput></para>
+<para>Offset: 0x0B8 (R/W) Function Register 9 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga12dfc70e0aa06804ff91817c6a3c7d6e"/>    <section>
+    <title>IABR</title>
+<indexterm><primary>IABR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>IABR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t IABR</computeroutput></para>
+<para>Offset: 0x200 (R/W) Interrupt Active bit Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae7aedd01fc75b7b98c6ef887cc21245b"/>    <section>
+    <title>ICER</title>
+<indexterm><primary>ICER</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ICER</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t ICER</computeroutput></para>
+<para>Offset: 0x080 (R/W) Interrupt Clear Enable Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaf27404125e8333bfac9a13da10f924ca"/>    <section>
+    <title>ICPR</title>
+<indexterm><primary>ICPR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ICPR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t ICPR</computeroutput></para>
+<para>Offset: 0x180 (R/W) Interrupt Clear Pending Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaced895d6aba03d72b0d865fcc5ce44ee"/>    <section>
+    <title>ICSR</title>
+<indexterm><primary>ICSR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ICSR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t ICSR</computeroutput></para>
+<para>Offset: 0x004 (R/W) Interrupt Control and State Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga1787506107747d2dedae05295d3532da"/>    <section>
+    <title>IP</title>
+<indexterm><primary>IP</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>IP</secondary></indexterm>
+<para><computeroutput>__IOM uint8_t IP</computeroutput></para>
+<para>Offset: 0x300 (R/W) Interrupt Priority Register</para>
+
+<para>Offset: 0x300 (R/W) Interrupt Priority Register (8Bit wide) </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd53101944a852be90c412cdbcd7b9cc"/>    <section>
+    <title>IPR</title>
+<indexterm><primary>IPR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>IPR</secondary></indexterm>
+<para><computeroutput>__IOM uint8_t IPR</computeroutput></para>
+<para>Offset: 0x300 (R/W) Interrupt Priority Register</para>
+
+<para>Offset: 0x300 (R/W) Interrupt Priority Register (8Bit wide) </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga040b60157eb7348b9325cb804333c48f"/>    <section>
+    <title>ISER</title>
+<indexterm><primary>ISER</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISER</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t ISER</computeroutput></para>
+<para>Offset: 0x000 (R/W) Interrupt Set Enable Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga19081cde0360514d37cefa9b5fdfc0fe"/>    <section>
+    <title>ISPR</title>
+<indexterm><primary>ISPR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISPR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t ISPR</computeroutput></para>
+<para>Offset: 0x100 (R/W) Interrupt Set Pending Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[1/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[2/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[3/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[4/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[5/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[6/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[7/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[8/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[9/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[10/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[11/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[12/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[13/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/>    <section>
+    <title>ISR<computeroutput>[14/14]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga9954c088735caa505adc113f6c64d812"/>    <section>
+    <title>ITATBCTR0</title>
+<indexterm><primary>ITATBCTR0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ITATBCTR0</secondary></indexterm>
+<para><computeroutput>__IM uint32_t ITATBCTR0</computeroutput></para>
+<para>Offset: 0xEF8 (R/ ) Integration Test ATB Control Register 0</para>
+
+<para>Offset: 0xEF8 (R/ ) ITATBCTR0 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga97fb8816ad001f4910de095aa17d9db5"/>    <section>
+    <title>ITATBCTR2</title>
+<indexterm><primary>ITATBCTR2</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ITATBCTR2</secondary></indexterm>
+<para><computeroutput>__IM uint32_t ITATBCTR2</computeroutput></para>
+<para>Offset: 0xEF0 (R/W) Integration Test ATB Control Register 2</para>
+
+<para>Offset: 0xEF0 (R/ ) ITATBCTR2 </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae6b7f224b1c19c636148f991cc8db611"/>    <section>
+    <title>ITCTRL</title>
+<indexterm><primary>ITCTRL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ITCTRL</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t ITCTRL</computeroutput></para>
+<para>Offset: 0xF00 (R/W) Integration Mode Control </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga986b12d0c4f33d326504fe705228bd7b"/>    <section>
+    <title>ITFTTD0</title>
+<indexterm><primary>ITFTTD0</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ITFTTD0</secondary></indexterm>
+<para><computeroutput>__IM uint32_t ITFTTD0</computeroutput></para>
+<para>Offset: 0xEEC (R/ ) Integration Test FIFO Test Data 0 Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga4ab517b49e30734dced6bed9befb1f4a"/>    <section>
+    <title>ITFTTD1</title>
+<indexterm><primary>ITFTTD1</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ITFTTD1</secondary></indexterm>
+<para><computeroutput>__IM uint32_t ITFTTD1</computeroutput></para>
+<para>Offset: 0xEFC (R/ ) Integration Test FIFO Test Data 1 Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaddfcdde1da9ca4b87b4b8068b5df0dda"/>    <section>
+    <title>ITNS</title>
+<indexterm><primary>ITNS</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>ITNS</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t ITNS</computeroutput></para>
+<para>Offset: 0x280 (R/W) Interrupt Non-Secure State Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacc9e51f871c357a9094105435b150d13"/>    <section>
+    <title>LAR</title>
+<indexterm><primary>LAR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>LAR</secondary></indexterm>
+<para><computeroutput>__OM uint32_t LAR</computeroutput></para>
+<para>Offset: 0xFB0 ( /W) Software Lock Access Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga0c1333686137b7e25a46bd548a5b5bc3"/>    <section>
+    <title>LOAD</title>
+<indexterm><primary>LOAD</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>LOAD</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t LOAD</computeroutput></para>
+<para>Offset: 0x004 (R/W) SysTick Reload Value Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga7219432d03f6cd1d220f4fe10aef4880"/>    <section>
+    <title>LSR</title>
+<indexterm><primary>LSR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>LSR</secondary></indexterm>
+<para><computeroutput>__IM uint32_t LSR</computeroutput></para>
+<para>Offset: 0xFB4 (R/ ) Software Lock Status Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[1/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[2/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[3/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[4/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[5/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[6/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[7/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[8/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[9/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[10/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[11/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[12/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[13/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/>    <section>
+    <title>N<computeroutput>[14/14]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332"/>    <section>
+    <title>nPRIV<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>nPRIV</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>nPRIV</secondary></indexterm>
+<para><computeroutput>uint32_t nPRIV</computeroutput></para>
+<para>bit: 0 Execution privilege in Thread mode </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332"/>    <section>
+    <title>nPRIV<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>nPRIV</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>nPRIV</secondary></indexterm>
+<para><computeroutput>uint32_t nPRIV</computeroutput></para>
+<para>bit: 0 Execution privilege in Thread mode </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332"/>    <section>
+    <title>nPRIV<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>nPRIV</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>nPRIV</secondary></indexterm>
+<para><computeroutput>uint32_t nPRIV</computeroutput></para>
+<para>bit: 0 Execution privilege in Thread mode </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332"/>    <section>
+    <title>nPRIV<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>nPRIV</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>nPRIV</secondary></indexterm>
+<para><computeroutput>uint32_t nPRIV</computeroutput></para>
+<para>bit: 0 Execution privilege in Thread mode </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga72e52fffe9ac6af0ee15877e2d5dac41"/>    <section>
+    <title>PCSR</title>
+<indexterm><primary>PCSR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>PCSR</secondary></indexterm>
+<para><computeroutput>__IM uint32_t PCSR</computeroutput></para>
+<para>Offset: 0x01C (R/ ) Program Counter Sample Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga3fbc5c84a2a24bd6195e970ff8898024"/>    <section>
+    <title>PSCR</title>
+<indexterm><primary>PSCR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>PSCR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t PSCR</computeroutput></para>
+<para>Offset: 0x308 (R/W) Periodic Synchronization Control Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacac65f229cb3fcb5369a0a9e0393b8c0"/>    <section>
+    <title>SCR</title>
+<indexterm><primary>SCR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SCR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t SCR</computeroutput></para>
+<para>Offset: 0x010 (R/W) System Control Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaaddfff3b57de6faf60bfcc938c7229c9"/>    <section>
+    <title>SFCR</title>
+<indexterm><primary>SFCR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SFCR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t SFCR</computeroutput></para>
+<para>Offset: 0x290 (R/W) Security Features Control Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga44ad5c292dbd77e72f310902375a8a06"/>    <section>
+    <title>SHCSR</title>
+<indexterm><primary>SHCSR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SHCSR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t SHCSR</computeroutput></para>
+<para>Offset: 0x024 (R/W) System Handler Control and State Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaa043193516e3fc0abbf58ce7cf8cfb4e"/>    <section>
+    <title>SHP</title>
+<indexterm><primary>SHP</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SHP</secondary></indexterm>
+<para><computeroutput>__IOM uint8_t SHP</computeroutput></para>
+<para>Offset: 0x01C (R/W) System Handlers Priority Registers. [0] is RESERVED</para>
+
+<para>Offset: 0x018 (R/W) System Handlers Priority Registers (4-7, 8-11, 12-15) </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga4b11478e02fe77786479537279482f45"/>    <section>
+    <title>SHPR</title>
+<indexterm><primary>SHPR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SHPR</secondary></indexterm>
+<para><computeroutput>__IOM uint8_t SHPR</computeroutput></para>
+<para>Offset: 0x01C (R/W) System Handlers Priority Registers. [0] is RESERVED</para>
+
+<para>Offset: 0x018 (R/W) System Handlers Priority Registers (4-7, 8-11, 12-15) </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae9673e1acb75a46ed9852fd7a557cb7d"/>    <section>
+    <title>SPPR</title>
+<indexterm><primary>SPPR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SPPR</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t SPPR</computeroutput></para>
+<para>Offset: 0x0F0 (R/W) Selected Pin Protocol Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b"/>    <section>
+    <title>SPSEL<computeroutput>[1/7]</computeroutput></title>
+<indexterm><primary>SPSEL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SPSEL</secondary></indexterm>
+<para><computeroutput>uint32_t SPSEL</computeroutput></para>
+<para>bit: 1 Stack-pointer select </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b"/>    <section>
+    <title>SPSEL<computeroutput>[2/7]</computeroutput></title>
+<indexterm><primary>SPSEL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SPSEL</secondary></indexterm>
+<para><computeroutput>uint32_t SPSEL</computeroutput></para>
+<para>bit: 1 Stack-pointer select</para>
+
+<para>bit: 1 Stack to be used </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b"/>    <section>
+    <title>SPSEL<computeroutput>[3/7]</computeroutput></title>
+<indexterm><primary>SPSEL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SPSEL</secondary></indexterm>
+<para><computeroutput>uint32_t SPSEL</computeroutput></para>
+<para>bit: 1 Stack to be used </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b"/>    <section>
+    <title>SPSEL<computeroutput>[4/7]</computeroutput></title>
+<indexterm><primary>SPSEL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SPSEL</secondary></indexterm>
+<para><computeroutput>uint32_t SPSEL</computeroutput></para>
+<para>bit: 1 Stack to be used </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b"/>    <section>
+    <title>SPSEL<computeroutput>[5/7]</computeroutput></title>
+<indexterm><primary>SPSEL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SPSEL</secondary></indexterm>
+<para><computeroutput>uint32_t SPSEL</computeroutput></para>
+<para>bit: 1 Stack to be used </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b"/>    <section>
+    <title>SPSEL<computeroutput>[6/7]</computeroutput></title>
+<indexterm><primary>SPSEL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SPSEL</secondary></indexterm>
+<para><computeroutput>uint32_t SPSEL</computeroutput></para>
+<para>bit: 1 Stack-pointer select </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b"/>    <section>
+    <title>SPSEL<computeroutput>[7/7]</computeroutput></title>
+<indexterm><primary>SPSEL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SPSEL</secondary></indexterm>
+<para><computeroutput>uint32_t SPSEL</computeroutput></para>
+<para>bit: 1 Stack to be used </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga1585b32a1ab860d0d77803475d08c7c6"/>    <section>
+    <title>SSPSR</title>
+<indexterm><primary>SSPSR</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>SSPSR</secondary></indexterm>
+<para><computeroutput>__IM uint32_t SSPSR</computeroutput></para>
+<para>Offset: 0x000 (R/ ) Supported Parallel Port Sizes Register</para>
+
+<para>Offset: 0x000 (R/ ) Supported Parallel Port Size Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972"/>    <section>
+    <title>T<computeroutput>[1/7]</computeroutput></title>
+<indexterm><primary>T</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>T</secondary></indexterm>
+<para><computeroutput>uint32_t T</computeroutput></para>
+<para>bit: 24 Thumb bit (read 0)</para>
+
+<para>bit: 24 Thumb bit </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972"/>    <section>
+    <title>T<computeroutput>[2/7]</computeroutput></title>
+<indexterm><primary>T</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>T</secondary></indexterm>
+<para><computeroutput>uint32_t T</computeroutput></para>
+<para>bit: 24 Thumb bit (read 0) </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972"/>    <section>
+    <title>T<computeroutput>[3/7]</computeroutput></title>
+<indexterm><primary>T</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>T</secondary></indexterm>
+<para><computeroutput>uint32_t T</computeroutput></para>
+<para>bit: 24 Thumb bit (read 0) </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972"/>    <section>
+    <title>T<computeroutput>[4/7]</computeroutput></title>
+<indexterm><primary>T</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>T</secondary></indexterm>
+<para><computeroutput>uint32_t T</computeroutput></para>
+<para>bit: 24 Thumb bit (read 0) </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972"/>    <section>
+    <title>T<computeroutput>[5/7]</computeroutput></title>
+<indexterm><primary>T</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>T</secondary></indexterm>
+<para><computeroutput>uint32_t T</computeroutput></para>
+<para>bit: 24 Thumb bit (read 0) </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972"/>    <section>
+    <title>T<computeroutput>[6/7]</computeroutput></title>
+<indexterm><primary>T</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>T</secondary></indexterm>
+<para><computeroutput>uint32_t T</computeroutput></para>
+<para>bit: 24 Thumb bit (read 0) </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972"/>    <section>
+    <title>T<computeroutput>[7/7]</computeroutput></title>
+<indexterm><primary>T</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>T</secondary></indexterm>
+<para><computeroutput>uint32_t T</computeroutput></para>
+<para>bit: 24 Thumb bit (read 0) </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5590387d8f44b477fd69951a737b0d7e"/>    <section>
+    <title>TRIGGER</title>
+<indexterm><primary>TRIGGER</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>TRIGGER</secondary></indexterm>
+<para><computeroutput>__IM uint32_t TRIGGER</computeroutput></para>
+<para>Offset: 0xEE8 (R/ ) TRIGGER Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gaee6e8f4171b9024d763ba87f3ce92e73"/>    <section>
+    <title>TYPE</title>
+<indexterm><primary>TYPE</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>TYPE</secondary></indexterm>
+<para><computeroutput>__IM uint32_t TYPE</computeroutput></para>
+<para>Offset: 0xFC8 (R/ ) Device Identifier Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[1/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[2/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[3/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[4/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[5/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[6/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[7/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[8/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[9/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[10/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[11/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[12/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[13/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222"/>    <section>
+    <title>V<computeroutput>[14/14]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gae7a655a853654127f3dfb7fa32c3f457"/>    <section>
+    <title>VAL</title>
+<indexterm><primary>VAL</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>VAL</secondary></indexterm>
+<para><computeroutput>__IOM uint32_t VAL</computeroutput></para>
+<para>Offset: 0x008 (R/W) SysTick Current Value Register </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b"/>    <section>
+    <title>w<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>w</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>w</secondary></indexterm>
+<para><computeroutput>uint32_t w</computeroutput></para>
+<para>Type used for word access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b"/>    <section>
+    <title>w<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>w</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>w</secondary></indexterm>
+<para><computeroutput>uint32_t w</computeroutput></para>
+<para>Type used for word access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b"/>    <section>
+    <title>w<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>w</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>w</secondary></indexterm>
+<para><computeroutput>uint32_t w</computeroutput></para>
+<para>Type used for word access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b"/>    <section>
+    <title>w<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>w</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>w</secondary></indexterm>
+<para><computeroutput>uint32_t w</computeroutput></para>
+<para>Type used for word access </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[1/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[2/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[3/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[4/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[5/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[6/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[7/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[8/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[9/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[10/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[11/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[12/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[13/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/>    <section>
+    <title>Z<computeroutput>[14/14]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>SysTick Functions</secondary></indexterm>
+<indexterm><primary>SysTick Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag </para>
+</section>
+</section>
+</section>

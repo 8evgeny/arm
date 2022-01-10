@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___system___clock___source___status" xml:lang="en-US">
+<title>System Clock Source Status</title>
+<indexterm><primary>System Clock Source Status</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c___system___clock___source___status_1ga0d6c2b0b2d59e6591295649853bb2abd">RCC_SYSCLKSOURCE_STATUS_HSI</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga6764639cf221e1ebc0b5448dcaed590a">RCC_CFGR_SWS_HSI</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___system___clock___source___status_1ga3847769265bf19becf7b976a7e908a64">RCC_SYSCLKSOURCE_STATUS_HSE</link>   <link linkend="_group___peripheral___registers___bits___definition_1gae09a0202f441c1a43e69c62331d50a08">RCC_CFGR_SWS_HSE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___system___clock___source___status_1ga4f05019ec09da478d084f44dbaad7d6d">RCC_SYSCLKSOURCE_STATUS_PLLCLK</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga2c67e2279804a83ef24438267d9d4a6c">RCC_CFGR_SWS_PLL</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c___system___clock___source___status_1ga3847769265bf19becf7b976a7e908a64"/>    <section>
+    <title>RCC_SYSCLKSOURCE_STATUS_HSE</title>
+<indexterm><primary>RCC_SYSCLKSOURCE_STATUS_HSE</primary><secondary>System Clock Source Status</secondary></indexterm>
+<indexterm><primary>System Clock Source Status</primary><secondary>RCC_SYSCLKSOURCE_STATUS_HSE</secondary></indexterm>
+<para><computeroutput>#define RCC_SYSCLKSOURCE_STATUS_HSE   <link linkend="_group___peripheral___registers___bits___definition_1gae09a0202f441c1a43e69c62331d50a08">RCC_CFGR_SWS_HSE</link></computeroutput></para>
+<para>HSE used as system clock </para>
+    </section><anchor xml:id="_group___r_c_c___system___clock___source___status_1ga0d6c2b0b2d59e6591295649853bb2abd"/>    <section>
+    <title>RCC_SYSCLKSOURCE_STATUS_HSI</title>
+<indexterm><primary>RCC_SYSCLKSOURCE_STATUS_HSI</primary><secondary>System Clock Source Status</secondary></indexterm>
+<indexterm><primary>System Clock Source Status</primary><secondary>RCC_SYSCLKSOURCE_STATUS_HSI</secondary></indexterm>
+<para><computeroutput>#define RCC_SYSCLKSOURCE_STATUS_HSI   <link linkend="_group___peripheral___registers___bits___definition_1ga6764639cf221e1ebc0b5448dcaed590a">RCC_CFGR_SWS_HSI</link></computeroutput></para>
+<para>HSI used as system clock </para>
+    </section><anchor xml:id="_group___r_c_c___system___clock___source___status_1ga4f05019ec09da478d084f44dbaad7d6d"/>    <section>
+    <title>RCC_SYSCLKSOURCE_STATUS_PLLCLK</title>
+<indexterm><primary>RCC_SYSCLKSOURCE_STATUS_PLLCLK</primary><secondary>System Clock Source Status</secondary></indexterm>
+<indexterm><primary>System Clock Source Status</primary><secondary>RCC_SYSCLKSOURCE_STATUS_PLLCLK</secondary></indexterm>
+<para><computeroutput>#define RCC_SYSCLKSOURCE_STATUS_PLLCLK   <link linkend="_group___peripheral___registers___bits___definition_1ga2c67e2279804a83ef24438267d9d4a6c">RCC_CFGR_SWS_PLL</link></computeroutput></para>
+<para>PLL used as system clock </para>
+</section>
+</section>
+</section>

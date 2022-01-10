@@ -1,0 +1,629 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___t_i_m___aliased___defines" kind="group">
+    <compoundname>HAL_TIM_Aliased_Defines</compoundname>
+    <title>HAL TIM Aliased Defines maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga679b7f970f7ad7001de9d6f7b211d667" prot="public" static="no">
+        <name>CCER_CCxE_MASK</name>
+        <initializer>TIM_CCER_CCxE_MASK</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1046" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1046" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gadf1ac288d53d93679c086f9179dea88b" prot="public" static="no">
+        <name>CCER_CCxNE_MASK</name>
+        <initializer>TIM_CCER_CCxNE_MASK</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1047" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1047" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga73bca5b14da2d5026fa3877d0db53740" prot="public" static="no">
+        <name>TIM_DMABase_CR1</name>
+        <initializer>TIM_DMABASE_CR1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1049" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1049" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga50e894f0d2cecc1ff3a3578098c3246e" prot="public" static="no">
+        <name>TIM_DMABase_CR2</name>
+        <initializer>TIM_DMABASE_CR2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1050" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1050" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga748e24ac0675caa55869d6ba506448df" prot="public" static="no">
+        <name>TIM_DMABase_SMCR</name>
+        <initializer>TIM_DMABASE_SMCR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1051" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1051" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gaeddacbbc2adf9705feac250f077d8c93" prot="public" static="no">
+        <name>TIM_DMABase_DIER</name>
+        <initializer>TIM_DMABASE_DIER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1052" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1052" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga5cda07a11a76bbb24a7d5bb680814d31" prot="public" static="no">
+        <name>TIM_DMABase_SR</name>
+        <initializer>TIM_DMABASE_SR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1053" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1053" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gab5e6f6c3fea100896d13ce317a6ccd8e" prot="public" static="no">
+        <name>TIM_DMABase_EGR</name>
+        <initializer>TIM_DMABASE_EGR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1054" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1054" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gaab384496cff3e54d8179fc0db727c7ee" prot="public" static="no">
+        <name>TIM_DMABase_CCMR1</name>
+        <initializer>TIM_DMABASE_CCMR1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1055" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1055" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga4989f74592ab359f30bd7c4a4a457571" prot="public" static="no">
+        <name>TIM_DMABase_CCMR2</name>
+        <initializer>TIM_DMABASE_CCMR2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1056" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1056" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga6935639db5738662520e8d0eb7116dd6" prot="public" static="no">
+        <name>TIM_DMABase_CCER</name>
+        <initializer>TIM_DMABASE_CCER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1057" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1057" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gacab604257d144cf3a59b360cbc958ec9" prot="public" static="no">
+        <name>TIM_DMABase_CNT</name>
+        <initializer>TIM_DMABASE_CNT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1058" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1058" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gab8dd06970f235fe9f6997e0975237388" prot="public" static="no">
+        <name>TIM_DMABase_PSC</name>
+        <initializer>TIM_DMABASE_PSC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1059" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1059" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gaab8a66f70e59b5916b4bba344746d652" prot="public" static="no">
+        <name>TIM_DMABase_ARR</name>
+        <initializer>TIM_DMABASE_ARR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1060" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1060" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga97f9edceee5c99b32aaa2c6daf849b7d" prot="public" static="no">
+        <name>TIM_DMABase_RCR</name>
+        <initializer>TIM_DMABASE_RCR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1061" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1061" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga235a47fa47fd19594a111e6e48c0d5a2" prot="public" static="no">
+        <name>TIM_DMABase_CCR1</name>
+        <initializer>TIM_DMABASE_CCR1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1062" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1062" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga0e2150dcd3afe31ecb793aa471b3b972" prot="public" static="no">
+        <name>TIM_DMABase_CCR2</name>
+        <initializer>TIM_DMABASE_CCR2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1063" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1063" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga590c90085bd2b206b941dff2731fed74" prot="public" static="no">
+        <name>TIM_DMABase_CCR3</name>
+        <initializer>TIM_DMABASE_CCR3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1064" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1064" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga5e84a16e7d8ea369a3a55bb6fe1f2171" prot="public" static="no">
+        <name>TIM_DMABase_CCR4</name>
+        <initializer>TIM_DMABASE_CCR4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1065" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1065" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gaaff22bbf3091c47783c1c68b648c8605" prot="public" static="no">
+        <name>TIM_DMABase_BDTR</name>
+        <initializer>TIM_DMABASE_BDTR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1066" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1066" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga59e2206e4e03b9d55c9fb5a24e29b01c" prot="public" static="no">
+        <name>TIM_DMABase_DCR</name>
+        <initializer>TIM_DMABASE_DCR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1067" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1067" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gaf2b823d37e722f9f856c654fa35eff26" prot="public" static="no">
+        <name>TIM_DMABase_DMAR</name>
+        <initializer>TIM_DMABASE_DMAR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1068" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1068" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga6868a38c42996b41d072025ce428c645" prot="public" static="no">
+        <name>TIM_DMABase_OR1</name>
+        <initializer>TIM_DMABASE_OR1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1069" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1069" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gaeea36845ff52e436a46a294d0d01a193" prot="public" static="no">
+        <name>TIM_DMABase_CCMR3</name>
+        <initializer>TIM_DMABASE_CCMR3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1070" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1070" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga8e5e6af97873ab26e62274624f31adae" prot="public" static="no">
+        <name>TIM_DMABase_CCR5</name>
+        <initializer>TIM_DMABASE_CCR5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1071" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1071" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga9ab65ba1f7609de8bd7bf20319e60232" prot="public" static="no">
+        <name>TIM_DMABase_CCR6</name>
+        <initializer>TIM_DMABASE_CCR6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1072" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1072" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga2a1e120dc725fd26c37c29cf97fdcaa9" prot="public" static="no">
+        <name>TIM_DMABase_OR2</name>
+        <initializer>TIM_DMABASE_OR2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1073" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1073" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gae675fedf9cf67bd86a36f17d37f99106" prot="public" static="no">
+        <name>TIM_DMABase_OR3</name>
+        <initializer>TIM_DMABASE_OR3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1074" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1074" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gad6a75d19df73bae091a0e649fba7339c" prot="public" static="no">
+        <name>TIM_DMABase_OR</name>
+        <initializer>TIM_DMABASE_OR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1075" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1075" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga5bff72fbe94b1ae5a710e402c9868b23" prot="public" static="no">
+        <name>TIM_EventSource_Update</name>
+        <initializer><ref refid="group___t_i_m___event___source_1ga6b9d1352735d2ddbafcaa31ae05cd1ee" kindref="member">TIM_EVENTSOURCE_UPDATE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1077" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1077" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gaa634c46d4ac521ad16e25be97b487e8a" prot="public" static="no">
+        <name>TIM_EventSource_CC1</name>
+        <initializer><ref refid="group___t_i_m___event___source_1ga529eadf26cd17108dd95b9707a3d0f55" kindref="member">TIM_EVENTSOURCE_CC1</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1078" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1078" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga5e2082a09552acc9c7e9577f104ba15a" prot="public" static="no">
+        <name>TIM_EventSource_CC2</name>
+        <initializer><ref refid="group___t_i_m___event___source_1ga12e3a98c601f4f288354ac2538050e6b" kindref="member">TIM_EVENTSOURCE_CC2</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1079" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1079" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gafeb8538e3b00d938e061e5051f83836b" prot="public" static="no">
+        <name>TIM_EventSource_CC3</name>
+        <initializer><ref refid="group___t_i_m___event___source_1ga1c2faf942ab525b44299ddd0a6d848e4" kindref="member">TIM_EVENTSOURCE_CC3</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1080" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1080" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gab60e3190e6c09d2d067f2c689d614979" prot="public" static="no">
+        <name>TIM_EventSource_CC4</name>
+        <initializer><ref refid="group___t_i_m___event___source_1ga157e43c99e6a1c0097b184cc842b5dfb" kindref="member">TIM_EVENTSOURCE_CC4</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1081" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1081" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga4c06981037fae91786f966aa9b4b3435" prot="public" static="no">
+        <name>TIM_EventSource_COM</name>
+        <initializer><ref refid="group___t_i_m___event___source_1ga5724ce4aaf842a2166edaaff1531c1d1" kindref="member">TIM_EVENTSOURCE_COM</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1082" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1082" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga24835bf5eac25eed90069208dce22564" prot="public" static="no">
+        <name>TIM_EventSource_Trigger</name>
+        <initializer><ref refid="group___t_i_m___event___source_1ga85573ed76442490db67e4b759fe6d901" kindref="member">TIM_EVENTSOURCE_TRIGGER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1083" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1083" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gad6f9b5366d93c73ff005273c50c9f00a" prot="public" static="no">
+        <name>TIM_EventSource_Break</name>
+        <initializer><ref refid="group___t_i_m___event___source_1ga83d16368fe3172a98c41d7c414780a64" kindref="member">TIM_EVENTSOURCE_BREAK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1084" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1084" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga18fcfb87d3361c3118e7251d5a99b92a" prot="public" static="no">
+        <name>TIM_EventSource_Break2</name>
+        <initializer>TIM_EVENTSOURCE_BREAK2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1085" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1085" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gab87f91f1c5583b9888cb6bb37fc639e2" prot="public" static="no">
+        <name>TIM_DMABurstLength_1Transfer</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1ga74f07b4a10022d71f31ec6e1b2b69276" kindref="member">TIM_DMABURSTLENGTH_1TRANSFER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1087" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1087" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga829504c3e8c90a9445f6a223bc3034f8" prot="public" static="no">
+        <name>TIM_DMABurstLength_2Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1gab114592091a00e0a6b9ae464485bd7bb" kindref="member">TIM_DMABURSTLENGTH_2TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1088" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1088" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga3a99863a0925e0cc9a11b91aade66f11" prot="public" static="no">
+        <name>TIM_DMABurstLength_3Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1gad91c14f0930803593ecdbd98002fea0a" kindref="member">TIM_DMABURSTLENGTH_3TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1089" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1089" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga84bfeb309593a1ac580e233bf7514b36" prot="public" static="no">
+        <name>TIM_DMABurstLength_4Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1ga9ada9605ae6ff6e4ada9701263bef812" kindref="member">TIM_DMABURSTLENGTH_4TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1090" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1090" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga44f8aa51fbe8887a5f3c37a0e776902c" prot="public" static="no">
+        <name>TIM_DMABurstLength_5Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1ga740a6446c0a517cc3e235fddee45fef5" kindref="member">TIM_DMABURSTLENGTH_5TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1091" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1091" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga8be40a21654eea72e9c1bf9922675b22" prot="public" static="no">
+        <name>TIM_DMABurstLength_6Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1ga905c206d2a028e3fb92bcab8f9f7c869" kindref="member">TIM_DMABURSTLENGTH_6TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1092" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1092" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gaf2ae83bd73b0e92b73e5ebfc11f9bfad" prot="public" static="no">
+        <name>TIM_DMABurstLength_7Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1gae75055ac13b73baf9326f1d6157853a7" kindref="member">TIM_DMABURSTLENGTH_7TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1093" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1093" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga8a760d7114425596736b0ecdbe5fdea6" prot="public" static="no">
+        <name>TIM_DMABurstLength_8Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1gac6b24f5b7d9e1968b4bfcaeb24e718fc" kindref="member">TIM_DMABURSTLENGTH_8TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1094" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1094" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga98b208205c133557a9d67a0921559a66" prot="public" static="no">
+        <name>TIM_DMABurstLength_9Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1ga73fff75a3f0247c61a84a42e8cb83572" kindref="member">TIM_DMABURSTLENGTH_9TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1095" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1095" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga2fc09f2148cf6ebddc8e67116212259c" prot="public" static="no">
+        <name>TIM_DMABurstLength_10Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1ga793a89bb8a0669e274de451985186c53" kindref="member">TIM_DMABURSTLENGTH_10TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1096" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1096" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga0ca63a3caeaf1e85bd54961891949de7" prot="public" static="no">
+        <name>TIM_DMABurstLength_11Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1ga79ab58b6a3b30c54c0758b381df22cb0" kindref="member">TIM_DMABURSTLENGTH_11TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1097" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1097" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga9160d52913bbd7ad1e663ff943d01852" prot="public" static="no">
+        <name>TIM_DMABurstLength_12Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1gaf52962b501b3a76d89df6274ed425947" kindref="member">TIM_DMABURSTLENGTH_12TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1098" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1098" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga11485e9eee8a6a7edc1df868755eab85" prot="public" static="no">
+        <name>TIM_DMABurstLength_13Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1ga06a81eba628bea6495d86ebcc6021da0" kindref="member">TIM_DMABURSTLENGTH_13TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1099" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1099" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gab1a097ca7404e518839df99795443fb0" prot="public" static="no">
+        <name>TIM_DMABurstLength_14Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1ga5f430b76c0aeded0a8d8be779f26ae52" kindref="member">TIM_DMABURSTLENGTH_14TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1100" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gad13373f5fd246557a4fc487dc43c37ec" prot="public" static="no">
+        <name>TIM_DMABurstLength_15Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1ga98a4d88c533178bc1b4347e4c5ce815a" kindref="member">TIM_DMABURSTLENGTH_15TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1101" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gafb644e6033f7b46c602b02754b69fde0" prot="public" static="no">
+        <name>TIM_DMABurstLength_16Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1gaf4b2a1fe12c52272544c21e17de1ed90" kindref="member">TIM_DMABURSTLENGTH_16TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1102" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1ga5b2c97f650a3c1726965187d852b8cc5" prot="public" static="no">
+        <name>TIM_DMABurstLength_17Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1gad31c1fca7ed436a53efc4f290144584d" kindref="member">TIM_DMABURSTLENGTH_17TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1103" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___t_i_m___aliased___defines_1gaed9f2afef174079f6eb6927abd995b9b" prot="public" static="no">
+        <name>TIM_DMABurstLength_18Transfers</name>
+        <initializer><ref refid="group___t_i_m___d_m_a___burst___length_1gabb6f72b02ee1c8855de241cb0713e2ca" kindref="member">TIM_DMABURSTLENGTH_18TRANSFERS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="1104" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="1104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

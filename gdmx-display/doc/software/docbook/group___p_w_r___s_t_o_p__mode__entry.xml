@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___p_w_r___s_t_o_p__mode__entry" xml:lang="en-US">
+<title>PWR STOP mode entry</title>
+<indexterm><primary>PWR STOP mode entry</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___p_w_r___s_t_o_p__mode__entry_1ga3bdb1a9c9b421b73ab148d45eb90fa9b"/>#define <emphasis role="strong">PWR_STOPENTRY_WFI</emphasis>   ((uint8_t)0x01)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___p_w_r___s_t_o_p__mode__entry_1ga2e1ee5c9577cc322474a826fa97de798"/>#define <emphasis role="strong">PWR_STOPENTRY_WFE</emphasis>   ((uint8_t)0x02)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___one___pulse___mode" xml:lang="en-US">
+<title>TIM One Pulse Mode</title>
+<indexterm><primary>TIM One Pulse Mode</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___one___pulse___mode_1gab0447b341024e86145c7ce0dc2931fc6">TIM_OPMODE_SINGLE</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga6d3d1488296350af6d36fbbf71905d29">TIM_CR1_OPM</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___one___pulse___mode_1ga14a7b6f95769c5b430f65189d9c7cfa3">TIM_OPMODE_REPETITIVE</link>   0x00000000U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___one___pulse___mode_1ga14a7b6f95769c5b430f65189d9c7cfa3"/>    <section>
+    <title>TIM_OPMODE_REPETITIVE</title>
+<indexterm><primary>TIM_OPMODE_REPETITIVE</primary><secondary>TIM One Pulse Mode</secondary></indexterm>
+<indexterm><primary>TIM One Pulse Mode</primary><secondary>TIM_OPMODE_REPETITIVE</secondary></indexterm>
+<para><computeroutput>#define TIM_OPMODE_REPETITIVE   0x00000000U</computeroutput></para>
+<para>Counter is not stopped at update event 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___one___pulse___mode_1gab0447b341024e86145c7ce0dc2931fc6"/>    <section>
+    <title>TIM_OPMODE_SINGLE</title>
+<indexterm><primary>TIM_OPMODE_SINGLE</primary><secondary>TIM One Pulse Mode</secondary></indexterm>
+<indexterm><primary>TIM One Pulse Mode</primary><secondary>TIM_OPMODE_SINGLE</secondary></indexterm>
+<para><computeroutput>#define TIM_OPMODE_SINGLE   <link linkend="_group___peripheral___registers___bits___definition_1ga6d3d1488296350af6d36fbbf71905d29">TIM_CR1_OPM</link></computeroutput></para>
+<para>Counter stops counting at the next update event </para>
+</section>
+</section>
+</section>

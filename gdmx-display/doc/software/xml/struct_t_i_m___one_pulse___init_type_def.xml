@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_t_i_m___one_pulse___init_type_def" kind="struct" language="C++" prot="public">
+    <compoundname>TIM_OnePulse_InitTypeDef</compoundname>
+    <includes refid="stm32f1xx__hal__tim_8h" local="no">stm32f1xx_hal_tim.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_t_i_m___one_pulse___init_type_def_1add4ac9143086c89effbede5c54e958bf" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t OCMode</definition>
+        <argsstring></argsstring>
+        <name>OCMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the TIM mode. This parameter can be a value of <ref refid="group___t_i_m___output___compare__and___p_w_m__modes" kindref="compound">TIM Output Compare and PWM Modes</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="112" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___one_pulse___init_type_def_1a5251c3bce4ca5baf013bc0ace0865a4c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Pulse</definition>
+        <argsstring></argsstring>
+        <name>Pulse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the pulse value to be loaded into the Capture Compare Register. This parameter can be a number between Min_Data = 0x0000 and Max_Data = 0xFFFF </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="115" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___one_pulse___init_type_def_1a781c7dae9dec8b6c974b1bdf591b77e7" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t OCPolarity</definition>
+        <argsstring></argsstring>
+        <name>OCPolarity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the output polarity. This parameter can be a value of <ref refid="group___t_i_m___output___compare___polarity" kindref="compound">TIM Output Compare Polarity</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="118" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___one_pulse___init_type_def_1a978da9dd7cda80eb5fe8d04828b9bbcc" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t OCNPolarity</definition>
+        <argsstring></argsstring>
+        <name>OCNPolarity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the complementary output polarity. This parameter can be a value of <ref refid="group___t_i_m___output___compare___n___polarity" kindref="compound">TIM Complementary Output Compare Polarity</ref> <simplesect kind="note"><para>This parameter is valid only for timer instances supporting break feature. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="121" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___one_pulse___init_type_def_1a57bb589da3cf2b39b727fe4a3d334ab3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t OCIdleState</definition>
+        <argsstring></argsstring>
+        <name>OCIdleState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the TIM Output Compare pin state during Idle state. This parameter can be a value of <ref refid="group___t_i_m___output___compare___idle___state" kindref="compound">TIM Output Compare Idle State</ref> <simplesect kind="note"><para>This parameter is valid only for timer instances supporting break feature. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="125" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___one_pulse___init_type_def_1a78d21970d78c1e3e328692743406ba25" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t OCNIdleState</definition>
+        <argsstring></argsstring>
+        <name>OCNIdleState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the TIM Output Compare pin state during Idle state. This parameter can be a value of <ref refid="group___t_i_m___output___compare___n___idle___state" kindref="compound">TIM Complementary Output Compare Idle State</ref> <simplesect kind="note"><para>This parameter is valid only for timer instances supporting break feature. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="129" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___one_pulse___init_type_def_1a6c0364c24e89f17849b0109236112fba" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ICPolarity</definition>
+        <argsstring></argsstring>
+        <name>ICPolarity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the active edge of the input signal. This parameter can be a value of <ref refid="group___t_i_m___input___capture___polarity" kindref="compound">TIM Input Capture Polarity</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="133" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___one_pulse___init_type_def_1a280cec08ad0ea4608ae57523775cc1c0" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ICSelection</definition>
+        <argsstring></argsstring>
+        <name>ICSelection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the input. This parameter can be a value of <ref refid="group___t_i_m___input___capture___selection" kindref="compound">TIM Input Capture Selection</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="136" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_i_m___one_pulse___init_type_def_1ab621c1517d5345834fcc71eea97156bf" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ICFilter</definition>
+        <argsstring></argsstring>
+        <name>ICFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies the input capture filter. This parameter can be a number between Min_Data = 0x0 and Max_Data = 0xF </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="139" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TIM One Pulse Mode Configuration Structure definition. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" line="110" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h" bodystart="111" bodyend="141"/>
+    <listofallmembers>
+      <member refid="struct_t_i_m___one_pulse___init_type_def_1ab621c1517d5345834fcc71eea97156bf" prot="public" virt="non-virtual"><scope>TIM_OnePulse_InitTypeDef</scope><name>ICFilter</name></member>
+      <member refid="struct_t_i_m___one_pulse___init_type_def_1a6c0364c24e89f17849b0109236112fba" prot="public" virt="non-virtual"><scope>TIM_OnePulse_InitTypeDef</scope><name>ICPolarity</name></member>
+      <member refid="struct_t_i_m___one_pulse___init_type_def_1a280cec08ad0ea4608ae57523775cc1c0" prot="public" virt="non-virtual"><scope>TIM_OnePulse_InitTypeDef</scope><name>ICSelection</name></member>
+      <member refid="struct_t_i_m___one_pulse___init_type_def_1a57bb589da3cf2b39b727fe4a3d334ab3" prot="public" virt="non-virtual"><scope>TIM_OnePulse_InitTypeDef</scope><name>OCIdleState</name></member>
+      <member refid="struct_t_i_m___one_pulse___init_type_def_1add4ac9143086c89effbede5c54e958bf" prot="public" virt="non-virtual"><scope>TIM_OnePulse_InitTypeDef</scope><name>OCMode</name></member>
+      <member refid="struct_t_i_m___one_pulse___init_type_def_1a78d21970d78c1e3e328692743406ba25" prot="public" virt="non-virtual"><scope>TIM_OnePulse_InitTypeDef</scope><name>OCNIdleState</name></member>
+      <member refid="struct_t_i_m___one_pulse___init_type_def_1a978da9dd7cda80eb5fe8d04828b9bbcc" prot="public" virt="non-virtual"><scope>TIM_OnePulse_InitTypeDef</scope><name>OCNPolarity</name></member>
+      <member refid="struct_t_i_m___one_pulse___init_type_def_1a781c7dae9dec8b6c974b1bdf591b77e7" prot="public" virt="non-virtual"><scope>TIM_OnePulse_InitTypeDef</scope><name>OCPolarity</name></member>
+      <member refid="struct_t_i_m___one_pulse___init_type_def_1a5251c3bce4ca5baf013bc0ace0865a4c" prot="public" virt="non-virtual"><scope>TIM_OnePulse_InitTypeDef</scope><name>Pulse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

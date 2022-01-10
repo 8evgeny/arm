@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___u_a_r_t___aliased___macros" xml:lang="en-US">
+<title>HAL UART Aliased Macros maintained for legacy purpose</title>
+<indexterm><primary>HAL UART Aliased Macros maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_a_r_t___aliased___macros_1ga42daa2078cec8482c126dd059211feea"/>#define <emphasis role="strong">__HAL_UART_GETCLOCKSOURCE</emphasis>   UART_GETCLOCKSOURCE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_a_r_t___aliased___macros_1gaf30b26158e4eaa99871067016049156d"/>#define <emphasis role="strong">__HAL_UART_MASK_COMPUTATION</emphasis>   UART_MASK_COMPUTATION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_a_r_t___aliased___macros_1ga62b39e2261e76db74c78d6dbdb677937"/>#define <emphasis role="strong">__UART_GETCLOCKSOURCE</emphasis>   UART_GETCLOCKSOURCE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_a_r_t___aliased___macros_1ga4361b9637b14e21ac5a32f8d298bd270"/>#define <emphasis role="strong">__UART_MASK_COMPUTATION</emphasis>   UART_MASK_COMPUTATION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_a_r_t___aliased___macros_1gaf1bb7de79bc052cd2a1a6671c9c6687d"/>#define <emphasis role="strong">IS_UART_WAKEUPMETHODE</emphasis>   IS_UART_WAKEUPMETHOD</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_a_r_t___aliased___macros_1ga5cc20fb4146a1269b5b8a81d5e4578fa"/>#define <emphasis role="strong">IS_UART_ONEBIT_SAMPLE</emphasis>   IS_UART_ONE_BIT_SAMPLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___u_a_r_t___aliased___macros_1gae24c4fef26c5d50f9c8d27f0db203a5b"/>#define <emphasis role="strong">IS_UART_ONEBIT_SAMPLING</emphasis>   IS_UART_ONE_BIT_SAMPLE</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

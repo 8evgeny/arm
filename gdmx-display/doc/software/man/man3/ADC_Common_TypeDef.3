@@ -1,0 +1,49 @@
+.TH "ADC_Common_TypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ADC_Common_TypeDef
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBSR\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBCR1\fP"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBCR2\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED\fP [16]"
+.br
+.ti -1c
+.RI "\fB__IO\fP uint32_t \fBDR\fP"
+.br
+.in -1c
+.SH "Field Documentation"
+.PP 
+.SS "\fB__IO\fP uint32_t CR1"
+ADC control register 1, used for ADC multimode (bits common to several ADC instances)\&. Address offset: ADC1 base address + 0x04 
+.br
+ 
+.SS "\fB__IO\fP uint32_t CR2"
+ADC control register 2, used for ADC multimode (bits common to several ADC instances)\&. Address offset: ADC1 base address + 0x08 
+.br
+ 
+.SS "\fB__IO\fP uint32_t DR"
+ADC data register, used for ADC multimode (bits common to several ADC instances)\&. Address offset: ADC1 base address + 0x4C 
+.br
+ 
+.SS "\fB__IO\fP uint32_t SR"
+ADC status register, used for ADC multimode (bits common to several ADC instances)\&. Address offset: ADC1 base address 
+.br
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

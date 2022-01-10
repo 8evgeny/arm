@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f1xx__hal__rcc_8c" xml:lang="en-US">
+<title>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c File Reference</title>
+<indexterm><primary>Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c</primary></indexterm>
+<para>
+
+<para>RCC HAL module driver. This file provides firmware functions to manage the following functionalities of the Reset and Clock Control (RCC) peripheral: </para>
+ 
+</para>
+<programlisting>#include &quot;stm32f1xx_hal.h&quot;
+</programlisting><section>
+<title>Detailed Description</title>
+
+<para>RCC HAL module driver. This file provides firmware functions to manage the following functionalities of the Reset and Clock Control (RCC) peripheral: </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team<itemizedlist>
+<listitem>
+<para>Initialization and de-initialization functions</para>
+</listitem><listitem>
+<para>Peripheral Control functions</para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+<literallayout><computeroutput>==============================================================================
+                    ##### RCC specific features #####
+==============================================================================
+  [..]
+    After reset the device is running from Internal High Speed oscillator
+    (HSI 8MHz) with Flash 0 wait state, Flash prefetch buffer is enabled,
+    and all peripherals are off except internal SRAM, Flash and JTAG.
+    (+) There is no prescaler on High speed (AHB) and Low speed (APB) buses;
+        all peripherals mapped on these buses are running at HSI speed.
+    (+) The clock for all peripherals is switched off, except the SRAM and FLASH.
+    (+) All GPIOs are in input floating state, except the JTAG pins which
+        are assigned to be used for debug purpose.
+  [..] Once the device started from reset, the user application has to:
+    (+) Configure the clock source to be used to drive the System clock
+        (if the application needs higher frequency/performance)
+    (+) Configure the System clock frequency and Flash settings
+    (+) Configure the AHB and APB buses prescalers
+    (+) Enable the clock for the peripheral(s) to be used
+    (+) Configure the clock source(s) for peripherals whose clocks are not
+        derived from the System clock (I2S, RTC, ADC, USB OTG FS)
+
+                    ##### RCC Limitations #####
+==============================================================================
+  [..]
+    A delay between an RCC peripheral clock enable and the effective peripheral
+    enabling should be taken into account in order to manage the peripheral read/write
+    from/to registers.
+    (+) This delay depends on the peripheral mapping.
+      (++) AHB &amp; APB peripherals, 1 dummy read is necessary
+
+  [..]
+    Workarounds:
+    (#) For AHB &amp; APB peripherals, a dummy read to the peripheral register has been
+        inserted in each __HAL_RCC_PPP_CLK_ENABLE() macro.</computeroutput></literallayout></para>
+
+<para><caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2016 STMicroelectronics. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+</section>

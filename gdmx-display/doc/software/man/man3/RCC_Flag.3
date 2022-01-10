@@ -1,0 +1,89 @@
+.TH "RCC_Flag" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_Flag \- Flags
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRCC_FLAG_HSIRDY\fP   ((uint8_t)((CR_REG_INDEX << 5U) | RCC_CR_HSIRDY_Pos))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_HSERDY\fP   ((uint8_t)((CR_REG_INDEX << 5U) | RCC_CR_HSERDY_Pos))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_PLLRDY\fP   ((uint8_t)((CR_REG_INDEX << 5U) | RCC_CR_PLLRDY_Pos))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_LSIRDY\fP   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_LSIRDY_Pos))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_PINRST\fP   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_PINRSTF_Pos))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_PORRST\fP   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_PORRSTF_Pos))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_SFTRST\fP   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_SFTRSTF_Pos))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_IWDGRST\fP   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_IWDGRSTF_Pos))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_WWDGRST\fP   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_WWDGRSTF_Pos))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_LPWRRST\fP   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_LPWRRSTF_Pos))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_LSERDY\fP   ((uint8_t)((BDCR_REG_INDEX << 5U) | RCC_BDCR_LSERDY_Pos))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Elements values convention: XXXYYYYYb
+.IP "\(bu" 2
+YYYYY : Flag position in the register
+.IP "\(bu" 2
+XXX : Register index
+.IP "  \(bu" 4
+001: CR register
+.IP "  \(bu" 4
+010: BDCR register
+.IP "  \(bu" 4
+011: CSR register 
+.PP
+
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define RCC_FLAG_HSERDY   ((uint8_t)((CR_REG_INDEX << 5U) | RCC_CR_HSERDY_Pos))"
+External High Speed clock ready flag 
+.SS "#define RCC_FLAG_HSIRDY   ((uint8_t)((CR_REG_INDEX << 5U) | RCC_CR_HSIRDY_Pos))"
+Internal High Speed clock ready flag 
+.SS "#define RCC_FLAG_IWDGRST   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_IWDGRSTF_Pos))"
+Independent Watchdog reset flag 
+.SS "#define RCC_FLAG_LPWRRST   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_LPWRRSTF_Pos))"
+Low-Power reset flag 
+.SS "#define RCC_FLAG_LSERDY   ((uint8_t)((BDCR_REG_INDEX << 5U) | RCC_BDCR_LSERDY_Pos))"
+External Low Speed oscillator Ready 
+.SS "#define RCC_FLAG_LSIRDY   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_LSIRDY_Pos))"
+Internal Low Speed oscillator Ready 
+.SS "#define RCC_FLAG_PINRST   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_PINRSTF_Pos))"
+PIN reset flag 
+.SS "#define RCC_FLAG_PLLRDY   ((uint8_t)((CR_REG_INDEX << 5U) | RCC_CR_PLLRDY_Pos))"
+PLL clock ready flag 
+.SS "#define RCC_FLAG_PORRST   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_PORRSTF_Pos))"
+POR/PDR reset flag 
+.SS "#define RCC_FLAG_SFTRST   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_SFTRSTF_Pos))"
+Software Reset flag 
+.SS "#define RCC_FLAG_WWDGRST   ((uint8_t)((CSR_REG_INDEX << 5U) | RCC_CSR_WWDGRSTF_Pos))"
+Window watchdog reset flag 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

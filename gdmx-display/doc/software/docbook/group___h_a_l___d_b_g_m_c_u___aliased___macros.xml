@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros" xml:lang="en-US">
+<title>HAL DBGMCU Aliased Macros maintained for legacy purpose</title>
+<indexterm><primary>HAL DBGMCU Aliased Macros maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gac0c5e626811757be9054cdeef7df4980"/>#define <emphasis role="strong">__HAL_FREEZE_TIM1_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga331504a5985db6b71dfbb29a4fc4d670"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM1_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga94f02b5b50bb79574876c05eb507607b"/>#define <emphasis role="strong">__HAL_FREEZE_TIM2_DBGMCU</emphasis>   <link linkend="_group___d_b_g_m_c_u___freeze___unfreeze_1ga4a466905a367266e7c23417248dc741d">__HAL_DBGMCU_FREEZE_TIM2</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gaf710a524a97565d4a117321ce7a6571c"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM2_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM2</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gab77737aff6c6ee212a5837dd7320c06b"/>#define <emphasis role="strong">__HAL_FREEZE_TIM3_DBGMCU</emphasis>   <link linkend="_group___d_b_g_m_c_u___freeze___unfreeze_1gaf2fe2b6d0a5e8df4ebb38020acf210d9">__HAL_DBGMCU_FREEZE_TIM3</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga3f10f260e5d0f57927abfaa221852adc"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM3_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM3</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga09debeabdcdea1cb332a0de450baba57"/>#define <emphasis role="strong">__HAL_FREEZE_TIM4_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM4</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gac8c490bc65df67f5ffd791f98bff8684"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM4_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM4</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga3fc7dba3ede61d40d034a57ffd69eab5"/>#define <emphasis role="strong">__HAL_FREEZE_TIM5_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM5</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gaaf52c2c670e73f52ef844a7f81c1a80d"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM5_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM5</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gae32a9752e37472f80934c314553a44e5"/>#define <emphasis role="strong">__HAL_FREEZE_TIM6_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM6</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga2a08c6ac06f114fa3ee71f3105f1ed8a"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM6_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM6</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga94b402c3740a7a996eb7a726ac88e76f"/>#define <emphasis role="strong">__HAL_FREEZE_TIM7_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM7</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gaa577c06b61b5993796a534133a453d98"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM7_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM7</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gad440cb28d99b94098bb778cb0768b0da"/>#define <emphasis role="strong">__HAL_FREEZE_TIM8_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM8</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gae4e7f5991a446063e45b7cfeb8e79ae4"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM8_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM8</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga833593daa5d8571686e412f17d1f07f5"/>#define <emphasis role="strong">__HAL_FREEZE_TIM9_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM9</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga83347551ffc6925558f8b279a5c87e95"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM9_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM9</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gaf3c4cd6fd3c210759028a7fe2625081e"/>#define <emphasis role="strong">__HAL_FREEZE_TIM10_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM10</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga2d2973e29dc79b768084c8dd20a51902"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM10_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM10</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gac8155a6100bda9e15b5980c6a3bfee95"/>#define <emphasis role="strong">__HAL_FREEZE_TIM11_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM11</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga38be002f00b5e705d536fd044961ad79"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM11_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM11</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga26cc09be3020aa8006a2a4db51708af5"/>#define <emphasis role="strong">__HAL_FREEZE_TIM12_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM12</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga5b17b5b165b725d296edbce1d57f96b9"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM12_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM12</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga958f177a783994c955ac53d010c83c84"/>#define <emphasis role="strong">__HAL_FREEZE_TIM13_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM13</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga3011a6972f4002f1a80635ccc46f6382"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM13_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM13</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga860c389b07136ce825179ce76a7a9a84"/>#define <emphasis role="strong">__HAL_FREEZE_TIM14_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM14</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga2f7f66b854108c4de12d6aa914df45aa"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM14_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM14</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga43d0b44177b120d9fc27e89f3e005b6d"/>#define <emphasis role="strong">__HAL_FREEZE_CAN2_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_CAN2</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gae3d5f3cd8eb21e021fc1fb24c8449b99"/>#define <emphasis role="strong">__HAL_UNFREEZE_CAN2_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_CAN2</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga4335fd0cf07d5e111fdbbedd9bc4c770"/>#define <emphasis role="strong">__HAL_FREEZE_TIM15_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM15</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga5c58c742b90ca9312c3fce0e40b9bf17"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM15_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM15</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga90a56093c5a77913d29f5fcc62b72ad9"/>#define <emphasis role="strong">__HAL_FREEZE_TIM16_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM16</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga10b34e377b65a92c0d50ad6909abd9d8"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM16_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM16</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga65b166b61431e09484788066a14f5ed9"/>#define <emphasis role="strong">__HAL_FREEZE_TIM17_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_TIM17</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga8917b91d64c02daa61bfd4e80c920ea3"/>#define <emphasis role="strong">__HAL_UNFREEZE_TIM17_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_TIM17</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga5cde9c9073ca8e95a084d62aac0931ef"/>#define <emphasis role="strong">__HAL_FREEZE_RTC_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_RTC</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga95995ebdcbfbdc73e7d53d0d2ae2724e"/>#define <emphasis role="strong">__HAL_UNFREEZE_RTC_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_RTC</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga731d1c183c8d3876895d80f0ba348616"/>#define <emphasis role="strong">__HAL_FREEZE_WWDG_DBGMCU</emphasis>   <link linkend="_group___d_b_g_m_c_u___freeze___unfreeze_1ga81215154725c479c67fb1adac906fbd9">__HAL_DBGMCU_FREEZE_WWDG</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gab0af7647542a9615339bd1b0b1fc4c27"/>#define <emphasis role="strong">__HAL_UNFREEZE_WWDG_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_WWDG</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga683080f08b123e73ee801508fac33188"/>#define <emphasis role="strong">__HAL_FREEZE_IWDG_DBGMCU</emphasis>   <link linkend="_group___d_b_g_m_c_u___freeze___unfreeze_1gabab7ab631ba58fb6246a9385e8af9d0d">__HAL_DBGMCU_FREEZE_IWDG</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga73aaa0abfab57e061c9e64ee39f5e3c8"/>#define <emphasis role="strong">__HAL_UNFREEZE_IWDG_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_IWDG</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga6e04cdfbd0408018f712455198c8120b"/>#define <emphasis role="strong">__HAL_FREEZE_I2C1_TIMEOUT_DBGMCU</emphasis>   <link linkend="_group___d_b_g_m_c_u___freeze___unfreeze_1ga6160f642dcff812be3a04c5b5c66e31d">__HAL_DBGMCU_FREEZE_I2C1_TIMEOUT</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gae0a68ca652c73463c72c0d6f164ef675"/>#define <emphasis role="strong">__HAL_UNFREEZE_I2C1_TIMEOUT_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_I2C1_TIMEOUT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga2877e6a523cce3f5d72e9fcb746db130"/>#define <emphasis role="strong">__HAL_FREEZE_I2C2_TIMEOUT_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_I2C2_TIMEOUT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga7f8561c59b23e6157a2a4854bfd7a152"/>#define <emphasis role="strong">__HAL_UNFREEZE_I2C2_TIMEOUT_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_I2C2_TIMEOUT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga76b6e1661062fd15b339f73e4bf06425"/>#define <emphasis role="strong">__HAL_FREEZE_I2C3_TIMEOUT_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_I2C3_TIMEOUT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gacf563c1860e9d768762ef5fbece8c9ee"/>#define <emphasis role="strong">__HAL_UNFREEZE_I2C3_TIMEOUT_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_I2C3_TIMEOUT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga1781f9a122328bdfd756224f4ddb3414"/>#define <emphasis role="strong">__HAL_FREEZE_CAN1_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_CAN1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga2481aaaf4c950e9ecb27fe5616115164"/>#define <emphasis role="strong">__HAL_UNFREEZE_CAN1_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_CAN1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga834e086b504768fe1c93f807e99a6182"/>#define <emphasis role="strong">__HAL_FREEZE_LPTIM1_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_LPTIM1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga2f9eea260a1f4d006e8b00b05816e7ba"/>#define <emphasis role="strong">__HAL_UNFREEZE_LPTIM1_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_LPTIM1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1gad0e137ee9aa05347e1ffde48f9820f34"/>#define <emphasis role="strong">__HAL_FREEZE_LPTIM2_DBGMCU</emphasis>   __HAL_DBGMCU_FREEZE_LPTIM2</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___d_b_g_m_c_u___aliased___macros_1ga7490754801ed1bcaf3e31d15757a883c"/>#define <emphasis role="strong">__HAL_UNFREEZE_LPTIM2_DBGMCU</emphasis>   __HAL_DBGMCU_UNFREEZE_LPTIM2</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

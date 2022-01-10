@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m_ex___exported___functions___group5" xml:lang="en-US">
+<title>Extended Peripheral Control functions</title>
+<indexterm><primary>Extended Peripheral Control functions</primary></indexterm>
+<para>
+
+<para>Peripheral Control functions. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group5_1gab5802aa4b8b5a79b93b209b0277622ac"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_ConfigCommutEvent</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t InputTrigger, uint32_t CommutationSource)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group5_1gad9f5f717a203adafb70e66451b4f0472"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_ConfigCommutEvent_IT</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t InputTrigger, uint32_t CommutationSource)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group5_1ga6ab2af489cfc5783e4ddd76a35edde31"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_ConfigCommutEvent_DMA</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t InputTrigger, uint32_t CommutationSource)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group5_1ga056fd97d3be6c60dcfa12963f6ec8aad"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_MasterConfigSynchronization</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, <link linkend="_struct_t_i_m___master_config_type_def">TIM_MasterConfigTypeDef</link> *sMasterConfig)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group5_1ga4414f3b3dcbed3f21ee3b06d6db9ffa4"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_ConfigBreakDeadTime</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, <link linkend="_struct_t_i_m___break_dead_time_config_type_def">TIM_BreakDeadTimeConfigTypeDef</link> *sBreakDeadTimeConfig)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___t_i_m_ex___exported___functions___group5_1ga683118282daf3aa2e319eb8eea93af31"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_TIMEx_RemapConfig</emphasis> (<link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link> *htim, uint32_t Remap)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Peripheral Control functions. </para>
+</section>
+</section>

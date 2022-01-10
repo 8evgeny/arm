@@ -1,0 +1,64 @@
+.TH "FLASH_OBProgramInitTypeDef" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FLASH_OBProgramInitTypeDef \- FLASH Options bytes program structure definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_flash_ex\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBOptionType\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBWRPState\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBWRPPage\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBBanks\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBRDPLevel\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBUSERConfig\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDATAAddress\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBDATAData\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+FLASH Options bytes program structure definition\&. 
+.SH "Field Documentation"
+.PP 
+.SS "uint32_t Banks"
+Select banks for WRP activation/deactivation of all sectors\&. This parameter must be a value of \fBBanks\fP 
+.SS "uint32_t DATAAddress"
+DATAAddress: Address of the option byte DATA to be programmed This parameter can be a value of \fBOption Byte Data Address\fP 
+.SS "uint8_t DATAData"
+DATAData: Data to be stored in the option byte DATA This parameter must be a number between Min_Data = 0x00 and Max_Data = 0xFF 
+.SS "uint32_t OptionType"
+OptionType: Option byte to be configured\&. This parameter can be a value of \fBOption Bytes Type\fP 
+.SS "uint8_t RDPLevel"
+RDPLevel: Set the read protection level\&.\&. This parameter can be a value of \fBOption Byte Read Protection\fP 
+.SS "uint8_t USERConfig"
+USERConfig: Program the FLASH User Option Byte: IWDG / STOP / STDBY This parameter can be a combination of \fBOption Byte IWatchdog\fP, \fBOption Byte nRST STOP\fP, \fBOption Byte nRST STDBY\fP 
+.SS "uint32_t WRPPage"
+WRPPage: specifies the page(s) to be write protected This parameter can be a value of \fBOption Bytes Write Protection\fP 
+.SS "uint32_t WRPState"
+WRPState: Write protection activation or deactivation\&. This parameter can be a value of \fBOption Byte WRP State\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

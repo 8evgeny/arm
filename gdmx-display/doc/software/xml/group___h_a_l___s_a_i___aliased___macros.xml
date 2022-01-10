@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___s_a_i___aliased___macros" kind="group">
+    <compoundname>HAL_SAI_Aliased_Macros</compoundname>
+    <title>HAL SAI Aliased Macros maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1ga22aec02ed4baaf3d21709c32946204f8" prot="public" static="no">
+        <name>SAI_OUTPUTDRIVE_DISABLED</name>
+        <initializer>SAI_OUTPUTDRIVE_DISABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3575" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3575" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1ga8f73390263eb0def04fa852f4dfed6b8" prot="public" static="no">
+        <name>SAI_OUTPUTDRIVE_ENABLED</name>
+        <initializer>SAI_OUTPUTDRIVE_ENABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3576" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3576" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1ga88e1e3ce068a5fc57c3889d5f81159e0" prot="public" static="no">
+        <name>SAI_MASTERDIVIDER_ENABLED</name>
+        <initializer>SAI_MASTERDIVIDER_ENABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3577" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3577" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1gadf64a1d4375f906f3cce84b8894c9aae" prot="public" static="no">
+        <name>SAI_MASTERDIVIDER_DISABLED</name>
+        <initializer>SAI_MASTERDIVIDER_DISABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3578" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3578" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1gacfe3531591ed56ede7be4ec404101369" prot="public" static="no">
+        <name>SAI_STREOMODE</name>
+        <initializer>SAI_STEREOMODE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3579" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3579" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1ga975ffaf2925f238e84e4ec58ff07507a" prot="public" static="no">
+        <name>SAI_FIFOStatus_Empty</name>
+        <initializer>SAI_FIFOSTATUS_EMPTY</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3580" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3580" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1ga8bf03716c694dc3221b640dc5de670b6" prot="public" static="no">
+        <name>SAI_FIFOStatus_Less1QuarterFull</name>
+        <initializer>SAI_FIFOSTATUS_LESS1QUARTERFULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3581" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1ga521399b510e0f29fc41fb516a27fe517" prot="public" static="no">
+        <name>SAI_FIFOStatus_1QuarterFull</name>
+        <initializer>SAI_FIFOSTATUS_1QUARTERFULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3582" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3582" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1gafe9200ac26339d1334ab978ae508f352" prot="public" static="no">
+        <name>SAI_FIFOStatus_HalfFull</name>
+        <initializer>SAI_FIFOSTATUS_HALFFULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3583" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3583" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1ga50b6fc16c49a0d4eb2575567f5e9be98" prot="public" static="no">
+        <name>SAI_FIFOStatus_3QuartersFull</name>
+        <initializer>SAI_FIFOSTATUS_3QUARTERFULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3584" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3584" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1ga5e2fd1ac3cea38c8c2fe15cf70efe61a" prot="public" static="no">
+        <name>SAI_FIFOStatus_Full</name>
+        <initializer>SAI_FIFOSTATUS_FULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3585" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3585" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1gaa9eb7424d1a759fa3c84ee598b6d53a1" prot="public" static="no">
+        <name>IS_SAI_BLOCK_MONO_STREO_MODE</name>
+        <initializer>IS_SAI_BLOCK_MONO_STEREO_MODE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3586" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3586" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1ga14be5593f2f4de9699b49f5e307e98fe" prot="public" static="no">
+        <name>SAI_SYNCHRONOUS_EXT</name>
+        <initializer>SAI_SYNCHRONOUS_EXT_SAI1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3587" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3587" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___s_a_i___aliased___macros_1ga05572ce0b163fe7bd2269692929f84af" prot="public" static="no">
+        <name>SAI_SYNCEXT_IN_ENABLE</name>
+        <initializer>SAI_SYNCEXT_OUTBLOCKA_ENABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3588" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3588" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

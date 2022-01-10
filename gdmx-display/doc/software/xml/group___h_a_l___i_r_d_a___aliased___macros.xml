@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___i_r_d_a___aliased___macros" kind="group">
+    <compoundname>HAL_IRDA_Aliased_Macros</compoundname>
+    <title>HAL IRDA Aliased Macros maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___i_r_d_a___aliased___macros_1gae107b46fa75a7f1f5eb0734cbb24e997" prot="public" static="no">
+        <name>__IRDA_DISABLE</name>
+        <initializer>__HAL_IRDA_DISABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="2021" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="2021" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___i_r_d_a___aliased___macros_1ga30e950fea9b8b878eb721ef488572f93" prot="public" static="no">
+        <name>__IRDA_ENABLE</name>
+        <initializer>__HAL_IRDA_ENABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="2022" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="2022" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___i_r_d_a___aliased___macros_1ga914579d3d8a0ebefab093a54a60bdef4" prot="public" static="no">
+        <name>__HAL_IRDA_GETCLOCKSOURCE</name>
+        <initializer>IRDA_GETCLOCKSOURCE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="2024" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="2024" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___i_r_d_a___aliased___macros_1ga5dfede2931b25ae470e8b9222cd7f276" prot="public" static="no">
+        <name>__HAL_IRDA_MASK_COMPUTATION</name>
+        <initializer>IRDA_MASK_COMPUTATION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="2025" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="2025" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___i_r_d_a___aliased___macros_1ga91d8bac965400b5b1e0a9be356a9e477" prot="public" static="no">
+        <name>__IRDA_GETCLOCKSOURCE</name>
+        <initializer>IRDA_GETCLOCKSOURCE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="2026" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="2026" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___i_r_d_a___aliased___macros_1gaf50dbfc5425aee78a33582322b187616" prot="public" static="no">
+        <name>__IRDA_MASK_COMPUTATION</name>
+        <initializer>IRDA_MASK_COMPUTATION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="2027" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="2027" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___i_r_d_a___aliased___macros_1ga152f6e8c07efa028364631d5eab0f9ed" prot="public" static="no">
+        <name>IS_IRDA_ONEBIT_SAMPLE</name>
+        <initializer>IS_IRDA_ONE_BIT_SAMPLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="2029" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="2029" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

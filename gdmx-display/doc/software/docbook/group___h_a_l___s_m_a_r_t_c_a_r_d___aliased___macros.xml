@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_a_l___s_m_a_r_t_c_a_r_d___aliased___macros" xml:lang="en-US">
+<title>HAL SMARTCARD Aliased Macros maintained for legacy purpose</title>
+<indexterm><primary>HAL SMARTCARD Aliased Macros maintained for legacy purpose</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_m_a_r_t_c_a_r_d___aliased___macros_1ga8d5d23bc871cf5aef481120b55f7ac9f"/>#define <emphasis role="strong">__SMARTCARD_ENABLE_IT</emphasis>   __HAL_SMARTCARD_ENABLE_IT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_m_a_r_t_c_a_r_d___aliased___macros_1ga86c309a6a3c0780c7847062466aaf4cc"/>#define <emphasis role="strong">__SMARTCARD_DISABLE_IT</emphasis>   __HAL_SMARTCARD_DISABLE_IT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_m_a_r_t_c_a_r_d___aliased___macros_1gaa4e29e98414736502d7ee2371481d9f6"/>#define <emphasis role="strong">__SMARTCARD_ENABLE</emphasis>   __HAL_SMARTCARD_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_m_a_r_t_c_a_r_d___aliased___macros_1ga7765cb32d89b868ca5e775e7b6a571c7"/>#define <emphasis role="strong">__SMARTCARD_DISABLE</emphasis>   __HAL_SMARTCARD_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_m_a_r_t_c_a_r_d___aliased___macros_1ga758ec49e911579f65f7cb03e11cbf1b7"/>#define <emphasis role="strong">__SMARTCARD_DMA_REQUEST_ENABLE</emphasis>   __HAL_SMARTCARD_DMA_REQUEST_ENABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_m_a_r_t_c_a_r_d___aliased___macros_1gac7fcc6baa98b300ea02656c79c48b2a9"/>#define <emphasis role="strong">__SMARTCARD_DMA_REQUEST_DISABLE</emphasis>   __HAL_SMARTCARD_DMA_REQUEST_DISABLE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_m_a_r_t_c_a_r_d___aliased___macros_1ga94815bec2412334dadbc50408ff955f2"/>#define <emphasis role="strong">__HAL_SMARTCARD_GETCLOCKSOURCE</emphasis>   SMARTCARD_GETCLOCKSOURCE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_m_a_r_t_c_a_r_d___aliased___macros_1gaba3d4f1525efcda959a2a468889af9d6"/>#define <emphasis role="strong">__SMARTCARD_GETCLOCKSOURCE</emphasis>   SMARTCARD_GETCLOCKSOURCE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___h_a_l___s_m_a_r_t_c_a_r_d___aliased___macros_1ga02c2a746784a8186a7a1fbbe452670d3"/>#define <emphasis role="strong">IS_SMARTCARD_ONEBIT_SAMPLING</emphasis>   IS_SMARTCARD_ONE_BIT_SAMPLE</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

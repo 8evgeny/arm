@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___interrupt" xml:lang="en-US">
+<title>Interrupts</title>
+<indexterm><primary>Interrupts</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c___interrupt_1ga2b4ef277c1b71f96e0bef4b9a72fca94">RCC_IT_LSIRDY</link>   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1gacb94ccfe6a212f020e732d1dd787a6fb">RCC_CIR_LSIRDYF</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___interrupt_1gad6b6e78a426850f595ef180d292a673d">RCC_IT_LSERDY</link>   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1gabfc100e7ae673dfcec7be79af0d91dfe">RCC_CIR_LSERDYF</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___interrupt_1ga69637e51b71f73f519c8c0a0613d042f">RCC_IT_HSIRDY</link>   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1gad38877547c4cbbb94659d5726f377163">RCC_CIR_HSIRDYF</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___interrupt_1gad13eaede352bca59611e6cae68665866">RCC_IT_HSERDY</link>   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1ga11ea196450aac9ac35e283a66afc3da6">RCC_CIR_HSERDYF</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___interrupt_1ga68d48e7811fb58f2649dce6cf0d823d9">RCC_IT_PLLRDY</link>   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1ga0f007895a17e668f22f7b8b24ca90aec">RCC_CIR_PLLRDYF</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___interrupt_1ga9bb34a4912d2084dc1c0834eb53aa7a3">RCC_IT_CSS</link>   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1gad66b719e4061294de35af58cc27aba7f">RCC_CIR_CSSF</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c___interrupt_1ga9bb34a4912d2084dc1c0834eb53aa7a3"/>    <section>
+    <title>RCC_IT_CSS</title>
+<indexterm><primary>RCC_IT_CSS</primary><secondary>Interrupts</secondary></indexterm>
+<indexterm><primary>Interrupts</primary><secondary>RCC_IT_CSS</secondary></indexterm>
+<para><computeroutput>#define RCC_IT_CSS   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1gad66b719e4061294de35af58cc27aba7f">RCC_CIR_CSSF</link>)</computeroutput></para>
+<para>Clock Security System Interrupt flag </para>
+    </section><anchor xml:id="_group___r_c_c___interrupt_1gad13eaede352bca59611e6cae68665866"/>    <section>
+    <title>RCC_IT_HSERDY</title>
+<indexterm><primary>RCC_IT_HSERDY</primary><secondary>Interrupts</secondary></indexterm>
+<indexterm><primary>Interrupts</primary><secondary>RCC_IT_HSERDY</secondary></indexterm>
+<para><computeroutput>#define RCC_IT_HSERDY   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1ga11ea196450aac9ac35e283a66afc3da6">RCC_CIR_HSERDYF</link>)</computeroutput></para>
+<para>HSE Ready Interrupt flag </para>
+    </section><anchor xml:id="_group___r_c_c___interrupt_1ga69637e51b71f73f519c8c0a0613d042f"/>    <section>
+    <title>RCC_IT_HSIRDY</title>
+<indexterm><primary>RCC_IT_HSIRDY</primary><secondary>Interrupts</secondary></indexterm>
+<indexterm><primary>Interrupts</primary><secondary>RCC_IT_HSIRDY</secondary></indexterm>
+<para><computeroutput>#define RCC_IT_HSIRDY   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1gad38877547c4cbbb94659d5726f377163">RCC_CIR_HSIRDYF</link>)</computeroutput></para>
+<para>HSI Ready Interrupt flag </para>
+    </section><anchor xml:id="_group___r_c_c___interrupt_1gad6b6e78a426850f595ef180d292a673d"/>    <section>
+    <title>RCC_IT_LSERDY</title>
+<indexterm><primary>RCC_IT_LSERDY</primary><secondary>Interrupts</secondary></indexterm>
+<indexterm><primary>Interrupts</primary><secondary>RCC_IT_LSERDY</secondary></indexterm>
+<para><computeroutput>#define RCC_IT_LSERDY   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1gabfc100e7ae673dfcec7be79af0d91dfe">RCC_CIR_LSERDYF</link>)</computeroutput></para>
+<para>LSE Ready Interrupt flag </para>
+    </section><anchor xml:id="_group___r_c_c___interrupt_1ga2b4ef277c1b71f96e0bef4b9a72fca94"/>    <section>
+    <title>RCC_IT_LSIRDY</title>
+<indexterm><primary>RCC_IT_LSIRDY</primary><secondary>Interrupts</secondary></indexterm>
+<indexterm><primary>Interrupts</primary><secondary>RCC_IT_LSIRDY</secondary></indexterm>
+<para><computeroutput>#define RCC_IT_LSIRDY   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1gacb94ccfe6a212f020e732d1dd787a6fb">RCC_CIR_LSIRDYF</link>)</computeroutput></para>
+<para>LSI Ready Interrupt flag </para>
+    </section><anchor xml:id="_group___r_c_c___interrupt_1ga68d48e7811fb58f2649dce6cf0d823d9"/>    <section>
+    <title>RCC_IT_PLLRDY</title>
+<indexterm><primary>RCC_IT_PLLRDY</primary><secondary>Interrupts</secondary></indexterm>
+<indexterm><primary>Interrupts</primary><secondary>RCC_IT_PLLRDY</secondary></indexterm>
+<para><computeroutput>#define RCC_IT_PLLRDY   ((uint8_t)<link linkend="_group___peripheral___registers___bits___definition_1ga0f007895a17e668f22f7b8b24ca90aec">RCC_CIR_PLLRDYF</link>)</computeroutput></para>
+<para>PLL Ready Interrupt flag </para>
+</section>
+</section>
+</section>

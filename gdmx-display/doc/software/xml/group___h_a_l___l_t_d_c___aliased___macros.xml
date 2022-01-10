@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___l_t_d_c___aliased___macros" kind="group">
+    <compoundname>HAL_LTDC_Aliased_Macros</compoundname>
+    <title>HAL LTDC Aliased Macros maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___l_t_d_c___aliased___macros_1ga3bd298a3cccf42ab68193701d93fb16d" prot="public" static="no">
+        <name>__HAL_LTDC_LAYER</name>
+        <initializer>LTDC_LAYER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3566" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3566" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___l_t_d_c___aliased___macros_1gabe568494404d4d1f614294966649a20a" prot="public" static="no">
+        <name>__HAL_LTDC_RELOAD_CONFIG</name>
+        <initializer>__HAL_LTDC_RELOAD_IMMEDIATE_CONFIG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3567" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3567" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

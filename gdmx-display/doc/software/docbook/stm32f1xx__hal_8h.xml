@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f1xx__hal_8h" xml:lang="en-US">
+<title>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h File Reference</title>
+<indexterm><primary>Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h</primary></indexterm>
+<para>
+
+<para>This file contains all the functions prototypes for the HAL module driver. </para>
+ 
+</para>
+<programlisting>#include &quot;stm32f1xx_hal_conf.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___d_b_g_m_c_u___freeze___unfreeze_1ga4a466905a367266e7c23417248dc741d">__HAL_DBGMCU_FREEZE_TIM2</link>()   SET_BIT(DBGMCU-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1gaaa1ee73c14e640c4e97041a9ce3e221a">DBGMCU_CR_DBG_TIM2_STOP</link>)</para>
+
+<para>TIM2 Peripherals Debug mode. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_DBGMCU_UNFREEZE_TIM2</emphasis>()   CLEAR_BIT(DBGMCU-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1gaaa1ee73c14e640c4e97041a9ce3e221a">DBGMCU_CR_DBG_TIM2_STOP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_b_g_m_c_u___freeze___unfreeze_1gaf2fe2b6d0a5e8df4ebb38020acf210d9">__HAL_DBGMCU_FREEZE_TIM3</link>()   SET_BIT(DBGMCU-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1gac6801756368b597301f4098b69bce4e7">DBGMCU_CR_DBG_TIM3_STOP</link>)</para>
+
+<para>TIM3 Peripherals Debug mode. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_DBGMCU_UNFREEZE_TIM3</emphasis>()   CLEAR_BIT(DBGMCU-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1gac6801756368b597301f4098b69bce4e7">DBGMCU_CR_DBG_TIM3_STOP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_b_g_m_c_u___freeze___unfreeze_1ga81215154725c479c67fb1adac906fbd9">__HAL_DBGMCU_FREEZE_WWDG</link>()   SET_BIT(DBGMCU-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1ga626bea771c7fdb87e515685104d3a562">DBGMCU_CR_DBG_WWDG_STOP</link>)</para>
+
+<para>WWDG Peripherals Debug mode. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_DBGMCU_UNFREEZE_WWDG</emphasis>()   CLEAR_BIT(DBGMCU-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1ga626bea771c7fdb87e515685104d3a562">DBGMCU_CR_DBG_WWDG_STOP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_b_g_m_c_u___freeze___unfreeze_1gabab7ab631ba58fb6246a9385e8af9d0d">__HAL_DBGMCU_FREEZE_IWDG</link>()   SET_BIT(DBGMCU-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1ga06e02885e11d05135dd967b33fad68f1">DBGMCU_CR_DBG_IWDG_STOP</link>)</para>
+
+<para>IWDG Peripherals Debug mode. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_DBGMCU_UNFREEZE_IWDG</emphasis>()   CLEAR_BIT(DBGMCU-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1ga06e02885e11d05135dd967b33fad68f1">DBGMCU_CR_DBG_IWDG_STOP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_b_g_m_c_u___freeze___unfreeze_1ga6160f642dcff812be3a04c5b5c66e31d">__HAL_DBGMCU_FREEZE_I2C1_TIMEOUT</link>()   SET_BIT(DBGMCU-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1ga74c71dedb4221750d7e3d8237c8b7846">DBGMCU_CR_DBG_I2C1_SMBUS_TIMEOUT</link>)</para>
+
+<para>I2C1 Peripherals Debug mode. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__HAL_DBGMCU_UNFREEZE_I2C1_TIMEOUT</emphasis>()   CLEAR_BIT(DBGMCU-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1ga74c71dedb4221750d7e3d8237c8b7846">DBGMCU_CR_DBG_I2C1_SMBUS_TIMEOUT</link>)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_TICKFREQ</emphasis>(FREQ)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___h_a_l___t_i_c_k___f_r_e_q_1gab36ec81674817249c46734772ff3b73a"/>enum <emphasis role="strong">HAL_TickFreqTypeDef</emphasis> { <emphasis role="strong">HAL_TICK_FREQ_10HZ</emphasis> = 100U
+, <emphasis role="strong">HAL_TICK_FREQ_100HZ</emphasis> = 10U
+, <emphasis role="strong">HAL_TICK_FREQ_1KHZ</emphasis> = 1U
+, <emphasis role="strong">HAL_TICK_FREQ_DEFAULT</emphasis> = HAL_TICK_FREQ_1KHZ
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_Init</emphasis> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_DeInit</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l___exported___functions___group1_1gae4fb8e66865c87d0ebab74a726a6891f">HAL_MspInit</link> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_MspDeInit</emphasis> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_a_l___exported___functions___group1_1ga879cdb21ef051eb81ec51c18147397d5">HAL_InitTick</link> (uint32_t TickPriority)</para>
+
+<para>This function configures the TIM4 as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_IncTick</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_Delay</emphasis> (uint32_t Delay)</para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">HAL_GetTick</emphasis> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">HAL_GetTickPrio</emphasis> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_SetTickFreq</emphasis> (HAL_TickFreqTypeDef Freq)</para>
+</listitem>
+            <listitem><para>HAL_TickFreqTypeDef <emphasis role="strong">HAL_GetTickFreq</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l___exported___functions___group2_1gaaf651af2afe688a991c657f64f8fa5f9">HAL_SuspendTick</link> (void)</para>
+
+<para>Suspend Tick increment. </para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l___exported___functions___group2_1ga24e0ee9dae1ec0f9d19200f5575ff790">HAL_ResumeTick</link> (void)</para>
+
+<para>Resume Tick increment. </para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">HAL_GetHalVersion</emphasis> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">HAL_GetREVID</emphasis> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">HAL_GetDEVID</emphasis> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">HAL_GetUIDw0</emphasis> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">HAL_GetUIDw1</emphasis> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <emphasis role="strong">HAL_GetUIDw2</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_DBGMCU_EnableDBGSleepMode</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_DBGMCU_DisableDBGSleepMode</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_DBGMCU_EnableDBGStopMode</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_DBGMCU_DisableDBGStopMode</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_DBGMCU_EnableDBGStandbyMode</emphasis> (void)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">HAL_DBGMCU_DisableDBGStandbyMode</emphasis> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <emphasis role="strong">uwTickPrio</emphasis></para>
+</listitem>
+            <listitem><para>HAL_TickFreqTypeDef <emphasis role="strong">uwTickFreq</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This file contains all the functions prototypes for the HAL module driver. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2017 STMicroelectronics. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by ST under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+</section>
+</section>

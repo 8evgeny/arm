@@ -1,0 +1,405 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_m_s_i_s___s_cn_s_c_b" xml:lang="en-US">
+<title>System Controls not in SCB (SCnSCB)</title>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary></indexterm>
+<para>
+
+<para>Type definitions for the System Control and ID Register not in the SCB. </para>
+ 
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___c_m_s_i_s___sys_tick">System Tick Timer (SysTick)</link></para>
+
+<para>Type definitions for the System Timer Registers. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_s_cn_s_c_b___type">SCnSCB_Type</link></para>
+
+<para>Structure type to access the System Control and ID Register not in the SCB. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7">SCnSCB_ICTR_INTLINESNUM_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gae4360bc2810b8486ccf74e7a853e1458">SCnSCB_ACTLR_ITCMUAEN_Pos</link>   4U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga034b71340cb2e5455624b715d70cb36b">SCnSCB_ACTLR_ITCMUAEN_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gae4360bc2810b8486ccf74e7a853e1458">SCnSCB_ACTLR_ITCMUAEN_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gad5d71c0786cdb8a28f322b545d218aa7">SCnSCB_ACTLR_ITCMLAEN_Pos</link>   3U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga96ed7dd2124586ddd816973d665d2014">SCnSCB_ACTLR_ITCMLAEN_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gad5d71c0786cdb8a28f322b545d218aa7">SCnSCB_ACTLR_ITCMLAEN_Pos</link>)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7">SCnSCB_ICTR_INTLINESNUM_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02">SCnSCB_ACTLR_DISFOLD_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaa9dd2d4a2350499188f438d0aa9fd982">SCnSCB_ACTLR_DISFOLD_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02">SCnSCB_ACTLR_DISFOLD_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gafa2eb37493c0f8dae77cde81ecf80f77">SCnSCB_ACTLR_DISDEFWBUF_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga6cda7b7219232a008ec52cc8e89d5d08">SCnSCB_ACTLR_DISDEFWBUF_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gafa2eb37493c0f8dae77cde81ecf80f77">SCnSCB_ACTLR_DISDEFWBUF_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga2a2818f0489ad10b6ea2964e899d4cbc">SCnSCB_ACTLR_DISMCYCINT_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>*/)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7">SCnSCB_ICTR_INTLINESNUM_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7">SCnSCB_ICTR_INTLINESNUM_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaff0b57464c60fea8182b903676f8de49">SCnSCB_ACTLR_DISOOFP_Pos</link>   9U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga1ecd6adafa43464d7097b132c19e8640">SCnSCB_ACTLR_DISOOFP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaff0b57464c60fea8182b903676f8de49">SCnSCB_ACTLR_DISOOFP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaa194809383bc72ecf3416d85709281d7">SCnSCB_ACTLR_DISFPCA_Pos</link>   8U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga10d5aa4a196dcde6f476016ece2c1b69">SCnSCB_ACTLR_DISFPCA_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaa194809383bc72ecf3416d85709281d7">SCnSCB_ACTLR_DISFPCA_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02">SCnSCB_ACTLR_DISFOLD_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaa9dd2d4a2350499188f438d0aa9fd982">SCnSCB_ACTLR_DISFOLD_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02">SCnSCB_ACTLR_DISFOLD_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gafa2eb37493c0f8dae77cde81ecf80f77">SCnSCB_ACTLR_DISDEFWBUF_Pos</link>   1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga6cda7b7219232a008ec52cc8e89d5d08">SCnSCB_ACTLR_DISDEFWBUF_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gafa2eb37493c0f8dae77cde81ecf80f77">SCnSCB_ACTLR_DISDEFWBUF_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga2a2818f0489ad10b6ea2964e899d4cbc">SCnSCB_ACTLR_DISMCYCINT_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>*/)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7">SCnSCB_ICTR_INTLINESNUM_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga5f888e0ebc18cc2d99976405777c142f">SCnSCB_ACTLR_DISITMATBFLUSH_Pos</link>   12U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga46b16a03b408184720134ef42203ac2e">SCnSCB_ACTLR_DISITMATBFLUSH_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga5f888e0ebc18cc2d99976405777c142f">SCnSCB_ACTLR_DISITMATBFLUSH_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga1bffb5e05053d15cbe42fbe87d225dcb">SCnSCB_ACTLR_DISRAMODE_Pos</link>   11U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga436fc1bd011b15c9585bb3ace5332ce3">SCnSCB_ACTLR_DISRAMODE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga1bffb5e05053d15cbe42fbe87d225dcb">SCnSCB_ACTLR_DISRAMODE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaa743743f5af93d6ece74a426b355ab70">SCnSCB_ACTLR_FPEXCODIS_Pos</link>   10U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gadd12baaeeea3220b03867e4b8a1432aa">SCnSCB_ACTLR_FPEXCODIS_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaa743743f5af93d6ece74a426b355ab70">SCnSCB_ACTLR_FPEXCODIS_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02">SCnSCB_ACTLR_DISFOLD_Pos</link>   2U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaa9dd2d4a2350499188f438d0aa9fd982">SCnSCB_ACTLR_DISFOLD_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02">SCnSCB_ACTLR_DISFOLD_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga2a2818f0489ad10b6ea2964e899d4cbc">SCnSCB_ACTLR_DISMCYCINT_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>*/)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga2a2818f0489ad10b6ea2964e899d4cbc">SCnSCB_ACTLR_DISMCYCINT_Msk</link>   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>*/)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>   0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7">SCnSCB_ICTR_INTLINESNUM_Msk</link>   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Type definitions for the System Control and ID Register not in the SCB. </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga6cda7b7219232a008ec52cc8e89d5d08"/>    <section>
+    <title>SCnSCB_ACTLR_DISDEFWBUF_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISDEFWBUF_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISDEFWBUF_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISDEFWBUF_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gafa2eb37493c0f8dae77cde81ecf80f77">SCnSCB_ACTLR_DISDEFWBUF_Pos</link>)</computeroutput></para>
+<para>ACTLR: DISDEFWBUF Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga6cda7b7219232a008ec52cc8e89d5d08"/>    <section>
+    <title>SCnSCB_ACTLR_DISDEFWBUF_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISDEFWBUF_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISDEFWBUF_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISDEFWBUF_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gafa2eb37493c0f8dae77cde81ecf80f77">SCnSCB_ACTLR_DISDEFWBUF_Pos</link>)</computeroutput></para>
+<para>ACTLR: DISDEFWBUF Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gafa2eb37493c0f8dae77cde81ecf80f77"/>    <section>
+    <title>SCnSCB_ACTLR_DISDEFWBUF_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISDEFWBUF_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISDEFWBUF_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISDEFWBUF_Pos   1U</computeroutput></para>
+<para>ACTLR: DISDEFWBUF Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gafa2eb37493c0f8dae77cde81ecf80f77"/>    <section>
+    <title>SCnSCB_ACTLR_DISDEFWBUF_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISDEFWBUF_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISDEFWBUF_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISDEFWBUF_Pos   1U</computeroutput></para>
+<para>ACTLR: DISDEFWBUF Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaa9dd2d4a2350499188f438d0aa9fd982"/>    <section>
+    <title>SCnSCB_ACTLR_DISFOLD_Msk<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISFOLD_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISFOLD_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISFOLD_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02">SCnSCB_ACTLR_DISFOLD_Pos</link>)</computeroutput></para>
+<para>ACTLR: DISFOLD Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaa9dd2d4a2350499188f438d0aa9fd982"/>    <section>
+    <title>SCnSCB_ACTLR_DISFOLD_Msk<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISFOLD_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISFOLD_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISFOLD_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02">SCnSCB_ACTLR_DISFOLD_Pos</link>)</computeroutput></para>
+<para>ACTLR: DISFOLD Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaa9dd2d4a2350499188f438d0aa9fd982"/>    <section>
+    <title>SCnSCB_ACTLR_DISFOLD_Msk<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISFOLD_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISFOLD_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISFOLD_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02">SCnSCB_ACTLR_DISFOLD_Pos</link>)</computeroutput></para>
+<para>ACTLR: DISFOLD Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02"/>    <section>
+    <title>SCnSCB_ACTLR_DISFOLD_Pos<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISFOLD_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISFOLD_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISFOLD_Pos   2U</computeroutput></para>
+<para>ACTLR: DISFOLD Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02"/>    <section>
+    <title>SCnSCB_ACTLR_DISFOLD_Pos<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISFOLD_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISFOLD_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISFOLD_Pos   2U</computeroutput></para>
+<para>ACTLR: DISFOLD Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaab395870643a0bee78906bb15ca5bd02"/>    <section>
+    <title>SCnSCB_ACTLR_DISFOLD_Pos<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISFOLD_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISFOLD_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISFOLD_Pos   2U</computeroutput></para>
+<para>ACTLR: DISFOLD Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga10d5aa4a196dcde6f476016ece2c1b69"/>    <section>
+    <title>SCnSCB_ACTLR_DISFPCA_Msk</title>
+<indexterm><primary>SCnSCB_ACTLR_DISFPCA_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISFPCA_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISFPCA_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaa194809383bc72ecf3416d85709281d7">SCnSCB_ACTLR_DISFPCA_Pos</link>)</computeroutput></para>
+<para>ACTLR: DISFPCA Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaa194809383bc72ecf3416d85709281d7"/>    <section>
+    <title>SCnSCB_ACTLR_DISFPCA_Pos</title>
+<indexterm><primary>SCnSCB_ACTLR_DISFPCA_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISFPCA_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISFPCA_Pos   8U</computeroutput></para>
+<para>ACTLR: DISFPCA Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga46b16a03b408184720134ef42203ac2e"/>    <section>
+    <title>SCnSCB_ACTLR_DISITMATBFLUSH_Msk</title>
+<indexterm><primary>SCnSCB_ACTLR_DISITMATBFLUSH_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISITMATBFLUSH_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISITMATBFLUSH_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga5f888e0ebc18cc2d99976405777c142f">SCnSCB_ACTLR_DISITMATBFLUSH_Pos</link>)</computeroutput></para>
+<para>ACTLR: DISITMATBFLUSH Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga5f888e0ebc18cc2d99976405777c142f"/>    <section>
+    <title>SCnSCB_ACTLR_DISITMATBFLUSH_Pos</title>
+<indexterm><primary>SCnSCB_ACTLR_DISITMATBFLUSH_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISITMATBFLUSH_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISITMATBFLUSH_Pos   12U</computeroutput></para>
+<para>ACTLR: DISITMATBFLUSH Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga2a2818f0489ad10b6ea2964e899d4cbc"/>    <section>
+    <title>SCnSCB_ACTLR_DISMCYCINT_Msk<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISMCYCINT_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISMCYCINT_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISMCYCINT_Msk   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>*/)</computeroutput></para>
+<para>ACTLR: DISMCYCINT Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga2a2818f0489ad10b6ea2964e899d4cbc"/>    <section>
+    <title>SCnSCB_ACTLR_DISMCYCINT_Msk<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISMCYCINT_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISMCYCINT_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISMCYCINT_Msk   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>*/)</computeroutput></para>
+<para>ACTLR: DISMCYCINT Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga2a2818f0489ad10b6ea2964e899d4cbc"/>    <section>
+    <title>SCnSCB_ACTLR_DISMCYCINT_Msk<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISMCYCINT_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISMCYCINT_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISMCYCINT_Msk   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>*/)</computeroutput></para>
+<para>ACTLR: DISMCYCINT Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga2a2818f0489ad10b6ea2964e899d4cbc"/>    <section>
+    <title>SCnSCB_ACTLR_DISMCYCINT_Msk<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISMCYCINT_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISMCYCINT_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISMCYCINT_Msk   (1UL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd">SCnSCB_ACTLR_DISMCYCINT_Pos</link>*/)</computeroutput></para>
+<para>ACTLR: DISMCYCINT Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd"/>    <section>
+    <title>SCnSCB_ACTLR_DISMCYCINT_Pos<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISMCYCINT_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISMCYCINT_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISMCYCINT_Pos   0U</computeroutput></para>
+<para>ACTLR: DISMCYCINT Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd"/>    <section>
+    <title>SCnSCB_ACTLR_DISMCYCINT_Pos<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISMCYCINT_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISMCYCINT_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISMCYCINT_Pos   0U</computeroutput></para>
+<para>ACTLR: DISMCYCINT Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd"/>    <section>
+    <title>SCnSCB_ACTLR_DISMCYCINT_Pos<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISMCYCINT_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISMCYCINT_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISMCYCINT_Pos   0U</computeroutput></para>
+<para>ACTLR: DISMCYCINT Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaaa3e79f5ead4a32c0ea742b2a9ffc0cd"/>    <section>
+    <title>SCnSCB_ACTLR_DISMCYCINT_Pos<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SCnSCB_ACTLR_DISMCYCINT_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISMCYCINT_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISMCYCINT_Pos   0U</computeroutput></para>
+<para>ACTLR: DISMCYCINT Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga1ecd6adafa43464d7097b132c19e8640"/>    <section>
+    <title>SCnSCB_ACTLR_DISOOFP_Msk</title>
+<indexterm><primary>SCnSCB_ACTLR_DISOOFP_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISOOFP_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISOOFP_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaff0b57464c60fea8182b903676f8de49">SCnSCB_ACTLR_DISOOFP_Pos</link>)</computeroutput></para>
+<para>ACTLR: DISOOFP Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaff0b57464c60fea8182b903676f8de49"/>    <section>
+    <title>SCnSCB_ACTLR_DISOOFP_Pos</title>
+<indexterm><primary>SCnSCB_ACTLR_DISOOFP_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISOOFP_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISOOFP_Pos   9U</computeroutput></para>
+<para>ACTLR: DISOOFP Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga436fc1bd011b15c9585bb3ace5332ce3"/>    <section>
+    <title>SCnSCB_ACTLR_DISRAMODE_Msk</title>
+<indexterm><primary>SCnSCB_ACTLR_DISRAMODE_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISRAMODE_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISRAMODE_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga1bffb5e05053d15cbe42fbe87d225dcb">SCnSCB_ACTLR_DISRAMODE_Pos</link>)</computeroutput></para>
+<para>ACTLR: DISRAMODE Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga1bffb5e05053d15cbe42fbe87d225dcb"/>    <section>
+    <title>SCnSCB_ACTLR_DISRAMODE_Pos</title>
+<indexterm><primary>SCnSCB_ACTLR_DISRAMODE_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_DISRAMODE_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_DISRAMODE_Pos   11U</computeroutput></para>
+<para>ACTLR: DISRAMODE Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gadd12baaeeea3220b03867e4b8a1432aa"/>    <section>
+    <title>SCnSCB_ACTLR_FPEXCODIS_Msk</title>
+<indexterm><primary>SCnSCB_ACTLR_FPEXCODIS_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_FPEXCODIS_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_FPEXCODIS_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gaa743743f5af93d6ece74a426b355ab70">SCnSCB_ACTLR_FPEXCODIS_Pos</link>)</computeroutput></para>
+<para>ACTLR: FPEXCODIS Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gaa743743f5af93d6ece74a426b355ab70"/>    <section>
+    <title>SCnSCB_ACTLR_FPEXCODIS_Pos</title>
+<indexterm><primary>SCnSCB_ACTLR_FPEXCODIS_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_FPEXCODIS_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_FPEXCODIS_Pos   10U</computeroutput></para>
+<para>ACTLR: FPEXCODIS Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga96ed7dd2124586ddd816973d665d2014"/>    <section>
+    <title>SCnSCB_ACTLR_ITCMLAEN_Msk</title>
+<indexterm><primary>SCnSCB_ACTLR_ITCMLAEN_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_ITCMLAEN_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_ITCMLAEN_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gad5d71c0786cdb8a28f322b545d218aa7">SCnSCB_ACTLR_ITCMLAEN_Pos</link>)</computeroutput></para>
+<para>ACTLR: Instruction TCM Lower Alias Enable Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gad5d71c0786cdb8a28f322b545d218aa7"/>    <section>
+    <title>SCnSCB_ACTLR_ITCMLAEN_Pos</title>
+<indexterm><primary>SCnSCB_ACTLR_ITCMLAEN_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_ITCMLAEN_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_ITCMLAEN_Pos   3U</computeroutput></para>
+<para>ACTLR: Instruction TCM Lower Alias Enable Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga034b71340cb2e5455624b715d70cb36b"/>    <section>
+    <title>SCnSCB_ACTLR_ITCMUAEN_Msk</title>
+<indexterm><primary>SCnSCB_ACTLR_ITCMUAEN_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_ITCMUAEN_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_ITCMUAEN_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1gae4360bc2810b8486ccf74e7a853e1458">SCnSCB_ACTLR_ITCMUAEN_Pos</link>)</computeroutput></para>
+<para>ACTLR: Instruction TCM Upper Alias Enable Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1gae4360bc2810b8486ccf74e7a853e1458"/>    <section>
+    <title>SCnSCB_ACTLR_ITCMUAEN_Pos</title>
+<indexterm><primary>SCnSCB_ACTLR_ITCMUAEN_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ACTLR_ITCMUAEN_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ACTLR_ITCMUAEN_Pos   4U</computeroutput></para>
+<para>ACTLR: Instruction TCM Upper Alias Enable Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Msk<computeroutput>[1/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Msk   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</computeroutput></para>
+<para>ICTR: INTLINESNUM Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Msk<computeroutput>[2/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Msk   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</computeroutput></para>
+<para>ICTR: INTLINESNUM Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Msk<computeroutput>[3/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Msk   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</computeroutput></para>
+<para>ICTR: INTLINESNUM Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Msk<computeroutput>[4/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Msk   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</computeroutput></para>
+<para>ICTR: INTLINESNUM Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Msk<computeroutput>[5/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Msk   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</computeroutput></para>
+<para>ICTR: INTLINESNUM Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga3efa0f5210051464e1034b19fc7b33c7"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Msk<computeroutput>[6/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Msk</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Msk</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Msk   (0xFUL /*&lt;&lt; <link linkend="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5">SCnSCB_ICTR_INTLINESNUM_Pos</link>*/)</computeroutput></para>
+<para>ICTR: INTLINESNUM Mask </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Pos<computeroutput>[1/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Pos   0U</computeroutput></para>
+<para>ICTR: INTLINESNUM Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Pos<computeroutput>[2/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Pos   0U</computeroutput></para>
+<para>ICTR: INTLINESNUM Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Pos<computeroutput>[3/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Pos   0U</computeroutput></para>
+<para>ICTR: INTLINESNUM Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Pos<computeroutput>[4/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Pos   0U</computeroutput></para>
+<para>ICTR: INTLINESNUM Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Pos<computeroutput>[5/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Pos   0U</computeroutput></para>
+<para>ICTR: INTLINESNUM Position </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___s_cn_s_c_b_1ga0777ddf379af50f9ca41d40573bfffc5"/>    <section>
+    <title>SCnSCB_ICTR_INTLINESNUM_Pos<computeroutput>[6/6]</computeroutput></title>
+<indexterm><primary>SCnSCB_ICTR_INTLINESNUM_Pos</primary><secondary>System Controls not in SCB (SCnSCB)</secondary></indexterm>
+<indexterm><primary>System Controls not in SCB (SCnSCB)</primary><secondary>SCnSCB_ICTR_INTLINESNUM_Pos</secondary></indexterm>
+<para><computeroutput>#define SCnSCB_ICTR_INTLINESNUM_Pos   0U</computeroutput></para>
+<para>ICTR: INTLINESNUM Position </para>
+</section>
+</section>
+</section>

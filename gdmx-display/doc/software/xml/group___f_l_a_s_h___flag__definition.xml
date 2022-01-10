@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___f_l_a_s_h___flag__definition" kind="group">
+    <compoundname>FLASH_Flag_definition</compoundname>
+    <title>Flag definition</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___f_l_a_s_h___flag__definition_1gad3bc368f954ad7744deda3315da2fff7" prot="public" static="no">
+        <name>FLASH_FLAG_BSY</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga4b86181a96fd2f1cc3828e9d8d83d368" kindref="member">FLASH_SR_BSY</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FLASH Busy flag <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="530" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="530" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___f_l_a_s_h___flag__definition_1gae2ef62dee0a5ca01e6226746039b6f20" prot="public" static="no">
+        <name>FLASH_FLAG_PGERR</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga60f40ca765714598a62aa216a5ccd8e4" kindref="member">FLASH_SR_PGERR</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FLASH Programming error flag <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="531" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="531" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___f_l_a_s_h___flag__definition_1ga6abf64f916992585899369166db3f266" prot="public" static="no">
+        <name>FLASH_FLAG_WRPERR</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1ga2e403606e5ac23cb07701aeebc1f73e5" kindref="member">FLASH_SR_WRPRTERR</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FLASH Write protected error flag <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="532" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="532" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___f_l_a_s_h___flag__definition_1gaf043ba4d8f837350bfc7754a99fae5a9" prot="public" static="no">
+        <name>FLASH_FLAG_EOP</name>
+        <initializer><ref refid="group___peripheral___registers___bits___definition_1gae1301c6b487cfefa247c54a576a0c12b" kindref="member">FLASH_SR_EOP</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FLASH End of Operation flag <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="533" column="10" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="533" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___f_l_a_s_h___flag__definition_1gacb2c4c991a260c3f110cd8c72f302864" prot="public" static="no">
+        <name>FLASH_FLAG_OPTVERR</name>
+        <initializer>((OBR_REG_INDEX &lt;&lt; 8U | <ref refid="group___peripheral___registers___bits___definition_1gab52c27d6657bd72f1860fa25a1faf8e3" kindref="member">FLASH_OBR_OPTERR</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Option Byte Error <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" line="536" column="11" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" bodystart="536" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Flag definition. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

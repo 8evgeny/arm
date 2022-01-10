@@ -1,0 +1,28 @@
+.TH "pcTaskGetHandle" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+pcTaskGetHandle \- pcTaskGetHandle
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+TaskHandle_t xTaskGetHandle( const char *pcNameToQuery );
+.fi
+.PP
+.PP
+NOTE: This function takes a relatively long time to complete and should be used sparingly\&.
+.PP
+\fBReturns\fP
+.RS 4
+The handle of the task that has the human readable name pcNameToQuery\&. NULL is returned if no matching name is found\&. INCLUDE_xTaskGetHandle must be set to 1 in \fBFreeRTOSConfig\&.h\fP for pcTaskGetHandle() to be available\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

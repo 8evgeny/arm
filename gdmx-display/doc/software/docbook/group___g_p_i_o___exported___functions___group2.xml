@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___g_p_i_o___exported___functions___group2" xml:lang="en-US">
+<title>GPIO_Exported_Functions_Group2</title>
+<indexterm><primary>GPIO_Exported_Functions_Group2</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___g_p_i_o___exported___functions___group2_1gaf2b819ea6551319ddd5670db318d2e4e"/><link linkend="_group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link> <emphasis role="strong">HAL_GPIO_ReadPin</emphasis> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___g_p_i_o___exported___functions___group2_1gaf4b97bdf533a02f51ef696d43b6da5c4"/>void <emphasis role="strong">HAL_GPIO_WritePin</emphasis> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin, <link linkend="_group___g_p_i_o___exported___types_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link> PinState)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___g_p_i_o___exported___functions___group2_1gaf5e0c89f752de5cdedcc30db068133f6"/>void <emphasis role="strong">HAL_GPIO_TogglePin</emphasis> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___g_p_i_o___exported___functions___group2_1gad03c868b4a4fb25883c1bb86d0c7e9ca"/><link linkend="_stm32f1xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <emphasis role="strong">HAL_GPIO_LockPin</emphasis> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___g_p_i_o___exported___functions___group2_1gaa5de1ec4ebdd47e3e2b786224adaa9d0"/>void <emphasis role="strong">HAL_GPIO_EXTI_IRQHandler</emphasis> (uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___g_p_i_o___exported___functions___group2_1ga0cd91fd3a9608559c2a87a8ba6cba55f"/>void <emphasis role="strong">HAL_GPIO_EXTI_Callback</emphasis> (uint16_t GPIO_Pin)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

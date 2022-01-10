@@ -1,0 +1,586 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___p_w_r___exported___macros" xml:lang="en-US">
+<title>PWR Exported Macros</title>
+<indexterm><primary>PWR Exported Macros</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga2977135bbea35b786805eea640d1c884">__HAL_PWR_GET_FLAG</link>(__FLAG__)   ((PWR-&gt;CSR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Check PWR flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga96f24bf4b16c9f944cd829100bf746e5">__HAL_PWR_CLEAR_FLAG</link>(__FLAG__)   SET_BIT(PWR-&gt;CR, ((__FLAG__) &lt;&lt; 2))</para>
+
+<para>Clear the PWR&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga3180f039cf14ef78a64089f387f8f9c2">__HAL_PWR_PVD_EXTI_ENABLE_IT</link>()   SET_BIT(EXTI-&gt;IMR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</para>
+
+<para>Enable interrupt on PVD Exti Line 16. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1gad240d7bf8f15191b068497b9aead1f1f">__HAL_PWR_PVD_EXTI_DISABLE_IT</link>()   CLEAR_BIT(EXTI-&gt;IMR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</para>
+
+<para>Disable interrupt on PVD Exti Line 16. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1gae5ba5672fe8cb7c1686c7f2cc211b128">__HAL_PWR_PVD_EXTI_ENABLE_EVENT</link>()   SET_BIT(EXTI-&gt;EMR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</para>
+
+<para>Enable event on PVD Exti Line 16. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga8bd379e960497722450c7cea474a7e7a">__HAL_PWR_PVD_EXTI_DISABLE_EVENT</link>()   CLEAR_BIT(EXTI-&gt;EMR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</para>
+
+<para>Disable event on PVD Exti Line 16. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga5b971478563a00e1ee1a9d8ca8054e08">__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE</link>()   SET_BIT(EXTI-&gt;FTSR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</para>
+
+<para>PVD EXTI line configuration: set falling edge trigger. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga1ca57168205f8cd8d1014e6eb9465f2d">__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE</link>()   CLEAR_BIT(EXTI-&gt;FTSR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</para>
+
+<para>Disable the PVD Extended Interrupt Falling Trigger. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga7bef3f30c9fe267c99d5240fbf3f878c">__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE</link>()   SET_BIT(EXTI-&gt;RTSR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</para>
+
+<para>PVD EXTI line configuration: set rising edge trigger. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga1ca8fd7f3286a176f6be540c75a004c6">__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</link>()   CLEAR_BIT(EXTI-&gt;RTSR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</para>
+
+<para>Disable the PVD Extended Interrupt Rising Trigger. This parameter can be: </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga638033d236eb78c1e5ecb9b49c4e7f36">__HAL_PWR_PVD_EXTI_ENABLE_RISING_FALLING_EDGE</link>()   <link linkend="_group___p_w_r___exported___macros_1ga7bef3f30c9fe267c99d5240fbf3f878c">__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE</link>();<link linkend="_group___p_w_r___exported___macros_1ga5b971478563a00e1ee1a9d8ca8054e08">__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE</link>();</para>
+
+<para>PVD EXTI line configuration: set rising &amp; falling edge trigger. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga3f66c9c0c214cd08c24674904dcdc4e0">__HAL_PWR_PVD_EXTI_DISABLE_RISING_FALLING_EDGE</link>()   <link linkend="_group___p_w_r___exported___macros_1ga1ca8fd7f3286a176f6be540c75a004c6">__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</link>();<link linkend="_group___p_w_r___exported___macros_1ga1ca57168205f8cd8d1014e6eb9465f2d">__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE</link>();</para>
+
+<para>Disable the PVD Extended Interrupt Rising &amp; Falling Trigger. This parameter can be: </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1ga5e66fa75359b51066e0731ac1e5ae438">__HAL_PWR_PVD_EXTI_GET_FLAG</link>()   (EXTI-&gt;PR &amp; (<link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>))</para>
+
+<para>Check whether the specified PVD EXTI interrupt flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1gac0fb2218bc050f5d8fdb1a3f28590352">__HAL_PWR_PVD_EXTI_CLEAR_FLAG</link>()   (EXTI-&gt;PR = (<link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>))</para>
+
+<para>Clear the PVD EXTI flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r___exported___macros_1gaba4a7968f5c4c4ca6a7047b147ba18d4">__HAL_PWR_PVD_EXTI_GENERATE_SWIT</link>()   SET_BIT(EXTI-&gt;SWIER, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</para>
+
+<para>Generate a Software interrupt on selected EXTI line. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___p_w_r___exported___macros_1ga96f24bf4b16c9f944cd829100bf746e5"/>    <section>
+    <title>__HAL_PWR_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_PWR_CLEAR_FLAG</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_CLEAR_FLAG( __FLAG__)   SET_BIT(PWR-&gt;CR, ((__FLAG__) &lt;&lt; 2))</computeroutput></para><para>
+
+<para>Clear the PWR&apos;s pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;FLAG&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the flag to clear. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>PWR_FLAG_WU: Wake Up flag </para>
+</listitem>
+<listitem>
+<para>PWR_FLAG_SB: StandBy flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1ga2977135bbea35b786805eea640d1c884"/>    <section>
+    <title>__HAL_PWR_GET_FLAG</title>
+<indexterm><primary>__HAL_PWR_GET_FLAG</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_GET_FLAG( __FLAG__)   ((PWR-&gt;CSR &amp; (__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Check PWR flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;FLAG&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>PWR_FLAG_WU: Wake Up flag. This flag indicates that a wakeup event was received from the WKUP pin or from the RTC alarm An additional wakeup event is detected if the WKUP pin is enabled (by setting the EWUP bit) when the WKUP pin level is already high. </para>
+</listitem>
+<listitem>
+<para>PWR_FLAG_SB: StandBy flag. This flag indicates that the system was resumed from StandBy mode. </para>
+</listitem>
+<listitem>
+<para>PWR_FLAG_PVDO: PVD Output. This flag is valid only if PVD is enabled by the HAL_PWR_EnablePVD() function. The PVD is stopped by Standby mode For this reason, this bit is equal to 0 after Standby or reset until the PVDE bit is set. </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>The</entry>
+                                <entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1gac0fb2218bc050f5d8fdb1a3f28590352"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_CLEAR_FLAG</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_CLEAR_FLAG( )   (EXTI-&gt;PR = (<link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>))</computeroutput></para><para>
+
+<para>Clear the PVD EXTI flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1ga8bd379e960497722450c7cea474a7e7a"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_DISABLE_EVENT</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_DISABLE_EVENT</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_DISABLE_EVENT</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_DISABLE_EVENT( )   CLEAR_BIT(EXTI-&gt;EMR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</computeroutput></para><para>
+
+<para>Disable event on PVD Exti Line 16. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1ga1ca57168205f8cd8d1014e6eb9465f2d"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE( )   CLEAR_BIT(EXTI-&gt;FTSR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</computeroutput></para><para>
+
+<para>Disable the PVD Extended Interrupt Falling Trigger. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1gad240d7bf8f15191b068497b9aead1f1f"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_DISABLE_IT</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_DISABLE_IT</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_DISABLE_IT( )   CLEAR_BIT(EXTI-&gt;IMR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</computeroutput></para><para>
+
+<para>Disable interrupt on PVD Exti Line 16. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1ga1ca8fd7f3286a176f6be540c75a004c6"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE( )   CLEAR_BIT(EXTI-&gt;RTSR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</computeroutput></para><para>
+
+<para>Disable the PVD Extended Interrupt Rising Trigger. This parameter can be: </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1ga3f66c9c0c214cd08c24674904dcdc4e0"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_DISABLE_RISING_FALLING_EDGE</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_DISABLE_RISING_FALLING_EDGE</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_DISABLE_RISING_FALLING_EDGE</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_DISABLE_RISING_FALLING_EDGE( )   <link linkend="_group___p_w_r___exported___macros_1ga1ca8fd7f3286a176f6be540c75a004c6">__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</link>();<link linkend="_group___p_w_r___exported___macros_1ga1ca57168205f8cd8d1014e6eb9465f2d">__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE</link>();</computeroutput></para><para>
+
+<para>Disable the PVD Extended Interrupt Rising &amp; Falling Trigger. This parameter can be: </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1gae5ba5672fe8cb7c1686c7f2cc211b128"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_ENABLE_EVENT</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_ENABLE_EVENT</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_ENABLE_EVENT</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_ENABLE_EVENT( )   SET_BIT(EXTI-&gt;EMR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</computeroutput></para><para>
+
+<para>Enable event on PVD Exti Line 16. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1ga5b971478563a00e1ee1a9d8ca8054e08"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE( )   SET_BIT(EXTI-&gt;FTSR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</computeroutput></para><para>
+
+<para>PVD EXTI line configuration: set falling edge trigger. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1ga3180f039cf14ef78a64089f387f8f9c2"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_ENABLE_IT</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_ENABLE_IT</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_ENABLE_IT( )   SET_BIT(EXTI-&gt;IMR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</computeroutput></para><para>
+
+<para>Enable interrupt on PVD Exti Line 16. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1ga7bef3f30c9fe267c99d5240fbf3f878c"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE( )   SET_BIT(EXTI-&gt;RTSR, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</computeroutput></para><para>
+
+<para>PVD EXTI line configuration: set rising edge trigger. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1ga638033d236eb78c1e5ecb9b49c4e7f36"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_ENABLE_RISING_FALLING_EDGE</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_ENABLE_RISING_FALLING_EDGE</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_ENABLE_RISING_FALLING_EDGE</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_ENABLE_RISING_FALLING_EDGE( )   <link linkend="_group___p_w_r___exported___macros_1ga7bef3f30c9fe267c99d5240fbf3f878c">__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE</link>();<link linkend="_group___p_w_r___exported___macros_1ga5b971478563a00e1ee1a9d8ca8054e08">__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE</link>();</computeroutput></para><para>
+
+<para>PVD EXTI line configuration: set rising &amp; falling edge trigger. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1gaba4a7968f5c4c4ca6a7047b147ba18d4"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_GENERATE_SWIT</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_GENERATE_SWIT</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_GENERATE_SWIT</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_GENERATE_SWIT( )   SET_BIT(EXTI-&gt;SWIER, <link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>)</computeroutput></para><para>
+
+<para>Generate a Software interrupt on selected EXTI line. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>None.</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___p_w_r___exported___macros_1ga5e66fa75359b51066e0731ac1e5ae438"/>    <section>
+    <title>__HAL_PWR_PVD_EXTI_GET_FLAG</title>
+<indexterm><primary>__HAL_PWR_PVD_EXTI_GET_FLAG</primary><secondary>PWR Exported Macros</secondary></indexterm>
+<indexterm><primary>PWR Exported Macros</primary><secondary>__HAL_PWR_PVD_EXTI_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_PVD_EXTI_GET_FLAG( )   (EXTI-&gt;PR &amp; (<link linkend="_group___p_w_r___private___constants_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>))</computeroutput></para><para>
+
+<para>Check whether the specified PVD EXTI interrupt flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>EXTI</entry>
+                                <entry>
+<para>PVD Line Status. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,1220 @@
+.TH "Drivers/CMSIS/Include/core_cm23.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/CMSIS/Include/core_cm23.h \- CMSIS Cortex-M23 Core Peripheral Access Layer Header File\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include 'cmsis_version\&.h'\fP
+.br
+\fC#include 'cmsis_compiler\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "union \fBAPSR_Type\fP"
+.br
+.RI "Union type to access the Application Program Status Register (APSR)\&. "
+.ti -1c
+.RI "union \fBIPSR_Type\fP"
+.br
+.RI "Union type to access the Interrupt Program Status Register (IPSR)\&. "
+.ti -1c
+.RI "union \fBxPSR_Type\fP"
+.br
+.RI "Union type to access the Special-Purpose Program Status Registers (xPSR)\&. "
+.ti -1c
+.RI "union \fBCONTROL_Type\fP"
+.br
+.RI "Union type to access the Control Registers (CONTROL)\&. "
+.ti -1c
+.RI "struct \fBNVIC_Type\fP"
+.br
+.RI "Structure type to access the Nested Vectored Interrupt Controller (NVIC)\&. "
+.ti -1c
+.RI "struct \fBSCB_Type\fP"
+.br
+.RI "Structure type to access the System Control Block (SCB)\&. "
+.ti -1c
+.RI "struct \fBSysTick_Type\fP"
+.br
+.RI "Structure type to access the System Timer (SysTick)\&. "
+.ti -1c
+.RI "struct \fBDWT_Type\fP"
+.br
+.RI "Structure type to access the Data Watchpoint and Trace Register (DWT)\&. "
+.ti -1c
+.RI "struct \fBTPI_Type\fP"
+.br
+.RI "Structure type to access the Trace Port Interface Register (TPI)\&. "
+.ti -1c
+.RI "struct \fBCoreDebug_Type\fP"
+.br
+.RI "Structure type to access the Core Debug Register (CoreDebug)\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__CORE_CM23_H_GENERIC\fP"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fB__CM23_CMSIS_VERSION_MAIN\fP   (\fB__CM_CMSIS_VERSION_MAIN\fP)"
+.br
+.ti -1c
+.RI "#define \fB__CM23_CMSIS_VERSION_SUB\fP   (\fB__CM_CMSIS_VERSION_SUB\fP)"
+.br
+.ti -1c
+.RI "#define \fB__CM23_CMSIS_VERSION\fP"
+.br
+.ti -1c
+.RI "#define \fB__CORTEX_M\fP   (23U)"
+.br
+.ti -1c
+.RI "#define \fB__FPU_USED\fP   0U"
+.br
+.ti -1c
+.RI "#define \fB__CORE_CM23_H_DEPENDANT\fP"
+.br
+.ti -1c
+.RI "#define \fB__I\fP   volatile const"
+.br
+.ti -1c
+.RI "#define \fB__O\fP   volatile"
+.br
+.ti -1c
+.RI "#define \fB__IO\fP   volatile"
+.br
+.ti -1c
+.RI "#define \fB__IM\fP   volatile const      /*! Defines 'read only' structure member permissions */"
+.br
+.ti -1c
+.RI "#define \fB__OM\fP   volatile            /*! Defines 'write only' structure member permissions */"
+.br
+.ti -1c
+.RI "#define \fB__IOM\fP   volatile            /*! Defines 'read / write' structure member permissions */"
+.br
+.ti -1c
+.RI "#define \fBAPSR_N_Pos\fP   31U"
+.br
+.ti -1c
+.RI "#define \fBAPSR_N_Msk\fP   (1UL << \fBAPSR_N_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBAPSR_Z_Pos\fP   30U"
+.br
+.ti -1c
+.RI "#define \fBAPSR_Z_Msk\fP   (1UL << \fBAPSR_Z_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBAPSR_C_Pos\fP   29U"
+.br
+.ti -1c
+.RI "#define \fBAPSR_C_Msk\fP   (1UL << \fBAPSR_C_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBAPSR_V_Pos\fP   28U"
+.br
+.ti -1c
+.RI "#define \fBAPSR_V_Msk\fP   (1UL << \fBAPSR_V_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBIPSR_ISR_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBIPSR_ISR_Msk\fP   (0x1FFUL /*<< \fBIPSR_ISR_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_N_Pos\fP   31U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_N_Msk\fP   (1UL << \fBxPSR_N_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_Z_Pos\fP   30U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_Z_Msk\fP   (1UL << \fBxPSR_Z_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_C_Pos\fP   29U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_C_Msk\fP   (1UL << \fBxPSR_C_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_V_Pos\fP   28U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_V_Msk\fP   (1UL << \fBxPSR_V_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_T_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_T_Msk\fP   (1UL << \fBxPSR_T_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBxPSR_ISR_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBxPSR_ISR_Msk\fP   (0x1FFUL /*<< \fBxPSR_ISR_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBCONTROL_SPSEL_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBCONTROL_SPSEL_Msk\fP   (1UL << \fBCONTROL_SPSEL_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCONTROL_nPRIV_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBCONTROL_nPRIV_Msk\fP   (1UL /*<< \fBCONTROL_nPRIV_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_IMPLEMENTER_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_IMPLEMENTER_Msk\fP   (0xFFUL << \fBSCB_CPUID_IMPLEMENTER_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_VARIANT_Pos\fP   20U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_VARIANT_Msk\fP   (0xFUL << \fBSCB_CPUID_VARIANT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_ARCHITECTURE_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_ARCHITECTURE_Msk\fP   (0xFUL << \fBSCB_CPUID_ARCHITECTURE_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_PARTNO_Pos\fP   4U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_PARTNO_Msk\fP   (0xFFFUL << \fBSCB_CPUID_PARTNO_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_REVISION_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CPUID_REVISION_Msk\fP   (0xFUL /*<< \fBSCB_CPUID_REVISION_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDNMISET_Pos\fP   31U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDNMISET_Msk\fP   (1UL << \fBSCB_ICSR_PENDNMISET_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_NMIPENDSET_Pos\fP   \fBSCB_ICSR_PENDNMISET_Pos\fP"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_NMIPENDSET_Msk\fP   \fBSCB_ICSR_PENDNMISET_Msk\fP"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDNMICLR_Pos\fP   30U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDNMICLR_Msk\fP   (1UL << \fBSCB_ICSR_PENDNMICLR_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSVSET_Pos\fP   28U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSVSET_Msk\fP   (1UL << \fBSCB_ICSR_PENDSVSET_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSVCLR_Pos\fP   27U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSVCLR_Msk\fP   (1UL << \fBSCB_ICSR_PENDSVCLR_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSTSET_Pos\fP   26U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSTSET_Msk\fP   (1UL << \fBSCB_ICSR_PENDSTSET_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSTCLR_Pos\fP   25U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_PENDSTCLR_Msk\fP   (1UL << \fBSCB_ICSR_PENDSTCLR_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_STTNS_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_STTNS_Msk\fP   (1UL << \fBSCB_ICSR_STTNS_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_ISRPREEMPT_Pos\fP   23U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_ISRPREEMPT_Msk\fP   (1UL << \fBSCB_ICSR_ISRPREEMPT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_ISRPENDING_Pos\fP   22U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_ISRPENDING_Msk\fP   (1UL << \fBSCB_ICSR_ISRPENDING_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_VECTPENDING_Pos\fP   12U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_VECTPENDING_Msk\fP   (0x1FFUL << \fBSCB_ICSR_VECTPENDING_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_RETTOBASE_Pos\fP   11U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_RETTOBASE_Msk\fP   (1UL << \fBSCB_ICSR_RETTOBASE_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_VECTACTIVE_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSCB_ICSR_VECTACTIVE_Msk\fP   (0x1FFUL /*<< \fBSCB_ICSR_VECTACTIVE_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTKEY_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTKEY_Msk\fP   (0xFFFFUL << \fBSCB_AIRCR_VECTKEY_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTKEYSTAT_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTKEYSTAT_Msk\fP   (0xFFFFUL << \fBSCB_AIRCR_VECTKEYSTAT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_ENDIANESS_Pos\fP   15U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_ENDIANESS_Msk\fP   (1UL << \fBSCB_AIRCR_ENDIANESS_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_PRIS_Pos\fP   14U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_PRIS_Msk\fP   (1UL << \fBSCB_AIRCR_PRIS_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_BFHFNMINS_Pos\fP   13U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_BFHFNMINS_Msk\fP   (1UL << \fBSCB_AIRCR_BFHFNMINS_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_SYSRESETREQS_Pos\fP   3U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_SYSRESETREQS_Msk\fP   (1UL << \fBSCB_AIRCR_SYSRESETREQS_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_SYSRESETREQ_Pos\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_SYSRESETREQ_Msk\fP   (1UL << \fBSCB_AIRCR_SYSRESETREQ_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTCLRACTIVE_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBSCB_AIRCR_VECTCLRACTIVE_Msk\fP   (1UL << \fBSCB_AIRCR_VECTCLRACTIVE_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SEVONPEND_Pos\fP   4U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SEVONPEND_Msk\fP   (1UL << \fBSCB_SCR_SEVONPEND_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SLEEPDEEPS_Pos\fP   3U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SLEEPDEEPS_Msk\fP   (1UL << \fBSCB_SCR_SLEEPDEEPS_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SLEEPDEEP_Pos\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SLEEPDEEP_Msk\fP   (1UL << \fBSCB_SCR_SLEEPDEEP_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SLEEPONEXIT_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SCR_SLEEPONEXIT_Msk\fP   (1UL << \fBSCB_SCR_SLEEPONEXIT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_BP_Pos\fP   18U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_BP_Msk\fP   (1UL << \fBSCB_CCR_BP_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_IC_Pos\fP   17U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_IC_Msk\fP   (1UL << \fBSCB_CCR_IC_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_DC_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_DC_Msk\fP   (1UL << \fBSCB_CCR_DC_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_STKOFHFNMIGN_Pos\fP   10U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_STKOFHFNMIGN_Msk\fP   (1UL << \fBSCB_CCR_STKOFHFNMIGN_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_BFHFNMIGN_Pos\fP   8U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_BFHFNMIGN_Msk\fP   (1UL << \fBSCB_CCR_BFHFNMIGN_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_DIV_0_TRP_Pos\fP   4U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_DIV_0_TRP_Msk\fP   (1UL << \fBSCB_CCR_DIV_0_TRP_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_UNALIGN_TRP_Pos\fP   3U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_UNALIGN_TRP_Msk\fP   (1UL << \fBSCB_CCR_UNALIGN_TRP_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_USERSETMPEND_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBSCB_CCR_USERSETMPEND_Msk\fP   (1UL << \fBSCB_CCR_USERSETMPEND_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_HARDFAULTPENDED_Pos\fP   21U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_HARDFAULTPENDED_Msk\fP   (1UL << \fBSCB_SHCSR_HARDFAULTPENDED_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_SVCALLPENDED_Pos\fP   15U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_SVCALLPENDED_Msk\fP   (1UL << \fBSCB_SHCSR_SVCALLPENDED_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_SYSTICKACT_Pos\fP   11U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_SYSTICKACT_Msk\fP   (1UL << \fBSCB_SHCSR_SYSTICKACT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_PENDSVACT_Pos\fP   10U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_PENDSVACT_Msk\fP   (1UL << \fBSCB_SHCSR_PENDSVACT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_SVCALLACT_Pos\fP   7U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_SVCALLACT_Msk\fP   (1UL << \fBSCB_SHCSR_SVCALLACT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_NMIACT_Pos\fP   5U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_NMIACT_Msk\fP   (1UL << \fBSCB_SHCSR_NMIACT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_HARDFAULTACT_Pos\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBSCB_SHCSR_HARDFAULTACT_Msk\fP   (1UL << \fBSCB_SHCSR_HARDFAULTACT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_COUNTFLAG_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_COUNTFLAG_Msk\fP   (1UL << \fBSysTick_CTRL_COUNTFLAG_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_CLKSOURCE_Pos\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_CLKSOURCE_Msk\fP   (1UL << \fBSysTick_CTRL_CLKSOURCE_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_TICKINT_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_TICKINT_Msk\fP   (1UL << \fBSysTick_CTRL_TICKINT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_ENABLE_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CTRL_ENABLE_Msk\fP   (1UL /*<< \fBSysTick_CTRL_ENABLE_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_LOAD_RELOAD_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_LOAD_RELOAD_Msk\fP   (0xFFFFFFUL /*<< \fBSysTick_LOAD_RELOAD_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_VAL_CURRENT_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_VAL_CURRENT_Msk\fP   (0xFFFFFFUL /*<< \fBSysTick_VAL_CURRENT_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_NOREF_Pos\fP   31U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_NOREF_Msk\fP   (1UL << \fBSysTick_CALIB_NOREF_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_SKEW_Pos\fP   30U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_SKEW_Msk\fP   (1UL << \fBSysTick_CALIB_SKEW_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_TENMS_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBSysTick_CALIB_TENMS_Msk\fP   (0xFFFFFFUL /*<< \fBSysTick_CALIB_TENMS_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBDWT_CTRL_NUMCOMP_Pos\fP   28U"
+.br
+.ti -1c
+.RI "#define \fBDWT_CTRL_NUMCOMP_Msk\fP   (0xFUL << \fBDWT_CTRL_NUMCOMP_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBDWT_CTRL_NOTRCPKT_Pos\fP   27U"
+.br
+.ti -1c
+.RI "#define \fBDWT_CTRL_NOTRCPKT_Msk\fP   (0x1UL << \fBDWT_CTRL_NOTRCPKT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBDWT_CTRL_NOEXTTRIG_Pos\fP   26U"
+.br
+.ti -1c
+.RI "#define \fBDWT_CTRL_NOEXTTRIG_Msk\fP   (0x1UL << \fBDWT_CTRL_NOEXTTRIG_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBDWT_CTRL_NOCYCCNT_Pos\fP   25U"
+.br
+.ti -1c
+.RI "#define \fBDWT_CTRL_NOCYCCNT_Msk\fP   (0x1UL << \fBDWT_CTRL_NOCYCCNT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBDWT_CTRL_NOPRFCNT_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBDWT_CTRL_NOPRFCNT_Msk\fP   (0x1UL << \fBDWT_CTRL_NOPRFCNT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBDWT_FUNCTION_ID_Pos\fP   27U"
+.br
+.ti -1c
+.RI "#define \fBDWT_FUNCTION_ID_Msk\fP   (0x1FUL << \fBDWT_FUNCTION_ID_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBDWT_FUNCTION_MATCHED_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBDWT_FUNCTION_MATCHED_Msk\fP   (0x1UL << \fBDWT_FUNCTION_MATCHED_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBDWT_FUNCTION_DATAVSIZE_Pos\fP   10U"
+.br
+.ti -1c
+.RI "#define \fBDWT_FUNCTION_DATAVSIZE_Msk\fP   (0x3UL << \fBDWT_FUNCTION_DATAVSIZE_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBDWT_FUNCTION_ACTION_Pos\fP   4U"
+.br
+.ti -1c
+.RI "#define \fBDWT_FUNCTION_ACTION_Msk\fP   (0x3UL << \fBDWT_FUNCTION_ACTION_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBDWT_FUNCTION_MATCH_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBDWT_FUNCTION_MATCH_Msk\fP   (0xFUL /*<< \fBDWT_FUNCTION_MATCH_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ACPR_PRESCALER_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ACPR_PRESCALER_Msk\fP   (0x1FFFUL /*<< \fBTPI_ACPR_PRESCALER_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_SPPR_TXMODE_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_SPPR_TXMODE_Msk\fP   (0x3UL /*<< \fBTPI_SPPR_TXMODE_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFSR_FtNonStop_Pos\fP   3U"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFSR_FtNonStop_Msk\fP   (0x1UL << \fBTPI_FFSR_FtNonStop_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFSR_TCPresent_Pos\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFSR_TCPresent_Msk\fP   (0x1UL << \fBTPI_FFSR_TCPresent_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFSR_FtStopped_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFSR_FtStopped_Msk\fP   (0x1UL << \fBTPI_FFSR_FtStopped_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFSR_FlInProg_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFSR_FlInProg_Msk\fP   (0x1UL /*<< \fBTPI_FFSR_FlInProg_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFCR_TrigIn_Pos\fP   8U"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFCR_TrigIn_Msk\fP   (0x1UL << \fBTPI_FFCR_TrigIn_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFCR_FOnMan_Pos\fP   6U"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFCR_FOnMan_Msk\fP   (0x1UL << \fBTPI_FFCR_FOnMan_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFCR_EnFCont_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBTPI_FFCR_EnFCont_Msk\fP   (0x1UL << \fBTPI_FFCR_EnFCont_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_TRIGGER_TRIGGER_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_TRIGGER_TRIGGER_Msk\fP   (0x1UL /*<< \fBTPI_TRIGGER_TRIGGER_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF2_ATVALID_Pos\fP   29U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF2_ATVALID_Msk\fP   (0x3UL << \fBTPI_ITFTTD0_ATB_IF2_ATVALID_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF2_bytecount_Pos\fP   27U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF2_bytecount_Msk\fP   (0x3UL << \fBTPI_ITFTTD0_ATB_IF2_bytecount_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF1_ATVALID_Pos\fP   26U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF1_ATVALID_Msk\fP   (0x3UL << \fBTPI_ITFTTD0_ATB_IF1_ATVALID_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF1_bytecount_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF1_bytecount_Msk\fP   (0x3UL << \fBTPI_ITFTTD0_ATB_IF1_bytecount_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF1_data2_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF1_data2_Msk\fP   (0xFFUL << \fBTPI_ITFTTD0_ATB_IF1_data1_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF1_data1_Pos\fP   8U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF1_data1_Msk\fP   (0xFFUL << \fBTPI_ITFTTD0_ATB_IF1_data1_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF1_data0_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD0_ATB_IF1_data0_Msk\fP   (0xFFUL /*<< \fBTPI_ITFTTD0_ATB_IF1_data0_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR2_AFVALID2S_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR2_AFVALID2S_Msk\fP   (0x1UL << \fBTPI_ITATBCTR2_AFVALID2S_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR2_AFVALID1S_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR2_AFVALID1S_Msk\fP   (0x1UL << \fBTPI_ITATBCTR2_AFVALID1S_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR2_ATREADY2S_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR2_ATREADY2S_Msk\fP   (0x1UL /*<< \fBTPI_ITATBCTR2_ATREADY2S_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR2_ATREADY1S_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR2_ATREADY1S_Msk\fP   (0x1UL /*<< \fBTPI_ITATBCTR2_ATREADY1S_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF2_ATVALID_Pos\fP   29U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF2_ATVALID_Msk\fP   (0x3UL << \fBTPI_ITFTTD1_ATB_IF2_ATVALID_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF2_bytecount_Pos\fP   27U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF2_bytecount_Msk\fP   (0x3UL << \fBTPI_ITFTTD1_ATB_IF2_bytecount_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF1_ATVALID_Pos\fP   26U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF1_ATVALID_Msk\fP   (0x3UL << \fBTPI_ITFTTD1_ATB_IF1_ATVALID_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF1_bytecount_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF1_bytecount_Msk\fP   (0x3UL << \fBTPI_ITFTTD1_ATB_IF1_bytecount_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF2_data2_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF2_data2_Msk\fP   (0xFFUL << \fBTPI_ITFTTD1_ATB_IF2_data1_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF2_data1_Pos\fP   8U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF2_data1_Msk\fP   (0xFFUL << \fBTPI_ITFTTD1_ATB_IF2_data1_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF2_data0_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITFTTD1_ATB_IF2_data0_Msk\fP   (0xFFUL /*<< \fBTPI_ITFTTD1_ATB_IF2_data0_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR0_AFVALID2S_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR0_AFVALID2S_Msk\fP   (0x1UL << \fBTPI_ITATBCTR0_AFVALID2S_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR0_AFVALID1S_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR0_AFVALID1S_Msk\fP   (0x1UL << \fBTPI_ITATBCTR0_AFVALID1S_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR0_ATREADY2S_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR0_ATREADY2S_Msk\fP   (0x1UL /*<< \fBTPI_ITATBCTR0_ATREADY2S_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR0_ATREADY1S_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITATBCTR0_ATREADY1S_Msk\fP   (0x1UL /*<< \fBTPI_ITATBCTR0_ATREADY1S_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITCTRL_Mode_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_ITCTRL_Mode_Msk\fP   (0x3UL /*<< \fBTPI_ITCTRL_Mode_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVID_NRZVALID_Pos\fP   11U"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVID_NRZVALID_Msk\fP   (0x1UL << \fBTPI_DEVID_NRZVALID_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVID_MANCVALID_Pos\fP   10U"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVID_MANCVALID_Msk\fP   (0x1UL << \fBTPI_DEVID_MANCVALID_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVID_PTINVALID_Pos\fP   9U"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVID_PTINVALID_Msk\fP   (0x1UL << \fBTPI_DEVID_PTINVALID_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVID_FIFOSZ_Pos\fP   6U"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVID_FIFOSZ_Msk\fP   (0x7UL << \fBTPI_DEVID_FIFOSZ_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVID_NrTraceInput_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVID_NrTraceInput_Msk\fP   (0x3FUL /*<< \fBTPI_DEVID_NrTraceInput_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVTYPE_SubType_Pos\fP   4U"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVTYPE_SubType_Msk\fP   (0xFUL /*<< \fBTPI_DEVTYPE_SubType_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVTYPE_MajorType_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBTPI_DEVTYPE_MajorType_Msk\fP   (0xFUL << \fBTPI_DEVTYPE_MajorType_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_DBGKEY_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_DBGKEY_Msk\fP   (0xFFFFUL << \fBCoreDebug_DHCSR_DBGKEY_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_RESTART_ST_Pos\fP   26U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_RESTART_ST_Msk\fP   (1UL << \fBCoreDebug_DHCSR_S_RESTART_ST_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_RESET_ST_Pos\fP   25U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_RESET_ST_Msk\fP   (1UL << \fBCoreDebug_DHCSR_S_RESET_ST_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_RETIRE_ST_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_RETIRE_ST_Msk\fP   (1UL << \fBCoreDebug_DHCSR_S_RETIRE_ST_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_LOCKUP_Pos\fP   19U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_LOCKUP_Msk\fP   (1UL << \fBCoreDebug_DHCSR_S_LOCKUP_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_SLEEP_Pos\fP   18U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_SLEEP_Msk\fP   (1UL << \fBCoreDebug_DHCSR_S_SLEEP_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_HALT_Pos\fP   17U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_HALT_Msk\fP   (1UL << \fBCoreDebug_DHCSR_S_HALT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_REGRDY_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_S_REGRDY_Msk\fP   (1UL << \fBCoreDebug_DHCSR_S_REGRDY_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_C_MASKINTS_Pos\fP   3U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_C_MASKINTS_Msk\fP   (1UL << \fBCoreDebug_DHCSR_C_MASKINTS_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_C_STEP_Pos\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_C_STEP_Msk\fP   (1UL << \fBCoreDebug_DHCSR_C_STEP_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_C_HALT_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_C_HALT_Msk\fP   (1UL << \fBCoreDebug_DHCSR_C_HALT_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_C_DEBUGEN_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DHCSR_C_DEBUGEN_Msk\fP   (1UL /*<< \fBCoreDebug_DHCSR_C_DEBUGEN_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DCRSR_REGWnR_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DCRSR_REGWnR_Msk\fP   (1UL << \fBCoreDebug_DCRSR_REGWnR_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DCRSR_REGSEL_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DCRSR_REGSEL_Msk\fP   (0x1FUL /*<< \fBCoreDebug_DCRSR_REGSEL_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DEMCR_DWTENA_Pos\fP   24U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DEMCR_DWTENA_Msk\fP   (1UL << \fBCoreDebug_DEMCR_DWTENA_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DEMCR_VC_HARDERR_Pos\fP   10U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DEMCR_VC_HARDERR_Msk\fP   (1UL << \fBCoreDebug_DEMCR_VC_HARDERR_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DEMCR_VC_CORERESET_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DEMCR_VC_CORERESET_Msk\fP   (1UL /*<< \fBCoreDebug_DEMCR_VC_CORERESET_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DAUTHCTRL_INTSPNIDEN_Pos\fP   3U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DAUTHCTRL_INTSPNIDEN_Msk\fP   (1UL << \fBCoreDebug_DAUTHCTRL_INTSPNIDEN_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DAUTHCTRL_SPNIDENSEL_Pos\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DAUTHCTRL_SPNIDENSEL_Msk\fP   (1UL << \fBCoreDebug_DAUTHCTRL_SPNIDENSEL_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DAUTHCTRL_INTSPIDEN_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DAUTHCTRL_INTSPIDEN_Msk\fP   (1UL << \fBCoreDebug_DAUTHCTRL_INTSPIDEN_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DAUTHCTRL_SPIDENSEL_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DAUTHCTRL_SPIDENSEL_Msk\fP   (1UL /*<< \fBCoreDebug_DAUTHCTRL_SPIDENSEL_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DSCSR_CDS_Pos\fP   16U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DSCSR_CDS_Msk\fP   (1UL << \fBCoreDebug_DSCSR_CDS_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DSCSR_SBRSEL_Pos\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DSCSR_SBRSEL_Msk\fP   (1UL << \fBCoreDebug_DSCSR_SBRSEL_Pos\fP)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DSCSR_SBRSELEN_Pos\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_DSCSR_SBRSELEN_Msk\fP   (1UL /*<< \fBCoreDebug_DSCSR_SBRSELEN_Pos\fP*/)"
+.br
+.ti -1c
+.RI "#define \fB_VAL2FLD\fP(field,  value)   (((uint32_t)(value) << field ## _Pos) & field ## _Msk)"
+.br
+.RI "Mask and shift a bit field value for use in a register bit range\&. "
+.ti -1c
+.RI "#define \fB_FLD2VAL\fP(field,  value)   (((uint32_t)(value) & field ## _Msk) >> field ## _Pos)"
+.br
+.RI "Mask and shift a register value to extract a bit filed value\&. "
+.ti -1c
+.RI "#define \fBSCS_BASE\fP   (0xE000E000UL)"
+.br
+.ti -1c
+.RI "#define \fBDWT_BASE\fP   (0xE0001000UL)"
+.br
+.ti -1c
+.RI "#define \fBTPI_BASE\fP   (0xE0040000UL)"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug_BASE\fP   (0xE000EDF0UL)"
+.br
+.ti -1c
+.RI "#define \fBSysTick_BASE\fP   (\fBSCS_BASE\fP +  0x0010UL)"
+.br
+.ti -1c
+.RI "#define \fBNVIC_BASE\fP   (\fBSCS_BASE\fP +  0x0100UL)"
+.br
+.ti -1c
+.RI "#define \fBSCB_BASE\fP   (\fBSCS_BASE\fP +  0x0D00UL)"
+.br
+.ti -1c
+.RI "#define \fBSCB\fP   ((\fBSCB_Type\fP       *)     \fBSCB_BASE\fP         )"
+.br
+.ti -1c
+.RI "#define \fBSysTick\fP   ((\fBSysTick_Type\fP   *)     \fBSysTick_BASE\fP     )"
+.br
+.ti -1c
+.RI "#define \fBNVIC\fP   ((\fBNVIC_Type\fP      *)     \fBNVIC_BASE\fP        )"
+.br
+.ti -1c
+.RI "#define \fBDWT\fP   ((\fBDWT_Type\fP       *)     \fBDWT_BASE\fP         )"
+.br
+.ti -1c
+.RI "#define \fBTPI\fP   ((\fBTPI_Type\fP       *)     \fBTPI_BASE\fP         )"
+.br
+.ti -1c
+.RI "#define \fBCoreDebug\fP   ((\fBCoreDebug_Type\fP *)     \fBCoreDebug_BASE\fP   )"
+.br
+.ti -1c
+.RI "#define \fBNVIC_EnableIRQ\fP   \fB__NVIC_EnableIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_GetEnableIRQ\fP   \fB__NVIC_GetEnableIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_DisableIRQ\fP   \fB__NVIC_DisableIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_GetPendingIRQ\fP   \fB__NVIC_GetPendingIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_SetPendingIRQ\fP   \fB__NVIC_SetPendingIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_ClearPendingIRQ\fP   \fB__NVIC_ClearPendingIRQ\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_GetActive\fP   \fB__NVIC_GetActive\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_SetPriority\fP   \fB__NVIC_SetPriority\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_GetPriority\fP   \fB__NVIC_GetPriority\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_SystemReset\fP   \fB__NVIC_SystemReset\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_SetVector\fP   \fB__NVIC_SetVector\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_GetVector\fP   \fB__NVIC_GetVector\fP"
+.br
+.ti -1c
+.RI "#define \fBNVIC_USER_IRQ_OFFSET\fP   16"
+.br
+.ti -1c
+.RI "#define \fBFNC_RETURN\fP   (0xFEFFFFFFUL)     /* bit [0] ignored when processing a branch                             */"
+.br
+.ti -1c
+.RI "#define \fBEXC_RETURN_PREFIX\fP   (0xFF000000UL)     /* bits [31:24] set to indicate an EXC_RETURN value                     */"
+.br
+.ti -1c
+.RI "#define \fBEXC_RETURN_S\fP   (0x00000040UL)     /* bit [6] stack used to push registers: 0=Non\-secure 1=Secure          */"
+.br
+.ti -1c
+.RI "#define \fBEXC_RETURN_DCRS\fP   (0x00000020UL)     /* bit [5] stacking rules for called registers: 0=skipped 1=saved       */"
+.br
+.ti -1c
+.RI "#define \fBEXC_RETURN_FTYPE\fP   (0x00000010UL)     /* bit [4] allocate stack for floating\-point context: 0=done 1=skipped  */"
+.br
+.ti -1c
+.RI "#define \fBEXC_RETURN_MODE\fP   (0x00000008UL)     /* bit [3] processor mode for return: 0=Handler mode 1=Thread mode      */"
+.br
+.ti -1c
+.RI "#define \fBEXC_RETURN_SPSEL\fP   (0x00000002UL)     /* bit [1] stack pointer used to restore context: 0=MSP 1=PSP           */"
+.br
+.ti -1c
+.RI "#define \fBEXC_RETURN_ES\fP   (0x00000001UL)     /* bit [0] security state exception was taken to: 0=Non\-secure 1=Secure */"
+.br
+.ti -1c
+.RI "#define \fBEXC_INTEGRITY_SIGNATURE\fP   (0xFEFA125BUL)     /* Value for processors without floating\-point extension                */"
+.br
+.ti -1c
+.RI "#define \fB_BIT_SHIFT\fP(IRQn)   (  ((((uint32_t)(int32_t)(IRQn))         )      &  0x03UL) * 8UL)"
+.br
+.ti -1c
+.RI "#define \fB_SHP_IDX\fP(IRQn)   ( (((((uint32_t)(int32_t)(IRQn)) & 0x0FUL)\-8UL) >>    2UL)      )"
+.br
+.ti -1c
+.RI "#define \fB_IP_IDX\fP(IRQn)   (   (((uint32_t)(int32_t)(IRQn))                >>    2UL)      )"
+.br
+.ti -1c
+.RI "#define \fB__NVIC_SetPriorityGrouping\fP(X)   (void)(X)"
+.br
+.ti -1c
+.RI "#define \fB__NVIC_GetPriorityGrouping\fP()   (0U)"
+.br
+.in -1c
+.in -1c
+.SS "Functions"
+
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_EnableIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Enable Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fB__NVIC_GetEnableIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Get Interrupt Enable status\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_DisableIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Disable Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fB__NVIC_GetPendingIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Get Pending Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_SetPendingIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Set Pending Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_ClearPendingIRQ\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Clear Pending Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fB__NVIC_GetActive\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Get Active Interrupt\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_SetPriority\fP (\fBIRQn_Type\fP IRQn, uint32_t priority)"
+.br
+.RI "Set Interrupt Priority\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fB__NVIC_GetPriority\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Get Interrupt Priority\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBNVIC_EncodePriority\fP (uint32_t PriorityGroup, uint32_t PreemptPriority, uint32_t SubPriority)"
+.br
+.RI "Encode Priority\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fBNVIC_DecodePriority\fP (uint32_t Priority, uint32_t PriorityGroup, uint32_t *const pPreemptPriority, uint32_t *const pSubPriority)"
+.br
+.RI "Decode Priority\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fB__NVIC_SetVector\fP (\fBIRQn_Type\fP IRQn, uint32_t vector)"
+.br
+.RI "Set Interrupt Vector\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fB__NVIC_GetVector\fP (\fBIRQn_Type\fP IRQn)"
+.br
+.RI "Get Interrupt Vector\&. "
+.ti -1c
+.RI "__NO_RETURN __STATIC_INLINE void \fB__NVIC_SystemReset\fP (void)"
+.br
+.RI "System Reset\&. "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBSCB_GetFPUType\fP (void)"
+.br
+.RI "get FPU type "
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+CMSIS Cortex-M23 Core Peripheral Access Layer Header File\&. 
+
+
+.PP
+\fBVersion\fP
+.RS 4
+V5\&.0\&.7 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+22\&. June 2018 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __CM23_CMSIS_VERSION"
+\fBValue:\fP
+.PP
+.nf
+                                     ((__CM23_CMSIS_VERSION_MAIN << 16U) | \
+                                     __CM23_CMSIS_VERSION_SUB           )
+.fi
+
+.PP
+\fBDeprecated\fP
+.RS 4
+CMSIS HAL version number 
+.RE
+.PP
+
+.SS "#define __CM23_CMSIS_VERSION_MAIN   (\fB__CM_CMSIS_VERSION_MAIN\fP)"
+
+.PP
+\fBDeprecated\fP
+.RS 4
+[31:16] CMSIS HAL main version 
+.RE
+.PP
+
+.SS "#define __CM23_CMSIS_VERSION_SUB   (\fB__CM_CMSIS_VERSION_SUB\fP)"
+
+.PP
+\fBDeprecated\fP
+.RS 4
+[15:0] CMSIS HAL sub version 
+.RE
+.PP
+
+.SS "#define __CORTEX_M   (23U)"
+Cortex-M Core 
+.SS "#define __FPU_USED   0U"
+__FPU_USED indicates whether an FPU is used or not\&. This core does not support an FPU at all 
+.SS "#define __I   volatile const"
+Defines 'read only' permissions 
+.SS "#define __IO   volatile"
+Defines 'read / write' permissions 
+.SS "#define __O   volatile"
+Defines 'write only' permissions 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

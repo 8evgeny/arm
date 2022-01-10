@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex___peripheral___configuration" xml:lang="en-US">
+<title>Peripheral Configuration</title>
+<indexterm><primary>Peripheral Configuration</primary></indexterm>
+<para>
+
+<para>Macros to configure clock source of different peripherals. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c_ex___peripheral___configuration_1ga4c75b81d1b7d65cda934c9f1350ea97b">__HAL_RCC_ADC_CONFIG</link>(__ADCCLKSOURCE__)                     MODIFY_REG(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1ga970436533d6ba9f1cb8ac840476093fb">RCC_CFGR_ADCPRE</link>, (uint32_t)(__ADCCLKSOURCE__))</para>
+
+<para>Macro to configure the ADCx clock (x=1 to 3 depending on devices). </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c_ex___peripheral___configuration_1ga2ee9f1838a8450f949b548a06ed3bc58">__HAL_RCC_GET_ADC_SOURCE</link>()   ((uint32_t)(READ_BIT(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1ga970436533d6ba9f1cb8ac840476093fb">RCC_CFGR_ADCPRE</link>)))</para>
+
+<para>Macro to get the ADC clock (ADCxCLK, x=1 to 3 depending on devices). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Macros to configure clock source of different peripherals. </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c_ex___peripheral___configuration_1ga4c75b81d1b7d65cda934c9f1350ea97b"/>    <section>
+    <title>__HAL_RCC_ADC_CONFIG</title>
+<indexterm><primary>__HAL_RCC_ADC_CONFIG</primary><secondary>Peripheral Configuration</secondary></indexterm>
+<indexterm><primary>Peripheral Configuration</primary><secondary>__HAL_RCC_ADC_CONFIG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_ADC_CONFIG( __ADCCLKSOURCE__)                     MODIFY_REG(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1ga970436533d6ba9f1cb8ac840476093fb">RCC_CFGR_ADCPRE</link>, (uint32_t)(__ADCCLKSOURCE__))</computeroutput></para><para>
+
+<para>Macro to configure the ADCx clock (x=1 to 3 depending on devices). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>&lt;strong&gt;ADCCLKSOURCE&lt;/strong&gt;</entry>
+                                <entry>
+<para>specifies the ADC clock source. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>RCC_ADCPCLK2_DIV2 PCLK2 clock divided by 2 selected as ADC clock </para>
+</listitem>
+<listitem>
+<para>RCC_ADCPCLK2_DIV4 PCLK2 clock divided by 4 selected as ADC clock </para>
+</listitem>
+<listitem>
+<para>RCC_ADCPCLK2_DIV6 PCLK2 clock divided by 6 selected as ADC clock </para>
+</listitem>
+<listitem>
+<para>RCC_ADCPCLK2_DIV8 PCLK2 clock divided by 8 selected as ADC clock </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___r_c_c_ex___peripheral___configuration_1ga2ee9f1838a8450f949b548a06ed3bc58"/>    <section>
+    <title>__HAL_RCC_GET_ADC_SOURCE</title>
+<indexterm><primary>__HAL_RCC_GET_ADC_SOURCE</primary><secondary>Peripheral Configuration</secondary></indexterm>
+<indexterm><primary>Peripheral Configuration</primary><secondary>__HAL_RCC_GET_ADC_SOURCE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RCC_GET_ADC_SOURCE( )   ((uint32_t)(READ_BIT(RCC-&gt;CFGR, <link linkend="_group___peripheral___registers___bits___definition_1ga970436533d6ba9f1cb8ac840476093fb">RCC_CFGR_ADCPRE</link>)))</computeroutput></para><para>
+
+<para>Macro to get the ADC clock (ADCxCLK, x=1 to 3 depending on devices). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>The</entry>
+                                <entry>
+<para>clock source can be one of the following values: <itemizedlist>
+<listitem>
+<para>RCC_ADCPCLK2_DIV2 PCLK2 clock divided by 2 selected as ADC clock </para>
+</listitem>
+<listitem>
+<para>RCC_ADCPCLK2_DIV4 PCLK2 clock divided by 4 selected as ADC clock </para>
+</listitem>
+<listitem>
+<para>RCC_ADCPCLK2_DIV6 PCLK2 clock divided by 6 selected as ADC clock </para>
+</listitem>
+<listitem>
+<para>RCC_ADCPCLK2_DIV8 PCLK2 clock divided by 8 selected as ADC clock </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

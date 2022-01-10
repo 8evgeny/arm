@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___exported___macros" xml:lang="en-US">
+<title>RCC Exported Macros</title>
+<indexterm><primary>RCC Exported Macros</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___r_c_c___peripheral___clock___enable___disable">Peripheral Clock Enable Disable</link></para>
+
+<para>Enable or disable the AHB1 peripheral clock. </para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___a_h_b___peripheral___clock___enable___disable___status">AHB Peripheral Clock Enable Disable Status</link></para>
+
+<para>Get the enable or disable status of the AHB peripheral clock. </para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___a_p_b1___clock___enable___disable">APB1 Clock Enable Disable</link></para>
+
+<para>Enable or disable the Low Speed APB (APB1) peripheral clock. </para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___a_p_b1___peripheral___clock___enable___disable___status">APB1 Peripheral Clock Enable Disable Status</link></para>
+
+<para>Get the enable or disable status of the APB1 peripheral clock. </para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___a_p_b2___clock___enable___disable">APB2 Clock Enable Disable</link></para>
+
+<para>Enable or disable the High Speed APB (APB2) peripheral clock. </para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___a_p_b2___peripheral___clock___enable___disable___status">APB2 Peripheral Clock Enable Disable Status</link></para>
+
+<para>Get the enable or disable status of the APB2 peripheral clock. </para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___a_p_b1___force___release___reset">APB1 Force Release Reset</link></para>
+
+<para>Force or release APB1 peripheral reset. </para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___a_p_b2___force___release___reset">APB2 Force Release Reset</link></para>
+
+<para>Force or release APB2 peripheral reset. </para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___h_s_i___configuration">HSI Configuration</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___l_s_i___configuration">LSI Configuration</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___h_s_e___configuration">HSE Configuration</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___l_s_e___configuration">LSE Configuration</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___p_l_l___configuration">PLL Configuration</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___get___clock__source">Get Clock source</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c_ex___m_c_ox___clock___config">RCC Extended MCOx Clock Config</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___r_t_c___clock___configuration">RCC RTC Clock Configuration</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___r_c_c___flags___interrupts___management">Flags Interrupts Management</link></para>
+
+<para>macros to manage the specified RCC Flags and interrupts. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

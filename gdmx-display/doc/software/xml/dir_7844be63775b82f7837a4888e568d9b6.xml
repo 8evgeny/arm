@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_7844be63775b82f7837a4888e568d9b6" kind="dir">
+    <compoundname>Middlewares/ST/STM32_USB_Device_Library</compoundname>
+    <innerdir refid="dir_eb045976e932b48ad260f2cdb604404c">Middlewares/ST/STM32_USB_Device_Library/Class</innerdir>
+    <innerdir refid="dir_b855bb5e426b3b994b21c389222e14df">Middlewares/ST/STM32_USB_Device_Library/Core</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/"/>
+  </compounddef>
+</doxygen>

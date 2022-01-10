@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct____iar__u32" xml:lang="en-US">
+<title>__iar_u32 Struct Reference</title>
+<indexterm><primary>__iar_u32</primary></indexterm>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct____iar__u32_1a9e0a00edabf3b8a5dafff624fff7bbfc"/>uint32_t <emphasis role="strong">v</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/CMSIS/Include/<link linkend="_cmsis__iccarm_8h">cmsis_iccarm.h</link></section>

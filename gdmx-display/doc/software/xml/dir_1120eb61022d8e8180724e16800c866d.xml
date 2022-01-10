@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_1120eb61022d8e8180724e16800c866d" kind="dir">
+    <compoundname>build/CMakeFiles/gdmx_display.elf.dir/Src</compoundname>
+    <innerfile refid="buzzer_8c_8obj_8d">buzzer.c.obj.d</innerfile>
+    <innerfile refid="display_8c_8obj_8d">display.c.obj.d</innerfile>
+    <innerfile refid="freertos_8c_8obj_8d">freertos.c.obj.d</innerfile>
+    <innerfile refid="hd44780_8c_8obj_8d">hd44780.c.obj.d</innerfile>
+    <innerfile refid="led_8c_8obj_8d">led.c.obj.d</innerfile>
+    <innerfile refid="main_8c_8obj_8d">main.c.obj.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__msp_8c_8obj_8d">stm32f1xx_hal_msp.c.obj.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__timebase__tim_8c_8obj_8d">stm32f1xx_hal_timebase_tim.c.obj.d</innerfile>
+    <innerfile refid="stm32f1xx__it_8c_8obj_8d">stm32f1xx_it.c.obj.d</innerfile>
+    <innerfile refid="syscalls_8c_8obj_8d">syscalls.c.obj.d</innerfile>
+    <innerfile refid="sysmem_8c_8obj_8d">sysmem.c.obj.d</innerfile>
+    <innerfile refid="gdmx__display_8elf_8dir_2_src_2system__stm32f1xx_8c_8obj_8d">system_stm32f1xx.c.obj.d</innerfile>
+    <innerfile refid="usb__device_8c_8obj_8d">usb_device.c.obj.d</innerfile>
+    <innerfile refid="usbd__cdc__if_8c_8obj_8d">usbd_cdc_if.c.obj.d</innerfile>
+    <innerfile refid="usbd__conf_8c_8obj_8d">usbd_conf.c.obj.d</innerfile>
+    <innerfile refid="usbd__desc_8c_8obj_8d">usbd_desc.c.obj.d</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/gdmx_display.elf.dir/Src/"/>
+  </compounddef>
+</doxygen>

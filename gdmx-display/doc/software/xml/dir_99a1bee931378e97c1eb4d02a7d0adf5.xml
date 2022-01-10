@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_99a1bee931378e97c1eb4d02a7d0adf5" kind="dir">
+    <compoundname>Debug/Src</compoundname>
+    <innerfile refid="buzzer_8d">buzzer.d</innerfile>
+    <innerfile refid="display_8d">display.d</innerfile>
+    <innerfile refid="freertos_8d">freertos.d</innerfile>
+    <innerfile refid="hd44780_8d">hd44780.d</innerfile>
+    <innerfile refid="led_8d">led.d</innerfile>
+    <innerfile refid="main_8d">main.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__msp_8d">stm32f1xx_hal_msp.d</innerfile>
+    <innerfile refid="stm32f1xx__hal__timebase__tim_8d">stm32f1xx_hal_timebase_tim.d</innerfile>
+    <innerfile refid="stm32f1xx__it_8d">stm32f1xx_it.d</innerfile>
+    <innerfile refid="syscalls_8d">syscalls.d</innerfile>
+    <innerfile refid="sysmem_8d">sysmem.d</innerfile>
+    <innerfile refid="system__stm32f1xx_8d">system_stm32f1xx.d</innerfile>
+    <innerfile refid="usb__device_8d">usb_device.d</innerfile>
+    <innerfile refid="usbd__cdc__if_8d">usbd_cdc_if.d</innerfile>
+    <innerfile refid="usbd__conf_8d">usbd_conf.d</innerfile>
+    <innerfile refid="usbd__desc_8d">usbd_desc.d</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Debug/Src/"/>
+  </compounddef>
+</doxygen>

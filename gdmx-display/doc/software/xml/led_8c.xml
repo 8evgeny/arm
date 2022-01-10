@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="led_8c" kind="file" language="C++">
+    <compoundname>led.c</compoundname>
+    <includes refid="led_8h" local="yes">led.h</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>stm32f1xx_hal_flash.h</label>
+        <link refid="stm32f1xx__hal__flash_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>stm32f1xx_hal_tim_ex.h</label>
+        <link refid="stm32f1xx__hal__tim__ex_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stm32f1xx_hal_pcd.h</label>
+        <link refid="stm32f1xx__hal__pcd_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>stm32f1xx_ll_usb.h</label>
+        <link refid="stm32f1xx__ll__usb_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>stm32f1xx_hal_pwr.h</label>
+        <link refid="stm32f1xx__hal__pwr_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stm32f1xx_hal_rcc.h</label>
+        <link refid="stm32f1xx__hal__rcc_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stm32f1xx_hal_dma_ex.h</label>
+        <link refid="stm32f1xx__hal__dma__ex_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="17">
+        <label>stm32f1xx_hal_flash_ex.h</label>
+        <link refid="stm32f1xx__hal__flash__ex_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stm32f1xx_hal_dma.h</label>
+        <link refid="stm32f1xx__hal__dma_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>stm32f1xx_hal_tim.h</label>
+        <link refid="stm32f1xx__hal__tim_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stm32f1xx_hal_rcc_ex.h</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Src/led.c</label>
+        <link refid="led_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="led_8c_1a50cf228fce8563fc202330b7b4816cb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LED_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>LED_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>LED control module initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>GPIO initialization function to drive LEDs. <parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/led.c" line="29" column="6" bodyfile="Src/led.c" bodystart="29" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="led_8c_1a160438dfbbe2b383198647cbcc9a0503" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LED_setLED1</definition>
+        <argsstring>(void)</argsstring>
+        <name>LED_setLED1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Turn on LED &quot;Alarm&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>LED lighting control function. <parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/led.c" line="44" column="6" bodyfile="Src/led.c" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="led_8c_1a730574f2ed84f2fd20c54babfc73c0ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LED_resetLED1</definition>
+        <argsstring>(void)</argsstring>
+        <name>LED_resetLED1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Turn off LED &quot;Alarm&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>LED lighting control function. <parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/led.c" line="49" column="6" bodyfile="Src/led.c" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="led_8c_1ae985eca49a31a26d39db27a7b214f0f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LED_setLED2</definition>
+        <argsstring>(void)</argsstring>
+        <name>LED_setLED2</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Turn on LED &quot;Write&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>LED lighting control function. <parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/led.c" line="54" column="6" bodyfile="Src/led.c" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="led_8c_1a09886ae6f7015a329efc7d315aaa6f99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LED_resetLED2</definition>
+        <argsstring>(void)</argsstring>
+        <name>LED_resetLED2</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Turn off LED &quot;Write&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>LED lighting control function. <parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Src/led.c" line="59" column="6" bodyfile="Src/led.c" bodystart="59" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="led_8c" kindref="compound">led.c</ref> file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Led control module (Source file). <simplesect kind="author"><para>Arthur Markaryan </para>
+</simplesect>
+<simplesect kind="date"><para>26.03.2021 </para>
+</simplesect>
+<simplesect kind="copyright"><para></para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="led_8h" kindref="compound">led.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>includes<sp/>----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>typedef<sp/>-----------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>define<sp/>------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>macro<sp/>-------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>variables<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>user<sp/>code<sp/>---------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>LED<sp/>control<sp/>module<sp/>initialization.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="led_8c_1a50cf228fce8563fc202330b7b4816cb9" kindref="member">LED_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_g_p_i_o___init_type_def" kindref="compound">GPIO_InitTypeDef</ref><sp/>GPIO_InitStruct<sp/>=<sp/>{0,<sp/><ref refid="group___g_p_i_o__mode__define_1ga1013838a64cec2f8c88f079c449d1982" kindref="member">GPIO_MODE_OUTPUT_PP</ref>,<sp/><ref refid="group___g_p_i_o__pull__define_1ga5c2862579882c1cc64e36d38fbd07a4c" kindref="member">GPIO_NOPULL</ref>,<sp/><ref refid="group___g_p_i_o__speed__define_1gab7916c4265bfa1b26a5205ea9c1caa4e" kindref="member">GPIO_SPEED_FREQ_LOW</ref>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>GPIO<sp/>pin<sp/>for<sp/>Alarm<sp/>LED*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED1_GPIO_Port,<sp/>LED1_Pin,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.<ref refid="struct_g_p_i_o___init_type_def_1a871d0ab74071724e96b7cc9ae2a7532b" kindref="member">Pin</ref><sp/>=<sp/>LED1_Pin;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(LED1_GPIO_Port,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configure<sp/>GPIO<sp/>pin<sp/>for<sp/>Write<sp/>LED<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED2_GPIO_Port,<sp/>LED2_Pin,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>GPIO_InitStruct.<ref refid="struct_g_p_i_o___init_type_def_1a871d0ab74071724e96b7cc9ae2a7532b" kindref="member">Pin</ref><sp/>=<sp/>LED2_Pin;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_Init(LED2_GPIO_Port,<sp/>&amp;GPIO_InitStruct);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Turn<sp/>on<sp/>LED<sp/>Alarm.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="led_8c_1a160438dfbbe2b383198647cbcc9a0503" kindref="member">LED_setLED1</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED1_GPIO_Port,<sp/>LED1_Pin,<sp/>GPIO_PIN_SET);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Turn<sp/>off<sp/>LED<sp/>Alarm.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="led_8c_1a730574f2ed84f2fd20c54babfc73c0ca" kindref="member">LED_resetLED1</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED1_GPIO_Port,<sp/>LED1_Pin,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Turn<sp/>on<sp/>LED<sp/>&quot;Write&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="led_8c_1ae985eca49a31a26d39db27a7b214f0f5" kindref="member">LED_setLED2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED2_GPIO_Port,<sp/>LED2_Pin,<sp/>GPIO_PIN_SET);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Turn<sp/>off<sp/>LED<sp/>&quot;Write&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="led_8c_1a09886ae6f7015a329efc7d315aaa6f99" kindref="member">LED_resetLED2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>HAL_GPIO_WritePin(LED2_GPIO_Port,<sp/>LED2_Pin,<sp/>GPIO_PIN_RESET);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Src/led.c"/>
+  </compounddef>
+</doxygen>

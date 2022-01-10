@@ -1,0 +1,35 @@
+.TH "xStreamBufferReset" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xStreamBufferReset \- xStreamBufferReset
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+\fBstream_buffer\&.h\fP
+.PP
+.PP
+.nf
+
+BaseType_t xStreamBufferReset( StreamBufferHandle_t xStreamBuffer );
+.fi
+.PP
+.PP
+Resets a stream buffer to its initial, empty, state\&. Any data that was in the stream buffer is discarded\&. A stream buffer can only be reset if there are no tasks blocked waiting to either send to or receive from the stream buffer\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxStreamBuffer\fP The handle of the stream buffer being reset\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If the stream buffer is reset then pdPASS is returned\&. If there was a task blocked waiting to send to or read from the stream buffer then the stream buffer is not reset and pdFAIL is returned\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

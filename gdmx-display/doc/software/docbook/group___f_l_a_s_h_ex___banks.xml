@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h_ex___banks" xml:lang="en-US">
+<title>Banks</title>
+<indexterm><primary>Banks</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___banks_1ga8ac3f24496e5de6a2f6bd3ff77f0ca53">FLASH_BANK_1</link>   1U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h_ex___banks_1ga8ac3f24496e5de6a2f6bd3ff77f0ca53"/>    <section>
+    <title>FLASH_BANK_1</title>
+<indexterm><primary>FLASH_BANK_1</primary><secondary>Banks</secondary></indexterm>
+<indexterm><primary>Banks</primary><secondary>FLASH_BANK_1</secondary></indexterm>
+<para><computeroutput>#define FLASH_BANK_1   1U</computeroutput></para>
+<para>Bank 1 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+</section>
+</section>

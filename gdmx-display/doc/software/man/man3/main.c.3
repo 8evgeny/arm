@@ -1,0 +1,197 @@
+.TH "Src/main.c" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Src/main.c \- Main program body\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'cmsis_os\&.h'\fP
+.br
+\fC#include 'usb_device\&.h'\fP
+.br
+\fC#include 'usbd_cdc_if\&.h'\fP
+.br
+\fC#include 'main\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (void)"
+.br
+.RI "The application entry point\&. "
+.ti -1c
+.RI "void \fBSystemClock_Config\fP (void)"
+.br
+.RI "System Clock Configuration\&. "
+.ti -1c
+.RI "void \fBMX_TIM1_Init\fP (void)"
+.br
+.RI "TIM1 Initialization Function\&. "
+.ti -1c
+.RI "void \fBStartDefaultTask\fP (void const *argument)"
+.br
+.RI "Function implementing the defaultTask thread\&. "
+.ti -1c
+.RI "void \fBusbProceed\fP (void const *argument)"
+.br
+.RI "Function implementing the usbProcTask thread\&. "
+.ti -1c
+.RI "void \fBHAL_TIM_PeriodElapsedCallback\fP (\fBTIM_HandleTypeDef\fP *htim)"
+.br
+.RI "Period elapsed callback in non blocking mode\&. "
+.ti -1c
+.RI "void \fBError_Handler\fP (void)"
+.br
+.RI "FreeRTOS error handler function\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBTIM_HandleTypeDef\fP \fBhtim1\fP"
+.br
+.ti -1c
+.RI "osThreadId \fBdefaultTaskHandle\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdefaultTaskBuffer\fP [128]"
+.br
+.ti -1c
+.RI "osStaticThreadDef_t \fBdefaultTaskControlBlock\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBmyTask04Buffer\fP [128]"
+.br
+.ti -1c
+.RI "osStaticThreadDef_t \fBmyTask04ControlBlock\fP"
+.br
+.ti -1c
+.RI "osMutexId \fBusbRxMutexHandle\fP"
+.br
+.ti -1c
+.RI "osStaticMutexDef_t \fBusbRxMutexControlBlock\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Main program body\&. 
+
+Main module (source file)\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Donskih Dmitry, Arthur Markaryan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+02\&.03\&.2019
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2018 - 2021 Donskih Dmitry\&. All rights reserved\&."
+.PP
+This software component is licensed by Donskih Dmitry under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Function Documentation"
+.PP 
+.SS "void Error_Handler (void)"
+
+.PP
+FreeRTOS error handler function\&. This function is executed in case of error occurrence\&. User can add his own implementation to report the HAL error return state\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "int main (void)"
+
+.PP
+The application entry point\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fIint\fP 
+.RE
+.PP
+
+.SS "void MX_TIM1_Init (void)"
+
+.PP
+TIM1 Initialization Function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void StartDefaultTask (void const * argument)"
+
+.PP
+Function implementing the defaultTask thread\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargument\fP Not used 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void SystemClock_Config (void)"
+
+.PP
+System Clock Configuration\&. Initializes the CPU, AHB and APB busses clocks\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void usbProceed (void const * argument)"
+
+.PP
+Function implementing the usbProcTask thread\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargument\fP Not used 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

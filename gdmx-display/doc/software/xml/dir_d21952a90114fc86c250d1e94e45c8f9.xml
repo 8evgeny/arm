@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_d21952a90114fc86c250d1e94e45c8f9" kind="dir">
+    <compoundname>Drivers/CMSIS/Device</compoundname>
+    <innerdir refid="dir_ea9cefa8af0ea91d7388c22d57deabc7">Drivers/CMSIS/Device/ST</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Device/"/>
+  </compounddef>
+</doxygen>

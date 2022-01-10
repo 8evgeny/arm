@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_u_s_b___type_def" kind="struct" language="C++" prot="public">
+    <compoundname>USB_TypeDef</compoundname>
+    <includes refid="stm32f103xb_8h" local="no">stm32f103xb.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a325f0bdb1f81ce237dea2773bc26aed2" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t EP0R</definition>
+        <argsstring></argsstring>
+        <name>EP0R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB Endpoint 0 register, Address offset: 0x00 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="524" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="524" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1ab234cb4952ccf50c24a841b3f2f28a91" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVED0</definition>
+        <argsstring></argsstring>
+        <name>RESERVED0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="525" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a181159566b312dd1471e247e6a74b8ef" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t EP1R</definition>
+        <argsstring></argsstring>
+        <name>EP1R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB Endpoint 1 register, Address offset: 0x04 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="526" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="526" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1abd0cb7c1fef737616a25adb37ef909bd" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVED1</definition>
+        <argsstring></argsstring>
+        <name>RESERVED1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="527" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="527" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1aaf056ff97c76de78e90701449c8cbf16" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t EP2R</definition>
+        <argsstring></argsstring>
+        <name>EP2R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB Endpoint 2 register, Address offset: 0x08 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="528" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="528" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a44086b7a050f78b2148a60945e477293" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVED2</definition>
+        <argsstring></argsstring>
+        <name>RESERVED2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="529" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="529" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1ac4d0c88deada778ef870d2f6d478768f" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t EP3R</definition>
+        <argsstring></argsstring>
+        <name>EP3R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB Endpoint 3 register, Address offset: 0x0C </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="530" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="530" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a73aa1eb05d9f4581a6efe7a8e919bcbf" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVED3</definition>
+        <argsstring></argsstring>
+        <name>RESERVED3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="531" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="531" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a304267e30a8fb671cfe22c8ef965d284" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t EP4R</definition>
+        <argsstring></argsstring>
+        <name>EP4R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB Endpoint 4 register, Address offset: 0x10 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="532" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="532" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a27f713a0ca762e5fd478a66a82f39a36" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVED4</definition>
+        <argsstring></argsstring>
+        <name>RESERVED4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="533" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="533" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a5c7950efccc55900c811a434d259e357" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t EP5R</definition>
+        <argsstring></argsstring>
+        <name>EP5R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB Endpoint 5 register, Address offset: 0x14 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="534" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="534" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a71145eb8e6d24d871c231d38f2ff49f7" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVED5</definition>
+        <argsstring></argsstring>
+        <name>RESERVED5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="535" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="535" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1aba6ced7617c465949dc6b9ba64b96ef7" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t EP6R</definition>
+        <argsstring></argsstring>
+        <name>EP6R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB Endpoint 6 register, Address offset: 0x18 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="536" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="536" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1af6264c920c71ea17140e0f673bd2f9ca" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVED6</definition>
+        <argsstring></argsstring>
+        <name>RESERVED6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="537" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1abc8d8ef89e886cc3492e0617bef98edf" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t EP7R</definition>
+        <argsstring></argsstring>
+        <name>EP7R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USB Endpoint 7 register, Address offset: 0x1C </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="538" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="538" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a56ede38a529e8da85e8ac7497a342486" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVED7[17]</definition>
+        <argsstring>[17]</argsstring>
+        <name>RESERVED7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="539" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="539" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a532529aa4c809b7e6881ce081f55c37b" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t CNTR</definition>
+        <argsstring></argsstring>
+        <name>CNTR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Control register, Address offset: 0x40 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="540" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="540" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1adcfbdb4bcad575e5ed423803e0a0b321" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVED8</definition>
+        <argsstring></argsstring>
+        <name>RESERVED8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="541" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="541" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a54fc7329a9549448d56b50bcca73bab4" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t ISTR</definition>
+        <argsstring></argsstring>
+        <name>ISTR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Interrupt status register, Address offset: 0x44 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="542" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="542" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1ac72f7489a9d2c795bce1158ee23e78f3" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVED9</definition>
+        <argsstring></argsstring>
+        <name>RESERVED9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="543" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="543" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a5ecb1ade997ff76fd2ff76370717d464" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t FNR</definition>
+        <argsstring></argsstring>
+        <name>FNR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Frame number register, Address offset: 0x48 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="544" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="544" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1aaa3240660b9b6f379ecdffd4d440f726" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVEDA</definition>
+        <argsstring></argsstring>
+        <name>RESERVEDA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="545" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="545" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1ae95ebb359f2974e0f25b27e488978922" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t DADDR</definition>
+        <argsstring></argsstring>
+        <name>DADDR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Device address register, Address offset: 0x4C </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="546" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="546" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a952c408bacd5ee662017440986eca043" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVEDB</definition>
+        <argsstring></argsstring>
+        <name>RESERVEDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="547" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="547" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a045130eb8c2d3eb353a4417f24f34f46" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t BTABLE</definition>
+        <argsstring></argsstring>
+        <name>BTABLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Buffer Table address register, Address offset: 0x50 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="548" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="548" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_u_s_b___type_def_1a9af23dac80d50cdf937b9fbbc4add948" prot="public" static="no" mutable="no">
+        <type><ref refid="core__sc300_8h_1aec43007d9998a0a0e01faede4133d6be" kindref="member">__IO</ref> uint16_t</type>
+        <definition>__IO uint16_t RESERVEDC</definition>
+        <argsstring></argsstring>
+        <name>RESERVEDC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="549" column="17" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="549" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Universal Serial Bus Full Speed Device. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" line="522" column="1" bodyfile="Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h" bodystart="523" bodyend="550"/>
+    <listofallmembers>
+      <member refid="struct_u_s_b___type_def_1a045130eb8c2d3eb353a4417f24f34f46" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>BTABLE</name></member>
+      <member refid="struct_u_s_b___type_def_1a532529aa4c809b7e6881ce081f55c37b" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>CNTR</name></member>
+      <member refid="struct_u_s_b___type_def_1ae95ebb359f2974e0f25b27e488978922" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>DADDR</name></member>
+      <member refid="struct_u_s_b___type_def_1a325f0bdb1f81ce237dea2773bc26aed2" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>EP0R</name></member>
+      <member refid="struct_u_s_b___type_def_1a181159566b312dd1471e247e6a74b8ef" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>EP1R</name></member>
+      <member refid="struct_u_s_b___type_def_1aaf056ff97c76de78e90701449c8cbf16" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>EP2R</name></member>
+      <member refid="struct_u_s_b___type_def_1ac4d0c88deada778ef870d2f6d478768f" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>EP3R</name></member>
+      <member refid="struct_u_s_b___type_def_1a304267e30a8fb671cfe22c8ef965d284" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>EP4R</name></member>
+      <member refid="struct_u_s_b___type_def_1a5c7950efccc55900c811a434d259e357" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>EP5R</name></member>
+      <member refid="struct_u_s_b___type_def_1aba6ced7617c465949dc6b9ba64b96ef7" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>EP6R</name></member>
+      <member refid="struct_u_s_b___type_def_1abc8d8ef89e886cc3492e0617bef98edf" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>EP7R</name></member>
+      <member refid="struct_u_s_b___type_def_1a5ecb1ade997ff76fd2ff76370717d464" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>FNR</name></member>
+      <member refid="struct_u_s_b___type_def_1a54fc7329a9549448d56b50bcca73bab4" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>ISTR</name></member>
+      <member refid="struct_u_s_b___type_def_1ab234cb4952ccf50c24a841b3f2f28a91" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVED0</name></member>
+      <member refid="struct_u_s_b___type_def_1abd0cb7c1fef737616a25adb37ef909bd" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVED1</name></member>
+      <member refid="struct_u_s_b___type_def_1a44086b7a050f78b2148a60945e477293" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVED2</name></member>
+      <member refid="struct_u_s_b___type_def_1a73aa1eb05d9f4581a6efe7a8e919bcbf" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVED3</name></member>
+      <member refid="struct_u_s_b___type_def_1a27f713a0ca762e5fd478a66a82f39a36" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVED4</name></member>
+      <member refid="struct_u_s_b___type_def_1a71145eb8e6d24d871c231d38f2ff49f7" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVED5</name></member>
+      <member refid="struct_u_s_b___type_def_1af6264c920c71ea17140e0f673bd2f9ca" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVED6</name></member>
+      <member refid="struct_u_s_b___type_def_1a56ede38a529e8da85e8ac7497a342486" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVED7</name></member>
+      <member refid="struct_u_s_b___type_def_1adcfbdb4bcad575e5ed423803e0a0b321" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVED8</name></member>
+      <member refid="struct_u_s_b___type_def_1ac72f7489a9d2c795bce1158ee23e78f3" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVED9</name></member>
+      <member refid="struct_u_s_b___type_def_1aaa3240660b9b6f379ecdffd4d440f726" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVEDA</name></member>
+      <member refid="struct_u_s_b___type_def_1a952c408bacd5ee662017440986eca043" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVEDB</name></member>
+      <member refid="struct_u_s_b___type_def_1a9af23dac80d50cdf937b9fbbc4add948" prot="public" virt="non-virtual"><scope>USB_TypeDef</scope><name>RESERVEDC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

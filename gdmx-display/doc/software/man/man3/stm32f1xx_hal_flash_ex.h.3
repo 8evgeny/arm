@@ -1,0 +1,207 @@
+.TH "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \- Header file of Flash HAL Extended module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f1xx_hal_def\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBFLASH_EraseInitTypeDef\fP"
+.br
+.RI "FLASH Erase structure definition\&. "
+.ti -1c
+.RI "struct \fBFLASH_OBProgramInitTypeDef\fP"
+.br
+.RI "FLASH Options bytes program structure definition\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFLASH_SIZE_DATA_REGISTER\fP   0x1FFFF7E0U"
+.br
+.ti -1c
+.RI "#define \fBOBR_REG_INDEX\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBSR_FLAG_MASK\fP   ((uint32_t)(\fBFLASH_SR_BSY\fP | \fBFLASH_SR_PGERR\fP | \fBFLASH_SR_WRPRTERR\fP | \fBFLASH_SR_EOP\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_FLASH_TYPEERASE\fP(VALUE)   (((VALUE) == \fBFLASH_TYPEERASE_PAGES\fP) || ((VALUE) == \fBFLASH_TYPEERASE_MASSERASE\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OPTIONBYTE\fP(VALUE)   (((VALUE) <= (\fBOPTIONBYTE_WRP\fP | \fBOPTIONBYTE_RDP\fP | \fBOPTIONBYTE_USER\fP | \fBOPTIONBYTE_DATA\fP)))"
+.br
+.ti -1c
+.RI "#define \fBIS_WRPSTATE\fP(VALUE)   (((VALUE) == \fBOB_WRPSTATE_DISABLE\fP) || ((VALUE) == \fBOB_WRPSTATE_ENABLE\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_RDP_LEVEL\fP(LEVEL)   (((LEVEL) == OB_RDP_LEVEL_0) || ((LEVEL) == OB_RDP_LEVEL_1))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_DATA_ADDRESS\fP(ADDRESS)   (((ADDRESS) == OB_DATA_ADDRESS_DATA0) || ((ADDRESS) == OB_DATA_ADDRESS_DATA1))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_IWDG_SOURCE\fP(SOURCE)   (((SOURCE) == \fBOB_IWDG_SW\fP) || ((SOURCE) == \fBOB_IWDG_HW\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_STOP_SOURCE\fP(SOURCE)   (((SOURCE) == \fBOB_STOP_NO_RST\fP) || ((SOURCE) == \fBOB_STOP_RST\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_STDBY_SOURCE\fP(SOURCE)   (((SOURCE) == \fBOB_STDBY_NO_RST\fP) || ((SOURCE) == \fBOB_STDBY_RST\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_WRP\fP(PAGE)   (((PAGE) != 0x0000000U))"
+.br
+.ti -1c
+.RI "#define \fBIS_FLASH_BANK\fP(BANK)   (((BANK) == \fBFLASH_BANK_1\fP))"
+.br
+.ti -1c
+.RI "#define \fBFLASH_TYPEERASE_PAGES\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBFLASH_TYPEERASE_MASSERASE\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBFLASH_BANK_1\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBOPTIONBYTE_WRP\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBOPTIONBYTE_RDP\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBOPTIONBYTE_USER\fP   0x04U"
+.br
+.ti -1c
+.RI "#define \fBOPTIONBYTE_DATA\fP   0x08U"
+.br
+.ti -1c
+.RI "#define \fBOB_WRPSTATE_DISABLE\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBOB_WRPSTATE_ENABLE\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBOB_WRP_ALLPAGES\fP   0xFFFFFFFFU"
+.br
+.ti -1c
+.RI "#define \fBOB_RDP_LEVEL_0\fP   ((uint8_t)0xA5)"
+.br
+.ti -1c
+.RI "#define \fBOB_RDP_LEVEL_1\fP   ((uint8_t)0x00)"
+.br
+.ti -1c
+.RI "#define \fBOB_IWDG_SW\fP   ((uint16_t)0x0001)"
+.br
+.ti -1c
+.RI "#define \fBOB_IWDG_HW\fP   ((uint16_t)0x0000)"
+.br
+.ti -1c
+.RI "#define \fBOB_STOP_NO_RST\fP   ((uint16_t)0x0002)"
+.br
+.ti -1c
+.RI "#define \fBOB_STOP_RST\fP   ((uint16_t)0x0000)"
+.br
+.ti -1c
+.RI "#define \fBOB_STDBY_NO_RST\fP   ((uint16_t)0x0004)"
+.br
+.ti -1c
+.RI "#define \fBOB_STDBY_RST\fP   ((uint16_t)0x0000)"
+.br
+.ti -1c
+.RI "#define \fBOB_DATA_ADDRESS_DATA0\fP   0x1FFFF804U"
+.br
+.ti -1c
+.RI "#define \fBOB_DATA_ADDRESS_DATA1\fP   0x1FFFF806U"
+.br
+.ti -1c
+.RI "#define \fBFLASH_FLAG_BSY\fP   \fBFLASH_SR_BSY\fP"
+.br
+.ti -1c
+.RI "#define \fBFLASH_FLAG_PGERR\fP   \fBFLASH_SR_PGERR\fP"
+.br
+.ti -1c
+.RI "#define \fBFLASH_FLAG_WRPERR\fP   \fBFLASH_SR_WRPRTERR\fP"
+.br
+.ti -1c
+.RI "#define \fBFLASH_FLAG_EOP\fP   \fBFLASH_SR_EOP\fP"
+.br
+.ti -1c
+.RI "#define \fBFLASH_FLAG_OPTVERR\fP   ((OBR_REG_INDEX << 8U | \fBFLASH_OBR_OPTERR\fP))"
+.br
+.ti -1c
+.RI "#define \fBFLASH_IT_EOP\fP   \fBFLASH_CR_EOPIE\fP"
+.br
+.ti -1c
+.RI "#define \fBFLASH_IT_ERR\fP   \fBFLASH_CR_ERRIE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_FLASH_ENABLE_IT\fP(__INTERRUPT__)   (FLASH\->CR |= (__INTERRUPT__))"
+.br
+.RI "Enable the specified FLASH interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_DISABLE_IT\fP(__INTERRUPT__)   (FLASH\->CR &= ~(__INTERRUPT__))"
+.br
+.RI "Disable the specified FLASH interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_GET_FLAG\fP(__FLAG__)"
+.br
+.RI "Get the specified FLASH flag status\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_CLEAR_FLAG\fP(__FLAG__)"
+.br
+.RI "Clear the specified FLASH flag\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_FLASHEx_Erase\fP (\fBFLASH_EraseInitTypeDef\fP *pEraseInit, uint32_t *PageError)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_FLASHEx_Erase_IT\fP (\fBFLASH_EraseInitTypeDef\fP *pEraseInit)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_FLASHEx_OBErase\fP (void)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_FLASHEx_OBProgram\fP (\fBFLASH_OBProgramInitTypeDef\fP *pOBInit)"
+.br
+.ti -1c
+.RI "void \fBHAL_FLASHEx_OBGetConfig\fP (\fBFLASH_OBProgramInitTypeDef\fP *pOBInit)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_FLASHEx_OBGetUserData\fP (uint32_t DATAAdress)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file of Flash HAL Extended module\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+MCD Application Team
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2016 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

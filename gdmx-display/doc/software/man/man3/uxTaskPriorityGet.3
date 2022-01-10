@@ -1,0 +1,67 @@
+.TH "uxTaskPriorityGet" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+uxTaskPriorityGet \- uxTaskPriorityGet
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+task\&. h 
+.PP
+.nf
+UBaseType_t uxTaskPriorityGet( TaskHandle_t xTask );
+.fi
+.PP
+.PP
+INCLUDE_uxTaskPriorityGet must be defined as 1 for this function to be available\&. See the configuration section for more information\&.
+.PP
+Obtain the priority of any task\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIxTask\fP Handle of the task to be queried\&. Passing a NULL handle results in the priority of the calling task being returned\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The priority of xTask\&.
+.RE
+.PP
+Example usage: 
+.PP
+.nf
+
+void vAFunction( void )
+{
+TaskHandle_t xHandle;
+
+    // Create a task, storing the handle\&.
+    xTaskCreate( vTaskCode, 'NAME', STACK_SIZE, NULL, tskIDLE_PRIORITY, &xHandle );
+
+    // \&.\&.\&.
+
+    // Use the handle to obtain the priority of the created task\&.
+    // It was created with tskIDLE_PRIORITY, but may have changed
+    // it itself\&.
+    if( uxTaskPriorityGet( xHandle ) != tskIDLE_PRIORITY )
+    {
+     // The task has changed it's priority\&.
+    }
+
+    // \&.\&.\&.
+
+    // Is our priority higher than the created task?
+    if( uxTaskPriorityGet( xHandle ) < uxTaskPriorityGet( NULL ) )
+    {
+     // Our priority (obtained using NULL handle) is higher\&.
+    }
+}
+  
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

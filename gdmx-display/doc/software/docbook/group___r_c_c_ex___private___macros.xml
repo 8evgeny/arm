@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex___private___macros" xml:lang="en-US">
+<title>RCCEx_Private_Macros</title>
+<indexterm><primary>RCCEx_Private_Macros</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___r_c_c_ex___private___macros_1gac11d788cab2ff6f84e2cab45da43c5d4"/>#define <emphasis role="strong">IS_RCC_HSE_PREDIV</emphasis>(__DIV__)   (((__DIV__) == RCC_HSE_PREDIV_DIV1)  || ((__DIV__) == RCC_HSE_PREDIV_DIV2))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_PLL_MUL</emphasis>(__MUL__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_MCO1SOURCE</emphasis>(__SOURCE__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_ADCPLLCLK_DIV</emphasis>(__ADCCLK__)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">IS_RCC_PERIPHCLOCK</emphasis>(__SELECTION__)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c_ex___private___macros_1ga755487c23148a5a52184ff6dc796c1d1"/>    <section>
+    <title>IS_RCC_ADCPLLCLK_DIV</title>
+<indexterm><primary>IS_RCC_ADCPLLCLK_DIV</primary><secondary>RCCEx_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCCEx_Private_Macros</primary><secondary>IS_RCC_ADCPLLCLK_DIV</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_ADCPLLCLK_DIV( __ADCCLK__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__ADCCLK__)&#32;==&#32;RCC_ADCPCLK2_DIV2)&#32;&#32;||&#32;((__ADCCLK__)&#32;==&#32;RCC_ADCPCLK2_DIV4)&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__ADCCLK__)&#32;==&#32;RCC_ADCPCLK2_DIV6)&#32;&#32;||&#32;((__ADCCLK__)&#32;==&#32;RCC_ADCPCLK2_DIV8))
+</programlisting>    </section><anchor xml:id="_group___r_c_c_ex___private___macros_1ga17690472f266a032db5324907a0ddc31"/>    <section>
+    <title>IS_RCC_MCO1SOURCE</title>
+<indexterm><primary>IS_RCC_MCO1SOURCE</primary><secondary>RCCEx_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCCEx_Private_Macros</primary><secondary>IS_RCC_MCO1SOURCE</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_MCO1SOURCE( __SOURCE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__SOURCE__)&#32;==&#32;RCC_MCO1SOURCE_SYSCLK)&#32;&#32;||&#32;((__SOURCE__)&#32;==&#32;RCC_MCO1SOURCE_HSI)&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;((__SOURCE__)&#32;==&#32;RCC_MCO1SOURCE_HSE)&#32;&#32;&#32;&#32;&#32;||&#32;((__SOURCE__)&#32;==&#32;RCC_MCO1SOURCE_PLLCLK)&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;((__SOURCE__)&#32;==&#32;RCC_MCO1SOURCE_NOCLOCK))
+</programlisting>    </section><anchor xml:id="_group___r_c_c_ex___private___macros_1ga7ef5298a4d0e7b186c4a4e5471987084"/>    <section>
+    <title>IS_RCC_PERIPHCLOCK</title>
+<indexterm><primary>IS_RCC_PERIPHCLOCK</primary><secondary>RCCEx_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCCEx_Private_Macros</primary><secondary>IS_RCC_PERIPHCLOCK</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_PERIPHCLOCK( __SELECTION__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((((__SELECTION__)&#32;&amp;&#32;RCC_PERIPHCLK_RTC)&#32;&#32;==&#32;RCC_PERIPHCLK_RTC)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__SELECTION__)&#32;&amp;&#32;RCC_PERIPHCLK_ADC)&#32;&#32;==&#32;RCC_PERIPHCLK_ADC))
+</programlisting>    </section><anchor xml:id="_group___r_c_c_ex___private___macros_1gaaa87e62aba8556651b5d09e2f7ec4db5"/>    <section>
+    <title>IS_RCC_PLL_MUL</title>
+<indexterm><primary>IS_RCC_PLL_MUL</primary><secondary>RCCEx_Private_Macros</secondary></indexterm>
+<indexterm><primary>RCCEx_Private_Macros</primary><secondary>IS_RCC_PLL_MUL</secondary></indexterm>
+<para><computeroutput>#define IS_RCC_PLL_MUL( __MUL__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__MUL__)&#32;==&#32;RCC_PLL_MUL2)&#32;&#32;||&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL3)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL4)&#32;&#32;||&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL5)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL6)&#32;&#32;||&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL7)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL8)&#32;&#32;||&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL9)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL10)&#32;||&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL11)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL12)&#32;||&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL13)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL14)&#32;||&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL15)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__MUL__)&#32;==&#32;RCC_PLL_MUL16))
+</programlisting></section>
+</section>
+</section>

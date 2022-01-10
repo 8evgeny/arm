@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_5544879058201621900618cb5a47ed7d" kind="dir">
+    <compoundname>Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3</compoundname>
+    <innerfile refid="port_8c">port.c</innerfile>
+    <innerfile refid="portmacro_8h">portmacro.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/"/>
+  </compounddef>
+</doxygen>

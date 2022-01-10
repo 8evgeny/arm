@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___private___macros" kind="group">
+    <compoundname>HAL_Private_Macros</compoundname>
+    <title>HAL Private Macros</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___private___macros_1ga2a86bf8a89ad75716cd92e932a8ae71e" prot="public" static="no">
+        <name>IS_TICKFREQ</name>
+        <param><defname>FREQ</defname></param>
+        <initializer>                           (((FREQ) == HAL_TICK_FREQ_10HZ)  || \
+                           ((FREQ) == HAL_TICK_FREQ_100HZ) || \
+                           ((FREQ) == HAL_TICK_FREQ_1KHZ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" line="267" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

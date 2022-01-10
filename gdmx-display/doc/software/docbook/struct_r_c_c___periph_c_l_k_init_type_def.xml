@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_r_c_c___periph_c_l_k_init_type_def" xml:lang="en-US">
+<title>RCC_PeriphCLKInitTypeDef Struct Reference</title>
+<indexterm><primary>RCC_PeriphCLKInitTypeDef</primary></indexterm>
+<para>
+
+<para>RCC extended clocks structure definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f1xx_hal_rcc_ex.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___periph_c_l_k_init_type_def_1a82dae3f6a5ae6c184bd1b95a88d41fc2">PeriphClockSelection</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___periph_c_l_k_init_type_def_1a831cc6023077b77683871743290aa720">RTCClockSelection</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_r_c_c___periph_c_l_k_init_type_def_1a28e358df2e95d000ccf4984cd14250e8">AdcClockSelection</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>RCC extended clocks structure definition. </para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_r_c_c___periph_c_l_k_init_type_def_1a28e358df2e95d000ccf4984cd14250e8"/>    <section>
+    <title>AdcClockSelection</title>
+<indexterm><primary>AdcClockSelection</primary><secondary>RCC_PeriphCLKInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_PeriphCLKInitTypeDef</primary><secondary>AdcClockSelection</secondary></indexterm>
+<para><computeroutput>uint32_t AdcClockSelection</computeroutput></para>
+<para>ADC clock source This parameter can be a value of <link linkend="_group___r_c_c_ex___a_d_c___prescaler">ADC Prescaler</link> </para>
+    </section><anchor xml:id="_struct_r_c_c___periph_c_l_k_init_type_def_1a82dae3f6a5ae6c184bd1b95a88d41fc2"/>    <section>
+    <title>PeriphClockSelection</title>
+<indexterm><primary>PeriphClockSelection</primary><secondary>RCC_PeriphCLKInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_PeriphCLKInitTypeDef</primary><secondary>PeriphClockSelection</secondary></indexterm>
+<para><computeroutput>uint32_t PeriphClockSelection</computeroutput></para>
+<para>The Extended Clock to be configured. This parameter can be a value of <link linkend="_group___r_c_c_ex___periph___clock___selection">Periph Clock Selection</link> </para>
+    </section><anchor xml:id="_struct_r_c_c___periph_c_l_k_init_type_def_1a831cc6023077b77683871743290aa720"/>    <section>
+    <title>RTCClockSelection</title>
+<indexterm><primary>RTCClockSelection</primary><secondary>RCC_PeriphCLKInitTypeDef</secondary></indexterm>
+<indexterm><primary>RCC_PeriphCLKInitTypeDef</primary><secondary>RTCClockSelection</secondary></indexterm>
+<para><computeroutput>uint32_t RTCClockSelection</computeroutput></para>
+<para>specifies the RTC clock source. This parameter can be a value of <link linkend="_group___r_c_c___r_t_c___clock___source">RTC Clock Source</link> </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Drivers/STM32F1xx_HAL_Driver/Inc/<link linkend="_stm32f1xx__hal__rcc__ex_8h">stm32f1xx_hal_rcc_ex.h</link></section>
+</section>

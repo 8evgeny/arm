@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h___flag__definition" xml:lang="en-US">
+<title>Flag definition</title>
+<indexterm><primary>Flag definition</primary></indexterm>
+<para>
+
+<para>Flag definition. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1gad3bc368f954ad7744deda3315da2fff7">FLASH_FLAG_BSY</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga4b86181a96fd2f1cc3828e9d8d83d368">FLASH_SR_BSY</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1gae2ef62dee0a5ca01e6226746039b6f20">FLASH_FLAG_PGERR</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga60f40ca765714598a62aa216a5ccd8e4">FLASH_SR_PGERR</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1ga6abf64f916992585899369166db3f266">FLASH_FLAG_WRPERR</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga2e403606e5ac23cb07701aeebc1f73e5">FLASH_SR_WRPRTERR</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1gaf043ba4d8f837350bfc7754a99fae5a9">FLASH_FLAG_EOP</link>   <link linkend="_group___peripheral___registers___bits___definition_1gae1301c6b487cfefa247c54a576a0c12b">FLASH_SR_EOP</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1gacb2c4c991a260c3f110cd8c72f302864">FLASH_FLAG_OPTVERR</link>   ((OBR_REG_INDEX &lt;&lt; 8U | <link linkend="_group___peripheral___registers___bits___definition_1gab52c27d6657bd72f1860fa25a1faf8e3">FLASH_OBR_OPTERR</link>))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Flag definition. </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h___flag__definition_1gad3bc368f954ad7744deda3315da2fff7"/>    <section>
+    <title>FLASH_FLAG_BSY</title>
+<indexterm><primary>FLASH_FLAG_BSY</primary><secondary>Flag definition</secondary></indexterm>
+<indexterm><primary>Flag definition</primary><secondary>FLASH_FLAG_BSY</secondary></indexterm>
+<para><computeroutput>#define FLASH_FLAG_BSY   <link linkend="_group___peripheral___registers___bits___definition_1ga4b86181a96fd2f1cc3828e9d8d83d368">FLASH_SR_BSY</link></computeroutput></para>
+<para>FLASH Busy flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___flag__definition_1gaf043ba4d8f837350bfc7754a99fae5a9"/>    <section>
+    <title>FLASH_FLAG_EOP</title>
+<indexterm><primary>FLASH_FLAG_EOP</primary><secondary>Flag definition</secondary></indexterm>
+<indexterm><primary>Flag definition</primary><secondary>FLASH_FLAG_EOP</secondary></indexterm>
+<para><computeroutput>#define FLASH_FLAG_EOP   <link linkend="_group___peripheral___registers___bits___definition_1gae1301c6b487cfefa247c54a576a0c12b">FLASH_SR_EOP</link></computeroutput></para>
+<para>FLASH End of Operation flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___flag__definition_1gacb2c4c991a260c3f110cd8c72f302864"/>    <section>
+    <title>FLASH_FLAG_OPTVERR</title>
+<indexterm><primary>FLASH_FLAG_OPTVERR</primary><secondary>Flag definition</secondary></indexterm>
+<indexterm><primary>Flag definition</primary><secondary>FLASH_FLAG_OPTVERR</secondary></indexterm>
+<para><computeroutput>#define FLASH_FLAG_OPTVERR   ((OBR_REG_INDEX &lt;&lt; 8U | <link linkend="_group___peripheral___registers___bits___definition_1gab52c27d6657bd72f1860fa25a1faf8e3">FLASH_OBR_OPTERR</link>))</computeroutput></para>
+<para>Option Byte Error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___flag__definition_1gae2ef62dee0a5ca01e6226746039b6f20"/>    <section>
+    <title>FLASH_FLAG_PGERR</title>
+<indexterm><primary>FLASH_FLAG_PGERR</primary><secondary>Flag definition</secondary></indexterm>
+<indexterm><primary>Flag definition</primary><secondary>FLASH_FLAG_PGERR</secondary></indexterm>
+<para><computeroutput>#define FLASH_FLAG_PGERR   <link linkend="_group___peripheral___registers___bits___definition_1ga60f40ca765714598a62aa216a5ccd8e4">FLASH_SR_PGERR</link></computeroutput></para>
+<para>FLASH Programming error flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___f_l_a_s_h___flag__definition_1ga6abf64f916992585899369166db3f266"/>    <section>
+    <title>FLASH_FLAG_WRPERR</title>
+<indexterm><primary>FLASH_FLAG_WRPERR</primary><secondary>Flag definition</secondary></indexterm>
+<indexterm><primary>Flag definition</primary><secondary>FLASH_FLAG_WRPERR</secondary></indexterm>
+<para><computeroutput>#define FLASH_FLAG_WRPERR   <link linkend="_group___peripheral___registers___bits___definition_1ga2e403606e5ac23cb07701aeebc1f73e5">FLASH_SR_WRPRTERR</link></computeroutput></para>
+<para>FLASH Write protected error flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+</section>
+</section>

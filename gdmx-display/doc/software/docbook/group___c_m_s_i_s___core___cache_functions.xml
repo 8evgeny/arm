@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_m_s_i_s___core___cache_functions" xml:lang="en-US">
+<title>Cache Functions</title>
+<indexterm><primary>Cache Functions</primary></indexterm>
+<para>
+
+<para>Functions that configure Instruction and Data cache. </para>
+ 
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___c_m_s_i_s___core___sys_tick_functions">SysTick Functions</link></para>
+
+<para>Functions that configure the System. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+        <itemizedlist>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1gaf9e7c6c8e16ada1f95e5bf5a03505b68">SCB_EnableICache</link> (void)</para>
+
+<para>Enable I-Cache. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1gaba757390852f95b3ac2d8638c717d8d8">SCB_DisableICache</link> (void)</para>
+
+<para>Disable I-Cache. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1ga50d373a785edd782c5de5a3b55e30ff3">SCB_InvalidateICache</link> (void)</para>
+
+<para>Invalidate I-Cache. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1ga63aa640d9006021a796a5dcf9c7180b6">SCB_EnableDCache</link> (void)</para>
+
+<para>Enable D-Cache. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1ga6468170f90d270caab8116e7a4f0b5fe">SCB_DisableDCache</link> (void)</para>
+
+<para>Disable D-Cache. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1gace2d30db08887d0bdb818b8a785a5ce6">SCB_InvalidateDCache</link> (void)</para>
+
+<para>Invalidate D-Cache. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1ga55583e3065c6eabca204b8b89b121c4c">SCB_CleanDCache</link> (void)</para>
+
+<para>Clean D-Cache. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1ga1b741def9e3b2ca97dc9ea49b8ce505c">SCB_CleanInvalidateDCache</link> (void)</para>
+
+<para>Clean &amp; Invalidate D-Cache. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1ga503ef7ef58c0773defd15a82f6336c09">SCB_InvalidateDCache_by_Addr</link> (uint32_t *addr, int32_t dsize)</para>
+
+<para>D-Cache Invalidate by address. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1ga696fadbf7b9cc71dad42fab61873a40d">SCB_CleanDCache_by_Addr</link> (uint32_t *addr, int32_t dsize)</para>
+
+<para>D-Cache Clean by address. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___cache_functions_1ga630131b2572eaa16b569ed364dfc895e">SCB_CleanInvalidateDCache_by_Addr</link> (uint32_t *addr, int32_t dsize)</para>
+
+<para>D-Cache Clean and Invalidate by address. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1ga3d672529cd193537fe2a0141931c6ad9"/>#define <emphasis role="strong">CCSIDR_WAYS</emphasis>(x)   (((x) &amp; <link linkend="_group___c_m_s_i_s___s_c_b_1gae093c4c635dad43845967512fa87173a">SCB_CCSIDR_ASSOCIATIVITY_Msk</link>) &gt;&gt; <link linkend="_group___c_m_s_i_s___s_c_b_1gae67f2f83976b819fb3039fc35cfef0fb">SCB_CCSIDR_ASSOCIATIVITY_Pos</link>)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1gaf20feee7c52fee32b48ee0d2ceaaf932"/>#define <emphasis role="strong">CCSIDR_SETS</emphasis>(x)   (((x) &amp; <link linkend="_group___c_m_s_i_s___s_c_b_1ga47d1f01185d7a039334031008386c5a8">SCB_CCSIDR_NUMSETS_Msk</link>      ) &gt;&gt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga1028d2c238f74d2aa021f53ffbe8d7ab">SCB_CCSIDR_NUMSETS_Pos</link>      )</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Functions that configure Instruction and Data cache. </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1ga55583e3065c6eabca204b8b89b121c4c"/>    <section>
+    <title>SCB_CleanDCache()</title>
+<indexterm><primary>SCB_CleanDCache</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_CleanDCache</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_CleanDCache (void )</computeroutput></para><para>
+
+<para>Clean D-Cache. </para>
+</para>
+
+<para>Cleans D-Cache </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1ga696fadbf7b9cc71dad42fab61873a40d"/>    <section>
+    <title>SCB_CleanDCache_by_Addr()</title>
+<indexterm><primary>SCB_CleanDCache_by_Addr</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_CleanDCache_by_Addr</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_CleanDCache_by_Addr (uint32_t * addr, int32_t dsize)</computeroutput></para><para>
+
+<para>D-Cache Clean by address. </para>
+</para>
+
+<para>Cleans D-Cache for the given address 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>addr</entry>
+                                <entry>
+<para>address (aligned to 32-byte boundary) </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>dsize</entry>
+                                <entry>
+<para>size of memory block (in number of bytes) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1ga1b741def9e3b2ca97dc9ea49b8ce505c"/>    <section>
+    <title>SCB_CleanInvalidateDCache()</title>
+<indexterm><primary>SCB_CleanInvalidateDCache</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_CleanInvalidateDCache</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_CleanInvalidateDCache (void )</computeroutput></para><para>
+
+<para>Clean &amp; Invalidate D-Cache. </para>
+</para>
+
+<para>Cleans and Invalidates D-Cache </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1ga630131b2572eaa16b569ed364dfc895e"/>    <section>
+    <title>SCB_CleanInvalidateDCache_by_Addr()</title>
+<indexterm><primary>SCB_CleanInvalidateDCache_by_Addr</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_CleanInvalidateDCache_by_Addr</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_CleanInvalidateDCache_by_Addr (uint32_t * addr, int32_t dsize)</computeroutput></para><para>
+
+<para>D-Cache Clean and Invalidate by address. </para>
+</para>
+
+<para>Cleans and invalidates D_Cache for the given address 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>addr</entry>
+                                <entry>
+<para>address (aligned to 32-byte boundary) </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>dsize</entry>
+                                <entry>
+<para>size of memory block (in number of bytes) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1ga6468170f90d270caab8116e7a4f0b5fe"/>    <section>
+    <title>SCB_DisableDCache()</title>
+<indexterm><primary>SCB_DisableDCache</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_DisableDCache</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_DisableDCache (void )</computeroutput></para><para>
+
+<para>Disable D-Cache. </para>
+</para>
+
+<para>Turns off D-Cache </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1gaba757390852f95b3ac2d8638c717d8d8"/>    <section>
+    <title>SCB_DisableICache()</title>
+<indexterm><primary>SCB_DisableICache</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_DisableICache</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_DisableICache (void )</computeroutput></para><para>
+
+<para>Disable I-Cache. </para>
+</para>
+
+<para>Turns off I-Cache </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1ga63aa640d9006021a796a5dcf9c7180b6"/>    <section>
+    <title>SCB_EnableDCache()</title>
+<indexterm><primary>SCB_EnableDCache</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_EnableDCache</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_EnableDCache (void )</computeroutput></para><para>
+
+<para>Enable D-Cache. </para>
+</para>
+
+<para>Turns on D-Cache </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1gaf9e7c6c8e16ada1f95e5bf5a03505b68"/>    <section>
+    <title>SCB_EnableICache()</title>
+<indexterm><primary>SCB_EnableICache</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_EnableICache</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_EnableICache (void )</computeroutput></para><para>
+
+<para>Enable I-Cache. </para>
+</para>
+
+<para>Turns on I-Cache </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1gace2d30db08887d0bdb818b8a785a5ce6"/>    <section>
+    <title>SCB_InvalidateDCache()</title>
+<indexterm><primary>SCB_InvalidateDCache</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_InvalidateDCache</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_InvalidateDCache (void )</computeroutput></para><para>
+
+<para>Invalidate D-Cache. </para>
+</para>
+
+<para>Invalidates D-Cache </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1ga503ef7ef58c0773defd15a82f6336c09"/>    <section>
+    <title>SCB_InvalidateDCache_by_Addr()</title>
+<indexterm><primary>SCB_InvalidateDCache_by_Addr</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_InvalidateDCache_by_Addr</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_InvalidateDCache_by_Addr (uint32_t * addr, int32_t dsize)</computeroutput></para><para>
+
+<para>D-Cache Invalidate by address. </para>
+</para>
+
+<para>Invalidates D-Cache for the given address 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>addr</entry>
+                                <entry>
+<para>address (aligned to 32-byte boundary) </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>dsize</entry>
+                                <entry>
+<para>size of memory block (in number of bytes) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_group___c_m_s_i_s___core___cache_functions_1ga50d373a785edd782c5de5a3b55e30ff3"/>    <section>
+    <title>SCB_InvalidateICache()</title>
+<indexterm><primary>SCB_InvalidateICache</primary><secondary>Cache Functions</secondary></indexterm>
+<indexterm><primary>Cache Functions</primary><secondary>SCB_InvalidateICache</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void SCB_InvalidateICache (void )</computeroutput></para><para>
+
+<para>Invalidate I-Cache. </para>
+</para>
+
+<para>Invalidates I-Cache </para>
+</section>
+</section>
+</section>

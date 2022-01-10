@@ -1,0 +1,46 @@
+.TH "TIM_Input_Capture_Prescaler" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Input_Capture_Prescaler \- TIM Input Capture Prescaler
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_ICPSC_DIV1\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_ICPSC_DIV2\fP   \fBTIM_CCMR1_IC1PSC_0\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_ICPSC_DIV4\fP   \fBTIM_CCMR1_IC1PSC_1\fP"
+.br
+.ti -1c
+.RI "#define \fBTIM_ICPSC_DIV8\fP   \fBTIM_CCMR1_IC1PSC\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TIM_ICPSC_DIV1   0x00000000U"
+Capture performed each time an edge is detected on the capture input 
+.SS "#define TIM_ICPSC_DIV2   \fBTIM_CCMR1_IC1PSC_0\fP"
+Capture performed once every 2 events 
+.br
+ 
+.SS "#define TIM_ICPSC_DIV4   \fBTIM_CCMR1_IC1PSC_1\fP"
+Capture performed once every 4 events 
+.br
+ 
+.SS "#define TIM_ICPSC_DIV8   \fBTIM_CCMR1_IC1PSC\fP"
+Capture performed once every 8 events 
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

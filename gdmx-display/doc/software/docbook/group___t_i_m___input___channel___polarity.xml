@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___input___channel___polarity" xml:lang="en-US">
+<title>TIM Input Channel polarity</title>
+<indexterm><primary>TIM Input Channel polarity</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___input___channel___polarity_1ga4f4cede88a4ad4b33e81f2567e9bb08f">TIM_INPUTCHANNELPOLARITY_RISING</link>   0x00000000U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___input___channel___polarity_1ga07441a8c0a52234e30f471c23803450c">TIM_INPUTCHANNELPOLARITY_FALLING</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga0ca0aedba14241caff739afb3c3ee291">TIM_CCER_CC1P</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___input___channel___polarity_1gaab2598881d1f19158e77723c5d29d6ac">TIM_INPUTCHANNELPOLARITY_BOTHEDGE</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga0ca0aedba14241caff739afb3c3ee291">TIM_CCER_CC1P</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga403fc501d4d8de6cabee6b07acb81a36">TIM_CCER_CC1NP</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___input___channel___polarity_1gaab2598881d1f19158e77723c5d29d6ac"/>    <section>
+    <title>TIM_INPUTCHANNELPOLARITY_BOTHEDGE</title>
+<indexterm><primary>TIM_INPUTCHANNELPOLARITY_BOTHEDGE</primary><secondary>TIM Input Channel polarity</secondary></indexterm>
+<indexterm><primary>TIM Input Channel polarity</primary><secondary>TIM_INPUTCHANNELPOLARITY_BOTHEDGE</secondary></indexterm>
+<para><computeroutput>#define TIM_INPUTCHANNELPOLARITY_BOTHEDGE   (<link linkend="_group___peripheral___registers___bits___definition_1ga0ca0aedba14241caff739afb3c3ee291">TIM_CCER_CC1P</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga403fc501d4d8de6cabee6b07acb81a36">TIM_CCER_CC1NP</link>)</computeroutput></para>
+<para>Polarity for TIx source </para>
+    </section><anchor xml:id="_group___t_i_m___input___channel___polarity_1ga07441a8c0a52234e30f471c23803450c"/>    <section>
+    <title>TIM_INPUTCHANNELPOLARITY_FALLING</title>
+<indexterm><primary>TIM_INPUTCHANNELPOLARITY_FALLING</primary><secondary>TIM Input Channel polarity</secondary></indexterm>
+<indexterm><primary>TIM Input Channel polarity</primary><secondary>TIM_INPUTCHANNELPOLARITY_FALLING</secondary></indexterm>
+<para><computeroutput>#define TIM_INPUTCHANNELPOLARITY_FALLING   <link linkend="_group___peripheral___registers___bits___definition_1ga0ca0aedba14241caff739afb3c3ee291">TIM_CCER_CC1P</link></computeroutput></para>
+<para>Polarity for TIx source </para>
+    </section><anchor xml:id="_group___t_i_m___input___channel___polarity_1ga4f4cede88a4ad4b33e81f2567e9bb08f"/>    <section>
+    <title>TIM_INPUTCHANNELPOLARITY_RISING</title>
+<indexterm><primary>TIM_INPUTCHANNELPOLARITY_RISING</primary><secondary>TIM Input Channel polarity</secondary></indexterm>
+<indexterm><primary>TIM Input Channel polarity</primary><secondary>TIM_INPUTCHANNELPOLARITY_RISING</secondary></indexterm>
+<para><computeroutput>#define TIM_INPUTCHANNELPOLARITY_RISING   0x00000000U</computeroutput></para>
+<para>Polarity for TIx source </para>
+</section>
+</section>
+</section>

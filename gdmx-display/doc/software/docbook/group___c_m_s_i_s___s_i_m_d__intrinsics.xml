@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_m_s_i_s___s_i_m_d__intrinsics" xml:lang="en-US">
+<title>CMSIS SIMD Intrinsics</title>
+<indexterm><primary>CMSIS SIMD Intrinsics</primary></indexterm>
+
+<para>Access to dedicated SIMD instructions </para>
+</section>

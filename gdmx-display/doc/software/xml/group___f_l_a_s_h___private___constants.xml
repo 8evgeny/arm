@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___f_l_a_s_h___private___constants" kind="group">
+    <compoundname>FLASH_Private_Constants</compoundname>
+    <title>FLASH_Private_Constants</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___f_l_a_s_h___private___constants_1ga76e8ea58ef37913dcdb61efae2d6ab8f" prot="public" static="no">
+        <name>FLASH_TIMEOUT_VALUE</name>
+        <initializer>50000U /* 50 s */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" line="42" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

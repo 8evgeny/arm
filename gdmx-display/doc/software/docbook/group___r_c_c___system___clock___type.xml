@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c___system___clock___type" xml:lang="en-US">
+<title>System Clock Type</title>
+<indexterm><primary>System Clock Type</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_c_c___system___clock___type_1ga7e721f5bf3fe925f78dae0356165332e">RCC_CLOCKTYPE_SYSCLK</link>   0x00000001U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___system___clock___type_1gaa5330efbd790632856a2b15851517ef9">RCC_CLOCKTYPE_HCLK</link>   0x00000002U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___system___clock___type_1gab00c7b70f0770a616be4b5df45a454c4">RCC_CLOCKTYPE_PCLK1</link>   0x00000004U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_c_c___system___clock___type_1gaef7e78706e597a6551d71f5f9ad60cc0">RCC_CLOCKTYPE_PCLK2</link>   0x00000008U</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_c_c___system___clock___type_1gaa5330efbd790632856a2b15851517ef9"/>    <section>
+    <title>RCC_CLOCKTYPE_HCLK</title>
+<indexterm><primary>RCC_CLOCKTYPE_HCLK</primary><secondary>System Clock Type</secondary></indexterm>
+<indexterm><primary>System Clock Type</primary><secondary>RCC_CLOCKTYPE_HCLK</secondary></indexterm>
+<para><computeroutput>#define RCC_CLOCKTYPE_HCLK   0x00000002U</computeroutput></para>
+<para>HCLK to configure </para>
+    </section><anchor xml:id="_group___r_c_c___system___clock___type_1gab00c7b70f0770a616be4b5df45a454c4"/>    <section>
+    <title>RCC_CLOCKTYPE_PCLK1</title>
+<indexterm><primary>RCC_CLOCKTYPE_PCLK1</primary><secondary>System Clock Type</secondary></indexterm>
+<indexterm><primary>System Clock Type</primary><secondary>RCC_CLOCKTYPE_PCLK1</secondary></indexterm>
+<para><computeroutput>#define RCC_CLOCKTYPE_PCLK1   0x00000004U</computeroutput></para>
+<para>PCLK1 to configure </para>
+    </section><anchor xml:id="_group___r_c_c___system___clock___type_1gaef7e78706e597a6551d71f5f9ad60cc0"/>    <section>
+    <title>RCC_CLOCKTYPE_PCLK2</title>
+<indexterm><primary>RCC_CLOCKTYPE_PCLK2</primary><secondary>System Clock Type</secondary></indexterm>
+<indexterm><primary>System Clock Type</primary><secondary>RCC_CLOCKTYPE_PCLK2</secondary></indexterm>
+<para><computeroutput>#define RCC_CLOCKTYPE_PCLK2   0x00000008U</computeroutput></para>
+<para>PCLK2 to configure </para>
+    </section><anchor xml:id="_group___r_c_c___system___clock___type_1ga7e721f5bf3fe925f78dae0356165332e"/>    <section>
+    <title>RCC_CLOCKTYPE_SYSCLK</title>
+<indexterm><primary>RCC_CLOCKTYPE_SYSCLK</primary><secondary>System Clock Type</secondary></indexterm>
+<indexterm><primary>System Clock Type</primary><secondary>RCC_CLOCKTYPE_SYSCLK</secondary></indexterm>
+<para><computeroutput>#define RCC_CLOCKTYPE_SYSCLK   0x00000001U</computeroutput></para>
+<para>SYSCLK to configure </para>
+</section>
+</section>
+</section>

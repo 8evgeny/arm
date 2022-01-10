@@ -1,0 +1,131 @@
+.TH "xMessageBufferSend" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+xMessageBufferSend \- xMessageBufferSend
+.SH SYNOPSIS
+.br
+.PP
+.SH "Detailed Description"
+.PP 
+\fBmessage_buffer\&.h\fP
+.PP
+.PP
+.nf
+
+size_t xMessageBufferSend( MessageBufferHandle_t xMessageBuffer,
+                           const void *pvTxData,
+                           size_t xDataLengthBytes,
+                           TickType_t xTicksToWait );
+.PP
+.nf
+
+
+   Sends a discrete message to the message buffer\&.  The message can be any
+   length that fits within the buffer's free space, and is copied into the
+   buffer\&.
+
+   ***NOTE***:  Uniquely among FreeRTOS objects, the stream buffer
+   implementation (so also the message buffer implementation, as message buffers
+   are built on top of stream buffers) assumes there is only one task or
+   interrupt that will write to the buffer (the writer), and only one task or
+   interrupt that will read from the buffer (the reader)\&.  It is safe for the
+   writer and reader to be different tasks or interrupts, but, unlike other
+   FreeRTOS objects, it is not safe to have multiple different writers or
+   multiple different readers\&.  If there are to be multiple different writers
+   then the application writer must place each call to a writing API function
+   (such as xMessageBufferSend()) inside a critical section and set the send
+   block time to 0\&.  Likewise, if there are to be multiple different readers
+   then the application writer must place each call to a reading API function
+   (such as xMessageBufferRead()) inside a critical section and set the receive
+   block time to 0\&.
+
+   Use xMessageBufferSend() to write to a message buffer from a task\&.  Use
+   xMessageBufferSendFromISR() to write to a message buffer from an interrupt
+   service routine (ISR)\&.
+
+\fBParameters\fP
+.RS 4
+\fIxMessageBuffer\fP The handle of the message buffer to which a message is
+   being sent\&.
+
+.br
+\fIpvTxData\fP A pointer to the message that is to be copied into the
+   message buffer\&.
+
+.br
+\fIxDataLengthBytes\fP The length of the message\&.  That is, the number of
+   bytes to copy from pvTxData into the message buffer\&.  When a message is
+   written to the message buffer an additional sizeof( size_t ) bytes are also
+   written to store the message's length\&.  sizeof( size_t ) is typically 4 bytes
+   on a 32-bit architecture, so on most 32-bit architecture setting
+   xDataLengthBytes to 20 will reduce the free space in the message buffer by 24
+   bytes (20 bytes of message data and 4 bytes to hold the message length)\&.
+
+.br
+\fIxTicksToWait\fP The maximum amount of time the calling task should remain
+   in the Blocked state to wait for enough space to become available in the
+   message buffer, should the message buffer have insufficient space when
+   xMessageBufferSend() is called\&.  The calling task will never block if
+   xTicksToWait is zero\&.  The block time is specified in tick periods, so the
+   absolute time it represents is dependent on the tick frequency\&.  The macro
+   pdMS_TO_TICKS() can be used to convert a time specified in milliseconds into
+   a time specified in ticks\&.  Setting xTicksToWait to portMAX_DELAY will cause
+   the task to wait indefinitely (without timing out), provided
+   INCLUDE_vTaskSuspend is set to 1 in \fBFreeRTOSConfig\&.h\fP\&.  Tasks do not use any
+   CPU time when they are in the Blocked state\&.
+
+   
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ The number of bytes written to the message buffer\&.  If the call to
+   xMessageBufferSend() times out before there was enough space to write the
+   message into the message buffer then zero is returned\&.  If the call did not
+   time out then xDataLengthBytes is returned\&.
+
+   Example use:
+.PP
+.nf
+
+void vAFunction( MessageBufferHandle_t xMessageBuffer )
+{
+size_t xBytesSent;
+uint8_t ucArrayToSend[] = { 0, 1, 2, 3 };
+char *pcStringToSend = 'String to send';
+const TickType_t x100ms = pdMS_TO_TICKS( 100 );
+
+    // Send an array to the message buffer, blocking for a maximum of 100ms to
+    // wait for enough space to be available in the message buffer\&.
+    xBytesSent = xMessageBufferSend( xMessageBuffer, ( void * ) ucArrayToSend, sizeof( ucArrayToSend ), x100ms );
+
+    if( xBytesSent != sizeof( ucArrayToSend ) )
+    {
+        // The call to xMessageBufferSend() times out before there was enough
+        // space in the buffer for the data to be written\&.
+    }
+
+    // Send the string to the message buffer\&.  Return immediately if there is
+    // not enough space in the buffer\&.
+    xBytesSent = xMessageBufferSend( xMessageBuffer, ( void * ) pcStringToSend, strlen( pcStringToSend ), 0 );
+
+    if( xBytesSent != strlen( pcStringToSend ) )
+    {
+        // The string could not be added to the message buffer because there was
+        // not enough free space in the buffer\&.
+    }
+}
+.fi
+.PP
+ 
+.RE
+.PP
+.fi
+.PP
+.fi
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

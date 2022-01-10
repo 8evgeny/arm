@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct___u_s_b_d___handle_type_def" xml:lang="en-US">
+<title>_USBD_HandleTypeDef Struct Reference</title>
+<indexterm><primary>_USBD_HandleTypeDef</primary></indexterm>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a1e6927fa1486224044e568f9c370519b"/>uint8_t <emphasis role="strong">id</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a3fcae06c2c0b8dfdb1db931cf1a4be56"/>uint32_t <emphasis role="strong">dev_config</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a3610cd01764a1cdf5e16e9216fe73a88"/>uint32_t <emphasis role="strong">dev_default_config</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1aa1079773093b2608bac7eaf63bbaf69f"/>uint32_t <emphasis role="strong">dev_config_status</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1af05af4e4045fb40caa4ac12d60c04cb2"/>USBD_SpeedTypeDef <emphasis role="strong">dev_speed</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a4274d52d9287db59aa87d1e31e0e7e47"/><link linkend="_struct_u_s_b_d___endpoint_type_def">USBD_EndpointTypeDef</link> <emphasis role="strong">ep_in</emphasis> [16]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a1cdfed3112c9a40bf8e432a1b94fe9ef"/><link linkend="_struct_u_s_b_d___endpoint_type_def">USBD_EndpointTypeDef</link> <emphasis role="strong">ep_out</emphasis> [16]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1abec88ae821fd6ef7dd09ab3c2ee36638"/>uint32_t <emphasis role="strong">ep0_state</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a970d5cabc332f92d40e77197792794e7"/>uint32_t <emphasis role="strong">ep0_data_len</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1ac16cbddeabf8b3a3c5c73747d179d441"/>uint8_t <emphasis role="strong">dev_state</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a396fb865dacd7d9e9b82b4200ed2e0e9"/>uint8_t <emphasis role="strong">dev_old_state</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1ac3d3db8dc0855c423e23107db66343ee"/>uint8_t <emphasis role="strong">dev_address</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1aff7da2b1b8d7ff8200987116e4c282e0"/>uint8_t <emphasis role="strong">dev_connection_status</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1afac9640f1ff1fd1f8663b5793bb18a32"/>uint8_t <emphasis role="strong">dev_test_mode</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1abebe8f6cfbce2c35857de1ffc5d3ef84"/>uint32_t <emphasis role="strong">dev_remote_wakeup</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a09d13105dd91665d0f55c9f71ffc3802"/><link linkend="_structusb__setup__req">USBD_SetupReqTypedef</link> <emphasis role="strong">request</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a7ea3b83f920f5193c33fe62b3db394bd"/><link linkend="_struct_u_s_b_d___descriptors_type_def">USBD_DescriptorsTypeDef</link> * <emphasis role="strong">pDesc</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1aed33ecfac9022b201e55b95a1b7e5341"/><link linkend="_struct___device__cb">USBD_ClassTypeDef</link> * <emphasis role="strong">pClass</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a8e5b83148c3cb343113947c7655dd7df"/>void * <emphasis role="strong">pClassData</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1a8d75dbe9027a94780bc2f31670400613"/>void * <emphasis role="strong">pUserData</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct___u_s_b_d___handle_type_def_1aa92f08987c51e4eb7b92e84944ca2af3"/>void * <emphasis role="strong">pData</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Middlewares/ST/STM32_USB_Device_Library/Core/Inc/<link linkend="_usbd__def_8h">usbd_def.h</link></section>

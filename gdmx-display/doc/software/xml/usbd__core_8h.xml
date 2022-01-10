@@ -1,0 +1,2063 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="usbd__core_8h" kind="file" language="C++">
+    <compoundname>usbd_core.h</compoundname>
+    <includes refid="usbd__conf_8h" local="yes">usbd_conf.h</includes>
+    <includes refid="usbd__def_8h" local="yes">usbd_def.h</includes>
+    <includes refid="usbd__ioreq_8h" local="yes">usbd_ioreq.h</includes>
+    <includes refid="usbd__ctlreq_8h" local="yes">usbd_ctlreq.h</includes>
+    <includedby refid="usbd__ioreq_8h" local="yes">Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h</includedby>
+    <includedby refid="usbd__core_8c" local="yes">Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c</includedby>
+    <includedby refid="usb__device_8c" local="yes">Src/usb_device.c</includedby>
+    <includedby refid="usbd__conf_8c" local="yes">Src/usbd_conf.c</includedby>
+    <includedby refid="usbd__desc_8c" local="yes">Src/usbd_desc.c</includedby>
+    <incdepgraph>
+      <node id="20">
+        <label>stm32f1xx_hal_flash.h</label>
+        <link refid="stm32f1xx__hal__flash_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>stm32f1xx_hal_tim_ex.h</label>
+        <link refid="stm32f1xx__hal__tim__ex_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>stm32f1xx_hal_pcd.h</label>
+        <link refid="stm32f1xx__hal__pcd_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="19">
+        <label>stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>stm32f1xx_ll_usb.h</label>
+        <link refid="stm32f1xx__ll__usb_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>stddef.h</label>
+      </node>
+      <node id="22">
+        <label>stm32f1xx_hal_pwr.h</label>
+        <link refid="stm32f1xx__hal__pwr_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stm32f1xx_hal_rcc.h</label>
+        <link refid="stm32f1xx__hal__rcc_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>stm32f1xx_hal_dma_ex.h</label>
+        <link refid="stm32f1xx__hal__dma__ex_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="21">
+        <label>stm32f1xx_hal_flash_ex.h</label>
+        <link refid="stm32f1xx__hal__flash__ex_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>stm32f1xx_hal_dma.h</label>
+        <link refid="stm32f1xx__hal__dma_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>stm32f1xx_hal_tim.h</label>
+        <link refid="stm32f1xx__hal__tim_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stm32f1xx_hal_rcc_ex.h</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="16">
+        <label>stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Src/usb_device.c</label>
+        <link refid="usb__device_8c"/>
+      </node>
+      <node id="8">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c</label>
+        <link refid="usbd__cdc_8c"/>
+      </node>
+      <node id="3">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c</label>
+        <link refid="usbd__ioreq_8c"/>
+      </node>
+      <node id="9">
+        <label>Src/usbd_conf.c</label>
+        <link refid="usbd__conf_8c"/>
+      </node>
+      <node id="5">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="7">
+        <label>Src/usbd_cdc_if.c</label>
+        <link refid="usbd__cdc__if_8c"/>
+      </node>
+      <node id="1">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Src/usbd_desc.c</label>
+        <link refid="usbd__desc_8c"/>
+      </node>
+      <node id="11">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c</label>
+        <link refid="usbd__core_8c"/>
+      </node>
+      <node id="2">
+        <label>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___u_s_b_d___c_o_r_e___exported___defines_1gae7364a789408417d945d5ca96679ccf7" prot="public" static="no">
+        <name>USBD_DEBUG_LEVEL</name>
+        <initializer>0U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="48" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___u_s_b_d___c_o_r_e___exported___variables_1ga9bc8feb8ff2afdf4144088e1a585fe77" prot="public" static="no">
+        <name>USBD_SOF</name>
+        <initializer><ref refid="group___u_s_b_d___c_o_r_e___private___functions_1gacf5d847096b6b8d9b1880dab9cd1726d" kindref="member">USBD_LL_SOF</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="77" column="9" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gad35f19488381872e83fa7b23d96589e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_Init</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_DescriptorsTypeDef *pdesc, uint8_t id)</argsstring>
+        <name>USBD_Init</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_u_s_b_d___descriptors_type_def" kindref="compound">USBD_DescriptorsTypeDef</ref> *</type>
+          <declname>pdesc</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>USBD_Init Initializes the device stack and load the class driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pdesc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor structure address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Low level core index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="85" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="89" bodyend="120" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="85" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga9d0ee86f2309eef71d3233080752dea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_DeInit</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_DeInit</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_DeInit Re-Initialize th device library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="86" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="128" bodyend="143" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="86" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga47396105b10467da14d07d21b60cc5f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_Start</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_Start</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_Start Start the USB Device Core. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device Handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="87" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="178" bodyend="184" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="87" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga589cc62baf6dcff5612ec1f51422d28e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_Stop</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_Stop</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_Stop Stop the USB Device Core. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device Handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="88" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="192" bodyend="201" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="88" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga392f73829f6127b9f42f03dd1401a1ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_RegisterClass</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_ClassTypeDef *pclass)</argsstring>
+        <name>USBD_RegisterClass</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type><ref refid="struct___device__cb" kindref="compound">USBD_ClassTypeDef</ref> *</type>
+          <declname>pclass</declname>
+        </param>
+        <briefdescription>
+<para>USBD_RegisterClass Link class driver to Device Core. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pDevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Device Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pclass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Class handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="89" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="152" bodyend="170" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="89" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga35f08f4623530af369ab0c326a814512" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_RunTestMode</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_RunTestMode</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_RunTestMode Launch test mode process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="91" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="209" bodyend="215" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="91" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga0b525aaf2f49fd59eadfb62ceaf4c65c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_SetClassConfig</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t cfgidx)</argsstring>
+        <name>USBD_SetClassConfig</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cfgidx</declname>
+        </param>
+        <briefdescription>
+<para>USBD_SetClassConfig Configure device and start the interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cfgidx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>configuration index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="92" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="225" bodyend="239" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="92" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga0a67d4cc64a52a0562f601e7d8467bd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_ClrClassConfig</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t cfgidx)</argsstring>
+        <name>USBD_ClrClassConfig</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cfgidx</declname>
+        </param>
+        <briefdescription>
+<para>USBD_ClrClassConfig Clear current configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cfgidx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>configuration index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>USBD_StatusTypeDef </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="93" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="248" bodyend="254" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="93" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gabdcdfefaffa1651c77a38d08eb3a82ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_SetupStage</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t *psetup)</argsstring>
+        <name>USBD_LL_SetupStage</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>psetup</declname>
+        </param>
+        <briefdescription>
+<para>USBD_SetupStage Handle the setup stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="95" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="263" bodyend="291" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="95" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga1ab0439714328647692719a2b1c9e689" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_DataOutStage</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t epnum, uint8_t *pdata)</argsstring>
+        <name>USBD_LL_DataOutStage</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>epnum</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pdata</declname>
+        </param>
+        <briefdescription>
+<para>USBD_DataOutStage Handle data OUT stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>epnum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>endpoint index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="96" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="300" bodyend="352" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="96" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga09597f0a303e0148d9f291477f7c4439" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_DataInStage</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t epnum, uint8_t *pdata)</argsstring>
+        <name>USBD_LL_DataInStage</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>epnum</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pdata</declname>
+        </param>
+        <briefdescription>
+<para>USBD_DataInStage Handle data in stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>epnum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>endpoint index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="97" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="361" bodyend="433" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="97" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga9cd02ae070a18ea3395346c56639412b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_Reset</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_LL_Reset</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_LL_Reset Handle Reset event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="99" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="442" bodyend="468" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="99" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gaaf2f9695af26bad9d0f66746fcca3243" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_SetSpeed</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, USBD_SpeedTypeDef speed)</argsstring>
+        <name>USBD_LL_SetSpeed</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>USBD_SpeedTypeDef</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+<para>USBD_LL_Reset Handle Reset event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="100" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="476" bodyend="482" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="100" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga907b2335773fcc0856e4ab6972c04020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_Suspend</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_LL_Suspend</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_Suspend Handle Suspend event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="101" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="491" bodyend="497" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="101" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gacfd270cf295f13943dd6a591b366246c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_Resume</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_LL_Resume</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_Resume Handle Resume event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="102" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="506" bodyend="514" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="102" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gacf5d847096b6b8d9b1880dab9cd1726d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_SOF</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_LL_SOF</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_SOF Handle SOF event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="104" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="523" bodyend="534" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="104" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga8f70c097aa7377ec6841d2581bccfa7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_IsoINIncomplete</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t epnum)</argsstring>
+        <name>USBD_LL_IsoINIncomplete</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>epnum</declname>
+        </param>
+        <briefdescription>
+<para>USBD_IsoINIncomplete Handle iso in incomplete event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="105" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="542" bodyend="550" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="105" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga1b6905ac966d81f6a2ce165e57dacd80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_IsoOUTIncomplete</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t epnum)</argsstring>
+        <name>USBD_LL_IsoOUTIncomplete</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>epnum</declname>
+        </param>
+        <briefdescription>
+<para>USBD_IsoOUTIncomplete Handle iso out incomplete event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="106" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="558" bodyend="566" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="106" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gaaf76b06413044241868c6828ec7fc51c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_DevConnected</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_LL_DevConnected</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_DevConnected Handle device connection event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="108" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="574" bodyend="580" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="108" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga07b5fe60c6f1cf9f485e0191a605b9a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_DevDisconnected</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_LL_DevDisconnected</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>USBD_DevDisconnected Handle device disconnection event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="109" column="20" bodyfile="Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" bodystart="588" bodyend="595" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="109" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga24b61e95db7e4c7ad30a835e8d905943" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_Init</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_LL_Init</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the low level portion of the device driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="112" column="21" bodyfile="Src/usbd_conf.c" bodystart="299" bodyend="342" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="112" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gaae9bfb6a27b11f232fc55a1d1b28be24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_DeInit</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_LL_DeInit</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>De-Initializes the low level portion of the device driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="113" column="21" bodyfile="Src/usbd_conf.c" bodystart="349" bodyend="359" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="113" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga43e53e424e9850d8261e1f9a1be53348" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_Start</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_LL_Start</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>Starts the low level portion of the device driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="114" column="21" bodyfile="Src/usbd_conf.c" bodystart="366" bodyend="376" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="114" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gac522b28139c1868a2e24d044fc8288fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_Stop</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev)</argsstring>
+        <name>USBD_LL_Stop</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <briefdescription>
+<para>Stops the low level portion of the device driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="115" column="21" bodyfile="Src/usbd_conf.c" bodystart="383" bodyend="393" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="115" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gad96254d74d95496ffb5f6f2248585cb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_OpenEP</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t ep_type, uint16_t ep_mps)</argsstring>
+        <name>USBD_LL_OpenEP</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_type</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>ep_mps</declname>
+        </param>
+        <briefdescription>
+<para>Opens an endpoint of the low level driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_mps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint max packet size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="116" column="21" bodyfile="Src/usbd_conf.c" bodystart="403" bodyend="413" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="116" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gae12e7de3c398d5663976bf11faa63572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_CloseEP</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr)</argsstring>
+        <name>USBD_LL_CloseEP</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>Closes an endpoint of the low level driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="121" column="21" bodyfile="Src/usbd_conf.c" bodystart="421" bodyend="431" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="121" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga10080ed9555110afba809de968314985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_FlushEP</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr)</argsstring>
+        <name>USBD_LL_FlushEP</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>Flushes an endpoint of the Low Level Driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="122" column="21" bodyfile="Src/usbd_conf.c" bodystart="439" bodyend="449" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="122" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gabc2b4a7c8307e04955b015fd32057ec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_StallEP</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr)</argsstring>
+        <name>USBD_LL_StallEP</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>Sets a Stall condition on an endpoint of the Low Level Driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="123" column="21" bodyfile="Src/usbd_conf.c" bodystart="457" bodyend="467" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="123" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gad4fa6f2eeefe95d07148c6c53d111eae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_ClearStallEP</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr)</argsstring>
+        <name>USBD_LL_ClearStallEP</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>Clears a Stall condition on an endpoint of the Low Level Driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="124" column="21" bodyfile="Src/usbd_conf.c" bodystart="475" bodyend="485" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="124" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga2a0f10f93cc4246272b63661051a64b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t USBD_LL_IsStallEP</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr)</argsstring>
+        <name>USBD_LL_IsStallEP</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>Returns Stall condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>Stall</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(1: Yes, 0: No) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="125" column="21" bodyfile="Src/usbd_conf.c" bodystart="493" bodyend="505" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="125" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gad3674ea3c4a9c4bbe7c73192727f922f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_SetUSBAddress</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t dev_addr)</argsstring>
+        <name>USBD_LL_SetUSBAddress</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dev_addr</declname>
+        </param>
+        <briefdescription>
+<para>Assigns a USB address to the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dev_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="126" column="21" bodyfile="Src/usbd_conf.c" bodystart="513" bodyend="523" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="126" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gab87eb9f3d4d9f8956d2c6b77230f265c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_Transmit</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t *pbuf, uint16_t size)</argsstring>
+        <name>USBD_LL_Transmit</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Transmits data over an endpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pbuf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data size <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="127" column="21" bodyfile="Src/usbd_conf.c" bodystart="533" bodyend="543" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="127" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga259b00707b333065b66be515dd019428" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>USBD_StatusTypeDef</type>
+        <definition>USBD_StatusTypeDef USBD_LL_PrepareReceive</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t *pbuf, uint16_t size)</argsstring>
+        <name>USBD_LL_PrepareReceive</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pbuf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Prepares an endpoint for reception. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pbuf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data to be received </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="132" column="21" bodyfile="Src/usbd_conf.c" bodystart="553" bodyend="563" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="132" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gaeb80f50482e04c046ba41f5ea58a1b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t USBD_LL_GetRxDataSize</definition>
+        <argsstring>(USBD_HandleTypeDef *pdev, uint8_t ep_addr)</argsstring>
+        <name>USBD_LL_GetRxDataSize</name>
+        <param>
+          <type><ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref> *</type>
+          <declname>pdev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ep_addr</declname>
+        </param>
+        <briefdescription>
+<para>Returns the last transfered packet size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ep_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>Recived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data Size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="137" column="10" bodyfile="Src/usbd_conf.c" bodystart="571" bodyend="574" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="137" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga383d9a41089cf426cdc61b5b24e2ca0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USBD_LL_Delay</definition>
+        <argsstring>(uint32_t Delay)</argsstring>
+        <name>USBD_LL_Delay</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>Delay</declname>
+        </param>
+        <briefdescription>
+<para>Delays routine for the USB device library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delay in ms </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" line="138" column="7" bodyfile="Src/usbd_conf.c" bodystart="581" bodyend="584" declfile="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" declline="138" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="usbd__core_8c" kindref="compound">usbd_core.c</ref> file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>MCD Application Team</para>
+</simplesect>
+<simplesect kind="attention"><para></para>
+</simplesect>
+<heading level="2"><center><copy/> Copyright (c) 2015 STMicroelectronics. All rights reserved.</center></heading>
+</para>
+<para>This software component is licensed by ST under Ultimate Liberty license SLA0044, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: www.st.com/SLA0044 </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__USBD_CORE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__USBD_CORE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="usbd__conf_8h" kindref="compound">usbd_conf.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="usbd__def_8h" kindref="compound">usbd_def.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="usbd__ioreq_8h" kindref="compound">usbd_ioreq.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;usbd_ctlreq.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>USBD_DEBUG_LEVEL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USBD_DEBUG_LEVEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0U</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>USBD_DEBUG_LEVEL<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USBD_SOF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>USBD_LL_SOF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gad35f19488381872e83fa7b23d96589e7" kindref="member">USBD_Init</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/><ref refid="struct_u_s_b_d___descriptors_type_def" kindref="compound">USBD_DescriptorsTypeDef</ref><sp/>*pdesc,<sp/>uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga9d0ee86f2309eef71d3233080752dea2" kindref="member">USBD_DeInit</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga47396105b10467da14d07d21b60cc5f9" kindref="member">USBD_Start</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga589cc62baf6dcff5612ec1f51422d28e" kindref="member">USBD_Stop</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga392f73829f6127b9f42f03dd1401a1ef" kindref="member">USBD_RegisterClass</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/><ref refid="struct___device__cb" kindref="compound">USBD_ClassTypeDef</ref><sp/>*pclass);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga35f08f4623530af369ab0c326a814512" kindref="member">USBD_RunTestMode</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga0b525aaf2f49fd59eadfb62ceaf4c65c" kindref="member">USBD_SetClassConfig</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev,<sp/>uint8_t<sp/>cfgidx);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga0a67d4cc64a52a0562f601e7d8467bd1" kindref="member">USBD_ClrClassConfig</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev,<sp/>uint8_t<sp/>cfgidx);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gabdcdfefaffa1651c77a38d08eb3a82ce" kindref="member">USBD_LL_SetupStage</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/>*psetup);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga1ab0439714328647692719a2b1c9e689" kindref="member">USBD_LL_DataOutStage</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/>epnum,<sp/>uint8_t<sp/>*pdata);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga09597f0a303e0148d9f291477f7c4439" kindref="member">USBD_LL_DataInStage</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/>epnum,<sp/>uint8_t<sp/>*pdata);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga9cd02ae070a18ea3395346c56639412b" kindref="member">USBD_LL_Reset</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gaaf2f9695af26bad9d0f66746fcca3243" kindref="member">USBD_LL_SetSpeed</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev,<sp/>USBD_SpeedTypeDef<sp/>speed);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga907b2335773fcc0856e4ab6972c04020" kindref="member">USBD_LL_Suspend</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gacfd270cf295f13943dd6a591b366246c" kindref="member">USBD_LL_Resume</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gacf5d847096b6b8d9b1880dab9cd1726d" kindref="member">USBD_LL_SOF</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga8f70c097aa7377ec6841d2581bccfa7e" kindref="member">USBD_LL_IsoINIncomplete</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev,<sp/>uint8_t<sp/>epnum);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga1b6905ac966d81f6a2ce165e57dacd80" kindref="member">USBD_LL_IsoOUTIncomplete</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev,<sp/>uint8_t<sp/>epnum);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gaaf76b06413044241868c6828ec7fc51c" kindref="member">USBD_LL_DevConnected</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">USBD_StatusTypeDef<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga07b5fe60c6f1cf9f485e0191a605b9a1" kindref="member">USBD_LL_DevDisconnected</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/><sp/>*pdev);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USBD<sp/>Low<sp/>Level<sp/>Driver<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga24b61e95db7e4c7ad30a835e8d905943" kindref="member">USBD_LL_Init</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gaae9bfb6a27b11f232fc55a1d1b28be24" kindref="member">USBD_LL_DeInit</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga43e53e424e9850d8261e1f9a1be53348" kindref="member">USBD_LL_Start</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gac522b28139c1868a2e24d044fc8288fd" kindref="member">USBD_LL_Stop</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gad96254d74d95496ffb5f6f2248585cb0" kindref="member">USBD_LL_OpenEP</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>ep_addr,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>ep_type,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>ep_mps);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gae12e7de3c398d5663976bf11faa63572" kindref="member">USBD_LL_CloseEP</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/>ep_addr);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga10080ed9555110afba809de968314985" kindref="member">USBD_LL_FlushEP</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/>ep_addr);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gabc2b4a7c8307e04955b015fd32057ec7" kindref="member">USBD_LL_StallEP</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/>ep_addr);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gad4fa6f2eeefe95d07148c6c53d111eae" kindref="member">USBD_LL_ClearStallEP</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/>ep_addr);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga2a0f10f93cc4246272b63661051a64b7" kindref="member">USBD_LL_IsStallEP</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/>ep_addr);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gad3674ea3c4a9c4bbe7c73192727f922f" kindref="member">USBD_LL_SetUSBAddress</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/>dev_addr);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gab87eb9f3d4d9f8956d2c6b77230f265c" kindref="member">USBD_LL_Transmit</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>ep_addr,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>*pbuf,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><sp/>size);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">USBD_StatusTypeDef<sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga259b00707b333065b66be515dd019428" kindref="member">USBD_LL_PrepareReceive</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>ep_addr,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>*pbuf,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><sp/>size);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">uint32_t<sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1gaeb80f50482e04c046ba41f5ea58a1b2b" kindref="member">USBD_LL_GetRxDataSize</ref>(<ref refid="struct___u_s_b_d___handle_type_def" kindref="compound">USBD_HandleTypeDef</ref><sp/>*pdev,<sp/>uint8_t<sp/><sp/>ep_addr);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="group___u_s_b_d___c_o_r_e___exported___functions_prototype_1ga383d9a41089cf426cdc61b5b24e2ca0a" kindref="member">USBD_LL_Delay</ref>(uint32_t<sp/>Delay);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__USBD_CORE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">/************************<sp/>(C)<sp/>COPYRIGHT<sp/>STMicroelectronics<sp/>*****END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"/>
+  </compounddef>
+</doxygen>

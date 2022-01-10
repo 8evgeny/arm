@@ -1,0 +1,224 @@
+.TH "Src/hd44780.c" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Src/hd44780.c \- C library app for 4-, 8-bit parallel LCD interface\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'HD44780\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGET_GPIO_BIT\fP(dat,  weight)   (\fBGPIO_PinState\fP)((dat>>weight)&1u)"
+.br
+.ti -1c
+.RI "#define \fBHD44780_STROBE_TIME\fP   5"
+.br
+.RI "LCD time of strobe signal\&. Must be > 230 ns\&. "
+.ti -1c
+.RI "#define \fBHD44780_DATA_LATCH\fP   20"
+.br
+.RI "The settling time of signals on the data bus\&. Must be > 230 ns\&. "
+.ti -1c
+.RI "#define \fBTCMD_EXEC\fP   200"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBHD44780_init\fP (void)"
+.br
+.RI "Initial LCD initialization based on HD44780 controller\&. initial GPIO for control LCD\&. "
+.ti -1c
+.RI "void \fBHD44780_writeCommand\fP (uint8_t data)"
+.br
+.ti -1c
+.RI "void \fBHD44780_writeData\fP (uint8_t data)"
+.br
+.ti -1c
+.RI "void \fBHD44780_setDataLow\fP (uint8_t data)"
+.br
+.RI "Цикл чтения из ЖКИ\&. "
+.ti -1c
+.RI "void \fBHD44780_setDataHigh\fP (uint8_t data)"
+.br
+.ti -1c
+.RI "void \fBHD44780_setDataBus\fP (uint8_t data)"
+.br
+.ti -1c
+.RI "void \fBHD44780_setRS\fP (uint8_t state)"
+.br
+.RI "The RS line of the LCD is set to LOW / HIGH\&. "
+.ti -1c
+.RI "void \fBHD44780_setRW\fP (uint8_t state)"
+.br
+.RI "The RW line of the LCD is set to LOW / HIGH\&. "
+.ti -1c
+.RI "void \fBHD44780_setEN\fP (uint8_t state)"
+.br
+.RI "The EN line of the LCD is set to LOW / HIGH\&. "
+.ti -1c
+.RI "void \fBusDelay\fP (uint16_t us)"
+.br
+.ti -1c
+.RI "void \fBHD44780_writeByte\fP (uint8_t data, uint8_t state)"
+.br
+.RI "Write cycle for LCD\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+C library app for 4-, 8-bit parallel LCD interface\&. 
+
+Driver of HD44780 display\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Donskih Dmitry, Arthur Markaryan 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+02\&.03\&.2019, 25\&.03\&.2021 
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2018 - 2021 Donskih Dmitry\&. All rights reserved\&."
+.PP
+This software component is licensed by Donskih Dmitry under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Function Documentation"
+.PP 
+.SS "void HD44780_init (void)"
+
+.PP
+Initial LCD initialization based on HD44780 controller\&. initial GPIO for control LCD\&. The controller manufacturer recommends the following initialization sequence:
+.IP "1." 4
+Maintain a pause of at least 15 ms between the establishment of the operating supply voltage (> 4\&.5 V) and the performance of any operations with the controller\&.
+.IP "2." 4
+The first operation is to execute the command that selects the bus width (it must be the 0x30 command regardless of which interface you are going to use in the future), and do not check the value of the BF flag before performing this operation\&.
+.IP "3." 4
+Hold a pause of at least 4\&.1 ms\&.
+.IP "4." 4
+Repeat the command to select the bus width, also without checking the state of the BF flag before\&.
+.IP "5." 4
+Hold a pause of at least 100 µs\&.
+.IP "6." 4
+Repeat the command to select the bus width, also without checking the state of the BF flag before\&. These operations are initializing, and are designed to bring the controller to the initial operating mode (i\&.e\&. to switch to the operating mode with an 8-bit data bus) following this normal order (without pauses, but checking the BF flag), the operating modes are initialized , including the command for setting the bus width\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInone\&.\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+none\&. 
+.RE
+.PP
+
+.PP
+
+.SS "void HD44780_setDataLow (uint8_t data)"
+
+.PP
+Цикл чтения из ЖКИ\&. Перед циклом должны быть произведены установки линий: HD44780_wire_RS(команда/данные) HD44780_wire_RW(запись/чение) = 1 
+.PP
+\fBNote\fP
+.RS 4
+ПРЕДУПРЕЖДЕНИЕ!!! Во избежание порчи данных в неиспользуемых линиях порта данных ЖКИ в 4-х битном режиме, желательно запрещать прерывания, код которых взаимодействует со свободными линиями порта, либо в прерывании запоминать состояние регистров порта, перед внесением изменений, и восстанавливать данные по завершению прерывания\&.
+.RE
+.PP
+Waiting cycle for LCD readiness\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns 1 if the LCD is ready and there is no timeout, otherwise 0\&. 
+.RE
+.PP
+
+.SS "void HD44780_setEN (uint8_t state)"
+
+.PP
+The EN line of the LCD is set to LOW / HIGH\&. Function of setting the level on the EN line for LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstate\fP (0 - start of strobe, 1 - end of strobe)\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void HD44780_setRS (uint8_t state)"
+
+.PP
+The RS line of the LCD is set to LOW / HIGH\&. Function of setting the level on the RS line for LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstate\fP (0 - requred CMD, 1 - requred DATA) 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void HD44780_setRW (uint8_t state)"
+
+.PP
+The RW line of the LCD is set to LOW / HIGH\&. Function of setting the level on the RW line for LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstate\fP (0 - write mode, 1 - read mode)\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "void HD44780_writeByte (uint8_t data, uint8_t state)"
+
+.PP
+Write cycle for LCD\&. Write byte to the LCD data bus (command or data)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP - byte to be written\&. 
+.br
+\fIstate\fP - 0 if command byte, 1 - if data\&. 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_union_c_o_n_t_r_o_l___type" xml:lang="en-US">
+<title>CONTROL_Type Union Reference</title>
+<indexterm><primary>CONTROL_Type</primary></indexterm>
+<para>
+
+<para>Union type to access the Control Registers (CONTROL). </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;core_armv8mbl.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5d690aa9e65fccaa320e1b8613f502c9">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad0fb62e7a08e70fc5e0a76b67809f84b">w</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga2518558c090f60161ba4e718a54ee468">FPCA</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga40e45b21a6a619be3b6d5ce9c5bc5ffb">SFPA</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:28</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga2fb80a694ee9073dbde02919f1c85894">b</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gadcaacbb12a2397ba3145a73d7d80ec3f">b</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga839870b8be70ac6687709b46cc1a4281">b</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga023a5445c54a860a9d009f1420683c23">b</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gaf41f9e062b40d912db146642e7cac6b7">b</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga8db8a44779eb6d194bcfead89efa3a8a">b</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga2518558c090f60161ba4e718a54ee468">FPCA</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga40e45b21a6a619be3b6d5ce9c5bc5ffb">SFPA</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:28</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga1d7be17ff122f588cbea7384b3353730">b</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga2518558c090f60161ba4e718a54ee468">FPCA</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:29</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga9681008056adeaf8612f6d6ac5ff17ac">b</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga2518558c090f60161ba4e718a54ee468">FPCA</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:29</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1gafef5df0adfd524bb9ca158749d71aa28">b</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga38e16d844d0b34cd2e6d3d9901940f00">b</link></para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:30</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga2e27164d546d060fc76c29ddf3a69296">b</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Union type to access the Control Registers (CONTROL). </para>
+<para>
+The documentation for this union was generated from the following files:</para>
+Drivers/CMSIS/Include/<link linkend="_core__armv8mbl_8h">core_armv8mbl.h</link>Drivers/CMSIS/Include/<link linkend="_core__armv8mml_8h">core_armv8mml.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm0_8h">core_cm0.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm0plus_8h">core_cm0plus.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm1_8h">core_cm1.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm23_8h">core_cm23.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm3_8h">core_cm3.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm33_8h">core_cm33.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm4_8h">core_cm4.h</link>Drivers/CMSIS/Include/<link linkend="_core__cm7_8h">core_cm7.h</link>Drivers/CMSIS/Include/<link linkend="_core__sc000_8h">core_sc000.h</link>Drivers/CMSIS/Include/<link linkend="_core__sc300_8h">core_sc300.h</link></section>
+</section>

@@ -1,0 +1,35 @@
+.TH "RCC_HSE_Config" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_HSE_Config \- HSE Config
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRCC_HSE_OFF\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSE_ON\fP   \fBRCC_CR_HSEON\fP"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSE_BYPASS\fP   ((uint32_t)(\fBRCC_CR_HSEBYP\fP | \fBRCC_CR_HSEON\fP))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define RCC_HSE_BYPASS   ((uint32_t)(\fBRCC_CR_HSEBYP\fP | \fBRCC_CR_HSEON\fP))"
+External clock source for HSE clock 
+.SS "#define RCC_HSE_OFF   0x00000000U"
+HSE clock deactivation 
+.SS "#define RCC_HSE_ON   \fBRCC_CR_HSEON\fP"
+HSE clock activation 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,2296 @@
+.TH "CMSIS_core_DebugFunctions" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CMSIS_core_DebugFunctions \- ITM Functions
+.PP
+ \- Functions that access the ITM debug interface\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:16"
+.br
+.ti -1c
+.RI "uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:7"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:16"
+.br
+.ti -1c
+.RI "   uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:7"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:7"
+.br
+.ti -1c
+.RI "uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBIT\fP:2"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:7"
+.br
+.ti -1c
+.RI "   uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBIT\fP:2"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBFPCA\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBSFPA\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:28"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBFPCA\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBSFPA\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:28"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "__IOM uint8_t \fBIPR\fP [496U]"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED6\fP [580U]"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBSTIR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBVTOR\fP"
+.br
+.ti -1c
+.RI "__IOM uint8_t \fBSHPR\fP [12U]"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBCFSR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBHFSR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBDFSR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBMMFAR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBBFAR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBAFSR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBID_PFR\fP [2U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBID_DFR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBID_ADR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBID_MMFR\fP [4U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBID_ISAR\fP [6U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBCLIDR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBCTR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBCCSIDR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBCSSELR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBCPACR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBNSACR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED3\fP [92U]"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBSTIR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED4\fP [15U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBMVFR0\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBMVFR1\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBMVFR2\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED5\fP [1U]"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBICIALLU\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED6\fP [1U]"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBICIMVAU\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBDCIMVAC\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBDCISW\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBDCCMVAU\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBDCCMVAC\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBDCCSW\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBDCCIMVAC\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBDCCISW\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED7\fP [6U]"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBITCMCR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBDTCMCR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBAHBPCR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBCACR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBAHBSCR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED8\fP [1U]"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBABFSR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED0\fP [1U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBICTR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBACTLR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBCPPWR\fP"
+.br
+.ti -1c
+.RI "__OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "__OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   __OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "   __OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "   __OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "} \fBPORT\fP [32U]"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED0\fP [864U]"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBTER\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED1\fP [15U]"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBTPR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED2\fP [15U]"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBTCR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED3\fP [29U]"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBIWR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBIRR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBIMCR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED4\fP [43U]"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBLAR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBLSR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED5\fP [1U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBDEVARCH\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED6\fP [4U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBPID4\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBPID5\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBPID6\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBPID7\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBPID0\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBPID1\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBPID2\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBPID3\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBCID0\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBCID1\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBCID2\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBCID3\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBCYCCNT\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBCPICNT\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBEXCCNT\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBSLEEPCNT\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBLSUCNT\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBFOLDCNT\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED32\fP [934U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBLSR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED33\fP [1U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBDEVARCH\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED0\fP [1U]"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBFPCCR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBFPCAR\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBFPDSCR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBMVFR0\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBMVFR1\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:27"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:27"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBICI_IT_1\fP:6"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:8"
+.br
+.ti -1c
+.RI "uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBICI_IT_2\fP:2"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBICI_IT_1\fP:6"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:8"
+.br
+.ti -1c
+.RI "   uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBICI_IT_2\fP:2"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:30"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:30"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "__IOM uint8_t \fBIP\fP [240U]"
+.br
+.ti -1c
+.RI "__IOM uint8_t \fBSHP\fP [12U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBPFR\fP [2U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBDFR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBADR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBMMFR\fP [4U]"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBISAR\fP [5U]"
+.br
+.ti -1c
+.RI "uint32_t \fBRESERVED1\fP [1U]"
+.br
+.ti -1c
+.RI "__OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "__OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   __OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "   __OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "   __OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "} \fBPORT\fP [32U]"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBMASK0\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBMASK1\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBMASK2\fP"
+.br
+.ti -1c
+.RI "__IOM uint32_t \fBMASK3\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBFSCR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBFIFO0\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBITATBCTR2\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBFIFO1\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:16"
+.br
+.ti -1c
+.RI "uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:7"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:16"
+.br
+.ti -1c
+.RI "   uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:7"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:7"
+.br
+.ti -1c
+.RI "uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBIT\fP:2"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:7"
+.br
+.ti -1c
+.RI "   uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBIT\fP:2"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBFPCA\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBSFPA\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:28"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBFPCA\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBSFPA\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:28"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "__OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "__OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   __OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "   __OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "   __OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "} \fBPORT\fP [32U]"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:16"
+.br
+.ti -1c
+.RI "uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:7"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:16"
+.br
+.ti -1c
+.RI "   uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:7"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBICI_IT_1\fP:6"
+.br
+.ti -1c
+.RI "uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBICI_IT_2\fP:2"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBICI_IT_1\fP:6"
+.br
+.ti -1c
+.RI "   uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBICI_IT_2\fP:2"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBFPCA\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:29"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBFPCA\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:29"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "__OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "__OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   __OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "   __OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "   __OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "} \fBPORT\fP [32U]"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:16"
+.br
+.ti -1c
+.RI "uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:7"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:16"
+.br
+.ti -1c
+.RI "   uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:7"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBICI_IT_1\fP:6"
+.br
+.ti -1c
+.RI "uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:4"
+.br
+.ti -1c
+.RI "uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBICI_IT_2\fP:2"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBICI_IT_1\fP:6"
+.br
+.ti -1c
+.RI "   uint32_t \fBGE\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:4"
+.br
+.ti -1c
+.RI "   uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBICI_IT_2\fP:2"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBFPCA\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:29"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBFPCA\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:29"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBID_AFR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBID_MFR\fP [4U]"
+.br
+.ti -1c
+.RI "__OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "__OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   __OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "   __OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "   __OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "} \fBPORT\fP [32U]"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBLAR\fP"
+.br
+.ti -1c
+.RI "__IM uint32_t \fBMVFR2\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:27"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:27"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved0\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBICI_IT_1\fP:6"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:8"
+.br
+.ti -1c
+.RI "uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBICI_IT_2\fP:2"
+.br
+.ti -1c
+.RI "uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved0\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBICI_IT_1\fP:6"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:8"
+.br
+.ti -1c
+.RI "   uint32_t \fBT\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBICI_IT_2\fP:2"
+.br
+.ti -1c
+.RI "   uint32_t \fBQ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBC\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBZ\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBN\fP:1"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fB_reserved1\fP:30"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBnPRIV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBSPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fB_reserved1\fP:30"
+.br
+.ti -1c
+.RI "} \fBb\fP"
+.br
+.ti -1c
+.RI "__OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "__OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "__OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   __OM uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "   __OM uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "   __OM uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "} \fBPORT\fP [32U]"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "volatile int32_t \fBITM_RxBuffer\fP"
+.br
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBITM_SendChar\fP (uint32_t ch)"
+.br
+.RI "ITM Send Character\&. "
+.ti -1c
+.RI "__STATIC_INLINE int32_t \fBITM_ReceiveChar\fP (void)"
+.br
+.RI "ITM Receive Character\&. "
+.ti -1c
+.RI "__STATIC_INLINE int32_t \fBITM_CheckChar\fP (void)"
+.br
+.RI "ITM Check Character\&. "
+.ti -1c
+.RI "#define \fBITM_RXBUFFER_EMPTY\fP   ((int32_t)0x5AA55AA5U)"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "volatile int32_t \fBITM_RxBuffer\fP"
+.br
+.ti -1c
+.RI "#define \fBITM_RXBUFFER_EMPTY\fP   ((int32_t)0x5AA55AA5U)"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "volatile int32_t \fBITM_RxBuffer\fP"
+.br
+.ti -1c
+.RI "#define \fBITM_RXBUFFER_EMPTY\fP   ((int32_t)0x5AA55AA5U)"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "volatile int32_t \fBITM_RxBuffer\fP"
+.br
+.ti -1c
+.RI "#define \fBITM_RXBUFFER_EMPTY\fP   ((int32_t)0x5AA55AA5U)"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "volatile int32_t \fBITM_RxBuffer\fP"
+.br
+.ti -1c
+.RI "#define \fBITM_RXBUFFER_EMPTY\fP   ((int32_t)0x5AA55AA5U)"
+.br
+.in -1c
+.in +1c
+.ti -1c
+.RI "volatile int32_t \fBITM_RxBuffer\fP"
+.br
+.ti -1c
+.RI "#define \fBITM_RXBUFFER_EMPTY\fP   ((int32_t)0x5AA55AA5U)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Functions that access the ITM debug interface\&. 
+
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ITM_RXBUFFER_EMPTY   ((int32_t)0x5AA55AA5U)"
+Value identifying \fBITM_RxBuffer\fP is ready for next character\&. 
+.SS "#define ITM_RXBUFFER_EMPTY   ((int32_t)0x5AA55AA5U)"
+Value identifying \fBITM_RxBuffer\fP is ready for next character\&. 
+.SS "#define ITM_RXBUFFER_EMPTY   ((int32_t)0x5AA55AA5U)"
+Value identifying \fBITM_RxBuffer\fP is ready for next character\&. 
+.SS "#define ITM_RXBUFFER_EMPTY   ((int32_t)0x5AA55AA5U)"
+Value identifying \fBITM_RxBuffer\fP is ready for next character\&. 
+.SS "#define ITM_RXBUFFER_EMPTY   ((int32_t)0x5AA55AA5U)"
+Value identifying \fBITM_RxBuffer\fP is ready for next character\&. 
+.SS "#define ITM_RXBUFFER_EMPTY   ((int32_t)0x5AA55AA5U)"
+Value identifying \fBITM_RxBuffer\fP is ready for next character\&. 
+.SH "Function Documentation"
+.PP 
+.SS "__STATIC_INLINE int32_t ITM_CheckChar (void)"
+
+.PP
+ITM Check Character\&. Checks whether a character is pending for reading in the variable \fBITM_RxBuffer\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+0 No character available\&. 
+.PP
+1 Character available\&. 
+.RE
+.PP
+
+.SS "__STATIC_INLINE int32_t ITM_ReceiveChar (void)"
+
+.PP
+ITM Receive Character\&. Inputs a character via the external variable \fBITM_RxBuffer\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Received character\&. 
+.PP
+-1 No character pending\&. 
+.RE
+.PP
+
+.SS "__STATIC_INLINE uint32_t ITM_SendChar (uint32_t ch)"
+
+.PP
+ITM Send Character\&. Transmits a character via the ITM channel 0, and 
+.PD 0
+
+.IP "\(bu" 2
+Just returns when no debugger is connected that has booked the output\&. 
+.IP "\(bu" 2
+Is blocking when a debugger is connected, but the previous character sent has not been transmitted\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIch\fP Character to transmit\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Character to transmit\&. 
+.RE
+.PP
+
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "uint32_t _reserved0"
+bit: 0\&.\&.15 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9\&.\&.15 Reserved 
+.SS "uint32_t _reserved0"
+bit: 0\&.\&.26 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9 Reserved 
+.SS "uint32_t _reserved0"
+bit: 0\&.\&.15 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9\&.\&.15 Reserved 
+.SS "uint32_t _reserved0"
+bit: 0\&.\&.15 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9 Reserved 
+.SS "uint32_t _reserved0"
+bit: 3\&.\&.31 Reserved 
+.SS "uint32_t _reserved0"
+bit: 0\&.\&.15 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9 Reserved 
+.SS "uint32_t _reserved0"
+bit: 3\&.\&.31 Reserved 
+.SS "uint32_t _reserved0"
+bit: 0\&.\&.26 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t _reserved0"
+bit: 9 Reserved 
+.SS "uint32_t _reserved1"
+bit: 20\&.\&.26 Reserved 
+.SS "uint32_t _reserved1"
+bit: 20\&.\&.26 Reserved 
+.SS "uint32_t _reserved1"
+bit: 20\&.\&.23 Reserved 
+.SS "uint32_t _reserved1"
+bit: 4\&.\&.31 Reserved 
+.SS "uint32_t _reserved1"
+bit: 16\&.\&.23 Reserved 
+.SS "uint32_t _reserved1"
+bit: 2\&.\&.31 Reserved 
+.SS "uint32_t _reserved1"
+bit: 20\&.\&.26 Reserved 
+.SS "uint32_t _reserved1"
+bit: 20\&.\&.23 Reserved 
+.SS "uint32_t _reserved1"
+bit: 4\&.\&.31 Reserved 
+.SS "uint32_t _reserved1"
+bit: 20\&.\&.26 Reserved 
+.SS "uint32_t _reserved1"
+bit: 20\&.\&.23 Reserved 
+.SS "uint32_t _reserved1"
+bit: 20\&.\&.26 Reserved 
+.SS "uint32_t _reserved1"
+bit: 20\&.\&.23 Reserved 
+.SS "uint32_t _reserved1"
+bit: 16\&.\&.23 Reserved 
+.SS "uint32_t _reserved1"
+bit: 2\&.\&.31 Reserved 
+.SS "__IOM uint32_t ABFSR"
+Offset: 0x2A8 (R/W) Auxiliary Bus Fault Status Register 
+.SS "__IOM uint32_t ACTLR"
+Offset: 0x008 (R/W) Auxiliary Control Register 
+.SS "__IM uint32_t ADR"
+Offset: 0x04C (R/ ) Auxiliary Feature Register 
+.SS "__IOM uint32_t AFSR"
+Offset: 0x03C (R/W) Auxiliary Fault Status Register 
+.SS "__IOM uint32_t AHBPCR"
+Offset: 0x298 (R/W) AHBP Control Register 
+.SS "__IOM uint32_t AHBSCR"
+Offset: 0x2A0 (R/W) AHB Slave Control Register 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }  b"
+Structure used for bit access 
+.SS "__IOM uint32_t BFAR"
+Offset: 0x038 (R/W) BusFault Address Register 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t C"
+bit: 29 Carry condition code flag 
+.SS "__IOM uint32_t CACR"
+Offset: 0x29C (R/W) L1 Cache Control Register 
+.SS "__IM uint32_t CCSIDR"
+Offset: 0x080 (R/ ) Cache Size ID Register 
+.SS "__IOM uint32_t CFSR"
+Offset: 0x028 (R/W) Configurable Fault Status Register 
+.SS "__IM uint32_t CID0"
+Offset: 0xFF0 (R/ ) ITM Component Identification Register #0 
+.SS "__IM uint32_t CID1"
+Offset: 0xFF4 (R/ ) ITM Component Identification Register #1 
+.SS "__IM uint32_t CID2"
+Offset: 0xFF8 (R/ ) ITM Component Identification Register #2 
+.SS "__IM uint32_t CID3"
+Offset: 0xFFC (R/ ) ITM Component Identification Register #3 
+.SS "__IM uint32_t CLIDR"
+Offset: 0x078 (R/ ) Cache Level ID register 
+.SS "__IOM uint32_t CPACR"
+Offset: 0x088 (R/W) Coprocessor Access Control Register 
+.SS "__IOM uint32_t CPICNT"
+Offset: 0x008 (R/W) CPI Count Register 
+.SS "__IOM uint32_t CPPWR"
+Offset: 0x00C (R/W) Coprocessor Power Control Register 
+.SS "__IOM uint32_t CSSELR"
+Offset: 0x084 (R/W) Cache Size Selection Register 
+.SS "__IM uint32_t CTR"
+Offset: 0x07C (R/ ) Cache Type register 
+.SS "__IOM uint32_t CYCCNT"
+Offset: 0x004 (R/W) Cycle Count Register 
+.SS "__OM uint32_t DCCIMVAC"
+Offset: 0x270 ( /W) D-Cache Clean and Invalidate by MVA to PoC 
+.SS "__OM uint32_t DCCISW"
+Offset: 0x274 ( /W) D-Cache Clean and Invalidate by Set-way 
+.SS "__OM uint32_t DCCMVAC"
+Offset: 0x268 ( /W) D-Cache Clean by MVA to PoC 
+.SS "__OM uint32_t DCCMVAU"
+Offset: 0x264 ( /W) D-Cache Clean by MVA to PoU 
+.SS "__OM uint32_t DCCSW"
+Offset: 0x26C ( /W) D-Cache Clean by Set-way 
+.SS "__OM uint32_t DCIMVAC"
+Offset: 0x25C ( /W) D-Cache Invalidate by MVA to PoC 
+.SS "__OM uint32_t DCISW"
+Offset: 0x260 ( /W) D-Cache Invalidate by Set-way 
+.SS "__IM uint32_t DEVARCH"
+Offset: 0xFBC (R/ ) ITM Device Architecture Register 
+.SS "__IM uint32_t DEVARCH"
+Offset: 0xFBC (R/ ) Device Architecture Register 
+.SS "__IM uint32_t DFR"
+Offset: 0x048 (R/ ) Debug Feature Register 
+.SS "__IOM uint32_t DFSR"
+Offset: 0x030 (R/W) Debug Fault Status Register 
+.SS "__IOM uint32_t DTCMCR"
+Offset: 0x294 (R/W) Data Tightly-Coupled Memory Control Registers 
+.SS "__IOM uint32_t EXCCNT"
+Offset: 0x00C (R/W) Exception Overhead Count Register 
+.SS "__IM uint32_t FIFO0"
+Offset: 0xEEC (R/ ) Integration ETM Data 
+.SS "__IM uint32_t FIFO1"
+Offset: 0xEFC (R/ ) Integration ITM Data 
+.SS "__IOM uint32_t FOLDCNT"
+Offset: 0x018 (R/W) Folded-instruction Count Register 
+.SS "uint32_t FPCA"
+bit: 2 Floating-point context active
+.PP
+bit: 2 FP extension active flag 
+.SS "uint32_t FPCA"
+bit: 2 Floating-point context active 
+.SS "uint32_t FPCA"
+bit: 2 Floating-point context active 
+.SS "uint32_t FPCA"
+bit: 2 FP extension active flag 
+.SS "uint32_t FPCA"
+bit: 2 FP extension active flag 
+.SS "__IOM uint32_t FPCAR"
+Offset: 0x008 (R/W) Floating-Point Context Address Register 
+.SS "__IOM uint32_t FPCCR"
+Offset: 0x004 (R/W) Floating-Point Context Control Register 
+.SS "__IOM uint32_t FPDSCR"
+Offset: 0x00C (R/W) Floating-Point Default Status Control Register 
+.SS "__IM uint32_t FSCR"
+Offset: 0x308 (R/ ) Formatter Synchronization Counter Register 
+.SS "uint32_t GE"
+bit: 16\&.\&.19 Greater than or Equal flags 
+.SS "uint32_t GE"
+bit: 16\&.\&.19 Greater than or Equal flags 
+.SS "uint32_t GE"
+bit: 16\&.\&.19 Greater than or Equal flags 
+.SS "uint32_t GE"
+bit: 16\&.\&.19 Greater than or Equal flags 
+.SS "uint32_t GE"
+bit: 16\&.\&.19 Greater than or Equal flags 
+.SS "uint32_t GE"
+bit: 16\&.\&.19 Greater than or Equal flags 
+.SS "uint32_t GE"
+bit: 16\&.\&.19 Greater than or Equal flags 
+.SS "uint32_t GE"
+bit: 16\&.\&.19 Greater than or Equal flags 
+.SS "uint32_t GE"
+bit: 16\&.\&.19 Greater than or Equal flags 
+.SS "uint32_t GE"
+bit: 16\&.\&.19 Greater than or Equal flags 
+.SS "__IOM uint32_t HFSR"
+Offset: 0x02C (R/W) HardFault Status Register 
+.SS "uint32_t ICI_IT_1"
+bit: 10\&.\&.15 ICI/IT part 1 
+.SS "uint32_t ICI_IT_1"
+bit: 10\&.\&.15 ICI/IT part 1 
+.SS "uint32_t ICI_IT_1"
+bit: 10\&.\&.15 ICI/IT part 1 
+.SS "uint32_t ICI_IT_1"
+bit: 10\&.\&.15 ICI/IT part 1 
+.SS "uint32_t ICI_IT_1"
+bit: 10\&.\&.15 ICI/IT part 1 
+.SS "uint32_t ICI_IT_2"
+bit: 25\&.\&.26 ICI/IT part 2 
+.SS "uint32_t ICI_IT_2"
+bit: 25\&.\&.26 ICI/IT part 2 
+.SS "uint32_t ICI_IT_2"
+bit: 25\&.\&.26 ICI/IT part 2 
+.SS "uint32_t ICI_IT_2"
+bit: 25\&.\&.26 ICI/IT part 2 
+.SS "uint32_t ICI_IT_2"
+bit: 25\&.\&.26 ICI/IT part 2 
+.SS "__OM uint32_t ICIALLU"
+Offset: 0x250 ( /W) I-Cache Invalidate All to PoU 
+.SS "__OM uint32_t ICIMVAU"
+Offset: 0x258 ( /W) I-Cache Invalidate by MVA to PoU 
+.SS "__IM uint32_t ICTR"
+Offset: 0x004 (R/ ) Interrupt Controller Type Register 
+.SS "__IM uint32_t ID_ADR"
+Offset: 0x04C (R/ ) Auxiliary Feature Register 
+.SS "__IM uint32_t ID_AFR"
+Offset: 0x04C (R/ ) Auxiliary Feature Register 
+.SS "__IM uint32_t ID_DFR"
+Offset: 0x048 (R/ ) Debug Feature Register 
+.SS "__IM uint32_t ID_ISAR"
+Offset: 0x060 (R/ ) Instruction Set Attributes Register 
+.SS "__IM uint32_t ID_MFR[4U]"
+Offset: 0x050 (R/ ) Memory Model Feature Register 
+.SS "__IM uint32_t ID_MMFR"
+Offset: 0x050 (R/ ) Memory Model Feature Register 
+.SS "__IM uint32_t ID_PFR"
+Offset: 0x040 (R/ ) Processor Feature Register 
+.SS "__IOM uint32_t IMCR"
+Offset: 0xF00 (R/W) ITM Integration Mode Control Register 
+.SS "__IOM uint8_t IP[240U]"
+Offset: 0x300 (R/W) Interrupt Priority Register (8Bit wide) 
+.SS "__IOM uint8_t IPR[496U]"
+Offset: 0x300 (R/W) Interrupt Priority Register (8Bit wide) 
+.SS "__IM uint32_t IRR"
+Offset: 0xEFC (R/ ) ITM Integration Read Register 
+.SS "__IM uint32_t ISAR"
+Offset: 0x060 (R/ ) Instruction Set Attributes Register 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t IT"
+bit: 25\&.\&.26 saved IT state (read 0) 
+.SS "uint32_t IT"
+bit: 25\&.\&.26 saved IT state (read 0) 
+.SS "uint32_t IT"
+bit: 25\&.\&.26 saved IT state (read 0) 
+.SS "__IM uint32_t ITATBCTR2"
+Offset: 0xEF0 (R/ ) ITATBCTR2 
+.SS "__IOM uint32_t ITCMCR"
+Offset: 0x290 (R/W) Instruction Tightly-Coupled Memory Control Register 
+.SS "volatile int32_t ITM_RxBuffer\fC [extern]\fP"
+External variable to receive characters\&. 
+.SS "volatile int32_t ITM_RxBuffer\fC [extern]\fP"
+External variable to receive characters\&. 
+.SS "volatile int32_t ITM_RxBuffer\fC [extern]\fP"
+External variable to receive characters\&. 
+.SS "volatile int32_t ITM_RxBuffer\fC [extern]\fP"
+External variable to receive characters\&. 
+.SS "volatile int32_t ITM_RxBuffer\fC [extern]\fP"
+External variable to receive characters\&. 
+.SS "volatile int32_t ITM_RxBuffer\fC [extern]\fP"
+External variable to receive characters\&. 
+.SS "__OM uint32_t IWR"
+Offset: 0xEF8 ( /W) ITM Integration Write Register 
+.SS "__OM uint32_t LAR"
+Offset: 0xFB0 ( /W) ITM Lock Access Register 
+.SS "__OM uint32_t LAR"
+Offset: 0xFB0 ( W) Lock Access Register 
+.SS "__IM uint32_t LSR"
+Offset: 0xFB4 (R/ ) ITM Lock Status Register 
+.SS "__IM uint32_t LSR"
+Offset: 0xFB4 (R ) Lock Status Register 
+.SS "__IOM uint32_t LSUCNT"
+Offset: 0x014 (R/W) LSU Count Register 
+.SS "__IOM uint32_t MASK0"
+Offset: 0x024 (R/W) Mask Register 0 
+.SS "__IOM uint32_t MASK1"
+Offset: 0x034 (R/W) Mask Register 1 
+.SS "__IOM uint32_t MASK2"
+Offset: 0x044 (R/W) Mask Register 2 
+.SS "__IOM uint32_t MASK3"
+Offset: 0x054 (R/W) Mask Register 3 
+.SS "__IOM uint32_t MMFAR"
+Offset: 0x034 (R/W) MemManage Fault Address Register 
+.SS "__IM uint32_t MMFR"
+Offset: 0x050 (R/ ) Memory Model Feature Register 
+.SS "__IM uint32_t MVFR0"
+Offset: 0x240 (R/ ) Media and VFP Feature Register 0 
+.SS "__IM uint32_t MVFR0"
+Offset: 0x010 (R/ ) Media and FP Feature Register 0 
+.SS "__IM uint32_t MVFR1"
+Offset: 0x244 (R/ ) Media and VFP Feature Register 1 
+.SS "__IM uint32_t MVFR1"
+Offset: 0x014 (R/ ) Media and FP Feature Register 1 
+.SS "__IM uint32_t MVFR2"
+Offset: 0x248 (R/ ) Media and VFP Feature Register 2 
+.SS "__IM uint32_t MVFR2"
+Offset: 0x018 (R/ ) Media and FP Feature Register 2 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t nPRIV"
+bit: 0 Execution privilege in Thread mode 
+.SS "uint32_t nPRIV"
+bit: 0 Execution privilege in Thread mode 
+.SS "uint32_t nPRIV"
+bit: 0 Execution privilege in Thread mode 
+.SS "uint32_t nPRIV"
+bit: 0 Execution privilege in Thread mode 
+.SS "uint32_t nPRIV"
+bit: 0 Execution privilege in Thread mode 
+.SS "uint32_t nPRIV"
+bit: 0 Execution privilege in Thread mode 
+.SS "__IOM uint32_t NSACR"
+Offset: 0x08C (R/W) Non-Secure Access Control Register 
+.SS "__IM uint32_t PFR"
+Offset: 0x040 (R/ ) Processor Feature Register 
+.SS "__IM uint32_t PID0"
+Offset: 0xFE0 (R/ ) ITM Peripheral Identification Register #0 
+.SS "__IM uint32_t PID1"
+Offset: 0xFE4 (R/ ) ITM Peripheral Identification Register #1 
+.SS "__IM uint32_t PID2"
+Offset: 0xFE8 (R/ ) ITM Peripheral Identification Register #2 
+.SS "__IM uint32_t PID3"
+Offset: 0xFEC (R/ ) ITM Peripheral Identification Register #3 
+.SS "__IM uint32_t PID4"
+Offset: 0xFD0 (R/ ) ITM Peripheral Identification Register #4 
+.SS "__IM uint32_t PID5"
+Offset: 0xFD4 (R/ ) ITM Peripheral Identification Register #5 
+.SS "__IM uint32_t PID6"
+Offset: 0xFD8 (R/ ) ITM Peripheral Identification Register #6 
+.SS "__IM uint32_t PID7"
+Offset: 0xFDC (R/ ) ITM Peripheral Identification Register #7 
+.SS "__OM { \&.\&.\&. }  PORT[32U]"
+Offset: 0x000 ( /W) ITM Stimulus Port Registers 
+.SS "__OM { \&.\&.\&. }  PORT[32U]"
+Offset: 0x000 ( /W) ITM Stimulus Port Registers 
+.SS "__OM { \&.\&.\&. }  PORT[32U]"
+Offset: 0x000 ( /W) ITM Stimulus Port Registers 
+.SS "__OM { \&.\&.\&. }  PORT[32U]"
+Offset: 0x000 ( /W) ITM Stimulus Port Registers 
+.SS "__OM { \&.\&.\&. }  PORT[32U]"
+Offset: 0x000 ( /W) ITM Stimulus Port Registers 
+.SS "__OM { \&.\&.\&. }  PORT[32U]"
+Offset: 0x000 ( /W) ITM Stimulus Port Registers 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t Q"
+bit: 27 Saturation condition flag 
+.SS "uint32_t SFPA"
+bit: 3 Secure floating-point active 
+.SS "uint32_t SFPA"
+bit: 3 Secure floating-point active 
+.SS "uint32_t SFPA"
+bit: 3 Secure floating-point active 
+.SS "__IOM uint8_t SHP[12U]"
+Offset: 0x018 (R/W) System Handlers Priority Registers (4-7, 8-11, 12-15) 
+.SS "__IOM uint8_t SHPR[12U]"
+Offset: 0x018 (R/W) System Handlers Priority Registers (4-7, 8-11, 12-15) 
+.SS "__IOM uint32_t SLEEPCNT"
+Offset: 0x010 (R/W) Sleep Count Register 
+.SS "uint32_t SPSEL"
+bit: 1 Stack-pointer select 
+.SS "uint32_t SPSEL"
+bit: 1 Stack to be used 
+.SS "uint32_t SPSEL"
+bit: 1 Stack-pointer select 
+.SS "uint32_t SPSEL"
+bit: 1 Stack to be used 
+.SS "uint32_t SPSEL"
+bit: 1 Stack to be used 
+.SS "uint32_t SPSEL"
+bit: 1 Stack to be used 
+.SS "__OM uint32_t STIR"
+Offset: 0xE00 ( /W) Software Trigger Interrupt Register 
+.SS "__OM uint32_t STIR"
+Offset: 0x200 ( /W) Software Triggered Interrupt Register 
+.SS "uint32_t T"
+bit: 24 Thumb bit (read 0) 
+.SS "uint32_t T"
+bit: 24 Thumb bit 
+.SS "uint32_t T"
+bit: 24 Thumb bit (read 0) 
+.SS "uint32_t T"
+bit: 24 Thumb bit 
+.SS "uint32_t T"
+bit: 24 Thumb bit 
+.SS "uint32_t T"
+bit: 24 Thumb bit 
+.SS "__IOM uint32_t TCR"
+Offset: 0xE80 (R/W) ITM Trace Control Register 
+.SS "__IOM uint32_t TER"
+Offset: 0xE00 (R/W) ITM Trace Enable Register 
+.SS "__IOM uint32_t TPR"
+Offset: 0xE40 (R/W) ITM Trace Privilege Register 
+.SS "__OM uint16_t u16"
+Offset: 0x000 ( /W) ITM Stimulus Port 16-bit 
+.SS "__OM uint16_t u16"
+Offset: 0x000 ( /W) ITM Stimulus Port 16-bit 
+.SS "__OM uint16_t u16"
+Offset: 0x000 ( /W) ITM Stimulus Port 16-bit 
+.SS "__OM uint16_t u16"
+Offset: 0x000 ( /W) ITM Stimulus Port 16-bit 
+.SS "__OM uint16_t u16"
+Offset: 0x000 ( /W) ITM Stimulus Port 16-bit 
+.SS "__OM uint16_t u16"
+Offset: 0x000 ( /W) ITM Stimulus Port 16-bit 
+.SS "__OM uint16_t u16"
+Offset: 0x000 ( /W) ITM Stimulus Port 16-bit 
+.SS "__OM uint32_t u32"
+Offset: 0x000 ( /W) ITM Stimulus Port 32-bit 
+.SS "__OM uint32_t u32"
+Offset: 0x000 ( /W) ITM Stimulus Port 32-bit 
+.SS "__OM uint32_t u32"
+Offset: 0x000 ( /W) ITM Stimulus Port 32-bit 
+.SS "__OM uint32_t u32"
+Offset: 0x000 ( /W) ITM Stimulus Port 32-bit 
+.SS "__OM uint32_t u32"
+Offset: 0x000 ( /W) ITM Stimulus Port 32-bit 
+.SS "__OM uint32_t u32"
+Offset: 0x000 ( /W) ITM Stimulus Port 32-bit 
+.SS "__OM uint32_t u32"
+Offset: 0x000 ( /W) ITM Stimulus Port 32-bit 
+.SS "__OM uint8_t u8"
+Offset: 0x000 ( /W) ITM Stimulus Port 8-bit 
+.SS "__OM uint8_t u8"
+Offset: 0x000 ( /W) ITM Stimulus Port 8-bit 
+.SS "__OM uint8_t u8"
+Offset: 0x000 ( /W) ITM Stimulus Port 8-bit 
+.SS "__OM uint8_t u8"
+Offset: 0x000 ( /W) ITM Stimulus Port 8-bit 
+.SS "__OM uint8_t u8"
+Offset: 0x000 ( /W) ITM Stimulus Port 8-bit 
+.SS "__OM uint8_t u8"
+Offset: 0x000 ( /W) ITM Stimulus Port 8-bit 
+.SS "__OM uint8_t u8"
+Offset: 0x000 ( /W) ITM Stimulus Port 8-bit 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t V"
+bit: 28 Overflow condition code flag 
+.SS "__IOM uint32_t VTOR"
+Offset: 0x008 (R/W) Vector Table Offset Register 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t Z"
+bit: 30 Zero condition code flag 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__def_8h" xml:lang="en-US">
+<title>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h File Reference</title>
+<indexterm><primary>Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h</primary></indexterm>
+<para>
+
+<para>General defines for the usb device library. </para>
+ 
+</para>
+<programlisting>#include &quot;usbd_conf.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structusb__setup__req">usb_setup_req</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct___device__cb">_Device_cb</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_u_s_b_d___descriptors_type_def">USBD_DescriptorsTypeDef</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_u_s_b_d___endpoint_type_def">USBD_EndpointTypeDef</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct___u_s_b_d___handle_type_def">_USBD_HandleTypeDef</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">NULL</emphasis>   0U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_MAX_NUM_INTERFACES</emphasis>   1U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_MAX_NUM_CONFIGURATION</emphasis>   1U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_LPM_ENABLED</emphasis>   0U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_SELF_POWERED</emphasis>   1U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_SUPPORT_USER_STRING_DESC</emphasis>   0U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_LEN_DEV_QUALIFIER_DESC</emphasis>   0x0AU</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_LEN_DEV_DESC</emphasis>   0x12U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_LEN_CFG_DESC</emphasis>   0x09U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_LEN_IF_DESC</emphasis>   0x09U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_LEN_EP_DESC</emphasis>   0x07U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_LEN_OTG_DESC</emphasis>   0x03U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_LEN_LANGID_STR_DESC</emphasis>   0x04U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_LEN_OTHER_SPEED_DESC_SIZ</emphasis>   0x09U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_IDX_LANGID_STR</emphasis>   0x00U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_IDX_MFC_STR</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_IDX_PRODUCT_STR</emphasis>   0x02U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_IDX_SERIAL_STR</emphasis>   0x03U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_IDX_CONFIG_STR</emphasis>   0x04U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_IDX_INTERFACE_STR</emphasis>   0x05U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_TYPE_STANDARD</emphasis>   0x00U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_TYPE_CLASS</emphasis>   0x20U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_TYPE_VENDOR</emphasis>   0x40U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_TYPE_MASK</emphasis>   0x60U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_RECIPIENT_DEVICE</emphasis>   0x00U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_RECIPIENT_INTERFACE</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_RECIPIENT_ENDPOINT</emphasis>   0x02U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_RECIPIENT_MASK</emphasis>   0x03U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_GET_STATUS</emphasis>   0x00U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_CLEAR_FEATURE</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_SET_FEATURE</emphasis>   0x03U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_SET_ADDRESS</emphasis>   0x05U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_GET_DESCRIPTOR</emphasis>   0x06U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_SET_DESCRIPTOR</emphasis>   0x07U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_GET_CONFIGURATION</emphasis>   0x08U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_SET_CONFIGURATION</emphasis>   0x09U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_GET_INTERFACE</emphasis>   0x0AU</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_SET_INTERFACE</emphasis>   0x0BU</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_REQ_SYNCH_FRAME</emphasis>   0x0CU</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_DESC_TYPE_DEVICE</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_DESC_TYPE_CONFIGURATION</emphasis>   0x02U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_DESC_TYPE_STRING</emphasis>   0x03U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_DESC_TYPE_INTERFACE</emphasis>   0x04U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_DESC_TYPE_ENDPOINT</emphasis>   0x05U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_DESC_TYPE_DEVICE_QUALIFIER</emphasis>   0x06U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_DESC_TYPE_OTHER_SPEED_CONFIGURATION</emphasis>   0x07U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_DESC_TYPE_BOS</emphasis>   0x0FU</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_CONFIG_REMOTE_WAKEUP</emphasis>   0x02U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_CONFIG_SELF_POWERED</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_FEATURE_EP_HALT</emphasis>   0x00U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_FEATURE_REMOTE_WAKEUP</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_FEATURE_TEST_MODE</emphasis>   0x02U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_DEVICE_CAPABITY_TYPE</emphasis>   0x10U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_HS_MAX_PACKET_SIZE</emphasis>   512U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_FS_MAX_PACKET_SIZE</emphasis>   64U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USB_MAX_EP0_SIZE</emphasis>   64U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_STATE_DEFAULT</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_STATE_ADDRESSED</emphasis>   0x02U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_STATE_CONFIGURED</emphasis>   0x03U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_STATE_SUSPENDED</emphasis>   0x04U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP0_IDLE</emphasis>   0x00U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP0_SETUP</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP0_DATA_IN</emphasis>   0x02U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP0_DATA_OUT</emphasis>   0x03U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP0_STATUS_IN</emphasis>   0x04U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP0_STATUS_OUT</emphasis>   0x05U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP0_STALL</emphasis>   0x06U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP_TYPE_CTRL</emphasis>   0x00U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP_TYPE_ISOC</emphasis>   0x01U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP_TYPE_BULK</emphasis>   0x02U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">USBD_EP_TYPE_INTR</emphasis>   0x03U</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">SWAPBYTE</emphasis>(addr)</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">LOBYTE</emphasis>(x)   ((uint8_t)((x) &amp; 0x00FFU))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">HIBYTE</emphasis>(x)   ((uint8_t)(((x) &amp; 0xFF00U) &gt;&gt; 8U))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">MIN</emphasis>(a,  b)   (((a) &lt; (b)) ? (a) : (b))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">MAX</emphasis>(a,  b)   (((a) &gt; (b)) ? (a) : (b))</para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">__ALIGN_END</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_structusb__setup__req">usb_setup_req</link> <emphasis role="strong">USBD_SetupReqTypedef</emphasis></para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct___device__cb">_Device_cb</link> <emphasis role="strong">USBD_ClassTypeDef</emphasis></para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct___u_s_b_d___handle_type_def">_USBD_HandleTypeDef</link> <emphasis role="strong">USBD_HandleTypeDef</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___u_s_b_d___d_e_f___exported___types_definitions_1gaa62cd3d2fb69a537ae7a5a94bdd6ae93"/>enum <emphasis role="strong">USBD_SpeedTypeDef</emphasis> { <emphasis role="strong">USBD_SPEED_HIGH</emphasis> = 0U
+, <emphasis role="strong">USBD_SPEED_FULL</emphasis> = 1U
+, <emphasis role="strong">USBD_SPEED_LOW</emphasis> = 2U
+ }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___u_s_b_d___d_e_f___exported___types_definitions_1gaebc658c200e50399361e7901f0a57e95"/>enum <emphasis role="strong">USBD_StatusTypeDef</emphasis> { <emphasis role="strong">USBD_OK</emphasis> = 0U
+, <emphasis role="strong">USBD_BUSY</emphasis>
+, <emphasis role="strong">USBD_FAIL</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>General defines for the usb device library. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; Copyright (c) 2015 STMicroelectronics. All rights reserved.</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>This software component is licensed by ST under Ultimate Liberty license SLA0044, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: www.st.com/SLA0044 </para>
+</section>
+</section>

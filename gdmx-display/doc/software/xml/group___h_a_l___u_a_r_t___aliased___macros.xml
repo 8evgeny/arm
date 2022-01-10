@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___u_a_r_t___aliased___macros" kind="group">
+    <compoundname>HAL_UART_Aliased_Macros</compoundname>
+    <title>HAL UART Aliased Macros maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___u_a_r_t___aliased___macros_1ga42daa2078cec8482c126dd059211feea" prot="public" static="no">
+        <name>__HAL_UART_GETCLOCKSOURCE</name>
+        <initializer>UART_GETCLOCKSOURCE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3434" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___u_a_r_t___aliased___macros_1gaf30b26158e4eaa99871067016049156d" prot="public" static="no">
+        <name>__HAL_UART_MASK_COMPUTATION</name>
+        <initializer>UART_MASK_COMPUTATION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3435" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___u_a_r_t___aliased___macros_1ga62b39e2261e76db74c78d6dbdb677937" prot="public" static="no">
+        <name>__UART_GETCLOCKSOURCE</name>
+        <initializer>UART_GETCLOCKSOURCE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3436" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___u_a_r_t___aliased___macros_1ga4361b9637b14e21ac5a32f8d298bd270" prot="public" static="no">
+        <name>__UART_MASK_COMPUTATION</name>
+        <initializer>UART_MASK_COMPUTATION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3437" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___u_a_r_t___aliased___macros_1gaf1bb7de79bc052cd2a1a6671c9c6687d" prot="public" static="no">
+        <name>IS_UART_WAKEUPMETHODE</name>
+        <initializer>IS_UART_WAKEUPMETHOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3439" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___u_a_r_t___aliased___macros_1ga5cc20fb4146a1269b5b8a81d5e4578fa" prot="public" static="no">
+        <name>IS_UART_ONEBIT_SAMPLE</name>
+        <initializer>IS_UART_ONE_BIT_SAMPLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3441" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___u_a_r_t___aliased___macros_1gae24c4fef26c5d50f9c8d27f0db203a5b" prot="public" static="no">
+        <name>IS_UART_ONEBIT_SAMPLING</name>
+        <initializer>IS_UART_ONE_BIT_SAMPLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="3442" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="3442" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

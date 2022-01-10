@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___exported__types" xml:lang="en-US">
+<title>Exported_types</title>
+<indexterm><primary>Exported_types</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___exported__types_1gaffaf7c3f537d7a3370b1bbdda67a2bf6"/>#define <emphasis role="strong">IS_FUNCTIONAL_STATE</emphasis>(STATE)   (((STATE) == DISABLE) || ((STATE) == ENABLE))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___exported__types_1ga39d4411201fb731279ad5a409b2b80d7"/>typedef enum FlagStatus <emphasis role="strong">ITStatus</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___exported__types_1ga89136caac2e14c55151f527ac02daaff"/>enum <emphasis role="strong">FlagStatus</emphasis> { <emphasis role="strong">RESET</emphasis> = 0
+, <emphasis role="strong">SET</emphasis> = !RESET
+ }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___exported__types_1gac9a7e9a35d2513ec15c3b537aaa4fba1"/>enum <emphasis role="strong">FunctionalState</emphasis> { <emphasis role="strong">DISABLE</emphasis> = 0
+, <emphasis role="strong">ENABLE</emphasis> = !DISABLE
+ }</para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___exported__types_1ga8333b96c67f83cba354b3407fcbb6ee8"/>enum <emphasis role="strong">ErrorStatus</emphasis> { <emphasis role="strong">SUCCESS</emphasis> = 0U
+, <emphasis role="strong">ERROR</emphasis> = !SUCCESS
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+</section>

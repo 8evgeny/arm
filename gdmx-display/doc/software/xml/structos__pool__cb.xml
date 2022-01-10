@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structos__pool__cb" kind="struct" language="C++" prot="public">
+    <compoundname>os_pool_cb</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structos__pool__cb_1a269c3935f8bc66db70bccdd02cb05e3c" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* pool</definition>
+        <argsstring></argsstring>
+        <name>pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" line="869" column="8" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" bodystart="869" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structos__pool__cb_1aa7e8adca93ab05c505aed9ba64f3d051" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* markers</definition>
+        <argsstring></argsstring>
+        <name>markers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" line="870" column="11" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" bodystart="870" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structos__pool__cb_1ac112e786b2a234e0e45cb5bdbee53763" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pool_sz</definition>
+        <argsstring></argsstring>
+        <name>pool_sz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" line="871" column="12" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" bodystart="871" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structos__pool__cb_1a4c2a0c691de3365c00ecd22d8102811f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t item_sz</definition>
+        <argsstring></argsstring>
+        <name>item_sz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" line="872" column="12" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" bodystart="872" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structos__pool__cb_1ab4b4b716d43052069903be4355ea9d9b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t currentIndex</definition>
+        <argsstring></argsstring>
+        <name>currentIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" line="873" column="12" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" bodystart="873" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" line="868" column="1" bodyfile="Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" bodystart="868" bodyend="874"/>
+    <listofallmembers>
+      <member refid="structos__pool__cb_1ab4b4b716d43052069903be4355ea9d9b" prot="public" virt="non-virtual"><scope>os_pool_cb</scope><name>currentIndex</name></member>
+      <member refid="structos__pool__cb_1a4c2a0c691de3365c00ecd22d8102811f" prot="public" virt="non-virtual"><scope>os_pool_cb</scope><name>item_sz</name></member>
+      <member refid="structos__pool__cb_1aa7e8adca93ab05c505aed9ba64f3d051" prot="public" virt="non-virtual"><scope>os_pool_cb</scope><name>markers</name></member>
+      <member refid="structos__pool__cb_1a269c3935f8bc66db70bccdd02cb05e3c" prot="public" virt="non-virtual"><scope>os_pool_cb</scope><name>pool</name></member>
+      <member refid="structos__pool__cb_1ac112e786b2a234e0e45cb5bdbee53763" prot="public" virt="non-virtual"><scope>os_pool_cb</scope><name>pool_sz</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

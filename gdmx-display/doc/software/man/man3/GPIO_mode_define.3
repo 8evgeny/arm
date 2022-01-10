@@ -1,0 +1,128 @@
+.TH "GPIO_mode_define" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GPIO_mode_define \- GPIO mode define
+.PP
+ \- GPIO Configuration Mode Elements values convention: 0xX0yz00YZ\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGPIO_MODE_INPUT\fP   0x00000000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_OUTPUT_PP\fP   0x00000001u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_OUTPUT_OD\fP   0x00000011u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_AF_PP\fP   0x00000002u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_AF_OD\fP   0x00000012u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_AF_INPUT\fP   \fBGPIO_MODE_INPUT\fP"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_ANALOG\fP   0x00000003u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_IT_RISING\fP   0x10110000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_IT_FALLING\fP   0x10210000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_IT_RISING_FALLING\fP   0x10310000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_EVT_RISING\fP   0x10120000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_EVT_FALLING\fP   0x10220000u"
+.br
+.ti -1c
+.RI "#define \fBGPIO_MODE_EVT_RISING_FALLING\fP   0x10320000u"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+GPIO Configuration Mode Elements values convention: 0xX0yz00YZ\&. 
+
+
+.IP "\(bu" 2
+X : GPIO mode or EXTI Mode
+.IP "\(bu" 2
+y : External IT or Event trigger detection
+.IP "\(bu" 2
+z : IO configuration on External IT or Event
+.IP "\(bu" 2
+Y : Output type (Push Pull or Open Drain)
+.IP "\(bu" 2
+Z : IO Direction mode (Input, Output, Alternate or Analog) 
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define GPIO_MODE_AF_INPUT   \fBGPIO_MODE_INPUT\fP"
+Alternate Function Input Mode 
+.br
+ 
+.SS "#define GPIO_MODE_AF_OD   0x00000012u"
+Alternate Function Open Drain Mode 
+.br
+ 
+.SS "#define GPIO_MODE_AF_PP   0x00000002u"
+Alternate Function Push Pull Mode 
+.br
+ 
+.SS "#define GPIO_MODE_ANALOG   0x00000003u"
+Analog Mode 
+.br
+ 
+.SS "#define GPIO_MODE_EVT_FALLING   0x10220000u"
+External Event Mode with Falling edge trigger detection 
+.br
+ 
+.SS "#define GPIO_MODE_EVT_RISING   0x10120000u"
+External Event Mode with Rising edge trigger detection 
+.br
+ 
+.SS "#define GPIO_MODE_EVT_RISING_FALLING   0x10320000u"
+External Event Mode with Rising/Falling edge trigger detection 
+.br
+ 
+.SS "#define GPIO_MODE_INPUT   0x00000000u"
+Input Floating Mode 
+.br
+ 
+.SS "#define GPIO_MODE_IT_FALLING   0x10210000u"
+External Interrupt Mode with Falling edge trigger detection 
+.br
+ 
+.SS "#define GPIO_MODE_IT_RISING   0x10110000u"
+External Interrupt Mode with Rising edge trigger detection 
+.br
+ 
+.SS "#define GPIO_MODE_IT_RISING_FALLING   0x10310000u"
+External Interrupt Mode with Rising/Falling edge trigger detection 
+.br
+ 
+.SS "#define GPIO_MODE_OUTPUT_OD   0x00000011u"
+Output Open Drain Mode 
+.br
+ 
+.SS "#define GPIO_MODE_OUTPUT_PP   0x00000001u"
+Output Push Pull Mode 
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

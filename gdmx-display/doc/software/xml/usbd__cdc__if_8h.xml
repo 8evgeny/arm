@@ -1,0 +1,686 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="usbd__cdc__if_8h" kind="file" language="C++">
+    <compoundname>usbd_cdc_if.h</compoundname>
+    <includes refid="usbd__cdc_8h" local="yes">usbd_cdc.h</includes>
+    <includes refid="display_8h" local="yes">display.h</includes>
+    <includedby refid="main_8c" local="yes">Src/main.c</includedby>
+    <includedby refid="usb__device_8c" local="yes">Src/usb_device.c</includedby>
+    <includedby refid="usbd__cdc__if_8c" local="yes">Src/usbd_cdc_if.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>stm32f1xx_hal_flash.h</label>
+        <link refid="stm32f1xx__hal__flash_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>stm32f1xx_hal_tim_ex.h</label>
+        <link refid="stm32f1xx__hal__tim__ex_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>stm32f1xx_hal_pcd.h</label>
+        <link refid="stm32f1xx__hal__pcd_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="22">
+        <label>stm32f1xx_hal_cortex.h</label>
+        <link refid="stm32f1xx__hal__cortex_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>usbd_def.h</label>
+        <link refid="usbd__def_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>stm32f1xx_ll_usb.h</label>
+        <link refid="stm32f1xx__ll__usb_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>usbd_cdc.h</label>
+        <link refid="usbd__cdc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>buzzer.h</label>
+        <link refid="buzzer_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stm32f1xx_hal.h</label>
+        <link refid="stm32f1xx__hal_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>stddef.h</label>
+      </node>
+      <node id="25">
+        <label>stm32f1xx_hal_pwr.h</label>
+        <link refid="stm32f1xx__hal__pwr_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>main.h</label>
+        <link refid="main_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>stm32f1xx_hal_rcc.h</label>
+        <link refid="stm32f1xx__hal__rcc_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stm32f1xx_hal_dma_ex.h</label>
+        <link refid="stm32f1xx__hal__dma__ex_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stm32f1xx.h</label>
+        <link refid="stm32f1xx_8h"/>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="24">
+        <label>stm32f1xx_hal_flash_ex.h</label>
+        <link refid="stm32f1xx__hal__flash__ex_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>stm32f1xx_hal_dma.h</label>
+        <link refid="stm32f1xx__hal__dma_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>usbd_core.h</label>
+        <link refid="usbd__core_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>led.h</label>
+        <link refid="led_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>stm32f1xx_hal_tim.h</label>
+        <link refid="stm32f1xx__hal__tim_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stm32f1xx_hal_rcc_ex.h</label>
+        <link refid="stm32f1xx__hal__rcc__ex_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>hd44780.h</label>
+        <link refid="hd44780_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stm32f1xx_hal_conf.h</label>
+        <link refid="stm32f1xx__hal__conf_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>stm32f1xx_hal_gpio.h</label>
+        <link refid="stm32f1xx__hal__gpio_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>usbd_conf.h</label>
+        <link refid="usbd__conf_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>usbd_ctlreq.h</label>
+        <link refid="usbd__ctlreq_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>stm32f1xx_hal_gpio_ex.h</label>
+        <link refid="stm32f1xx__hal__gpio__ex_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stm32f1xx_hal_def.h</label>
+        <link refid="stm32f1xx__hal__def_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>display.h</label>
+        <link refid="display_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+      <node id="19">
+        <label>stm32f1xx_hal_exti.h</label>
+        <link refid="stm32f1xx__hal__exti_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>usbd_ioreq.h</label>
+        <link refid="usbd__ioreq_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>Inc/usbd_cdc_if.h</label>
+        <link refid="usbd__cdc__if_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Src/usb_device.c</label>
+        <link refid="usb__device_8c"/>
+      </node>
+      <node id="2">
+        <label>Src/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="4">
+        <label>Src/usbd_cdc_if.c</label>
+        <link refid="usbd__cdc__if_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="usbd__cdc__if_8h_1a17e27098f7385376cce8f0a245a41f28" prot="public" static="no">
+        <name>USBD_CDC_IF_WAIT</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="35" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1a399bd9911acd065d8108e9ccbbdddd3e" prot="public" static="no">
+        <name>USBD_CDC_IF_DATAREADY</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="36" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1aeb55ad5d1b7d3f86392d808550730f6e" prot="public" static="no">
+        <name>USBD_CDC_IF_ESC</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="37" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1a987991e2b2daded31fc3396f23b20cfe" prot="public" static="no">
+        <name>USBD_CDC_IF_ERROR</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="38" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1a76121e87263ec8de669febdffe12bfdd" prot="public" static="no">
+        <name>VT100_ERASE_SCREEN</name>
+        <initializer>&quot;\x1B[2J&quot;</initializer>
+        <briefdescription>
+<para>Erase Screen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="40" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1a11b41303b1089ffc5f50952a474bf37d" prot="public" static="no">
+        <name>VT100_YELLOW_ON</name>
+        <initializer>&quot;\x1B[\x21m&quot;</initializer>
+        <briefdescription>
+<para>Foreground Yellow. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="41" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1abe818df97c0249275067d99aaacfb2ea" prot="public" static="no">
+        <name>VT100_YELLOW_OFF</name>
+        <initializer>&quot;\x1B[\x2Bm&quot;</initializer>
+        <briefdescription>
+<para>Background Yellow. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="42" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1a22d0a789fc16d493d2c2f58e437b161d" prot="public" static="no">
+        <name>VT100_RED_ON</name>
+        <initializer>&quot;\x1B[\x1Fm&quot;</initializer>
+        <briefdescription>
+<para>Foreground Red. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="43" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1af0e6398df218665714acd816b50ea62e" prot="public" static="no">
+        <name>VT100_RED_OFF</name>
+        <initializer>&quot;\x1B[\x29m&quot;</initializer>
+        <briefdescription>
+<para>Background Red. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="44" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1addbf48cadf8ac9c8f34e45433bb61af7" prot="public" static="no">
+        <name>VT100_BUZZER_ON</name>
+        <initializer>&quot;\x1B[\x32m&quot;</initializer>
+        <briefdescription>
+<para>Foreground Green. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="45" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1a61556d21d9fa6ce0d7077fea1bb8bfd1" prot="public" static="no">
+        <name>VT100_BUZZER_OFF</name>
+        <initializer>&quot;\x1B[\x42m&quot;</initializer>
+        <briefdescription>
+<para>Background Green. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="46" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1ac4f565f08b3c944b12158979d646f3e2" prot="public" static="no">
+        <name>MESSAGE_YELLOW_ON</name>
+        <initializer>									&quot;                    &quot; \
+									&quot;                    &quot; \
+									&quot;                    &quot; \
+									&quot;      YELLOW ON     &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="49" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="usbd__cdc__if_8h_1a9d33b512a25c56610a080495881d3981" prot="public" static="no">
+        <name>MESSAGE_YELLOW_OFF</name>
+        <initializer>									&quot;                    &quot; \
+									&quot;                    &quot; \
+									&quot;                    &quot; \
+									&quot;      YELLOW OFF    &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="54" column="9" bodyfile="Inc/usbd_cdc_if.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___u_s_b_d___c_d_c___i_f___exported___variables_1ga99394ed19b774f171df96c2848c411ed" prot="public" static="no" mutable="no">
+        <type><ref refid="struct___u_s_b_d___c_d_c___itf" kindref="compound">USBD_CDC_ItfTypeDef</ref></type>
+        <definition>USBD_CDC_ItfTypeDef USBD_Interface_fops_FS</definition>
+        <argsstring></argsstring>
+        <name>USBD_Interface_fops_FS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CDC Interface callback. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="113" column="28" bodyfile="Src/usbd_cdc_if.c" bodystart="145" bodyend="-1" declfile="Inc/usbd_cdc_if.h" declline="113" declcolumn="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1ga5137d6201dbdef2bf351c5b4941c24f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t CDC_Transmit_FS</definition>
+        <argsstring>(uint8_t *Buf, uint16_t Len)</argsstring>
+        <name>CDC_Transmit_FS</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>Buf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>Len</declname>
+        </param>
+        <briefdescription>
+<para>CDC_Transmit_FS Data to send over USB IN endpoint are sent over CDC interface through this function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of data to be sent (in bytes) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>USBD_OK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if all operations are OK else USBD_FAIL or USBD_BUSY </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="128" column="9" bodyfile="Src/usbd_cdc_if.c" bodystart="299" bodyend="311" declfile="Inc/usbd_cdc_if.h" declline="128" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1gae6ee2a1ab766ec431c22350f8e19d00c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USBD_CDC_IF_clear</definition>
+        <argsstring>(void)</argsstring>
+        <name>USBD_CDC_IF_clear</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="131" column="6" bodyfile="Src/usbd_cdc_if.c" bodystart="314" bodyend="318" declfile="Inc/usbd_cdc_if.h" declline="131" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1ga2d2da5c6a86b837256c54b4bb42c5a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USBD_CDC_IF_write</definition>
+        <argsstring>(void)</argsstring>
+        <name>USBD_CDC_IF_write</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="134" column="6" bodyfile="Src/usbd_cdc_if.c" bodystart="321" bodyend="330" declfile="Inc/usbd_cdc_if.h" declline="134" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1ga6a894b0133456f4b37f5a9786ab495e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int USBD_CDC_IF_procRcvData</definition>
+        <argsstring>(uint8_t *data, uint16_t size)</argsstring>
+        <name>USBD_CDC_IF_procRcvData</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="137" column="5" bodyfile="Src/usbd_cdc_if.c" bodystart="333" bodyend="390" declfile="Inc/usbd_cdc_if.h" declline="137" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1gaf64b900615ca8a917baebf430f11add9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int USBD_CDC_IF_analyzeRcvData</definition>
+        <argsstring>(void)</argsstring>
+        <name>USBD_CDC_IF_analyzeRcvData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Inc/usbd_cdc_if.h" line="140" column="5" bodyfile="Src/usbd_cdc_if.c" bodystart="393" bodyend="449" declfile="Inc/usbd_cdc_if.h" declline="140" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>: Header for <ref refid="usbd__cdc__if_8c" kindref="compound">usbd_cdc_if.c</ref> file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="version"><para>: v2.0_Cube</para>
+</simplesect>
+<simplesect kind="attention"><para></para>
+</simplesect>
+<heading level="2"><center><copy/> Copyright (c) 2019 Donskih Dmitriy. All rights reserved.</center></heading>
+</para>
+<para>This software component is licensed by Donskih Dmitriy under BSD 3-Clause license, the &quot;License&quot;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>Header<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>Header<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>to<sp/>prevent<sp/>recursive<sp/>inclusion<sp/>-------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__USBD_CDC_IF_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__USBD_CDC_IF_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes<sp/>------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="usbd__cdc_8h" kindref="compound">usbd_cdc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="display_8h" kindref="compound">display.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Defines<sp/>-------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USBD_CDC_IF_WAIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USBD_CDC_IF_DATAREADY<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USBD_CDC_IF_ESC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USBD_CDC_IF_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="usbd__cdc__if_8h_1a76121e87263ec8de669febdffe12bfdd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VT100_ERASE_SCREEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x1B[2J&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="usbd__cdc__if_8h_1a11b41303b1089ffc5f50952a474bf37d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VT100_YELLOW_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x1B[\x21m&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="usbd__cdc__if_8h_1abe818df97c0249275067d99aaacfb2ea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VT100_YELLOW_OFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x1B[\x2Bm&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="usbd__cdc__if_8h_1a22d0a789fc16d493d2c2f58e437b161d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VT100_RED_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x1B[\x1Fm&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="usbd__cdc__if_8h_1af0e6398df218665714acd816b50ea62e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VT100_RED_OFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x1B[\x29m&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="usbd__cdc__if_8h_1addbf48cadf8ac9c8f34e45433bb61af7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VT100_BUZZER_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x1B[\x32m&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="usbd__cdc__if_8h_1a61556d21d9fa6ce0d7077fea1bb8bfd1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VT100_BUZZER_OFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x1B[\x42m&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MESSAGE_YELLOW_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/>YELLOW<sp/>ON<sp/><sp/><sp/><sp/><sp/>&quot;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MESSAGE_YELLOW_OFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/>YELLOW<sp/>OFF<sp/><sp/><sp/><sp/>&quot;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>EXPORTED_DEFINES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>EXPORTED_DEFINES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>EXPORTED_TYPES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>EXPORTED_TYPES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>EXPORTED_MACRO<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>EXPORTED_MACRO<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct___u_s_b_d___c_d_c___itf" kindref="compound">USBD_CDC_ItfTypeDef</ref><sp/><ref refid="group___u_s_b_d___c_d_c___i_f___exported___variables_1ga99394ed19b774f171df96c2848c411ed" kindref="member">USBD_Interface_fops_FS</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>BEGIN<sp/>EXPORTED_VARIABLES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>USER<sp/>CODE<sp/>END<sp/>EXPORTED_VARIABLES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">uint8_t<sp/><ref refid="group___u_s_b_d___c_d_c___i_f___exported___functions_prototype_1ga5137d6201dbdef2bf351c5b4941c24f4" kindref="member">CDC_Transmit_FS</ref>(uint8_t*<sp/>Buf,<sp/>uint16_t<sp/>Len);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>USBD_CDC_IF_clear(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>USBD_CDC_IF_write(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>USBD_CDC_IF_procRcvData(uint8_t<sp/>*data,<sp/>uint16_t<sp/>size);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>USBD_CDC_IF_analyzeRcvData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__USBD_CDC_IF_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">/************************<sp/>(C)<sp/>COPYRIGHT<sp/>STMicroelectronics<sp/>*****END<sp/>OF<sp/>FILE****/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Inc/usbd_cdc_if.h"/>
+  </compounddef>
+</doxygen>

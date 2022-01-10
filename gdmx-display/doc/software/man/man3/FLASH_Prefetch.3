@@ -1,0 +1,55 @@
+.TH "FLASH_Prefetch" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FLASH_Prefetch \- FLASH Prefetch
+.PP
+ \- macros to handle FLASH Prefetch buffer  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_FLASH_PREFETCH_BUFFER_ENABLE\fP()   (FLASH\->ACR |= \fBFLASH_ACR_PRFTBE\fP)"
+.br
+.RI "Enable the FLASH prefetch buffer\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_PREFETCH_BUFFER_DISABLE\fP()   (FLASH\->ACR &= (~\fBFLASH_ACR_PRFTBE\fP))"
+.br
+.RI "Disable the FLASH prefetch buffer\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+macros to handle FLASH Prefetch buffer 
+
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_FLASH_PREFETCH_BUFFER_DISABLE()   (FLASH\->ACR &= (~\fBFLASH_ACR_PRFTBE\fP))"
+
+.PP
+Disable the FLASH prefetch buffer\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "#define __HAL_FLASH_PREFETCH_BUFFER_ENABLE()   (FLASH\->ACR |= \fBFLASH_ACR_PRFTBE\fP)"
+
+.PP
+Enable the FLASH prefetch buffer\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

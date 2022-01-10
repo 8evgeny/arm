@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___f_l_a_s_h___exported___functions___group3" kind="group">
+    <compoundname>FLASH_Exported_Functions_Group3</compoundname>
+    <title>FLASH_Exported_Functions_Group3</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___f_l_a_s_h___exported___functions___group3_1ga20e71ba6b2a09cd5b9f0bd369f842de3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t HAL_FLASH_GetError</definition>
+        <argsstring>(void)</argsstring>
+        <name>HAL_FLASH_GetError</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" line="290" column="10" declfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h" declline="290" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

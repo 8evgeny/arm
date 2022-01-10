@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group___h_a_l___r_t_c___aliased___defines" kind="group">
+    <compoundname>HAL_RTC_Aliased_Defines</compoundname>
+    <title>HAL RTC Aliased Defines maintained for legacy purpose</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga1adf0882a1368a3cef0edc34dcf8d34e" prot="public" static="no">
+        <name>FORMAT_BIN</name>
+        <initializer>RTC_FORMAT_BIN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="941" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="941" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga950fc88b539cc9a8cf66aab2ee860fe1" prot="public" static="no">
+        <name>FORMAT_BCD</name>
+        <initializer>RTC_FORMAT_BCD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="942" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="942" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga242adf20d2422fd1ae7715b8acd82623" prot="public" static="no">
+        <name>RTC_ALARMSUBSECONDMASK_None</name>
+        <initializer>RTC_ALARMSUBSECONDMASK_NONE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="944" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="944" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga55d9466b1ec35bce5df17af28e142014" prot="public" static="no">
+        <name>RTC_TAMPERERASEBACKUP_DISABLED</name>
+        <initializer>RTC_TAMPER_ERASE_BACKUP_DISABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="945" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="945" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1gad032982f8c14ffd4864df3ebfee45f70" prot="public" static="no">
+        <name>RTC_TAMPERMASK_FLAG_DISABLED</name>
+        <initializer>RTC_TAMPERMASK_FLAG_DISABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="946" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="946" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1gac03d2b586cb1c5c471697b57864e7bc8" prot="public" static="no">
+        <name>RTC_TAMPERMASK_FLAG_ENABLED</name>
+        <initializer>RTC_TAMPERMASK_FLAG_ENABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="947" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="947" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga968bde232135b78ff974d5523890860d" prot="public" static="no">
+        <name>RTC_MASKTAMPERFLAG_DISABLED</name>
+        <initializer>RTC_TAMPERMASK_FLAG_DISABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="949" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="949" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1gab9424e57ef6067b1d7f5030ee45192d5" prot="public" static="no">
+        <name>RTC_MASKTAMPERFLAG_ENABLED</name>
+        <initializer>RTC_TAMPERMASK_FLAG_ENABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="950" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="950" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga4a78a492baabe7132ddfcf94cf7805c0" prot="public" static="no">
+        <name>RTC_TAMPERERASEBACKUP_ENABLED</name>
+        <initializer>RTC_TAMPER_ERASE_BACKUP_ENABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="951" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="951" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1gad52c576aeb40eeeed3274e6a8c5cf83a" prot="public" static="no">
+        <name>RTC_TAMPER1_2_INTERRUPT</name>
+        <initializer>RTC_ALL_TAMPER_INTERRUPT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="952" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="952" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga30a97d2cbfeca6b663b9f116e13c511a" prot="public" static="no">
+        <name>RTC_TAMPER1_2_3_INTERRUPT</name>
+        <initializer>RTC_ALL_TAMPER_INTERRUPT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="953" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="953" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga86b6c9d9b06b1ab23722bf02799adfca" prot="public" static="no">
+        <name>RTC_TIMESTAMPPIN_PC13</name>
+        <initializer>RTC_TIMESTAMPPIN_DEFAULT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="955" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="955" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga8d806818f1fcdaf744042a19563a8052" prot="public" static="no">
+        <name>RTC_TIMESTAMPPIN_PA0</name>
+        <initializer>RTC_TIMESTAMPPIN_POS1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="956" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="956" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga06c626929730d0b055830978be00b438" prot="public" static="no">
+        <name>RTC_TIMESTAMPPIN_PI8</name>
+        <initializer>RTC_TIMESTAMPPIN_POS1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="957" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="957" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga8bed03c3348ec3005e7b80e73fd13cc0" prot="public" static="no">
+        <name>RTC_TIMESTAMPPIN_PC1</name>
+        <initializer>RTC_TIMESTAMPPIN_POS2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="958" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="958" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga677d55aef2a7915a4a75befab8a5abaf" prot="public" static="no">
+        <name>RTC_OUTPUT_REMAP_PC13</name>
+        <initializer>RTC_OUTPUT_REMAP_NONE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="960" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="960" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1gac67309963a2eaf95230e716c8e3f0377" prot="public" static="no">
+        <name>RTC_OUTPUT_REMAP_PB14</name>
+        <initializer>RTC_OUTPUT_REMAP_POS1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="961" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="961" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1gae3219018581da1cc5687fe218d3f2a2d" prot="public" static="no">
+        <name>RTC_OUTPUT_REMAP_PB2</name>
+        <initializer>RTC_OUTPUT_REMAP_POS1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="962" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="962" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga203603ca0741ea3f23beca505a121351" prot="public" static="no">
+        <name>RTC_TAMPERPIN_PC13</name>
+        <initializer>RTC_TAMPERPIN_DEFAULT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="964" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="964" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga0eddec9c4aeae415fe983c2940a45a9d" prot="public" static="no">
+        <name>RTC_TAMPERPIN_PA0</name>
+        <initializer>RTC_TAMPERPIN_POS1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="965" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="965" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___h_a_l___r_t_c___aliased___defines_1ga281fbac5fa3ba4677a329635519f2bb5" prot="public" static="no">
+        <name>RTC_TAMPERPIN_PI8</name>
+        <initializer>RTC_TAMPERPIN_POS1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" line="966" column="9" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" bodystart="966" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___flag__definition" xml:lang="en-US">
+<title>TIM Flag Definition</title>
+<indexterm><primary>TIM Flag Definition</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1gac45ce66cf33b4f324323fc3036917712">TIM_FLAG_UPDATE</link>   <link linkend="_group___peripheral___registers___bits___definition_1gac8c03fabc10654d2a3f76ea40fcdbde6">TIM_SR_UIF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1gaa7eb8be054b9bd217a9abb1c8687cc55">TIM_FLAG_CC1</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga449a61344a97608d85384c29f003c0e9">TIM_SR_CC1IF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1ga9cae242f1c51b31839ffc5bc007c82a7">TIM_FLAG_CC2</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga25a48bf099467169aa50464fbf462bd8">TIM_SR_CC2IF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1ga052c380f922219659810e4fceb574a7c">TIM_FLAG_CC3</link>   <link linkend="_group___peripheral___registers___bits___definition_1gad3cf234a1059c0a04799e88382cdc0f2">TIM_SR_CC3IF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1gafd0dc57b56941f8b8250d66e289542db">TIM_FLAG_CC4</link>   <link linkend="_group___peripheral___registers___bits___definition_1gacade8a06303bf216bfb03140c7e16cac">TIM_SR_CC4IF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1gad454d70205ce5bbf3b3c0e7e43d6df62">TIM_FLAG_COM</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga91775c029171c4585e9cca6ebf1cd57a">TIM_SR_COMIF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1gacacf94fcf8b5ee4287f2d5a56dce91b7">TIM_FLAG_TRIGGER</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga7c8b16f3ced6ec03e9001276b134846e">TIM_SR_TIF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1ga01aedbe0676064a4d47dee474ddb863d">TIM_FLAG_BREAK</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga6d52cd5a57c9a26b0d993c93d9875097">TIM_SR_BIF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1ga38dfb7d1ed00af77d70bc3be28500108">TIM_FLAG_CC1OF</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga819c4b27f8fa99b537c4407521f9780c">TIM_SR_CC1OF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1ga4df0c71d3e695c214d49802942e04590">TIM_FLAG_CC2OF</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga3b7798da5863d559ea9a642af6658050">TIM_SR_CC2OF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1gac81f24eaffdf83c2db9d2e6078a00919">TIM_FLAG_CC3OF</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaf7a2d4c831eb641ba082156e41d03358">TIM_SR_CC3OF</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___flag__definition_1gafc8b04654766d98ba2c6fed601895a20">TIM_FLAG_CC4OF</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga81ba979e8309b66808e06e4de34bc740">TIM_SR_CC4OF</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___flag__definition_1ga01aedbe0676064a4d47dee474ddb863d"/>    <section>
+    <title>TIM_FLAG_BREAK</title>
+<indexterm><primary>TIM_FLAG_BREAK</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_BREAK</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_BREAK   <link linkend="_group___peripheral___registers___bits___definition_1ga6d52cd5a57c9a26b0d993c93d9875097">TIM_SR_BIF</link></computeroutput></para>
+<para>Break interrupt flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1gaa7eb8be054b9bd217a9abb1c8687cc55"/>    <section>
+    <title>TIM_FLAG_CC1</title>
+<indexterm><primary>TIM_FLAG_CC1</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_CC1</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_CC1   <link linkend="_group___peripheral___registers___bits___definition_1ga449a61344a97608d85384c29f003c0e9">TIM_SR_CC1IF</link></computeroutput></para>
+<para>Capture/Compare 1 interrupt flag </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1ga38dfb7d1ed00af77d70bc3be28500108"/>    <section>
+    <title>TIM_FLAG_CC1OF</title>
+<indexterm><primary>TIM_FLAG_CC1OF</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_CC1OF</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_CC1OF   <link linkend="_group___peripheral___registers___bits___definition_1ga819c4b27f8fa99b537c4407521f9780c">TIM_SR_CC1OF</link></computeroutput></para>
+<para>Capture 1 overcapture flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1ga9cae242f1c51b31839ffc5bc007c82a7"/>    <section>
+    <title>TIM_FLAG_CC2</title>
+<indexterm><primary>TIM_FLAG_CC2</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_CC2</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_CC2   <link linkend="_group___peripheral___registers___bits___definition_1ga25a48bf099467169aa50464fbf462bd8">TIM_SR_CC2IF</link></computeroutput></para>
+<para>Capture/Compare 2 interrupt flag </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1ga4df0c71d3e695c214d49802942e04590"/>    <section>
+    <title>TIM_FLAG_CC2OF</title>
+<indexterm><primary>TIM_FLAG_CC2OF</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_CC2OF</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_CC2OF   <link linkend="_group___peripheral___registers___bits___definition_1ga3b7798da5863d559ea9a642af6658050">TIM_SR_CC2OF</link></computeroutput></para>
+<para>Capture 2 overcapture flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1ga052c380f922219659810e4fceb574a7c"/>    <section>
+    <title>TIM_FLAG_CC3</title>
+<indexterm><primary>TIM_FLAG_CC3</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_CC3</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_CC3   <link linkend="_group___peripheral___registers___bits___definition_1gad3cf234a1059c0a04799e88382cdc0f2">TIM_SR_CC3IF</link></computeroutput></para>
+<para>Capture/Compare 3 interrupt flag </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1gac81f24eaffdf83c2db9d2e6078a00919"/>    <section>
+    <title>TIM_FLAG_CC3OF</title>
+<indexterm><primary>TIM_FLAG_CC3OF</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_CC3OF</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_CC3OF   <link linkend="_group___peripheral___registers___bits___definition_1gaf7a2d4c831eb641ba082156e41d03358">TIM_SR_CC3OF</link></computeroutput></para>
+<para>Capture 3 overcapture flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1gafd0dc57b56941f8b8250d66e289542db"/>    <section>
+    <title>TIM_FLAG_CC4</title>
+<indexterm><primary>TIM_FLAG_CC4</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_CC4</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_CC4   <link linkend="_group___peripheral___registers___bits___definition_1gacade8a06303bf216bfb03140c7e16cac">TIM_SR_CC4IF</link></computeroutput></para>
+<para>Capture/Compare 4 interrupt flag </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1gafc8b04654766d98ba2c6fed601895a20"/>    <section>
+    <title>TIM_FLAG_CC4OF</title>
+<indexterm><primary>TIM_FLAG_CC4OF</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_CC4OF</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_CC4OF   <link linkend="_group___peripheral___registers___bits___definition_1ga81ba979e8309b66808e06e4de34bc740">TIM_SR_CC4OF</link></computeroutput></para>
+<para>Capture 4 overcapture flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1gad454d70205ce5bbf3b3c0e7e43d6df62"/>    <section>
+    <title>TIM_FLAG_COM</title>
+<indexterm><primary>TIM_FLAG_COM</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_COM</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_COM   <link linkend="_group___peripheral___registers___bits___definition_1ga91775c029171c4585e9cca6ebf1cd57a">TIM_SR_COMIF</link></computeroutput></para>
+<para>Commutation interrupt flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1gacacf94fcf8b5ee4287f2d5a56dce91b7"/>    <section>
+    <title>TIM_FLAG_TRIGGER</title>
+<indexterm><primary>TIM_FLAG_TRIGGER</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_TRIGGER</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_TRIGGER   <link linkend="_group___peripheral___registers___bits___definition_1ga7c8b16f3ced6ec03e9001276b134846e">TIM_SR_TIF</link></computeroutput></para>
+<para>Trigger interrupt flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+    </section><anchor xml:id="_group___t_i_m___flag__definition_1gac45ce66cf33b4f324323fc3036917712"/>    <section>
+    <title>TIM_FLAG_UPDATE</title>
+<indexterm><primary>TIM_FLAG_UPDATE</primary><secondary>TIM Flag Definition</secondary></indexterm>
+<indexterm><primary>TIM Flag Definition</primary><secondary>TIM_FLAG_UPDATE</secondary></indexterm>
+<para><computeroutput>#define TIM_FLAG_UPDATE   <link linkend="_group___peripheral___registers___bits___definition_1gac8c03fabc10654d2a3f76ea40fcdbde6">TIM_SR_UIF</link></computeroutput></para>
+<para>Update interrupt flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+</section>
+</section>

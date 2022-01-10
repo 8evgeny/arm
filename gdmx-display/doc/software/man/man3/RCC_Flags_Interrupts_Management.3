@@ -1,0 +1,201 @@
+.TH "RCC_Flags_Interrupts_Management" 3 "Mon May 24 2021" "gdmx-display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_Flags_Interrupts_Management \- Flags Interrupts Management
+.PP
+ \- macros to manage the specified RCC Flags and interrupts\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_ENABLE_IT\fP(__INTERRUPT__)   (*(\fB__IO\fP uint8_t *) RCC_CIR_BYTE1_ADDRESS |= (__INTERRUPT__))"
+.br
+.RI "Enable RCC interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_DISABLE_IT\fP(__INTERRUPT__)   (*(\fB__IO\fP uint8_t *) RCC_CIR_BYTE1_ADDRESS &= (uint8_t)(~(__INTERRUPT__)))"
+.br
+.RI "Disable RCC interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_CLEAR_IT\fP(__INTERRUPT__)   (*(\fB__IO\fP uint8_t *) RCC_CIR_BYTE2_ADDRESS = (__INTERRUPT__))"
+.br
+.RI "Clear the RCC's interrupt pending bits\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_IT\fP(__INTERRUPT__)   ((RCC\->CIR & (__INTERRUPT__)) == (__INTERRUPT__))"
+.br
+.RI "Check the RCC's interrupt has occurred or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_CLEAR_RESET_FLAGS\fP()   (*(\fB__IO\fP uint32_t *)RCC_CSR_RMVF_BB = ENABLE)"
+.br
+.RI "Set RMVF bit to clear the reset flags\&. The reset flags are RCC_FLAG_PINRST, RCC_FLAG_PORRST, RCC_FLAG_SFTRST, RCC_FLAG_IWDGRST, RCC_FLAG_WWDGRST, RCC_FLAG_LPWRRST\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_FLAG\fP(__FLAG__)"
+.br
+.RI "Check RCC flag is set or not\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+macros to manage the specified RCC Flags and interrupts\&. 
+
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_RCC_CLEAR_IT(__INTERRUPT__)   (*(\fB__IO\fP uint8_t *) RCC_CIR_BYTE2_ADDRESS = (__INTERRUPT__))"
+
+.PP
+Clear the RCC's interrupt pending bits\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>INTERRUPT</strong>\fP specifies the interrupt pending bit to clear\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_IT_LSIRDY\fP LSI ready interrupt\&. 
+.IP "\(bu" 2
+\fBRCC_IT_LSERDY\fP LSE ready interrupt\&. 
+.IP "\(bu" 2
+\fBRCC_IT_HSIRDY\fP HSI ready interrupt\&. 
+.IP "\(bu" 2
+\fBRCC_IT_HSERDY\fP HSE ready interrupt\&. 
+.IP "\(bu" 2
+\fBRCC_IT_PLLRDY\fP Main PLL ready interrupt\&. 
+.IP "\(bu" 2
+\fBRCC_IT_CSS\fP Clock Security System interrupt 
+.PP
+.RE
+.PP
+
+.SS "#define __HAL_RCC_DISABLE_IT(__INTERRUPT__)   (*(\fB__IO\fP uint8_t *) RCC_CIR_BYTE1_ADDRESS &= (uint8_t)(~(__INTERRUPT__)))"
+
+.PP
+Disable RCC interrupt\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>INTERRUPT</strong>\fP specifies the RCC interrupt sources to be disabled\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_IT_LSIRDY\fP LSI ready interrupt 
+.IP "\(bu" 2
+\fBRCC_IT_LSERDY\fP LSE ready interrupt 
+.IP "\(bu" 2
+\fBRCC_IT_HSIRDY\fP HSI ready interrupt 
+.IP "\(bu" 2
+\fBRCC_IT_HSERDY\fP HSE ready interrupt 
+.IP "\(bu" 2
+\fBRCC_IT_PLLRDY\fP main PLL ready interrupt 
+.PP
+.RE
+.PP
+
+.SS "#define __HAL_RCC_ENABLE_IT(__INTERRUPT__)   (*(\fB__IO\fP uint8_t *) RCC_CIR_BYTE1_ADDRESS |= (__INTERRUPT__))"
+
+.PP
+Enable RCC interrupt\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>INTERRUPT</strong>\fP specifies the RCC interrupt sources to be enabled\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_IT_LSIRDY\fP LSI ready interrupt 
+.IP "\(bu" 2
+\fBRCC_IT_LSERDY\fP LSE ready interrupt 
+.IP "\(bu" 2
+\fBRCC_IT_HSIRDY\fP HSI ready interrupt 
+.IP "\(bu" 2
+\fBRCC_IT_HSERDY\fP HSE ready interrupt 
+.IP "\(bu" 2
+\fBRCC_IT_PLLRDY\fP main PLL ready interrupt 
+.PP
+.RE
+.PP
+
+.SS "#define __HAL_RCC_GET_FLAG(__FLAG__)"
+\fBValue:\fP
+.PP
+.nf
+                                      (((((__FLAG__) >> 5U) == CR_REG_INDEX)?   RCC->CR   : \
+                                      ((((__FLAG__) >> 5U) == BDCR_REG_INDEX)? RCC->BDCR : \
+                                                                              RCC->CSR)) & (1U << ((__FLAG__) & RCC_FLAG_MASK)))
+.fi
+.PP
+Check RCC flag is set or not\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>FLAG</strong>\fP specifies the flag to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_FLAG_HSIRDY\fP HSI oscillator clock ready\&. 
+.IP "\(bu" 2
+\fBRCC_FLAG_HSERDY\fP HSE oscillator clock ready\&. 
+.IP "\(bu" 2
+\fBRCC_FLAG_PLLRDY\fP Main PLL clock ready\&. 
+.IP "\(bu" 2
+\fBRCC_FLAG_LSERDY\fP LSE oscillator clock ready\&. 
+.IP "\(bu" 2
+\fBRCC_FLAG_LSIRDY\fP LSI oscillator clock ready\&. 
+.IP "\(bu" 2
+\fBRCC_FLAG_PINRST\fP Pin reset\&. 
+.IP "\(bu" 2
+\fBRCC_FLAG_PORRST\fP POR/PDR reset\&. 
+.IP "\(bu" 2
+\fBRCC_FLAG_SFTRST\fP Software reset\&. 
+.IP "\(bu" 2
+\fBRCC_FLAG_IWDGRST\fP Independent Watchdog reset\&. 
+.IP "\(bu" 2
+\fBRCC_FLAG_WWDGRST\fP Window Watchdog reset\&. 
+.IP "\(bu" 2
+\fBRCC_FLAG_LPWRRST\fP Low Power reset\&. 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP new state of \fBFLAG\fP (TRUE or FALSE)\&. 
+.RE
+.PP
+
+.SS "#define __HAL_RCC_GET_IT(__INTERRUPT__)   ((RCC\->CIR & (__INTERRUPT__)) == (__INTERRUPT__))"
+
+.PP
+Check the RCC's interrupt has occurred or not\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>INTERRUPT</strong>\fP specifies the RCC interrupt source to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBRCC_IT_LSIRDY\fP LSI ready interrupt\&. 
+.IP "\(bu" 2
+\fBRCC_IT_LSERDY\fP LSE ready interrupt\&. 
+.IP "\(bu" 2
+\fBRCC_IT_HSIRDY\fP HSI ready interrupt\&. 
+.IP "\(bu" 2
+\fBRCC_IT_HSERDY\fP HSE ready interrupt\&. 
+.IP "\(bu" 2
+\fBRCC_IT_PLLRDY\fP Main PLL ready interrupt\&. 
+.IP "\(bu" 2
+\fBRCC_IT_CSS\fP Clock Security System interrupt 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP new state of \fBINTERRUPT\fP (TRUE or FALSE)\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for gdmx-display from the source code\&.

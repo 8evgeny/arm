@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_p_w_r___p_v_d_type_def" kind="struct" language="C++" prot="public">
+    <compoundname>PWR_PVDTypeDef</compoundname>
+    <includes refid="stm32f1xx__hal__pwr_8h" local="no">stm32f1xx_hal_pwr.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_p_w_r___p_v_d_type_def_1abf0db5c2b84ba24ffeedab5cf06bad31" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t PVDLevel</definition>
+        <argsstring></argsstring>
+        <name>PVDLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PVDLevel: Specifies the PVD detection level. This parameter can be a value of <ref refid="group___p_w_r___p_v_d__detection__level" kindref="compound">PWR PVD detection level</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="50" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_p_w_r___p_v_d_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Mode</definition>
+        <argsstring></argsstring>
+        <name>Mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mode: Specifies the operating mode for the selected pins. This parameter can be a value of <ref refid="group___p_w_r___p_v_d___mode" kindref="compound">PWR PVD Mode</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="53" column="12" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PWR PVD configuration structure definition. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" line="48" column="1" bodyfile="Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h" bodystart="49" bodyend="55"/>
+    <listofallmembers>
+      <member refid="struct_p_w_r___p_v_d_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839" prot="public" virt="non-virtual"><scope>PWR_PVDTypeDef</scope><name>Mode</name></member>
+      <member refid="struct_p_w_r___p_v_d_type_def_1abf0db5c2b84ba24ffeedab5cf06bad31" prot="public" virt="non-virtual"><scope>PWR_PVDTypeDef</scope><name>PVDLevel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
