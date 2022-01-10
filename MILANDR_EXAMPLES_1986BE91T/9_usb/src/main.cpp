@@ -66,7 +66,6 @@ void Setup_CPU_Clock(void)
 }
 
 void Setup_USB(void)
-
 {
     RST_CLK_PCLKcmd(RST_CLK_PCLK_USB, ENABLE);                  // Включение тактирования схемы USB
     USB_Clock_InitStruct.USB_USBC1_Source = USB_C1HSEdiv2;      // Выбор источника тактирования USB
