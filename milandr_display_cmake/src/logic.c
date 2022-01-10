@@ -33,7 +33,7 @@ void START_logic() {
     LCD_clear_display();
 	
 //	проверка зуммера
-    PORT_SetBits(MDR_PORTB, BUZZER);
+//    PORT_SetBits(MDR_PORTB, BUZZER);
     delay_ms(100);
     PORT_ResetBits(MDR_PORTB, BUZZER);
 }

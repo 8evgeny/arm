@@ -4,7 +4,7 @@
 #include <MDR32F9Qx_timer.h>
 #include <MDR32F9Qx_iwdg.h>
 #include <MDR32F9Qx_dac.h>
-#include <math.h>
+#include "math.h"
 //---------------------------------
 #include <MDR32F9Qx_config.h>
 #include <MDR32F9Qx_usb_handlers.h>
