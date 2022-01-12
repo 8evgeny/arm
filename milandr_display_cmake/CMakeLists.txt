@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.15)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # Set ARM compiler
-#set(TOOLS_PATH /home/evg/toolchain/gcc-arm-none-eabi-new)
-set(TOOLS_PATH /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10)
+set(TOOLS_PATH /home/evg/toolchain/gcc-arm-none-eabi-new)
+#set(TOOLS_PATH /home/evgeny/ExtSSD/gcc-arm-none-eabi-10.3-2021.10)
 set(CMAKE_C_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-gcc)
 set(CMAKE_CXX_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
 
@@ -112,7 +112,6 @@ include_directories(
 
 set (SOURCES_C
     src/gpio.c
-    src/logic.c
     src/mt20s4.c
     src/rcc_delay.c
     src/usb.c
@@ -121,6 +120,7 @@ set (SOURCES_C
 
 set (SOURCES_CPP
     src/main.cpp
+    src/logic.cpp
     )
 
 set (SOURCES_SPL

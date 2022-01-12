@@ -22,6 +22,7 @@
 #include "MDR32F9Qx_config.h"
 #include "MDR32F9Qx_usb_handlers.h"
 #include "MDR32F9Qx_rst_clk.h"
+#include "usb.h"
 
 /** @addtogroup __MDR32Fx_StdPeriph_Examples MDR32Fx StdPeriph Examples
   * @{
@@ -64,7 +65,7 @@ static uint8_t Buffer[BUFFER_LENGTH];
 
     static TDebugInfo SetupPackets[USB_DEBUG_NUM_PACKETS];
     static uint32_t SPIndex;
-    static uint32_t ReceivedByteCount, SentByteCount, SkippedByteCount;
+//    static uint32_t ReceivedByteCount, SentByteCount, SkippedByteCount;
 
 #endif /* USB_DEBUG_PROTO */
 
@@ -202,7 +203,7 @@ void Setup_USB(void)
   */
 
 /* Данная процедура автоматически вызывается при приеме данных по USB */
-USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
+USB_Result USB_CDC_RecieveData(uint8_t* Buff, uint32_t Length)
 {
     USB_Result result;
 
@@ -210,8 +211,8 @@ USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
     ReceivedByteCount += Length;
 #endif /* USB_DEBUG_PROTO */
 
-    /* Передача одного байта назад на устройство */
-    result = USB_CDC_SendData(Buffer, Length);
+    /* Передача (одного байта?) назад на устройство */
+    result = USB_CDC_SendData(Buff, Length);
 
 #ifdef USB_DEBUG_PROTO
     if (result == USB_SUCCESS)

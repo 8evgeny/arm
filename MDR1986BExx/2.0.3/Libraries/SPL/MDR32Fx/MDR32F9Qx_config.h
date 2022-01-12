@@ -274,7 +274,7 @@ extern "C" {
 
 /* Uncomment USB_DEBUG_PROTO to utilize the ring buffer for received setup
  * packets and send/receive byte counters (for debug purposes). */
-//#define USB_DEBUG_PROTO
+#define USB_DEBUG_PROTO
 
 // </h>
 
