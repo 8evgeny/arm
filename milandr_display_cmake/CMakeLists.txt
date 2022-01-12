@@ -59,7 +59,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     --specs=nano.specs \
     --specs=nosys.specs \
     -mcpu=cortex-m3 \
-    -std=c++17 \
+    -std=c++11 \
     -Wl,-Map=${PROJECT_NAME}.map \
     -Wl,--print-memory-usage \
     -Wl,--defsym=__STACK_SIZE=0x0100 \
@@ -68,9 +68,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -ffreestanding \
     ")
 
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-#    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
-#    ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
+    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
+    ")
 
 #-mthumb \
 #-O3 \
@@ -81,20 +81,19 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
 #-rdynamic
 #-nostdlib
 
-#set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
-#    -ffunction-sections \
-#    -fdata-sections \
-#    -fno-strict-aliasing \
-#    -mfloat-abi=soft \
-#    -mthumb \
-#    -mcpu=cortex-m3 \
-#    --specs=nosys.specs \
-#    --specs=nano.specs \
-#    -ffreestanding \
-#    -nostartfiles \
-#    ")
-#    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
-
+set(CMAKE_LINK_LIBRARY_FLAG "${CMAKE_LINK_LIBRARY_FLAG} \
+    -ffunction-sections \
+    -fdata-sections \
+    -fno-strict-aliasing \
+    -mfloat-abi=soft \
+    -mthumb \
+    -mcpu=cortex-m3 \
+    --specs=nosys.specs \
+    --specs=nano.specs \
+    -ffreestanding \
+    -nostartfiles \
+    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld
+    ")
 
 include_directories(
     ../MDR1986BExx/2.0.3/Libraries/CMSIS/MDR32Fx/DeviceSupport/MDR1986VE9x/inc
@@ -106,6 +105,7 @@ include_directories(
     ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/inc/USB_Library
     ../MDR1986BExx/2.0.3/Libraries/MDR32Fx/inc
     ../MDR1986BExx/2.0.3/Libraries/SPL/MDR32Fx/src
+    /home/evg/toolchain/gcc-arm-none-eabi-new/arm-none-eabi
     include
     src
     )
@@ -154,17 +154,14 @@ add_library(CMSIS
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
     ${SOURCES_CPP}
-#    ${SOURCES_SPL}
-#    ${SOURCES_USB}
-#    ${SOURCES_DEVICE_SUPPORT}
     )
 
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE CXX)
 
-target_link_libraries(${PROJECT_NAME}.elf
+target_link_libraries(${PROJECT_NAME}.elf PUBLIC
     CMSIS
-    m
-    gcc
+#    m
+#    gcc
     )
 
 set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
