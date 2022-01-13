@@ -13,6 +13,7 @@
 //---------------------------------
 #include "gpio.h"
 #include "main.h"
+#include "usb.h"
 #include <string>
 #include <vector>
 //=================================
@@ -30,10 +31,10 @@ int main (int argc, char** argv) {
 	START_logic();
 	IWDT_init();
 	//-------------------------------
-	uint8_t Buffer[32];
+//	uint8_t Buffer[32];
     VCom_Configuration();
 //     CDC layer initialization
-    USB_CDC_Init(Buffer, 1, SET);
+    USB_CDC_Init(Buffer, BUFFER_LENGTH, SET);
     Setup_CPU_Clock();
     Setup_USB();
 	//-------------------------------

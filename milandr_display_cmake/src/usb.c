@@ -37,13 +37,13 @@
   */
 
 /* Private define ------------------------------------------------------------*/
-#define BUFFER_LENGTH                        100
+
 
 /* Private variables ---------------------------------------------------------*/
 USB_Clock_TypeDef USB_Clock_InitStruct;
 USB_DeviceBUSParam_TypeDef USB_DeviceBUSParam;
 
-static uint8_t Buffer[BUFFER_LENGTH];
+//static uint8_t Buffer[BUFFER_LENGTH];
 
 #ifdef USB_CDC_LINE_CODING_SUPPORTED
     static USB_CDC_LineCoding_TypeDef LineCoding;
@@ -203,7 +203,7 @@ void Setup_USB(void)
   */
 
 /* Данная процедура автоматически вызывается при приеме данных по USB */
-USB_Result USB_CDC_RecieveData(uint8_t* Buff, uint32_t Length)
+USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
     USB_Result result;
 
@@ -212,7 +212,7 @@ USB_Result USB_CDC_RecieveData(uint8_t* Buff, uint32_t Length)
 #endif /* USB_DEBUG_PROTO */
 
     /* Передача (одного байта?) назад на устройство */
-    result = USB_CDC_SendData(Buff, Length);
+    result = USB_CDC_SendData(Buffer, Length);
 
 #ifdef USB_DEBUG_PROTO
     if (result == USB_SUCCESS)
