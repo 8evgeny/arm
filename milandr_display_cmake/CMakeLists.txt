@@ -67,9 +67,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -ffreestanding \
     ")
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
-    ")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
+#    -T /home/evg/SOFT/Github/Arm/Milandr_MCU_1986x_Standard_Peripherals_Library/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/MDR32F9Qx.ld \
+#    ")
 
 #-mthumb \
 #-O3 \

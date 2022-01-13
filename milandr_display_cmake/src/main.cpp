@@ -13,13 +13,13 @@
 //---------------------------------
 #include "gpio.h"
 #include "main.h"
-#include "usb.h"
 #include <string>
 #include <vector>
 //=================================
 int main (int argc, char** argv) {
 	__disable_irq();
 //	SysTick_init();
+ //   delay_ms(2000);
 	RCC_init();
 //    std::string aa = "qqq";
 //    std::vector<int> vec{1,2,3,45};
@@ -31,10 +31,10 @@ int main (int argc, char** argv) {
 	START_logic();
 	IWDT_init();
 	//-------------------------------
-//	uint8_t Buffer[32];
+	uint8_t Buffer[32];
     VCom_Configuration();
 //     CDC layer initialization
-    USB_CDC_Init(Buffer, BUFFER_LENGTH, SET);
+    USB_CDC_Init(Buffer, 1, SET);
     Setup_CPU_Clock();
     Setup_USB();
 	//-------------------------------
