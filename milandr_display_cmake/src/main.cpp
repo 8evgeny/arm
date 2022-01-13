@@ -16,20 +16,20 @@ int main (int argc, char** argv) {
 	GPIO_init();
 	__enable_irq();
 	TIM1_init();
-	LCD_init();
-	START_logic();
 	IWDT_init();
-	//-------------------------------
-
     VCom_Configuration();
-//     CDC layer initialization
+
     USB_CDC_Init(Buffer, 1, SET);
     Setup_CPU_Clock();
-    MAIN_logic();
     Setup_USB();
+
+    LCD_init();
+    START_logic();
+
 	//-------------------------------
    
 	while (1) {
+        MAIN_logic();
 //		IWDG_ReloadCounter();	//сбрасываем IWDT
 	}	
 }
