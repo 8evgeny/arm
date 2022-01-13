@@ -9,6 +9,7 @@
 //---------------------------------
 #include "main.h"
 #include "gpio.h"
+#include "usb.h"
 #include <string>
 //---------------------------------
 // Стартовая логика
@@ -23,18 +24,18 @@ void START_logic() {
 	LCD_clear_display();
 	
     LCD_set_line(1);
-    std::string line1 = "Received";
-    line1.append("  --line1--");
+    std::string line1 = "Received: ";
+    line1.append(std::to_string(ReceivedByteCount));
     LCD_write_string((char*)line1.c_str());
     
 	LCD_set_line(2);
-    std::string line2 = "Received";
-    line2.append("  --line2--");
+    std::string line2 = "Sending:  ";
+    line2.append(std::to_string(SentByteCount));
     LCD_write_string((char*)line2.c_str());
     
 	LCD_set_line(3);
-    std::string line3 = "Received";
-    line3.append("  --line3--");
+    std::string line3 = "Skipped:  ";
+    line3.append(std::to_string(SkippedByteCount));;
     LCD_write_string((char*)line3.c_str());
     
     LCD_set_line(4);
