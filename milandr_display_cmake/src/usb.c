@@ -1,53 +1,8 @@
-/**
-  ******************************************************************************
-  * @file   main.c
-  * @author  Milandr Application Team
-  * @version V2.0.0
-  * @date    27/07/2021
-  * @brief   Main program body.
-  ******************************************************************************
-  * <br><br>
-  *
-  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
-  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
-  * TIME. AS A RESULT, MILANDR SHALL NOT BE HELD LIABLE FOR ANY
-  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
-  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
-  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
-  *
-  * <h2><center>&copy; COPYRIGHT 2021 Milandr</center></h2>
-  */
-
-/* Includes ------------------------------------------------------------------*/
-#include "MDR32F9Qx_config.h"
-#include "MDR32F9Qx_usb_handlers.h"
-#include "MDR32F9Qx_rst_clk.h"
 #include "usb.h"
+#include "main.h"
 
-/** @addtogroup __MDR32Fx_StdPeriph_Examples MDR32Fx StdPeriph Examples
-  * @{
-  */
-
-/** @addtogroup __MDR1986VE92_EVAL MDR1986VE92 Evaluation Board
-  * @{
-  */
-
-/** @addtogroup  USB_Virtual_COM_Port_Echo_92 USB Virtual COM Port Echo
-  * @{
-  */
-
-/* Private define ------------------------------------------------------------*/
-
-
-/* Private variables ---------------------------------------------------------*/
 USB_Clock_TypeDef USB_Clock_InitStruct;
 USB_DeviceBUSParam_TypeDef USB_DeviceBUSParam;
-
-//static uint8_t Buffer[BUFFER_LENGTH];
-
-#ifdef USB_CDC_LINE_CODING_SUPPORTED
-    static USB_CDC_LineCoding_TypeDef LineCoding;
-#endif /* USB_CDC_LINE_CODING_SUPPORTED */
 
 #ifdef USB_VCOM_SYNC
     volatile uint32_t PendingDataLength = 0;
@@ -55,67 +10,23 @@ USB_DeviceBUSParam_TypeDef USB_DeviceBUSParam;
 
 /* USB protocol debugging */
 #ifdef USB_DEBUG_PROTO
-
     #define USB_DEBUG_NUM_PACKETS   100
-
     typedef struct {
         USB_SetupPacket_TypeDef packet;
         uint32_t address;
     } TDebugInfo;
-
     static TDebugInfo SetupPackets[USB_DEBUG_NUM_PACKETS];
     static uint32_t SPIndex;
-//    static uint32_t ReceivedByteCount, SentByteCount, SkippedByteCount;
-
 #endif /* USB_DEBUG_PROTO */
 
-
-/* Private function prototypes -----------------------------------------------*/
-/*
-static void Setup_CPU_Clock(void);
-static void Setup_USB(void);
-static void VCom_Configuration(void);
-*/
-/* Private functions ---------------------------------------------------------*/
-
-/**
-  * @brief  Main program - initialization and empty infinite loop
-  * @param  None
-  * @retval None
-  */
-        /*
-int main(void)
-{
-    VCom_Configuration();
-
-    // CDC layer initialization
-    USB_CDC_Init(Buffer, 1, SET);
-
-    Setup_CPU_Clock();
-    Setup_USB();
-
-    // Main loop
-    while (1)
-    {
-    }
-
-}
-*/
-/**
-  * @brief  Frequencies setup
-  * @param  None
-  * @retval None
-  */
 void Setup_CPU_Clock(void)
 {
     /* Enable HSE */
     RST_CLK_HSEconfig(RST_CLK_HSE_ON);
     if (RST_CLK_HSEstatus() != SUCCESS)
     {
-        /* Trap */
         while (1)
-        {
-        }
+        {}
     }
 
     /* CPU_C1_SEL = HSE */
@@ -123,10 +34,8 @@ void Setup_CPU_Clock(void)
     RST_CLK_CPU_PLLcmd(ENABLE);
     if (RST_CLK_CPU_PLLstatus() != SUCCESS)
     {
-        /* Trap */
         while (1)
-        {
-        }
+        {}
     }
 
     /* CPU_C3_SEL = CPU_C2_SEL */
@@ -137,11 +46,6 @@ void Setup_CPU_Clock(void)
     RST_CLK_CPUclkSelection(RST_CLK_CPUclkCPU_C3);
 }
 
-/**
-  * @brief  USB Device layer setup and powering on
-  * @param  None
-  * @retval None
-  */
 void Setup_USB(void)
 {
     /* Включение тактирования */
@@ -178,29 +82,6 @@ void Setup_USB(void)
 
     USB_DEVICE_HANDLE_RESET;
 }
-
-/**
-  * @brief  Example-relating data initialization
-  * @param  None
-  * @retval None
-  */
-/* Задание конфигурации последовательной линии связи которую может прочитать хост */
-/*static*/ void VCom_Configuration(void)
-{
-#ifdef USB_CDC_LINE_CODING_SUPPORTED
-    LineCoding.dwDTERate = 115200;
-    LineCoding.bCharFormat = 0;
-    LineCoding.bParityType = 0;
-    LineCoding.bDataBits = 8;
-#endif /* USB_CDC_LINE_CODING_SUPPORTED */
-}
-
-/**
-  * @brief  USB_CDC_HANDLE_DATA_RECEIVE implementation - data echoing
-  * @param  Buffer: Pointer to the user's buffer with received data
-  * @param  Length: Length of data
-  * @retval @ref USB_Result.
-  */
 
 /* Данная процедура автоматически вызывается при приеме данных по USB */
 USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)

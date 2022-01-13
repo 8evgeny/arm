@@ -7,6 +7,11 @@
 extern "C" {
 #endif
 
+#include "MDR32F9Qx_timer.h"
+#include "MDR32F9Qx_iwdg.h"
+//---------------------------------
+#include "MDR32F9Qx_config.h"
+#include "MDR32F9Qx_usb_handlers.h"
 #include "MDR32Fx.h"
 #include "MDR32F9Qx_rst_clk.h"
 #include "MDR32F9Qx_port.h"
@@ -18,6 +23,24 @@ extern "C" {
 //---------------------------------
 // Прототипы функций
 //---------------------------------
+#define BUFFER_LENGTH    100
+static uint8_t Buffer[BUFFER_LENGTH];
+/* Задание конфигурации последовательной линии связи которую может прочитать хост */
+
+#ifdef USB_CDC_LINE_CODING_SUPPORTED
+static USB_CDC_LineCoding_TypeDef LineCoding;
+#endif /* USB_CDC_LINE_CODING_SUPPORTED */
+
+static void VCom_Configuration(void)
+{
+#ifdef USB_CDC_LINE_CODING_SUPPORTED
+    LineCoding.dwDTERate = 115200;
+    LineCoding.bCharFormat = 0;
+    LineCoding.bParityType = 0;
+    LineCoding.bDataBits = 8;
+#endif /* USB_CDC_LINE_CODING_SUPPORTED */
+}
+
 void RCC_init(void);
 void IWDT_init(void);
 void GPIO_init(void);
