@@ -28,7 +28,7 @@ extern "C" {
 //---------------------------------
 #define BUFFER_LENGTH    100
 static uint8_t Buffer[BUFFER_LENGTH];
-static char fromUSB;
+char fromUSB;
 /* Задание конфигурации последовательной линии связи которую может прочитать хост */
 
 #ifdef USB_CDC_LINE_CODING_SUPPORTED

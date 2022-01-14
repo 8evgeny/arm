@@ -45,7 +45,7 @@ void START_logic() {
     LCD_write_string((char*)line4.c_str());
     
     
-	delay_ms(5000);
+    delay_ms(1000);
     PORT_ResetBits(MDR_PORTB, LED1_ERROR);
 //    PORT_ResetBits(MDR_PORTB, LED2_REC);
 	//LCD_clear_display();

@@ -13,7 +13,7 @@ int main (int argc, char** argv) {
 	__enable_irq();
 
 	TIM1_init();
-	IWDT_init();
+    IWDT_init();
     VCom_Configuration();
 
     USB_CDC_Init(Buffer, 1, SET);
@@ -27,7 +27,7 @@ int main (int argc, char** argv) {
    
 	while (1) {
         MAIN_logic();
-//		IWDG_ReloadCounter();	//сбрасываем IWDT
+        IWDG_ReloadCounter();	//сбрасываем IWDT
 	}	
 }
 
