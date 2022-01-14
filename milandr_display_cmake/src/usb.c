@@ -86,6 +86,11 @@ void Setup_USB(void)
 /* Данная процедура автоматически вызывается при приеме данных по USB */
 USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
+    PORT_ResetBits(MDR_PORTB, LED2_REC);
+    delay_ms(1000);
+    PORT_SetBits(MDR_PORTB, LED2_REC);
+    delay_ms(1000);
+
     USB_Result result;
 
 #ifdef USB_DEBUG_PROTO

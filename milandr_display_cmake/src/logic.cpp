@@ -58,8 +58,8 @@ void START_logic() {
 // Главная логика
 //---------------------------------
 void MAIN_logic() {
-	PORT_ResetBits(MDR_PORTB, LED1_ERROR|LED2_REC);
-	delay_ms(1000);
-	PORT_SetBits(MDR_PORTB, LED1_ERROR|LED2_REC);
-	delay_ms(1000);
+//	PORT_ResetBits(MDR_PORTB, LED1_ERROR|LED2_REC);
+//	delay_ms(1000);
+//	PORT_SetBits(MDR_PORTB, LED1_ERROR|LED2_REC);
+//	delay_ms(1000);
 }
