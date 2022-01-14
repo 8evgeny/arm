@@ -113,13 +113,13 @@ set (SOURCES_C
     src/gpio.c
     src/mt20s4.c
     src/rcc_delay.c
-    src/usb.c
     src/var.c
     )
 
 set (SOURCES_CPP
     src/main.cpp
     src/logic.cpp
+    src/usb.cpp
     )
 
 set (SOURCES_SPL
