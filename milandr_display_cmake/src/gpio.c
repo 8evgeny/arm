@@ -1,7 +1,7 @@
 
 //---------------------------------
 // gpio.c
-// РџР»Р°С‚Р° РёРЅРґРёРєР°С†РёРё (MDR32)
+// Плата индикации (MDR32)
 //---------------------------------
 #include "MDR32Fx.h"
 #include "MDR32F9Qx_rst_clk.h"
@@ -10,15 +10,15 @@
 #include "gpio.h"
 #include "main.h"
 //---------------------------------
-// РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РІС‹РІРѕРґРѕРІ
+// Конфигурация выводов
 //---------------------------------
 void GPIO_init() {
 	PORT_InitTypeDef GPIO_InitStructure;
-	//Р’РєР»СЋС‡РµРЅРёРµ С‚Р°РєС‚РёСЂРѕРІР°РЅРёСЏ
+	//Включение тактирования
 	RST_CLK_PCLKcmd(RST_CLK_PCLK_PORTA, ENABLE);
 	RST_CLK_PCLKcmd(RST_CLK_PCLK_PORTB, ENABLE);
 	
-	//РќР°СЃС‚СЂРѕР№РєР° РІС‹РІРѕРґРѕРІ РїРѕСЂС‚Р° A
+	//Настройка выводов порта A
 	GPIO_InitStructure.PORT_Pin = (D0|D1|D2|D3|D4|D5|D6|D7);
 	GPIO_InitStructure.PORT_OE = PORT_OE_OUT; 
 	GPIO_InitStructure.PORT_PULL_UP	= PORT_PULL_UP_ON;
@@ -31,7 +31,7 @@ void GPIO_init() {
 	GPIO_InitStructure.PORT_MODE = PORT_MODE_DIGITAL;
 	PORT_Init(MDR_PORTA, &GPIO_InitStructure);
 	
-	//РќР°СЃС‚СЂРѕР№РєР° РІС‹РІРѕРґРѕРІ РїРѕСЂС‚Р° B
+	//Настройка выводов порта B`
 	GPIO_InitStructure.PORT_Pin = (LED1_ERROR|LED2_REC|BUZZER|RS|RW|EN);
 	GPIO_InitStructure.PORT_OE = PORT_OE_OUT; 
 	GPIO_InitStructure.PORT_PULL_UP	= PORT_PULL_UP_ON;

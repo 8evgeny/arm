@@ -1,7 +1,7 @@
 
 //---------------------------------
 // rcc_delay.c
-// РџР»Р°С‚Р° РёРЅРґРёРєР°С†РёРё (MDR32)
+// Плата индикации (MDR32)
 //---------------------------------
 #include "MDR32Fx.h"
 #include "MDR32F9Qx_rst_clk.h"
@@ -12,48 +12,48 @@
 #include "gpio.h"
 #include "main.h"
 //---------------------------------
-// РќР°СЃС‚СЂРѕР№РєР° С‚Р°РєС‚РёСЂРѕРІР°РЅРёСЏ РјРёРєСЂРѕРєРѕРЅС‚СЂРѕР»Р»РµСЂР°
+// Настройка тактирования микроконтроллера
 //---------------------------------
 void RCC_init() {
-	RST_CLK_DeInit();	//РЎР±СЂРѕСЃ РЅР°СЃС‚СЂРѕРµРє
-	RST_CLK_HSEconfig(RST_CLK_HSE_ON);			//РІРєР»СЋС‡РµРЅРёРµ РІРЅРµС€РЅРµРіРѕ РєРІР°СЂС†Р° 8 РњР“С† (CPU_C1_SEL)
-	while (RST_CLK_HSEstatus() != SUCCESS);	//Р¶РґРµРј РІРєР»СЋС‡РµРЅРёСЏ HSE
-	RST_CLK_CPUclkSelectionC1(RST_CLK_CPU_C1srcHSEdiv1);	//РјСѓР»СЊС‚РёРїР»РµРєСЃРѕСЂ CPU_C1: РёСЃС‚РѕС‡РЅРёРє С‚Р°РєС‚РёСЂРѕРІР°РЅРёСЏ CPU
+	RST_CLK_DeInit();	//Сброс настроек
+	RST_CLK_HSEconfig(RST_CLK_HSE_ON);			//включение внешнего кварца 8 МГц (CPU_C1_SEL)
+	while (RST_CLK_HSEstatus() != SUCCESS);	//ждем включения HSE
+	RST_CLK_CPUclkSelectionC1(RST_CLK_CPU_C1srcHSEdiv1);	//мультиплексор CPU_C1: источник тактирования CPU
 	RST_CLK_CPU_PLLconfig(RST_CLK_CPU_PLLsrcHSEdiv1, RST_CLK_CPU_PLLmul9); 	//CPU_PLL = 8MHz * 9 = 72 MHz
-	RST_CLK_CPU_PLLuse(ENABLE);	//РјСѓР»СЊС‚РёРїР»РµРєСЃРѕСЂ CPU_C2_SEL: РёСЃРїРѕР»СЊР·СѓРµРј CPU_PLL РґР»СЏ РІС…РѕРґР° CPU_C3_SEL
-  RST_CLK_CPU_PLLcmd(ENABLE);	//РІРєР»СЋС‡Р°РµРј CPU_PLL
-	while (RST_CLK_CPU_PLLstatus() != SUCCESS);	//Р¶РґРµРј РІРєР»СЋС‡РµРЅРёСЏ CPU_PLL
-	RST_CLK_CPUclkPrescaler(RST_CLK_CPUclkDIV1);	//РїСЂРµРґРґРµР»РёС‚РµР»СЊ CPU_C3_SEL = 1
-	RST_CLK_CPUclkSelection(RST_CLK_CPUclkCPU_C3);	//РёСЃС‚РѕС‡РЅРёРє С‚Р°РєС‚РёСЂРѕРІР°РЅРёСЏ - РІС‹С…РѕРґ РїСЂРµРґРґРµР»РёС‚РµР»СЏ
-	RST_CLK_HSIcmd(DISABLE);// Р’С‹РєР»СЋС‡Р°РµРј HSI	
+	RST_CLK_CPU_PLLuse(ENABLE);	//мультиплексор CPU_C2_SEL: используем CPU_PLL для входа CPU_C3_SEL
+  RST_CLK_CPU_PLLcmd(ENABLE);	//включаем CPU_PLL
+	while (RST_CLK_CPU_PLLstatus() != SUCCESS);	//ждем включения CPU_PLL
+	RST_CLK_CPUclkPrescaler(RST_CLK_CPUclkDIV1);	//предделитель CPU_C3_SEL = 1
+	RST_CLK_CPUclkSelection(RST_CLK_CPUclkCPU_C3);	//источник тактирования - выход предделителя
+	RST_CLK_HSIcmd(DISABLE);// Выключаем HSI	
 }
 //---------------------------------
-// РќР°СЃС‚СЂРѕР№РєР° IWDT
+// Настройка IWDT
 //---------------------------------
 void IWDT_init() {
-	RST_CLK_LSIcmd(ENABLE);	// РІРєР»СЋС‡Р°РµРј LSI
-	while (RST_CLK_LSIstatus() != SUCCESS);	//Р¶РґРµРј РІРєР»СЋС‡РµРЅРёСЏ LSI
-	RST_CLK_PCLKcmd(RST_CLK_PCLK_IWDG, ENABLE);	//РІРєР»СЋС‡РµРЅРёРµ С‚Р°РєС‚РёСЂРѕРІР°РЅРёСЏ
-	IWDG_WriteAccessEnable();	//СЂР°Р·СЂРµС€Р°РµРј РґРѕСЃС‚СѓРї Рє СЂРµРіРёСЃС‚СЂР°Рј IWDG
-	IWDG_SetPrescaler(IWDG_Prescaler_256);	//СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РїСЂРµРґРґРµР»РёС‚РµР»СЊ 4, 8, 16 ... 256
-	IWDG_SetReload(0x0FFF);	//Р·РЅР°С‡РµРЅРёРµ РґР»СЏ РїРµСЂРµР·Р°РіСЂСѓР·РєРё 0x0000...0x0FFF.
-	IWDG_ReloadCounter();		//РїРµСЂРµР·Р°РіСЂСѓР¶Р°РµРј Р·РЅР°С‡РµРЅРёРµ
-	IWDG_WriteAccessDisable();	//Р·Р°РїСЂРµС‰Р°РµРј РґРѕСЃС‚СѓРї Рє СЂРµРіРёСЃС‚СЂР°Рј IWDG
-	IWDG_Enable();	//РІРєР»СЋС‡Р°РµРј IWDT	
+	RST_CLK_LSIcmd(ENABLE);	// включаем LSI
+	while (RST_CLK_LSIstatus() != SUCCESS);	//ждем включения LSI
+	RST_CLK_PCLKcmd(RST_CLK_PCLK_IWDG, ENABLE);	//включение тактирования
+	IWDG_WriteAccessEnable();	//разрешаем доступ к регистрам IWDG
+	IWDG_SetPrescaler(IWDG_Prescaler_256);	//устанавливаем предделитель 4, 8, 16 ... 256
+	IWDG_SetReload(0x0FFF);	//значение для перезагрузки 0x0000...0x0FFF.
+	IWDG_ReloadCounter();		//перезагружаем значение
+	IWDG_WriteAccessDisable();	//запрещаем доступ к регистрам IWDG
+	IWDG_Enable();	//включаем IWDT	
 }
 //---------------------------------
-// РќР°СЃС‚СЂРѕР№РєР° TIM1
+// Настройка TIM1
 //---------------------------------
 void TIM1_init() {
 	TIMER_CntInitTypeDef TIM1_InitStructure;
-	//Р’РєР»СЋС‡РµРЅРёРµ С‚Р°РєС‚РёСЂРѕРІР°РЅРёСЏ
+	//Включение тактирования
 	RST_CLK_PCLKcmd (RST_CLK_PCLK_TIMER1, ENABLE);
-	//РґРµР»РёС‚РµР»СЊ РІС…РѕРґРЅРѕР№ С‡Р°СЃС‚РѕС‚С‹ TIM_CLOCK = 2 (С…Р·, РЅРѕ С‚Р°Рє СЂР°Р±РѕС‚Р°РµС‚ РЅРѕСЂРјР°Р»СЊРЅРѕ)
+	//делитель входной частоты TIM_CLOCK = 2 (хз, но так работает нормально)
 	TIMER_BRGInit(MDR_TIMER1, TIMER_HCLKdiv1);	
-	//РќР°СЃС‚СЂРѕР№РєР° TIM1
+	//Настройка TIM1
 	TIM1_InitStructure.TIMER_IniCounter = 0;
-	TIM1_InitStructure.TIMER_Prescaler = 3600;	//РїСЂРµРґРґРµР»РёС‚РµР»СЊ 3600	
-	TIM1_InitStructure.TIMER_Period = 10;	//СЃСЂР°РІРЅРёРІР°РµС‚СЃСЏ СЃ 1000 (С…Р·, РЅРѕ С‚Р°Рє СЂР°Р±РѕС‚Р°РµС‚ РЅРѕСЂРјР°Р»СЊРЅРѕ)
+	TIM1_InitStructure.TIMER_Prescaler = 3600;	//предделитель 3600	
+	TIM1_InitStructure.TIMER_Period = 10;	//сравнивается с 1000 (хз, но так работает нормально)
 	TIM1_InitStructure.TIMER_CounterMode = TIMER_CntMode_ClkFixedDir;
 	TIM1_InitStructure.TIMER_CounterDirection = TIMER_CntDir_Up;
 	TIM1_InitStructure.TIMER_EventSource = TIMER_EvSrc_TM1;
@@ -65,8 +65,8 @@ void TIM1_init() {
 	TIM1_InitStructure.TIMER_BRK_Polarity = TIMER_BRKPolarity_NonInverted;
 	TIMER_CntInit(MDR_TIMER1, &TIM1_InitStructure);
 	TIMER_ITConfig(MDR_TIMER1, TIMER_STATUS_CNT_ARR, ENABLE);
-//	NVIC_SetPriority (Timer1_IRQn, 1); // РџСЂРёРѕСЂРёС‚РµС‚ РїСЂРµСЂС‹РІР°РЅРёСЏ
-//	NVIC_EnableIRQ(Timer1_IRQn);
+	NVIC_SetPriority (Timer1_IRQn, 1); // Приоритет прерывания
+	NVIC_EnableIRQ(Timer1_IRQn);
 	TIMER_Cmd(MDR_TIMER1, ENABLE);
 }
 //---------------------------------
@@ -75,7 +75,7 @@ void Timer1_IRQHandler() {
 	if (delay_dec) delay_dec--;
 }
 //---------------------------------
-// Р—Р°РґРµСЂР¶РєР° РІ РјРёР»Р»РёСЃРµРєСѓРґР°С…
+// Задержка в миллисекудах
 //---------------------------------
 void delay_ms(uint32_t ms) {
 	delay_dec = ms;
@@ -83,17 +83,17 @@ void delay_ms(uint32_t ms) {
 }
 /*
 //---------------------------------
-// Р’РєР»СЋС‡РµРЅРёРµ SysTick
+// Включение SysTick
 //---------------------------------
 void SysTick_init(void) {
-	#define	CLKSOURCE		(1<<2)	//СѓРєР°Р·С‹РІР°РµРј РёСЃС‚РѕС‡РЅРёРє СЃРёРЅС…СЂРѕСЃРёРіРЅР°Р»Р°: 0 - LSI, 1 - HCLK
-	#define TCKINT			(1<<1)	//СЂР°Р·СЂРµС€Р°РµРј Р·Р°РїСЂРѕСЃ РЅР° РїСЂРµСЂС‹РІР°РЅРёРµ РѕС‚ СЃРёСЃС‚РµРјРЅРѕРіРѕ С‚Р°Р№РјРµСЂР°
-	#define ENABLE			(1<<0)	//СЂР°Р·СЂРµС€Р°РµРј СЂР°Р±РѕС‚Сѓ С‚Р°Р№РјРµСЂР°
+	#define	CLKSOURCE		(1<<2)	//указываем источник синхросигнала: 0 - LSI, 1 - HCLK
+	#define TCKINT			(1<<1)	//разрешаем запрос на прерывание от системного таймера
+	#define ENABLE			(1<<0)	//разрешаем работу таймера
 	SysTick->LOAD = (72000000/1000)-1;
 	SysTick->CTRL |= CLKSOURCE|TCKINT|ENABLE;	
 }
 //---------------------------------
-// РџСЂРµСЂС‹РІР°РЅРёРµ SysTick
+// Прерывание SysTick
 //---------------------------------
 void SysTick_Handler (void) {
 	//if (delay_dec) delay_dec--;

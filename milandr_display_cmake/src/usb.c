@@ -82,18 +82,20 @@ void Setup_USB(void)
 
     USB_DEVICE_HANDLE_RESET;
 
-    PORT_SetBits(MDR_PORTB, LED2_REC);
-    delay_ms(500);
-    PORT_ResetBits(MDR_PORTB, LED2_REC);
+
+    
+//    PORT_SetBits(MDR_PORTB, BUZZER);
+//    delay_ms(50);
+//    PORT_ResetBits(MDR_PORTB, BUZZER);
+//    delay_ms(2000);
+//    PORT_SetBits(MDR_PORTB, BUZZER);
+//    delay_ms(50);
+//    PORT_ResetBits(MDR_PORTB, BUZZER);
 }
 
 /* Данная процедура автоматически вызывается при приеме данных по USB */
 USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
-    PORT_SetBits(MDR_PORTB, BUZZER);
-    delay_ms(200);
-    PORT_ResetBits(MDR_PORTB, BUZZER);
-
     USB_Result result;
 
 #ifdef USB_DEBUG_PROTO
