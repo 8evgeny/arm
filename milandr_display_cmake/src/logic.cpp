@@ -60,6 +60,12 @@ void START_logic() {
 //---------------------------------
 void MAIN_logic() {
     PORT_ResetBits(MDR_PORTB, LED1_ERROR);
+    LCD_clear_display();
+
+    LCD_set_line(1);
+    auto ll = std::string{fromUSB};
+    LCD_write_string((char*)ll.c_str());
+
 //    PORT_ResetBits(MDR_PORTB, LED2_REC);
     delay_ms(1000);
     PORT_SetBits(MDR_PORTB, LED1_ERROR);
