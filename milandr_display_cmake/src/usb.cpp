@@ -1,5 +1,6 @@
 #include "usb.h"
 #include "main.h"
+#include <string>
 
 USB_Clock_TypeDef USB_Clock_InitStruct;
 USB_DeviceBUSParam_TypeDef USB_DeviceBUSParam;
@@ -97,6 +98,7 @@ void Setup_USB(void)
 USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
     USB_Result result;
+    fromUSB = Buffer[0];
 
 #ifdef USB_DEBUG_PROTO
     ReceivedByteCount += Length;

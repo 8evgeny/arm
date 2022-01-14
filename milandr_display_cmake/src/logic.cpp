@@ -26,7 +26,7 @@ void START_logic() {
 	
     LCD_set_line(1);
     std::string line1 = "Received: ";
-    line1.append(std::to_string(ReceivedByteCount));
+    line1.append(std::to_string(fromUSB));
     LCD_write_string((char*)line1.c_str());
     
 	LCD_set_line(2);
