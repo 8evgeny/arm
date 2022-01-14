@@ -16,7 +16,8 @@
 //---------------------------------
 void START_logic() {
 	//приветствие
-	PORT_SetBits(MDR_PORTB, LED1_ERROR|LED2_REC);	//проверка светодиодов
+    PORT_SetBits(MDR_PORTB, LED1_ERROR);	//проверка светодиодов
+//    PORT_SetBits(MDR_PORTB, LED2_REC);
 	LCD_control(1,0,0);		//включение дисплея и выбор курсора
 	LCD_entry_mode(1,0);	//установка направления сдвига
 	LCD_clear_display();	//установка курсора в начало
@@ -45,21 +46,23 @@ void START_logic() {
     
     
 	delay_ms(5000);
-	PORT_ResetBits(MDR_PORTB, LED1_ERROR|LED2_REC);
-	
+    PORT_ResetBits(MDR_PORTB, LED1_ERROR);
+//    PORT_ResetBits(MDR_PORTB, LED2_REC);
 	//LCD_clear_display();
 	
 	//проверка зуммера
-	//PORT_SetBits(MDR_PORTB, BUZZER);	
-	delay_ms(100);
-	PORT_ResetBits(MDR_PORTB, BUZZER);
+//	PORT_SetBits(MDR_PORTB, BUZZER);
+//	delay_ms(100);
+//	PORT_ResetBits(MDR_PORTB, BUZZER);
 }
 //---------------------------------
 // Главная логика
 //---------------------------------
 void MAIN_logic() {
-//	PORT_ResetBits(MDR_PORTB, LED1_ERROR|LED2_REC);
-//	delay_ms(1000);
-//	PORT_SetBits(MDR_PORTB, LED1_ERROR|LED2_REC);
-//	delay_ms(1000);
+    PORT_ResetBits(MDR_PORTB, LED1_ERROR);
+//    PORT_ResetBits(MDR_PORTB, LED2_REC);
+    delay_ms(1000);
+    PORT_SetBits(MDR_PORTB, LED1_ERROR);
+//    PORT_SetBits(MDR_PORTB, LED2_REC);
+    delay_ms(1000);
 }
