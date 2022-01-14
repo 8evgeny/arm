@@ -99,7 +99,7 @@ USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
     USB_Result result;
     fromUSB = Buffer[0];
-
+    LCD_write_data(fromUSB);
 #ifdef USB_DEBUG_PROTO
     ReceivedByteCount += Length;
 #endif /* USB_DEBUG_PROTO */
