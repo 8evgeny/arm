@@ -99,12 +99,12 @@ USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
     USB_Result result;
     fromUSB = Buffer[0];
-    if (Buffer[0] == 0x20)
-    {
-            PORT_SetBits(MDR_PORTB, BUZZER);
-            delay_ms(200);
-            PORT_ResetBits(MDR_PORTB, BUZZER);
-    }
+//    if (Buffer[0] == 0x20)
+//    {
+//            PORT_SetBits(MDR_PORTB, BUZZER);
+//            delay_ms(200);
+//            PORT_ResetBits(MDR_PORTB, BUZZER);
+//    }
 
 #ifdef USB_DEBUG_PROTO
     ReceivedByteCount += Length;

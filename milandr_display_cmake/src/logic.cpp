@@ -61,12 +61,18 @@ void START_logic() {
 void MAIN_logic() {
     PORT_ResetBits(MDR_PORTB, LED1_ERROR);
 
+        if (Buffer[0] == 0x20)
+        {
+                PORT_SetBits(MDR_PORTB, LED2_REC);
+        }
+
+
 //    LCD_set_line(1);
 //    auto ll = std::string{fromUSB};
 //    LCD_write_string((char*)ll.c_str());
 
-//    PORT_ResetBits(MDR_PORTB, LED2_REC);
     delay_ms(1000);
+    PORT_ResetBits(MDR_PORTB, LED2_REC);
     PORT_SetBits(MDR_PORTB, LED1_ERROR);
 //    PORT_SetBits(MDR_PORTB, LED2_REC);
     delay_ms(1000);
