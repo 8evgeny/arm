@@ -4,7 +4,6 @@
 #include <string>
 #include <vector>
 #include <string.h>
-//=================================
 
 int main (int argc, char** argv) {
 
@@ -17,34 +16,46 @@ int main (int argc, char** argv) {
     IWDT_init();
     VCom_Configuration();
 
-    USB_CDC_Init(Buffer, 3, SET);
+    USB_CDC_Init(Buffer, 84, SET);
     Setup_CPU_Clock();
     Setup_USB();
 
     LCD_init();
-    START_logic();
-
-    //-------------------------------
+    Check();
 
 	while (1) {
-
-        if(Buffer[0] == 32)
+        if(Buffer[0] == 49) //если 1 то горит первый светодиод
+        {
+            PORT_SetBits(MDR_PORTB, LED2_REC);
+        }
+        else
+        {
+            PORT_ResetBits(MDR_PORTB, LED2_REC);
+        }
+        if(Buffer[1] == 49) //если 1 то горит второй светодиод
         {
             PORT_SetBits(MDR_PORTB, LED1_ERROR);
-            delay_ms(1000);
+        }
+        else
+        {
             PORT_ResetBits(MDR_PORTB, LED1_ERROR);
         }
-
-
-        char  str1[21];
-        memcpy (str1, Buffer, 20);
+        if(Buffer[2] == 49) //если 1 то сигнал
+        {
+            PORT_SetBits(MDR_PORTB, BUZZER);
+        }
+        else
+        {
+            PORT_ResetBits(MDR_PORTB, BUZZER);
+        }
+        char  str1[21]; //4 строки на экране
         char  str2[21];
-        memcpy (str2, Buffer + 20 , 20);
         char  str3[21];
-        memcpy (str3, Buffer + 40 , 20);
         char  str4[21];
-        memcpy (str4, Buffer + 60 , 20);
-
+        memcpy (str1, Buffer+3, 20);
+        memcpy (str2, Buffer + 23 , 20);
+        memcpy (str3, Buffer + 43 , 20);
+        memcpy (str4, Buffer + 63 , 20);
         PrintString1(str1);
         PrintString2(str2);
         PrintString3(str3);
@@ -54,8 +65,5 @@ int main (int argc, char** argv) {
 	}	
 }
 
-void PrintLcd(char* string)
-{
 
-}
 

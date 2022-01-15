@@ -26,7 +26,7 @@ extern "C" {
 //---------------------------------
 // Прототипы функций
 //---------------------------------
-#define BUFFER_LENGTH    83
+#define BUFFER_LENGTH    100
 static uint8_t Buffer[BUFFER_LENGTH];
 
 /* Задание конфигурации последовательной линии связи которую может прочитать хост */
@@ -48,7 +48,7 @@ static void VCom_Configuration(void)
 void RCC_init(void);
 void IWDT_init(void);
 void GPIO_init(void);
-void START_logic(void);
+void Check(void);
 void PrintString1(char* str);
 void PrintString2(char* str);
 void PrintString3(char* str);

@@ -82,32 +82,12 @@ void Setup_USB(void)
 #endif /* USB_INT_HANDLE_REQUIRED */
 
     USB_DEVICE_HANDLE_RESET;
-
-
-    
-//    PORT_SetBits(MDR_PORTB, BUZZER);
-//    delay_ms(50);
-//    PORT_ResetBits(MDR_PORTB, BUZZER);
-//    delay_ms(2000);
-//    PORT_SetBits(MDR_PORTB, BUZZER);
-//    delay_ms(50);
-//    PORT_ResetBits(MDR_PORTB, BUZZER);
 }
 
 /* Данная процедура автоматически вызывается при приеме данных по USB */
 USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
     USB_Result result;
-
-
-//    PORT_SetBits(MDR_PORTB, LED2_REC);
-
-//    if (Buffer[0] == 0x20)
-//    {
-//            PORT_SetBits(MDR_PORTB, BUZZER);
-//            delay_ms(200);
-//            PORT_ResetBits(MDR_PORTB, BUZZER);
-//    }
 
 #ifdef USB_DEBUG_PROTO
     ReceivedByteCount += Length;
@@ -283,5 +263,4 @@ void assert_failed(uint32_t file_id, uint32_t line, const uint8_t* expr);
 /** @} */ /* End of group __MDR32Fx_StdPeriph_Examples */
 
 /******************* (C) COPYRIGHT 2021 Milandr ********************************
-*
-* END OF FILE main.c */
+*/
