@@ -66,8 +66,8 @@ void MAIN_logic() {
     delay_ms(1000);
     PORT_SetBits(MDR_PORTB, LED1_ERROR);
 
-    LCD_set_line(1);
-    std::string ll = std::string{std::to_string(LenFromUSB)};
+    LCD_set_XY(11,1);
+    std::string ll = std::string{std::to_string(44)};
     LCD_write_string((char*)ll.c_str());
 
     if (charFromUSB == 0x20)
