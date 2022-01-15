@@ -115,7 +115,7 @@ USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 #endif /* USB_DEBUG_PROTO */
 
     /* Передача (одного байта?) назад на устройство */
-    result = USB_CDC_SendData(Buffer, Length);
+//    result = USB_CDC_SendData(Buffer, Length);
 
 #ifdef USB_DEBUG_PROTO
     if (result == USB_SUCCESS)

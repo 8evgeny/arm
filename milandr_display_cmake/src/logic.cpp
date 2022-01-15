@@ -63,10 +63,10 @@ void MAIN_logic(char* str) {
     PORT_ResetBits(MDR_PORTB, LED1_ERROR);
     PORT_ResetBits(MDR_PORTB, BUZZER);
 
-    delay_ms(1000);
+    delay_ms(100);
     PORT_SetBits(MDR_PORTB, LED1_ERROR);
 
-    LCD_set_XY(11,1);
+    LCD_set_XY(1, 1);
 //    std::string ll = std::string{((char*)Buffer)};
 //    LCD_write_string((char*)ll.c_str());
 
@@ -76,6 +76,6 @@ void MAIN_logic(char* str) {
         PORT_SetBits(MDR_PORTB, BUZZER);
     }
 
-    delay_ms(1000);
+    delay_ms(100);
 
 }

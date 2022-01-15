@@ -12,11 +12,11 @@ int main (int argc, char** argv) {
 	GPIO_init();
 	__enable_irq();
 
-	TIM1_init();
+    TIM1_init();
     IWDT_init();
     VCom_Configuration();
 
-    USB_CDC_Init(Buffer, 10, SET);
+    USB_CDC_Init(Buffer, 20, SET);
     Setup_CPU_Clock();
     Setup_USB();
 
