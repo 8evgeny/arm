@@ -26,7 +26,7 @@ extern "C" {
 //---------------------------------
 // Прототипы функций
 //---------------------------------
-#define BUFFER_LENGTH    100
+#define BUFFER_LENGTH    83
 static uint8_t Buffer[BUFFER_LENGTH];
 static uint8_t charFromUSB;
 static uint32_t LenFromUSB;
@@ -50,9 +50,11 @@ static void VCom_Configuration(void)
 void RCC_init(void);
 void IWDT_init(void);
 void GPIO_init(void);
-void MAIN_logic(char*);
 void START_logic(void);
-
+void PrintString1(char* str);
+void PrintString2(char* str);
+void PrintString3(char* str);
+void PrintString4(char* str);
 //---------------------------------
 //void SysTick_init(void);
 //void SysTick_Handler(void);
