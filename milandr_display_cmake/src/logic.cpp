@@ -57,7 +57,7 @@ void START_logic() {
 //---------------------------------
 // Главная логика
 //---------------------------------
-void MAIN_logic() {
+void MAIN_logic(char* str) {
 
     PORT_ResetBits(MDR_PORTB, LED2_REC);
     PORT_ResetBits(MDR_PORTB, LED1_ERROR);
@@ -67,9 +67,10 @@ void MAIN_logic() {
     PORT_SetBits(MDR_PORTB, LED1_ERROR);
 
     LCD_set_XY(11,1);
-    std::string ll = std::string{std::to_string(44)};
-    LCD_write_string((char*)ll.c_str());
+//    std::string ll = std::string{((char*)Buffer)};
+//    LCD_write_string((char*)ll.c_str());
 
+    LCD_write_string(str);
     if (charFromUSB == 0x20)
     {
         PORT_SetBits(MDR_PORTB, BUZZER);

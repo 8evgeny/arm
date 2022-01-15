@@ -16,19 +16,24 @@ int main (int argc, char** argv) {
     IWDT_init();
     VCom_Configuration();
 
-    USB_CDC_Init(Buffer, 2, SET);
+    USB_CDC_Init(Buffer, 10, SET);
     Setup_CPU_Clock();
     Setup_USB();
 
     LCD_init();
     START_logic();
 
-	//-------------------------------
-   
+    //-------------------------------
+
 	while (1) {
-        MAIN_logic();
+        char * str = (char*) Buffer;
+        MAIN_logic(str);
         IWDG_ReloadCounter();	//сбрасываем IWDT
 	}	
 }
 
+void PrintLcd(char* string)
+{
+
+}
 
