@@ -16,8 +16,6 @@
 //---------------------------------
 void START_logic() {
 	//приветствие
-    PORT_SetBits(MDR_PORTB, LED1_ERROR);	//проверка светодиодов
-//    PORT_SetBits(MDR_PORTB, LED2_REC);
 	LCD_control(1,0,0);		//включение дисплея и выбор курсора
 	LCD_entry_mode(1,0);	//установка направления сдвига
 	LCD_clear_display();	//установка курсора в начало
@@ -43,39 +41,24 @@ void START_logic() {
     line4.append("  --line4--");
     LCD_write_string((char*)line4.c_str());
     
-    
+    PORT_SetBits(MDR_PORTB, LED1_ERROR);	//проверка светодиодов
+    PORT_SetBits(MDR_PORTB, LED2_REC);
     delay_ms(1000);
     PORT_ResetBits(MDR_PORTB, LED1_ERROR);
-//    PORT_ResetBits(MDR_PORTB, LED2_REC);
+    PORT_ResetBits(MDR_PORTB, LED2_REC);
 	//LCD_clear_display();
 	
 	//проверка зуммера
-//	PORT_SetBits(MDR_PORTB, BUZZER);
-//	delay_ms(100);
-//	PORT_ResetBits(MDR_PORTB, BUZZER);
+    PORT_SetBits(MDR_PORTB, BUZZER);
+    delay_ms(100);
+    PORT_ResetBits(MDR_PORTB, BUZZER);
 }
 //---------------------------------
 // Главная логика
 //---------------------------------
 void MAIN_logic(char* str) {
-
-    PORT_ResetBits(MDR_PORTB, LED2_REC);
-    PORT_ResetBits(MDR_PORTB, LED1_ERROR);
-    PORT_ResetBits(MDR_PORTB, BUZZER);
-
-    delay_ms(100);
-    PORT_SetBits(MDR_PORTB, LED1_ERROR);
-
     LCD_set_XY(1, 1);
-//    std::string ll = std::string{((char*)Buffer)};
-//    LCD_write_string((char*)ll.c_str());
     std::string ss{str};
     LCD_write_string((char*)ss.c_str());
-    if (charFromUSB == 0x20)
-    {
-        PORT_SetBits(MDR_PORTB, BUZZER);
-    }
-
-    delay_ms(100);
-
+    delay_ms(50);
 }

@@ -101,7 +101,7 @@ USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
     charFromUSB = Buffer[0];
     LenFromUSB = Length;
 
-    PORT_SetBits(MDR_PORTB, LED2_REC);
+//    PORT_SetBits(MDR_PORTB, LED2_REC);
 
 //    if (Buffer[0] == 0x20)
 //    {
