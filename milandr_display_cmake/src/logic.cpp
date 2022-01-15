@@ -59,11 +59,12 @@ void START_logic() {
 // Главная логика
 //---------------------------------
 void MAIN_logic() {
+    PORT_ResetBits(MDR_PORTB, LED2_REC);
     PORT_ResetBits(MDR_PORTB, LED1_ERROR);
 
         if (Buffer[0] == 0x20)
         {
-                PORT_SetBits(MDR_PORTB, LED2_REC);
+            PORT_SetBits(MDR_PORTB, LED2_REC);
         }
 
 
