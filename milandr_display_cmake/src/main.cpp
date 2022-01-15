@@ -17,7 +17,7 @@ int main (int argc, char** argv) {
     IWDT_init();
     VCom_Configuration();
 
-    USB_CDC_Init(Buffer, 80, SET);
+    USB_CDC_Init(Buffer, 3, SET);
     Setup_CPU_Clock();
     Setup_USB();
 
@@ -27,6 +27,15 @@ int main (int argc, char** argv) {
     //-------------------------------
 
 	while (1) {
+
+        if(Buffer[0] == 32)
+        {
+            PORT_SetBits(MDR_PORTB, LED1_ERROR);
+            delay_ms(1000);
+            PORT_ResetBits(MDR_PORTB, LED1_ERROR);
+        }
+
+
         char  str1[21];
         memcpy (str1, Buffer, 20);
         char  str2[21];

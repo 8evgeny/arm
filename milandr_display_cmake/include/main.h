@@ -28,8 +28,6 @@ extern "C" {
 //---------------------------------
 #define BUFFER_LENGTH    83
 static uint8_t Buffer[BUFFER_LENGTH];
-static uint8_t charFromUSB;
-static uint32_t LenFromUSB;
 
 /* Задание конфигурации последовательной линии связи которую может прочитать хост */
 

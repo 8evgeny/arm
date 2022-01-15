@@ -15,31 +15,22 @@
 // Стартовая логика
 //---------------------------------
 void START_logic() {
-	//приветствие
 	LCD_control(1,0,0);		//включение дисплея и выбор курсора
 	LCD_entry_mode(1,0);	//установка направления сдвига
 	LCD_clear_display();	//установка курсора в начало
 	LCD_function(1,1);	    //страница знакогенератора 1
 	LCD_clear_display();
 	
-    std::string line1 = "Received: ";
-    line1.append(std::to_string(42));
-    LCD_write_string((char*)line1.c_str());
     
-	LCD_set_line(2);
-    std::string line2 = "Sending:  ";
-    line2.append(std::to_string(SentByteCount));
-    LCD_write_string((char*)line2.c_str());
+//	LCD_set_line(3);
+//    std::string line3 = "Skipped:  ";
+//    line3.append(std::to_string(SkippedByteCount));;
+//    LCD_write_string((char*)line3.c_str());
     
-	LCD_set_line(3);
-    std::string line3 = "Skipped:  ";
-    line3.append(std::to_string(SkippedByteCount));;
-    LCD_write_string((char*)line3.c_str());
-    
-    LCD_set_line(4);
-    std::string line4 = "Received";
-    line4.append("  --line4--");
-    LCD_write_string((char*)line4.c_str());
+//    LCD_set_line(4);
+//    std::string line4 = "Received";
+//    line4.append("  --line4--");
+//    LCD_write_string((char*)line4.c_str());
     
     PORT_SetBits(MDR_PORTB, LED1_ERROR);	//проверка светодиодов
     PORT_SetBits(MDR_PORTB, LED2_REC);
