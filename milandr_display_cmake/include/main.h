@@ -26,7 +26,7 @@ extern "C" {
 //---------------------------------
 // Прототипы функций
 //---------------------------------
-#define BUFFER_LENGTH    10
+#define BUFFER_LENGTH    100
 static uint8_t Buffer[BUFFER_LENGTH];
 static uint8_t charFromUSB;
 static uint32_t LenFromUSB;

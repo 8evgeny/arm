@@ -69,8 +69,8 @@ void MAIN_logic(char* str) {
     LCD_set_XY(1, 1);
 //    std::string ll = std::string{((char*)Buffer)};
 //    LCD_write_string((char*)ll.c_str());
-
-    LCD_write_string(str);
+    std::string ss{str};
+    LCD_write_string((char*)ss.c_str());
     if (charFromUSB == 0x20)
     {
         PORT_SetBits(MDR_PORTB, BUZZER);

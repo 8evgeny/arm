@@ -16,7 +16,7 @@ int main (int argc, char** argv) {
     IWDT_init();
     VCom_Configuration();
 
-    USB_CDC_Init(Buffer, 20, SET);
+    USB_CDC_Init(Buffer, 80, SET);
     Setup_CPU_Clock();
     Setup_USB();
 
