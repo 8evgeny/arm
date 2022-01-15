@@ -98,7 +98,8 @@ void Setup_USB(void)
 USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
     USB_Result result;
-    fromUSB = Buffer[0];
+    charFromUSB = Buffer[0];
+    LenFromUSB = Length;
 
     PORT_SetBits(MDR_PORTB, LED2_REC);
 

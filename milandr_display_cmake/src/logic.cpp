@@ -24,7 +24,6 @@ void START_logic() {
 	LCD_function(1,1);	    //страница знакогенератора 1
 	LCD_clear_display();
 	
-    LCD_set_line(1);
     std::string line1 = "Received: ";
     line1.append(std::to_string(42));
     LCD_write_string((char*)line1.c_str());
@@ -59,22 +58,23 @@ void START_logic() {
 // Главная логика
 //---------------------------------
 void MAIN_logic() {
+
     PORT_ResetBits(MDR_PORTB, LED2_REC);
     PORT_ResetBits(MDR_PORTB, LED1_ERROR);
-
-        if (Buffer[0] == 0x20)
-        {
-            PORT_SetBits(MDR_PORTB, LED2_REC);
-        }
-
-
-//    LCD_set_line(1);
-//    auto ll = std::string{fromUSB};
-//    LCD_write_string((char*)ll.c_str());
+    PORT_ResetBits(MDR_PORTB, BUZZER);
 
     delay_ms(1000);
-    PORT_ResetBits(MDR_PORTB, LED2_REC);
     PORT_SetBits(MDR_PORTB, LED1_ERROR);
-//    PORT_SetBits(MDR_PORTB, LED2_REC);
+
+    LCD_set_line(1);
+    std::string ll = std::string{std::to_string(LenFromUSB)};
+    LCD_write_string((char*)ll.c_str());
+
+    if (charFromUSB == 0x20)
+    {
+        PORT_SetBits(MDR_PORTB, BUZZER);
+    }
+
     delay_ms(1000);
+
 }
