@@ -77,7 +77,21 @@ int main (int argc, char** argv) {
 
 void parcingBuffer()
 {
-    memcpy ((uint8_t *)BufferLCD, (uint8_t *) Buffer, 83);
+    uint8_t* pBuff = Buffer;
+    uint8_t* pBuffLCD = BufferLCD;
+
+    for (int numSymbols = 0; numSymbols < 83; ++numSymbols)
+    {
+        uint8_t temp = *pBuff;
+        if ((temp & 0xC0) != 0xC0)
+        {
+            *pBuffLCD = *pBuff;
+            ++pBuff;
+            ++pBuffLCD;
+        }
+    }
+
+//    memcpy ((uint8_t *)BufferLCD, (uint8_t *) Buffer, 83);
 }
 
 
