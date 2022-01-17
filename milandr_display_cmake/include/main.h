@@ -28,6 +28,7 @@ extern "C" {
 //---------------------------------
 #define BUFFER_LENGTH    200
 static uint8_t Buffer[BUFFER_LENGTH];
+static uint8_t BufferLCD[BUFFER_LENGTH];
 
 /* Задание конфигурации последовательной линии связи которую может прочитать хост */
 

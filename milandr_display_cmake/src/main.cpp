@@ -26,7 +26,9 @@ int main (int argc, char** argv) {
     Check();
 
 	while (1) {
-        if(Buffer[0] == 49) //если 1 то горит первый светодиод
+        strcpy ((char *)BufferLCD, (char *) Buffer);
+
+        if(BufferLCD[0] == 49) //если 1 то горит первый светодиод
         {
             PORT_SetBits(MDR_PORTB, LED2_REC);
         }
@@ -34,7 +36,7 @@ int main (int argc, char** argv) {
         {
             PORT_ResetBits(MDR_PORTB, LED2_REC);
         }
-        if(Buffer[1] == 49) //если 1 то горит второй светодиод
+        if(BufferLCD[1] == 49) //если 1 то горит второй светодиод
         {
             PORT_SetBits(MDR_PORTB, LED1_ERROR);
         }
@@ -42,7 +44,7 @@ int main (int argc, char** argv) {
         {
             PORT_ResetBits(MDR_PORTB, LED1_ERROR);
         }
-        if (Buffer[2] == 49) //Постоянный сигнал
+        if (BufferLCD[2] == 49) //Постоянный сигнал
         {
             PORT_SetBits(MDR_PORTB, BUZZER);
         }
@@ -59,10 +61,10 @@ int main (int argc, char** argv) {
         char  str3[21];
         char  str4[21];
 
-        memcpy (str1, Buffer+3, 20);
-        memcpy (str2, Buffer + 23 , 20);
-        memcpy (str3, Buffer + 43 , 20);
-        memcpy (str4, Buffer + 63 , 20);
+        memcpy (str1, BufferLCD + 3, 20);
+        memcpy (str2, BufferLCD + 23 , 20);
+        memcpy (str3, BufferLCD + 43 , 20);
+        memcpy (str4, BufferLCD + 63 , 20);
 
         PrintString1(str1);
         PrintString2(str2);
