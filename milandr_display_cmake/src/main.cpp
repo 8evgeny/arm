@@ -26,7 +26,7 @@ int main (int argc, char** argv) {
     Check();
 
 	while (1) {
-        parcingBuffer();
+        parsingBuffer();
 
         if(BufferLCD[0] == 49) //если 1 то горит первый светодиод
         {
@@ -52,6 +52,7 @@ int main (int argc, char** argv) {
         {
             PORT_ResetBits(MDR_PORTB, BUZZER);
         }
+
 //        checkLCD1();
 //        checkLCD2();
 //        checkBUZZER();
@@ -75,7 +76,7 @@ int main (int argc, char** argv) {
 	}	
 }
 
-void parcingBuffer()
+void parsingBuffer()
 {
     uint8_t* pBuff = Buffer;
     uint8_t* pBuffLCD = BufferLCD;
@@ -83,9 +84,45 @@ void parcingBuffer()
     for (int numSymbols = 0; numSymbols < 83; ++numSymbols)
     {
         uint8_t temp = *pBuff;
-        if ((temp & 0xC0) != 0xC0)
+        if ((temp & 0xD0) != 0xD0)
         {
             *pBuffLCD = *pBuff;
+            ++pBuff;
+            ++pBuffLCD;
+        }
+        else //unicode
+        {
+            if (*pBuff == 0xD0)
+            {
+                ++pBuff;
+                if (*pBuff == 0x90) *pBuffLCD = 0x41;//А
+                else if (*pBuff == 0x01) *pBuffLCD = 0xA2;//Ё
+                else if (*pBuff == 0x91) *pBuffLCD = 0xA0;//Б
+                else if (*pBuff == 0x92) *pBuffLCD = 0xA0;//В
+                else if (*pBuff == 0x93) *pBuffLCD = 0xA0;//Г
+                else if (*pBuff == 0x94) *pBuffLCD = 0xE0;//Д
+                else if (*pBuff == 0x95) *pBuffLCD = 0x45;//Е
+                else if (*pBuff == 0x95) *pBuffLCD = 0xA3;//Ж
+
+
+            }
+            else if (*pBuff == 0xD1)
+            {
+                ++pBuff;
+                if (*pBuff == 0x80) *pBuffLCD = 0x70;//р
+                else if (*pBuff == 0x91) *pBuffLCD = 0xBF;//ё
+                else if (*pBuff == 0x81) *pBuffLCD = 0x63;//с
+                else if (*pBuff == 0x82) *pBuffLCD = 0xBF;//т
+                else if (*pBuff == 0x83) *pBuffLCD = 0x79;//у
+
+
+            }
+            else //другой символ
+            {
+                ++pBuff;
+                *pBuffLCD = 0x20;
+            }
+
             ++pBuff;
             ++pBuffLCD;
         }
