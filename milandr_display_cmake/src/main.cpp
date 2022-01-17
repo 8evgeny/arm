@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 #include <string.h>
+#include <chrono>
+
 
 int main (int argc, char** argv) {
 
@@ -32,10 +34,12 @@ int main (int argc, char** argv) {
         char  str2[21];
         char  str3[21];
         char  str4[21];
+
         memcpy (str1, Buffer+3, 20);
         memcpy (str2, Buffer + 23 , 20);
         memcpy (str3, Buffer + 43 , 20);
         memcpy (str4, Buffer + 63 , 20);
+
         PrintString1(str1);
         PrintString2(str2);
         PrintString3(str3);

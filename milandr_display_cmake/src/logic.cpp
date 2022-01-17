@@ -30,26 +30,26 @@ void PrintString1(char* str) {
     LCD_set_XY(1, 1);
     std::string ss{str, 20};
     LCD_write_string((char*)ss.c_str());
-    delay_ms(10);
+//    delay_ms(10);
 }
 
 void PrintString2(char* str) {
     LCD_set_XY(1, 2);
     std::string ss{str, 20};
     LCD_write_string((char*)ss.c_str());
-    delay_ms(10);
+//    delay_ms(10);
 }
 
 void PrintString3(char* str) {
     LCD_set_XY(1, 3);
     std::string ss{str, 20};
     LCD_write_string((char*)ss.c_str());
-    delay_ms(10);
+//    delay_ms(10);
 }
 
 void PrintString4(char* str) {
     LCD_set_XY(1, 4);
     std::string ss{str, 20};
     LCD_write_string((char*)ss.c_str());
-    delay_ms(10);
+//    delay_ms(10);
 }

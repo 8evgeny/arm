@@ -2,7 +2,6 @@
 // main.h
 // Плата индикации (MDR32)
 //---------------------------------
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -17,6 +16,7 @@ extern "C" {
 #include "MDR32F9Qx_port.h"
 //---------------------------------
 #include "gpio.h"
+
     
 //---------------------------------
 #ifndef _MAIN+++++++++++++++++++++++++++++++++++++++
@@ -49,7 +49,6 @@ static void VCom_Configuration(void)
 void checkLCD1();
 void checkLCD2();
 void checkBUZZER();
-
 void RCC_init(void);
 void IWDT_init(void);
 void GPIO_init(void);
