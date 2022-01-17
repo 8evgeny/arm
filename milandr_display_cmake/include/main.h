@@ -45,6 +45,11 @@ static void VCom_Configuration(void)
 #endif /* USB_CDC_LINE_CODING_SUPPORTED */
 }
 
+
+void checkLCD1();
+void checkLCD2();
+void checkBUZZER();
+
 void RCC_init(void);
 void IWDT_init(void);
 void GPIO_init(void);

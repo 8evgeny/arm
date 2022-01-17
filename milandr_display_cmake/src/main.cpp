@@ -24,30 +24,10 @@ int main (int argc, char** argv) {
     Check();
 
 	while (1) {
-        if(Buffer[0] == 49) //если 1 то горит первый светодиод
-        {
-            PORT_SetBits(MDR_PORTB, LED2_REC);
-        }
-        else
-        {
-            PORT_ResetBits(MDR_PORTB, LED2_REC);
-        }
-        if(Buffer[1] == 49) //если 1 то горит второй светодиод
-        {
-            PORT_SetBits(MDR_PORTB, LED1_ERROR);
-        }
-        else
-        {
-            PORT_ResetBits(MDR_PORTB, LED1_ERROR);
-        }
-        if(Buffer[2] == 49) //если 1 то сигнал
-        {
-            PORT_SetBits(MDR_PORTB, BUZZER);
-        }
-        else
-        {
-            PORT_ResetBits(MDR_PORTB, BUZZER);
-        }
+        checkLCD1();
+        checkLCD2();
+        checkBUZZER();
+
         char  str1[21]; //4 строки на экране
         char  str2[21];
         char  str3[21];

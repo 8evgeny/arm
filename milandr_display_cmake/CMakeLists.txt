@@ -120,6 +120,7 @@ set (SOURCES_CPP
     src/main.cpp
     src/logic.cpp
     src/usb.cpp
+    src/checkLCD_BUZZER.cpp
     )
 
 set (SOURCES_SPL
