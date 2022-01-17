@@ -26,7 +26,7 @@ int main (int argc, char** argv) {
     Check();
 
 	while (1) {
-        strcpy ((char *)BufferLCD, (char *) Buffer);
+        parcingBuffer();
 
         if(BufferLCD[0] == 49) //если 1 то горит первый светодиод
         {
@@ -75,5 +75,9 @@ int main (int argc, char** argv) {
 	}	
 }
 
+void parcingBuffer()
+{
+    memcpy ((uint8_t *)BufferLCD, (uint8_t *) Buffer, 83);
+}
 
 

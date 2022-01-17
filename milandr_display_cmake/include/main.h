@@ -17,10 +17,7 @@ extern "C" {
 //---------------------------------
 #include "gpio.h"
 
-    
-//---------------------------------
-#ifndef _MAIN+++++++++++++++++++++++++++++++++++++++
-    
+#ifndef _MAIN
     
 #define _MAIN
 //---------------------------------
@@ -46,7 +43,7 @@ static void VCom_Configuration(void)
 #endif /* USB_CDC_LINE_CODING_SUPPORTED */
 }
 
-
+void parcingBuffer();
 void checkLCD1();
 void checkLCD2();
 void checkBUZZER();
