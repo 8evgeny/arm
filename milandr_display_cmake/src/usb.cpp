@@ -24,23 +24,24 @@ void Setup_CPU_Clock(void)
 {
     /* Enable HSE */
     RST_CLK_HSEconfig(RST_CLK_HSE_ON);
-    if (RST_CLK_HSEstatus() != SUCCESS)
+
+    while(RST_CLK_HSEstatus() != SUCCESS)
     {
-        while (1)
-        {
-            LCD_write_string((char*)"Error USB");
-        }
+        delay_ms(100);
+        LCD_write_string((char*)"Error USB");
     }
+
+
+
 
     /* CPU_C1_SEL = HSE */
     RST_CLK_CPU_PLLconfig(RST_CLK_CPU_PLLsrcHSEdiv1, RST_CLK_CPU_PLLmul10);
     RST_CLK_CPU_PLLcmd(ENABLE);
-    if (RST_CLK_CPU_PLLstatus() != SUCCESS)
+
+    while(RST_CLK_CPU_PLLstatus() != SUCCESS)
     {
-        while (1)
-        {
-             LCD_write_string((char*)"Error USB");
-        }
+        delay_ms(100);
+        LCD_write_string((char*)"Error USB");
     }
 
     /* CPU_C3_SEL = CPU_C2_SEL */
