@@ -18,7 +18,7 @@ int main (int argc, char** argv) {
     IWDT_init();
     VCom_Configuration();
 
-    USB_CDC_Init(Buffer, 190, SET);
+    USB_CDC_Init(Buffer, 165, SET);
     Setup_CPU_Clock();
     Setup_USB();
 
@@ -29,11 +29,7 @@ int main (int argc, char** argv) {
 
     while (1)
     {
-        if (DataReceivedFlag)
-        {
-            DataReceivedFlag = 0;
-            USB_CDC_Init(Buffer, 190, SET);
-        }
+
 //        t2 = std::chrono::system_clock::now();
 //        auto int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
 
@@ -192,7 +188,8 @@ void parsingBuffer()
         }
     }
 
-//    memcpy ((uint8_t *)BufferLCD, (uint8_t *) Buffer, 83);
+    USB_CDC_ReceiveStop(); //Экран заполнен
+    USB_CDC_Reset();
 }
 
 

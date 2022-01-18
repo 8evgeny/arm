@@ -28,7 +28,6 @@ extern "C" {
 static uint8_t Buffer[BUFFER_LENGTH];
 //static uint8_t* pBuffer = Buffer;
 static uint8_t BufferLCD[BUFFER_LENGTH];
-static uint8_t DataReceivedFlag;
 
 /* Задание конфигурации последовательной линии связи которую может прочитать хост */
 
