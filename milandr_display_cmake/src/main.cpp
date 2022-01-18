@@ -29,11 +29,11 @@ int main (int argc, char** argv) {
 
     while (1)
     {
-//        if (DataReceivedFlag)
-//        {
-//            DataReceivedFlag = 0;
-//            t1 = std::chrono::system_clock::now();
-//        }
+        if (DataReceivedFlag)
+        {
+            DataReceivedFlag = 0;
+            USB_CDC_Init(Buffer, 190, SET);
+        }
 //        t2 = std::chrono::system_clock::now();
 //        auto int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
 

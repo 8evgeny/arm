@@ -89,7 +89,7 @@ USB_Result USB_CDC_RecieveData(uint8_t* Buffer, uint32_t Length)
 {
 //    *pBuffer = BufferReceive[0];
 //    ++pBuffer;
-//    DataReceivedFlag = 1;
+    DataReceivedFlag = 1;
     USB_Result result;
 
 #ifdef USB_DEBUG_PROTO
