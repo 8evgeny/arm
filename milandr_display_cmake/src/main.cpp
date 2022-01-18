@@ -15,7 +15,7 @@ int main (int argc, char** argv) {
 	__enable_irq();
 
     TIM1_init();
-    IWDT_init();
+//    IWDT_init();
     VCom_Configuration();
 
     USB_CDC_Init(Buffer, 165, SET);
