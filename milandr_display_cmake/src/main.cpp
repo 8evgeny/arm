@@ -113,8 +113,8 @@ void parsingBuffer()
                 if (*pBuff == 0x90) *pBuffLCD = 0x41;     //А
                 else if (*pBuff == 0x01) *pBuffLCD = 0xA2;//Ё
                 else if (*pBuff == 0x91) *pBuffLCD = 0xA0;//Б
-                else if (*pBuff == 0x92) *pBuffLCD = 0xA0;//В
-                else if (*pBuff == 0x93) *pBuffLCD = 0xA0;//Г
+                else if (*pBuff == 0x92) *pBuffLCD = 0x42;//В
+                else if (*pBuff == 0x93) *pBuffLCD = 0xA1;//Г
                 else if (*pBuff == 0x94) *pBuffLCD = 0xE0;//Д
                 else if (*pBuff == 0x95) *pBuffLCD = 0x45;//Е
                 else if (*pBuff == 0x96) *pBuffLCD = 0xA3;//Ж
