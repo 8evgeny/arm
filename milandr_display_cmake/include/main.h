@@ -45,6 +45,7 @@ static void VCom_Configuration(void)
 #endif /* USB_CDC_LINE_CODING_SUPPORTED */
 }
 
+void firstScreen();
 void parsingBuffer();
 void checkLCD1();
 void checkLCD2();
