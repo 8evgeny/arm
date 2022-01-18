@@ -27,7 +27,9 @@ void Setup_CPU_Clock(void)
     if (RST_CLK_HSEstatus() != SUCCESS)
     {
         while (1)
-        {}
+        {
+            LCD_write_string((char*)"Error USB");
+        }
     }
 
     /* CPU_C1_SEL = HSE */
@@ -36,7 +38,9 @@ void Setup_CPU_Clock(void)
     if (RST_CLK_CPU_PLLstatus() != SUCCESS)
     {
         while (1)
-        {}
+        {
+             LCD_write_string((char*)"Error USB");
+        }
     }
 
     /* CPU_C3_SEL = CPU_C2_SEL */
