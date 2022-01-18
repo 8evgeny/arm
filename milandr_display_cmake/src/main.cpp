@@ -194,17 +194,19 @@ void firstScreen()
 {
     LCD_set_line(1);
     LCD_write_string((char*)"    GIT-COMM IPS    ");
-    LCD_set_XY(9, 2); LCD_write_data(0xA8);//П
-    LCD_set_XY(10, 2); LCD_write_data(0xE0);//Д
-    LCD_set_XY(11, 2); LCD_write_data(0x4B);//К
-    LCD_set_XY(12, 2); LCD_write_data(0x42);//В
-    LCD_set_XY(4, 4); LCD_write_data(0xA4);//З
-    LCD_set_XY(5, 4); LCD_write_data(0x61);//а
-    LCD_set_XY(6, 4); LCD_write_data(0xB4);//г
-    LCD_set_XY(7, 4); LCD_write_data(0x70);//р
-    LCD_set_XY(8, 4); LCD_write_data(0x79);//у
-    LCD_set_XY(9, 4); LCD_write_data(0xB7);//з
-    LCD_set_XY(10, 4); LCD_write_data(0xBA);//к
-    LCD_set_XY(11, 4); LCD_write_data(0x61);//а
+    LCD_set_XY(9, 2);
+    LCD_write_data(0xA8);//П
+    LCD_write_data(0xE0);//Д
+    LCD_write_data(0x4B);//К
+    LCD_write_data(0x42);//В
+    LCD_set_XY(6, 4);
+    LCD_write_data(0xA4);//З
+    LCD_write_data(0x61);//а
+    LCD_write_data(0xB4);//г
+    LCD_write_data(0x70);//р
+    LCD_write_data(0x79);//у
+    LCD_write_data(0xB7);//з
+    LCD_write_data(0xBA);//к
+    LCD_write_data(0x61);//а
     LCD_write_string((char*)"...");
 }
