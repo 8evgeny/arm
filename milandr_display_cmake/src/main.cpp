@@ -33,7 +33,7 @@ int main (int argc, char** argv) {
             delay_ms(1000);
             LCD_set_line(4); LCD_write_string((char*)"                    ");
             delay_ms(1000);
-            IWDG_ReloadCounter();	//сбрасываем IWDT
+//            IWDG_ReloadCounter();	//сбрасываем IWDT
         }
 
             parsingBuffer();
