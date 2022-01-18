@@ -28,11 +28,8 @@ void Setup_CPU_Clock(void)
     while(RST_CLK_HSEstatus() != SUCCESS)
     {
         delay_ms(100);
-        LCD_write_string((char*)"Error USB");
+        LCD_write_string((char*)"Error CPU_Clock");
     }
-
-
-
 
     /* CPU_C1_SEL = HSE */
     RST_CLK_CPU_PLLconfig(RST_CLK_CPU_PLLsrcHSEdiv1, RST_CLK_CPU_PLLmul10);
@@ -41,7 +38,7 @@ void Setup_CPU_Clock(void)
     while(RST_CLK_CPU_PLLstatus() != SUCCESS)
     {
         delay_ms(100);
-        LCD_write_string((char*)"Error USB");
+        LCD_write_string((char*)"Error CPU_Clock");
     }
 
     /* CPU_C3_SEL = CPU_C2_SEL */
