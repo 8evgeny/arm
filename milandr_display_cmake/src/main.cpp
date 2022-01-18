@@ -33,6 +33,8 @@ int main (int argc, char** argv) {
         {
             firstScreen();
             delay_ms(500);
+            LCD_clear_display();
+            delay_ms(500);
         }
 //        t2 = std::chrono::system_clock::now();
 //        auto int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
