@@ -15,7 +15,7 @@ int main (int argc, char** argv) {
 	__enable_irq();
 
     TIM1_init();
-//    IWDT_init();
+    IWDT_init();
     VCom_Configuration();
 
     USB_CDC_Init(Buffer, 165, SET);
@@ -30,9 +30,10 @@ int main (int argc, char** argv) {
         while(Buffer[0] == 0x00)
         {
             firstScreen();
-            delay_ms(500);
-            LCD_clear_display();
             delay_ms(1000);
+            LCD_set_line(4); LCD_write_string((char*)"                    ");
+            delay_ms(1000);
+            IWDG_ReloadCounter();	//сбрасываем IWDT
         }
 
             parsingBuffer();
