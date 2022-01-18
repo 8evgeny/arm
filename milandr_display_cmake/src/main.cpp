@@ -24,8 +24,6 @@ int main (int argc, char** argv) {
 
     LCD_init();
     Check();
-//    auto t1 = std::chrono::system_clock::now();
-//    auto t2 = std::chrono::system_clock::now();
 
     while (1)
     {
@@ -34,14 +32,9 @@ int main (int argc, char** argv) {
             firstScreen();
             delay_ms(500);
             LCD_clear_display();
-            delay_ms(500);
+            delay_ms(1000);
         }
-//        t2 = std::chrono::system_clock::now();
-//        auto int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
 
-//        if (int_ms.count() > 500)
-//        {
-//            pBuffer = Buffer;
             parsingBuffer();
 
             if(BufferLCD[0] == 49) //если 1 то горит первый светодиод
@@ -201,10 +194,10 @@ void firstScreen()
 {
     LCD_set_line(1);
     LCD_write_string((char*)"    GIT-COMM IPS    ");
-    LCD_set_XY(6, 2); LCD_write_data(0xA8);//П
-    LCD_set_XY(7, 2); LCD_write_data(0xE0);//Д
-    LCD_set_XY(8, 2); LCD_write_data(0x4B);//К
-    LCD_set_XY(9, 2); LCD_write_data(0x42);//В
+    LCD_set_XY(9, 2); LCD_write_data(0xA8);//П
+    LCD_set_XY(10, 2); LCD_write_data(0xE0);//Д
+    LCD_set_XY(11, 2); LCD_write_data(0x4B);//К
+    LCD_set_XY(12, 2); LCD_write_data(0x42);//В
     LCD_set_XY(4, 4); LCD_write_data(0xA4);//З
     LCD_set_XY(5, 4); LCD_write_data(0x61);//а
     LCD_set_XY(6, 4); LCD_write_data(0xB4);//г
