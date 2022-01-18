@@ -188,8 +188,7 @@ void parsingBuffer()
         }
     }
 
-    USB_CDC_ReceiveStop(); //Экран заполнен
-    USB_CDC_Reset();
+    USB_CDC_Reset(); //Экран заполнен
 }
 
 
