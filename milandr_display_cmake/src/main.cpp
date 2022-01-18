@@ -107,7 +107,7 @@ void parsingBuffer()
             {
                 ++pBuff;
                 if (*pBuff == 0x90) *pBuffLCD = 0x41;     //А
-                else if (*pBuff == 0x01) *pBuffLCD = 0xA2;//Ё
+                else if (*pBuff == 0x81) *pBuffLCD = 0xA2;//Ё
                 else if (*pBuff == 0x91) *pBuffLCD = 0xA0;//Б
                 else if (*pBuff == 0x92) *pBuffLCD = 0x42;//В
                 else if (*pBuff == 0x93) *pBuffLCD = 0xA1;//Г
@@ -160,7 +160,7 @@ void parsingBuffer()
             {
                 ++pBuff;
                 if (*pBuff == 0x80) *pBuffLCD = 0x70;     //р
-                else if (*pBuff == 0x91) *pBuffLCD = 0xBF;//ё
+                else if (*pBuff == 0x91) *pBuffLCD = 0xB5;//ё
                 else if (*pBuff == 0x81) *pBuffLCD = 0x63;//с
                 else if (*pBuff == 0x82) *pBuffLCD = 0xBF;//т
                 else if (*pBuff == 0x83) *pBuffLCD = 0x79;//у
