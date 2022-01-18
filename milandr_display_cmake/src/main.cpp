@@ -18,28 +18,28 @@ int main (int argc, char** argv) {
     IWDT_init();
     VCom_Configuration();
 
-    USB_CDC_Init(BufferReceive, 1, SET);
+    USB_CDC_Init(Buffer, 190, SET);
     Setup_CPU_Clock();
     Setup_USB();
 
     LCD_init();
     Check();
-    auto t1 = std::chrono::system_clock::now();
-    auto t2 = std::chrono::system_clock::now();
+//    auto t1 = std::chrono::system_clock::now();
+//    auto t2 = std::chrono::system_clock::now();
 
     while (1)
     {
-        if (DataReceivedFlag)
-        {
-            DataReceivedFlag = 0;
-            t1 = std::chrono::system_clock::now();
-        }
-        t2 = std::chrono::system_clock::now();
-        auto int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
+//        if (DataReceivedFlag)
+//        {
+//            DataReceivedFlag = 0;
+//            t1 = std::chrono::system_clock::now();
+//        }
+//        t2 = std::chrono::system_clock::now();
+//        auto int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
 
-        if (int_ms.count() > 500)
-        {
-            pBuffer = Buffer;
+//        if (int_ms.count() > 500)
+//        {
+//            pBuffer = Buffer;
             parsingBuffer();
 
             if(BufferLCD[0] == 49) //если 1 то горит первый светодиод
@@ -87,7 +87,7 @@ int main (int argc, char** argv) {
             PrintString4(str4);
 
             IWDG_ReloadCounter();	//сбрасываем IWDT
-        }
+//        }
 	}	
 }
 
@@ -119,46 +119,46 @@ void parsingBuffer()
                 else if (*pBuff == 0x95) *pBuffLCD = 0x45;//Е
                 else if (*pBuff == 0x96) *pBuffLCD = 0xA3;//Ж
                 else if (*pBuff == 0x97) *pBuffLCD = 0xA4;//З
-                else if (*pBuff == 0x97) *pBuffLCD = 0xA5;//И
-                else if (*pBuff == 0x97) *pBuffLCD = 0xA6;//Й
-                else if (*pBuff == 0x97) *pBuffLCD = 0x4B;//К
-                else if (*pBuff == 0x97) *pBuffLCD = 0xA7;//Л
-                else if (*pBuff == 0x97) *pBuffLCD = 0x4D;//М
-                else if (*pBuff == 0x97) *pBuffLCD = 0x48;//Н
-                else if (*pBuff == 0x97) *pBuffLCD = 0x4F;//O
-                else if (*pBuff == 0x97) *pBuffLCD = 0xA8;//П
-                else if (*pBuff == 0x97) *pBuffLCD = 0x50;//Р
-                else if (*pBuff == 0x97) *pBuffLCD = 0x43;//C
-                else if (*pBuff == 0x97) *pBuffLCD = 0x54;//Т
-                else if (*pBuff == 0x97) *pBuffLCD = 0xA9;//У
-                else if (*pBuff == 0x97) *pBuffLCD = 0xAA;//Ф
-                else if (*pBuff == 0x97) *pBuffLCD = 0x58;//X
-                else if (*pBuff == 0x97) *pBuffLCD = 0xE1;//Ц
-                else if (*pBuff == 0x97) *pBuffLCD = 0xAB;//Ч
-                else if (*pBuff == 0x97) *pBuffLCD = 0xAC;//Ш
-                else if (*pBuff == 0x97) *pBuffLCD = 0xE2;//Щ
-                else if (*pBuff == 0x97) *pBuffLCD = 0xAD;//Ъ
-                else if (*pBuff == 0x97) *pBuffLCD = 0xAE;//Ы
-                else if (*pBuff == 0x97) *pBuffLCD = 0x08;//Ь
-                else if (*pBuff == 0x97) *pBuffLCD = 0xAF;//Э
-                else if (*pBuff == 0x97) *pBuffLCD = 0xB0;//Ю
-                else if (*pBuff == 0x97) *pBuffLCD = 0xB1;//Я
-                else if (*pBuff == 0x97) *pBuffLCD = 0x61;//а
-                else if (*pBuff == 0x97) *pBuffLCD = 0xB2;//б
-                else if (*pBuff == 0x97) *pBuffLCD = 0xB3;//в
-                else if (*pBuff == 0x97) *pBuffLCD = 0xB4;//г
-                else if (*pBuff == 0x97) *pBuffLCD = 0xE3;//д
-                else if (*pBuff == 0x97) *pBuffLCD = 0x65;//е
-                else if (*pBuff == 0x97) *pBuffLCD = 0xB6;//ж
-                else if (*pBuff == 0x97) *pBuffLCD = 0xB7;//з
-                else if (*pBuff == 0x97) *pBuffLCD = 0xB8;//и
-                else if (*pBuff == 0x97) *pBuffLCD = 0xB9;//й
-                else if (*pBuff == 0x97) *pBuffLCD = 0xBA;//к
-                else if (*pBuff == 0x97) *pBuffLCD = 0xBB;//л
-                else if (*pBuff == 0x97) *pBuffLCD = 0xBC;//м
-                else if (*pBuff == 0x97) *pBuffLCD = 0xBD;//н
-                else if (*pBuff == 0x97) *pBuffLCD = 0x6F;//о
-                else if (*pBuff == 0x97) *pBuffLCD = 0xBE;//п
+                else if (*pBuff == 0x98) *pBuffLCD = 0xA5;//И
+                else if (*pBuff == 0x99) *pBuffLCD = 0xA6;//Й
+                else if (*pBuff == 0x9A) *pBuffLCD = 0x4B;//К
+                else if (*pBuff == 0x9B) *pBuffLCD = 0xA7;//Л
+                else if (*pBuff == 0x9C) *pBuffLCD = 0x4D;//М
+                else if (*pBuff == 0x9D) *pBuffLCD = 0x48;//Н
+                else if (*pBuff == 0x9E) *pBuffLCD = 0x4F;//O
+                else if (*pBuff == 0x9F) *pBuffLCD = 0xA8;//П
+                else if (*pBuff == 0xA0) *pBuffLCD = 0x50;//Р
+                else if (*pBuff == 0xA1) *pBuffLCD = 0x43;//C
+                else if (*pBuff == 0xA2) *pBuffLCD = 0x54;//Т
+                else if (*pBuff == 0xA3) *pBuffLCD = 0xA9;//У
+                else if (*pBuff == 0xA4) *pBuffLCD = 0xAA;//Ф
+                else if (*pBuff == 0xA5) *pBuffLCD = 0x58;//X
+                else if (*pBuff == 0xA6) *pBuffLCD = 0xE1;//Ц
+                else if (*pBuff == 0xA7) *pBuffLCD = 0xAB;//Ч
+                else if (*pBuff == 0xA8) *pBuffLCD = 0xAC;//Ш
+                else if (*pBuff == 0xA9) *pBuffLCD = 0xE2;//Щ
+                else if (*pBuff == 0xAA) *pBuffLCD = 0xAD;//Ъ
+                else if (*pBuff == 0xAB) *pBuffLCD = 0xAE;//Ы
+                else if (*pBuff == 0xAC) *pBuffLCD = 0x08;//Ь
+                else if (*pBuff == 0xAD) *pBuffLCD = 0xAF;//Э
+                else if (*pBuff == 0xAE) *pBuffLCD = 0xB0;//Ю
+                else if (*pBuff == 0xAF) *pBuffLCD = 0xB1;//Я
+                else if (*pBuff == 0xB0) *pBuffLCD = 0x61;//а
+                else if (*pBuff == 0xB1) *pBuffLCD = 0xB2;//б
+                else if (*pBuff == 0xB2) *pBuffLCD = 0xB3;//в
+                else if (*pBuff == 0xB3) *pBuffLCD = 0xB4;//г
+                else if (*pBuff == 0xB4) *pBuffLCD = 0xE3;//д
+                else if (*pBuff == 0xB5) *pBuffLCD = 0x65;//е
+                else if (*pBuff == 0xB6) *pBuffLCD = 0xB6;//ж
+                else if (*pBuff == 0xB7) *pBuffLCD = 0xB7;//з
+                else if (*pBuff == 0xB8) *pBuffLCD = 0xB8;//и
+                else if (*pBuff == 0xB9) *pBuffLCD = 0xB9;//й
+                else if (*pBuff == 0xBA) *pBuffLCD = 0xBA;//к
+                else if (*pBuff == 0xBB) *pBuffLCD = 0xBB;//л
+                else if (*pBuff == 0xBC) *pBuffLCD = 0xBC;//м
+                else if (*pBuff == 0xBD) *pBuffLCD = 0xBD;//н
+                else if (*pBuff == 0xBE) *pBuffLCD = 0x6F;//о
+                else if (*pBuff == 0xBF) *pBuffLCD = 0xBE;//п
             }
             else if (*pBuff == 0xD1)
             {
@@ -168,18 +168,18 @@ void parsingBuffer()
                 else if (*pBuff == 0x81) *pBuffLCD = 0x63;//с
                 else if (*pBuff == 0x82) *pBuffLCD = 0xBF;//т
                 else if (*pBuff == 0x83) *pBuffLCD = 0x79;//у
-                else if (*pBuff == 0x83) *pBuffLCD = 0xE4;//ф
-                else if (*pBuff == 0x83) *pBuffLCD = 0x78;//х
-                else if (*pBuff == 0x83) *pBuffLCD = 0xE5;//ц
-                else if (*pBuff == 0x83) *pBuffLCD = 0xC0;//ч
-                else if (*pBuff == 0x83) *pBuffLCD = 0xC1;//ш
-                else if (*pBuff == 0x83) *pBuffLCD = 0xE6;//щ
-                else if (*pBuff == 0x83) *pBuffLCD = 0xC2;//ъ
-                else if (*pBuff == 0x83) *pBuffLCD = 0xC3;//ы
-                else if (*pBuff == 0x83) *pBuffLCD = 0xC4;//ь
-                else if (*pBuff == 0x83) *pBuffLCD = 0xC5;//э
-                else if (*pBuff == 0x83) *pBuffLCD = 0xC6;//ю
-                else if (*pBuff == 0x83) *pBuffLCD = 0xC7;//я
+                else if (*pBuff == 0x84) *pBuffLCD = 0xE4;//ф
+                else if (*pBuff == 0x85) *pBuffLCD = 0x78;//х
+                else if (*pBuff == 0x86) *pBuffLCD = 0xE5;//ц
+                else if (*pBuff == 0x87) *pBuffLCD = 0xC0;//ч
+                else if (*pBuff == 0x88) *pBuffLCD = 0xC1;//ш
+                else if (*pBuff == 0x89) *pBuffLCD = 0xE6;//щ
+                else if (*pBuff == 0x8A) *pBuffLCD = 0xC2;//ъ
+                else if (*pBuff == 0x8B) *pBuffLCD = 0xC3;//ы
+                else if (*pBuff == 0x8C) *pBuffLCD = 0xC4;//ь
+                else if (*pBuff == 0x8D) *pBuffLCD = 0xC5;//э
+                else if (*pBuff == 0x8E) *pBuffLCD = 0xC6;//ю
+                else if (*pBuff == 0x8F) *pBuffLCD = 0xC7;//я
             }
             else //другой символ
             {
