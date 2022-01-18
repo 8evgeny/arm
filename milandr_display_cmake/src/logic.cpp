@@ -10,7 +10,7 @@ void Check() {
 	LCD_control(1,0,0);		//включение дисплея и выбор курсора
 	LCD_entry_mode(1,0);	//установка направления сдвига
 	LCD_clear_display();	//установка курсора в начало
-	LCD_function(1,1);	    //страница знакогенератора 1
+    LCD_function(1,0);	    //страница знакогенератора 1
 	LCD_clear_display();
     
     PORT_SetBits(MDR_PORTB, LED1_ERROR);	//проверка светодиодов

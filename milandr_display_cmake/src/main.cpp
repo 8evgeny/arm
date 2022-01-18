@@ -95,27 +95,76 @@ void parsingBuffer()
             if (*pBuff == 0xD0)
             {
                 ++pBuff;
-                if (*pBuff == 0x90) *pBuffLCD = 0x41;//А
+                if (*pBuff == 0x90) *pBuffLCD = 0x41;     //А
                 else if (*pBuff == 0x01) *pBuffLCD = 0xA2;//Ё
                 else if (*pBuff == 0x91) *pBuffLCD = 0xA0;//Б
                 else if (*pBuff == 0x92) *pBuffLCD = 0xA0;//В
                 else if (*pBuff == 0x93) *pBuffLCD = 0xA0;//Г
                 else if (*pBuff == 0x94) *pBuffLCD = 0xE0;//Д
                 else if (*pBuff == 0x95) *pBuffLCD = 0x45;//Е
-                else if (*pBuff == 0x95) *pBuffLCD = 0xA3;//Ж
-
-
+                else if (*pBuff == 0x96) *pBuffLCD = 0xA3;//Ж
+                else if (*pBuff == 0x97) *pBuffLCD = 0xA4;//З
+                else if (*pBuff == 0x97) *pBuffLCD = 0xA5;//И
+                else if (*pBuff == 0x97) *pBuffLCD = 0xA6;//Й
+                else if (*pBuff == 0x97) *pBuffLCD = 0x4B;//К
+                else if (*pBuff == 0x97) *pBuffLCD = 0xA7;//Л
+                else if (*pBuff == 0x97) *pBuffLCD = 0x4D;//М
+                else if (*pBuff == 0x97) *pBuffLCD = 0x48;//Н
+                else if (*pBuff == 0x97) *pBuffLCD = 0x4F;//O
+                else if (*pBuff == 0x97) *pBuffLCD = 0xA8;//П
+                else if (*pBuff == 0x97) *pBuffLCD = 0x50;//Р
+                else if (*pBuff == 0x97) *pBuffLCD = 0x43;//C
+                else if (*pBuff == 0x97) *pBuffLCD = 0x54;//Т
+                else if (*pBuff == 0x97) *pBuffLCD = 0xA9;//У
+                else if (*pBuff == 0x97) *pBuffLCD = 0xAA;//Ф
+                else if (*pBuff == 0x97) *pBuffLCD = 0x58;//X
+                else if (*pBuff == 0x97) *pBuffLCD = 0xE1;//Ц
+                else if (*pBuff == 0x97) *pBuffLCD = 0xAB;//Ч
+                else if (*pBuff == 0x97) *pBuffLCD = 0xAC;//Ш
+                else if (*pBuff == 0x97) *pBuffLCD = 0xE2;//Щ
+                else if (*pBuff == 0x97) *pBuffLCD = 0xAD;//Ъ
+                else if (*pBuff == 0x97) *pBuffLCD = 0xAE;//Ы
+                else if (*pBuff == 0x97) *pBuffLCD = 0x08;//Ь
+                else if (*pBuff == 0x97) *pBuffLCD = 0xAF;//Э
+                else if (*pBuff == 0x97) *pBuffLCD = 0xB0;//Ю
+                else if (*pBuff == 0x97) *pBuffLCD = 0xB1;//Я
+                else if (*pBuff == 0x97) *pBuffLCD = 0x61;//а
+                else if (*pBuff == 0x97) *pBuffLCD = 0xB2;//б
+                else if (*pBuff == 0x97) *pBuffLCD = 0xB3;//в
+                else if (*pBuff == 0x97) *pBuffLCD = 0xB4;//г
+                else if (*pBuff == 0x97) *pBuffLCD = 0xE3;//д
+                else if (*pBuff == 0x97) *pBuffLCD = 0x65;//е
+                else if (*pBuff == 0x97) *pBuffLCD = 0xB6;//ж
+                else if (*pBuff == 0x97) *pBuffLCD = 0xB7;//з
+                else if (*pBuff == 0x97) *pBuffLCD = 0xB8;//и
+                else if (*pBuff == 0x97) *pBuffLCD = 0xB9;//й
+                else if (*pBuff == 0x97) *pBuffLCD = 0xBA;//к
+                else if (*pBuff == 0x97) *pBuffLCD = 0xBB;//л
+                else if (*pBuff == 0x97) *pBuffLCD = 0xBC;//м
+                else if (*pBuff == 0x97) *pBuffLCD = 0xBD;//н
+                else if (*pBuff == 0x97) *pBuffLCD = 0x6F;//о
+                else if (*pBuff == 0x97) *pBuffLCD = 0xBE;//п
             }
             else if (*pBuff == 0xD1)
             {
                 ++pBuff;
-                if (*pBuff == 0x80) *pBuffLCD = 0x70;//р
+                if (*pBuff == 0x80) *pBuffLCD = 0x70;     //р
                 else if (*pBuff == 0x91) *pBuffLCD = 0xBF;//ё
                 else if (*pBuff == 0x81) *pBuffLCD = 0x63;//с
                 else if (*pBuff == 0x82) *pBuffLCD = 0xBF;//т
                 else if (*pBuff == 0x83) *pBuffLCD = 0x79;//у
-
-
+                else if (*pBuff == 0x83) *pBuffLCD = 0xE4;//ф
+                else if (*pBuff == 0x83) *pBuffLCD = 0x78;//х
+                else if (*pBuff == 0x83) *pBuffLCD = 0xE5;//ц
+                else if (*pBuff == 0x83) *pBuffLCD = 0xC0;//ч
+                else if (*pBuff == 0x83) *pBuffLCD = 0xC1;//ш
+                else if (*pBuff == 0x83) *pBuffLCD = 0xE6;//щ
+                else if (*pBuff == 0x83) *pBuffLCD = 0xC2;//ъ
+                else if (*pBuff == 0x83) *pBuffLCD = 0xC3;//ы
+                else if (*pBuff == 0x83) *pBuffLCD = 0xC4;//ь
+                else if (*pBuff == 0x83) *pBuffLCD = 0xC5;//э
+                else if (*pBuff == 0x83) *pBuffLCD = 0xC6;//ю
+                else if (*pBuff == 0x83) *pBuffLCD = 0xC7;//я
             }
             else //другой символ
             {
