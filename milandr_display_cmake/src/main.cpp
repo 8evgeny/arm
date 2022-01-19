@@ -18,13 +18,13 @@ int main (int argc, char** argv) {
 //    IWDT_init();
     VCom_Configuration();
 
-    LCD_init();
-    Check();
-
     USB_CDC_Init(Buffer, 165, SET);
     Setup_CPU_Clock();
     Setup_USB();
 
+    delay_ms(10000);
+    LCD_init();
+    Check();
     while (1)
     {
         while(Buffer[0] == 0x00)
