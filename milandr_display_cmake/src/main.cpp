@@ -21,6 +21,7 @@ int main (int argc, char** argv) {
     LCD_init();
     Check();
 
+    delay_ms(10000);
     USB_CDC_Init(Buffer, 165, SET);
     Setup_CPU_Clock();
     Setup_USB();
