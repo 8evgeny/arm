@@ -18,7 +18,7 @@ void Check() {
     delay_ms(1000);
     PORT_ResetBits(MDR_PORTB, LED1_ERROR);
     PORT_ResetBits(MDR_PORTB, LED2_REC);
-
+#if 0
     LCD_set_line(1);
     LCD_write_data(0x41);//А
     LCD_write_data(0xA0);//Б
@@ -97,6 +97,8 @@ void Check() {
     PORT_SetBits(MDR_PORTB, BUZZER);
     delay_ms(200);
     PORT_ResetBits(MDR_PORTB, BUZZER);
+#endif
+
 }
 
 void PrintString1(char* str) {
