@@ -16,15 +16,21 @@ int main (int argc, char** argv) {
 
     TIM1_init();
 //    IWDT_init();
-    VCom_Configuration();
 
+    VCom_Configuration();
     USB_CDC_Init(Buffer, 165, SET);
     Setup_CPU_Clock();
     Setup_USB();
+    PORT_SetBits(MDR_PORTB, LED2_REC); //Светодиод загорается после инициализации USB
 
     delay_ms(10000);
     LCD_init();
     Check();
+    PORT_SetBits(MDR_PORTB, LED1_ERROR);//Светодиод загорается после инициализации LCD
+
+    delay_ms(10000);
+    PORT_ResetBits(MDR_PORTB, LED2_REC);
+    PORT_ResetBits(MDR_PORTB, LED1_ERROR);
     while (1)
     {
         while(Buffer[0] == 0x00)

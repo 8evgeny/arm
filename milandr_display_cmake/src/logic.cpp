@@ -13,11 +13,11 @@ void Check() {
     LCD_function(1,0);	    //страница знакогенератора 0
 	LCD_clear_display();
     
-    PORT_SetBits(MDR_PORTB, LED1_ERROR);	//проверка светодиодов
-    PORT_SetBits(MDR_PORTB, LED2_REC);
-    delay_ms(1000);
-    PORT_ResetBits(MDR_PORTB, LED1_ERROR);
-    PORT_ResetBits(MDR_PORTB, LED2_REC);
+//    PORT_SetBits(MDR_PORTB, LED1_ERROR);	//проверка светодиодов
+//    PORT_SetBits(MDR_PORTB, LED2_REC);
+//    delay_ms(1000);
+//    PORT_ResetBits(MDR_PORTB, LED1_ERROR);
+//    PORT_ResetBits(MDR_PORTB, LED2_REC);
 #if 0
     LCD_set_line(1);
     LCD_write_data(0x41);//А
