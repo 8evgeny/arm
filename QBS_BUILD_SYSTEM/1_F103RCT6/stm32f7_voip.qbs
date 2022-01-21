@@ -6,7 +6,7 @@ import qbs.ModUtils
 //./itmdump -f ../debug.itm -d1
 CppApplication  {
 
-    name: "QT-STM32F777"
+    name: "Home_1_led"
     type: ["application", "bin", "hex"]
 
     Depends {
@@ -21,9 +21,9 @@ CppApplication  {
     property int HeapVersion: 4 //version of heap for FreeRTOS
     property bool IsBootloader: false //falsetrue
 
-    property bool IsStm32f1: false
-    property bool IsStm32f7: true
-    property bool SC2board: true
+    property bool IsStm32f1: true
+    property bool IsStm32f7: false
+    property bool SC2board: false
 
     property string nameOfBoard: "ST"
 
