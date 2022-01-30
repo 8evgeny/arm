@@ -1,0 +1,492 @@
+https://habr.com/ru/post/191058/
+
+Продолжая серию статей про разработку с нуля для ARM, сегодня я затрону тему написания скриптов компоновщика для GNU ld. Эта тема может пригодиться не только тем, кто работает со встраиваемыми системами, но и тем, кто хочет лучше понять строение исполняемых файлов. Хотя примеры так или иначе основаны на тулчейне arm-none-eabi, суть компоновки та же и у компоновщика Visual Studio, например.
+
+Предыдущие статьи:
+ARM-ы для самых маленьких
+ARM-ы для самых маленьких: который час?
+
+
+Примеры кода из статьи: https://github.com/farcaller/arm-demos
+
+
+
+Когда мы компилируем исходный файл, на выходе мы получаем файл объектный, который типично содержит в себе несколько секций с данными. Четыре самые распространенные секции это:
+.text — скомпилированный машинный код;
+.data — глобальные и статические переменные;
+.rodata — аналог .data для неизменяемых данных;
+.bss — глобальные и статические переменные, которые при старте содержат нулевое значение.
+
+
+В бинарных файлах, с которыми мы работаем в рамках этого цикла, будут часто попадаться еще две секции:
+
+.comment — информация о версии компилятора;
+.ARM.attributes — ARM-специфичные атрибуты файла.
+
+
+Помимо секций, в объектном файле есть еще одна важная сущность: таблица символов. Это своего рода хеш: имя — адрес (и дополнительные атрибуты). В таблице символов, например, указаны все экспортируемые функции и их адреса (которые будут указывать куда-то в секцию .text).
+
+После того, как у нас получилось несколько таких файлов, за дело берется компоновщик, который по заданным правилам соберет все секции, выбросит ненужные и сделает итоговый исполняемый файл. Для «стандартных» ОС определены правила, где что должно находиться, но в случае микроконтроллеров нам обычно нужно заниматься распихиванием всего по флешу и оперативной памяти вручную.
+
+Заглянем внутрь
+
+В качестве первого примера мы изучим следующий код на C: module_a.c:
+static int local_function();
+
+int external_counter;
+static int counter;
+static int preset_counter = 5;
+const int constant = 10;
+
+int public_function()
+{
+    volatile int i = 3 + constant;
+    ++external_counter;
+    return local_function() * i;
+}
+
+static int local_function()
+{
+    ++counter;
+    ++preset_counter;
+    return counter + preset_counter;
+}
+
+
+Скомпилируем его и посмотрим, какие секции мы получили:
+% rake 'show:sections[a]'
+arm-none-eabi-gcc -mthumb -O2 -mcpu=cortex-m0 -c module_a.c -o build/module_a.o
+arm-none-eabi-objdump build/module_a.o -h
+
+build/module_a.o:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000034  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000004  00000000  00000000  00000068  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000004  00000000  00000000  0000006c  2**2
+                  ALLOC
+  3 .rodata       00000004  00000000  00000000  0000006c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .comment      00000071  00000000  00000000  00000070  2**0
+                  CONTENTS, READONLY
+  5 .ARM.attributes 00000031  00000000  00000000  000000e1  2**0
+                  CONTENTS, READONLY
+
+
+Как мы видим — шесть секций, назначение которых нам уже более-менее известно. Второй строкой идут атрибуты секции, они будут интереснее позднее, при компоновке. Посмотрим, какие символы определены в этих секциях:
+
+% rake 'show:symbols:text[a]'
+arm-none-eabi-objdump build/module_a.o -j .text -t
+
+build/module_a.o:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00000000 l    d  .text  00000000 .text
+00000000 g     F .text  00000034 public_function
+
+
+Откроем man по objdump для консультации. В этой секции мы видим два символа: .text — это отладочный символ, который указывает на начало секции, public_function — это символ, который указывает на нашу функцию. Для local_function символа нет, так как функция объявлена как static, т.е., она не экспортируется за пределы объектного файла.
+
+% rake 'show:symbols:data[a]'
+arm-none-eabi-objdump build/module_a.o -j .data -j .bss -t
+
+build/module_a.o:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00000000 l    d  .data  00000000 .data
+00000000 l    d  .bss 00000000 .bss
+00000000 l     O .data  00000004 preset_counter
+00000000 l     O .bss 00000004 counter
+
+
+В секциях .data и .bss находится два из наших счетчиков — preset_counter и counter. Они находятся в разных секциях, так как у preset_counter есть начальное значение, которое и сохранено в .data:
+
+% rake 'show:contents[a,.data]'
+arm-none-eabi-objdump build/module_a.o -j .data -s
+
+build/module_a.o:     file format elf32-littlearm
+
+Contents of section .data:
+ 0000 05000000
+
+
+У counter значения нет, так что он инициализируется в ноль и попадает в секцию .bss. Сама секция .bss физически в файле не присутствует, так как ее содержимое всегда фиксировано, — это нули. Если бы вы объявили char buffer[1024] в коде, то компилятору пришлось бы записать в объектный файл килобайт пустого места, что лишено смысла.
+
+В этот момент у вас может появится вопрос — куда пропал external_counter?
+
+% rake 'show:symbols:all[a]'
+arm-none-eabi-objdump build/module_a.o -t
+
+build/module_a.o:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00000000 l    df *ABS*  00000000 module_a.c
+00000000 l    d  .text  00000000 .text
+00000000 l    d  .data  00000000 .data
+00000000 l    d  .bss 00000000 .bss
+00000000 l    d  .rodata  00000000 .rodata
+00000000 l     O .data  00000004 preset_counter
+00000000 l     O .bss 00000004 counter
+00000000 l    d  .comment 00000000 .comment
+00000000 l    d  .ARM.attributes  00000000 .ARM.attributes
+00000000 g     F .text  00000034 public_function
+00000004       O *COM*  00000004 external_counter
+00000000 g     O .rodata  00000004 constant
+
+
+external_counter отправился в секцию *COM*. В данном случае это означает, что он, возможно, находится за пределами этого объектного файла. Уже на этапе компоновки ld будет разбираться, объявлен ли символ в другом файле, или ему следует создать его самому — в данном случае, в секции .bss. Также обратите внимание на то, что const int constant попал в .rodata. Компилятор гарантирует, что коду не понадобится изменять значение по этому адресу, так что компоновщик может спокойно разместить его во флеш-памяти.
+
+Мы можем посмотреть на .comment:
+% rake 'show:contents[a,.comment]'
+arm-none-eabi-objdump build/module_a.o -j .comment -s
+
+build/module_a.o:     file format elf32-littlearm
+
+Contents of section .comment:
+ 0000 00474343 3a202847 4e552054 6f6f6c73  .GCC: (GNU Tools
+ 0010 20666f72 2041524d 20456d62 65646465   for ARM Embedde
+ 0020 64205072 6f636573 736f7273 2920342e  d Processors) 4.
+ 0030 372e3320 32303133 30333132 20287265  7.3 20130312 (re
+ 0040 6c656173 6529205b 41524d2f 656d6265  lease) [ARM/embe
+ 0050 64646564 2d345f37 2d627261 6e636820  dded-4_7-branch
+ 0060 72657669 73696f6e 20313936 3631355d  revision 196615]
+ 0070 00
+
+
+Тут действительно записана версия компилятора. Также мы можем заглянуть в .ARM.attributes, правда для этого стоит задействовать уже не objdump, а readelf:
+% rake 'show:attrs[a]'
+arm-none-eabi-readelf build/module_a.o -A
+Attribute Section: aeabi
+File Attributes
+  Tag_CPU_name: "Cortex-M0"
+  Tag_CPU_arch: v6S-M
+  Tag_CPU_arch_profile: Microcontroller
+  Tag_THUMB_ISA_use: Thumb-1
+  Tag_ABI_PCS_wchar_t: 4
+  Tag_ABI_FP_denormal: Needed
+  Tag_ABI_FP_exceptions: Needed
+  Tag_ABI_FP_number_model: IEEE 754
+  Tag_ABI_align_needed: 8-byte
+  Tag_ABI_align_preserved: 8-byte, except leaf SP
+  Tag_ABI_enum_size: small
+  Tag_ABI_optimization_goals: Aggressive Speed
+
+
+Документацию по публичным тегам можно посмотреть на инфоцентре ARM.
+
+Собираем все в кучу
+
+Теперь, когда мы заглянули внутрь объектных файлов, давайте разберемся, как ld собирает их в одно успешное приложение.
+
+Основная работа ld вертится вокруг карты памяти, которую мы видели в первой части. Если сильно упростить, компоновка — это процесс выдирания секций из объектных файлов, раскладывание их по указанным адресам и исправление перекрестных ссылок. В «стандартных» ОС ядро умеет читать выходной файл и загружать секции в память по ожидаемым виртуальным адресам. Также динамический компоновщик выполняет схожую работу, догружая в определенные места памяти внешние библиотеки и настраивая на них перекрестные ссылки.
+
+Со встраиваемыми системами проще, программа для прошивки берет ваш бинарный файл и заливает на флешку как есть. Его не волнуют ни мачо, ни эльфы, он работает с бинарными дампами.
+
+Возьмем простой сценарий компоновщика и разберем по кусочкам. layout.ld:
+MEMORY
+{
+   rom(RX)   : ORIGIN = 0x00000000, LENGTH = 0x8000
+   ram(WAIL) : ORIGIN = 0x10000000, LENGTH = 0x2000
+}
+
+ENTRY(public_function)
+
+SECTIONS
+{
+  .text : { *(.text) } > rom
+  _data_start = .;
+  .data : { *(.data) } > ram AT> rom
+  _bss_start = .;
+  .bss  : { *(.bss) }  > ram
+  _bss_end = .;
+}
+
+
+Конфигурация компоновщика по умолчанию позволяет ему использовать всю доступную память (где-то около 0xFFFFFFFF байт в случае 32-битного ARM). Начнем с того, что определим регионы памяти, которые можно использовать: rom и ram. Буквы в скобках определяют атрибуты: доступ на чтение, запись, исполнение, выделение памяти. Секции, которые явно не указаны в сценарии, будут раскиданы по регионам с подходящими атрибутами автоматически. Если для секции не найдется места, компоновщик откажется работать, аргументируя свое поведение как-то так: error: no memory region specified for loadable section `.data'.
+
+Два параметра, ORIGIN и LENGTH, задают начало и длину региона соответственно, еще можно встретить варианты org, o, len и l, они эквивалентны. Значение — это выражение, т.е., в нем можно выполнять арифметические операции или использовать суффиксы K, M, и т.п. Запись LENGTH = 0x8000, например, можно альтернативно выполнить так: l = 32K.
+
+Вторая часть файла — конфигурация секций. В целом, это означает копирование из одних протобафов в другие протобафы заданных исходных секций в выходные секции.
+
+Исходные секции задаются в форме ИМЯ_ФАЙЛА(ИМЯ_СЕКЦИИ), символ * ведет себя стандартным образом, так что запись *(.text) означает: секции .text из всех файлов.
+
+У секции есть два адреса: LMA (Load Memory Address) — откуда она загружается, и VMA (Virtual Memory Address) — по какому адресу она доступна в виртуальной памяти. Объясняя проще, LMA — это где она окажется в бинарном файле, а VMA — это куда будут перенаправлены символы, т.е., указатель на символ в коде будет ссылаться на VMA-адрес.
+
+Нас интересуют три секции — код, данные и данные, которые нулевые по умолчанию. Таким образом, мы копируем код (.text) во флеш-память, данные (.data) – во флеш-память, но из расчета, что они будут доступны в оперативной памяти, и .bss — в оперативную память.
+
+Для .bss, в общем случае, инициализация не требуется (UPD: мне тут подсказывают в жаббере, что таки требуется, мы должны гарантировать что там нули, а не мусор, который появился по какой-либо причине), так как при старте микроконтроллера оперативная память и так, вероятно, обнулена. Но вот с .data придется повозиться отдельно, проблема из-за двоякой натуры. С одной стороны, там хранятся конкретные данные (стартовое значение preset_counter), так что она должна быть во флеш-памяти. С другой стороны, это секция, доступная на запись, так что она должна быть в оперативной памяти. Эта проблема решается разными LMA и VMA, а также дополнительным кодом на C, который при запуске будет копировать содержимое из LMA в VMA. Для константных данных, которые обычно находятся в секции .rodata, такая процедура, например, не нужна, мы можем спокойно читать из прямо из флеш-памяти.
+
+У компоновщика есть понятие курсора — это текущий LMA. В начале блока SECTIONS курсор равен нулю и постепенно увеличивается по мере добавления новых секций. Текущее значение курсора хранится в переменной . (точка).
+
+Давайте запустим компоновщик и посмотрим результат его работы:
+% rake 'show:map[a]'
+arm-none-eabi-ld -T layout.ld -M -o build/out.elf build/module_a.o
+
+Allocating common symbols
+Common symbol       size              file
+
+external_counter    0x4               build/module_a.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x0000000000000000 0x0000000000008000 xr
+ram              0x0000000010000000 0x0000000000002000 awl
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Во-первых, мы видим, как компоновщик выносит в отдельную категорию «общий» символ external_counter. Далее мы видим, что наша конфигурация памяти была загружена и добавлена к конфигурации по умолчанию (которая выделяет все адресное пространство).
+Linker script and memory map
+
+
+.text           0x0000000000000000       0x34
+ *(.text)
+ .text          0x0000000000000000       0x34 build/module_a.o
+                0x0000000000000000                public_function
+                0x0000000000000034                _data_start = .
+
+Далее компоновщик размещает в памяти секции, которые мы указали, в первую очередь .text.
+.rodata         0x0000000000000034        0x4
+ .rodata        0x0000000000000034        0x4 build/module_a.o
+                0x0000000000000034                constant
+
+.glue_7         0x0000000000000038        0x0
+ .glue_7        0x0000000000000000        0x0 linker stubs
+
+.glue_7t        0x0000000000000038        0x0
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000000038        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x0000000000000038        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x0000000000000038        0x0
+ .iplt          0x0000000000000000        0x0 build/module_a.o
+
+.rel.dyn        0x0000000000000038        0x0
+ .rel.iplt      0x0000000000000000        0x0 build/module_a.o
+
+Следом идут секции, которые мы не указывали явно — .rodata, .glue_7, .glue_7t, .vfp11_veneer, .v4_bx, .iplt, .rel.dyn. С .rodata все понятно, там в четырех байтах хранится наша константа constant. Что касается остальных секций, то их существование обязано всяческой поддержке работоспособности, например, трамплинам из ARM в Thumb. Все эти секции пустые и не попадают в итоговый образ.
+.data           0x0000000010000000        0x4 load address 0x0000000000000038
+ *(.data)
+ .data          0x0000000010000000        0x4 build/module_a.o
+                0x0000000010000004                _data_end = .
+
+Вот и наша секция .data, как видите, она находится по адресу 0x10000000, хотя физически хранится по адресу 0x38 (т.е., сразу после .rodata). Тут же мы видим значение нашей переменной, прочитанной из курсора, _data_end.
+.igot.plt       0x0000000010000004        0x0 load address 0x000000000000003c
+ .igot.plt      0x0000000000000000        0x0 build/module_a.o
+
+.bss            0x0000000010000004        0x8 load address 0x000000000000003c
+ *(.bss)
+ .bss           0x0000000010000004        0x4 build/module_a.o
+ COMMON         0x0000000010000008        0x4 build/module_a.o
+                0x0000000010000008                external_counter
+                0x000000001000000c                _bss_end = .
+
+Еще одна пустая секция, следом за ней — .bss.
+LOAD build/module_a.o
+OUTPUT(build/out.elf elf32-littlearm)
+
+.comment        0x0000000000000000       0x70
+ .comment       0x0000000000000000       0x70 build/module_a.o
+                                         0x71 (size before relaxing)
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x31 build/module_a.o
+
+Наконец, ld генерирует выходной файл и выбрасывает ненужные секции. Вроде все?
+
+                0x0000000000000034                _data_start = .
+...
+.data           0x0000000010000000        0x4 load address 0x0000000000000038
+
+Переменная, указывающая на начало .data, на самом деле указывает совсем не туда! А ведь и правда, курсор после .text указывает на его конец. Для правильной установки переменной ее надо перенести внутрь описания выходной секции:
+
+.data :
+{
+  _data_start = .;
+  *(.data)
+  _data_end = .;
+} > ram AT> rom
+
+
+Скомпонуем и посмотрим что изменилось:
+% rake 'show:map[a]' SCRIPT=layout2.ld
+arm-none-eabi-ld -T layout2.ld -M -o build/module_a.elf build/module_a.o
+
+...
+
+.data           0x0000000010000000        0x4 load address 0x0000000000000038
+                0x0000000010000000                _data_start = .
+ *(.data)
+ .data          0x0000000010000000        0x4 build/module_a.o
+                0x0000000010000004                _data_end = .
+
+...
+
+Отлично, теперь все на месте.
+
+Вы можете задаться вопросом — а какое нам дело, где находится .data? Как вы помните, данные физически хранятся во флеше, а работать с ними предстоит из оперативной памяти. По этой причине нам придется написать загрузочный код, который будет копировать .data в оперативную память, а эти переменные помогут нам узнать конкретные адреса, куда надо переносить секцию.
+
+Усложним задачу
+
+С одним модулем мы разобрались. Давайте добавим второй файл и посмотрим что поменяется. Второй файл будет содержать уже известный нам external_counter и немного кода на C++: module_b.cpp
+int external_counter;
+extern "C" int public_function();
+
+void function_b()
+{
+    external_counter += public_function();
+}
+
+void function_c()
+{
+}
+
+void function_d()
+{
+}
+
+
+Как вы знаете, при компиляции кода на C++ имена функций и методов проходят «манглинг», когда в имени кодируются типы аргументов, имена классов и пространств имен:
+% rake 'show:symbols:text[b]'
+arm-none-eabi-gcc -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -mthumb -O2 -mcpu=cortex-m0 -c module_b.cpp -o build/module_b.o
+arm-none-eabi-objdump build/module_b.o -j .text -t
+
+build/module_b.o:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00000000 l    d  .text  00000000 .text
+00000000 g     F .text  00000014 _Z10function_bv
+00000014 g     F .text  00000002 _Z10function_cv
+00000018 g     F .text  00000002 _Z10function_dv
+
+
+Мы компилируем код с флагами -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables, чтобы избежать появления дополнительных секций, связанных с обработкой исключительных ситуаций. Имена функций были закодированы соответствующим образом.
+
+Мы не можем сгенерировать карту для этого модуля, так как его нельзя скомпоновать самостоятельно, он зависит от функции public_function из модуля a. Компонуем оба модуля сразу:
+% rake 'show:map[a|b]' SCRIPT=layout2.ld
+arm-none-eabi-ld -T layout2.ld -M -o build/out.elf build/module_a.o build/module_b.o
+
+...
+
+ .text          0x0000000000000000       0x34 build/module_a.o
+                0x0000000000000000                public_function
+ .text          0x0000000000000034       0x1c build/module_b.o
+                0x0000000000000034                function_b()
+                0x0000000000000048                function_c()
+                0x000000000000004c                function_d()
+
+...
+
+Блок общих символов пропал, все символы найдены в соответствующих модулях. Секции .text, равно как и остальные, компонуются друг за другом.
+
+Соберем мусор!
+
+
+Для встраиваемых приложений размер выходного файла как никогда актуален, потому стоит позаботиться о том, чтобы максимальное количество ненужных данных и мертвого кода было удалено. Компоновщик в состоянии избавиться от секций, на которые никто не ссылается и которые не были явно указаны как необходимые в сценарии компоновки. Делается это достаточно просто — с помощью флага --gc-sections:
+
+% rake 'show:map[a|b]' SCRIPT=layout2.ld GC=1
+arm-none-eabi-ld --gc-sections -T layout2.ld -M -o build/out.elf build/module_a.o build/module_b.o
+
+Discarded input sections
+
+ .rodata        0x0000000000000000        0x4 build/module_a.o
+ COMMON         0x0000000000000000        0x0 build/module_a.o
+ .text          0x0000000000000000       0x1c build/module_b.o
+ .data          0x0000000000000000        0x0 build/module_b.o
+
+...
+
+.text           0x0000000000000000       0x34
+ *(.text)
+ .text          0x0000000000000000       0x34 build/module_a.o
+                0x0000000000000000                public_function
+
+...
+
+Как видите, секция .text из build/module_b.o была удалена полностью, так как содержала бесполезные функции! Заодно компоновщик выбросил неиспользуемые константы из первого модуля.
+
+На самом деле, эта оптимизация не полная, в чем мы легко можем убедиться с помощью несложного эксперимента, см. module_c.cpp
+void function_b();
+
+extern "C" int public_function()
+{
+    function_b();
+}
+
+
+Мы заменим модуль a на модуль c и посмотрим, сможет ли компоновщик удалить секцию.
+
+% rake 'show:map[b|c]' SCRIPT=layout2.ld GC=1
+arm-none-eabi-gcc -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -mthumb -O2 -mcpu=cortex-m0 -c module_c.cpp -o build/module_c.o
+arm-none-eabi-ld --gc-sections -T layout2.ld -M -o build/out.elf build/module_b.o build/module_c.o
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 build/module_b.o
+ .data          0x0000000000000000        0x0 build/module_c.o
+ .bss           0x0000000000000000        0x0 build/module_c.o
+
+...
+
+.text           0x0000000000000000       0x24
+ *(.text)
+ .text          0x0000000000000000       0x1c build/module_b.o
+                0x0000000000000000                function_b()
+                0x0000000000000014                function_c()
+                0x0000000000000018                function_d()
+ .text          0x000000000000001c        0x8 build/module_c.o
+                0x000000000000001c                public_function
+
+
+Хотя часть секций (впрочем, пустых) выбросить удалось, но мы все еще теряем бесценные байты на функции function_c() и function_d(), которые оказались в той же секции, что и function_b(), которая нам нужна. На помощь придут флаги компилятора, которые разбивают функции и данные в разные секции: -ffunction-sections и -fdata-sections:
+% rake clean && rake 'show:symbols:all[b]' SPLIT_SECTIONS=1
+arm-none-eabi-gcc -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -mthumb -O2 -mcpu=cortex-m0 -c module_b.cpp -o build/module_b.o
+arm-none-eabi-objdump build/module_b.o -t
+
+build/module_b.o:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00000000 l    df *ABS*  00000000 module_b.cpp
+00000000 l    d  .text  00000000 .text
+00000000 l    d  .data  00000000 .data
+00000000 l    d  .bss 00000000 .bss
+00000000 l    d  .text._Z10function_bv  00000000 .text._Z10function_bv
+00000000 l    d  .text._Z10function_cv  00000000 .text._Z10function_cv
+00000000 l    d  .text._Z10function_dv  00000000 .text._Z10function_dv
+00000000 l    d  .bss.external_counter  00000000 .bss.external_counter
+00000000 l    d  .comment 00000000 .comment
+00000000 l    d  .ARM.attributes  00000000 .ARM.attributes
+00000000 g     F .text._Z10function_bv  00000014 _Z10function_bv
+00000000         *UND*  00000000 public_function
+00000000 g     F .text._Z10function_cv  00000002 _Z10function_cv
+00000000 g     F .text._Z10function_dv  00000002 _Z10function_dv
+00000000 g     O .bss.external_counter  00000004 external_counter
+
+Теперь, когда каждая функция и объект помещены в независимые секции, компоновщик может от них избавиться:
+% rake clean && rake 'show:map[b|c]' SCRIPT=layout2.ld GC=1 SPLIT_SECTIONS=1
+arm-none-eabi-gcc -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -mthumb -O2 -mcpu=cortex-m0 -c module_b.cpp -o build/module_b.o
+arm-none-eabi-gcc -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -mthumb -O2 -mcpu=cortex-m0 -c module_c.cpp -o build/module_c.o
+arm-none-eabi-ld --gc-sections -T layout2.ld -M -o build/out.elf build/module_b.o build/module_c.o
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 build/module_b.o
+ .data          0x0000000000000000        0x0 build/module_b.o
+ .bss           0x0000000000000000        0x0 build/module_b.o
+ .text._Z10function_cv
+                0x0000000000000000        0x4 build/module_b.o
+ .text._Z10function_dv
+                0x0000000000000000        0x4 build/module_b.o
+ .text          0x0000000000000000        0x0 build/module_c.o
+ .data          0x0000000000000000        0x0 build/module_c.o
+ .bss           0x0000000000000000        0x0 build/module_c.o
+
+...
