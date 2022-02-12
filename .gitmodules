@@ -4,3 +4,6 @@
 [submodule "Milandr_MCU_1986x_Standard_Peripherals_Library"]
 	path = Milandr_MCU_1986x_Standard_Peripherals_Library
 	url = ../../eldarkg/emdr1986x-std-per-lib.git
+[submodule "STM32CubeProjects/stlink"]
+	path = STM32CubeProjects/stlink
+	url = git://github.com/texane/stlink.git
