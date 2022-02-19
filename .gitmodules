@@ -7,3 +7,6 @@
 [submodule "STM32CubeProjects/stlink"]
 	path = STM32CubeProjects/stlink
 	url = git://github.com/texane/stlink.git
+[submodule "STM32CubeProjects/st-flash"]
+	path = STM32CubeProjects/st-flash
+	url = ../../texane/stlink.git
