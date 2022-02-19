@@ -2,3 +2,5 @@
 STM32CubeProjects_1/cmake-build-debug/
 STM32CubeProjects_1/.idea/
 STM32CubeProjects_1/build/
+STM32CubeProjects_1/Release/
+STM32CubeProjects_1/Debug/
