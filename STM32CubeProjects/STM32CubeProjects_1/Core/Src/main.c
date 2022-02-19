@@ -95,9 +95,18 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
+      int a =0;
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
+    for (int i = 0; i<1000000; ++i)
+    {
+        a++;
+    }
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+    for (int i = 0; i<1000000; ++i)
+    {
+        a--;
+    }
 
-    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
