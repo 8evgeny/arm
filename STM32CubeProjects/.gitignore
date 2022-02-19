@@ -1,3 +1,4 @@
 .metadata/
 STM32CubeProjects_1/cmake-build-debug/
 STM32CubeProjects_1/.idea/
+STM32CubeProjects_1/build/

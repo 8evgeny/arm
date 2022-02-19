@@ -1,3 +1,4 @@
 *.pro.user
 *.build.user
 *.qbs.user
+/STM32CubeProjects/STM32CubeProjects_1/CMakeLists.txt.user
