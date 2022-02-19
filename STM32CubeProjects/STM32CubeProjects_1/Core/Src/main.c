@@ -97,12 +97,12 @@ int main(void)
   {
       int a =0;
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
-    for (int i = 0; i<1000000; ++i)
+    for (int i = 0; i<300000; ++i)
     {
         a++;
     }
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-    for (int i = 0; i<1000000; ++i)
+    for (int i = 0; i<300000; ++i)
     {
         a--;
     }
