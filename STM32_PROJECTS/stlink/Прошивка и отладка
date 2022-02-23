@@ -1,0 +1,45 @@
+Добавляем правило для udev, чтобы к st-link был доступ не только у root’a:
+
+sudo cp 49-stlinkv1.rules 49-stlinkv2.rules /etc/udev/rules.d
+sudo udevadm control --reload-rules
+
+
+Прошивка
+st-flash  write firmware.bin  0x08000000
+
+Отладка программы для stm32 при помощи st-link
+Используя st-link можно не только заливать прошивку но и отлаживать её. 
+Для этого запускаем gdb сервер st-util.
+
+Затем запускаем arm-none-eabi-gdb и в нем выполняем команды.
+
+Подключаемся к gdb серверу:
+
+target remote localhost:4242
+Загружаем файл:
+
+file  firmware.elf
+Загруженный файл заливаем в микроконтроллер:
+
+load
+
+Устанавливаем breakpoint на функцию main:
+
+break main
+Запускаем выполнение программы:
+
+continue
+Поле того, как отладчик остановится на функции main, можно выполнять пошаговую отладку:
+
+step
+
+
+Информация по инсталляции stlink немного устарела. Сейчас инсталляцию выполнить можно так:
+$ sudo apt install -y cmake
+$ mkdir ~/stlink
+$ git clone git://github.com/texane/stlink.git ~/stlink
+$ mkdir ~/stlink/bin
+$ cd ~/stlink/bin
+$ cmake ..
+$ make
+$ sudo make install
