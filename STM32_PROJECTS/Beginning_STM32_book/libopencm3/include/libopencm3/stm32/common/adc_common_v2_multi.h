@@ -42,6 +42,8 @@ specific memorymap.h header before including this header file.*/
  * or only a much "simpler" version as found on (so far) f0 and l0.
  */
 
+/** @addtogroup adc_registers
+ *@{*/
 /* ----- ADC registers  -----------------------------------------------------*/
 /* Sample Time Register 2 */
 #define ADC_SMPR2(adc)		MMIO32((adc) + 0x18)
@@ -84,6 +86,7 @@ specific memorymap.h header before including this header file.*/
 /* ADC common (shared) registers */
 #define ADC_CSR(adc)		MMIO32((adc) + 0x300 + 0x0)
 #define ADC_CDR(adc)		MMIO32((adc) + 0x300 + 0xc)
+/**@}*/
 
 /* --- Register values ------------------------------------------------------*/
 /* ADC_ISR Values -----------------------------------------------------------*/
@@ -139,11 +142,6 @@ specific memorymap.h header before including this header file.*/
 #define ADC_CFGR1_DISCNUM_SHIFT	17
 #define ADC_CFGR1_DISCNUM_MASK  (0x7 << ADC_CFGR1_DISCNUM_SHIFT)
 #define ADC_CFGR1_DISCNUM_VAL(x)	(((x) - 1) << ADC_CFGR1_DISCNUM_SHIFT)
-
-/* EXTSEL[3:0]: External trigger selection for regular group */
-#define ADC_CFGR1_EXTSEL_SHIFT		6
-#define ADC_CFGR1_EXTSEL_MASK		(0xf << ADC_CFGR1_EXTSEL_SHIFT)
-#define ADC_CFGR1_EXTSEL_VAL(x)		((x) << ADC_CFGR1_EXTSEL_SHIFT)
 
 /* ADC_SQRx Values: Regular Sequence ordering------------------------------- */
 

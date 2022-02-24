@@ -38,6 +38,8 @@
 
 #include <libopencm3/stm32/f7/pwr.h>
 
+/**@{*/
+
 /* --- RCC registers ------------------------------------------------------- */
 
 #define RCC_CR					MMIO32(RCC_BASE + 0x00)
@@ -135,29 +137,35 @@
 #define RCC_CFGR_RTCPRE_SHIFT			16
 #define RCC_CFGR_RTCPRE_MASK			0x1f
 
-/* PPRE1/2: APB high-speed prescalers */
 #define RCC_CFGR_PPRE2_SHIFT			13
 #define RCC_CFGR_PPRE2_MASK			0x7
 #define RCC_CFGR_PPRE1_SHIFT			10
 #define RCC_CFGR_PPRE1_MASK			0x7
-#define RCC_CFGR_PPRE_DIV_NONE			0x0
-#define RCC_CFGR_PPRE_DIV_2			0x4
-#define RCC_CFGR_PPRE_DIV_4			0x5
-#define RCC_CFGR_PPRE_DIV_8			0x6
-#define RCC_CFGR_PPRE_DIV_16			0x7
+/** @defgroup rcc_cfgr_apbxpre RCC_CFGR APBx prescale factors
+ * These can be used for both APB1 and APB2 prescaling
+ * @{
+ */
+#define RCC_CFGR_PPRE_NODIV			0x0
+#define RCC_CFGR_PPRE_DIV2			0x4
+#define RCC_CFGR_PPRE_DIV4			0x5
+#define RCC_CFGR_PPRE_DIV8			0x6
+#define RCC_CFGR_PPRE_DIV16			0x7
+/**@}*/
 
-/* HPRE: AHB high-speed prescaler */
 #define RCC_CFGR_HPRE_SHIFT			4
 #define RCC_CFGR_HPRE_MASK			0xf
-#define RCC_CFGR_HPRE_DIV_NONE			0x0
-#define RCC_CFGR_HPRE_DIV_2			(0x8 + 0)
-#define RCC_CFGR_HPRE_DIV_4			(0x8 + 1)
-#define RCC_CFGR_HPRE_DIV_8			(0x8 + 2)
-#define RCC_CFGR_HPRE_DIV_16			(0x8 + 3)
-#define RCC_CFGR_HPRE_DIV_64			(0x8 + 4)
-#define RCC_CFGR_HPRE_DIV_128			(0x8 + 5)
-#define RCC_CFGR_HPRE_DIV_256			(0x8 + 6)
-#define RCC_CFGR_HPRE_DIV_512			(0x8 + 7)
+/** @defgroup rcc_cfgr_ahbpre RCC_CFGR AHB prescale factors
+@{*/
+#define RCC_CFGR_HPRE_NODIV			0x0
+#define RCC_CFGR_HPRE_DIV2			(0x8 + 0)
+#define RCC_CFGR_HPRE_DIV4			(0x8 + 1)
+#define RCC_CFGR_HPRE_DIV8			(0x8 + 2)
+#define RCC_CFGR_HPRE_DIV16			(0x8 + 3)
+#define RCC_CFGR_HPRE_DIV64			(0x8 + 4)
+#define RCC_CFGR_HPRE_DIV128			(0x8 + 5)
+#define RCC_CFGR_HPRE_DIV256			(0x8 + 6)
+#define RCC_CFGR_HPRE_DIV512			(0x8 + 7)
+/**@}*/
 
 /* SWS: System clock switch status */
 #define RCC_CFGR_SWS_SHIFT			2
@@ -172,6 +180,28 @@
 #define RCC_CFGR_SW_HSI				0x0
 #define RCC_CFGR_SW_HSE				0x1
 #define RCC_CFGR_SW_PLL				0x2
+
+/** Older compatible definitions to ease migration
+ * @defgroup rcc_cfgr_deprecated RCC_CFGR Deprecated dividers
+ * @deprecated Use _CFGR_xPRE_DIVn form instead, across all families
+ * @{
+ */
+#define RCC_CFGR_PPRE_DIV_NONE			0x0
+#define RCC_CFGR_PPRE_DIV_2			0x4
+#define RCC_CFGR_PPRE_DIV_4			0x5
+#define RCC_CFGR_PPRE_DIV_8			0x6
+#define RCC_CFGR_PPRE_DIV_16			0x7
+
+#define RCC_CFGR_HPRE_DIV_NONE			0x0
+#define RCC_CFGR_HPRE_DIV_2			(0x8 + 0)
+#define RCC_CFGR_HPRE_DIV_4			(0x8 + 1)
+#define RCC_CFGR_HPRE_DIV_8			(0x8 + 2)
+#define RCC_CFGR_HPRE_DIV_16			(0x8 + 3)
+#define RCC_CFGR_HPRE_DIV_64			(0x8 + 4)
+#define RCC_CFGR_HPRE_DIV_128			(0x8 + 5)
+#define RCC_CFGR_HPRE_DIV_256			(0x8 + 6)
+#define RCC_CFGR_HPRE_DIV_512			(0x8 + 7)
+/**@}*/
 
 /* --- RCC_CIR values ------------------------------------------------------ */
 
@@ -208,8 +238,10 @@
 #define RCC_CIR_LSERDYF				(1 << 1)
 #define RCC_CIR_LSIRDYF				(1 << 0)
 
-/* --- RCC_AHB1RSTR values ------------------------------------------------- */
-
+/** @defgroup rcc_ahbrstr_rst RCC_AHBxRSTR reset values (full set)
+@{*/
+/** @defgroup rcc_ahb1rstr_rst RCC_AHB1RSTR reset values
+@{*/
 #define RCC_AHB1RSTR_OTGHSRST			(1 << 29)
 #define RCC_AHB1RSTR_ETHMACRST			(1 << 25)
 #define RCC_AHB1RSTR_DMA2DRST			(1 << 23)
@@ -227,22 +259,26 @@
 #define RCC_AHB1RSTR_GPIOCRST			(1 << 2)
 #define RCC_AHB1RSTR_GPIOBRST			(1 << 1)
 #define RCC_AHB1RSTR_GPIOARST			(1 << 0)
+/**@}*/
 
-/* --- RCC_AHB2RSTR values ------------------------------------------------- */
-
+/** @defgroup rcc_ahb2rstr_rst RCC_AHB2RSTR reset values
+@{*/
 #define RCC_AHB2RSTR_OTGFSRST			(1 << 7)
 #define RCC_AHB2RSTR_RNGRST			(1 << 6)
 #define RCC_AHB2RSTR_HASHRST			(1 << 5)
 #define RCC_AHB2RSTR_CRYPRST			(1 << 4)
 #define RCC_AHB2RSTR_DCMIRST			(1 << 0)
+/**@}*/
 
-/* --- RCC_AHB3RSTR values ------------------------------------------------- */
-
+/** @defgroup rcc_ahb3rstr_rst RCC_AHB3RSTR reset values
+@{*/
 #define RCC_AHB3RSTR_QSPIRST			(1 << 1)
 #define RCC_AHB3RSTR_FSMCRST			(1 << 0)
+/**@}*/
+/**@}*/
 
-/* --- RCC_APB1RSTR values ------------------------------------------------- */
-
+/** @defgroup rcc_apb1rstr_rst RCC_APB1RSTR reset values
+@{*/
 #define RCC_APB1RSTR_UART8RST			(1 << 31)
 #define RCC_APB1RSTR_UART7RST			(1 << 30)
 #define RCC_APB1RSTR_DACRST			(1 << 29)
@@ -272,9 +308,10 @@
 #define RCC_APB1RSTR_TIM4RST			(1 << 2)
 #define RCC_APB1RSTR_TIM3RST			(1 << 1)
 #define RCC_APB1RSTR_TIM2RST			(1 << 0)
+/**@}*/
 
-/* --- RCC_APB2RSTR values ------------------------------------------------- */
-
+/** @defgroup rcc_apb2rstr_rst RCC_APB2RSTR reset values
+@{*/
 #define RCC_APB2RSTR_LTDCRST			(1 << 26)
 #define RCC_APB2RSTR_SAI2RST			(1 << 23)
 #define RCC_APB2RSTR_SAI1RST			(1 << 22)
@@ -292,9 +329,12 @@
 #define RCC_APB2RSTR_USART1RST			(1 << 4)
 #define RCC_APB2RSTR_TIM8RST			(1 << 1)
 #define RCC_APB2RSTR_TIM1RST			(1 << 0)
+/**@}*/
 
-/* --- RCC_AHB1ENR values ------------------------------------------------- */
-
+/** @defgroup rcc_ahbenr_en RCC_AHBxENR enable values (full set)
+@{*/
+/** @defgroup rcc_ahb1enr_en RCC_AHB1ENR enable values
+@{*/
 #define RCC_AHB1ENR_OTGHSULPIEN			(1 << 30)
 #define RCC_AHB1ENR_OTGHSEN			(1 << 29)
 #define RCC_AHB1ENR_ETHMACPTPEN			(1 << 28)
@@ -318,22 +358,26 @@
 #define RCC_AHB1ENR_GPIOCEN			(1 << 2)
 #define RCC_AHB1ENR_GPIOBEN			(1 << 1)
 #define RCC_AHB1ENR_GPIOAEN			(1 << 0)
+/**@}*/
 
-/* --- RCC_AHB2ENR values ------------------------------------------------- */
-
+/** @defgroup rcc_ahb2enr_en RCC_AHB2ENR enable values
+@{*/
 #define RCC_AHB2ENR_OTGFSEN			(1 << 7)
 #define RCC_AHB2ENR_RNGEN			(1 << 6)
 #define RCC_AHB2ENR_HASHEN			(1 << 5)
 #define RCC_AHB2ENR_CRYPEN			(1 << 4)
 #define RCC_AHB2ENR_DCMIEN			(1 << 0)
+/**@}*/
 
-/* --- RCC_AHB3ENR values ------------------------------------------------- */
-
+/** @defgroup rcc_ahb3enr_en RCC_AHB3ENR enable values
+@{*/
 #define RCC_AHB3ENR_QSPIEN			(1 << 1)
 #define RCC_AHB3ENR_FMCEN			(1 << 0)
+/**@}*/
+/**@}*/
 
-/* --- RCC_APB1ENR values ------------------------------------------------- */
-
+/** @defgroup rcc_apb1enr_en RCC_APB1ENR enable values
+@{*/
 #define RCC_APB1ENR_UART8EN			(1 << 31)
 #define RCC_APB1ENR_UART7EN			(1 << 30)
 #define RCC_APB1ENR_DACEN			(1 << 29)
@@ -363,9 +407,10 @@
 #define RCC_APB1ENR_TIM4EN			(1 << 2)
 #define RCC_APB1ENR_TIM3EN			(1 << 1)
 #define RCC_APB1ENR_TIM2EN			(1 << 0)
+/**@}*/
 
-/* --- RCC_APB2ENR values ------------------------------------------------- */
-
+/** @defgroup rcc_apb2enr_en RCC_APB2ENR enable values
+@{*/
 #define RCC_APB2ENR_LTDCEN			(1 << 26)
 #define RCC_APB2ENR_SAI2EN			(1 << 23)
 #define RCC_APB2ENR_SAI1EN			(1 << 22)
@@ -385,6 +430,7 @@
 #define RCC_APB2ENR_USART1EN			(1 << 4)
 #define RCC_APB2ENR_TIM8EN			(1 << 1)
 #define RCC_APB2ENR_TIM1EN			(1 << 0)
+/**@}*/
 
 /* --- RCC_AHB1LPENR values ------------------------------------------------- */
 
@@ -600,6 +646,10 @@
 #define RCC_DCKCFGR2_UART2SEL_SHIFT		2
 #define RCC_DCKCFGR2_UART1SEL_MASK		0x3
 #define RCC_DCKCFGR2_UART1SEL_SHIFT		0
+#define RCC_DCKCFGR2_UARTxSEL_PCLK		0
+#define RCC_DCKCFGR2_UARTxSEL_SYSCLK		1
+#define RCC_DCKCFGR2_UARTxSEL_HSI		2
+
 
 extern uint32_t rcc_ahb_frequency;
 extern uint32_t rcc_apb1_frequency;
@@ -607,25 +657,31 @@ extern uint32_t rcc_apb2_frequency;
 
 enum rcc_clock_3v3 {
 	RCC_CLOCK_3V3_216MHZ,
+	RCC_CLOCK_3V3_168MHZ,
+	RCC_CLOCK_3V3_120MHZ,
+	RCC_CLOCK_3V3_72MHZ,
+	RCC_CLOCK_3V3_48MHZ,
+	RCC_CLOCK_3V3_24MHZ,
 	RCC_CLOCK_3V3_END
 };
 
 struct rcc_clock_scale {
-	uint8_t pllm;
+	// PLLM not specified here because it depends on input clock freq.
 	uint16_t plln;
 	uint8_t pllp;
 	uint8_t pllq;
-	uint32_t flash_config;
+	uint32_t flash_waitstates;
 	uint8_t hpre;
 	uint8_t ppre1;
 	uint8_t ppre2;
 	enum pwr_vos_scale vos_scale;
 	uint8_t overdrive;
+	uint32_t ahb_frequency;
 	uint32_t apb1_frequency;
 	uint32_t apb2_frequency;
 };
 
-extern const struct rcc_clock_scale rcc_hse_25mhz_3v3[RCC_CLOCK_3V3_END];
+extern const struct rcc_clock_scale rcc_3v3[RCC_CLOCK_3V3_END];
 
 enum rcc_osc {
 	RCC_PLL,
@@ -702,8 +758,8 @@ enum rcc_periph_clken {
 	RCC_CEC		= _REG_BIT(0x40, 27),
 	RCC_PWR		= _REG_BIT(0x40, 28),
 	RCC_DAC		= _REG_BIT(0x40, 29),
-	RCC_SPI7	= _REG_BIT(0x40, 30),
-	RCC_SPI8	= _REG_BIT(0x40, 31),
+	RCC_UART7	= _REG_BIT(0x40, 30),
+	RCC_UART8	= _REG_BIT(0x40, 31),
 
 	/* APB2 peripherals */
 	RCC_TIM1	= _REG_BIT(0x44, 0),
@@ -932,7 +988,15 @@ void rcc_set_main_pll_hsi(uint32_t pllm, uint32_t plln, uint32_t pllp,
 void rcc_set_main_pll_hse(uint32_t pllm, uint32_t plln, uint32_t pllp,
 			  uint32_t pllq);
 uint32_t rcc_system_clock_source(void);
-void rcc_clock_setup_hse_3v3(const struct rcc_clock_scale *clock);
+void rcc_clock_setup_hse(const struct rcc_clock_scale *clock, uint32_t hse_mhz);
+void rcc_clock_setup_hsi(const struct rcc_clock_scale *clock);
+uint32_t rcc_get_usart_clk_freq(uint32_t usart);
+uint32_t rcc_get_timer_clk_freq(uint32_t timer);
+uint32_t rcc_get_i2c_clk_freq(uint32_t i2c);
+uint32_t rcc_get_spi_clk_freq(uint32_t spi);
+
 END_DECLS
+
+/**@}*/
 
 #endif

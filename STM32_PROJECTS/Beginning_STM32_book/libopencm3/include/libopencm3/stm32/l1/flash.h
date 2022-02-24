@@ -44,6 +44,7 @@
 #define LIBOPENCM3_FLASH_H
 /**@{*/
 
+#include <libopencm3/stm32/common/flash_common_all.h>
 #include <libopencm3/stm32/common/flash_common_l01.h>
 
 /* --- FLASH registers ----------------------------------------------------- */
@@ -55,7 +56,7 @@
 /* --- FLASH_SR values ----------------------------------------------------- */
 #define FLASH_SR_OPTVERRUSR		(1 << 12)
 
-/* --- Function prototypes ------------------------------------------------- */
+#define FLASH_HALF_PAGE_SIZE	32
 
 BEGIN_DECLS
 

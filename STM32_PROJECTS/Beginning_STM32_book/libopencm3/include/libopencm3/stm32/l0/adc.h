@@ -57,6 +57,16 @@
 #define ADC_CALFACT(adc)	MMIO32((adc) + 0xB4)
 
 /* Register values */
+/* ADC_CFGR1 Values ---------------------------------------------------------*/
+
+/** ALIGN: Data alignment */
+#define ADC_CFGR1_ALIGN			(1 << 5)
+
+/* EXTSEL[2:0]: External trigger selection for regular group */
+#define ADC_CFGR1_EXTSEL_SHIFT		6
+#define ADC_CFGR1_EXTSEL		(0x7 << ADC_CFGR1_EXTSEL_SHIFT)
+#define ADC_CFGR1_EXTSEL_VAL(x)		((x) << ADC_CFGR1_EXTSEL_SHIFT)
+
 /* ADC_CFGR2 Values ---------------------------------------------------------*/
 
 #define ADC_CFGR2_CKMODE_SHIFT		30
@@ -66,6 +76,19 @@
 #define ADC_CFGR2_CKMODE_PCLK_DIV4	(2 << ADC_CFGR2_CKMODE_SHIFT)
 #define ADC_CFGR2_CKMODE_PCLK		(3 << ADC_CFGR2_CKMODE_SHIFT)
 
+/** @defgroup adc_sample_rg ADC Sample Time Selection for All Channels
+@ingroup adc_defines
+
+@{*/
+#define ADC_SMPR_SMP_1DOT5CYC		0x0
+#define ADC_SMPR_SMP_3DOT5CYC		0x1
+#define ADC_SMPR_SMP_7DOT5CYC		0x2
+#define ADC_SMPR_SMP_12DOT5CYC		0x3
+#define ADC_SMPR_SMP_19DOT5CYC		0x4
+#define ADC_SMPR_SMP_39DOT5CYC		0x5
+#define ADC_SMPR_SMP_79DOT5CYC		0x6
+#define ADC_SMPR_SMP_160DOT5CYC		0x7
+/**@}*/
 
 BEGIN_DECLS
 

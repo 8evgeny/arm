@@ -47,6 +47,9 @@ MEMORY
 #if defined(_RAM2)
 	ram2 (rwx) : ORIGIN = _RAM2_OFF, LENGTH = _RAM2
 #endif
+#if defined(_RAM3)
+	ram3 (rwx) : ORIGIN = _RAM3_OFF, LENGTH = _RAM3
+#endif
 #if defined(_CCM)
 	ccm (rwx) : ORIGIN = _CCM_OFF, LENGTH = _CCM
 #endif
@@ -115,9 +118,16 @@ SECTIONS
 	. = ALIGN(4);
 	_etext = .;
 
+	/* ram, but not cleared on reset, eg boot/app comms */
+	.noinit (NOLOAD) : {
+		*(.noinit*)
+	} >ram
+	. = ALIGN(4);
+
 	.data : {
 		_data = .;
 		*(.data*)	/* Read-write initialized data */
+		*(.ramtext*)	/* "text" functions to run in ram */
 		. = ALIGN(4);
 		_edata = .;
 	} >ram AT >rom
@@ -149,6 +159,13 @@ SECTIONS
 		*(.ram2*)
 		. = ALIGN(4);
 	} >ram2
+#endif
+
+#if defined(_RAM3)
+	.ram3 : {
+		*(.ram3*)
+		. = ALIGN(4);
+	} >ram3
 #endif
 
 #if defined(_XSRAM)

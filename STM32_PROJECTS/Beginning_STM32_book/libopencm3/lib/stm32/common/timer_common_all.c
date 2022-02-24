@@ -1,4 +1,5 @@
-/** @addtogroup timer_file
+/** @addtogroup timer_file TIMER peripheral API
+@ingroup peripheral_apis
 
 @author @htmlonly &copy; @endhtmlonly 2010
 Edward Cheeseman <evbuilder@users.sourceforge.org>
@@ -32,7 +33,6 @@ mode.
 Example: Timer 2 with 2x clock divide, edge aligned and up counting.
 @code
 	rcc_periph_clock_enable(RCC_TIM2);
-	timer_reset(TIM2);
 	timer_set_mode(TIM2, TIM_CR1_CKD_CK_INT_MUL_2,
 		       TIM_CR1_CMS_EDGE, TIM_CR1_DIR_UP);
 	...
@@ -44,16 +44,21 @@ Output Compare mode to PWM and enable the output of channel 1. Note that for
 the advanced timers the break functionality must be enabled before the signal
 will appear at the output, even though break is not being used. This is in
 addition to the normal output enable. Enable the alternate function clock (APB2
-only) and port A clock. Set ports A8 and A9 (timer 1 channel 1 compare outputs)
-to alternate function push-pull outputs where the PWM output will appear.
+only) and port A clock. Set port A8 (timer 1 channel 1 compare output) to
+alternate function push-pull output where the PWM output will appear.
 
 @code
+	rcc_periph_clock_enable(RCC_TIM1);
 	rcc_periph_clock_enable(RCC_GPIOA);
+
+	// for F1....
+	rcc_periph_clock_enable(RCC_AFIO);
+	gpio_set_mode(GPIOA, GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_ALTFN_PUSHPULL, GPIO8);
+	// For anyone else
+	gpio_set_output_options(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO8);
+	// End of family specific
+
 	rcc_periph_clock_enable(RCC_TIM1);
-	gpio_set_output_options(GPIOA, GPIO_OTYPE_PP,
-				GPIO_OSPEED_50MHZ, GPIO8 | GPIO9);
-	rcc_periph_clock_enable(RCC_TIM1);
-	timer_reset(TIM1);
 	timer_set_mode(TIM1, TIM_CR1_CKD_CK_INT, TIM_CR1_CMS_CENTER_1,
 		       TIM_CR1_DIR_UP);
 	timer_set_oc_mode(TIM1, TIM_OC1, TIM_OCM_PWM2);
@@ -113,75 +118,6 @@ knob.
 
 #include <libopencm3/stm32/timer.h>
 #include <libopencm3/stm32/rcc.h>
-
-/*---------------------------------------------------------------------------*/
-/** @brief Reset a Timer.
-
-The counter and all its associated configuration registers are placed in the
-reset condition. The reset is effected via the RCC peripheral reset system.
-
-@param[in] timer_peripheral Unsigned int32. Timer register address base @ref
-			    tim_reg_base (TIM9 .. TIM14 not yet supported here).
-*/
-
-void timer_reset(uint32_t timer_peripheral)
-{
-	switch (timer_peripheral) {
-#if defined(TIM1_BASE)
-	case TIM1:
-		rcc_periph_reset_pulse(RST_TIM1);
-		break;
-#endif
-	case TIM2:
-		rcc_periph_reset_pulse(RST_TIM2);
-		break;
-	case TIM3:
-		rcc_periph_reset_pulse(RST_TIM3);
-		break;
-#if defined(TIM4_BASE)
-	case TIM4:
-		rcc_periph_reset_pulse(RST_TIM4);
-		break;
-#endif
-#if defined(TIM5_BASE)
-	case TIM5:
-		rcc_periph_reset_pulse(RST_TIM5);
-		break;
-#endif
-	case TIM6:
-		rcc_periph_reset_pulse(RST_TIM6);
-		break;
-	case TIM7:
-		rcc_periph_reset_pulse(RST_TIM7);
-		break;
-#if defined(TIM8_BASE)
-	case TIM8:
-		rcc_periph_reset_pulse(RST_TIM8);
-		break;
-#endif
-/* These timers are not supported in libopencm3 yet */
-/*
-	case TIM9:
-		rcc_periph_reset_pulse(RST_TIM9);
-		break;
-	case TIM10:
-		rcc_periph_reset_pulse(RST_TIM10);
-		break;
-	case TIM11:
-		rcc_periph_reset_pulse(RST_TIM11);
-		break;
-	case TIM12:
-		rcc_periph_reset_pulse(RST_TIM12);
-		break;
-	case TIM13:
-		rcc_periph_reset_pulse(RST_TIM13);
-		break;
-	case TIM14:
-		rcc_periph_reset_pulse(RST_TIM14);
-		break;
-*/
-	}
-}
 
 /*---------------------------------------------------------------------------*/
 /** @brief Enable Interrupts for a Timer
@@ -1411,7 +1347,7 @@ Enables the output in the Break feature of an advanced timer. This does not
 enable the break functionality itself but only sets the Master Output Enable in
 the Break and Deadtime Register.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @note It is necessary to call this function to enable the output on an advanced
 timer <b>even if break or deadtime features are not being used</b>.
@@ -1431,7 +1367,7 @@ void timer_enable_break_main_output(uint32_t timer_peripheral)
 Disables the output in the Break feature of an advanced timer. This clears
 the Master Output Enable in the Break and Deadtime Register.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1449,7 +1385,7 @@ Enables the automatic output feature of the Break function of an advanced
 timer so that the output is re-enabled at the next update event following a
 break event.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1467,7 +1403,7 @@ Disables the automatic output feature of the Break function of an advanced
 timer so that the output is re-enabled at the next update event following a
 break event.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1483,7 +1419,7 @@ void timer_disable_break_automatic_output(uint32_t timer_peripheral)
 
 Sets the break function to activate when the break input becomes high.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1499,7 +1435,7 @@ void timer_set_break_polarity_high(uint32_t timer_peripheral)
 
 Sets the break function to activate when the break input becomes low.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1515,7 +1451,7 @@ void timer_set_break_polarity_low(uint32_t timer_peripheral)
 
 Enables the break function of an advanced timer.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1531,7 +1467,7 @@ void timer_enable_break(uint32_t timer_peripheral)
 
 Disables the break function of an advanced timer.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1551,7 +1487,7 @@ if no complementary output is present. When the capture-compare output is
 disabled while the complementary output is enabled, the output is set to its
 inactive level as defined by the output polarity.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1570,7 +1506,7 @@ timer in which the complementary outputs have been configured. It has no effect
 if no complementary output is present. When the capture-compare output is
 disabled, the output is also disabled.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1588,7 +1524,7 @@ Enables the off-state in idle mode for the break function of an advanced
 timer. When the master output is disabled the output is set to its
 inactive level as defined by the output polarity.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1605,7 +1541,7 @@ void timer_set_enabled_off_state_in_idle_mode(uint32_t timer_peripheral)
 Disables the off-state in idle mode for the break function of an advanced
 timer. When the master output is disabled the output is also disabled.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1623,7 +1559,7 @@ Set the lock bits for an advanced timer. Three levels of lock providing
 protection against software errors. Once written they cannot be changed until a
 timer reset has occurred.
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8
@@ -1647,7 +1583,7 @@ terms of the number of DTSC cycles:
 @li Bits 7:5 = 110, deadtime = 8x(32+bits(5:0))
 @li Bits 7:5 = 111, deadtime = 16x(32+bits(5:0))
 
-@note This setting is only valid for the advanced timers.
+@note Not all timers support Break/Deadtime features
 
 @param[in] timer_peripheral Unsigned int32. Timer register address base TIM1 or
 TIM8

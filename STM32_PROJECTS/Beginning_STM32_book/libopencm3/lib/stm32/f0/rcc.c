@@ -1,6 +1,6 @@
-/** @defgroup STM32F0xx-rcc-file RCC
+/** @defgroup rcc_file RCC peripheral API
  *
- * @ingroup STM32F0xx
+ * @ingroup peripheral_apis
  *
  * @brief <b>libopencm3 STM32F0xx Reset and Clock Control</b>
  *
@@ -39,6 +39,7 @@
 #include <libopencm3/cm3/assert.h>
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/flash.h>
+#include <libopencm3/stm32/i2c.h>
 
 /* Set the default clock frequencies */
 uint32_t rcc_ahb_frequency = 8000000; /* 8MHz after reset */
@@ -50,7 +51,7 @@ uint32_t rcc_apb1_frequency = 8000000; /* 8MHz after reset */
  * Clear the interrupt flag that was set when a clock oscillator became ready
  * to use.
  *
- * @param[in] osc enum ::osc_t. Oscillator ID
+ * @param osc Oscillator ID
  */
 
 void rcc_osc_ready_int_clear(enum rcc_osc osc)
@@ -83,7 +84,7 @@ void rcc_osc_ready_int_clear(enum rcc_osc osc)
 /*---------------------------------------------------------------------------*/
 /** @brief RCC Enable the Oscillator Ready Interrupt
  *
- * @param[in] osc enum ::osc_t. Oscillator ID
+ * @param osc Oscillator ID
  */
 
 void rcc_osc_ready_int_enable(enum rcc_osc osc)
@@ -116,7 +117,7 @@ void rcc_osc_ready_int_enable(enum rcc_osc osc)
 /*---------------------------------------------------------------------------*/
 /** @brief RCC Disable the Oscillator Ready Interrupt
  *
- * @param[in] osc enum ::osc_t. Oscillator ID
+ * @param osc Oscillator ID
  */
 
 void rcc_osc_ready_int_disable(enum rcc_osc osc)
@@ -149,7 +150,7 @@ void rcc_osc_ready_int_disable(enum rcc_osc osc)
 /*---------------------------------------------------------------------------*/
 /** @brief RCC Read the Oscillator Ready Interrupt Flag
  *
- * @param[in] osc enum ::osc_t. Oscillator ID
+ * @param osc Oscillator ID
  * @returns int. Boolean value for flag set.
  */
 
@@ -237,7 +238,7 @@ void rcc_wait_for_osc_ready(enum rcc_osc osc)
  * becomes ready (see @ref rcc_osc_ready_int_flag and @ref
  * rcc_wait_for_osc_ready).
  *
- * @param[in] osc enum ::osc_t. Oscillator ID
+ * @param osc Oscillator ID
  */
 
 void rcc_osc_on(enum rcc_osc osc)
@@ -275,7 +276,7 @@ void rcc_osc_on(enum rcc_osc osc)
  * @note An oscillator cannot be turned off if it is selected as the system
  * clock.
  *
- * @param[in] osc enum ::osc_t. Oscillator ID
+ * @param osc Oscillator ID
  */
 
 void rcc_osc_off(enum rcc_osc osc)
@@ -326,7 +327,7 @@ void rcc_css_disable(void)
 /*---------------------------------------------------------------------------*/
 /** @brief RCC Set the Source for the System Clock.
  *
- * @param[in] osc enum ::osc_t. Oscillator ID. Only HSE, LSE and PLL have
+ * @param clk Oscillator ID. Only HSE, LSE and PLL have
  * effect.
  */
 
@@ -356,7 +357,7 @@ void rcc_set_sysclk_source(enum rcc_osc clk)
 /*---------------------------------------------------------------------------*/
 /** @brief RCC Set the Source for the USB Clock.
  *
- * @param[in] osc enum ::osc_t. Oscillator ID. Only HSI48 or PLL have
+ * @param clk Oscillator ID. Only HSI48 or PLL have
  * effect.
  */
 void rcc_set_usbclk_source(enum rcc_osc clk)
@@ -401,7 +402,7 @@ void rcc_disable_rtc_clock(void)
 /*---------------------------------------------------------------------------*/
 /** @brief RCC Set the Source for the RTC clock
 
-@param[in] clock_source ::rcc_osc. RTC clock source. Only HSE/32, LSE and LSI.
+@param[in] clk RTC clock source. Only HSE/32, LSE and LSI.
 */
 
 void rcc_set_rtc_clock_source(enum rcc_osc clk)
@@ -466,7 +467,7 @@ void rcc_set_pllxtpre(uint32_t pllxtpre)
 /*---------------------------------------------------------------------------*/
 /** @brief RCC Set the APB Prescale Factor.
  *
- * @param[in] ppre1 Unsigned int32. APB prescale factor @ref rcc_cfgr_apb1pre
+ * @param[in] ppre Unsigned int32. APB prescale factor @ref rcc_cfgr_apb1pre
  */
 
 void rcc_set_ppre(uint32_t ppre)
@@ -500,7 +501,7 @@ void rcc_set_prediv(uint32_t prediv)
 /*---------------------------------------------------------------------------*/
 /** @brief RCC Get the System Clock Source.
  *
- * @returns ::osc_t System clock source:
+ * @returns current system clock source
  */
 
 enum rcc_osc rcc_system_clock_source(void)
@@ -520,10 +521,29 @@ enum rcc_osc rcc_system_clock_source(void)
 	cm3_assert_not_reached();
 }
 
+void rcc_set_i2c_clock_hsi(uint32_t i2c)
+{
+	if (i2c == I2C1) {
+		RCC_CFGR3 &= ~RCC_CFGR3_I2C1SW;
+	}
+}
+
+void rcc_set_i2c_clock_sysclk(uint32_t i2c)
+{
+	if (i2c == I2C1) {
+		RCC_CFGR3 |= RCC_CFGR3_I2C1SW;
+	}
+}
+
+uint32_t rcc_get_i2c_clocks(void)
+{
+	return RCC_CFGR3 & RCC_CFGR3_I2C1SW;
+}
+
 /*---------------------------------------------------------------------------*/
 /** @brief RCC Get the USB Clock Source.
  *
- * @returns ::osc_t USB clock source:
+ * @returns Currently selected USB clock source
  */
 
 enum rcc_osc rcc_usb_clock_source(void)
@@ -543,7 +563,7 @@ void rcc_clock_setup_in_hse_8mhz_out_48mhz(void)
 	rcc_set_hpre(RCC_CFGR_HPRE_NODIV);
 	rcc_set_ppre(RCC_CFGR_PPRE_NODIV);
 
-	flash_prefetch_buffer_enable();
+	flash_prefetch_enable();
 	flash_set_ws(FLASH_ACR_LATENCY_024_048MHZ);
 
 	/* PLL: 8MHz * 6 = 48MHz */
@@ -571,7 +591,7 @@ void rcc_clock_setup_in_hsi_out_48mhz(void)
 	rcc_set_hpre(RCC_CFGR_HPRE_NODIV);
 	rcc_set_ppre(RCC_CFGR_PPRE_NODIV);
 
-	flash_prefetch_buffer_enable();
+	flash_prefetch_enable();
 	flash_set_ws(FLASH_ACR_LATENCY_024_048MHZ);
 
 	/* 8MHz * 12 / 2 = 48MHz */
@@ -597,13 +617,81 @@ void rcc_clock_setup_in_hsi48_out_48mhz(void)
 	rcc_set_hpre(RCC_CFGR_HPRE_NODIV);
 	rcc_set_ppre(RCC_CFGR_PPRE_NODIV);
 
-	flash_prefetch_buffer_enable();
+	flash_prefetch_enable();
 	flash_set_ws(FLASH_ACR_LATENCY_024_048MHZ);
 
 	rcc_set_sysclk_source(RCC_HSI48);
 
 	rcc_apb1_frequency = 48000000;
 	rcc_ahb_frequency = 48000000;
+}
+
+static uint32_t rcc_get_usart_clksel_freq(uint8_t shift) {
+	uint8_t clksel = (RCC_CFGR3 >> shift) & RCC_CFGR3_USARTxSW_MASK;
+	uint8_t hpre = (RCC_CFGR >> RCC_CFGR_HPRE_SHIFT) & RCC_CFGR_HPRE_MASK;
+	switch (clksel) {
+		case RCC_CFGR3_USART1SW_PCLK:
+			return rcc_apb1_frequency;
+		case RCC_CFGR3_USART1SW_SYSCLK:
+			return rcc_ahb_frequency * rcc_get_div_from_hpre(hpre);
+		case RCC_CFGR3_USART1SW_HSI:
+			return 8000000U;
+	}
+	cm3_assert_not_reached();
+}
+
+/*---------------------------------------------------------------------------*/
+/** @brief Get the peripheral clock speed for the USART at base specified.
+ * @param usart  Base address of USART to get clock frequency for.
+ */
+uint32_t rcc_get_usart_clk_freq(uint32_t usart)
+{
+	if (usart == USART1_BASE) {
+		return rcc_get_usart_clksel_freq(RCC_CFGR3_USART1SW_SHIFT);
+	} else if (usart == USART2_BASE) {
+		return rcc_get_usart_clksel_freq(RCC_CFGR3_USART2SW_SHIFT);
+	} else if (usart == USART3_BASE) {
+		return rcc_get_usart_clksel_freq(RCC_CFGR3_USART3SW_SHIFT);
+	} else {
+		return rcc_apb1_frequency;
+	}
+}
+
+/*---------------------------------------------------------------------------*/
+/** @brief Get the peripheral clock speed for the Timer at base specified.
+ * @param timer  Base address of TIM to get clock frequency for.
+ */
+uint32_t rcc_get_timer_clk_freq(uint32_t timer __attribute__((unused)))
+{
+	uint8_t ppre = (RCC_CFGR >> RCC_CFGR_PPRE_SHIFT) & RCC_CFGR_PPRE_MASK;
+	return (ppre == RCC_CFGR_PPRE_NODIV) 	? rcc_apb1_frequency
+						: 2 * rcc_apb1_frequency;
+}
+
+/*---------------------------------------------------------------------------*/
+/** @brief Get the peripheral clock speed for the I2C device at base specified.
+ * @param i2c  Base address of I2C to get clock frequency for.
+ */
+uint32_t rcc_get_i2c_clk_freq(uint32_t i2c)
+{
+	if (i2c == I2C1_BASE) {
+		if (RCC_CFGR3 & RCC_CFGR3_I2C1SW) {
+			uint8_t hpre = (RCC_CFGR >> RCC_CFGR_HPRE_SHIFT) & RCC_CFGR_HPRE_MASK;
+			return rcc_ahb_frequency * rcc_get_div_from_hpre(hpre);
+		} else {
+			return 8000000U;
+		}
+	} else {
+		return rcc_apb1_frequency;
+	}
+}
+
+/*---------------------------------------------------------------------------*/
+/** @brief Get the peripheral clock speed for the SPI device at base specified.
+ * @param spi  Base address of SPI device to get clock frequency for (e.g. SPI1_BASE).
+ */
+uint32_t rcc_get_spi_clk_freq(uint32_t spi __attribute__((unused))) {
+	return rcc_apb1_frequency;
 }
 /**@}*/
 

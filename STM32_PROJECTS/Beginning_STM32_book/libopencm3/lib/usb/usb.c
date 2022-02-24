@@ -42,7 +42,7 @@ LGPL License Terms @ref lgpl_license
 usbd_device *usbd_init(const usbd_driver *driver,
 		       const struct usb_device_descriptor *dev,
 		       const struct usb_config_descriptor *conf,
-		       const char **strings, int num_strings,
+		       const char * const *strings, int num_strings,
 		       uint8_t *control_buffer, uint16_t control_buffer_size)
 {
 	usbd_device *usbd_dev;
@@ -54,6 +54,8 @@ usbd_device *usbd_init(const usbd_driver *driver,
 	usbd_dev->config = conf;
 	usbd_dev->strings = strings;
 	usbd_dev->num_strings = num_strings;
+	usbd_dev->extra_string_idx = 0;
+	usbd_dev->extra_string = NULL;
 	usbd_dev->ctrl_buf = control_buffer;
 	usbd_dev->ctrl_buf_len = control_buffer_size;
 
@@ -94,6 +96,20 @@ void usbd_register_sof_callback(usbd_device *usbd_dev, void (*callback)(void))
 	usbd_dev->user_callback_sof = callback;
 }
 
+void usbd_register_extra_string(usbd_device *usbd_dev, int index, const char* string)
+{
+    /*
+	 * Note: string index 0 is reserved for LANGID requests and cannot
+	 *       be overwritten using this functionality.
+	 */
+	if (string != NULL && index > 0) {
+		usbd_dev->extra_string_idx = index;
+		usbd_dev->extra_string = string;
+	} else {
+		usbd_dev->extra_string_idx = 0;
+	}
+}
+
 void _usbd_reset(usbd_device *usbd_dev)
 {
 	usbd_dev->current_address = 0;
@@ -112,7 +128,8 @@ void usbd_poll(usbd_device *usbd_dev)
 	usbd_dev->driver->poll(usbd_dev);
 }
 
-void usbd_disconnect(usbd_device *usbd_dev, bool disconnected)
+__attribute__((weak)) void usbd_disconnect(usbd_device *usbd_dev,
+					   bool disconnected)
 {
 	/* not all drivers support disconnection */
 	if (usbd_dev->driver->disconnect) {

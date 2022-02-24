@@ -47,7 +47,7 @@ uint32_t RxBD;
  *
  * @param[in] mac uint8_t* Desired MAC
  */
-void eth_set_mac(uint8_t *mac)
+void eth_set_mac(const uint8_t *mac)
 {
 	ETH_MACAHR(0) = ((uint32_t)mac[5] << 8) | (uint32_t)mac[4] |
 			ETH_MACA0HR_MACA0H;
@@ -371,7 +371,7 @@ void eth_smi_bit_clear(uint8_t phy, uint8_t reg, uint16_t clearbits)
  *
  * @param[in] phy uint8_t ID of the PHY (defaults to 1)
  * @param[in] reg uint8_t Register address
- * @param[in] bits uint16_t Bits that have to be set (or'ed)
+ * @param[in] setbits uint16_t Bits that have to be set (or'ed)
  */
 void eth_smi_bit_set(uint8_t phy, uint8_t reg, uint16_t setbits)
 {

@@ -47,7 +47,7 @@ LGPL License Terms @ref lgpl_license
 struct _usbd_device {
 	const struct usb_device_descriptor *desc;
 	const struct usb_config_descriptor *config;
-	const char **strings;
+	const char * const *strings;
 	int num_strings;
 
 	uint8_t *ctrl_buf;  /**< Internal buffer used for control transfers */
@@ -92,6 +92,10 @@ struct _usbd_device {
 
 	const struct _usbd_driver *driver;
 
+	/* Extra, non-contiguous user string descriptor index and value */
+	int extra_string_idx;
+	const char* extra_string;
+
 	/* private driver data */
 
 	uint16_t fifo_mem_top;
@@ -123,16 +127,16 @@ void _usbd_control_in(usbd_device *usbd_dev, uint8_t ea);
 void _usbd_control_out(usbd_device *usbd_dev, uint8_t ea);
 void _usbd_control_setup(usbd_device *usbd_dev, uint8_t ea);
 
-int _usbd_standard_request_device(usbd_device *usbd_dev,
+enum usbd_request_return_codes _usbd_standard_request_device(usbd_device *usbd_dev,
 				  struct usb_setup_data *req, uint8_t **buf,
 				  uint16_t *len);
-int _usbd_standard_request_interface(usbd_device *usbd_dev,
+enum usbd_request_return_codes _usbd_standard_request_interface(usbd_device *usbd_dev,
 				     struct usb_setup_data *req, uint8_t **buf,
 				     uint16_t *len);
-int _usbd_standard_request_endpoint(usbd_device *usbd_dev,
+enum usbd_request_return_codes _usbd_standard_request_endpoint(usbd_device *usbd_dev,
 				    struct usb_setup_data *req, uint8_t **buf,
 				    uint16_t *len);
-int _usbd_standard_request(usbd_device *usbd_dev, struct usb_setup_data *req,
+enum usbd_request_return_codes _usbd_standard_request(usbd_device *usbd_dev, struct usb_setup_data *req,
 			   uint8_t **buf, uint16_t *len);
 
 void _usbd_reset(usbd_device *usbd_dev);

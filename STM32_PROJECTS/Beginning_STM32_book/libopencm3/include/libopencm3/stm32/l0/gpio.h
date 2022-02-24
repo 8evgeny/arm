@@ -46,6 +46,7 @@
 #define GPIOB_BRR			GPIO_BRR(GPIOB)
 #define GPIOC_BRR			GPIO_BRR(GPIOC)
 #define GPIOD_BRR			GPIO_BRR(GPIOD)
+#define GPIOE_BRR			GPIO_BRR(GPIOE)
 #define GPIOH_BRR			GPIO_BRR(GPIOH)
 
 /*****************************************************************************/
@@ -57,7 +58,8 @@
 @{*/
 #define GPIO_OSPEED_LOW		0x0
 #define GPIO_OSPEED_MED		0x1
-#define GPIO_OSPEED_HIGH	0x3
+#define GPIO_OSPEED_HIGH	0x2
+#define GPIO_OSPEED_VERYHIGH	0x3
 /**@}*/
 
 /*****************************************************************************/

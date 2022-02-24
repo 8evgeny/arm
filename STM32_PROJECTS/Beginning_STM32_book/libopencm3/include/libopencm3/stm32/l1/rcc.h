@@ -164,34 +164,33 @@
 #define RCC_CFGR_PLLSRC_HSI_CLK		0x0
 #define RCC_CFGR_PLLSRC_HSE_CLK		0x1
 
-/* PPRE2: APB high-speed prescaler (APB2) */
-#define RCC_CFGR_PPRE2_HCLK_NODIV		0x0
-#define RCC_CFGR_PPRE2_HCLK_DIV2		0x4
-#define RCC_CFGR_PPRE2_HCLK_DIV4		0x5
-#define RCC_CFGR_PPRE2_HCLK_DIV8		0x6
-#define RCC_CFGR_PPRE2_HCLK_DIV16		0x7
-#define RCC_CFGR_PPRE2_MASK			0x7
 #define RCC_CFGR_PPRE2_SHIFT			11
-
-/* PPRE1: APB low-speed prescaler (APB1) */
-#define RCC_CFGR_PPRE1_HCLK_NODIV		0x0
-#define RCC_CFGR_PPRE1_HCLK_DIV2		0x4
-#define RCC_CFGR_PPRE1_HCLK_DIV4		0x5
-#define RCC_CFGR_PPRE1_HCLK_DIV8		0x6
-#define RCC_CFGR_PPRE1_HCLK_DIV16		0x7
-#define RCC_CFGR_PPRE1_MASK			0x7
+#define RCC_CFGR_PPRE2_MASK			0x7
 #define RCC_CFGR_PPRE1_SHIFT			8
+#define RCC_CFGR_PPRE1_MASK			0x7
+/** @defgroup rcc_cfgr_apbxpre RCC_CFGR APBx prescale factors
+ * These can be used for both APB1 and APB2 prescaling
+ * @{
+ */
+#define RCC_CFGR_PPRE_NODIV			0x0
+#define RCC_CFGR_PPRE_DIV2			0x4
+#define RCC_CFGR_PPRE_DIV4			0x5
+#define RCC_CFGR_PPRE_DIV8			0x6
+#define RCC_CFGR_PPRE_DIV16			0x7
+/**@}*/
 
-/* HPRE: AHB prescaler */
-#define RCC_CFGR_HPRE_SYSCLK_NODIV		0x0
-#define RCC_CFGR_HPRE_SYSCLK_DIV2		0x8
-#define RCC_CFGR_HPRE_SYSCLK_DIV4		0x9
-#define RCC_CFGR_HPRE_SYSCLK_DIV8		0xa
-#define RCC_CFGR_HPRE_SYSCLK_DIV16		0xb
-#define RCC_CFGR_HPRE_SYSCLK_DIV64		0xc
-#define RCC_CFGR_HPRE_SYSCLK_DIV128		0xd
-#define RCC_CFGR_HPRE_SYSCLK_DIV256		0xe
-#define RCC_CFGR_HPRE_SYSCLK_DIV512		0xf
+/** @defgroup rcc_cfgr_ahbpre RCC_CFGR AHB prescale factors
+@{*/
+#define RCC_CFGR_HPRE_NODIV		0x0
+#define RCC_CFGR_HPRE_DIV2		0x8
+#define RCC_CFGR_HPRE_DIV4		0x9
+#define RCC_CFGR_HPRE_DIV8		0xa
+#define RCC_CFGR_HPRE_DIV16		0xb
+#define RCC_CFGR_HPRE_DIV64		0xc
+#define RCC_CFGR_HPRE_DIV128		0xd
+#define RCC_CFGR_HPRE_DIV256		0xe
+#define RCC_CFGR_HPRE_DIV512		0xf
+/**@}*/
 #define RCC_CFGR_HPRE_MASK			0xf
 #define RCC_CFGR_HPRE_SHIFT			4
 
@@ -210,6 +209,35 @@
 #define RCC_CFGR_SW_SYSCLKSEL_PLLCLK		0x3
 #define RCC_CFGR_SW_MASK			0x3
 #define RCC_CFGR_SW_SHIFT			0
+
+/** Older compatible definitions to ease migration
+ * @defgroup rcc_cfgr_deprecated RCC_CFGR Deprecated dividers
+ * @deprecated Use _CFGR_xPRE_DIVn form instead, across all families
+ * @{
+ */
+#define RCC_CFGR_PPRE2_HCLK_NODIV		0x0
+#define RCC_CFGR_PPRE2_HCLK_DIV2		0x4
+#define RCC_CFGR_PPRE2_HCLK_DIV4		0x5
+#define RCC_CFGR_PPRE2_HCLK_DIV8		0x6
+#define RCC_CFGR_PPRE2_HCLK_DIV16		0x7
+
+#define RCC_CFGR_PPRE1_HCLK_NODIV		0x0
+#define RCC_CFGR_PPRE1_HCLK_DIV2		0x4
+#define RCC_CFGR_PPRE1_HCLK_DIV4		0x5
+#define RCC_CFGR_PPRE1_HCLK_DIV8		0x6
+#define RCC_CFGR_PPRE1_HCLK_DIV16		0x7
+
+#define RCC_CFGR_HPRE_SYSCLK_NODIV		0x0
+#define RCC_CFGR_HPRE_SYSCLK_DIV2		0x8
+#define RCC_CFGR_HPRE_SYSCLK_DIV4		0x9
+#define RCC_CFGR_HPRE_SYSCLK_DIV8		0xa
+#define RCC_CFGR_HPRE_SYSCLK_DIV16		0xb
+#define RCC_CFGR_HPRE_SYSCLK_DIV64		0xc
+#define RCC_CFGR_HPRE_SYSCLK_DIV128		0xd
+#define RCC_CFGR_HPRE_SYSCLK_DIV256		0xe
+#define RCC_CFGR_HPRE_SYSCLK_DIV512		0xf
+
+/**@}*/
 
 /* --- RCC_CIR values ------------------------------------------------------ */
 
@@ -243,7 +271,8 @@
 #define RCC_CIR_LSERDYF				(1 << 1)
 #define RCC_CIR_LSIRDYF				(1 << 0)
 
-/* --- RCC_AHBRSTR values ------------------------------------------------- */
+/** @defgroup rcc_ahbrstr_rst RCC_AHBRSTR reset values values
+@{*/
 #define RCC_AHBRSTR_DMA1RST			(1 << 24)
 #define RCC_AHBRSTR_FLITFRST			(1 << 15)
 #define RCC_AHBRSTR_CRCRST			(1 << 12)
@@ -253,9 +282,10 @@
 #define RCC_AHBRSTR_GPIOCRST			(1 << 2)
 #define RCC_AHBRSTR_GPIOBRST			(1 << 1)
 #define RCC_AHBRSTR_GPIOARST			(1 << 0)
+/**@}*/
 
-/* --- RCC_APB2RSTR values ------------------------------------------------- */
-
+/** @defgroup rcc_apb2rstr_rst RCC_APB2RSTR reset values values
+@{*/
 #define RCC_APB2RSTR_USART1RST			(1 << 14)
 #define RCC_APB2RSTR_SPI1RST			(1 << 12)
 #define RCC_APB2RSTR_ADC1RST			(1 << 9)
@@ -263,9 +293,10 @@
 #define RCC_APB2RSTR_TIM10RST			(1 << 3)
 #define RCC_APB2RSTR_TIM9RST			(1 << 2)
 #define RCC_APB2RSTR_SYSCFGRST			(1 << 0)
+/**@}*/
 
-/* --- RCC_APB1RSTR values ------------------------------------------------- */
-
+/** @defgroup rcc_apb1rstr_rst RCC_APB1RSTR reset values values
+@{*/
 #define RCC_APB1RSTR_COMPRST			(1 << 31)
 #define RCC_APB1RSTR_DACRST			(1 << 29)
 #define RCC_APB1RSTR_PWRRST			(1 << 28)
@@ -283,6 +314,7 @@
 #define RCC_APB1RSTR_TIM4RST			(1 << 2)
 #define RCC_APB1RSTR_TIM3RST			(1 << 1)
 #define RCC_APB1RSTR_TIM2RST			(1 << 0)
+/**@}*/
 
 /* --- RCC_AHBENR values --------------------------------------------------- */
 
@@ -299,7 +331,7 @@
 #define RCC_AHBENR_GPIOCEN			(1 << 2)
 #define RCC_AHBENR_GPIOBEN			(1 << 1)
 #define RCC_AHBENR_GPIOAEN			(1 << 0)
-/*@}*/
+/**@}*/
 
 /* --- RCC_APB2ENR values -------------------------------------------------- */
 
@@ -314,7 +346,7 @@
 #define RCC_APB2ENR_TIM10EN			(1 << 3)
 #define RCC_APB2ENR_TIM9EN			(1 << 2)
 #define RCC_APB2ENR_SYSCFGEN			(1 << 0)
-/*@}*/
+/**@}*/
 
 /* --- RCC_APB1ENR values -------------------------------------------------- */
 
@@ -338,7 +370,7 @@
 #define RCC_APB1ENR_TIM4EN			(1 << 2)
 #define RCC_APB1ENR_TIM3EN			(1 << 1)
 #define RCC_APB1ENR_TIM2EN			(1 << 0)
-/*@}*/
+/**@}*/
 
 /* --- RCC_AHBLPENR -------------------------------------------------------- */
 #define RCC_AHBLPENR_DMA1LPEN			(1 << 24)
@@ -398,7 +430,7 @@
 #define RCC_CSR_RTCSEL_NONE			(0x0)
 #define RCC_CSR_RTCSEL_LSE			(0x1)
 #define RCC_CSR_RTCSEL_LSI			(0x2)
-#define RCC_CSR_RTCSEL_HSI			(0x3)
+#define RCC_CSR_RTCSEL_HSE			(0x3)
 #define RCC_CSR_LSECSSD				(1 << 12)
 #define RCC_CSR_LSECSSON			(1 << 11)
 #define RCC_CSR_LSEBYP				(1 << 10)
@@ -628,6 +660,10 @@ void rcc_clock_setup_msi(const struct rcc_clock_scale *clock);
 void rcc_clock_setup_hsi(const struct rcc_clock_scale *clock);
 void rcc_clock_setup_pll(const struct rcc_clock_scale *clock);
 void rcc_backupdomain_reset(void);
+uint32_t rcc_get_usart_clk_freq(uint32_t usart);
+uint32_t rcc_get_timer_clk_freq(uint32_t timer);
+uint32_t rcc_get_i2c_clk_freq(uint32_t i2c);
+uint32_t rcc_get_spi_clk_freq(uint32_t spi);
 
 END_DECLS
 

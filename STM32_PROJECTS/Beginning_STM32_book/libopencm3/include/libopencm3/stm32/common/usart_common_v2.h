@@ -197,7 +197,7 @@
 /**@}*/
 
 /** @defgroup usart_convenience_flags U(S)ART convenience Flags
- * @ingroup STM32F_usart_defines
+ * @ingroup usart_defines
  * We define the "common" lower flag bits using a standard name,
  * allowing them to be used regardless of which usart peripheral
  * version you have.
@@ -478,7 +478,7 @@
 #define USART_RQR_SBKRQ		            (1 << 1)
 
 /** ABRRQ: Auto baud rate request */
-#define USART_RQR_ABKRQ		            (1 << 0)
+#define USART_RQR_ABRRQ		            (1 << 0)
 
 /**@}*/
 

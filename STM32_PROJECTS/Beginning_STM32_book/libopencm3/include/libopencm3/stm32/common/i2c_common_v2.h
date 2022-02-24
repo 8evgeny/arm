@@ -43,6 +43,12 @@ specific memorymap.h header before including this header file.*/
  * @{*/
 #define I2C1				I2C1_BASE
 #define I2C2				I2C2_BASE
+#ifdef I2C3_BASE
+#define I2C3				I2C3_BASE
+#endif
+#ifdef I2C4_BASE
+#define I2C4				I2C4_BASE
+#endif
 /**@}*/
 
 /* --- I2C registers ------------------------------------------------------- */
@@ -102,6 +108,19 @@ specific memorymap.h header before including this header file.*/
 #define I2C1_TXDR			I2C_TXDR(I2C1)
 #define I2C2_TXDR			I2C_TXDR(I2C2)
 
+/* Not all parts have i2c3 */
+#ifdef I2C3_BASE
+#define I2C3_CR1			I2C_CR1(I2C3)
+#define I2C3_CR2			I2C_CR2(I2C3)
+#define I2C3_OAR1			I2C_OAR1(I2C3)
+#define I2C3_OAR2			I2C_OAR2(I2C3)
+#define I2C3_DR				I2C_DR(I2C3)
+#define I2C3_SR1			I2C_SR1(I2C3)
+#define I2C3_SR2			I2C_SR2(I2C3)
+#define I2C3_CCR			I2C_CCR(I2C3)
+#define I2C3_TRISE			I2C_TRISE(I2C3)
+#endif
+
 /* --- I2Cx_CR1 values ----------------------------------------------------- */
 
 /* PECEN: PEC enable */
@@ -154,7 +173,7 @@ specific memorymap.h header before including this header file.*/
 #define I2C_CR1_NACKIE			(1 << 4)
 
 /* ADDRIE: Address match Interrupt enable (slave only) */
-#define I2C_CR1_DDRIE			(1 << 3)
+#define I2C_CR1_ADDRIE			(1 << 3)
 
 /* RXIE: RX Interrupt enable */
 #define I2C_CR1_RXIE			(1 << 2)
@@ -425,7 +444,7 @@ void i2c_enable_rxdma(uint32_t i2c);
 void i2c_disable_rxdma(uint32_t i2c);
 void i2c_enable_txdma(uint32_t i2c);
 void i2c_disable_txdma(uint32_t i2c);
-void i2c_transfer7(uint32_t i2c, uint8_t addr, uint8_t *w, size_t wn, uint8_t *r, size_t rn);
+void i2c_transfer7(uint32_t i2c, uint8_t addr, const uint8_t *w, size_t wn, uint8_t *r, size_t rn);
 void i2c_set_speed(uint32_t i2c, enum i2c_speeds speed, uint32_t clock_megahz);
 
 END_DECLS

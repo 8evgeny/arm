@@ -38,9 +38,16 @@
 #include <libopencm3/stm32/memorymap.h>
 #include <libopencm3/cm3/common.h>
 
+/*****************************************************************************/
+/* Module definitions                                                        */
+/*****************************************************************************/
+
+/*****************************************************************************/
+/* Register definitions                                                      */
+/*****************************************************************************/
+
 /**@{*/
 
-/* Ethernet MAC registers */
 #define ETH_MACCR			MMIO32(ETHERNET_BASE + 0x00)
 #define ETH_MACFFR			MMIO32(ETHERNET_BASE + 0x04)
 #define ETH_MACHTHR			MMIO32(ETHERNET_BASE + 0x08)
@@ -51,8 +58,7 @@
 #define ETH_MACVLANTR			MMIO32(ETHERNET_BASE + 0x1C)
 #define ETH_MACRWUFFR			MMIO32(ETHERNET_BASE + 0x28)
 #define ETH_MACPMTCSR			MMIO32(ETHERNET_BASE + 0x2C)
-/* not available on F1 ?*/
-#define ETH_MACDBGR			MMIO32(ETHERNET_BASE + 0x34)
+#define ETH_MACDBGR			MMIO32(ETHERNET_BASE + 0x34) /* Not on STM32F1 */
 #define ETH_MACSR			MMIO32(ETHERNET_BASE + 0x38)
 #define ETH_MACIMR			MMIO32(ETHERNET_BASE + 0x3C)
 
@@ -74,7 +80,7 @@
 #define ETH_MMCRFAECR			MMIO32(ETHERNET_BASE + 0x198)
 #define ETH_MMCRGUFCR			MMIO32(ETHERNET_BASE + 0x1C4)
 
-/* Ethrenet IEEE 1588 time stamp registers */
+/* Ethernet IEEE 1588 time stamp registers */
 #define ETH_PTPTSCR			MMIO32(ETHERNET_BASE + 0x700)
 #define ETH_PTPSSIR			MMIO32(ETHERNET_BASE + 0x704)
 #define ETH_PTPTSHR			MMIO32(ETHERNET_BASE + 0x708)
@@ -84,8 +90,8 @@
 #define ETH_PTPTSAR			MMIO32(ETHERNET_BASE + 0x718)
 #define ETH_PTPTTHR			MMIO32(ETHERNET_BASE + 0x71C)
 #define ETH_PTPTTLR			MMIO32(ETHERNET_BASE + 0x720)
-/* not available on F1 ?*/
-#define ETH_PTPTSSR			MMIO32(ETHERNET_BASE + 0x728)
+#define ETH_PTPTSSR			MMIO32(ETHERNET_BASE + 0x728) /* Not on STM32F1 */
+#define ETH_PTPPPSCR			MMIO32(ETHERNET_BASE + 0x72C) /* Not on STM32F1 */
 
 /* Ethernet DMA registers */
 #define ETH_DMABMR			MMIO32(ETHERNET_BASE + 0x1000)
@@ -97,6 +103,7 @@
 #define ETH_DMAOMR			MMIO32(ETHERNET_BASE + 0x1018)
 #define ETH_DMAIER			MMIO32(ETHERNET_BASE + 0x101C)
 #define ETH_DMAMFBOCR			MMIO32(ETHERNET_BASE + 0x1020)
+#define ETH_DMARSWTR			MMIO32(ETHERNET_BASE + 0x1024) /* Not on STM32F1 */
 #define ETH_DMACHTDR			MMIO32(ETHERNET_BASE + 0x1048)
 #define ETH_DMACHRDR			MMIO32(ETHERNET_BASE + 0x104C)
 #define ETH_DMACHTBAR			MMIO32(ETHERNET_BASE + 0x1050)
@@ -114,6 +121,10 @@
 #define	ETH_DES5(base)			ETH_DES(5, base)
 #define	ETH_DES6(base)			ETH_DES(6, base)
 #define	ETH_DES7(base)			ETH_DES(7, base)
+
+/*****************************************************************************/
+/* Register values                                                           */
+/*****************************************************************************/
 
 /*---------------------------------------------------------------------------*/
 /* MACCR --------------------------------------------------------------------*/
@@ -143,7 +154,7 @@
 
 #define ETH_MACCR_JD			(1<<22)
 #define ETH_MACCR_WD			(1<<23)
-#define ETH_MACCR_CSTF			(1<<25)
+#define ETH_MACCR_CSTF			(1<<25) /* Not on STM32F1 */
 
 /*---------------------------------------------------------------------------*/
 /* MACFFR -------------------------------------------------------------------*/
@@ -236,6 +247,7 @@
 /*---------------------------------------------------------------------------*/
 /* MACDBGR -------------------------------------------------------------------*/
 
+/* Not on STM32F1 */
 #define ETH_MACDBGR_MMRPEA		(1<<0)
 #define ETH_MACDBGR_MSFRWCS		(3<<1)
 #define ETH_MACDBGR_RFWRA		(1<<4)
@@ -320,8 +332,9 @@
 #define ETH_MMCCR_CSR			(1<<1)
 #define ETH_MMCCR_ROR			(1<<2)
 #define ETH_MMCCR_MCF			(1<<3)
-#define ETH_MMCCR_MCP			(1<<4)
-#define ETH_MMCCR_MCFHP			(1<<5)
+#define ETH_MMCCR_MCP			(1<<4) /* Not on STM32F1 */
+#define ETH_MMCCR_MCFHP			(1<<5) /* Not on STM32F1 */
+
 
 /*---------------------------------------------------------------------------*/
 /* MMCRIR -------------------------------------------------------------------*/
@@ -360,6 +373,8 @@
 #define ETH_PTPTSCR_TSSTU		(1<<3)
 #define ETH_PTPTSCR_TSITE		(1<<4)
 #define ETH_PTPTSCR_TTSARU		(1<<5)
+
+/* Not on STM32F1 */
 #define ETH_PTPTSCR_TSSARFE		(1<<8)
 #define ETH_PTPTSCR_TSSSR		(1<<9)
 #define ETH_PTPTSCR_TSPTPPSV2E		(1<<10)
@@ -399,29 +414,33 @@
 /*---------------------------------------------------------------------------*/
 /* PTPTSSR ------------------------------------------------------------------*/
 
+/* Not on STM32F1 */
 #define ETH_PTPTSSR_TSSO		(1<<0)
 #define ETH_PTPTSSR_TSTTR		(1<<1)
 
-/*---------------------------------------------------------------------------*/
-/* PTPTSCR ------------------------------------------------------------------*/
 
-#define ETH_PTPTSCR_PPSFREQ		(0x0F<<0)
-#define ETH_PTPTSCR_PPSFREQ_1HZ		(0x00<<0)
-#define ETH_PTPTSCR_PPSFREQ_2HZ		(0x01<<0)
-#define ETH_PTPTSCR_PPSFREQ_4HZ		(0x02<<0)
-#define ETH_PTPTSCR_PPSFREQ_8HZ		(0x03<<0)
-#define ETH_PTPTSCR_PPSFREQ_16HZ	(0x04<<0)
-#define ETH_PTPTSCR_PPSFREQ_32HZ	(0x05<<0)
-#define ETH_PTPTSCR_PPSFREQ_64HZ	(0x06<<0)
-#define ETH_PTPTSCR_PPSFREQ_128HZ	(0x07<<0)
-#define ETH_PTPTSCR_PPSFREQ_256HZ	(0x08<<0)
-#define ETH_PTPTSCR_PPSFREQ_512HZ	(0x09<<0)
-#define ETH_PTPTSCR_PPSFREQ_1024HZ	(0x0A<<0)
-#define ETH_PTPTSCR_PPSFREQ_2048HZ	(0x0B<<0)
-#define ETH_PTPTSCR_PPSFREQ_4096HZ	(0x0C<<0)
-#define ETH_PTPTSCR_PPSFREQ_8192HZ	(0x0D<<0)
-#define ETH_PTPTSCR_PPSFREQ_16384HZ	(0x0E<<0)
-#define ETH_PTPTSCR_PPSFREQ_32768HZ	(0x0F<<0)
+/*---------------------------------------------------------------------------*/
+/* PTPPPSCR -----------------------------------------------------------------*/
+
+/* Not on STM32F1 */
+#define ETH_PTPPPSCR_PPSFREQ_MASK			(0x0F<<0)
+#define ETH_PTPPPSCR_PPSFREQ_1HZ			(0x00<<0)
+#define ETH_PTPPPSCR_PPSFREQ_2HZ			(0x01<<0)
+#define ETH_PTPPPSCR_PPSFREQ_4HZ			(0x02<<0)
+#define ETH_PTPPPSCR_PPSFREQ_8HZ			(0x03<<0)
+#define ETH_PTPPPSCR_PPSFREQ_16HZ			(0x04<<0)
+#define ETH_PTPPPSCR_PPSFREQ_32HZ			(0x05<<0)
+#define ETH_PTPPPSCR_PPSFREQ_64HZ			(0x06<<0)
+#define ETH_PTPPPSCR_PPSFREQ_128HZ			(0x07<<0)
+#define ETH_PTPPPSCR_PPSFREQ_256HZ			(0x08<<0)
+#define ETH_PTPPPSCR_PPSFREQ_512HZ			(0x09<<0)
+#define ETH_PTPPPSCR_PPSFREQ_1024HZ			(0x0A<<0)
+#define ETH_PTPPPSCR_PPSFREQ_2048HZ			(0x0B<<0)
+#define ETH_PTPPPSCR_PPSFREQ_4096HZ			(0x0C<<0)
+#define ETH_PTPPPSCR_PPSFREQ_8192HZ			(0x0D<<0)
+#define ETH_PTPPPSCR_PPSFREQ_16384HZ			(0x0E<<0)
+#define ETH_PTPPPSCR_PPSFREQ_32768HZ			(0x0F<<0)
+
 
 /*---------------------------------------------------------------------------*/
 /* DMABMR -------------------------------------------------------------------*/
@@ -452,7 +471,7 @@
 #define ETH_DMABMR_USP			(1<<23)
 #define ETH_DMABMR_FPM			(1<<24)
 #define ETH_DMABMR_AAB			(1<<25)
-#define ETH_DMABMR_MB			(1<<26)
+#define ETH_DMABMR_MB			(1<<26) /* Not on STM32F1 */
 
 /*---------------------------------------------------------------------------*/
 /* DMASR --------------------------------------------------------------------*/
@@ -563,6 +582,7 @@
 /*---------------------------------------------------------------------------*/
 /* DMARSWTR -----------------------------------------------------------------*/
 
+/* Not on STM32F1 */
 #define ETH_DMARSWTR_RSWTC		0xFF
 
 /*---------------------------------------------------------------------------*/
@@ -697,6 +717,10 @@
 #define ETH_RDES4_PFT			(1<<12)
 #define ETH_RDES4_PV			(1<<13)
 
+/*****************************************************************************/
+/* API definitions                                                           */
+/*****************************************************************************/
+
 enum eth_clk {
 	ETH_CLK_025_035MHZ = ETH_MACMIIAR_CR_HCLK_DIV_16,
 	ETH_CLK_035_060MHZ = ETH_MACMIIAR_CR_HCLK_DIV_26,
@@ -704,6 +728,10 @@ enum eth_clk {
 	ETH_CLK_100_150MHZ = ETH_MACMIIAR_CR_HCLK_DIV_62,
 	ETH_CLK_150_168MHZ = ETH_MACMIIAR_CR_HCLK_DIV_102,
 };
+
+/*****************************************************************************/
+/* API Functions                                                             */
+/*****************************************************************************/
 
 BEGIN_DECLS
 
@@ -713,7 +741,7 @@ void eth_smi_bit_op(uint8_t phy, uint8_t reg, uint16_t bits, uint16_t mask);
 void eth_smi_bit_clear(uint8_t phy, uint8_t reg, uint16_t clearbits);
 void eth_smi_bit_set(uint8_t phy, uint8_t reg, uint16_t setbits);
 
-void eth_set_mac(uint8_t *mac);
+void eth_set_mac(const uint8_t *mac);
 void eth_desc_init(uint8_t *buf, uint32_t nTx, uint32_t nRx, uint32_t cTx,
 		    uint32_t cRx, bool isext);
 bool eth_tx(uint8_t *ppkt, uint32_t n);

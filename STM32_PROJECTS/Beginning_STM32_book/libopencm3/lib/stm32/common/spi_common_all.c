@@ -1,4 +1,5 @@
-/** @addtogroup spi_file
+/** @addtogroup spi_file SPI peripheral API
+ * @ingroup peripheral_apis
 
 @author @htmlonly &copy; @endhtmlonly 2009
 Uwe Hermann <uwe@hermann-uwe.de>
@@ -19,9 +20,8 @@ used at the same time on the same peripheral.
 Example: Clk/4, positive clock polarity, leading edge trigger, 8-bit words,
 LSB first.
 @code
-	spi_init_master(SPI1, SPI_CR1_BR_FPCLK_DIV_4, SPI_CR1_CPOL_CLK_TO_0_WHEN_IDLE,
-			SPI_CR1_CPHA_CLK_TRANSITION_1, SPI_CR1_DFF_8BIT,
-			SPI_CR1_LSBFIRST);
+	spi_init_master(SPI1, SPI_CR1_BAUDRATE_FPCLK_DIV_4, SPI_CR1_CPOL_CLK_TO_0_WHEN_IDLE,
+			SPI_CR1_CPHA_CLK_TRANSITION_1, SPI_CR1_DFF_8BIT, SPI_CR1_LSBFIRST);
 	spi_write(SPI1, 0x55);		// 8-bit write
 	spi_write(SPI1, 0xaa88);	// 16-bit write
 	reg8 = spi_read(SPI1);		// 8-bit read

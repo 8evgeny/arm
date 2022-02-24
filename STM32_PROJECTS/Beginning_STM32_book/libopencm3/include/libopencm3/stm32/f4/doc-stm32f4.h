@@ -1,13 +1,17 @@
-/** @mainpage libopencm3 STM32F4
+/** @page libopencm3 STM32F4
 
 @version 1.0.0
 
 @date 7 September 2012
 
-API documentation for ST Microelectronics STM32F4 Cortex M3 series.
+API documentation for ST Microelectronics STM32F4 Cortex M4F series.
 
 LGPL License Terms @ref lgpl_license
 */
+
+/** @defgroup peripheral_apis Peripheral APIs
+ * APIs for device peripherals
+ */
 
 /** @defgroup STM32F4xx STM32F4xx
 Libraries for ST Microelectronics STM32F4xx series.

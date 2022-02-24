@@ -1,4 +1,6 @@
-/** @addtogroup dma_file
+/** @defgroup dma_file DMA peripheral API
+@ingroup peripheral_apis
+@brief DMA library for the multi stream controller found in f2/f4/f7 parts.
 
 @author @htmlonly &copy; @endhtmlonly 2012
 Ken Sarkies <ksarkies@internode.on.net>
@@ -772,6 +774,20 @@ void dma_set_memory_address_1(uint32_t dma, uint8_t stream, uint32_t address)
 	     (!(reg32 & DMA_SxCR_CT) && (reg32 & DMA_SxCR_DBM))) {
 		DMA_SM1AR(dma, stream) = (uint32_t *) address;
 	}
+}
+
+/*---------------------------------------------------------------------------*/
+/** @brief DMA Stream Get the Transfer Block Size
+
+@param[in] dma unsigned int32. DMA controller base address: DMA1 or DMA2
+@param[in] stream unsigned int8. Stream number: @ref dma_st_number
+@returns unsigned int16. Number of remaining data words to transfer (65535
+maximum).
+*/
+
+uint16_t dma_get_number_of_data(uint32_t dma, uint8_t stream)
+{
+	return DMA_SNDTR(dma, stream);
 }
 
 /*---------------------------------------------------------------------------*/

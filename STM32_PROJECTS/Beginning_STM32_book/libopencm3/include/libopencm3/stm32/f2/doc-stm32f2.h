@@ -1,4 +1,4 @@
-/** @mainpage libopencm3 STM32F2
+/** @page libopencm3 STM32F2
 
 @version 1.0.0
 
@@ -9,6 +9,10 @@ API documentation for ST Microelectronics STM32F2 Cortex M3 series.
 LGPL License Terms @ref lgpl_license
 */
 
+
+/** @defgroup peripheral_apis Peripheral APIs
+ * APIs for device peripherals
+ */
 
 /** @defgroup STM32F2xx STM32F2xx
 Libraries for ST Microelectronics STM32F2xx series.
