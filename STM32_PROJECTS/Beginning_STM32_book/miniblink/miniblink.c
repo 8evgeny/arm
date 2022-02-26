@@ -24,26 +24,64 @@ gpio_setup(void) {
 
 	/* Enable GPIOC clock. */
 	rcc_periph_clock_enable(RCC_GPIOC);
+    rcc_periph_clock_enable(RCC_GPIOA);
+    rcc_periph_clock_enable(RCC_GPIOB);
 
 	/* Set GPIO8 (in GPIO port C) to 'output push-pull'. */
-	gpio_set_mode(GPIOC,GPIO_MODE_OUTPUT_2_MHZ,
-		      GPIO_CNF_OUTPUT_PUSHPULL,GPIO13);
+    gpio_set_mode(GPIOC,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO13);
+    gpio_set_mode(GPIOA,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO8);
+    gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO1);
+    gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO10);
+    gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO12);
+    gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO14);
 }
+
+void delay()
+{
+    int i;
+    for (i = 0; i < 500000; i++)
+        __asm__("nop");
+}
+
 
 int
 main(void) {
-	int i;
+
 
 	gpio_setup();
 
-	for (;;) {
-		gpio_clear(GPIOC,GPIO13);	/* LED on */
-        for (i = 0; i < 300000; i++)	/* Wait a bit. */
-			__asm__("nop");
+    while(1)
+    {
+        gpio_set(GPIOC,GPIO13);
+        delay();
+        gpio_clear(GPIOC,GPIO13);
+        delay();
+// Работает только порт С - ?????
 
-		gpio_set(GPIOC,GPIO13);		/* LED off */
-        for (i = 0; i < 300000; i++)	/* Wait a bit. */
-			__asm__("nop");
+        gpio_set(GPIOB,GPIO1);
+        delay();
+        gpio_clear(GPIOB,GPIO1);
+        delay();
+
+        gpio_set(GPIOB,GPIO10);
+        delay();
+        gpio_clear(GPIOB,GPIO10);
+        delay();
+
+        gpio_set(GPIOB,GPIO12);
+        delay();
+        gpio_clear(GPIOB,GPIO12);
+        delay();
+
+        gpio_set(GPIOB,GPIO14);
+        delay();
+        gpio_clear(GPIOB,GPIO14);
+        delay();
+
+        gpio_set(GPIOA,GPIO8);
+        delay();
+        gpio_clear(GPIOA,GPIO8);
+        delay();
 	}
 
 	return 0;
