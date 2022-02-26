@@ -57,6 +57,13 @@ add_executable(${PROJECT_NAME}.elf
     ${LINKER_SCRIPT}
     )
 
+target_link_libraries(${PROJECT_NAME}.elf
+    -specs=nosys.specs
+    -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group
+    -L${CMAKE_SOURCE_DIR}/../libopencm3/lib -lopencm3_stm32f1
+    )
+
+
 #set(CMAKE_EXE_LINKER_FLAGS
 #    "${CMAKE_EXE_LINKER_FLAGS} -Wl,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map")
 
