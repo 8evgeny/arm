@@ -1,0 +1,24 @@
+!SESSION 2022-02-27 18:16:57.536 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ru_RU
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-02-27 18:17:01.692
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-02-27 18:17:01.741
+!MESSAGE Log4j initialized with config file /home/evg/SOFT/Github/Arm/STM32CubeProjects/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-02-27 18:17:03.985
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-02-27 18:19:07.505
+!MESSAGE Indexed 'STM32CubeProjects_1' (20 sources, 98 headers) in 2,52 sec: 7 183 declarations; 24 352 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0,59 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-02-27 18:19:18.403
+!MESSAGE Indexed 'STM32CubeProjects_1' (20 sources, 98 headers) in 1,67 sec: 7 183 declarations; 24 352 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0,59 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-02-27 18:19:30.129
+!MESSAGE Indexed 'STM32CubeProjects_1' (20 sources, 98 headers) in 1,8 sec: 7 183 declarations; 24 352 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0,59 %)

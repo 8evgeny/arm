@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/evg/SOFT/Github/Arm/STM32_PROJECTS/STM32CubeProjects_1/Core/Startup/startup_stm32f103c8tx.s
+

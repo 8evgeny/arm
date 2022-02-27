@@ -1,0 +1,3 @@
+/home/evg/SOFT/Github/Arm/STM32_PROJECTS/STM32CubeProjects_1/build_linux_release/CMakeFiles/rebuild_cache.dir
+/home/evg/SOFT/Github/Arm/STM32_PROJECTS/STM32CubeProjects_1/build_linux_release/CMakeFiles/edit_cache.dir
+/home/evg/SOFT/Github/Arm/STM32_PROJECTS/STM32CubeProjects_1/build_linux_release/CMakeFiles/STM32CubeProjects_1.elf.dir
