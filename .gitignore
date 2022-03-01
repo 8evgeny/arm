@@ -2,3 +2,4 @@
 *.build.user
 *.qbs.user
 /STM32_PROJECTS/STM32CubeProjects_1/CMakeLists.txt.user
+STM32CubeProjects/
