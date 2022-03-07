@@ -23,17 +23,22 @@ static void
 gpio_setup(void) {
 
     /* Enable GPIOA GPIOB GPIOC clock. */
-	rcc_periph_clock_enable(RCC_GPIOC);
     rcc_periph_clock_enable(RCC_GPIOA);
     rcc_periph_clock_enable(RCC_GPIOB);
+    rcc_periph_clock_enable(RCC_GPIOC);
+    rcc_periph_clock_enable(RCC_GPIOD);  //для платы F103RCT6
 
     /* Set GPIO to 'output push-pull'. */
     gpio_set_mode(GPIOC,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO13);
+    gpio_set_mode(GPIOD,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO2); //для платы F103RCT6
+    gpio_set_mode(GPIOC,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO6); //для платы F103RCT6
     gpio_set_mode(GPIOA,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO8);
     gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO1);
     gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO10);
     gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO12);
     gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO14);
+
+
 }
 
 void delay()
@@ -46,14 +51,15 @@ void delay()
 int
 main(void) {
 
-
-	gpio_setup();
+    gpio_setup();
 
     while(1)
     {
         gpio_set(GPIOC,GPIO13);
+        gpio_set(GPIOD,GPIO2); //для платы F103RCT6
         delay();
         gpio_clear(GPIOC,GPIO13);
+        gpio_clear(GPIOD,GPIO2);
         delay();
 
         gpio_set(GPIOB,GPIO1);
@@ -77,8 +83,10 @@ main(void) {
         delay();
 
         gpio_set(GPIOA,GPIO8);
+        gpio_set(GPIOC,GPIO6); //для платы F103RCT6
         delay();
         gpio_clear(GPIOA,GPIO8);
+        gpio_clear(GPIOC,GPIO6);
         delay();
 	}
 
