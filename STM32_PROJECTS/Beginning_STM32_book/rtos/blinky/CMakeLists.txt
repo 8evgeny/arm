@@ -41,10 +41,19 @@ add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB
     )
 
 #file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
-file(GLOB_RECURSE SOURCES "miniblink.c")
+file(GLOB_RECURSE SOURCES
+    main.c
+    rtos/heap_4.c
+    rtos/list.c
+    rtos/port.c
+    rtos/tasks.c
+    rtos/opencm3.c
+    )
+# rtos/queue.c
 
 include_directories(
-    ../libopencm3/include
+    ../../libopencm3/include
+    rtos
     )
 
 add_executable(${PROJECT_NAME}.elf
