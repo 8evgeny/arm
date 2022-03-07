@@ -22,12 +22,12 @@
 static void
 gpio_setup(void) {
 
-	/* Enable GPIOC clock. */
+    /* Enable GPIOA GPIOB GPIOC clock. */
 	rcc_periph_clock_enable(RCC_GPIOC);
     rcc_periph_clock_enable(RCC_GPIOA);
     rcc_periph_clock_enable(RCC_GPIOB);
 
-	/* Set GPIO8 (in GPIO port C) to 'output push-pull'. */
+    /* Set GPIO to 'output push-pull'. */
     gpio_set_mode(GPIOC,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO13);
     gpio_set_mode(GPIOA,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO8);
     gpio_set_mode(GPIOB,GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_PUSHPULL, GPIO1);
@@ -38,8 +38,7 @@ gpio_setup(void) {
 
 void delay()
 {
-    int i;
-    for (i = 0; i < 500000; i++)
+    for (int i = 0; i < 100000; i++)
         __asm__("nop");
 }
 
@@ -56,7 +55,6 @@ main(void) {
         delay();
         gpio_clear(GPIOC,GPIO13);
         delay();
-// Работает только порт С - ?????
 
         gpio_set(GPIOB,GPIO1);
         delay();
