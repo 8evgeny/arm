@@ -54,6 +54,7 @@ file(GLOB_RECURSE SOURCES
 include_directories(
     ../../libopencm3/include
     rtos
+    ./
     )
 
 add_executable(${PROJECT_NAME}.elf
@@ -68,7 +69,7 @@ target_link_libraries(${PROJECT_NAME}.elf
     -lgcc
     -lnosys
     -Wl,--end-group
-    -L${CMAKE_SOURCE_DIR}/../libopencm3/lib -lopencm3_stm32f1
+    -L${CMAKE_SOURCE_DIR}/../../libopencm3/lib -lopencm3_stm32f1
     )
 
 
