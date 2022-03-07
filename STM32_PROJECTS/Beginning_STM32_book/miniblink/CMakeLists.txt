@@ -43,15 +43,10 @@ add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB
 #file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
 file(GLOB_RECURSE SOURCES "miniblink.c")
 
-#include_directories(Core/Inc Drivers/STM32F1xx_HAL_Driver/Inc Drivers/STM32F1xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F1xx/Include Drivers/CMSIS/Include)
-
 include_directories(
     ../libopencm3/include
-
     )
 
-
-#add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES}
     ${LINKER_SCRIPT}
@@ -59,7 +54,11 @@ add_executable(${PROJECT_NAME}.elf
 
 target_link_libraries(${PROJECT_NAME}.elf
     -specs=nosys.specs
-    -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group
+    -Wl,--start-group
+    -lc
+    -lgcc
+    -lnosys
+    -Wl,--end-group
     -L${CMAKE_SOURCE_DIR}/../libopencm3/lib -lopencm3_stm32f1
     )
 
