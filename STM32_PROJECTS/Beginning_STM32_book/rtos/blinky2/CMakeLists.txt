@@ -82,6 +82,7 @@ target_link_libraries(${PROJECT_NAME}.elf
     -lnosys
     -Wl,--end-group
     -L${CMAKE_SOURCE_DIR}/../../libopencm3/lib -lopencm3_stm32f1
+    -L${CMAKE_SOURCE_DIR}/../libwwg -lwwg
     )
 
 
