@@ -1,3 +1,6 @@
+blinky - Cmake и make собиратся работает
+blinky2 - Cmake и make собиратся работает
+
 CREATE A NEW FreeRTOS PROJECT:
 ------------------------------
 

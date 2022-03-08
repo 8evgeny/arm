@@ -25,7 +25,7 @@ task1(void *args __attribute((unused))) {
 
 	for (;;) {
 		gpio_toggle(GPIOC,GPIO13);
-		vTaskDelay(pdMS_TO_TICKS(500));
+        vTaskDelay(pdMS_TO_TICKS(200));
 	}
 }
 
