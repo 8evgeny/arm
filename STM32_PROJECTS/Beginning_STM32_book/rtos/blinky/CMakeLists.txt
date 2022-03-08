@@ -24,13 +24,24 @@ SET(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/stm32f103c8t6.ld)
 #SET(FPU_FLAGS "-mfloat-abi=soft")
 
 SET(COMMON_FLAGS
-    "-mcpu=cortex-m3 ${FPU_FLAGS} -mthumb -mthumb-interwork -ffunction-sections -fdata-sections \
-    -g -fno-common -fmessage-length=0 ")
+    "-mcpu=cortex-m3 \
+    ${FPU_FLAGS} \
+    -mthumb \
+    -mthumb-interwork \
+    -ffunction-sections \
+    -fdata-sections \
+    -g \
+    -fno-common \
+    -fmessage-length=0 \
+    ")
 
 SET(CMAKE_CXX_FLAGS_INIT "${COMMON_FLAGS} -std=c++11")
 SET(CMAKE_C_FLAGS_INIT "${COMMON_FLAGS} -std=gnu99")
 
-SET(CMAKE_EXE_LINKER_FLAGS_INIT "-Wl,-gc-sections,--print-memory-usage -T ${LINKER_SCRIPT}")
+SET(CMAKE_EXE_LINKER_FLAGS_INIT " \
+    -Wl,-gc-sections,--print-memory-usage \
+    -T ${LINKER_SCRIPT} \
+    ")
 
 PROJECT(1_rtos_blink C CXX ASM)
 set(CMAKE_CXX_STANDARD 11)
@@ -63,6 +74,7 @@ add_executable(${PROJECT_NAME}.elf
     )
 
 target_link_libraries(${PROJECT_NAME}.elf
+    --static -nostartfiles
     -specs=nosys.specs
     -Wl,--start-group
     -lc

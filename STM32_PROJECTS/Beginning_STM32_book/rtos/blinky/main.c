@@ -24,8 +24,8 @@ task1(void *args) {
 	(void)args;
 
 	for (;;) {
-		gpio_toggle(GPIOC,GPIO13);
-		for (i = 0; i < 1000000; i++)
+        gpio_toggle(GPIOC, GPIO13);
+        for (i = 0; i < 5000000; i++)
 			__asm__("nop");
 	}
 }
