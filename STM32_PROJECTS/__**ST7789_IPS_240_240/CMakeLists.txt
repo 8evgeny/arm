@@ -53,7 +53,11 @@ add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB
 
 file(GLOB_RECURSE SOURCES
     Core/*.*
-    Drivers/*.*
+#    Drivers/*.*
+#    Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
+    Drivers/STM32F1xx_HAL_Driver/Src/*.*
+    Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/*.*
+    Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
     ST7789/main.c
     ST7789/st7789.c
 
@@ -62,7 +66,8 @@ file(GLOB_RECURSE SOURCES
 
 include_directories(
     Core
-    Core/Inc Drivers/STM32F1xx_HAL_Driver/Inc
+    Core/Inc
+    Drivers/STM32F1xx_HAL_Driver/Inc
     Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
     Drivers/CMSIS/Device/ST/STM32F1xx/Include
     Drivers/CMSIS/Include
@@ -89,7 +94,7 @@ target_link_libraries(${PROJECT_NAME}.elf
     -lgcc
     -lnosys
     -Wl,--end-group
-    -L${CMAKE_SOURCE_DIR}libopencm3/lib -lopencm3_stm32f1
+    -L${CMAKE_SOURCE_DIR}/libopencm3/lib -lopencm3_stm32f1
     )
 
 
