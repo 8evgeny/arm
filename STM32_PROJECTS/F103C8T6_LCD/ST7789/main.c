@@ -105,7 +105,6 @@ int main(void)
 
     ST7789_FillScreen(BLACK);
     ST7789_SetBL(100);
-	
 
   }
 
@@ -148,13 +147,6 @@ void SystemClock_Config(void)
 static void MX_SPI1_Init(void)
 {
 
-    /* USER CODE BEGIN SPI1_Init 0 */
-
-    /* USER CODE END SPI1_Init 0 */
-
-    /* USER CODE BEGIN SPI1_Init 1 */
-
-    /* USER CODE END SPI1_Init 1 */
     /* SPI1 parameter configuration*/
     hspi1.Instance = SPI1;
     hspi1.Init.Mode = SPI_MODE_MASTER;
