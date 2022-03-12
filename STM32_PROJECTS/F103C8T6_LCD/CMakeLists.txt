@@ -13,7 +13,7 @@ set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
 set(CMAKE_OBJDUMP arm-none-eabi-objdump)
 set(SIZE arm-none-eabi-size)
 
-#SET(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F102C8TX_FLASH.ld)
+SET(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F102C8TX_FLASH.ld)
 #SET(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/stm32f103c8t6.ld)
 
 #Uncomment for hardware floating point
@@ -55,9 +55,9 @@ file(GLOB_RECURSE SOURCES
     Core/*.*
 #    Drivers/*.*
 #    Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
-    Drivers/STM32F1xx_HAL_Driver/Src/*.*
-    Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/*.*
-    Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
+#    Drivers/STM32F1xx_HAL_Driver/Src/*.*
+#    Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/*.*
+#    Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
     ST7789/*.*
 
 
@@ -94,7 +94,7 @@ target_link_libraries(${PROJECT_NAME}.elf
     -lgcc
     -lnosys
     -Wl,--end-group
-    -L${CMAKE_SOURCE_DIR}/libopencm3/lib -lopencm3_stm32f1
+#    -L${CMAKE_SOURCE_DIR}/libopencm3/lib -lopencm3_stm32f1
     )
 
 

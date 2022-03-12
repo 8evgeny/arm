@@ -2,3 +2,4 @@ Debug/
 Release/
 build_linux_debug/
 build_linux_release/
+CMakeLists.txt.user
