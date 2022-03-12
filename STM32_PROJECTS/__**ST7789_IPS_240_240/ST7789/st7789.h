@@ -3,7 +3,8 @@
 
 #define RGB565(r, g, b)         (((r & 0xF8) << 8) | ((g & 0xFC) << 3) | ((b & 0xF8) >> 3))
 
-#include "stm32f0xx_hal.h"
+//#include "stm32f0xx_hal.h"
+#include "stm32f1xx_hal.h"
 
 #define ST7789_ColorMode_65K    0x50
 #define ST7789_ColorMode_262K   0x60
@@ -53,7 +54,7 @@
 #define YELLOW   0xFFE0 
 #define WHITE    0xFFFF
 
-// Смещение матрицы относительно строк/столбцов контроллера
+// РЎРјРµС‰РµРЅРёРµ РјР°С‚СЂРёС†С‹ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЃС‚СЂРѕРє/СЃС‚РѕР»Р±С†РѕРІ РєРѕРЅС‚СЂРѕР»Р»РµСЂР°
 #define ST7789_X_Start          0
 #define ST7789_Y_Start          0
 

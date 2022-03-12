@@ -1,8 +1,7 @@
-//#include "stm32f0xx_hal.h"
-#include "stm32f1xx_hal.h"
 #include <st7789.h>
-#include <gpio.h>
+//#include <gpio.h>
 #include <stdlib.h>
+#include "main.h"
 
 uint8_t ST7789_Width, ST7789_Height;
 

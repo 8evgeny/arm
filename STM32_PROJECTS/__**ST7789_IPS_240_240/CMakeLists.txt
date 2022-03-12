@@ -67,6 +67,8 @@ include_directories(
     Drivers/CMSIS/Device/ST/STM32F1xx/Include
     Drivers/CMSIS/Include
     Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/_ARMCM3
+    Drivers/CMSIS/Core_A/Include
+    Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/JTest/inc
     ST7789
 #    ./libopencm3/include/libopencm3/stm32/f1
 #    libopencm3/include
