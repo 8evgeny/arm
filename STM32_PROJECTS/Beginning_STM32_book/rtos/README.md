@@ -1,6 +1,6 @@
 blinky - Cmake и make собиратся работает
 blinky2 - Cmake и make собиратся работает
-uart - Cmake и make собиратся работает
+uart - Cmake и make собиратся работает  (Белый - A9  Зеленый A10  Черный - земля )
 uart2 - Cmake и make собиратся работает
 uart3 - Cmake и make собиратся работает
 
