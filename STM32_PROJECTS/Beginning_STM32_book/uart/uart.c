@@ -70,7 +70,7 @@ static void
 pause(void) {
 	int x;
 
-	for ( x = 0; x < 800000; x++ )	// Wait
+    for ( x = 0; x < 8000000; x++ )	// Wait
 		__asm__("NOP");
 }
 
@@ -94,11 +94,14 @@ main(void) {
 		uart_printf("Formatted '%s', with c2=%d;\n",temp,c2);
 	}
 
-	for (;;) {
+    for (;;)
+    {
 		gpio_toggle(GPIOC,GPIO13);	// Toggle LED
-		usart_send_blocking(USART1,x+'0');
-		x = (x+1) % 10;
-		if ( ++y % 80 == 0 ) {
+        usart_send_blocking(USART1, x+'0');
+        x = (x + 1) % 10;
+
+        if ( ++y % 80 == 0 )
+        {
 			c = uart_printf("\nLine # %d or %+05d (0x%x or 0x%08x): '%20s', '%-20s', '%s'\n",count,count,count,count,"oh lait!","ok?","etc.");
 			uart_printf("Count = %d.\n",c);
 			++count;
