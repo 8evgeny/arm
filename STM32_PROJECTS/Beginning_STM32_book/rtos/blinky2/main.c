@@ -24,7 +24,7 @@ static void
 task1(void *args __attribute((unused))) {
 
 	for (;;) {
-		gpio_toggle(GPIOC,GPIO13);
+        gpio_toggle(GPIOC,GPIO6);
         vTaskDelay(pdMS_TO_TICKS(200));
 	}
 }
@@ -39,7 +39,7 @@ main(void) {
 		GPIOC,
 		GPIO_MODE_OUTPUT_2_MHZ,
 		GPIO_CNF_OUTPUT_PUSHPULL,
-		GPIO13);
+        GPIO6); // для платы RC
 
 	xTaskCreate(task1,"LED",100,NULL,configMAX_PRIORITIES-1,NULL);
 	vTaskStartScheduler();
