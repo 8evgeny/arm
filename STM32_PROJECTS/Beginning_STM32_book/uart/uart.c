@@ -29,13 +29,13 @@ init_usart(void) {
 	//	TX:	A10
 	//	CTS:	A11 (not used)
 	//	RTS:	A12 (not used)
-	//	Baud:	38400
+    //	Baud:	38400
 	//////////////////////////////////////////////////////////////
 
 	// GPIO_USART1_TX/GPIO13 on GPIO port A for tx
 	gpio_set_mode(GPIOA,GPIO_MODE_OUTPUT_50_MHZ,GPIO_CNF_OUTPUT_ALTFN_PUSHPULL,GPIO_USART1_TX);
 
-	usart_set_baudrate(USART1,38400);
+    usart_set_baudrate(USART1,38400);
 	usart_set_databits(USART1,8);
 	usart_set_stopbits(USART1,USART_STOPBITS_1);
 	usart_set_mode(USART1,USART_MODE_TX);
