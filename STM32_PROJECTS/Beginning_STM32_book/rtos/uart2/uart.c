@@ -91,8 +91,8 @@ demo_task(void *args __attribute__((unused)))
     for (;;)
     {
 
-        uart_puts("\nNow this is a message..\n\r");
-        uart_puts("sent via FreeRTOS queues.\n\n\r");
+        uart_puts("Now this is a message sent via FreeRTOS queues");
+        uart_puts("\n\r");
         vTaskDelay(pdMS_TO_TICKS(1000));
 
 	}
