@@ -54,7 +54,7 @@ gpio_setup(void) {
 static void
 uart_setup(void) {
 
-    open_uart(1,115200,"8N1","rw",0,0);
+    open_uart(1,38400,"8N1","rw",0,0);
 	uart_txq = xQueueCreate(256,sizeof(char));
 }
 
