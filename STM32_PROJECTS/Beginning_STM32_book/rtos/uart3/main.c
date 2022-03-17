@@ -37,7 +37,9 @@ gpio_setup(void) {
 
     rcc_clock_setup_in_hse_8mhz_out_72mhz();	// CPU clock is 72 MHz
     rcc_periph_clock_enable(RCC_GPIOD);
+    rcc_periph_clock_enable(RCC_GPIOC);
     gpio_set_mode(GPIOD,GPIO_MODE_OUTPUT_2_MHZ,GPIO_CNF_OUTPUT_PUSHPULL,GPIO2);
+    gpio_set_mode(GPIOC,GPIO_MODE_OUTPUT_2_MHZ,GPIO_CNF_OUTPUT_PUSHPULL,GPIO13);
 
 	rcc_periph_clock_enable(RCC_GPIOA);
 	gpio_set_mode(GPIOA,GPIO_MODE_OUTPUT_50_MHZ,GPIO_CNF_OUTPUT_ALTFN_PUSHPULL,GPIO_USART1_TX);
@@ -54,7 +56,7 @@ gpio_setup(void) {
 static void
 uart_setup(void) {
 
-    open_uart(1,38400,"8N1","rw",0,0);
+    open_uart(1,115200,"8N1","rw",0,0);
 	uart_txq = xQueueCreate(256,sizeof(char));
 }
 
@@ -96,6 +98,7 @@ uart_task(void *args) {
 			putc_uart(1,ch);
 		/* Toggle LED to show signs of life */
         gpio_toggle(GPIOD,GPIO2);
+        gpio_toggle(GPIOC,GPIO13);
 	}
 }
 
