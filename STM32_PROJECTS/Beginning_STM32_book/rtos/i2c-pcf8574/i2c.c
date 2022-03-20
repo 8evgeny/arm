@@ -74,7 +74,10 @@ i2c_configure(I2C_Control *dev,uint32_t i2c,uint32_t ticks) {
 	i2c_set_trise(dev->device,36);		// 1000 ns
 	i2c_set_dutycycle(dev->device,I2C_CCR_DUTY_DIV2);
 	i2c_set_ccr(dev->device,180);		// 100 kHz <= 180 * 1 /36M
-	i2c_set_own_7bit_slave_address(dev->device,0x23); // Necessary?
+
+//    i2c_set_own_7bit_slave_address(dev->device, 0x23); // Necessary?
+    i2c_set_own_7bit_slave_address(dev->device, 0x27); // Necessary?
+
 	i2c_peripheral_enable(dev->device);
 }
 

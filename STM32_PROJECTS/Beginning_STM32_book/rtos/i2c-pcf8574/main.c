@@ -1,7 +1,7 @@
 /* Demo of I2C I/O with PCF8574 device
  * Warren Gay Sat Dec  9 17:36:29 2017
  *
- *	PCF8574 /INT	on PC14
+ *	PCF8574 /INT	on PC14 изменил на  PA0
  *	LED		on PC13 изменил на 12
  *	I2C		on PB6, PB7
  */
@@ -21,7 +21,8 @@
 #include "usbcdc.h"
 #include "i2c.h"
 
-#define PCF8574_ADDR(n)		(0x20|((n)&7))	// PCF8574
+//#define PCF8574_ADDR(n)		(0x20|((n)&7))	// PCF8574
+#define PCF8574_ADDR(n)		(0x27|((n)&7))	// PCF8574
 // #define PCF8574_ADDR(n)	(0x38|((n)&7))	// PCF8574A
 
 static I2C_Control i2c;			// I2C Control struct
@@ -39,7 +40,8 @@ exti15_10_isr() {
 //	gpio_toggle(GPIOC,GPIO13);
     gpio_toggle(GPIOC,GPIO12);
 
-	exti_reset_request(EXTI14);	// Reset cause of ISR
+//	exti_reset_request(EXTI14);	// Reset cause of ISR
+    exti_reset_request(EXTI0);	// Reset cause of ISR
 	readf = true;			// Indicate data change
 }
 
@@ -117,7 +119,8 @@ wait_event(void) {
 
 static void
 task1(void *args __attribute__((unused))) {
-	uint8_t addr = PCF8574_ADDR(0);	// I2C Address
+//	uint8_t addr = PCF8574_ADDR(0);	// I2C Address
+    uint8_t addr = 0x3F;	// I2C Address
 	volatile unsigned line = 0u;	// Print line #
 	volatile uint16_t value = 0u;	// PCF8574P value
 	uint8_t byte = 0xFF;		// Read I2C byte
@@ -202,6 +205,7 @@ main(void) {
 //	rcc_clock_setup_in_hse_8mhz_out_72mhz();// For "blue pill"
 	rcc_periph_clock_enable(RCC_GPIOB);	// I2C
 	rcc_periph_clock_enable(RCC_GPIOC);	// LED
+    rcc_periph_clock_enable(RCC_GPIOA); //добавил
 	rcc_periph_clock_enable(RCC_AFIO);	// EXTI
 	rcc_periph_clock_enable(RCC_I2C1);	// I2C
 
@@ -222,15 +226,27 @@ main(void) {
 	// AFIO_MAPR_I2C1_REMAP=0, PB6+PB7
 	gpio_primary_remap(0,0); 
 
-	gpio_set_mode(GPIOC,			// PCF8574 /INT
-		GPIO_MODE_INPUT,		// Input
-		GPIO_CNF_INPUT_FLOAT,
-		GPIO14);			// on PC14
+//	gpio_set_mode(GPIOC,			// PCF8574 /INT
+//		GPIO_MODE_INPUT,		// Input
+//		GPIO_CNF_INPUT_FLOAT,
+//		GPIO14);			// on PC14
 
-	exti_select_source(EXTI14,GPIOC);
-	exti_set_trigger(EXTI14,EXTI_TRIGGER_FALLING);
-	exti_enable_request(EXTI14);
-	nvic_enable_irq(NVIC_EXTI15_10_IRQ);	// PC14 <- /INT
+    gpio_set_mode(GPIOA,			// PCF8574 /INT
+                  GPIO_MODE_INPUT,		// Input
+                  GPIO_CNF_INPUT_FLOAT,
+                  GPIO0);
+
+
+//	exti_select_source(EXTI14,GPIOC);
+//	exti_set_trigger(EXTI14,EXTI_TRIGGER_FALLING);
+//	exti_enable_request(EXTI14);
+//	nvic_enable_irq(NVIC_EXTI15_10_IRQ);	// PC14 <- /INT
+
+    exti_select_source(EXTI0,GPIOA);
+    exti_set_trigger(EXTI0,EXTI_TRIGGER_FALLING);
+    exti_enable_request(EXTI0);
+    nvic_enable_irq(NVIC_EXTI15_10_IRQ);	// PA0 <- /INT
+
 
 	xTaskCreate(task1,"task1",800,NULL,1,NULL);
 	usb_start(1,1);
