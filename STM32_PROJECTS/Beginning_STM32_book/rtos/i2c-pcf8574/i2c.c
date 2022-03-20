@@ -68,7 +68,9 @@ i2c_configure(I2C_Control *dev,uint32_t i2c,uint32_t ticks) {
 	i2c_reset(dev->device);
 	I2C_CR1(dev->device) &= ~I2C_CR1_STOP;	// Clear stop
 	i2c_set_standard_mode(dev->device);	// 100 kHz mode
-	i2c_set_clock_frequency(dev->device,I2C_CR2_FREQ_36MHZ); // APB Freq
+//	i2c_set_clock_frequency(dev->device,I2C_CR2_FREQ_36MHZ); // APB Freq
+
+    i2c_set_clock_frequency(dev->device, 36); // APB Freq
 	i2c_set_trise(dev->device,36);		// 1000 ns
 	i2c_set_dutycycle(dev->device,I2C_CCR_DUTY_DIV2);
 	i2c_set_ccr(dev->device,180);		// 100 kHz <= 180 * 1 /36M

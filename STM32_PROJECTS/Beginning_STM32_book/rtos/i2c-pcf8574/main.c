@@ -2,7 +2,7 @@
  * Warren Gay Sat Dec  9 17:36:29 2017
  *
  *	PCF8574 /INT	on PC14
- *	LED		on PC13
+ *	LED		on PC13 изменил на 12
  *	I2C		on PB6, PB7
  */
 #include <string.h>
@@ -36,7 +36,9 @@ void
 exti15_10_isr() {
 
 	++isr_count;
-	gpio_toggle(GPIOC,GPIO13);
+//	gpio_toggle(GPIOC,GPIO13);
+    gpio_toggle(GPIOC,GPIO12);
+
 	exti_reset_request(EXTI14);	// Reset cause of ISR
 	readf = true;			// Indicate data change
 }
@@ -196,8 +198,8 @@ task1(void *args __attribute__((unused))) {
 
 int
 main(void) {
-
-	rcc_clock_setup_in_hse_8mhz_out_72mhz();// For "blue pill"
+    rcc_clock_setup_pll(&rcc_hse_configs[RCC_CLOCK_HSE8_72MHZ]);
+//	rcc_clock_setup_in_hse_8mhz_out_72mhz();// For "blue pill"
 	rcc_periph_clock_enable(RCC_GPIOB);	// I2C
 	rcc_periph_clock_enable(RCC_GPIOC);	// LED
 	rcc_periph_clock_enable(RCC_AFIO);	// EXTI
@@ -212,9 +214,11 @@ main(void) {
 	gpio_set_mode(GPIOC,
 		GPIO_MODE_OUTPUT_2_MHZ,
 		GPIO_CNF_OUTPUT_PUSHPULL,
-		GPIO13);			// LED on PC13
-	gpio_set(GPIOC,GPIO13);			// PC13 LED dark
-			     
+//		GPIO13);			// LED on PC13
+        GPIO12);			// LED on PC12
+//	gpio_set(GPIOC,GPIO13);			// PC13 LED dark
+    gpio_set(GPIOC,GPIO12);			// PC12 LED dark
+
 	// AFIO_MAPR_I2C1_REMAP=0, PB6+PB7
 	gpio_primary_remap(0,0); 
 
