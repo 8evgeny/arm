@@ -1,3 +1,0 @@
-[submodule "STM32_PROJECTS/STM32_LCD"]
-	path = STM32_PROJECTS/STM32_LCD
-	url = ../../Vendict/STM32_LCD_I2C.git
