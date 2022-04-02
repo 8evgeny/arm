@@ -54,15 +54,15 @@ static void
 uart_task(void *args __attribute__((unused))) {
 	char ch;
 
-	for (;;) {
+    for (;;)
+    {
 		// Receive char to be TX
         if ( xQueueReceive(uart_txq,&ch,10) == pdPASS ) {
             while ( !usart_get_flag(USART2, USART_SR_TXE) )
 				taskYIELD();	// Yield until ready
             usart_send(USART2, ch);
 		}
-		// Toggle LED to show signs of life
-        gpio_toggle(GPIOD,GPIO2);
+
 	}
 }
 
@@ -94,7 +94,8 @@ demo_task(void *args __attribute__((unused)))
         uart_puts("Now this is a message sent via FreeRTOS queues");
         uart_puts("\n\r");
         vTaskDelay(pdMS_TO_TICKS(1000));
-
+        // Toggle LED to show signs of life
+        gpio_toggle(GPIOC,GPIO13);
 	}
 }
 
@@ -107,12 +108,12 @@ main(void) {
     rcc_clock_setup_pll(&rcc_hse_configs[RCC_CLOCK_HSE8_72MHZ]);
 
 	// GPIO PC13:
-    rcc_periph_clock_enable(RCC_GPIOD);
+    rcc_periph_clock_enable(RCC_GPIOC);
 	gpio_set_mode(
-        GPIOD,
+        GPIOC,
 		GPIO_MODE_OUTPUT_2_MHZ,
 		GPIO_CNF_OUTPUT_PUSHPULL,
-        GPIO2);
+        GPIO13);
 
 	uart_setup();
 
