@@ -381,8 +381,8 @@ usb_getline(char *buf,unsigned bufsiz) {
 /*
  * Start USB driver:
  */
-void
-usb_start(void) {
+void usb_start(void)
+{
 	usbd_device *udev = 0;
 
 	usb_txq = xQueueCreate(128,sizeof(char));

@@ -56,11 +56,12 @@ set_lamp(enum LampActions action) {
 int
 main(void) {
 
-	rcc_clock_setup_in_hse_8mhz_out_72mhz();	// Use this for "blue pill"
+//	rcc_clock_setup_in_hse_8mhz_out_72mhz();	// Use this for "blue pill"
+    rcc_clock_setup_pll(&rcc_hse_configs[RCC_CLOCK_HSE8_72MHZ]);
 	rcc_periph_clock_enable(RCC_GPIOC);
 	gpio_set_mode(GPIOC,GPIO_MODE_OUTPUT_2_MHZ,GPIO_CNF_OUTPUT_PUSHPULL,GPIO13);
 
-	usb_start();
+    usb_start();
 
 	xTaskCreate(adventure,"game",300,NULL,configMAX_PRIORITIES-1,NULL);
 	xTaskCreate(flasher,"flash",100,NULL,configMAX_PRIORITIES-1,NULL);
