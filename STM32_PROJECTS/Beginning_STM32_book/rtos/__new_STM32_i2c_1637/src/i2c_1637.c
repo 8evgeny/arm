@@ -1,3 +1,4 @@
+#include "i2c_1637.h"
 #include <FreeRTOS.h>
 #include <task.h>
 #include <queue.h>
@@ -83,7 +84,7 @@ void init_I2C1(void)
 
     gpio_set_mode(GPIOB, GPIO_MODE_OUTPUT_50_MHZ,
                   GPIO_CNF_OUTPUT_ALTFN_OPENDRAIN,
-                  GPIO6 | GPIO7);
+                  GPIO_I2C1_SCL | GPIO_I2C1_SDA);
 
     /* Disable the I2C before changing any configuration. */
     i2c_peripheral_disable(I2C1);
@@ -230,7 +231,32 @@ void send_to_POT(uint8_t data)
     i2c_send_stop(I2C1);
 }
 
+void setup_1637()
+{
+    rcc_periph_clock_enable(RCC_GPIOB);
+    rcc_periph_clock_enable(RCC_I2C1);
+    rcc_periph_clock_enable(RCC_AFIO);
 
+    gpio_set_mode(GPIOB, GPIO_MODE_OUTPUT_50_MHZ,
+                  GPIO_CNF_OUTPUT_ALTFN_OPENDRAIN,
+                  GPIO_I2C1_SCL | GPIO_I2C1_SDA);
+
+// Use a bitmap operation
+#define TM1637_CLK           PBout(6)
+#define TM1637_DIO           PBout(7)
+#define TM1637_READ_DIO      PBin(7)
+
+    // IO direction setting 0011 output mode 1000 pull-up input mode
+#define TM1637_DIO_IN()      {GPIOB->CRL&=0X0FFFFFFF;GPIOB->CRL|=(u32)8<<28;}
+#define TM1637_DIO_OUT()     {GPIOB->CRL&=0X0FFFFFFF;GPIOB->CRL|=(u32)3<<28;}
+
+
+
+
+
+
+
+}
 
 
 int main(void)
