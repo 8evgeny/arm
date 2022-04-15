@@ -28,36 +28,36 @@
 static void
 uart_setup(void) {
 
-//	rcc_periph_clock_enable(RCC_GPIOA);
-//	rcc_periph_clock_enable(RCC_USART1);
-    rcc_periph_clock_enable(RCC_GPIOC);
-    rcc_periph_clock_enable(RCC_UART4);
+    rcc_periph_clock_enable(RCC_GPIOA);
+    rcc_periph_clock_enable(RCC_USART1);
+//    rcc_periph_clock_enable(RCC_GPIOC);
+//    rcc_periph_clock_enable(RCC_UART4);
 
-//	gpio_set_mode(GPIOA, // UART TX on PA9 (GPIO_USART1_TX) белый - PA9  зеленый - PA10
-//		GPIO_MODE_OUTPUT_50_MHZ,
-//		GPIO_CNF_OUTPUT_ALTFN_PUSHPULL,
-//		GPIO_USART1_TX);
-
-    gpio_set_mode(GPIOC, // UART TX on PC10 (GPIO_USART3_TX) белый - PC10  зеленый - PC11
+    gpio_set_mode(GPIOA, // UART TX on PA9 (GPIO_USART1_TX) белый - PA9  зеленый - PA10
         GPIO_MODE_OUTPUT_50_MHZ,
         GPIO_CNF_OUTPUT_ALTFN_PUSHPULL,
-        GPIO_UART4_TX);
+        GPIO_USART1_TX);
 
-//    usart_set_baudrate(USART1, 115200);
-//	usart_set_databits(USART1,8);
-//	usart_set_stopbits(USART1,USART_STOPBITS_1);
-//	usart_set_mode(USART1,USART_MODE_TX);
-//	usart_set_parity(USART1,USART_PARITY_NONE);
-//	usart_set_flow_control(USART1,USART_FLOWCONTROL_NONE);
-//	usart_enable(USART1);
+//    gpio_set_mode(GPIOC, // UART TX on PC10 (GPIO_USART3_TX) белый - PC10  зеленый - PC11
+//        GPIO_MODE_OUTPUT_50_MHZ,
+//        GPIO_CNF_OUTPUT_ALTFN_PUSHPULL,
+//        GPIO_UART4_TX);
 
-    usart_set_baudrate(UART4, 115200);
-    usart_set_databits(UART4,8);
-    usart_set_stopbits(UART4,USART_STOPBITS_1);
-    usart_set_mode(UART4,USART_MODE_TX);
-    usart_set_parity(UART4,USART_PARITY_NONE);
-    usart_set_flow_control(UART4,USART_FLOWCONTROL_NONE);
-    usart_enable(UART4);
+    usart_set_baudrate(USART1, 115200);
+    usart_set_databits(USART1,8);
+    usart_set_stopbits(USART1,USART_STOPBITS_1);
+    usart_set_mode(USART1,USART_MODE_TX);
+    usart_set_parity(USART1,USART_PARITY_NONE);
+    usart_set_flow_control(USART1,USART_FLOWCONTROL_NONE);
+    usart_enable(USART1);
+
+//    usart_set_baudrate(UART4, 115200);
+//    usart_set_databits(UART4,8);
+//    usart_set_stopbits(UART4,USART_STOPBITS_1);
+//    usart_set_mode(UART4,USART_MODE_TX);
+//    usart_set_parity(UART4,USART_PARITY_NONE);
+//    usart_set_flow_control(UART4,USART_FLOWCONTROL_NONE);
+//    usart_enable(UART4);
 
 }
 
@@ -66,8 +66,8 @@ uart_setup(void) {
  *********************************************************************/
 static inline void
 uart_putc(char ch) {
-//	usart_send_blocking(USART1,ch);
-    usart_send_blocking(UART4, ch);
+    usart_send_blocking(USART1,ch);
+//    usart_send_blocking(UART4, ch);
 }
 
 /*********************************************************************
@@ -78,7 +78,7 @@ task1(void *args __attribute__((unused))) {
     int c = '0' - 1;
 
     for (;;) {
-        gpio_toggle(GPIOD,GPIO2);
+//        gpio_toggle(GPIOD,GPIO2);
         vTaskDelay(pdMS_TO_TICKS(200));
         if ( ++c >= 'Z' ) {
             uart_putc(c);
@@ -98,16 +98,16 @@ task1(void *args __attribute__((unused))) {
  *********************************************************************/
 int
 main(void) {
-
-    rcc_clock_setup_in_hse_8mhz_out_72mhz(); // Blue pill
+    rcc_clock_setup_pll(&rcc_hse_configs[RCC_CLOCK_HSE8_72MHZ]);
+//    rcc_clock_setup_in_hse_8mhz_out_72mhz(); // Blue pill
 
 	// PC13:
-    rcc_periph_clock_enable(RCC_GPIOD);
-	gpio_set_mode(
-        GPIOD,
-                GPIO_MODE_OUTPUT_2_MHZ,
-                GPIO_CNF_OUTPUT_PUSHPULL,
-                GPIO2);
+//    rcc_periph_clock_enable(RCC_GPIOD);
+//	gpio_set_mode(
+//        GPIOD,
+//                GPIO_MODE_OUTPUT_2_MHZ,
+//                GPIO_CNF_OUTPUT_PUSHPULL,
+//                GPIO2);
 
 	uart_setup();
 

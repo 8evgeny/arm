@@ -11,9 +11,9 @@ static int uart_printf(const char *format,...) __attribute((format(printf,1,2)))
 
 static void
 init_clock(void) {
-
-	rcc_clock_setup_in_hse_8mhz_out_24mhz();
-	rcc_periph_clock_enable(RCC_GPIOC);
+rcc_clock_setup_pll(&rcc_hse_configs[RCC_CLOCK_HSE8_24MHZ]);
+//	rcc_clock_setup_in_hse_8mhz_out_24mhz();
+    rcc_periph_clock_enable(RCC_GPIOD);
 
 	// Clock for GPIO port A: GPIO_USART1_TX, USART1
 	rcc_periph_clock_enable(RCC_GPIOA);
@@ -35,7 +35,7 @@ init_usart(void) {
 	// GPIO_USART1_TX/GPIO13 on GPIO port A for tx
 	gpio_set_mode(GPIOA,GPIO_MODE_OUTPUT_50_MHZ,GPIO_CNF_OUTPUT_ALTFN_PUSHPULL,GPIO_USART1_TX);
 
-    usart_set_baudrate(USART1,38400);
+    usart_set_baudrate(USART1,115200);
 	usart_set_databits(USART1,8);
 	usart_set_stopbits(USART1,USART_STOPBITS_1);
 	usart_set_mode(USART1,USART_MODE_TX);
@@ -47,7 +47,7 @@ init_usart(void) {
 static void
 init_gpio(void) {
 	// C.GPIO13:
-	gpio_set_mode(GPIOC,GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL,GPIO13);
+    gpio_set_mode(GPIOD,GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_PUSHPULL,GPIO2);
 }
 
 static inline void
