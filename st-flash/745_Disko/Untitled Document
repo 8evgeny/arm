@@ -1,0 +1,5 @@
+
+st-flash read firmware.bin 0x8000000 0x100000
+st-flash erase
+st-flash write firmware.bin 0x8000000 
+
