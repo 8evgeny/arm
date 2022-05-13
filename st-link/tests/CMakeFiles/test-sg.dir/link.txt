@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wextra -Wshadow -D_FORTIFY_SOURCE=2 -fstrict-aliasing -Wundef -Wformat -Wformat-security -Wmaybe-uninitialized -Wimplicit-function-declaration -Wredundant-decls -fPIC -Werror   CMakeFiles/test-sg.dir/sg.c.o  -o ../bin/test-sg  -Wl,-rpath,/home/evg/SOFT/Github/Arm/st-link/lib ../lib/libstlink.so.1.7.0 /usr/lib/x86_64-linux-gnu/libusb-1.0.so 
