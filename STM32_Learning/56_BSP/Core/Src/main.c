@@ -22,7 +22,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "stm32746g_discovery.h"
 
+#include "stm32746g_discovery_lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -40,7 +42,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-
+#define LCD_FRAME_BUFFER                SDRAM_DEVICE_ADDR
 DMA2D_HandleTypeDef hdma2d;
 
 LTDC_HandleTypeDef hltdc;
@@ -119,7 +121,7 @@ int main(void)
   MX_LTDC_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  BSP_LCD_Init();
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */

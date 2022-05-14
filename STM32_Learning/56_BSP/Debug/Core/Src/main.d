@@ -50,7 +50,13 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
- ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
+ ../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h \
+ ../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.h \
+ ../Drivers/BSP/STM32746G-Discovery/../Components/rk043fn48h/rk043fn48h.h \
+ ../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.h \
+ ../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h \
+ ../Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/fonts.h
 
 ../Core/Inc/main.h:
 
@@ -157,3 +163,15 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+
+../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h:
+
+../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.h:
+
+../Drivers/BSP/STM32746G-Discovery/../Components/rk043fn48h/rk043fn48h.h:
+
+../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.h:
+
+../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h:
+
+../Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/fonts.h:
