@@ -122,6 +122,10 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   BSP_LCD_Init();
+  BSP_LCD_LayerDefaultInit(LTDC_ACTIVE_LAYER,LCD_FRAME_BUFFER);
+  BSP_LCD_SelectLayer(LTDC_ACTIVE_LAYER);
+  BSP_LCD_DisplayOn();
+  BSP_LCD_Clear(LCD_COLOR_RED);
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
