@@ -22,6 +22,8 @@ OBJCOPY_BIN :=
 SUBDIRS := \
 Core/Src \
 Core/Startup \
+Drivers/BSP/Components/ft5336 \
+Drivers/BSP/STM32746G-Discovery \
 Drivers/STM32F7xx_HAL_Driver/Src \
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS \
 Middlewares/Third_Party/FreeRTOS/Source \

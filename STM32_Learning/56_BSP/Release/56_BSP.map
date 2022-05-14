@@ -24,7 +24,9 @@ Archive member included to satisfy reference by file (symbol)
 Allocating common symbols
 Common symbol       size              file
 
+sdramHandle         0x34              ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
 defaultTaskHandle   0x4               ./Core/Src/main.o
+hLtdcHandler        0xa8              ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
 uwTick              0x4               ./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
 xQueueRegistry      0x40              ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
 pFlash              0x1c              ./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o
@@ -124,6 +126,343 @@ Discarded input sections
  .text          0x0000000000000000       0x14 ./Core/Startup/startup_stm32f746nghx.o
  .data          0x0000000000000000        0x0 ./Core/Startup/startup_stm32f746nghx.o
  .bss           0x0000000000000000        0x0 ./Core/Startup/startup_stm32f746nghx.o
+ .text          0x0000000000000000        0x0 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .data          0x0000000000000000        0x0 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .bss           0x0000000000000000        0x0 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_Reset
+                0x0000000000000000        0x2 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_TS_ITStatus
+                0x0000000000000000        0x4 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_ReadID
+                0x0000000000000000       0x48 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_TS_DetectTouch
+                0x0000000000000000       0x44 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_TS_GetXY
+                0x0000000000000000       0xcc ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_TS_EnableIT
+                0x0000000000000000        0xa ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_TS_DisableIT
+                0x0000000000000000        0xa ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_TS_Start
+                0x0000000000000000        0x4 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_TS_ClearIT
+                0x0000000000000000        0x2 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_Init
+                0x0000000000000000       0x1c ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_TS_GetGestureID
+                0x0000000000000000       0x20 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text.ft5336_TS_GetTouchInfo
+                0x0000000000000000       0x80 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .bss.coord.5659
+                0x0000000000000000        0x2 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .bss.ft5336_handle
+                0x0000000000000000        0x3 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .data.ft5336_ts_drv
+                0x0000000000000000       0x28 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .comment       0x0000000000000000       0x54 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./Drivers/BSP/Components/ft5336/ft5336.o
+ .text          0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .data          0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .bss           0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.I2Cx_Init
+                0x0000000000000000      0x154 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.I2Cx_WriteMultiple
+                0x0000000000000000       0x30 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.I2Cx_ReadMultiple
+                0x0000000000000000       0x30 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_GetVersion
+                0x0000000000000000        0x8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_LED_Init
+                0x0000000000000000       0x48 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_LED_DeInit
+                0x0000000000000000       0x20 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_LED_On
+                0x0000000000000000       0x14 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_LED_Off
+                0x0000000000000000       0x14 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_LED_Toggle
+                0x0000000000000000       0x10 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_PB_Init
+                0x0000000000000000       0xa8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_PB_DeInit
+                0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_PB_GetState
+                0x0000000000000000       0x1c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_COM_Init
+                0x0000000000000000       0x98 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.BSP_COM_DeInit
+                0x0000000000000000       0x28 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.AUDIO_IO_Init
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.AUDIO_IO_DeInit
+                0x0000000000000000        0x2 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.AUDIO_IO_Write
+                0x0000000000000000       0x28 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.AUDIO_IO_Read
+                0x0000000000000000       0x30 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.AUDIO_IO_Delay
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.CAMERA_IO_Init
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.CAMERA_IO_Write
+                0x0000000000000000       0x24 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.CAMERA_IO_Read
+                0x0000000000000000       0x2c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.CAMERA_Delay
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.EEPROM_IO_Init
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.EEPROM_IO_WriteData
+                0x0000000000000000       0x20 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.EEPROM_IO_ReadData
+                0x0000000000000000       0x20 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.EEPROM_IO_IsDeviceReady
+                0x0000000000000000       0x14 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.TS_IO_Init
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.TS_IO_Write
+                0x0000000000000000       0x24 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.TS_IO_Read
+                0x0000000000000000       0x2c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text.TS_IO_Delay
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .bss.hI2cAudioHandler
+                0x0000000000000000       0x4c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .bss.hI2cExtHandler
+                0x0000000000000000       0x4c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .data.BUTTON_PORT
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .data.COM_RX_PORT
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .data.COM_TX_PORT
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .data.COM_USART
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .rodata.BUTTON_IRQn
+                0x0000000000000000        0x6 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .rodata.BUTTON_PIN
+                0x0000000000000000        0x6 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .rodata.COM_RX_AF
+                0x0000000000000000        0x2 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .rodata.COM_RX_PIN
+                0x0000000000000000        0x2 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .rodata.COM_TX_AF
+                0x0000000000000000        0x2 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .rodata.COM_TX_PIN
+                0x0000000000000000        0x2 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .rodata.GPIO_PIN
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .comment       0x0000000000000000       0x54 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+ .text          0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .data          0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .bss           0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.LL_FillBuffer
+                0x0000000000000000       0x80 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_GetXSize
+                0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_GetYSize
+                0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetXSize
+                0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetYSize
+                0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_LayerDefaultInit
+                0x0000000000000000       0x78 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_LayerRgb565Init
+                0x0000000000000000       0x78 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SelectLayer
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetLayerVisible
+                0x0000000000000000       0x28 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetLayerVisible_NoReload
+                0x0000000000000000       0x20 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetTransparency
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetTransparency_NoReload
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetLayerAddress
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetLayerAddress_NoReload
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetLayerWindow
+                0x0000000000000000       0x30 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetLayerWindow_NoReload
+                0x0000000000000000       0x30 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetColorKeying
+                0x0000000000000000       0x20 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetColorKeying_NoReload
+                0x0000000000000000       0x20 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_ResetColorKeying
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_ResetColorKeying_NoReload
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_Reload
+                0x0000000000000000        0xc ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetTextColor
+                0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_GetTextColor
+                0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetBackColor
+                0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_GetBackColor
+                0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_SetFont
+                0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_GetFont
+                0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_ReadPixel
+                0x0000000000000000       0x54 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_Clear
+                0x0000000000000000       0x2c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DrawHLine
+                0x0000000000000000       0x4c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DrawVLine
+                0x0000000000000000       0x54 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DrawRect
+                0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DrawPixel
+                0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DisplayChar
+                0x0000000000000000       0xc8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DisplayStringAt
+                0x0000000000000000       0xb8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DisplayStringAtLine
+                0x0000000000000000       0x30 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DrawLine
+                0x0000000000000000       0xc8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DrawPolygon
+                0x0000000000000000       0x40 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.FillTriangle
+                0x0000000000000000       0xd2 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DrawCircle
+                0x0000000000000000       0xf0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DrawEllipse
+                0x0000000000000000       0xd8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DrawBitmap
+                0x0000000000000000       0xec ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_FillRect
+                0x0000000000000000       0x4c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_ClearStringLine
+                0x0000000000000000       0x50 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_FillCircle
+                0x0000000000000000       0xa0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_FillPolygon
+                0x0000000000000000       0xfe ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_FillEllipse
+                0x0000000000000000       0xa8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DisplayOn
+                0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DisplayOff
+                0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_MspInit
+                0x0000000000000000      0x148 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_MspDeInit
+                0x0000000000000000       0x60 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_DeInit
+                0x0000000000000000       0x2c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_ClockConfig
+                0x0000000000000000       0x1c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text.BSP_LCD_Init
+                0x0000000000000000       0xb4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .bss.ActiveLayer
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .bss.DrawProp  0x0000000000000000       0x18 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .bss.hDma2dHandler
+                0x0000000000000000       0x40 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .bss.periph_clk_init_struct.10007
+                0x0000000000000000       0x84 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .data.Font12   0x0000000000000000        0x8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .data.Font16   0x0000000000000000        0x8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .data.Font20   0x0000000000000000        0x8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .data.Font24   0x0000000000000000        0x8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .data.Font8    0x0000000000000000        0x8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .rodata.Font12_Table
+                0x0000000000000000      0x474 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .rodata.Font16_Table
+                0x0000000000000000      0xbe0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .rodata.Font20_Table
+                0x0000000000000000      0xed8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .rodata.Font24_Table
+                0x0000000000000000     0x1ab8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .rodata.Font8_Table
+                0x0000000000000000      0x2f8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .comment       0x0000000000000000       0x54 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ COMMON         0x0000000000000000       0xa8 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+ .text          0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .data          0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .bss           0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text.BSP_SDRAM_Initialization_sequence
+                0x0000000000000000       0x94 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text.BSP_SDRAM_ReadData
+                0x0000000000000000       0x1c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text.BSP_SDRAM_ReadData_DMA
+                0x0000000000000000       0x1c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text.BSP_SDRAM_WriteData
+                0x0000000000000000       0x1c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text.BSP_SDRAM_WriteData_DMA
+                0x0000000000000000       0x1c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text.BSP_SDRAM_Sendcmd
+                0x0000000000000000       0x1c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text.BSP_SDRAM_MspInit
+                0x0000000000000000      0x178 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text.BSP_SDRAM_Init
+                0x0000000000000000       0x78 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text.BSP_SDRAM_MspDeInit
+                0x0000000000000000       0x20 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text.BSP_SDRAM_DeInit
+                0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .bss.Command   0x0000000000000000       0x10 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .bss.Timing    0x0000000000000000       0x1c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .bss.dma_handle.9456
+                0x0000000000000000       0x60 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .bss.dma_handle.9470
+                0x0000000000000000       0x60 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .data.sdramstatus.9420
+                0x0000000000000000        0x1 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .data.sdramstatus.9424
+                0x0000000000000000        0x1 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .comment       0x0000000000000000       0x54 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ COMMON         0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+ .text          0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .data          0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .bss           0x0000000000000000        0x0 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .text.BSP_TS_Init
+                0x0000000000000000       0x50 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .text.BSP_TS_DeInit
+                0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .text.BSP_TS_ITConfig
+                0x0000000000000000       0x50 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .text.BSP_TS_ITGetStatus
+                0x0000000000000000       0x14 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .text.BSP_TS_Get_GestureId
+                0x0000000000000000       0x5c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .text.BSP_TS_GetState
+                0x0000000000000000      0x180 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .text.BSP_TS_ITClear
+                0x0000000000000000       0x14 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .text.BSP_TS_ResetTouchData
+                0x0000000000000000       0x2c ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .bss.I2cAddress
+                0x0000000000000000        0x1 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .bss._x.9572   0x0000000000000000       0x14 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .bss._y.9573   0x0000000000000000       0x14 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .bss.tsDriver  0x0000000000000000        0x4 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .bss.tsOrientation
+                0x0000000000000000        0x1 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .bss.tsXBoundary
+                0x0000000000000000        0x2 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .bss.tsYBoundary
+                0x0000000000000000        0x2 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .comment       0x0000000000000000       0x54 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
  .text          0x0000000000000000        0x0 ./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
  .data          0x0000000000000000        0x0 ./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
  .bss           0x0000000000000000        0x0 ./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
@@ -1746,6 +2085,11 @@ LOAD ./Core/Src/syscalls.o
 LOAD ./Core/Src/sysmem.o
 LOAD ./Core/Src/system_stm32f7xx.o
 LOAD ./Core/Startup/startup_stm32f746nghx.o
+LOAD ./Drivers/BSP/Components/ft5336/ft5336.o
+LOAD ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.o
+LOAD ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.o
+LOAD ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.o
+LOAD ./Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.o
 LOAD ./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
 LOAD ./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
 LOAD ./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o
