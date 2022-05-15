@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "fatfs.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -35,6 +36,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define LCD_FRAME_BUFFER                SDRAM_DEVICE_ADDR
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -43,10 +45,18 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-#define LCD_FRAME_BUFFER                SDRAM_DEVICE_ADDR
+FATFS SDFatFs; /* File system object for SD card logical drive */
+FIL MyFile; /* File object */
+char SD_Path[4]; /* SD logical drive path */
+uint8_t sect[512];
+uint32_t bytesread = 0;
+uint8_t* bmp1;
+
 DMA2D_HandleTypeDef hdma2d;
 
 LTDC_HandleTypeDef hltdc;
+
+SD_HandleTypeDef hsd1;
 
 UART_HandleTypeDef huart1;
 
@@ -68,6 +78,7 @@ static void MX_DMA2D_Init(void);
 static void MX_FMC_Init(void);
 static void MX_LTDC_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_SDMMC1_SD_Init(void);
 void StartDefaultTask(void const * argument);
 void StartTask02(void const * argument);
 void StartTask03(void const * argument);
@@ -121,6 +132,8 @@ int main(void)
   MX_FMC_Init();
   MX_LTDC_Init();
   MX_USART1_UART_Init();
+  MX_SDMMC1_SD_Init();
+  MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
   BSP_LCD_Init();
   BSP_LCD_LayerDefaultInit(LTDC_ACTIVE_LAYER,LCD_FRAME_BUFFER);
@@ -128,6 +141,10 @@ int main(void)
   BSP_LCD_DisplayOn();
 //  BSP_LCD_Clear(LCD_COLOR_RED);
   BSP_LCD_Clear(LCD_COLOR_BLACK);
+
+  bmp1 = (uint8_t *)0xC00FF000;
+
+
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -209,7 +226,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 25;
   RCC_OscInitStruct.PLL.PLLN = 432;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 2;
+  RCC_OscInitStruct.PLL.PLLQ = 9;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -331,6 +348,34 @@ static void MX_LTDC_Init(void)
   /* USER CODE BEGIN LTDC_Init 2 */
 
   /* USER CODE END LTDC_Init 2 */
+
+}
+
+/**
+  * @brief SDMMC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SDMMC1_SD_Init(void)
+{
+
+  /* USER CODE BEGIN SDMMC1_Init 0 */
+
+  /* USER CODE END SDMMC1_Init 0 */
+
+  /* USER CODE BEGIN SDMMC1_Init 1 */
+
+  /* USER CODE END SDMMC1_Init 1 */
+  hsd1.Instance = SDMMC1;
+  hsd1.Init.ClockEdge = SDMMC_CLOCK_EDGE_RISING;
+  hsd1.Init.ClockBypass = SDMMC_CLOCK_BYPASS_DISABLE;
+  hsd1.Init.ClockPowerSave = SDMMC_CLOCK_POWER_SAVE_DISABLE;
+  hsd1.Init.BusWide = SDMMC_BUS_WIDE_1B;
+  hsd1.Init.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
+  hsd1.Init.ClockDiv = 0;
+  /* USER CODE BEGIN SDMMC1_Init 2 */
+
+  /* USER CODE END SDMMC1_Init 2 */
 
 }
 
@@ -828,21 +873,19 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
+	if(f_mount(&SDFatFs, (TCHAR const*)SD_Path, 0) != FR_OK)
+
+	{
+
+	  BSP_LCD_Clear(LCD_COLOR_RED);
+
+	  Error_Handler();
+
+	}
   /* Infinite loop */
   for(;;)
   {
-      BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      BSP_LCD_FillRect(0,136,96,136);
-      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
-      BSP_LCD_FillRect(0,0,96,136);
-      osDelay(1200);
-
-      BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      BSP_LCD_FillRect(0,0,96,136);
-      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
-      BSP_LCD_FillRect(0,136,96,136);
-      osDelay(1200);
-
+	  osDelay(1);
   }
   /* USER CODE END 5 */
 }
@@ -860,18 +903,7 @@ void StartTask02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-      BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      BSP_LCD_FillRect(96,136,96,136);
-      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
-      BSP_LCD_FillRect(96,0,96,136);
-      osDelay(1190);
-
-      BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      BSP_LCD_FillRect(96,0,96,136);
-      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
-      BSP_LCD_FillRect(96,136,96,136);
-      osDelay(1190);
-
+	  osDelay(1);
   }
   /* USER CODE END StartTask02 */
 }
@@ -889,18 +921,7 @@ void StartTask03(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-      BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      BSP_LCD_FillRect(192,136,96,136);
-      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
-      BSP_LCD_FillRect(192,0,96,136);
-      osDelay(1180);
-
-      BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      BSP_LCD_FillRect(192,0,96,136);
-      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
-      BSP_LCD_FillRect(192,136,96,136);
-      osDelay(1180);
-
+	  osDelay(1);
   }
   /* USER CODE END StartTask03 */
 }
@@ -918,18 +939,7 @@ void StartTask04(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-      BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      BSP_LCD_FillRect(288,136,96,136);
-      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
-      BSP_LCD_FillRect(288,0,96,136);
-      osDelay(1170);
-
-      BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      BSP_LCD_FillRect(288,0,96,136);
-      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
-      BSP_LCD_FillRect(288,136,96,136);
-      osDelay(1170);
-
+	  osDelay(1);
   }
   /* USER CODE END StartTask04 */
 }
@@ -947,18 +957,7 @@ void StartTask05(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-      BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      BSP_LCD_FillRect(384,136,96,136);
-      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
-      BSP_LCD_FillRect(384,0,96,136);
-      osDelay(1160);
-
-      BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      BSP_LCD_FillRect(384,0,95,135);
-      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
-      BSP_LCD_FillRect(384,136,95,271);
-      osDelay(1160);
-
+	  osDelay(1);
   }
   /* USER CODE END StartTask05 */
 }

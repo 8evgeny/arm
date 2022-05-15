@@ -50,6 +50,9 @@ include_directories(
     Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1
     Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
     Drivers/BSP/STM32746G-Discovery
+    FATFS/App
+    FATFS/Target
+    Middlewares/Third_Party/FatFs/src
     )
 file (GLOB SOURCES_C ${patchSRC}/*.c STM32H753IITX_FLASH.ld)
 
@@ -72,6 +75,16 @@ file (GLOB RTOS_SRC
     Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
     )
 add_library(RTOS ${RTOS_SRC})
+
+file (GLOB FATFS_SRC
+    FATFS/App/*.c
+    FATFS/Target/*.c
+    Middlewares/Third_Party/FatFs/src/*.c
+    Middlewares/Third_Party/FatFs/src/option/*.c
+    )
+add_library(FATFS ${FATFS_SRC})
+
+
 
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
@@ -104,9 +117,10 @@ target_link_options(${PROJECT_NAME}.elf PRIVATE ${LINKER_FLAGS})
 target_link_libraries(${PROJECT_NAME}.elf PUBLIC
     CORE
     STARTUP
-    HAL
     DISCOVERY
     RTOS
+    FATFS
+    HAL
     )
 
 set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
