@@ -1,2 +1,5 @@
 Debug
 Release
+build_cmake_debug
+build_cmake_release
+CMakeLists.txt.user
