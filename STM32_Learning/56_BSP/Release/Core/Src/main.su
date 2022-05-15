@@ -1,9 +1,0 @@
-main.c:826:6:StartDefaultTask	8	static
-main.c:880:6:StartTask04	8	static
-main.c:898:6:StartTask05	8	static
-main.c:844:6:StartTask02	8	static
-main.c:862:6:StartTask03	8	static
-main.c:191:6:SystemClock_Config	88	static,ignoring_inline_asm
-main.c:89:5:main	224	static,ignoring_inline_asm
-main.c:917:6:HAL_TIM_PeriodElapsedCallback	0	static
-main.c:934:6:Error_Handler	0	static,ignoring_inline_asm
