@@ -24,8 +24,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdlib.h>
+#include <string.h>
 #include "stm32746g_discovery.h"
-
 #include "stm32746g_discovery_lcd.h"
 /* USER CODE END Includes */
 
@@ -91,7 +91,58 @@ void StartTask05(void const * argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+uint32_t OpenBMP(uint8_t *ptr, const char* fname)
+{
+    uint32_t ind = 0, sz = 0, i1 = 0, ind1 = 0;
+    static uint32_t bmp_addr;
+    if(f_open(&MyFile, fname, FA_READ) != FR_OK)
+    {
+        BSP_LCD_Clear(LCD_COLOR_RED);
+    }
+    else
+    {
+        if (f_read (&MyFile, sect, 30, (UINT *)bytesread) != FR_OK)
+        {
+            Error_Handler();
+        }
+        else
+        {
+            bmp_addr = (uint32_t)sect;
+            sz = *(uint16_t *) (bmp_addr + 2);
+            sz |= (*(uint16_t *) (bmp_addr + 4)) << 16;
+            /* Get bitmap data address offset */
+            ind = *(uint16_t *) (bmp_addr + 10);
+            ind |= (*(uint16_t *) (bmp_addr + 12)) << 16;
+            f_close (&MyFile);
+            f_open (&MyFile, fname, FA_READ);
+            ind=0;
+            do
+            {
+                if (sz < 512)
+                {
+                    i1 = sz;
+                }
+                else
+                {
+                    i1 = 512;
+                }
+                sz -= i1;
+            }
+            while (sz > 0);
+            f_close (&MyFile);
+            sz -= i1;
+            f_lseek(&MyFile,ind1);
+            f_read (&MyFile, sect, i1, (UINT *)&bytesread);
+            memcpy((void*)(bmp1+ind1), (void*)sect, i1);
+            ind1+=i1;
+            f_close (&MyFile);
+            ind1=0;
+        }
 
+    }
+
+    return 0;
+}
 /* USER CODE END 0 */
 
 /**
@@ -139,8 +190,8 @@ int main(void)
   BSP_LCD_LayerDefaultInit(LTDC_ACTIVE_LAYER,LCD_FRAME_BUFFER);
   BSP_LCD_SelectLayer(LTDC_ACTIVE_LAYER);
   BSP_LCD_DisplayOn();
-//  BSP_LCD_Clear(LCD_COLOR_RED);
-  BSP_LCD_Clear(LCD_COLOR_BLACK);
+  BSP_LCD_Clear(LCD_COLOR_YELLOW);
+//  BSP_LCD_Clear(LCD_COLOR_BLACK);
 
   bmp1 = (uint8_t *)0xC00FF000;
 
@@ -554,16 +605,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Alternate = GPIO_AF8_SPDIFRX;
   HAL_GPIO_Init(SPDIF_RX0_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : SDMMC_CK_Pin SDMMC_D3_Pin SDMMC_D2_Pin PC9
-                           PC8 */
-  GPIO_InitStruct.Pin = SDMMC_CK_Pin|SDMMC_D3_Pin|SDMMC_D2_Pin|GPIO_PIN_9
-                          |GPIO_PIN_8;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF12_SDMMC1;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
   /*Configure GPIO pin : ARDUINO_PWM_D9_Pin */
   GPIO_InitStruct.Pin = ARDUINO_PWM_D9_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -672,14 +713,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(OTG_FS_OverCurrent_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : SDMMC_D0_Pin */
-  GPIO_InitStruct.Pin = SDMMC_D0_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF12_SDMMC1;
-  HAL_GPIO_Init(SDMMC_D0_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : TP3_Pin NC2_Pin */
   GPIO_InitStruct.Pin = TP3_Pin|NC2_Pin;
@@ -885,7 +918,19 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  osDelay(1);
+      OpenBMP((uint8_t *)bmp1,"image01.bmp");
+      BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
+      osDelay(500);
+      OpenBMP((uint8_t *)bmp1,"image02.bmp");
+      BSP_LCD_Clear(LCD_COLOR_BLACK);
+      BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
+      osDelay(500);
+      OpenBMP((uint8_t *)bmp1,"image03.bmp");
+      BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
+      osDelay(500);
+      OpenBMP((uint8_t *)bmp1,"image04.bmp");
+      BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
+      osDelay(500);
   }
   /* USER CODE END 5 */
 }
