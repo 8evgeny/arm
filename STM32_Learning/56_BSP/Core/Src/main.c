@@ -835,13 +835,13 @@ void StartDefaultTask(void const * argument)
       BSP_LCD_FillRect(0,136,96,136);
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(0,0,96,136);
-      osDelay(200);
+      osDelay(1200);
 
       BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
       BSP_LCD_FillRect(0,0,96,136);
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(0,136,96,136);
-      osDelay(200);
+      osDelay(1200);
 
   }
   /* USER CODE END 5 */
@@ -864,13 +864,13 @@ void StartTask02(void const * argument)
       BSP_LCD_FillRect(96,136,96,136);
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(96,0,96,136);
-      osDelay(190);
+      osDelay(1190);
 
       BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
       BSP_LCD_FillRect(96,0,96,136);
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(96,136,96,136);
-      osDelay(190);
+      osDelay(1190);
 
   }
   /* USER CODE END StartTask02 */
@@ -893,13 +893,13 @@ void StartTask03(void const * argument)
       BSP_LCD_FillRect(192,136,96,136);
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(192,0,96,136);
-      osDelay(180);
+      osDelay(1180);
 
       BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
       BSP_LCD_FillRect(192,0,96,136);
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(192,136,96,136);
-      osDelay(180);
+      osDelay(1180);
 
   }
   /* USER CODE END StartTask03 */
@@ -922,13 +922,13 @@ void StartTask04(void const * argument)
       BSP_LCD_FillRect(288,136,96,136);
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(288,0,96,136);
-      osDelay(170);
+      osDelay(1170);
 
       BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
       BSP_LCD_FillRect(288,0,96,136);
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(288,136,96,136);
-      osDelay(170);
+      osDelay(1170);
 
   }
   /* USER CODE END StartTask04 */
@@ -951,13 +951,13 @@ void StartTask05(void const * argument)
       BSP_LCD_FillRect(384,136,96,136);
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(384,0,96,136);
-      osDelay(160);
+      osDelay(1160);
 
       BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
       BSP_LCD_FillRect(384,0,95,135);
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(384,136,95,271);
-      osDelay(160);
+      osDelay(1160);
 
   }
   /* USER CODE END StartTask05 */
