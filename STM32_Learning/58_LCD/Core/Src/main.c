@@ -155,6 +155,8 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
+    bmp1 = (uint8_t *)0xC00FF000;
+
   /* USER CODE END 1 */
 
   /* Enable I-Cache---------------------------------------------------------*/
@@ -195,7 +197,7 @@ int main(void)
   BSP_LCD_Clear(LCD_COLOR_YELLOW);
 //  BSP_LCD_Clear(LCD_COLOR_BLACK);
 
-  bmp1 = (uint8_t *)0xC00FF000;
+
 
 
   /* USER CODE END 2 */
@@ -909,13 +911,9 @@ void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
 	if(f_mount(&SDFatFs, (TCHAR const*)SD_Path, 0) != FR_OK)
-
 	{
-
-	  BSP_LCD_Clear(LCD_COLOR_RED);
-
-	  Error_Handler();
-
+        BSP_LCD_Clear(LCD_COLOR_RED);
+        Error_Handler();
 	}
   /* Infinite loop */
   for(;;)
