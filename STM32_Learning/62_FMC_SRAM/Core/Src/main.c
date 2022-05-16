@@ -109,6 +109,8 @@ char str1[20]={0};
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  MT48LC4M32B2_init(&hsdram1);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

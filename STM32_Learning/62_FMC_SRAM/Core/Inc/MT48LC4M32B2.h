@@ -4,7 +4,8 @@
 //--------------------------
 
 #include "stm32f7xx_hal.h"
-
+#include "string.h"
+#include "stdint.h"
 //--------------------------
 
 #define SDRAM_TIMEOUT                            ((uint32_t)0xFFFF)
@@ -21,5 +22,5 @@
 #define SDRAM_MODEREG_WRITEBURST_MODE_SINGLE     ((uint16_t)0x0200)
 
 //--------------------------
-
+void MT48LC4M32B2_init(SDRAM_HandleTypeDef *hsdram);
 #endif /* __MT48LC4M32B2_H */
