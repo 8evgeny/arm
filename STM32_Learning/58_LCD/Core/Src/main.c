@@ -41,12 +41,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-FATFS SDFatFs; /* File system object for SD card logical drive */
-FIL MyFile; /* File object */
-char SD_Path[4]; /* SD logical drive path */
-uint8_t sect[512];
-uint32_t bytesread = 0;
-uint8_t* bmp1;
+
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -67,6 +62,14 @@ osThreadId myTask03Handle;
 osThreadId myTask04Handle;
 osThreadId myTask05Handle;
 /* USER CODE BEGIN PV */
+
+#define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
+FATFS SDFatFs;    /* File system object for SD card logical drive */
+FIL MyFile;       /* File object */
+char SD_Path[4];  /* SD logical drive path */
+uint8_t sect[512];
+uint32_t bytesread = 0;
+uint8_t* bmp1;
 
 /* USER CODE END PV */
 
