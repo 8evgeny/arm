@@ -18,9 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "stm32f7xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+#include "ltdc.h"
 
 /* USER CODE END Includes */
 
@@ -45,6 +48,8 @@ LTDC_HandleTypeDef hltdc;
 RNG_HandleTypeDef hrng;
 
 /* USER CODE BEGIN PV */
+
+volatile uint32_t RGB565_480x272[65280]={0x00000000};
 
 /* USER CODE END PV */
 
@@ -71,7 +76,7 @@ static void MX_RNG_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+    uint16_t i,j;
   /* USER CODE END 1 */
 
   /* MPU Configuration--------------------------------------------------------*/
@@ -108,15 +113,60 @@ int main(void)
   MX_RNG_Init();
   /* USER CODE BEGIN 2 */
 
+  HAL_LTDC_SetAddress(&hltdc,(uint32_t) &RGB565_480x272,0);
+  TFT_FillScreen((uint32_t)0x07E0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
+//      /* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
+//      /* USER CODE BEGIN 3 */
+//      for(i=0;i<100;i++)
+//      {
+//          TFT_FillScreen((uint16_t)HAL_RNG_GetRandomNumber(&hrng));
+//          HAL_Delay(100);
+//      }
+//      TFT_FillScreen(0);
+//      HAL_Delay(1000);
+//      for(i=0;i<1000;i++)
+//      {
+//          TFT_FillRectangle(HAL_RNG_GetRandomNumber(&hrng)%480,
+//                            HAL_RNG_GetRandomNumber(&hrng)%272,
+//                            HAL_RNG_GetRandomNumber(&hrng)%480,
+//                            HAL_RNG_GetRandomNumber(&hrng)%272,
+//                            (uint16_t)HAL_RNG_GetRandomNumber(&hrng));
+//          HAL_Delay(10);
+//      }
+//      TFT_FillScreen(0);
+//      HAL_Delay(1000);
+//      for(i=0;i<10000;i++)
+//      {
+//          for(j=0;j<100;j++)
+//          {
+//              TFT_DrawPixel(HAL_RNG_GetRandomNumber(&hrng)%480,
+//                            HAL_RNG_GetRandomNumber(&hrng)%272,0);
+//          }
+//          TFT_DrawPixel(HAL_RNG_GetRandomNumber(&hrng)%480,
+//                        HAL_RNG_GetRandomNumber(&hrng)%272,
+//                        (uint16_t)HAL_RNG_GetRandomNumber(&hrng));
+//          HAL_Delay(1);
+//      }
+//      TFT_FillScreen(0);
+//      HAL_Delay(1000);
+//      for(i=0;i<1000;i++)
+//      {
+//          TFT_DrawLine(HAL_RNG_GetRandomNumber(&hrng)%480,
+//                       HAL_RNG_GetRandomNumber(&hrng)%272,
+//                       HAL_RNG_GetRandomNumber(&hrng)%480,
+//                       HAL_RNG_GetRandomNumber(&hrng)%272,
+//                       (uint16_t)HAL_RNG_GetRandomNumber(&hrng));
+//          HAL_Delay(10);
+//      }
+//      TFT_FillScreen(0);
+//      HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
