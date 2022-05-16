@@ -41,16 +41,15 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
 FATFS SDFatFs; /* File system object for SD card logical drive */
 FIL MyFile; /* File object */
 char SD_Path[4]; /* SD logical drive path */
 uint8_t sect[512];
 uint32_t bytesread = 0;
 uint8_t* bmp1;
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
 
 DMA2D_HandleTypeDef hdma2d;
 
