@@ -23,7 +23,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -std=gnu11 \
     -DUSE_HAL_DRIVER \
     -DSTM32H753xx \
-    -Os \
+    -O0 \
     -ffunction-sections \
     -fdata-sections \
     -Wall \
@@ -37,7 +37,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -Xlinker -Map=${PROJECT_NAME}.map \
     ")
 #    --specs=nano.specs \
-
+#    -Os \
 include_directories(
     ${patchSRC}/../Inc
     ${patchSRC}
