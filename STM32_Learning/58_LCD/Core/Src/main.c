@@ -93,6 +93,7 @@ void StartTask05(void const * argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 uint32_t OpenBMP(uint8_t *ptr, const char* fname)
 {
     uint32_t ind = 0, sz = 0, i1 = 0, ind1 = 0;
@@ -110,11 +111,12 @@ uint32_t OpenBMP(uint8_t *ptr, const char* fname)
         else
         {
             bmp_addr = (uint32_t)sect;
-            sz = *(uint16_t *) (bmp_addr + 2);
-            sz |= (*(uint16_t *) (bmp_addr + 4)) << 16;
+            sz = *(uint16_t *)(bmp_addr + 2);
+            sz |= (*(uint16_t *)(bmp_addr + 4))<< 16;
+
             /* Get bitmap data address offset */
-            ind = *(uint16_t *) (bmp_addr + 10);
-            ind |= (*(uint16_t *) (bmp_addr + 12)) << 16;
+            ind = *(uint16_t *)(bmp_addr + 10);
+            ind |= (*(uint16_t *)(bmp_addr + 12))<< 16;
             f_close (&MyFile);
             f_open (&MyFile, fname, FA_READ);
             ind=0;
@@ -129,18 +131,15 @@ uint32_t OpenBMP(uint8_t *ptr, const char* fname)
                     i1 = 512;
                 }
                 sz -= i1;
+                f_lseek(&MyFile,ind1);
+                f_read (&MyFile, sect, i1, (UINT *)&bytesread);
+                memcpy((void*)(bmp1+ind1), (void*)sect, i1);
+                ind1+=i1;
             }
             while (sz > 0);
             f_close (&MyFile);
-            sz -= i1;
-            f_lseek(&MyFile,ind1);
-            f_read (&MyFile, sect, i1, (UINT *)&bytesread);
-            memcpy((void*)(bmp1+ind1), (void*)sect, i1);
-            ind1+=i1;
-            f_close (&MyFile);
-            ind1=0;
         }
-
+        ind1=0;
     }
 
     return 0;
