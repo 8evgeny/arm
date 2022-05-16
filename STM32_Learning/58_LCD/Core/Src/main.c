@@ -67,7 +67,7 @@ osThreadId myTask05Handle;
 FATFS SDFatFs;    /* File system object for SD card logical drive */
 FIL MyFile;       /* File object */
 char SD_Path[4];  /* SD logical drive path */
-uint8_t sect[512];
+uint8_t sect[4096];
 uint32_t bytesread = 0;
 uint8_t* bmp1;
 
@@ -96,7 +96,7 @@ void StartTask05(void const * argument);
 
 uint32_t OpenBMP(uint8_t *ptr, const char* fname)
 {
-    uint32_t ind = 0, sz = 0, i1 = 0, ind1 = 0;
+    uint32_t ind = 0,sz = 0,i1 = 0,ind1 = 0;
     static uint32_t bmp_addr;
     if(f_open(&MyFile, fname, FA_READ) != FR_OK)
     {
@@ -104,31 +104,33 @@ uint32_t OpenBMP(uint8_t *ptr, const char* fname)
     }
     else
     {
-        if (f_read (&MyFile, sect, 30, (UINT *)bytesread) != FR_OK)
+        if (f_read (&MyFile, sect, 30, (UINT *)&bytesread) != FR_OK)
         {
             Error_Handler();
         }
         else
         {
             bmp_addr = (uint32_t)sect;
-            sz = *(uint16_t *)(bmp_addr + 2);
-            sz |= (*(uint16_t *)(bmp_addr + 4))<< 16;
+            /* Get bitmap size */
+            sz = *(uint16_t*)(bmp_addr + 2);
+            sz |= (*(uint16_t*)(bmp_addr + 4))<< 16;
 
             /* Get bitmap data address offset */
-            ind = *(uint16_t *)(bmp_addr + 10);
-            ind |= (*(uint16_t *)(bmp_addr + 12))<< 16;
+            ind = *(uint16_t*)(bmp_addr + 10);
+            ind |= (*(uint16_t*)(bmp_addr + 12))<< 16;
             f_close (&MyFile);
             f_open (&MyFile, fname, FA_READ);
             ind=0;
+
             do
             {
-                if (sz < 512)
+                if (sz < 4096)
                 {
                     i1 = sz;
                 }
                 else
                 {
-                    i1 = 512;
+                    i1 = 4096;
                 }
                 sz -= i1;
                 f_lseek(&MyFile,ind1);
@@ -139,9 +141,9 @@ uint32_t OpenBMP(uint8_t *ptr, const char* fname)
             while (sz > 0);
             f_close (&MyFile);
         }
+
         ind1=0;
     }
-
     return 0;
 }
 /* USER CODE END 0 */
@@ -193,7 +195,7 @@ int main(void)
   BSP_LCD_LayerDefaultInit(LTDC_ACTIVE_LAYER,LCD_FRAME_BUFFER);
   BSP_LCD_SelectLayer(LTDC_ACTIVE_LAYER);
   BSP_LCD_DisplayOn();
-  BSP_LCD_Clear(LCD_COLOR_YELLOW);
+  BSP_LCD_Clear(LCD_COLOR_TRANSPARENT);
 //  BSP_LCD_Clear(LCD_COLOR_BLACK);
 
 
@@ -947,7 +949,9 @@ void StartTask02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  osDelay(1);
+      BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
+      BSP_LCD_FillRect(384,136,96,136);
+      osDelay(10000);
   }
   /* USER CODE END StartTask02 */
 }
