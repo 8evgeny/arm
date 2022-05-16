@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "MT48LC4M32B2.h"
 #include "string.h"
 
 /* USER CODE END Includes */
