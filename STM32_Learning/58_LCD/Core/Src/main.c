@@ -141,7 +141,6 @@ uint32_t OpenBMP(uint8_t *ptr, const char* fname)
             while (sz > 0);
             f_close (&MyFile);
         }
-
         ind1=0;
     }
     return 0;
@@ -919,19 +918,23 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-      OpenBMP((uint8_t *)bmp1,"image01.bmp");
+      BSP_LCD_Clear(LCD_COLOR_CYAN);
+      osDelay(1000);
+
+      OpenBMP((uint8_t *)bmp1,"image11.bmp");
       BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
-      osDelay(500);
-      OpenBMP((uint8_t *)bmp1,"image02.bmp");
-      BSP_LCD_Clear(LCD_COLOR_BLACK);
-      BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
-      osDelay(500);
-      OpenBMP((uint8_t *)bmp1,"image03.bmp");
-      BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
-      osDelay(500);
-      OpenBMP((uint8_t *)bmp1,"image04.bmp");
-      BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
-      osDelay(500);
+      osDelay(1000);
+
+//      OpenBMP((uint8_t *)bmp1,"image12.bmp");
+//      BSP_LCD_Clear(LCD_COLOR_BLACK);
+//      BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
+//      osDelay(500);
+//      OpenBMP((uint8_t *)bmp1,"image13.bmp");
+//      BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
+//      osDelay(500);
+//      OpenBMP((uint8_t *)bmp1,"image14.bmp");
+//      BSP_LCD_DrawBitmap(0,0,(uint8_t *)bmp1);
+//      osDelay(500);
   }
   /* USER CODE END 5 */
 }
@@ -951,7 +954,7 @@ void StartTask02(void const * argument)
   {
       BSP_LCD_SetTextColor((uint32_t)(LCD_COLOR_TRANSPARENT|((rand()%256)<<16)|((rand()%256)<<8)|(rand()%256)));
       BSP_LCD_FillRect(384,136,96,136);
-      osDelay(10000);
+      osDelay(100);
   }
   /* USER CODE END StartTask02 */
 }
