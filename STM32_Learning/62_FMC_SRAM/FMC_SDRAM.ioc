@@ -25,6 +25,7 @@ FMC.SDClockPeriod2=FMC_SDRAM_CLOCK_PERIOD_2
 FMC.SelfRefreshTime1=4
 FMC.WriteRecoveryTime1=2
 File.Version=6
+GPIO.groupedBy=Group By Peripherals
 KeepUserPlacement=false
 Mcu.Family=STM32F7
 Mcu.IP0=CORTEX_M7
