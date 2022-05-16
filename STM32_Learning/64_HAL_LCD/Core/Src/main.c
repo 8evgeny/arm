@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "stm32f7xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -121,9 +120,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-//      /* USER CODE END WHILE */
+    /* USER CODE END WHILE */
 
-//      /* USER CODE BEGIN 3 */
+    /* USER CODE BEGIN 3 */
 //      for(i=0;i<100;i++)
 //      {
 //          TFT_FillScreen((uint16_t)HAL_RNG_GetRandomNumber(&hrng));

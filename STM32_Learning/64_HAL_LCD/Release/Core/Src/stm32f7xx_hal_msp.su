@@ -1,5 +1,0 @@
-stm32f7xx_hal_msp.c:63:6:HAL_MspInit	8	static
-stm32f7xx_hal_msp.c:85:6:HAL_LTDC_MspInit	64	static
-stm32f7xx_hal_msp.c:183:6:HAL_LTDC_MspDeInit	8	static
-stm32f7xx_hal_msp.c:250:6:HAL_RNG_MspInit	8	static
-stm32f7xx_hal_msp.c:272:6:HAL_RNG_MspDeInit	0	static
