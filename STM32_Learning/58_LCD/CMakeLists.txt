@@ -87,6 +87,7 @@ add_library(FATFS ${FATFS_SRC})
 
 
 add_executable(${PROJECT_NAME}.elf
+    FATFS/Target/bsp_driver_sd.c
     ${SOURCES_C}
     )
 

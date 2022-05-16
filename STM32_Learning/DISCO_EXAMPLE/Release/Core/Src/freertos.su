@@ -1,0 +1,4 @@
+freertos.c:64:13:vApplicationIdleHook	0	static
+freertos.c:79:13:vApplicationStackOverflowHook	0	static
+freertos.c:88:13:vApplicationMallocFailedHook	0	static
+freertos.c:107:6:vApplicationGetIdleTaskMemory	0	static
