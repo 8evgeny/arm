@@ -510,6 +510,47 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+void PrintCounter(uint8_t ID_Task)
+{
+  uint8_t i=0;
+  if (myBinarySem01Handle != NULL)
+    {
+      if(osSemaphoreWait(myBinarySem01Handle , 100) == osOK)
+      {
+          i++;
+          for(i=1;i<=50;i++)
+          {
+            if(ID_Task==1)
+            {
+              TFT_SetTextColor(LCD_COLOR_MAGENTA);
+              sprintf(str1,"%d ",i);
+              TFT_DisplayString(130, 100, (uint8_t *)str1, LEFT_MODE);
+            }
+            else if(ID_Task==2)
+            {
+              TFT_SetTextColor(LCD_COLOR_CYAN);
+              sprintf(str1,"%d ",i);
+              TFT_DisplayString(130, 160, (uint8_t *)str1, LEFT_MODE);
+            }
+            osDelay(500);
+          }
+          if(ID_Task==1)
+          {
+            TFT_SetTextColor(LCD_COLOR_MAGENTA);
+            TFT_DisplayString(130, 100, (uint8_t *)" ", LEFT_MODE);
+            ncount1=0;
+          }
+          else if(ID_Task==2)
+          {
+            TFT_SetTextColor(LCD_COLOR_CYAN);
+            TFT_DisplayString(130, 160, (uint8_t *)" ", LEFT_MODE);
+            ncount2=0;
+          }
+          osSemaphoreRelease(myBinarySem01Handle);
+      }
+    }
+}
+
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -528,7 +569,12 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      ncount1++;
+      TFT_SetTextColor(LCD_COLOR_MAGENTA);
+      sprintf(str1,"%lu ",ncount1);
+      TFT_DisplayString(220, 100, (uint8_t *)str1, LEFT_MODE);
+      PrintCounter(1);
+      osDelay(1);
   }
   /* USER CODE END 5 */
 }
@@ -549,7 +595,12 @@ void StartTask02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      ncount2++;
+      TFT_SetTextColor(LCD_COLOR_CYAN);
+      sprintf(str1,"%lu ",ncount2);
+      TFT_DisplayString(220, 160, (uint8_t *)str1, LEFT_MODE);
+      PrintCounter(2);
+      osDelay(1);
   }
   /* USER CODE END StartTask02 */
 }
