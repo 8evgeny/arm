@@ -76,6 +76,10 @@ void StartTask02(void const * argument);
 /* USER CODE BEGIN PFP */
 
 #define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
+volatile uint32_t TIM1_Count=0, TIM1_Count_Sec=0;
+char str1[20];
+volatile uint8_t tasks_started=0;
+uint32_t ncount1=0, ncount2=0;
 
 /* USER CODE END PFP */
 
@@ -518,6 +522,9 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
+
+     tasks_started++;
+
   /* Infinite loop */
   for(;;)
   {
@@ -536,6 +543,9 @@ void StartDefaultTask(void const * argument)
 void StartTask02(void const * argument)
 {
   /* USER CODE BEGIN StartTask02 */
+
+        tasks_started++;
+
   /* Infinite loop */
   for(;;)
   {
@@ -589,6 +599,19 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
+
+  if(tasks_started>=2)
+  {
+    TIM1_Count++;
+    if(TIM1_Count%1000==0)
+    {
+      TIM1_Count_Sec++;
+      TFT_SetTextColor(LCD_COLOR_BLUE);
+      sprintf(str1,"%lu ",TIM1_Count_Sec);
+      TFT_DisplayString(167, 190, (uint8_t *)str1, LEFT_MODE);
+    }
+    if(TIM1_Count>=10000000) TIM1_Count=0;
+  }
 
   /* USER CODE END Callback 1 */
 }
