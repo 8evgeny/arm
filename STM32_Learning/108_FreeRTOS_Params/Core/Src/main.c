@@ -182,8 +182,18 @@ int main(void)
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
 
+  strcpy(arg01.str_name,"task1");
+  strcpy(arg02.str_name,"task2");
+  strcpy(arg03.str_name,"task3");
+  arg01.y_pos = 60;
+  arg02.y_pos = 110;
+  arg03.y_pos = 160;
+  arg01.delay_per = 1000;
+  arg02.delay_per = 677;
+  arg03.delay_per = 439;
+
   osThreadDef(tsk01, Task01, osPriorityIdle, 0, 128);
-  Task01Handle = osThreadCreate(osThread(tsk01), NULL);
+  Task01Handle = osThreadCreate(osThread(tsk01), (void*)&arg01);
 
   /* USER CODE END RTOS_THREADS */
 
@@ -501,12 +511,17 @@ static void MX_GPIO_Init(void)
 //---------------------------------------------------------------
 void Task01(void const * argument)
 {
+    volatile struct_arg *arg;
+    arg = (struct_arg*) argument;
+
     TFT_SetTextColor(LCD_COLOR_BLUE);
     for(;;)
     {
         sprintf(str1,"%lu ", osKernelSysTick());
-        TFT_DisplayString(280, 60, (uint8_t *)str1, RIGHT_MODE);
-        osDelay(1000);
+        TFT_DisplayString(280, arg->y_pos, (uint8_t *)str1, RIGHT_MODE);
+        sprintf(str1,"  %s   ", arg->str_name);
+        TFT_DisplayString(275, arg->y_pos, (uint8_t *)str1, LEFT_MODE);
+        osDelay(arg->delay_per);
     }
 }
 
