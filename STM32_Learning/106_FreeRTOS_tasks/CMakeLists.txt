@@ -23,7 +23,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -std=gnu11 \
     -DUSE_HAL_DRIVER \
     -DSTM32H753xx \
-    -Os \
+    -O1 \
     -ffunction-sections \
     -fdata-sections \
     -Wall \
