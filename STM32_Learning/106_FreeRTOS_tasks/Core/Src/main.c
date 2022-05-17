@@ -23,6 +23,12 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "stdint.h"
+#include "string.h"
+#include "ltdc.h"
+#include "MT48LC4M32B2.h"
+#include "fonts.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,6 +59,9 @@ osThreadId defaultTaskHandle;
 osThreadId myTask02Handle;
 /* USER CODE BEGIN PV */
 
+#define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
+char str1[60];
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,7 +76,6 @@ void StartDefaultTask(void const * argument);
 void StartTask02(void const * argument);
 
 /* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -117,7 +125,6 @@ int main(void)
   MX_DMA2D_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -240,8 +247,8 @@ static void MX_DMA2D_Init(void)
   hdma2d.LayerCfg[0].InputColorMode = DMA2D_INPUT_ARGB8888;
   hdma2d.LayerCfg[0].AlphaMode = DMA2D_REPLACE_ALPHA;
   hdma2d.LayerCfg[0].InputAlpha = 0;
- // hdma2d.LayerCfg[0].AlphaInverted = DMA2D_REGULAR_ALPHA;
- // hdma2d.LayerCfg[0].RedBlueSwap = DMA2D_RB_REGULAR;
+//  hdma2d.LayerCfg[0].AlphaInverted = DMA2D_REGULAR_ALPHA;
+//  hdma2d.LayerCfg[0].RedBlueSwap = DMA2D_RB_REGULAR;
   if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
   {
     Error_Handler();
@@ -472,10 +479,22 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
+
+    MT48LC4M32B2_init(&hsdram1);
+    HAL_LTDC_SetAddress(&hltdc,LCD_FRAME_BUFFER,0);
+    TFT_FillScreen(LCD_COLOR_BLACK);
+    TFT_SetFont(&Font24);
+    TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
+    TFT_DisplayString(0, 10, (uint8_t *)"Create tasks", CENTER_MODE);
+    TFT_SetTextColor(LCD_COLOR_MAGENTA);
+    TFT_DisplayString(14, 60, (uint8_t *)"Task1:", LEFT_MODE);
+    TFT_DisplayString(14, 110, (uint8_t *)"Task2:", LEFT_MODE);
+    TFT_DisplayString(14, 160, (uint8_t *)"Task3:", LEFT_MODE);
+
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      osDelay(1);
   }
   /* USER CODE END 5 */
 }
@@ -490,10 +509,12 @@ void StartDefaultTask(void const * argument)
 void StartTask02(void const * argument)
 {
   /* USER CODE BEGIN StartTask02 */
+
+
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      osDelay(1);
   }
   /* USER CODE END StartTask02 */
 }
