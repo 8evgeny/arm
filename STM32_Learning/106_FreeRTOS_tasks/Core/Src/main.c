@@ -539,6 +539,43 @@ void StartDefaultTask(void const * argument)
       HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
       HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
       osDelay(500);
+      osThreadList((unsigned char *)str_buf);
+      sprintf(str1,"Stage 2:\r\n");
+      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
+      osDelay(500);
+
+      osThreadDef(tsk02, Task02, osPriorityNormal, 0, 128);
+      Task02Handle = osThreadCreate(osThread(tsk02), NULL);
+      osThreadList((unsigned char *)str_buf);
+      sprintf(str1,"Stage 3:\r\n");
+      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
+      osDelay(500);
+      osThreadList((unsigned char *)str_buf);
+      sprintf(str1,"Stage 4:\r\n");
+      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
+      osDelay(500);
+
+      osThreadDef(tsk03, Task03, osPriorityNormal, 0, 128);
+      Task03Handle = osThreadCreate(osThread(tsk03), NULL);
+      osThreadList((unsigned char *)str_buf);
+      sprintf(str1,"Stage 5:\r\n");
+      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
+      osDelay(500);
+      osThreadList((unsigned char *)str_buf);
+      sprintf(str1,"Stage 6:\r\n");
+      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
+      osDelay(500);
+
   }
   /* USER CODE END 5 */
 }
