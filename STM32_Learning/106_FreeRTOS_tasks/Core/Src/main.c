@@ -61,6 +61,7 @@ osThreadId myTask02Handle;
 
 #define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
 char str1[60];
+char str_buf[1000]={'\0'};
 osThreadId Task01Handle, Task02Handle, Task03Handle;
 
 /* USER CODE END PV */
@@ -532,6 +533,11 @@ void StartDefaultTask(void const * argument)
   {
       osThreadDef(tsk01, Task01, osPriorityNormal, 0, 128);
       Task01Handle = osThreadCreate(osThread(tsk01), NULL);
+      osThreadList((unsigned char *)str_buf);
+      sprintf(str1,"Stage 1:\r\n");
+      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
+      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
       osDelay(500);
   }
   /* USER CODE END 5 */
