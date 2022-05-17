@@ -3,3 +3,4 @@
 62 -  SRAM ++
 64 -  HAL_LCD ++
 104 - Binare semaphote FreeRTOS ++
+106 - FreeRTOS tasks ++
