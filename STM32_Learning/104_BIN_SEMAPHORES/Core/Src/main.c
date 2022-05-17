@@ -22,7 +22,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,6 +53,12 @@ osThreadId myTask02Handle;
 osSemaphoreId myBinarySem01Handle;
 /* USER CODE BEGIN PV */
 
+#include "stdint.h"
+#include "string.h"
+#include "ltdc.h"
+#include "MT48LC4M32B2.h"
+#include "fonts.h"
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -69,6 +74,8 @@ void StartDefaultTask(void const * argument);
 void StartTask02(void const * argument);
 
 /* USER CODE BEGIN PFP */
+
+#define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
 
 /* USER CODE END PFP */
 
@@ -122,6 +129,21 @@ int main(void)
   MX_DMA2D_Init();
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
+
+  MT48LC4M32B2_init(&hsdram1);
+  HAL_LTDC_SetAddress(&hltdc, LCD_FRAME_BUFFER, 0);
+  TFT_FillScreen(LCD_COLOR_BLACK);
+  TFT_SetFont(&Font24);
+  TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
+  TFT_DisplayString(0, 10, (uint8_t *)"Binary Semaphores", CENTER_MODE);
+  TFT_SetTextColor(LCD_COLOR_DARKGREEN);
+  TFT_DisplayString(110, 70, (uint8_t *)"work", LEFT_MODE);
+  TFT_SetTextColor(LCD_COLOR_DARKRED);
+  TFT_DisplayString(200, 70, (uint8_t *)"wait", LEFT_MODE);
+  TFT_SetTextColor(LCD_COLOR_MAGENTA);
+  TFT_DisplayString(14, 100, (uint8_t *)"Task1:", LEFT_MODE);
+  TFT_SetTextColor(LCD_COLOR_CYAN);
+  TFT_DisplayString(14, 160, (uint8_t *)"Task2:", LEFT_MODE);
 
   /* USER CODE END 2 */
 
