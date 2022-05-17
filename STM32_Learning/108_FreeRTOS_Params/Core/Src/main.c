@@ -64,6 +64,16 @@ char str1[60];
 char str_buf[1000]={'\0'};
 osThreadId Task01Handle, Task02Handle, Task03Handle;
 
+typedef struct struct_arg_t {
+    char str_name[10];
+    uint16_t y_pos;
+    uint32_t delay_per;
+} struct_arg;
+/*Первый параметр — это строка с именем задачи, мы её будем использовать, чтобы написать имя задачи на экране,
+второй параметр будет передавать позицию по вертикали, а третий — период задержки в милисекундах. */
+
+struct_arg arg01, arg02, arg03;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -132,6 +142,18 @@ int main(void)
   MX_DMA2D_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+
+  MT48LC4M32B2_init(&hsdram1);
+  HAL_LTDC_SetAddress(&hltdc,LCD_FRAME_BUFFER,0);
+  TFT_FillScreen(LCD_COLOR_BLACK);
+  TFT_SetFont(&Font24);
+  TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
+  TFT_DisplayString(0, 10, (uint8_t *)"Create tasks", CENTER_MODE);
+  TFT_SetTextColor(LCD_COLOR_MAGENTA);
+  TFT_DisplayString(14, 60, (uint8_t *)"Task1:", LEFT_MODE);
+  TFT_DisplayString(14, 110, (uint8_t *)"Task2:", LEFT_MODE);
+  TFT_DisplayString(14, 160, (uint8_t *)"Task3:", LEFT_MODE);
+
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -517,64 +539,15 @@ void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
 
-    MT48LC4M32B2_init(&hsdram1);
-    HAL_LTDC_SetAddress(&hltdc,LCD_FRAME_BUFFER,0);
-    TFT_FillScreen(LCD_COLOR_BLACK);
-    TFT_SetFont(&Font24);
-    TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
-    TFT_DisplayString(0, 10, (uint8_t *)"Create tasks", CENTER_MODE);
-    TFT_SetTextColor(LCD_COLOR_MAGENTA);
-    TFT_DisplayString(14, 60, (uint8_t *)"Task1:", LEFT_MODE);
-    TFT_DisplayString(14, 110, (uint8_t *)"Task2:", LEFT_MODE);
-    TFT_DisplayString(14, 160, (uint8_t *)"Task3:", LEFT_MODE);
+    osThreadList((unsigned char *)str_buf);
+    HAL_UART_Transmit(&huart1, (uint8_t*)str_buf, strlen(str_buf), 0x1000);
+    HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
 
   /* Infinite loop */
   for(;;)
   {
-      osThreadDef(tsk01, Task01, osPriorityNormal, 0, 128);
-      Task01Handle = osThreadCreate(osThread(tsk01), NULL);
-      osThreadList((unsigned char *)str_buf);
-      sprintf(str1,"Stage 1:\r\n");
-      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
-      osDelay(500);
-      osThreadList((unsigned char *)str_buf);
-      sprintf(str1,"Stage 2:\r\n");
-      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
-      osDelay(500);
 
-      osThreadDef(tsk02, Task02, osPriorityNormal, 0, 128);
-      Task02Handle = osThreadCreate(osThread(tsk02), NULL);
-      osThreadList((unsigned char *)str_buf);
-      sprintf(str1,"Stage 3:\r\n");
-      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
-      osDelay(500);
-      osThreadList((unsigned char *)str_buf);
-      sprintf(str1,"Stage 4:\r\n");
-      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
-      osDelay(500);
-
-      osThreadDef(tsk03, Task03, osPriorityNormal, 0, 128);
-      Task03Handle = osThreadCreate(osThread(tsk03), NULL);
-      osThreadList((unsigned char *)str_buf);
-      sprintf(str1,"Stage 5:\r\n");
-      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
-      osDelay(500);
-      osThreadList((unsigned char *)str_buf);
-      sprintf(str1,"Stage 6:\r\n");
-      HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)str_buf,strlen(str_buf),0x1000);
-      HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
-      osDelay(500);
+      osDelay(1);
 
   }
   /* USER CODE END 5 */
