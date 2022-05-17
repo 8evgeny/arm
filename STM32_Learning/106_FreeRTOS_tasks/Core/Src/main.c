@@ -61,6 +61,7 @@ osThreadId myTask02Handle;
 
 #define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
 char str1[60];
+osThreadId Task01Handle, Task02Handle, Task03Handle;
 
 /* USER CODE END PV */
 
@@ -76,6 +77,11 @@ void StartDefaultTask(void const * argument);
 void StartTask02(void const * argument);
 
 /* USER CODE BEGIN PFP */
+
+void Task01(void const * argument);
+void Task02(void const * argument);
+void Task03(void const * argument);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -467,6 +473,36 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+//---------------------------------------------------------------
+void Task01(void const * argument)
+{
+    TFT_SetTextColor(LCD_COLOR_BLUE);
+    sprintf(str1,"%lu ", osKernelSysTick());
+    TFT_DisplayString(280, 60, (uint8_t *)str1, RIGHT_MODE);
+    osThreadTerminate(NULL);
+}
+
+//---------------------------------------------------------------
+void Task02(void const * argument)
+{
+    TFT_SetTextColor(LCD_COLOR_BLUE);
+    sprintf(str1,"%lu ", osKernelSysTick());
+    TFT_DisplayString(280, 110, (uint8_t *)str1, RIGHT_MODE);
+    osThreadTerminate(NULL);
+}
+
+//---------------------------------------------------------------
+
+void Task03(void const * argument)
+{
+    TFT_SetTextColor(LCD_COLOR_BLUE);
+    sprintf(str1,"%lu ", osKernelSysTick());
+    TFT_DisplayString(280, 160, (uint8_t *)str1, RIGHT_MODE);
+    osThreadTerminate(NULL);
+}
+
+//---------------------------------------------------------------
+
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -494,7 +530,9 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-      osDelay(1);
+      osThreadDef(tsk01, Task01, osPriorityNormal, 0, 128);
+      Task01Handle = osThreadCreate(osThread(tsk01), NULL);
+      osDelay(500);
   }
   /* USER CODE END 5 */
 }
