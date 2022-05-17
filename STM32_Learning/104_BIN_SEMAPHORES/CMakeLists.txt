@@ -23,7 +23,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -std=gnu11 \
     -DUSE_HAL_DRIVER \
     -DSTM32H753xx \
-    -O0 \
+    -Os \
     -ffunction-sections \
     -fdata-sections \
     -Wall \
@@ -37,7 +37,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -Xlinker -Map=${PROJECT_NAME}.map \
     ")
 #    --specs=nano.specs \
-#    -Os \
+
 include_directories(
     ${patchSRC}/../Inc
     ${patchSRC}
@@ -50,9 +50,6 @@ include_directories(
     Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1
     Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
     Drivers/BSP/STM32746G-Discovery
-    FATFS/App
-    FATFS/Target
-    Middlewares/Third_Party/FatFs/src
     )
 file (GLOB SOURCES_C ${patchSRC}/*.c STM32H753IITX_FLASH.ld)
 
@@ -68,26 +65,15 @@ add_library(HAL ${HAL_SRC})
 #file (GLOB DISCOVERY_SRC Drivers/BSP/STM32746G-Discovery/*.c )
 #add_library(DISCOVERY ${DISCOVERY_SRC})
 
-#file (GLOB RTOS_SRC
-#    Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
-#    Middlewares/Third_Party/FreeRTOS/Source/*.c
-#    Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/port.c
-#    Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
-#    )
-#add_library(RTOS ${RTOS_SRC})
-
-#file (GLOB FATFS_SRC
-#    FATFS/App/*.c
-#    FATFS/Target/*.c
-#    Middlewares/Third_Party/FatFs/src/*.c
-#    Middlewares/Third_Party/FatFs/src/option/*.c
-#    )
-#add_library(FATFS ${FATFS_SRC})
-
-
+file (GLOB RTOS_SRC
+    Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
+    Middlewares/Third_Party/FreeRTOS/Source/*.c
+    Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/port.c
+    Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+    )
+add_library(RTOS ${RTOS_SRC})
 
 add_executable(${PROJECT_NAME}.elf
-#    FATFS/Target/bsp_driver_sd.c
     ${SOURCES_C}
     )
 
@@ -118,10 +104,9 @@ target_link_options(${PROJECT_NAME}.elf PRIVATE ${LINKER_FLAGS})
 target_link_libraries(${PROJECT_NAME}.elf PUBLIC
     CORE
     STARTUP
-#    DISCOVERY
-#    RTOS
-#    FATFS
     HAL
+#    DISCOVERY
+    RTOS
     )
 
 set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
