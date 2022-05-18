@@ -542,7 +542,7 @@ void Task01(void const * argument)
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
-
+    uint32_t syscnt;
     osThreadList((unsigned char *)str_buf);
     HAL_UART_Transmit(&huart1, (uint8_t*)str_buf, strlen(str_buf), 0x1000);
     HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
@@ -550,9 +550,33 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-
+      syscnt = osKernelSysTick();
+      if((syscnt>10000)&&(syscnt<20000))
+      {
+          if(osThreadGetPriority(Task01Handle)==osPriorityIdle)
+          osThreadSetPriority(Task01Handle,osPriorityLow);
+      }
+      else if((syscnt>20000)&&(syscnt<30000))
+      {
+          if(osThreadGetPriority(Task02Handle)==osPriorityIdle)
+          osThreadSetPriority(Task02Handle,osPriorityLow);
+      }
+      else if((syscnt>30000)&&(syscnt<40000))
+      {
+          if(osThreadGetPriority(Task03Handle)==osPriorityLow)
+          osThreadSetPriority(Task03Handle,osPriorityIdle);
+      }
+      else if((syscnt>40000)&&(syscnt<50000))
+      {
+          if(osThreadGetPriority(Task02Handle)==osPriorityLow)
+          osThreadSetPriority(Task02Handle,osPriorityIdle);
+      }
+      else if((syscnt>50000)&&(syscnt<60000))
+      {
+          if(osThreadGetPriority(Task01Handle)==osPriorityLow)
+          osThreadSetPriority(Task01Handle,osPriorityIdle);
+      }
       osDelay(1);
-
   }
   /* USER CODE END 5 */
 }
