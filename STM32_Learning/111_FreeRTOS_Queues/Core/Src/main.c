@@ -65,16 +65,26 @@ char str_buf[1000]={'\0'};
 osThreadId Task01Handle, Task02Handle, Task03Handle, TaskStringOutHandle;
 osMessageQId pos_Queue; //Создадим специальную глобальную переменную для очереди
 
+osMailQId strout_Queue; //Другой тип очереди используются для работы с указателями в очередях.
+
 typedef struct struct_arg_t {
     char str_name[10];
     uint16_t y_pos;
     uint32_t delay_per;
 } struct_arg;
+
+typedef struct struct_out_t {
+    uint32_t tick_count;
+    char str[60];
+} struct_out; //Глобальная структура для нашей очереди, в которой будет строка и количество тиков, которое мы также будем передавать из наших задач
+
+
 /*Первый параметр — это строка с именем задачи, мы её будем использовать, чтобы написать имя задачи на экране,
 второй параметр будет передавать позицию по вертикали, а третий — период задержки в милисекундах. */
 
 struct_arg arg01, arg02, arg03;
 #define QUEUE_SIZE (uint32_t) 1  //Добавим макрос для размера очереди
+#define MAIL_SIZE (uint32_t) 1
 
 /* USER CODE END PV */
 
@@ -174,6 +184,9 @@ int main(void)
 
   osMessageQDef(pos_Queue, QUEUE_SIZE, uint16_t); //Объявили очередь количеством QUEUE_SIZE типа шестнадцатибитного беззнакового целого числа
   pos_Queue = osMessageCreate(osMessageQ(pos_Queue), NULL);
+
+  osMailQDef(stroutqueue, MAIL_SIZE, struct_out);
+  strout_Queue = osMailCreate(osMailQ(stroutqueue), NULL);
 
   /* USER CODE END RTOS_QUEUES */
 
@@ -527,15 +540,23 @@ static void MX_GPIO_Init(void)
 //---------------------------------------------------------------
 void TaskStringOut(void const * argument)
 {
-    osEvent event; //переменная специального типа структуры, предназначенной для свойств и событий очереди
+    osEvent event, event1; //переменная специального типа структуры, предназначенной для свойств и событий очереди
+    struct_out *qstruct;   //переменная типа передаваемой в очереди структуры
+
     for(;;)
     {
         event = osMessageGet(pos_Queue, 100);
-        if (event.status == osEventMessage)
-        {
-            sprintf(str1,"task %lu", osKernelSysTick());
-            TFT_DisplayString(120, event.value.v, (uint8_t *)str1, LEFT_MODE);
-        }
+        event1 = osMailGet(strout_Queue, osWaitForever);
+
+      if (event1.status == osEventMail)
+      {
+          if (event.status == osEventMessage)
+          {
+              qstruct = event1.value.p;
+              sprintf(str1,"%s %lu", qstruct->str, qstruct->tick_count);
+              TFT_DisplayString(120, event.value.v, (uint8_t *)str1, LEFT_MODE);
+          }
+      }
     }
 }
 //---------------------------------------------------------------
@@ -546,10 +567,20 @@ void Task01(void const * argument)
     volatile struct_arg *arg;
     arg = (struct_arg*) argument;
 
+    struct_out *qstruct; //Переменная типа передаваемой в очереди структуры
+
     TFT_SetTextColor(LCD_COLOR_BLUE);
     for(;;)
     {
+        qstruct = osMailAlloc(strout_Queue, osWaitForever); //Для очередей такого типа необходимо также выделить память
+
+        //Запишем количество системных квантов и имя функции в строку в структуру очереди, взяв имя из параметров
+        qstruct->tick_count = osKernelSysTick();
+        sprintf(qstruct->str, "%s %d", arg->str_name, osThreadGetPriority(NULL));
+
         osMessagePut(pos_Queue, arg->y_pos, 100);//Таймаут установим в 100 системных квантов (в нашем случае 100 милисекунд)
+        osMailPut(strout_Queue, qstruct); //Отправим структуру в очередь
+
     }
 }
 
