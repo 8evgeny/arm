@@ -146,7 +146,7 @@ int main(void)
   TFT_FillScreen(LCD_COLOR_BLACK);
   TFT_SetFont(&Font24);
   TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
-  TFT_DisplayString(0, 10, (uint8_t *)"Create tasks", CENTER_MODE);
+  TFT_DisplayString(0, 10, (uint8_t *)"Tasks priorities", CENTER_MODE);
   TFT_SetTextColor(LCD_COLOR_MAGENTA);
   TFT_DisplayString(14, 60, (uint8_t *)"Task1:", LEFT_MODE);
   TFT_DisplayString(14, 110, (uint8_t *)"Task2:", LEFT_MODE);
@@ -523,11 +523,8 @@ void Task01(void const * argument)
     TFT_SetTextColor(LCD_COLOR_BLUE);
     for(;;)
     {
-        sprintf(str1,"%lu ", osKernelSysTick());
-        TFT_DisplayString(280, arg->y_pos, (uint8_t *)str1, RIGHT_MODE);
-        sprintf(str1,"  %s   ", arg->str_name);
-        TFT_DisplayString(275, arg->y_pos, (uint8_t *)str1, LEFT_MODE);
-        osDelay(arg->delay_per);
+        sprintf(str1,"%lu %s %d ", osKernelSysTick(), arg->str_name, osThreadGetPriority(NULL));
+        TFT_DisplayString(120, arg->y_pos, (uint8_t *)str1, LEFT_MODE);
     }
 }
 

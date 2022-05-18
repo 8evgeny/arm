@@ -1,10 +1,10 @@
 #ifndef __MT48LC4M32B2_H
 #define __MT48LC4M32B2_H
-//————————————————
+//â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 #include "stm32f7xx_hal.h"
 #include "string.h"
 #include "stdint.h"
-//————————————————
+//â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 #define SDRAM_TIMEOUT     ((uint32_t)0xFFFF)
 #define SDRAM_MODEREG_BURST_LENGTH_1             ((uint16_t)0x0000)
 #define SDRAM_MODEREG_BURST_LENGTH_2             ((uint16_t)0x0001)
@@ -19,7 +19,7 @@
 #define SDRAM_MODEREG_WRITEBURST_MODE_SINGLE     ((uint16_t)0x0200)
 #define SDRAM_DEVICE_ADDR ((uint32_t)0xC0000000)
 #define REFRESH_COUNT	((uint32_t)0x0603) /*SDRAM refresh counter (100MHz SD Clock)*/
-//————————————————
+//â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 void MT48LC4M32B2_init(SDRAM_HandleTypeDef *hsdram);
-//————————————————
+//â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 #endif /* __MT48LC4M32B2_H */
