@@ -62,7 +62,7 @@ osThreadId myTask02Handle;
 #define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
 char str1[60];
 char str_buf[1000]={'\0'};
-osThreadId Task01Handle, Task02Handle, Task03Handle;
+osThreadId Task01Handle, Task02Handle, Task03Handle, TaskStringOutHandle;
 
 typedef struct struct_arg_t {
     char str_name[10];
@@ -90,6 +90,7 @@ void StartTask02(void const * argument);
 /* USER CODE BEGIN PFP */
 
 void Task01(void const * argument);
+void TaskStringOut(void const * argument);
 
 /* USER CODE END PFP */
 
@@ -146,7 +147,7 @@ int main(void)
   TFT_FillScreen(LCD_COLOR_BLACK);
   TFT_SetFont(&Font24);
   TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
-  TFT_DisplayString(0, 10, (uint8_t *)"Tasks priorities", CENTER_MODE);
+  TFT_DisplayString(0, 10, (uint8_t *)"Queues", CENTER_MODE);
   TFT_SetTextColor(LCD_COLOR_MAGENTA);
   TFT_DisplayString(14, 60, (uint8_t *)"Task1:", LEFT_MODE);
   TFT_DisplayString(14, 110, (uint8_t *)"Task2:", LEFT_MODE);
@@ -191,6 +192,9 @@ int main(void)
   arg01.delay_per = 1000;
   arg02.delay_per = 677;
   arg03.delay_per = 439;
+
+  osThreadDef(tskstrout, TaskStringOut, osPriorityBelowNormal, 0, 1280);
+  TaskStringOutHandle = osThreadCreate(osThread(tskstrout), NULL);
 
   osThreadDef(tsk01, Task01, osPriorityIdle, 0, 128);
   Task01Handle = osThreadCreate(osThread(tsk01), (void*)&arg01);
@@ -513,6 +517,17 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+//---------------------------------------------------------------
+void TaskStringOut(void const * argument)
+{
+    for(;;)
+    {
+        sprintf(str1,"task %lu", osKernelSysTick());
+        TFT_DisplayString(120, 60, (uint8_t *)str1, LEFT_MODE);
+    }
+}
+//---------------------------------------------------------------
 
 //---------------------------------------------------------------
 void Task01(void const * argument)
