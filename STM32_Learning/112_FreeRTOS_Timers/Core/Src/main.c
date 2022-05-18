@@ -67,6 +67,8 @@ osThreadId Task01Handle, Task02Handle, Task03Handle, TaskStringOutHandle;
 
 osMailQId strout_Queue; //Другой тип очереди используются для работы с указателями в очередях.
 
+osTimerId osProgTimer1, osProgTimer2; //Мы создадим два таймера. Оба будут циклические
+
 typedef struct struct_arg_t {
     char str_name[10];
     uint16_t y_pos;
@@ -103,6 +105,10 @@ void StartTask02(void const * argument);
 
 void Task01(void const * argument);
 void TaskStringOut(void const * argument);
+
+//Прототипы функций задач-обработчиков таймеров
+static void osProgTimer1Callback(void const *argument);
+static void osProgTimer2Callback(void const *argument);
 
 /* USER CODE END PFP */
 
@@ -177,6 +183,13 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
+
+  osTimerDef(ProgTimer1, osProgTimer1Callback);
+  osProgTimer1 = osTimerCreate(osTimer(ProgTimer1), osTimerPeriodic, NULL);
+
+  osTimerDef(ProgTimer2, osProgTimer2Callback);
+  osProgTimer2 = osTimerCreate(osTimer(ProgTimer2), osTimerPeriodic, NULL);
+
   /* USER CODE END RTOS_TIMERS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -538,6 +551,27 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 //---------------------------------------------------------------
+static void osProgTimer1Callback(void const *argument)
+{
+  (void) argument;
+  static uint32_t tim_cnt=0;
+  sprintf(str1,"%lu", tim_cnt);
+  TFT_DisplayString(120, 200, (uint8_t *)str1, LEFT_MODE);
+  tim_cnt++;
+}
+
+//---------------------------------------------------------------
+static void osProgTimer2Callback(void const *argument)
+{
+  (void) argument;
+  static uint32_t tim_cnt=0;
+  sprintf(str1,"%lu", tim_cnt);
+  TFT_DisplayString(320, 200, (uint8_t *)str1, LEFT_MODE);
+  tim_cnt++;
+}
+//---------------------------------------------------------------
+
+//---------------------------------------------------------------
 void TaskStringOut(void const * argument)
 {
     osEvent event; //переменная специального типа структуры, предназначенной для свойств и событий очереди
@@ -580,7 +614,6 @@ void Task01(void const * argument)
 
     }
 }
-
 //---------------------------------------------------------------
 
 /* USER CODE END 4 */
@@ -596,6 +629,8 @@ void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
     uint32_t syscnt;
+    osTimerStart(osProgTimer1, 200);
+    osTimerStart(osProgTimer2, 300);
     osThreadList((unsigned char *)str_buf);
     HAL_UART_Transmit(&huart1, (uint8_t*)str_buf, strlen(str_buf), 0x1000);
     HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
