@@ -63,6 +63,7 @@ osThreadId myTask02Handle;
 char str1[60];
 char str_buf[1000]={'\0'};
 osThreadId Task01Handle, Task02Handle, Task03Handle, TaskStringOutHandle;
+osMessageQId pos_Queue; //Создадим специальную глобальную переменную для очереди
 
 typedef struct struct_arg_t {
     char str_name[10];
@@ -73,6 +74,7 @@ typedef struct struct_arg_t {
 второй параметр будет передавать позицию по вертикали, а третий — период задержки в милисекундах. */
 
 struct_arg arg01, arg02, arg03;
+#define QUEUE_SIZE (uint32_t) 1  //Добавим макрос для размера очереди
 
 /* USER CODE END PV */
 
@@ -169,6 +171,10 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
+
+  osMessageQDef(pos_Queue, QUEUE_SIZE, uint16_t); //Объявили очередь количеством QUEUE_SIZE типа шестнадцатибитного беззнакового целого числа
+  pos_Queue = osMessageCreate(osMessageQ(pos_Queue), NULL);
+
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -521,10 +527,15 @@ static void MX_GPIO_Init(void)
 //---------------------------------------------------------------
 void TaskStringOut(void const * argument)
 {
+    osEvent event; //переменная специального типа структуры, предназначенной для свойств и событий очереди
     for(;;)
     {
-        sprintf(str1,"task %lu", osKernelSysTick());
-        TFT_DisplayString(120, 60, (uint8_t *)str1, LEFT_MODE);
+        event = osMessageGet(pos_Queue, 100);
+        if (event.status == osEventMessage)
+        {
+            sprintf(str1,"task %lu", osKernelSysTick());
+            TFT_DisplayString(120, event.value.v, (uint8_t *)str1, LEFT_MODE);
+        }
     }
 }
 //---------------------------------------------------------------
@@ -538,8 +549,7 @@ void Task01(void const * argument)
     TFT_SetTextColor(LCD_COLOR_BLUE);
     for(;;)
     {
-        sprintf(str1,"%lu %s %d ", osKernelSysTick(), arg->str_name, osThreadGetPriority(NULL));
-        TFT_DisplayString(120, arg->y_pos, (uint8_t *)str1, LEFT_MODE);
+        osMessagePut(pos_Queue, arg->y_pos, 100);//Таймаут установим в 100 системных квантов (в нашем случае 100 милисекунд)
     }
 }
 
