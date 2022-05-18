@@ -160,11 +160,7 @@ int main(void)
   TFT_FillScreen(LCD_COLOR_BLACK);
   TFT_SetFont(&Font24);
   TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
-  TFT_DisplayString(0, 10, (uint8_t *)"Queues", CENTER_MODE);
-  TFT_SetTextColor(LCD_COLOR_MAGENTA);
-  TFT_DisplayString(14, 60, (uint8_t *)"Task1:", LEFT_MODE);
-  TFT_DisplayString(14, 110, (uint8_t *)"Task2:", LEFT_MODE);
-  TFT_DisplayString(14, 160, (uint8_t *)"Task3:", LEFT_MODE);
+  TFT_DisplayString(0, 10, (uint8_t *)"UDP Server", CENTER_MODE);
 
   /* USER CODE END 2 */
 
