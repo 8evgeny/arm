@@ -146,7 +146,7 @@ int main(void)
   TFT_FillScreen(LCD_COLOR_BLACK);
   TFT_SetFont(&Font24);
   TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
-  TFT_DisplayString(0, 10, (uint8_t *)"Create tasks", CENTER_MODE);
+  TFT_DisplayString(0, 10, (uint8_t *)"Delay Until", CENTER_MODE);
   TFT_SetTextColor(LCD_COLOR_MAGENTA);
   TFT_DisplayString(14, 60, (uint8_t *)"Task1:", LEFT_MODE);
   TFT_DisplayString(14, 110, (uint8_t *)"Task2:", LEFT_MODE);
@@ -189,8 +189,8 @@ int main(void)
   arg02.y_pos = 110;
   arg03.y_pos = 160;
   arg01.delay_per = 1000;
-  arg02.delay_per = 677;
-  arg03.delay_per = 439;
+  arg02.delay_per = 500;
+  arg03.delay_per = 400;
 
   osThreadDef(tsk01, Task01, osPriorityIdle, 0, 128);
   Task01Handle = osThreadCreate(osThread(tsk01), (void*)&arg01);
@@ -521,13 +521,15 @@ void Task01(void const * argument)
     arg = (struct_arg*) argument;
 
     TFT_SetTextColor(LCD_COLOR_BLUE);
+    uint32_t tickcount = osKernelSysTick();
     for(;;)
     {
-        sprintf(str1,"%lu ", osKernelSysTick());
-        TFT_DisplayString(280, arg->y_pos, (uint8_t *)str1, RIGHT_MODE);
-        sprintf(str1,"  %s   ", arg->str_name);
-        TFT_DisplayString(275, arg->y_pos, (uint8_t *)str1, LEFT_MODE);
-        osDelay(arg->delay_per);
+        sprintf(str1," %s %lu ", arg->str_name , osKernelSysTick());
+        TFT_DisplayString(100, arg->y_pos, (uint8_t *)str1, LEFT_MODE);
+        HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+        HAL_UART_Transmit(&huart1,(uint8_t*)"\r\n",2,0x1000);
+//        osDelay(arg->delay_per);
+        osDelayUntil(&tickcount, arg->delay_per);
     }
 }
 
