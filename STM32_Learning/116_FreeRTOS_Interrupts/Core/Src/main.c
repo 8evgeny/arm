@@ -61,17 +61,12 @@ osThreadId myTask02Handle;
 
 #define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
 char str1[60];
+char buf1[1]; //глобальный буфер для байта, принятого из USART
 char str_buf[1000]={'\0'};
-osThreadId Task01Handle, Task02Handle, Task03Handle, TaskStringOutHandle;
-//osMessageQId pos_Queue; //Создадим специальную глобальную переменную для очереди
 
-osMailQId strout_Queue; //Другой тип очереди используются для работы с указателями в очередях.
-
-typedef struct struct_arg_t {
-    char str_name[10];
-    uint16_t y_pos;
-    uint32_t delay_per;
-} struct_arg;
+osThreadId TaskStringOutHandle, TaskParseUSARTHandle;
+osMailQId strout_Queue;
+osMessageQId USART_Queue;
 
 typedef struct struct_out_t {
     uint32_t tick_count;
@@ -79,12 +74,8 @@ typedef struct struct_out_t {
     char str[60];
 } struct_out; //Глобальная структура для нашей очереди, в которой будет строка и количество тиков, которое мы также будем передавать из наших задач
 
-/*Первый параметр — это строка с именем задачи, мы её будем использовать, чтобы написать имя задачи на экране,
-второй параметр будет передавать позицию по вертикали, а третий — период задержки в милисекундах. */
-
-struct_arg arg01, arg02, arg03;
-//#define QUEUE_SIZE (uint32_t) 1  //Добавим макрос для размера очереди
 #define MAIL_SIZE (uint32_t) 1
+#define QUEUE_SIZE (uint32_t) 10 //макрос для размера очереди
 
 /* USER CODE END PV */
 
@@ -101,7 +92,7 @@ void StartTask02(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
-void Task01(void const * argument);
+void TaskParseUSART(void const * argument);
 void TaskStringOut(void const * argument);
 
 /* USER CODE END PFP */
@@ -159,11 +150,7 @@ int main(void)
   TFT_FillScreen(LCD_COLOR_BLACK);
   TFT_SetFont(&Font24);
   TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
-  TFT_DisplayString(0, 10, (uint8_t *)"Queues", CENTER_MODE);
-  TFT_SetTextColor(LCD_COLOR_MAGENTA);
-  TFT_DisplayString(14, 60, (uint8_t *)"Task1:", LEFT_MODE);
-  TFT_DisplayString(14, 110, (uint8_t *)"Task2:", LEFT_MODE);
-  TFT_DisplayString(14, 160, (uint8_t *)"Task3:", LEFT_MODE);
+  TFT_DisplayString(0, 10, (uint8_t *)"ISR USART QUEUE", CENTER_MODE);
 
   /* USER CODE END 2 */
 
@@ -188,6 +175,9 @@ int main(void)
   osMailQDef(stroutqueue, MAIL_SIZE, struct_out);
   strout_Queue = osMailCreate(osMailQ(stroutqueue), NULL);
 
+  osMessageQDef(usart_Queue, QUEUE_SIZE, uint8_t);
+  USART_Queue = osMessageCreate(osMessageQ(usart_Queue), NULL);
+
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -202,27 +192,11 @@ int main(void)
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
 
-  strcpy(arg01.str_name,"task1");
-  strcpy(arg02.str_name,"task2");
-  strcpy(arg03.str_name,"task3");
-  arg01.y_pos = 60;
-  arg02.y_pos = 110;
-  arg03.y_pos = 160;
-  arg01.delay_per = 1000;
-  arg02.delay_per = 677;
-  arg03.delay_per = 439;
-
   osThreadDef(tskstrout, TaskStringOut, osPriorityBelowNormal, 0, 1280);
   TaskStringOutHandle = osThreadCreate(osThread(tskstrout), NULL);
 
-  osThreadDef(tsk01, Task01, osPriorityIdle, 0, 128);
-  Task01Handle = osThreadCreate(osThread(tsk01), (void*)&arg01);
-
-  osThreadDef(tsk02, Task01, osPriorityIdle, 0, 128);
-  Task02Handle = osThreadCreate(osThread(tsk02), (void*)&arg02);
-
-  osThreadDef(tsk03, Task01, osPriorityLow, 0, 128);
-  Task03Handle = osThreadCreate(osThread(tsk03), (void*)&arg03);
+  osThreadDef(tskparseusart, TaskParseUSART, osPriorityBelowNormal, 0, 512);
+  TaskParseUSARTHandle = osThreadCreate(osThread(tskparseusart), NULL);
 
   /* USER CODE END RTOS_THREADS */
 
@@ -558,30 +532,64 @@ void TaskStringOut(void const * argument)
 //---------------------------------------------------------------
 
 //---------------------------------------------------------------
-void Task01(void const * argument)
+void TaskParseUSART(void const * argument)
 {
-    volatile struct_arg *arg;
-    arg = (struct_arg*) argument;
-
-    struct_out *qstruct; //Переменная типа передаваемой в очереди структуры
-
+    osEvent event;
+    static char str[30];
+    static uint8_t cnt=0;
+    uint8_t b;
+    int yp;
+    struct_out *qstruct;
     TFT_SetTextColor(LCD_COLOR_BLUE);
     for(;;)
     {
-        qstruct = osMailAlloc(strout_Queue, osWaitForever); //Для очередей такого типа необходимо также выделить память
+        event = osMessageGet(USART_Queue, 100);
+        if (event.status == osEventMessage)
+        {
+            b = event.value.v; //заберём байт из очереди в переменную
+            if(cnt>25) //Если превысили количество байтов для строки, обнулим счётчик
+            {
+              cnt=0;
+            }
+            str[cnt] = b; //Сохраним байт в массив в позицию, соответствующую значению счётчика
+            if(b==0x0A) //Наша тестовая строка будет состоять из двух символов и заканчиваться будет символами возврата каретки и перевода строки. Последний из них будет 0x0A.
+            {
+                str[cnt-1]=0; //Обнулим предыдущий символ, так как это скорей всего 0x0D. Это и будет окончание принятой строки
+                qstruct = osMailAlloc(strout_Queue, osWaitForever); //Выделим память под структуру для очереди и проинициализируем нашу структуру
+                qstruct->tick_count = osKernelSysTick();
+                yp = atoi(str+7);//Мы преобразовали элемент по 7-му адресу в строке в число. Умножили данное число на 60. Это и будет позиция по вертикали.
+                qstruct->y_pos = yp*60;
+                //На всякий случай проверим, что мы не ушли за пределы позиции, затем обнулим в строковом массиве элемент,
+                //где был индекс позиции, теперь это будет конец строки, так как нам не нужно отображать данное число,
+                //затем соответствующему элементу очереди приравняем указатель на нашу строку и отправим нашу структуру в
+                //очередь для последующего приёма её в функции задачи, отвечающей за вывод строк на дисплее. Также затем,
+                //выйдя из условия, обнулим счётчик
+                if ((yp<=3)&&(yp>=1))
+                {
+                    str[cnt-2]=0;
+                    sprintf(qstruct->str, "%s", str);
+                    osMailPut(strout_Queue, qstruct);
+                }
 
-        //Запишем количество системных квантов и имя функции в строку в структуру очереди, взяв имя из параметров
-        qstruct->tick_count = osKernelSysTick();
-        qstruct->y_pos = arg->y_pos;
-        sprintf(qstruct->str, "%s %d", arg->str_name, osThreadGetPriority(NULL));
-
-//        osMessagePut(pos_Queue, arg->y_pos, 100);//Таймаут установим в 100 системных квантов (в нашем случае 100 милисекунд)
-        osMailPut(strout_Queue, qstruct); //Отправим структуру в очередь
-
+                cnt=0;
+            }
+            else cnt++;
+        }
     }
 }
+//---------------------------------------------------------------
 
 //---------------------------------------------------------------
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if(huart==&huart1)
+    {
+        osMessagePut(USART_Queue, buf1[0], 100);
+        HAL_UART_Receive_IT(&huart1, (uint8_t*)buf1,1);
+    }
+}
+//---------------------------------------------------------------
+
 
 /* USER CODE END 4 */
 
@@ -595,40 +603,14 @@ void Task01(void const * argument)
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
-    uint32_t syscnt;
     osThreadList((unsigned char *)str_buf);
     HAL_UART_Transmit(&huart1, (uint8_t*)str_buf, strlen(str_buf), 0x1000);
     HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
+    HAL_UART_Receive_IT(&huart1, (uint8_t*)buf1, 1);  //приём данных из USART
 
   /* Infinite loop */
   for(;;)
   {
-      syscnt = osKernelSysTick();
-      if((syscnt>10000)&&(syscnt<20000))
-      {
-          if(osThreadGetPriority(Task01Handle)==osPriorityIdle)
-          osThreadSetPriority(Task01Handle,osPriorityLow);
-      }
-      else if((syscnt>20000)&&(syscnt<30000))
-      {
-          if(osThreadGetPriority(Task02Handle)==osPriorityIdle)
-          osThreadSetPriority(Task02Handle,osPriorityLow);
-      }
-      else if((syscnt>30000)&&(syscnt<40000))
-      {
-          if(osThreadGetPriority(Task03Handle)==osPriorityLow)
-          osThreadSetPriority(Task03Handle,osPriorityIdle);
-      }
-      else if((syscnt>40000)&&(syscnt<50000))
-      {
-          if(osThreadGetPriority(Task02Handle)==osPriorityLow)
-          osThreadSetPriority(Task02Handle,osPriorityIdle);
-      }
-      else if((syscnt>50000)&&(syscnt<60000))
-      {
-          if(osThreadGetPriority(Task01Handle)==osPriorityLow)
-          osThreadSetPriority(Task01Handle,osPriorityIdle);
-      }
       osDelay(1);
   }
   /* USER CODE END 5 */
