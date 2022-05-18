@@ -198,7 +198,7 @@ int main(void)
   osThreadDef(tsk02, Task01, osPriorityIdle, 0, 128);
   Task02Handle = osThreadCreate(osThread(tsk02), (void*)&arg02);
 
-  osThreadDef(tsk03, Task01, osPriorityIdle, 0, 128);
+  osThreadDef(tsk03, Task01, osPriorityLow, 0, 128);
   Task03Handle = osThreadCreate(osThread(tsk03), (void*)&arg03);
 
   /* USER CODE END RTOS_THREADS */
