@@ -50,6 +50,22 @@ include_directories(
     Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1
     Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
     Drivers/BSP/STM32746G-Discovery
+    LWIP/App
+    LWIP/Target
+    LWIP
+    Middlewares/Third_Party/LwIP/src/include
+    Middlewares/Third_Party/LwIP/system
+    Middlewares/Third_Party/LwIP/system/arch
+    Middlewares/Third_Party/LwIP/src/include/netif
+    Middlewares/Third_Party/LwIP/src/include/netif/ppp
+    Middlewares/Third_Party/LwIP/src/include/lwip
+    Middlewares/Third_Party/LwIP/src/include/lwip/apps
+    Middlewares/Third_Party/LwIP/src/include/lwip/priv
+    Middlewares/Third_Party/LwIP/src/include/lwip/prot
+    Middlewares/Third_Party/LwIP/src/include/compat/posix
+    Middlewares/Third_Party/LwIP/src/include/compat/arpa
+    Middlewares/Third_Party/LwIP/src/include/compat/net
+    Middlewares/Third_Party/LwIP/src/include/compat/sys
     )
 file (GLOB SOURCES_C ${patchSRC}/*.c STM32H753IITX_FLASH.ld)
 
@@ -62,8 +78,18 @@ add_library(STARTUP ${STARTUP_SOURCES} )
 file (GLOB HAL_SRC Drivers/STM32F7xx_HAL_Driver/Src/*)
 add_library(HAL ${HAL_SRC})
 
-#file (GLOB DISCOVERY_SRC Drivers/BSP/STM32746G-Discovery/*.c )
-#add_library(DISCOVERY ${DISCOVERY_SRC})
+file (GLOB LWIP_SRC
+    LWIP/App/*.c
+    LWIP/Target/*.c
+    Middlewares/Third_Party/LwIP/src/api/*.c
+    Middlewares/Third_Party/LwIP/src/apps/mqtt/mqtt.c
+    Middlewares/Third_Party/LwIP/src/core/*.c
+    Middlewares/Third_Party/LwIP/src/core/ipv4/*.c
+    Middlewares/Third_Party/LwIP/src/netif/*.c
+    Middlewares/Third_Party/LwIP/src/netif/ppp/*.c
+    Middlewares/Third_Party/LwIP/system/OS/*.c
+    )
+add_library(LWIP ${LWIP_SRC})
 
 file (GLOB RTOS_SRC
     Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
@@ -105,8 +131,8 @@ target_link_libraries(${PROJECT_NAME}.elf PUBLIC
     CORE
     STARTUP
     HAL
-#    DISCOVERY
     RTOS
+    LWIP
     )
 
 set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
