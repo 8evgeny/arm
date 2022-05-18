@@ -30,6 +30,10 @@
 #include "MT48LC4M32B2.h"
 #include "fonts.h"
 
+#include "lwip/opt.h"
+#include "lwip/arch.h"
+#include "lwip/api.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,16 +67,16 @@ osThreadId myTask02Handle;
 #define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
 char str1[60];
 char str_buf[1000]={'\0'};
-osThreadId Task01Handle, Task02Handle, Task03Handle, TaskStringOutHandle;
+osThreadId TaskStringOutHandle;
 //osMessageQId pos_Queue; //Создадим специальную глобальную переменную для очереди
 
 osMailQId strout_Queue; //Другой тип очереди используются для работы с указателями в очередях.
 
-typedef struct struct_arg_t {
-    char str_name[10];
-    uint16_t y_pos;
-    uint32_t delay_per;
-} struct_arg;
+//структура для передачи задачам параметров UDP — порта и вертикальной координаты вывода пришедшей строки на дисплее.
+typedef struct struct_sock_t {
+  uint16_t y_pos;
+  uint16_t port;
+} struct_sock;
 
 typedef struct struct_out_t {
     uint32_t tick_count;
@@ -83,9 +87,9 @@ typedef struct struct_out_t {
 /*Первый параметр — это строка с именем задачи, мы её будем использовать, чтобы написать имя задачи на экране,
 второй параметр будет передавать позицию по вертикали, а третий — период задержки в милисекундах. */
 
-struct_arg arg01, arg02, arg03;
-//#define QUEUE_SIZE (uint32_t) 1  //Добавим макрос для размера очереди
-#define MAIL_SIZE (uint32_t) 1
+struct_sock sock01, sock02;
+
+#define MAIL_SIZE (uint32_t) 5
 
 /* USER CODE END PV */
 
@@ -102,7 +106,6 @@ void StartTask02(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
-void Task01(void const * argument);
 void TaskStringOut(void const * argument);
 
 /* USER CODE END PFP */
@@ -199,27 +202,9 @@ int main(void)
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
 
-  strcpy(arg01.str_name,"task1");
-  strcpy(arg02.str_name,"task2");
-  strcpy(arg03.str_name,"task3");
-  arg01.y_pos = 60;
-  arg02.y_pos = 110;
-  arg03.y_pos = 160;
-  arg01.delay_per = 1000;
-  arg02.delay_per = 677;
-  arg03.delay_per = 439;
 
   osThreadDef(tskstrout, TaskStringOut, osPriorityBelowNormal, 0, 1280);
   TaskStringOutHandle = osThreadCreate(osThread(tskstrout), NULL);
-
-  osThreadDef(tsk01, Task01, osPriorityIdle, 0, 128);
-  Task01Handle = osThreadCreate(osThread(tsk01), (void*)&arg01);
-
-  osThreadDef(tsk02, Task01, osPriorityIdle, 0, 128);
-  Task02Handle = osThreadCreate(osThread(tsk02), (void*)&arg02);
-
-  osThreadDef(tsk03, Task01, osPriorityLow, 0, 128);
-  Task03Handle = osThreadCreate(osThread(tsk03), (void*)&arg03);
 
   /* USER CODE END RTOS_THREADS */
 
@@ -546,39 +531,63 @@ void TaskStringOut(void const * argument)
         if (event.status == osEventMail)
         {
             qstruct = event.value.p;
-            sprintf(str1,"%s %lu", qstruct->str, qstruct->tick_count);
-            TFT_DisplayString(120, qstruct->y_pos, (uint8_t *)str1, LEFT_MODE);
-
+            sprintf(str1,"%s ", qstruct->str);
+            TFT_DisplayString(50, qstruct->y_pos, (uint8_t *)str1, LEFT_MODE);
         }
     }
 }
 //---------------------------------------------------------------
 
 //---------------------------------------------------------------
-void Task01(void const * argument)
+static void udp_thread(void *arg)
 {
-    volatile struct_arg *arg;
-    arg = (struct_arg*) argument;
-
-    struct_out *qstruct; //Переменная типа передаваемой в очереди структуры
-
+    struct_out *qstruct;
+    err_t err, recv_err;
+    struct netconn *conn;
+    struct netbuf *buf;
+    ip_addr_t *addr;
+    unsigned short port;
+    struct_sock *arg_sock;
+    arg_sock = (struct_sock*) arg;
     TFT_SetTextColor(LCD_COLOR_BLUE);
+    conn = netconn_new(NETCONN_UDP);
+    if (conn!= NULL) //Если инициализация структуры прошла нормально, то свяжем её с локальным IP-адресом и портом
+    {
+        err = netconn_bind(conn, IP_ADDR_ANY, arg_sock->port);
+        if (err == ERR_OK)
+        {
+            for(;;)
+            { //Попытаемся принять пакет
+                recv_err = netconn_recv(conn, &buf);
+                if (recv_err == ERR_OK)
+                { //возьмём в соответствующие переменные IP-адрес и порт клиента с помощью специальных функций
+                    addr = netbuf_fromaddr(buf);
+                    port = netbuf_fromport(buf);
+                    netconn_connect(conn, addr, port);//Затем создадим соединение с ними
+                    //Далее отобразим порт клиента и также пришедшую строку от клиента, затем очистим память структуры очереди
+                    qstruct = osMailAlloc(strout_Queue, osWaitForever);
+                    qstruct->y_pos = arg_sock->y_pos;
+                    sprintf(qstruct->str,"%5u %-20s",port, (char*) buf->p->payload);//Мы применили интересный формат %-20s, с помощью которого мы забиваем пробелами оставшиеся элементы строки.
+                    qstruct->str[5 + strlen((char*) buf->p->payload)] = ' '; //заменили пробелом пришедший от клиента перенос строки.
+                    osMailPut(strout_Queue, qstruct);  //строку назад клиенту в качестве эха
+                    osMailFree(strout_Queue, qstruct); //освободим память буфера
+                }
+            }
+        }
+        else
+        { //При отрицательном результате мы уничтожаем нашу инициализированную структуру и проваливаемся в бесконечный цикл.
+            netconn_delete(conn);
+        }
+    }
+
     for(;;)
     {
-        qstruct = osMailAlloc(strout_Queue, osWaitForever); //Для очередей такого типа необходимо также выделить память
-
-        //Запишем количество системных квантов и имя функции в строку в структуру очереди, взяв имя из параметров
-        qstruct->tick_count = osKernelSysTick();
-        qstruct->y_pos = arg->y_pos;
-        sprintf(qstruct->str, "%s %d", arg->str_name, osThreadGetPriority(NULL));
-
-//        osMessagePut(pos_Queue, arg->y_pos, 100);//Таймаут установим в 100 системных квантов (в нашем случае 100 милисекунд)
-        osMailPut(strout_Queue, qstruct); //Отправим структуру в очередь
-
+        osDelay(1);
     }
 }
-
 //---------------------------------------------------------------
+
+
 
 /* USER CODE END 4 */
 
@@ -594,7 +603,14 @@ void StartDefaultTask(void const * argument)
   /* init code for LWIP */
   MX_LWIP_Init();
   /* USER CODE BEGIN 5 */
-    uint32_t syscnt;
+
+    sock01.port = 7;
+    sock01.y_pos = 60;
+    sock02.port = 8;
+    sock02.y_pos = 180;
+    sys_thread_new("udp_thread1", udp_thread, (void*)&sock01, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
+    sys_thread_new("udp_thread2", udp_thread, (void*)&sock02, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
+
     osThreadList((unsigned char *)str_buf);
     HAL_UART_Transmit(&huart1, (uint8_t*)str_buf, strlen(str_buf), 0x1000);
     HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
@@ -602,32 +618,6 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-      syscnt = osKernelSysTick();
-      if((syscnt>10000)&&(syscnt<20000))
-      {
-          if(osThreadGetPriority(Task01Handle)==osPriorityIdle)
-          osThreadSetPriority(Task01Handle,osPriorityLow);
-      }
-      else if((syscnt>20000)&&(syscnt<30000))
-      {
-          if(osThreadGetPriority(Task02Handle)==osPriorityIdle)
-          osThreadSetPriority(Task02Handle,osPriorityLow);
-      }
-      else if((syscnt>30000)&&(syscnt<40000))
-      {
-          if(osThreadGetPriority(Task03Handle)==osPriorityLow)
-          osThreadSetPriority(Task03Handle,osPriorityIdle);
-      }
-      else if((syscnt>40000)&&(syscnt<50000))
-      {
-          if(osThreadGetPriority(Task02Handle)==osPriorityLow)
-          osThreadSetPriority(Task02Handle,osPriorityIdle);
-      }
-      else if((syscnt>50000)&&(syscnt<60000))
-      {
-          if(osThreadGetPriority(Task01Handle)==osPriorityLow)
-          osThreadSetPriority(Task01Handle,osPriorityIdle);
-      }
       osDelay(1);
   }
   /* USER CODE END 5 */
