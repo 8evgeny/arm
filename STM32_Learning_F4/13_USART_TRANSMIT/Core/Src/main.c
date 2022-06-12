@@ -95,7 +95,7 @@ int main(void)
 		HAL_UART_Transmit(&huart2, str, 1, 0xFFFF);
 		HAL_Delay(1);
         HAL_UART_Transmit(&huart2,str1,16,0xFFFF);
-        HAL_Delay(100);
+        HAL_Delay(1000);
 
 
 //  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_5);
