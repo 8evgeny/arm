@@ -12,3 +12,4 @@
 112 - FreeRTOS таймеры ++
 114 - FreeRTOS DelayUntil ++
 116 - FreeRTOS прерывания ++  Проверка из Windows терминала со скриптом
+120 - FreeRTOS UDP server ++  netcat -u 192.168.1.191 7  требуется доработка
