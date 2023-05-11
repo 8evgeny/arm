@@ -612,10 +612,6 @@ void StartDefaultTask(void const * argument)
     sys_thread_new("udp_thread1", udp_thread, (void*)&sock01, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
     sys_thread_new("udp_thread2", udp_thread, (void*)&sock02, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
 
-    osThreadList((unsigned char *)str_buf);
-    HAL_UART_Transmit(&huart1, (uint8_t*)str_buf, strlen(str_buf), 0x1000);
-    HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
-
   /* Infinite loop */
   for(;;)
   {
@@ -639,7 +635,10 @@ void StartTask02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-      osDelay(1);
+      osThreadList((unsigned char *)str_buf);
+      HAL_UART_Transmit(&huart1, (uint8_t*)str_buf, strlen(str_buf), 0x1000);
+      HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
+      osDelay(30000);
   }
   /* USER CODE END StartTask02 */
 }
