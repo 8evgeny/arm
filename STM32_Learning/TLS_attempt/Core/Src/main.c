@@ -613,9 +613,17 @@ void StartDefaultTask(void const * argument)
     sys_thread_new("udp_thread2", udp_thread, (void*)&sock02, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
 
   /* Infinite loop */
+    TFT_SetFont(&Font24);
+    TFT_SetTextColor(LCD_COLOR_RED);
+    uint32_t time = 0;
+char tmp[10];
   for(;;)
   {
-      osDelay(1);
+      TFT_SetTextColor(LCD_COLOR_RED);
+      snprintf(tmp,7, "%.6d\n", time);
+      TFT_DisplayString(10, 10, (uint8_t *)tmp, LEFT_MODE);
+      time +=1;
+      osDelay(1000);
   }
   /* USER CODE END 5 */
 }
