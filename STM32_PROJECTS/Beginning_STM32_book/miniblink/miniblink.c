@@ -43,7 +43,7 @@ gpio_setup(void) {
 
 void delay()
 {
-    for (int i = 0; i < 100000; i++)
+    for (int i = 0; i < 200000; i++)
         __asm__("nop");
 }
 
@@ -56,37 +56,37 @@ main(void) {
     while(1)
     {
         gpio_set(GPIOC,GPIO13);
-        gpio_set(GPIOD,GPIO2); //для платы F103RCT6
+//        gpio_set(GPIOD,GPIO2); //для платы F103RCT6
         delay();
         gpio_clear(GPIOC,GPIO13);
-        gpio_clear(GPIOD,GPIO2);
+//        gpio_clear(GPIOD,GPIO2);
         delay();
 
-        gpio_set(GPIOB,GPIO1);
-        delay();
-        gpio_clear(GPIOB,GPIO1);
-        delay();
+//        gpio_set(GPIOB,GPIO1);
+//        delay();
+//        gpio_clear(GPIOB,GPIO1);
+//        delay();
 
-        gpio_set(GPIOB,GPIO10);
-        delay();
-        gpio_clear(GPIOB,GPIO10);
-        delay();
+//        gpio_set(GPIOB,GPIO10);
+//        delay();
+//        gpio_clear(GPIOB,GPIO10);
+//        delay();
 
-        gpio_set(GPIOB,GPIO12);
-        delay();
-        gpio_clear(GPIOB,GPIO12);
-        delay();
+//        gpio_set(GPIOB,GPIO12);
+//        delay();
+//        gpio_clear(GPIOB,GPIO12);
+//        delay();
 
-        gpio_set(GPIOB,GPIO14);
-        delay();
-        gpio_clear(GPIOB,GPIO14);
-        delay();
+//        gpio_set(GPIOB,GPIO14);
+//        delay();
+//        gpio_clear(GPIOB,GPIO14);
+//        delay();
 
-        gpio_set(GPIOA,GPIO8);
-        gpio_set(GPIOC,GPIO6); //для платы F103RCT6
-        delay();
-        gpio_clear(GPIOA,GPIO8);
-        gpio_clear(GPIOC,GPIO6);
+//        gpio_set(GPIOA,GPIO8);
+//        gpio_set(GPIOC,GPIO6); //для платы F103RCT6
+//        delay();
+//        gpio_clear(GPIOA,GPIO8);
+//        gpio_clear(GPIOC,GPIO6);
         delay();
 	}
 

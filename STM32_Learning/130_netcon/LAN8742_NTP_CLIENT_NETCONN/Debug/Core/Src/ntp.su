@@ -1,0 +1,2 @@
+ntp.c:45:6:ntp_thread	56	static
+ntp.c:101:6:ntp_receive_callback	152	static
