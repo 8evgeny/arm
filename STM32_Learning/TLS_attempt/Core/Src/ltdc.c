@@ -54,7 +54,7 @@ void TFT_FillRectangle(uint16_t x1, uint16_t y1,
 	uint32_t addr=0;
 	addr = hltdc.LayerCfg[0].FBStartAdress + 4*(y1*hltdc.LayerCfg[0].ImageWidth+x1);
 	hdma2d.Init.Mode = DMA2D_R2M;
-	//смещение = ширина экрана минус ширина прямоугольника
+	//СЃРјРµС‰РµРЅРёРµ = С€РёСЂРёРЅР° СЌРєСЂР°РЅР° РјРёРЅСѓСЃ С€РёСЂРёРЅР° РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 	hdma2d.Init.OutputOffset = hltdc.LayerCfg[0].ImageWidth - (x2-x1);
 	if(HAL_DMA2D_Init(&hdma2d) == HAL_OK)
 	{
@@ -274,7 +274,7 @@ void TFT_DrawBitmap(uint32_t Xpos, uint32_t Ypos, uint8_t *pbmp)
 			pbmp -= width*(bit_pixel/8);
 		}
 	}
-	//Установим настройки DMA2D в DMA2D_M2M_BLEND
+	//РЈСЃС‚Р°РЅРѕРІРёРј РЅР°СЃС‚СЂРѕР№РєРё DMA2D РІ DMA2D_M2M_BLEND
   hdma2d.Init.Mode = DMA2D_M2M_BLEND;
   hdma2d.Init.ColorMode = DMA2D_OUTPUT_ARGB8888;
   hdma2d.Init.OutputOffset = 0;
@@ -344,7 +344,7 @@ void TFT_DrawBitmapToMem(uint32_t Xpos, uint32_t Ypos, uint8_t *pbmp, uint8_t *p
 			pbmp -= width*(bit_pixel/8);
 		}
 	}
-	//Установим настройки DMA2D в DMA2D_M2M_BLEND
+	//РЈСЃС‚Р°РЅРѕРІРёРј РЅР°СЃС‚СЂРѕР№РєРё DMA2D РІ DMA2D_M2M_BLEND
   hdma2d.Init.Mode = DMA2D_M2M_BLEND;
   hdma2d.Init.ColorMode = DMA2D_OUTPUT_ARGB8888;
   hdma2d.Init.OutputOffset = 0;
