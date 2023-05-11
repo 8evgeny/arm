@@ -188,7 +188,7 @@ int main(void)
 
   osMailQDef(stroutqueue, MAIL_SIZE, struct_out);
   strout_Queue = osMailCreate(osMailQ(stroutqueue), NULL);
-
+  HAL_UART_Transmit(&huart1,"osMailCreate\n", sizeof ("osMailCreate\n") - 1, 1000);
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -604,7 +604,7 @@ void StartDefaultTask(void const * argument)
   /* init code for LWIP */
   MX_LWIP_Init();
   /* USER CODE BEGIN 5 */
-
+    HAL_UART_Transmit(&huart1,"StartDefaultTask\n", sizeof ("StartDefaultTask\n") -1, 1000);
     sock01.port = 7;
     sock01.y_pos = 60;
     sock02.port = 8;
@@ -634,7 +634,7 @@ void StartDefaultTask(void const * argument)
 void StartTask02(void const * argument)
 {
   /* USER CODE BEGIN StartTask02 */
-
+    HAL_UART_Transmit(&huart1,"StartTask02\n", sizeof ("StartTask02\n") - 1, 1000);
 
   /* Infinite loop */
   for(;;)
