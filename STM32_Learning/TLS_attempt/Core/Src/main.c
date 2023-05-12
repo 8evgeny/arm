@@ -61,7 +61,7 @@ UART_HandleTypeDef huart1;
 SDRAM_HandleTypeDef hsdram1;
 
 osThreadId defaultTaskHandle;
-osThreadId myTask02Handle;
+osThreadId printAllTasksHandle;
 /* USER CODE BEGIN PV */
 
 #define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
@@ -102,7 +102,7 @@ static void MX_FMC_Init(void);
 static void MX_DMA2D_Init(void);
 static void MX_USART1_UART_Init(void);
 void StartDefaultTask(void const * argument);
-void StartTask02(void const * argument);
+void print_AllTasks(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -196,9 +196,9 @@ int main(void)
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 1280);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
-  /* definition and creation of myTask02 */
-  osThreadDef(myTask02, StartTask02, osPriorityIdle, 0, 128 * 2);
-  myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
+  /* definition and creation of printAllTasks */
+  osThreadDef(printAllTasks, print_AllTasks, osPriorityIdle, 0, 256);
+  printAllTasksHandle = osThreadCreate(osThread(printAllTasks), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -628,18 +628,16 @@ char tmp[10];
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_StartTask02 */
+/* USER CODE BEGIN Header_print_AllTasks */
 /**
-* @brief Function implementing the myTask02 thread.
+* @brief Function implementing the printAllTasks thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask02 */
-void StartTask02(void const * argument)
+/* USER CODE END Header_print_AllTasks */
+void print_AllTasks(void const * argument)
 {
-  /* USER CODE BEGIN StartTask02 */
-    HAL_UART_Transmit(&huart1,"StartTask02\n", sizeof ("StartTask02\n") - 1, 1000);
-
+  /* USER CODE BEGIN print_AllTasks */
   /* Infinite loop */
   for(;;)
   {
@@ -648,7 +646,7 @@ void StartTask02(void const * argument)
       HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
       osDelay(30000);
   }
-  /* USER CODE END StartTask02 */
+  /* USER CODE END print_AllTasks */
 }
 
 /* MPU Configuration */
