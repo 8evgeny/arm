@@ -197,7 +197,7 @@ int main(void)
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of myTask02 */
-  osThreadDef(myTask02, StartTask02, osPriorityIdle, 0, 128);
+  osThreadDef(myTask02, StartTask02, osPriorityIdle, 0, 128 * 2);
   myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
