@@ -163,7 +163,7 @@ int main(void)
   TFT_FillScreen(LCD_COLOR_BLACK);
   TFT_SetFont(&Font24);
   TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
-  TFT_DisplayString(0, 10, (uint8_t *)"TLS", CENTER_MODE);
+  TFT_DisplayString(0, 10, (uint8_t *)"*** TLS ***", CENTER_MODE);
   HAL_UART_Transmit(&huart1,"UART OK\r\n", 9, 1000);
 
   /* USER CODE END 2 */
