@@ -34,7 +34,7 @@
 #define WOLF_CONF_DEBUG      0
 
 /*---------- WOLF_CONF_WOLFCRYPT_ONLY -----------*/
-#define WOLF_CONF_WOLFCRYPT_ONLY      0
+#define WOLF_CONF_WOLFCRYPT_ONLY      1
 
 /*---------- WOLF_CONF_TLS13 -----------*/
 #define WOLF_CONF_TLS13      1
@@ -215,7 +215,7 @@
     /* CPU Type: WOLFSSL_STM32F1, WOLFSSL_STM32F2, WOLFSSL_STM32F4,
         WOLFSSL_STM32F7, WOLFSSL_STM32H7, WOLFSSL_STM32L4, WOLFSSL_STM32L5,
         WOLFSSL_STM32G0, WOLFSSL_STM32WB and WOLFSSL_STM32U5 */
-    #define WOLFSSL_STM32F4
+    #define WOLFSSL_STM32F7
 
     /* Debug UART used for printf */
     /* The UART interface number varies for each board/CPU */

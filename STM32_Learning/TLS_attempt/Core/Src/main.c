@@ -15,6 +15,7 @@
   *
   ******************************************************************************
   */
+#include "wolfssl/wolfcrypt/md5.h"
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -746,13 +747,27 @@ void StartDefaultTask(void const * argument)
     TFT_SetFont(&Font24);
     TFT_SetTextColor(LCD_COLOR_RED);
     uint32_t time = 0;
-char tmp[10];
+
+    char tmp[10];
+    byte md5sum[MD5_DIGEST_SIZE];
+    byte buffer[1024];
+    Md5 md5;
   for(;;)
   {
       TFT_SetTextColor(LCD_COLOR_RED);
       snprintf(tmp,7, "%.6d\n", time);
       TFT_DisplayString(10, 10, (uint8_t *)tmp, LEFT_MODE);
       time +=1;
+
+
+      /*fill buffer with data to hash*/
+
+      wc_InitMd5(&md5);
+      wc_Md5Update(&md5, (byte *)tmp, sizeof (tmp));
+      wc_Md5Final(&md5, md5sum);
+      snprintf((char *)buffer, 16, "%s\r\n", md5sum);
+      HAL_UART_Transmit(&huart1,buffer, 16, 1000);
+
       osDelay(1000);
   }
   /* USER CODE END 5 */

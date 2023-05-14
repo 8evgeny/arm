@@ -22,7 +22,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -mcpu=cortex-m7 \
     -std=gnu11 \
     -DUSE_HAL_DRIVER \
-    -DSTM32H753xx \
+    -DSTM32F746xx \
     -O1 \
     -ffunction-sections \
     -fdata-sections \
@@ -66,6 +66,9 @@ include_directories(
     Middlewares/Third_Party/LwIP/src/include/compat/arpa
     Middlewares/Third_Party/LwIP/src/include/compat/net
     Middlewares/Third_Party/LwIP/src/include/compat/sys
+    Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl
+    Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl
+    wolfSSL
     )
 file (GLOB SOURCES_C ${patchSRC}/*.c STM32H753IITX_FLASH.ld)
 
@@ -98,6 +101,11 @@ file (GLOB RTOS_SRC
     Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
     )
 add_library(RTOS ${RTOS_SRC})
+
+file (GLOB WOLF_SSL_SRC
+    Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/*.c
+    )
+add_library(WOLF_SSL ${WOLF_SSL_SRC})
 
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
@@ -133,6 +141,7 @@ target_link_libraries(${PROJECT_NAME}.elf PUBLIC
     HAL
     RTOS
     LWIP
+    WOLF_SSL
     )
 
 set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
