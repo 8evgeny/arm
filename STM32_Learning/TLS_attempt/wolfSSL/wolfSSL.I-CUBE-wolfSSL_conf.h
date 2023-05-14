@@ -67,7 +67,7 @@
 #define WOLF_CONF_AESGCM      1
 
 /*---------- WOLF_CONF_AESCBC -----------*/
-#define WOLF_CONF_AESCBC      0
+#define WOLF_CONF_AESCBC      1
 
 /*---------- WOLF_CONF_CHAPOLY -----------*/
 #define WOLF_CONF_CHAPOLY      1
@@ -76,10 +76,10 @@
 #define WOLF_CONF_EDCURVE25519      0
 
 /*---------- WOLF_CONF_MD5 -----------*/
-#define WOLF_CONF_MD5      0
+#define WOLF_CONF_MD5      1
 
 /*---------- WOLF_CONF_SHA1 -----------*/
-#define WOLF_CONF_SHA1      0
+#define WOLF_CONF_SHA1      1
 
 /*---------- WOLF_CONF_SHA2_224 -----------*/
 #define WOLF_CONF_SHA2_224      0
@@ -88,7 +88,7 @@
 #define WOLF_CONF_SHA2_256      1
 
 /*---------- WOLF_CONF_SHA2_384 -----------*/
-#define WOLF_CONF_SHA2_384      0
+#define WOLF_CONF_SHA2_384      1
 
 /*---------- WOLF_CONF_SHA2_512 -----------*/
 #define WOLF_CONF_SHA2_512      0
