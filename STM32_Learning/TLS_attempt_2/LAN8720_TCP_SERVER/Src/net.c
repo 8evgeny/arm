@@ -41,7 +41,7 @@ void tcp_server_init(void)
 	  if (server_pcb != NULL)
 	  {
 	    err_t err;
-	    err = tcp_bind(server_pcb, IP_ADDR_ANY, 7);
+        err = tcp_bind(server_pcb, IP_ADDR_ANY, 443);
 	    if (err == ERR_OK)
 	    {
 	      server_pcb = tcp_listen(server_pcb);
