@@ -109,6 +109,7 @@ add_library(WOLF_SSL ${WOLF_SSL_SRC})
 
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
+
     )
 
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE C)
@@ -137,8 +138,8 @@ target_link_options(${PROJECT_NAME}.elf PRIVATE ${LINKER_FLAGS})
 
 target_link_libraries(${PROJECT_NAME}.elf PUBLIC
     CORE
-    STARTUP
     HAL
+    STARTUP
     RTOS
     LWIP
     WOLF_SSL
