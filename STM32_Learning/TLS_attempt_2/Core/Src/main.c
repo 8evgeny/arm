@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2022 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -15,6 +15,7 @@
   *
   ******************************************************************************
   */
+#include "wolfssl/wolfcrypt/md5.h"
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -23,6 +24,16 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+#include "stdint.h"
+#include "string.h"
+#include "ltdc.h"
+#include "MT48LC4M32B2.h"
+#include "fonts.h"
+
+#include "lwip/opt.h"
+#include "lwip/arch.h"
+#include "lwip/api.h"
 
 /* USER CODE END Includes */
 
@@ -58,6 +69,33 @@ osThreadId defaultTaskHandle;
 osThreadId printAllTasksHandle;
 /* USER CODE BEGIN PV */
 
+#define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
+char str1[60];
+char str_buf[1000]={'\0'};
+osThreadId TaskStringOutHandle;
+//osMessageQId pos_Queue; //Создадим специальную глобальную переменную для очереди
+
+osMailQId strout_Queue; //Другой тип очереди используются для работы с указателями в очередях.
+
+//структура для передачи задачам параметров UDP — порта и вертикальной координаты вывода пришедшей строки на дисплее.
+typedef struct struct_sock_t {
+  uint16_t y_pos;
+  uint16_t port;
+} struct_sock;
+
+typedef struct struct_out_t {
+    uint32_t tick_count;
+    uint16_t y_pos;
+    char str[60];
+} struct_out; //Глобальная структура для нашей очереди, в которой будет строка и количество тиков, которое мы также будем передавать из наших задач
+
+/*Первый параметр — это строка с именем задачи, мы её будем использовать, чтобы написать имя задачи на экране,
+второй параметр будет передавать позицию по вертикали, а третий — период задержки в милисекундах. */
+
+struct_sock sock01, sock02;
+
+#define MAIL_SIZE (uint32_t) 5
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -75,6 +113,8 @@ void StartDefaultTask(void const * argument);
 void print_AllTasks(void const * argument);
 
 /* USER CODE BEGIN PFP */
+
+void TaskStringOut(void const * argument);
 
 /* USER CODE END PFP */
 
@@ -131,6 +171,14 @@ int main(void)
   MX_RTC_Init();
   /* USER CODE BEGIN 2 */
 
+  MT48LC4M32B2_init(&hsdram1);
+  HAL_LTDC_SetAddress(&hltdc,LCD_FRAME_BUFFER,0);
+  TFT_FillScreen(LCD_COLOR_BLACK);
+  TFT_SetFont(&Font24);
+  TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
+  TFT_DisplayString(0, 10, (uint8_t *)"*** TLS ***", CENTER_MODE);
+  HAL_UART_Transmit(&huart1,"UART OK\r\n", 9, 1000);
+
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -147,6 +195,13 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
+
+//  osMessageQDef(pos_Queue, QUEUE_SIZE, uint16_t); //Объявили очередь количеством QUEUE_SIZE типа шестнадцатибитного беззнакового целого числа
+//  pos_Queue = osMessageCreate(osMessageQ(pos_Queue), NULL);
+
+  osMailQDef(stroutqueue, MAIL_SIZE, struct_out);
+  strout_Queue = osMailCreate(osMailQ(stroutqueue), NULL);
+  HAL_UART_Transmit(&huart1,"osMailCreate\n", sizeof ("osMailCreate\n") - 1, 1000);
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -160,6 +215,11 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+
+
+  osThreadDef(tskstrout, TaskStringOut, osPriorityBelowNormal, 0, 1280);
+  TaskStringOutHandle = osThreadCreate(osThread(tskstrout), NULL);
+
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
@@ -278,8 +338,8 @@ static void MX_DMA2D_Init(void)
   hdma2d.LayerCfg[0].InputColorMode = DMA2D_INPUT_ARGB8888;
   hdma2d.LayerCfg[0].AlphaMode = DMA2D_REPLACE_ALPHA;
   hdma2d.LayerCfg[0].InputAlpha = 0;
-  hdma2d.LayerCfg[0].AlphaInverted = DMA2D_REGULAR_ALPHA;
-  hdma2d.LayerCfg[0].RedBlueSwap = DMA2D_RB_REGULAR;
+//  hdma2d.LayerCfg[0].AlphaInverted = DMA2D_REGULAR_ALPHA;
+//  hdma2d.LayerCfg[0].RedBlueSwap = DMA2D_RB_REGULAR;
   if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
   {
     Error_Handler();
@@ -591,6 +651,76 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+//---------------------------------------------------------------
+void TaskStringOut(void const * argument)
+{
+    osEvent event; //переменная специального типа структуры, предназначенной для свойств и событий очереди
+    struct_out *qstruct;   //переменная типа передаваемой в очереди структуры
+
+    for(;;)
+    {
+        event = osMailGet(strout_Queue, osWaitForever);
+        if (event.status == osEventMail)
+        {
+            qstruct = event.value.p;
+            sprintf(str1,"%s ", qstruct->str);
+            TFT_DisplayString(50, qstruct->y_pos, (uint8_t *)str1, LEFT_MODE);
+        }
+    }
+}
+//---------------------------------------------------------------
+
+//---------------------------------------------------------------
+static void udp_thread(void *arg)
+{
+    struct_out *qstruct;
+    err_t err, recv_err;
+    struct netconn *conn;
+    struct netbuf *buf;
+    ip_addr_t *addr;
+    unsigned short port;
+    struct_sock *arg_sock;
+    arg_sock = (struct_sock*) arg;
+    TFT_SetTextColor(LCD_COLOR_BLUE);
+    conn = netconn_new(NETCONN_UDP);
+    if (conn!= NULL) //Если инициализация структуры прошла нормально, то свяжем её с локальным IP-адресом и портом
+    {
+        err = netconn_bind(conn, IP_ADDR_ANY, arg_sock->port);
+        if (err == ERR_OK)
+        {
+            for(;;)
+            { //Попытаемся принять пакет
+                recv_err = netconn_recv(conn, &buf);
+                if (recv_err == ERR_OK)
+                { //возьмём в соответствующие переменные IP-адрес и порт клиента с помощью специальных функций
+                    addr = netbuf_fromaddr(buf);
+                    port = netbuf_fromport(buf);
+                    netconn_connect(conn, addr, port);//Затем создадим соединение с ними
+                    //Далее отобразим порт клиента и также пришедшую строку от клиента, затем очистим память структуры очереди
+                    qstruct = osMailAlloc(strout_Queue, osWaitForever);
+                    qstruct->y_pos = arg_sock->y_pos;
+                    sprintf(qstruct->str,"%5u %-20s",port, (char*) buf->p->payload);//Мы применили интересный формат %-20s, с помощью которого мы забиваем пробелами оставшиеся элементы строки.
+                    qstruct->str[5 + strlen((char*) buf->p->payload)] = ' '; //заменили пробелом пришедший от клиента перенос строки.
+                    osMailPut(strout_Queue, qstruct);  //строку назад клиенту в качестве эха
+                    osMailFree(strout_Queue, qstruct); //освободим память буфера
+                }
+            }
+        }
+        else
+        { //При отрицательном результате мы уничтожаем нашу инициализированную структуру и проваливаемся в бесконечный цикл.
+            netconn_delete(conn);
+        }
+    }
+
+    for(;;)
+    {
+        osDelay(1);
+    }
+}
+//---------------------------------------------------------------
+
+
+
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -605,10 +735,40 @@ void StartDefaultTask(void const * argument)
   /* init code for LWIP */
   MX_LWIP_Init();
   /* USER CODE BEGIN 5 */
+    HAL_UART_Transmit(&huart1,"StartDefaultTask\n", sizeof ("StartDefaultTask\n") -1, 1000);
+    sock01.port = 7;
+    sock01.y_pos = 60;
+    sock02.port = 8;
+    sock02.y_pos = 180;
+    sys_thread_new("udp_thread1", udp_thread, (void*)&sock01, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
+    sys_thread_new("udp_thread2", udp_thread, (void*)&sock02, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
+
   /* Infinite loop */
+    TFT_SetFont(&Font24);
+    TFT_SetTextColor(LCD_COLOR_RED);
+    uint32_t time = 0;
+
+    char tmp[10];
+    byte md5sum[MD5_DIGEST_SIZE];
+    byte buffer[1024];
+    Md5 md5;
   for(;;)
   {
-    osDelay(1);
+      TFT_SetTextColor(LCD_COLOR_RED);
+      snprintf(tmp,7, "%.6d\n", time);
+      TFT_DisplayString(10, 10, (uint8_t *)tmp, LEFT_MODE);
+      time +=1;
+
+
+      /*fill buffer with data to hash*/
+
+//      wc_InitMd5(&md5);
+//      wc_Md5Update(&md5, (byte *)tmp, sizeof (tmp));
+//      wc_Md5Final(&md5, md5sum);
+//      snprintf((char *)buffer, 16, "%s\r\n", md5sum);
+//      HAL_UART_Transmit(&huart1,buffer, 16, 1000);
+
+      osDelay(1000);
   }
   /* USER CODE END 5 */
 }
@@ -626,7 +786,10 @@ void print_AllTasks(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      osThreadList((unsigned char *)str_buf);
+      HAL_UART_Transmit(&huart1, (uint8_t*)str_buf, strlen(str_buf), 0x1000);
+      HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
+      osDelay(30000);
   }
   /* USER CODE END print_AllTasks */
 }

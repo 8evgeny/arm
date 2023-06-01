@@ -27,7 +27,7 @@
 
 /**
 	MiddleWare name : wolfSSL.I-CUBE-wolfSSL.5.6.0
-	MiddleWare fileName : ./wolfSSL.I-CUBE-wolfSSL_conf.h
+	MiddleWare fileName : wolfSSL.I-CUBE-wolfSSL_conf.h
 	MiddleWare version :
 */
 /*---------- WOLF_CONF_DEBUG -----------*/
@@ -215,12 +215,12 @@
     /* CPU Type: WOLFSSL_STM32F1, WOLFSSL_STM32F2, WOLFSSL_STM32F4,
         WOLFSSL_STM32F7, WOLFSSL_STM32H7, WOLFSSL_STM32L4, WOLFSSL_STM32L5,
         WOLFSSL_STM32G0, WOLFSSL_STM32WB and WOLFSSL_STM32U5 */
-    #define WOLFSSL_STM32F4
+    #define WOLFSSL_STM32F7
 
     /* Debug UART used for printf */
     /* The UART interface number varies for each board/CPU */
     /* Typically this is the UART attached to the ST-Link USB CDC UART port */
-    #define HAL_CONSOLE_UART huart4
+    #define HAL_CONSOLE_UART huart1
 
     /* Hardware Crypto - uncomment as available on hardware */
     //#define WOLFSSL_STM32_PKA
