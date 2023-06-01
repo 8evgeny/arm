@@ -67,6 +67,7 @@ SDRAM_HandleTypeDef hsdram1;
 
 osThreadId defaultTaskHandle;
 osThreadId printAllTasksHandle;
+osThreadId TcpServerHandle;
 /* USER CODE BEGIN PV */
 
 #define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
@@ -111,6 +112,7 @@ static void MX_RNG_Init(void);
 static void MX_RTC_Init(void);
 void StartDefaultTask(void const * argument);
 void print_AllTasks(void const * argument);
+void tcpServer(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -212,6 +214,10 @@ int main(void)
   /* definition and creation of printAllTasks */
   osThreadDef(printAllTasks, print_AllTasks, osPriorityIdle, 0, 256);
   printAllTasksHandle = osThreadCreate(osThread(printAllTasks), NULL);
+
+  /* definition and creation of TcpServer */
+  osThreadDef(TcpServer, tcpServer, osPriorityIdle, 0, 512);
+  TcpServerHandle = osThreadCreate(osThread(TcpServer), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -792,6 +798,24 @@ void print_AllTasks(void const * argument)
       osDelay(30000);
   }
   /* USER CODE END print_AllTasks */
+}
+
+/* USER CODE BEGIN Header_tcpServer */
+/**
+* @brief Function implementing the TcpServer thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_tcpServer */
+void tcpServer(void const * argument)
+{
+  /* USER CODE BEGIN tcpServer */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END tcpServer */
 }
 
 /* MPU Configuration */
