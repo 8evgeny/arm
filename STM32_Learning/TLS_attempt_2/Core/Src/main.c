@@ -810,6 +810,15 @@ void print_AllTasks(void const * argument)
 void tcpServer(void const * argument)
 {
   /* USER CODE BEGIN tcpServer */
+
+
+
+
+
+
+
+
+
   /* Infinite loop */
   for(;;)
   {
