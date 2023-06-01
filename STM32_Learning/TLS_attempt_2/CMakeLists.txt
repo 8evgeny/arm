@@ -69,6 +69,7 @@ include_directories(
     Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl
     Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl
     wolfSSL
+    LAN8720_TCP_SERVER/Inc
     )
 file (GLOB SOURCES_C ${patchSRC}/*.c STM32H753IITX_FLASH.ld)
 
@@ -105,6 +106,7 @@ add_library(RTOS ${RTOS_SRC})
 file (GLOB WOLF_SSL_SRC
     Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/*.c
 #    wolfSSL/*.c
+    LAN8720_TCP_SERVER/Src/net.c
     )
 add_library(WOLF_SSL ${WOLF_SSL_SRC})
 

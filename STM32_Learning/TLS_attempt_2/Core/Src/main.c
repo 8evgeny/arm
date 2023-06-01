@@ -34,6 +34,10 @@
 #include "lwip/opt.h"
 #include "lwip/arch.h"
 #include "lwip/api.h"
+char str[30];
+extern struct netif gnetif;
+extern void net_ini(void);
+extern void tcp_server_init(void);
 
 /* USER CODE END Includes */
 
@@ -60,6 +64,8 @@ LTDC_HandleTypeDef hltdc;
 RNG_HandleTypeDef hrng;
 
 RTC_HandleTypeDef hrtc;
+
+TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart1;
 
@@ -110,6 +116,7 @@ static void MX_DMA2D_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_RNG_Init(void);
 static void MX_RTC_Init(void);
+static void MX_TIM2_Init(void);
 void StartDefaultTask(void const * argument);
 void print_AllTasks(void const * argument);
 void tcpServer(void const * argument);
@@ -171,6 +178,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_RNG_Init();
   MX_RTC_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 
   MT48LC4M32B2_init(&hsdram1);
@@ -520,6 +528,51 @@ static void MX_RTC_Init(void)
 }
 
 /**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 0;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 4294967295;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -746,8 +799,8 @@ void StartDefaultTask(void const * argument)
     sock01.y_pos = 60;
     sock02.port = 8;
     sock02.y_pos = 180;
-    sys_thread_new("udp_thread1", udp_thread, (void*)&sock01, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
-    sys_thread_new("udp_thread2", udp_thread, (void*)&sock02, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
+//    sys_thread_new("udp_thread1", udp_thread, (void*)&sock01, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
+//    sys_thread_new("udp_thread2", udp_thread, (void*)&sock02, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
 
   /* Infinite loop */
     TFT_SetFont(&Font24);
@@ -810,19 +863,17 @@ void print_AllTasks(void const * argument)
 void tcpServer(void const * argument)
 {
   /* USER CODE BEGIN tcpServer */
-
-
-
-
-
-
-
-
+    HAL_TIM_Base_Start_IT(&htim2);
+    net_ini();
+    tcp_server_init();
+    HAL_UART_Receive_IT(&huart1,(uint8_t*)str,1);
 
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      ethernetif_input(&gnetif);
+      sys_check_timeouts();
+      osDelay(1);
   }
   /* USER CODE END tcpServer */
 }

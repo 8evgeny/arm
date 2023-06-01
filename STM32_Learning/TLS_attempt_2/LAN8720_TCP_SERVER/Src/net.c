@@ -2,7 +2,7 @@
 //-----------------------------------------------
 uint8_t ipaddr_dest[4];
 uint16_t port_dest;
-extern UART_HandleTypeDef huart6;
+extern UART_HandleTypeDef huart1;
 USART_prop_ptr usartprop;
 char str[30];
 char str1[100];
@@ -140,7 +140,7 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
 		  tcp_recved(tpcb, p->tot_len);
 		  strncpy(str1,p->payload,p->len);
 		  str1[p->len] = '\0';
-		  HAL_UART_Transmit(&huart6, (uint8_t*)str1,strlen(str1),0x1000);
+          HAL_UART_Transmit(&huart1, (uint8_t*)str1,strlen(str1),0x1000);
 		  ret_err = ERR_OK;
 	}
 	else if (es->state == ES_RECEIVED)
@@ -283,12 +283,12 @@ void sendstring(char* buf_str)
 //-----------------------------------------------
 void string_parse(char* buf_str)
 {
-	  HAL_UART_Transmit(&huart6, (uint8_t*)buf_str,strlen(buf_str),0x1000);
+      HAL_UART_Transmit(&huart1, (uint8_t*)buf_str,strlen(buf_str),0x1000);
 	  sendstring(buf_str);
 	  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13, GPIO_PIN_RESET);
 }
 //-----------------------------------------------
-void UART6_RxCpltCallback(void)
+void UART1_RxCpltCallback(void)
 {
 	uint8_t b;
 	b = str[0];
@@ -296,7 +296,7 @@ void UART6_RxCpltCallback(void)
 	if (usartprop.usart_cnt>25)
 	{
 		usartprop.usart_cnt=0;
-		HAL_UART_Receive_IT(&huart6,(uint8_t*)str,1);
+        HAL_UART_Receive_IT(&huart1,(uint8_t*)str,1);
 		return;
 	}
 	usartprop.usart_buf[usartprop.usart_cnt] = b;
@@ -305,10 +305,10 @@ void UART6_RxCpltCallback(void)
 		usartprop.usart_buf[usartprop.usart_cnt+1]=0;
 		string_parse((char*)usartprop.usart_buf);
 		usartprop.usart_cnt=0;
-		HAL_UART_Receive_IT(&huart6,(uint8_t*)str,1);
+        HAL_UART_Receive_IT(&huart1,(uint8_t*)str,1);
 		return;
 	}
 	usartprop.usart_cnt++;
-	HAL_UART_Receive_IT(&huart6,(uint8_t*)str,1);
+    HAL_UART_Receive_IT(&huart1,(uint8_t*)str,1);
 }
 //-----------------------------------------------
