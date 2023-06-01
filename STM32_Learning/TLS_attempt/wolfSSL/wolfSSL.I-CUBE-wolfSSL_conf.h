@@ -220,7 +220,7 @@
     /* Debug UART used for printf */
     /* The UART interface number varies for each board/CPU */
     /* Typically this is the UART attached to the ST-Link USB CDC UART port */
-    #define HAL_CONSOLE_UART huart4
+    #define HAL_CONSOLE_UART huart1
 
     /* Hardware Crypto - uncomment as available on hardware */
     //#define WOLFSSL_STM32_PKA

@@ -104,6 +104,7 @@ add_library(RTOS ${RTOS_SRC})
 
 file (GLOB WOLF_SSL_SRC
     Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/*.c
+    wolfSSL/*.c
     )
 add_library(WOLF_SSL ${WOLF_SSL_SRC})
 
