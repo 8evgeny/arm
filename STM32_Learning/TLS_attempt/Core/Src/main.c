@@ -762,11 +762,11 @@ void StartDefaultTask(void const * argument)
 
       /*fill buffer with data to hash*/
 
-      wc_InitMd5(&md5);
-      wc_Md5Update(&md5, (byte *)tmp, sizeof (tmp));
-      wc_Md5Final(&md5, md5sum);
-      snprintf((char *)buffer, 16, "%s\r\n", md5sum);
-      HAL_UART_Transmit(&huart1,buffer, 16, 1000);
+//      wc_InitMd5(&md5);
+//      wc_Md5Update(&md5, (byte *)tmp, sizeof (tmp));
+//      wc_Md5Final(&md5, md5sum);
+//      snprintf((char *)buffer, 16, "%s\r\n", md5sum);
+//      HAL_UART_Transmit(&huart1,buffer, 16, 1000);
 
       osDelay(1000);
   }
