@@ -7,7 +7,7 @@ set(TOOLS_PATH /home/evg/toolchain/gcc-arm-none-eabi-new)
 #set(CMAKE_CXX_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
 set(CMAKE_CXX_LINKER_LAUNCHER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
 set(CMAKE_OBJCOPY ${TOOLS_PATH}/bin/arm-none-eabi-objcopy)
-
+set (bearssl ${CMAKE_HOME_DIRECTORY}/bearSSL)
 project(TLS_attempt2 C CXX ASM)
 
 #set(CMAKE_BUILD_TYPE debug)
@@ -70,7 +70,14 @@ include_directories(
     Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl
     wolfSSL
     LAN8720_TCP_SERVER/Inc
+    ${bearssl}/inc
+    ${bearssl}/samples
+    ${bearssl}/src
     )
+
+file (GLOB_RECURSE bear_src ${bearssl}/src/*.c  ioLibrary_Driver/Internet/httpServer/*.c)
+add_library(bearSSL_LIB ${bear_src} )
+
 file (GLOB SOURCES_C ${patchSRC}/*.c STM32H753IITX_FLASH.ld)
 
 file (GLOB CORE_SOURCES Core/Src/*.c )
@@ -146,6 +153,7 @@ target_link_libraries(${PROJECT_NAME}.elf PUBLIC
     RTOS
     LWIP
     WOLF_SSL
+    bearSSL_LIB
     )
 
 set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)

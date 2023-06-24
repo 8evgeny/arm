@@ -38,7 +38,7 @@ char str[30];
 extern struct netif gnetif;
 extern void net_ini(void);
 extern void tcp_server_init(void);
-
+extern void bearSSLTest();
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -124,6 +124,9 @@ void tcpServer(void const * argument);
 /* USER CODE BEGIN PFP */
 
 void TaskStringOut(void const * argument);
+
+
+
 
 /* USER CODE END PFP */
 
@@ -867,7 +870,7 @@ void tcpServer(void const * argument)
     net_ini();
     tcp_server_init();
     HAL_UART_Receive_IT(&huart1,(uint8_t*)str,1);
-
+    bearSSLTest();
   /* Infinite loop */
   for(;;)
   {
