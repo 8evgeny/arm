@@ -69,6 +69,7 @@ include_directories(
     Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl
     Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl
     wolfSSL
+    wolfssl-examples-master/embedded
     )
 file (GLOB SOURCES_C ${patchSRC}/*.c STM32H753IITX_FLASH.ld)
 
@@ -80,6 +81,9 @@ add_library(STARTUP ${STARTUP_SOURCES} )
 
 file (GLOB HAL_SRC Drivers/STM32F7xx_HAL_Driver/Src/*)
 add_library(HAL ${HAL_SRC})
+
+file (GLOB TLS_SRC wolfssl-examples-master/embedded/tls-sock-server.c)
+add_library(TLS ${TLS_SRC})
 
 file (GLOB LWIP_SRC
     LWIP/App/*.c
@@ -144,6 +148,7 @@ target_link_libraries(${PROJECT_NAME}.elf PUBLIC
     RTOS
     LWIP
     WOLF_SSL
+    TLS
     )
 
 set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
