@@ -75,7 +75,10 @@ include_directories(
     ${bearssl}/src
     )
 
-file (GLOB_RECURSE bear_src ${bearssl}/src/*.c  ioLibrary_Driver/Internet/httpServer/*.c)
+file (GLOB_RECURSE
+    bear_src ${bearssl}/src/*.c
+    ${bearssl}/samples/*.c
+   )
 add_library(bearSSL_LIB ${bear_src} )
 
 file (GLOB SOURCES_C ${patchSRC}/*.c STM32H753IITX_FLASH.ld)
