@@ -15,6 +15,7 @@
   *
   ******************************************************************************
   */
+#include "wolfssl/wolfcrypt/md5.h"
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -56,12 +57,16 @@ DMA2D_HandleTypeDef hdma2d;
 
 LTDC_HandleTypeDef hltdc;
 
+RNG_HandleTypeDef hrng;
+
+RTC_HandleTypeDef hrtc;
+
 UART_HandleTypeDef huart1;
 
 SDRAM_HandleTypeDef hsdram1;
 
 osThreadId defaultTaskHandle;
-osThreadId myTask02Handle;
+osThreadId printAllTasksHandle;
 /* USER CODE BEGIN PV */
 
 #define LCD_FRAME_BUFFER SDRAM_DEVICE_ADDR
@@ -95,14 +100,17 @@ struct_sock sock01, sock02;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void PeriphCommonClock_Config(void);
 static void MPU_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_LTDC_Init(void);
 static void MX_FMC_Init(void);
 static void MX_DMA2D_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_RNG_Init(void);
+static void MX_RTC_Init(void);
 void StartDefaultTask(void const * argument);
-void StartTask02(void const * argument);
+void print_AllTasks(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -146,6 +154,9 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 
+/* Configure the peripherals common clocks */
+  PeriphCommonClock_Config();
+
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -156,6 +167,8 @@ int main(void)
   MX_FMC_Init();
   MX_DMA2D_Init();
   MX_USART1_UART_Init();
+  MX_RNG_Init();
+  MX_RTC_Init();
   /* USER CODE BEGIN 2 */
 
   MT48LC4M32B2_init(&hsdram1);
@@ -163,7 +176,8 @@ int main(void)
   TFT_FillScreen(LCD_COLOR_BLACK);
   TFT_SetFont(&Font24);
   TFT_SetTextColor(LCD_COLOR_LIGHTGREEN);
-  TFT_DisplayString(0, 10, (uint8_t *)"UDP Server", CENTER_MODE);
+  TFT_DisplayString(0, 10, (uint8_t *)"*** TLS ***", CENTER_MODE);
+  HAL_UART_Transmit(&huart1,"UART OK\r\n", 9, 1000);
 
   /* USER CODE END 2 */
 
@@ -187,7 +201,7 @@ int main(void)
 
   osMailQDef(stroutqueue, MAIL_SIZE, struct_out);
   strout_Queue = osMailCreate(osMailQ(stroutqueue), NULL);
-
+  HAL_UART_Transmit(&huart1,"osMailCreate\n", sizeof ("osMailCreate\n") - 1, 1000);
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -195,9 +209,9 @@ int main(void)
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 1280);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
-  /* definition and creation of myTask02 */
-  osThreadDef(myTask02, StartTask02, osPriorityIdle, 0, 128);
-  myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
+  /* definition and creation of printAllTasks */
+  osThreadDef(printAllTasks, print_AllTasks, osPriorityIdle, 0, 256);
+  printAllTasksHandle = osThreadCreate(osThread(printAllTasks), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -239,8 +253,9 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 25;
@@ -267,6 +282,30 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+/**
+  * @brief Peripherals Common Clock Configuration
+  * @retval None
+  */
+void PeriphCommonClock_Config(void)
+{
+  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+
+  /** Initializes the peripherals clock
+  */
+  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_LTDC|RCC_PERIPHCLK_CLK48;
+  PeriphClkInitStruct.PLLSAI.PLLSAIN = 192;
+  PeriphClkInitStruct.PLLSAI.PLLSAIR = 3;
+  PeriphClkInitStruct.PLLSAI.PLLSAIQ = 2;
+  PeriphClkInitStruct.PLLSAI.PLLSAIP = RCC_PLLSAIP_DIV4;
+  PeriphClkInitStruct.PLLSAIDivQ = 1;
+  PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_4;
+  PeriphClkInitStruct.Clk48ClockSelection = RCC_CLK48SOURCE_PLLSAIP;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
   {
     Error_Handler();
   }
@@ -382,6 +421,99 @@ static void MX_LTDC_Init(void)
 }
 
 /**
+  * @brief RNG Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_RNG_Init(void)
+{
+
+  /* USER CODE BEGIN RNG_Init 0 */
+
+  /* USER CODE END RNG_Init 0 */
+
+  /* USER CODE BEGIN RNG_Init 1 */
+
+  /* USER CODE END RNG_Init 1 */
+  hrng.Instance = RNG;
+  if (HAL_RNG_Init(&hrng) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN RNG_Init 2 */
+
+  /* USER CODE END RNG_Init 2 */
+
+}
+
+/**
+  * @brief RTC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_RTC_Init(void)
+{
+
+  /* USER CODE BEGIN RTC_Init 0 */
+
+  /* USER CODE END RTC_Init 0 */
+
+  RTC_TimeTypeDef sTime = {0};
+  RTC_DateTypeDef sDate = {0};
+
+  /* USER CODE BEGIN RTC_Init 1 */
+
+  /* USER CODE END RTC_Init 1 */
+  /** Initialize RTC Only
+  */
+  hrtc.Instance = RTC;
+  hrtc.Init.HourFormat = RTC_HOURFORMAT_24;
+  hrtc.Init.AsynchPrediv = 127;
+  hrtc.Init.SynchPrediv = 255;
+  hrtc.Init.OutPut = RTC_OUTPUT_DISABLE;
+  hrtc.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
+  hrtc.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
+  if (HAL_RTC_Init(&hrtc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /* USER CODE BEGIN Check_RTC_BKUP */
+
+  /* USER CODE END Check_RTC_BKUP */
+
+  /** Initialize RTC and set the Time and Date
+  */
+  sTime.Hours = 0x9;
+  sTime.Minutes = 0x9;
+  sTime.Seconds = 0x0;
+  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+  sTime.StoreOperation = RTC_STOREOPERATION_RESET;
+  if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sDate.WeekDay = RTC_WEEKDAY_MONDAY;
+  sDate.Month = RTC_MONTH_APRIL;
+  sDate.Date = 0x13;
+  sDate.Year = 0x23;
+  if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Enable the TimeStamp
+  */
+  if (HAL_RTCEx_SetTimeStamp(&hrtc, RTC_TIMESTAMPEDGE_RISING, RTC_TIMESTAMPPIN_POS1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN RTC_Init 2 */
+
+  /* USER CODE END RTC_Init 2 */
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -397,7 +529,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 230400;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -479,9 +611,9 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOJ_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOI_CLK_ENABLE();
   __HAL_RCC_GPIOK_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
-  __HAL_RCC_GPIOI_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
 
@@ -603,7 +735,7 @@ void StartDefaultTask(void const * argument)
   /* init code for LWIP */
   MX_LWIP_Init();
   /* USER CODE BEGIN 5 */
-
+    HAL_UART_Transmit(&huart1,"StartDefaultTask\n", sizeof ("StartDefaultTask\n") -1, 1000);
     sock01.port = 7;
     sock01.y_pos = 60;
     sock02.port = 8;
@@ -611,36 +743,55 @@ void StartDefaultTask(void const * argument)
     sys_thread_new("udp_thread1", udp_thread, (void*)&sock01, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
     sys_thread_new("udp_thread2", udp_thread, (void*)&sock02, DEFAULT_THREAD_STACKSIZE, osPriorityNormal );
 
-    osThreadList((unsigned char *)str_buf);
-    HAL_UART_Transmit(&huart1, (uint8_t*)str_buf, strlen(str_buf), 0x1000);
-    HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
-
   /* Infinite loop */
+    TFT_SetFont(&Font24);
+    TFT_SetTextColor(LCD_COLOR_RED);
+    uint32_t time = 0;
+
+    char tmp[10];
+    byte md5sum[MD5_DIGEST_SIZE];
+    byte buffer[1024];
+    Md5 md5;
   for(;;)
   {
-      osDelay(1);
+      TFT_SetTextColor(LCD_COLOR_RED);
+      snprintf(tmp,7, "%.6d\n", time);
+      TFT_DisplayString(10, 10, (uint8_t *)tmp, LEFT_MODE);
+      time +=1;
+
+
+      /*fill buffer with data to hash*/
+
+//      wc_InitMd5(&md5);
+//      wc_Md5Update(&md5, (byte *)tmp, sizeof (tmp));
+//      wc_Md5Final(&md5, md5sum);
+//      snprintf((char *)buffer, 16, "%s\r\n", md5sum);
+//      HAL_UART_Transmit(&huart1,buffer, 16, 1000);
+
+      osDelay(1000);
   }
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_StartTask02 */
+/* USER CODE BEGIN Header_print_AllTasks */
 /**
-* @brief Function implementing the myTask02 thread.
+* @brief Function implementing the printAllTasks thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask02 */
-void StartTask02(void const * argument)
+/* USER CODE END Header_print_AllTasks */
+void print_AllTasks(void const * argument)
 {
-  /* USER CODE BEGIN StartTask02 */
-
-
+  /* USER CODE BEGIN print_AllTasks */
   /* Infinite loop */
   for(;;)
   {
-      osDelay(1);
+      osThreadList((unsigned char *)str_buf);
+      HAL_UART_Transmit(&huart1, (uint8_t*)str_buf, strlen(str_buf), 0x1000);
+      HAL_UART_Transmit(&huart1, (uint8_t*)"\r\n", 2, 0x1000);
+      osDelay(30000);
   }
-  /* USER CODE END StartTask02 */
+  /* USER CODE END print_AllTasks */
 }
 
 /* MPU Configuration */

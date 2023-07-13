@@ -22,7 +22,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -mcpu=cortex-m7 \
     -std=gnu11 \
     -DUSE_HAL_DRIVER \
-    -DSTM32H753xx \
+    -DSTM32F746xx \
     -O1 \
     -ffunction-sections \
     -fdata-sections \
@@ -66,6 +66,10 @@ include_directories(
     Middlewares/Third_Party/LwIP/src/include/compat/arpa
     Middlewares/Third_Party/LwIP/src/include/compat/net
     Middlewares/Third_Party/LwIP/src/include/compat/sys
+    Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl
+    Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl
+    wolfSSL
+    wolfssl-examples-master/embedded
     )
 file (GLOB SOURCES_C ${patchSRC}/*.c STM32H753IITX_FLASH.ld)
 
@@ -77,6 +81,9 @@ add_library(STARTUP ${STARTUP_SOURCES} )
 
 file (GLOB HAL_SRC Drivers/STM32F7xx_HAL_Driver/Src/*)
 add_library(HAL ${HAL_SRC})
+
+file (GLOB TLS_SRC wolfssl-examples-master/embedded/tls-sock-server.c)
+add_library(TLS ${TLS_SRC})
 
 file (GLOB LWIP_SRC
     LWIP/App/*.c
@@ -99,8 +106,15 @@ file (GLOB RTOS_SRC
     )
 add_library(RTOS ${RTOS_SRC})
 
+file (GLOB WOLF_SSL_SRC
+    Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/*.c
+#    wolfSSL/*.c
+    )
+add_library(WOLF_SSL ${WOLF_SSL_SRC})
+
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
+
     )
 
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE C)
@@ -129,10 +143,12 @@ target_link_options(${PROJECT_NAME}.elf PRIVATE ${LINKER_FLAGS})
 
 target_link_libraries(${PROJECT_NAME}.elf PUBLIC
     CORE
-    STARTUP
     HAL
+    STARTUP
     RTOS
     LWIP
+    WOLF_SSL
+    TLS
     )
 
 set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
@@ -145,3 +161,7 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
     COMMENT "Building ${BIN_FILE} ")
+
+add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
+    COMMAND st-flash --reset write ${BIN_FILE} 0x8000000
+    COMMENT "Write Flash ")
