@@ -1,2 +1,4 @@
 Release/
 Debug/
+build
+/CMakeLists.txt.user
