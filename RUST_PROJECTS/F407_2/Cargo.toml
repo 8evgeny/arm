@@ -11,6 +11,7 @@ cortex-m-semihosting = "*"
 panic-halt = "*"
 nb = "0.1.2"
 embedded-hal = "0.2.3"
+fugit = "*"
 
 # Пакет для разработки под отладочные платы stm32f1
 [dependencies.stm32f4xx-hal]
