@@ -29,7 +29,7 @@ fn main() -> ! {
     // let mut led = gpiob.pb12.into_push_pull_output(&mut gpiob.crh);
     let mut led1 = gpioa.pa5.into_push_pull_output(&mut gpioa.crl);
     // Конфигурируем системный таймер на запуск обновления каждую секунду.
-    let mut timer = Timer::syst(cp.SYST, &clocks).start_count_down(1.hz());
+    let mut timer = Timer::syst(cp.SYST, &clocks).start_count_down(5.hz());
 
     // Ждём пока таймер запустит обновление
     // и изменит состояние светодиода.

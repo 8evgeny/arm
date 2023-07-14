@@ -4,7 +4,10 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d17edbc-f0a7-4ee3-a979-9cd78daa6fc5" name="Changes" comment="" />
+    <list default="true" id="3d17edbc-f0a7-4ee3-a979-9cd78daa6fc5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +41,7 @@
     <configuration name="make_bin" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="objcopy --bin stm32f103  --target thumbv7m-none-eabi --release -- -O binary stm32f103.bin " />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <option name="channel" value="DEFAULT" />
+      <option name="channel" value="STABLE" />
       <option name="requiredFeatures" value="true" />
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="true" />
@@ -88,6 +91,7 @@
       <updated>1689249601465</updated>
       <workItem from="1689249603163" duration="6425000" />
       <workItem from="1689328714382" duration="29000" />
+      <workItem from="1689331315781" duration="544000" />
     </task>
     <servers />
   </component>
