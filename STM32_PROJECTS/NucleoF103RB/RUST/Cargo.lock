@@ -243,10 +243,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "stm32f103c8t6"
+name = "stm32f103"
 version = "0.1.0"
 dependencies = [
- "cortex-m 0.7.7",
+ "cortex-m 0.6.7",
  "cortex-m-rt",
  "cortex-m-semihosting",
  "embedded-hal",

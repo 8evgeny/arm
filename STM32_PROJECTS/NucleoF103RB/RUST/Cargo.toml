@@ -1,5 +1,5 @@
 [package]
-name = "stm32f103c8t6"
+name = "stm32f103"
 version = "0.1.0"
 edition = "2021"
 
@@ -19,7 +19,7 @@ features = ["stm32f100", "rt"]
 
 # Позволяет использовать `cargo fix`!
 [[bin]]
-name = "stm32f103c8t6"
+name = "stm32f103"
 test = false
 bench = false
 
