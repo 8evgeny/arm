@@ -2,28 +2,18 @@
 #![no_main]
 
 // Imports
-use stm32f4xx_hal as hal;
-
 use cortex_m_rt::entry;
 use panic_halt as _;
-use hal::{
+use stm32f4xx_hal::{
     gpio::Pin,
-    timer::delay::Delay,
     pac::{self},
     prelude::*,
 };
-use crate::pac::Interrupt::TIM2;
 
 #[entry]
 fn main() -> ! {
     // Setup handler for device peripherals
     let dp = pac::Peripherals::take().unwrap();
-    let mut rcc = dp.RCC.constrain();
-    let clocks = rcc.cfgr.freeze(&mut flash.acr);
-    let mut delay = dp.TIM2.delay_ms(&clocks);
-    // loop {
-    //     delay.delay_ms(1_000_u16);
-    // }
 
     // Configure the LED pin as a push pull ouput and obtain handler.
     // On the Nucleo FR401 theres an on-board LED connected to pin PA5.
@@ -50,10 +40,9 @@ fn main() -> ! {
     // Application Loop
     loop {
         // Call delay function and update delay variable once done
-        // del_var = loop_delay(del_var, &button);
+        del_var = loop_delay(del_var, &button);
 
         // Toggle LED
-        delay.delay_ms(1_000_u16);
         led_green.toggle();
         led_orange.toggle();
         led_red.toggle();
