@@ -19,14 +19,14 @@ fn main() -> ! {
 
     // Configure the LED pin as a push pull ouput and obtain handler.
     // On the Nucleo FR401 theres an on-board LED connected to pin PA5.
-    let gpioa = dp.GPIOA.split();
-    let mut led = gpioa.pa5.into_push_pull_output();
+    let gpiod = dp.GPIOD.split();
+    let mut led = gpiod.pd12.into_push_pull_output();
 
     // Configure the button pin (if needed) and obtain handler.
     // On the Nucleo FR401 there is a button connected to pin PC13.
     // Pin is input by default
-    let gpioc = dp.GPIOC.split();
-    let button = gpioc.pc13;
+    let gpioa = dp.GPIOA.split();
+    let button = gpioa.pa0;
 
     // Serial config steps:
     // 1) Need to configure the system clocks
@@ -39,14 +39,14 @@ fn main() -> ! {
     // 2) Configure/Define TX pin
     // Note that we already split port A earlier for the led pin
     // Use PA2 as it is connected to the host serial interface
-    let tx_pin = gpioa.pa2.into_alternate();
+    let tx_pin = gpioc.pc6.into_alternate();
 
     // 3) Configure Serial perihperal channel
     // We're going to use USART2 since its pins are the ones connected to the USART host interface
     // To configure/instantiate serial peripheral channel we have two options:
     // Use the device peripheral handle to directly access USART2 and instantiate a transmitter instance
     let mut tx = dp
-        .USART2
+        .USART6
         .tx(
             tx_pin,
             Config::default()
