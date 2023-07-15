@@ -22,30 +22,29 @@ fn main() -> ! {
     let gpiod = dp.GPIOD.split();
     let mut led = gpiod.pd12.into_push_pull_output();
 
-    // Configure the button pin (if needed) and obtain handler.
-    // On the Nucleo FR401 there is a button connected to pin PC13.
-    // Pin is input by default
+    /// Configure the button pin (if needed) and obtain handler.
+    /// On the Nucleo FR401 there is a button connected to pin PC13.
+    /// Pin is input by default
     let gpioa = dp.GPIOA.split();
     let button = gpioa.pa0;
-
-    // Serial config steps:
-    // 1) Need to configure the system clocks
-    // - Promote RCC structure to HAL to be able to configure clocks
+    /// Serial config steps:
+    /// 1) Need to configure the system clocks
+    /// - Promote RCC structure to HAL to be able to configure clocks
     let rcc = dp.RCC.constrain();
-    // - Configure system clocks
-    // 8 MHz must be used for the Nucleo-F401RE board according to manual
+    /// - Configure system clocks
+    /// 8 MHz must be used for the Nucleo-F401RE board according to manual
     let clocks = rcc.cfgr.use_hse(8.MHz()).freeze();
 
-    // 2) Configure/Define TX pin
-    // Note that we already split port A earlier for the led pin
-    // Use PA2 as it is connected to the host serial interface
+    /// 2) Configure/Define TX pin
+    /// Note that we already split port A earlier for the led pin
+    /// Use PA2 as it is connected to the host serial interface
     let gpioc = dp.GPIOC.split();
     let tx_pin = gpioc.pc6.into_alternate();
 
-    // 3) Configure Serial perihperal channel
-    // We're going to use USART2 since its pins are the ones connected to the USART host interface
-    // To configure/instantiate serial peripheral channel we have two options:
-    // Use the device peripheral handle to directly access USART2 and instantiate a transmitter instance
+    /// 3) Configure Serial perihperal channel
+    /// We're going to use USART2 since its pins are the ones connected to the USART host interface
+    /// To configure/instantiate serial peripheral channel we have two options:
+    /// Use the device peripheral handle to directly access USART2 and instantiate a transmitter instance
     let mut tx = dp
         .USART6
         .tx(
