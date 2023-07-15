@@ -39,6 +39,7 @@ fn main() -> ! {
     // 2) Configure/Define TX pin
     // Note that we already split port A earlier for the led pin
     // Use PA2 as it is connected to the host serial interface
+    let gpioc = dp.GPIOC.split();
     let tx_pin = gpioc.pc6.into_alternate();
 
     // 3) Configure Serial perihperal channel
@@ -50,7 +51,7 @@ fn main() -> ! {
         .tx(
             tx_pin,
             Config::default()
-                .baudrate(115200.bps())
+                .baudrate(230400.bps())
                 .wordlength_8()
                 .parity_none(),
             &clocks,
