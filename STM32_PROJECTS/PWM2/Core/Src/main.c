@@ -134,9 +134,9 @@ volatile uint32_t pa9UpDur=0;
 
   while (1)
   {
-pa9UpTime=HAL_GetTick();
-sprintf(buf,"Curr time: %10u\n", pa9UpTime);
-HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+
+//sprintf(buf,"Curr time: %10u\n", pa9UpTime);
+//HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -144,7 +144,10 @@ HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
   if(pa9Direction == 1)
   {
       if(pa9val >= cicle){
+
 HAL_UART_Transmit(&huart2,(uint8_t*)"Direction 0\n", sizeof("Direction 0\n") - 1 ,1000);
+sprintf(buf,"Curr time: %10u\n", HAL_GetTick());
+HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
           pa9Direction = 0; //идем вниз
           pa9UpTime = HAL_GetTick();
           HAL_Delay(100);
@@ -157,6 +160,7 @@ HAL_UART_Transmit(&huart2,(uint8_t*)"Direction 0\n", sizeof("Direction 0\n") - 1
 //HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
           if(HAL_GetTick() >= pa9DownTime + pa9DownDur)
           {
+HAL_UART_Transmit(&huart2,(uint8_t*)"++++\n", sizeof("++++\n") - 1 ,1000);
               pa9val += pa9stepUp;
           }
       }
@@ -166,22 +170,26 @@ HAL_UART_Transmit(&huart2,(uint8_t*)"Direction 0\n", sizeof("Direction 0\n") - 1
   {
       if(pa9val <= 0) { //1  PA9
 HAL_UART_Transmit(&huart2,(uint8_t*)"Direction 1\n", sizeof("Direction 1\n") - 1 ,1000);
+sprintf(buf,"Curr time: %10u\n", HAL_GetTick());
+HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
           pa9Direction = 1; //идем вверх
           pa9DownTime = HAL_GetTick();
           HAL_Delay(100);
       }
       else
       {
-//sprintf(buf,"Curr time: %10u\n", HAL_GetTick());
-//HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
-          if(currTime >= pa9DownTime)// + pa9DownDur)
+sprintf(buf,"Curr time: %10u\n", HAL_GetTick());
+HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+sprintf(buf,"Cirr time: %10u\n", pa9UpTime + pa9UpDur);
+HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+          if(currTime >= pa9UpTime  + pa9UpDur)
           {
+HAL_UART_Transmit(&huart2,(uint8_t*)"----\n", sizeof("----\n") - 1 ,1000);
               pa9val -= pa9stepDown;
           }
       }
   }
-//sprintf(buf,"value:     %10u\n", pa9val);
-//HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf) - 1 ,1000);
+
 setPWMP(&htim1, TIM_CHANNEL_2, pa9val);
 HAL_Delay(5);
 
