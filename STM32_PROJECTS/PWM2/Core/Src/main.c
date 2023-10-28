@@ -42,7 +42,8 @@
 TIM_HandleTypeDef htim1;
 
 /* USER CODE BEGIN PV */
-
+uint16_t pwm_value = 0;
+int8_t step = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -50,7 +51,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM1_Init(void);
 /* USER CODE BEGIN PFP */
-
+void setPWM(uint16_t pwm_value);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -88,7 +89,7 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -98,6 +99,11 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	if(pwm_value == 0) step = 1;
+	if(pwm_value == 500) step = -1;
+	pwm_value += step;
+	setPWM(pwm_value);
+	HAL_Delay(5);
   }
   /* USER CODE END 3 */
 }
@@ -216,7 +222,17 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void setPWM(uint16_t value)
+{
+    TIM_OC_InitTypeDef sConfigOC;
 
+    sConfigOC.OCMode = TIM_OCMODE_PWM1;
+    sConfigOC.Pulse = value;
+    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+    HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_3); // таймер №1, канал №3
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+}
 /* USER CODE END 4 */
 
 /**
