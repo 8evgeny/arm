@@ -55,7 +55,7 @@ add_definitions(-DDEBUG
 #    -DSTM32F103xB
 #)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
+file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/STM32F1xx_HAL_Driver/Src/*.*")
 
 include_directories(
     Core/Inc
