@@ -128,8 +128,8 @@ sprintf(buf,"Curr time: %10u\n", HAL_GetTick());
 HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
 volatile uint32_t pa9UpTime=0;
 volatile uint32_t pa9DownTime=0;
-volatile uint32_t pa9DownDur=1000;
-volatile uint32_t pa9UpDur=0;
+volatile uint32_t pa9DownDur=5000;
+volatile uint32_t pa9UpDur=2000;
 
 
   while (1)
@@ -154,13 +154,8 @@ HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
       }
       else
       {
-//sprintf(buf,"Curr time: %10u\n", HAL_GetTick());
-//HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
-//sprintf(buf,"Cirr time: %10u\n", pa9UpTime + pa9UpDur);
-//HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
           if(HAL_GetTick() >= pa9DownTime + pa9DownDur)
           {
-HAL_UART_Transmit(&huart2,(uint8_t*)"++++\n", sizeof("++++\n") - 1 ,1000);
               pa9val += pa9stepUp;
           }
       }
@@ -178,13 +173,8 @@ HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
       }
       else
       {
-sprintf(buf,"Curr time: %10u\n", HAL_GetTick());
-HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
-sprintf(buf,"Cirr time: %10u\n", pa9UpTime + pa9UpDur);
-HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
-          if(currTime >= pa9UpTime  + pa9UpDur)
+          if(HAL_GetTick() >= pa9UpTime  + pa9UpDur)
           {
-HAL_UART_Transmit(&huart2,(uint8_t*)"----\n", sizeof("----\n") - 1 ,1000);
               pa9val -= pa9stepDown;
           }
       }
