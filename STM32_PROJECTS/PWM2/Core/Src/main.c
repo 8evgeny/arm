@@ -103,12 +103,12 @@ int main(void)
   MX_RTC_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
-HAL_UART_Transmit(&huart2,"test\n",sizeof("test\n"),1000);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+    HAL_UART_Transmit(&huart2,(uint8_t*)"Test UART2\n", sizeof("Test UART2\n") - 1 ,1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -122,39 +122,52 @@ volatile int32_t pa8DownDur=0, pa8UpDur=0, pa9DownDur=0, pa9UpDur=0, pa10DownDur
 volatile uint16_t cicle = 600;
 volatile uint32_t currTime;
 
+
+char buf[23];
+sprintf(buf,"Curr time: %10u\n", HAL_GetTick());
+HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+
   while (1)
   {
+//sprintf(buf,"Curr time: %10u\n", HAL_GetTick());
+//HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 
-    if(pa9val <= 0) { //1  PA9
-        pa9Direction = 1; //идем вверх
-        pa9DownTime = HAL_GetTick();
-    }
-    if(pa9val >= cicle){
-        pa9Direction = 0; //идем вниз
-        pa9UpTime = HAL_GetTick();
-    }
-    if(pa9Direction == 1)
-    {
-        currTime = HAL_GetTick();
-        if(currTime >= pa9DownTime + pa9DownDur)
-        {
-setPWMP(&htim1, TIM_CHANNEL_3, 500);
-            pa9val += pa9stepUp;
-        }
-    }
-    if(pa9Direction == 0)
-    {
-        currTime = HAL_GetTick();
+  if(pa9Direction == 1)
+  {
+//HAL_UART_Transmit(&huart2,(uint8_t*)"Direction 1\n", sizeof("Direction 1\n") - 1 ,1000);
+      if(pa9val >= cicle){
 
-        if(currTime >= pa9UpTime + pa9UpDur)
-        {
-setPWMP(&htim1, TIM_CHANNEL_3, 0);
-            pa9val -= pa9stepDown;
-        }
-    }
+          pa9Direction = 0; //идем вниз
+          pa9UpTime = HAL_GetTick();
+      }
+      else
+      {
+          if(HAL_GetTick() >= pa9UpTime + pa9UpDur)
+          {
+              pa9val += pa9stepUp;
+          }
+      }
+  }
+  if(pa9Direction == 0)
+  {
+//HAL_UART_Transmit(&huart2,(uint8_t*)"Direction 0\n", sizeof("Direction 0\n") - 1 ,1000);
+      if(pa9val <= 0) { //1  PA9
+          pa9Direction = 1; //идем вверх
+          pa9DownTime = HAL_GetTick();
+      }
+      else
+      {
+          if(currTime >= pa9DownTime + pa9DownDur)
+          {
+              pa9val -= pa9stepDown;
+          }
+      }
+  }
+sprintf(buf,"value:     %10u\n", pa9val);
+HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf) - 1 ,1000);
 setPWMP(&htim1, TIM_CHANNEL_2, pa9val);
 HAL_Delay(5);
 
@@ -227,7 +240,7 @@ static void MX_RTC_Init(void)
   */
   hrtc.Instance = RTC;
   hrtc.Init.AsynchPrediv = RTC_AUTO_1_SECOND;
-  hrtc.Init.OutPut = RTC_OUTPUTSOURCE_ALARM;
+  hrtc.Init.OutPut = RTC_OUTPUTSOURCE_NONE;
   if (HAL_RTC_Init(&hrtc) != HAL_OK)
   {
     Error_Handler();
@@ -431,7 +444,6 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
