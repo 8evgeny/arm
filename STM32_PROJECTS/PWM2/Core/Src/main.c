@@ -111,12 +111,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
     uint16_t pa8val=0, pa9val=0, pa10val=0, pa11val=0, pb5val=0;
     int8_t pa8stepUp=1, pa9stepUp=1, pa10stepUp=1, pa11stepUp=1, pb5stepUp=1;
-    int8_t pa8stepDown=1, pa9stepDown=1, pa10stepDown=1, pa11stepDown=1, pb5stepDown=1;
-    int8_t pa8Direction=1, pa9Direction=1, pa10Direction=1, pa11Direction=1, pb5Direction=1;
-    uint32_t pa8DownTime, pa8UpTime, pa9DownTime, pa9UpTime, pa10DownTime, pa10UpTime, pa11DownTime,pa11UpTime,pb5DownTime, pb5UpTime;
-    int32_t pa8DownDur=3000, pa8UpDur=3000, pa9DownDur=0, pa9UpDur=0, pa10DownDur=3000, pa10UpDur=3000, pa11DownDur=3000,pa11UpDur=3000,pb5DownDur=3000, pb5UpDur=3000;
-    uint16_t cicle = 400;
-    uint32_t currTime;
+volatile int8_t pa8stepDown=1, pa9stepDown=1, pa10stepDown=1, pa11stepDown=1, pb5stepDown=1;
+volatile int8_t pa8Direction=1, pa9Direction=1, pa10Direction=1, pa11Direction=1, pb5Direction=1;
+volatile uint32_t pa8DownTime, pa8UpTime, pa9DownTime, pa9UpTime, pa10DownTime, pa10UpTime, pa11DownTime,pa11UpTime,pb5DownTime, pb5UpTime;
+volatile int32_t pa8DownDur=0, pa8UpDur=0, pa9DownDur=0, pa9UpDur=0, pa10DownDur=0, pa10UpDur=0, pa11DownDur=0,pa11UpDur=0,pb5DownDur=0, pb5UpDur=0;
+volatile uint16_t cicle = 600;
+volatile uint32_t currTime;
+
   while (1)
   {
     /* USER CODE END WHILE */
@@ -131,26 +132,26 @@ int main(void)
         pa9Direction = 0; //идем вниз
         pa9UpTime = HAL_GetTick();
     }
-    switch (pa9Direction) {
-    case 0:
-//        if(HAL_GetTick() - pa9UpTime > pa9UpDur)
-//        {
-            pa9val -= pa9stepDown;
-            setPWMP(&htim1, TIM_CHANNEL_2, pa9val);
-//        }
-        break;
-    case 1:
-
-//        if(HAL_GetTick() - pa9DownTime < pa9DownDur)
-//        {
+    if(pa9Direction == 1)
+    {
+        currTime = HAL_GetTick();
+        if(currTime >= pa9DownTime + pa9DownDur)
+        {
+setPWMP(&htim1, TIM_CHANNEL_3, 500);
             pa9val += pa9stepUp;
-            setPWMP(&htim1, TIM_CHANNEL_2, pa9val);
-//        }
-        break;
-    default:
-        break;
+        }
     }
+    if(pa9Direction == 0)
+    {
+        currTime = HAL_GetTick();
 
+        if(currTime >= pa9UpTime + pa9UpDur)
+        {
+setPWMP(&htim1, TIM_CHANNEL_3, 0);
+            pa9val -= pa9stepDown;
+        }
+    }
+setPWMP(&htim1, TIM_CHANNEL_2, pa9val);
 HAL_Delay(5);
 
   }
