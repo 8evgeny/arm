@@ -152,7 +152,7 @@ int main(void)
       else if ((i>589823)&&(i<655360))  LL_TIM_OC_SetCompareCH3(TIM3,655359-i);//TIM3->CCR3=655359-i;
       else if((i>655359)&&(i<720896)) LL_TIM_OC_SetCompareCH4(TIM3,i-655360);//TIM3->CCR4=i-655360;
       else LL_TIM_OC_SetCompareCH4(TIM3,768431-i);//TIM3->CCR4=768431-i;
-      for(d=0;d<75;d++) {}
+      for(d=0;d<50;d++) {}
     }
   }
   /* USER CODE END 3 */
