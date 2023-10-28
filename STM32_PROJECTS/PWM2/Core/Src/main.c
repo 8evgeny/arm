@@ -111,45 +111,43 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   uint16_t pa8val, pa9val, pa10val, pa11val, pb5val;
   int8_t pa8step, pa9step, pa10step, pa11step, pb5step;
-
+//int8_t
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    if(pa8val <= 0) {pa8step = rand()%3;}
-    if(pa8val >= 100){pa8step = -1 * rand()%3;}
-    pa8val += pa8step;
-HAL_Delay(1);
-    if(pa9val <= 0) {pa9step = rand()%3;}
-    if(pa9val >= 200){pa9step = -1 * rand()%3;}
-    pa9val += pa9step;
-HAL_Delay(1);
-    if(pa10val <= 0) {pa10step = rand()%3;}
-    if(pa10val >= 300){pa10step = -1 * rand()%3;}
-    pa10val += pa10step;
-HAL_Delay(1);
-    if(pa11val <= 0) {pa11step = rand()%3;}
-    if(pa11val >= 400){pa11step = -1 * rand()%3;}
-    pa11val += pa10step;
-HAL_Delay(1);
-    if(pb5val == 0) pb5step = 1;
-    if(pb5val == 500) pb5step = -1;
-    pb5val += pb5step;
-HAL_Delay(1);
-//uint8_t num = (RTC->SSR % 9);
-uint8_t a = rand()%9;
-    setPWMP(&htim1, TIM_CHANNEL_1, pa8val); //PA8
-HAL_Delay(1);
-    setPWMP(&htim1, TIM_CHANNEL_2, pa9val); //PA9
-HAL_Delay(1);
-    setPWMP(&htim1, TIM_CHANNEL_3, pa10val); //PA10
-HAL_Delay(1);
-    setPWMP(&htim1, TIM_CHANNEL_4, pa11val); //PA11
-HAL_Delay(1);
-    setPWMP(&htim3, TIM_CHANNEL_2, pb5val); //PB5
-HAL_Delay(1);
 
+    if(pa9val <= 0) {pa9step = 2;} //1
+    if(pa9val >= 500){pa9step = -2 ;}
+    pa9val += pa9step; setPWMP(&htim1, TIM_CHANNEL_2, pa9val); //PA9
+
+    if(pb5val <= 0) {pb5step =  5;} //2
+    if(pb5val >= 500){pb5step = -5 ;}
+    pb5val += pb5step; setPWMP(&htim3, TIM_CHANNEL_2, pb5val); //PB5
+
+
+    if(pa8val <= 0) {pa8step = 1;}  //3
+    if(pa8val >= 500){pa8step = -1 ;}
+    pa8val += pa8step; setPWMP(&htim1, TIM_CHANNEL_1, pa8val); //PA8
+
+    if(pa11val <= 0) {pa11step =  2;} //4
+    if(pa11val >= 500){pa11step = -2 ;}
+    pa11val += pa10step; setPWMP(&htim1, TIM_CHANNEL_4, pa11val); //PA11
+
+    if(pa10val <= 0) {pa10step = 3;} //5
+    if(pa10val >= 500){pa10step = -3 ;}
+    pa10val += pa10step; setPWMP(&htim1, TIM_CHANNEL_3, pa10val); //PA10
+
+
+
+
+
+
+//uint8_t num = (RTC->SSR % 9);
+
+
+HAL_Delay(5);
 
   }
   /* USER CODE END 3 */
