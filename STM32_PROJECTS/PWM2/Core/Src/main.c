@@ -1,4 +1,8 @@
 /* USER CODE BEGIN Header */
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<time.h>
 /**
   ******************************************************************************
   * @file           : main.c
@@ -113,28 +117,27 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-    if(pa8val == 0) pa8step = 1;
-    if(pa8val == 200) pa8step = -1;
+    if(pa8val <= 0) {pa8step = rand()%3;}
+    if(pa8val >= 100){pa8step = -1 * rand()%3;}
     pa8val += pa8step;
 
-    if(pa9val == 0) pa9step = 1;
-    if(pa9val == 300) pa9step = -1;
+    if(pa9val <= 0) {pa9step = rand()%3;}
+    if(pa9val >= 200){pa9step = -1 * rand()%3;}
     pa9val += pa9step;
 
-    if(pa10val == 0) pa10step = 1;
-    if(pa10val == 400) pa10step = -1;
+    if(pa10val <= 0) {pa10step = rand()%3;}
+    if(pa10val >= 300){pa10step = -1 * rand()%3;}
     pa10val += pa10step;
 
-    if(pa11val == 0) pa11step = 1;
-    if(pa11val == 500) pa11step = -1;
-    pa11val += pa11step;
+    if(pa11val <= 0) {pa11step = rand()%3;}
+    if(pa11val >= 400){pa11step = -1 * rand()%3;}
+    pa11val += pa10step;
 
     if(pb5val == 0) pb5step = 1;
-    if(pb5val == 600) pb5step = -1;
+    if(pb5val == 500) pb5step = -1;
     pb5val += pb5step;
-
-
+//uint8_t num = (RTC->SSR % 9);
+uint8_t a = rand()%9;
     setPWMP(&htim1, TIM_CHANNEL_1, pa8val); //PA8
     setPWMP(&htim1, TIM_CHANNEL_2, pa9val); //PA9
     setPWMP(&htim1, TIM_CHANNEL_3, pa10val); //PA10
