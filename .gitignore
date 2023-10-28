@@ -6,3 +6,5 @@ STM32CubeProjects/
 /STM32_PROJECTS/F103C8T6_LCD/CMakeLists.txt.user
 
 STM32_PROJECTS/PWM1/.settings/stm32cubeide.project.prefs
+
+STM32_PROJECTS/PWM1/CMakeLists.txt.user
