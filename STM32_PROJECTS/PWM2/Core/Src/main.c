@@ -109,43 +109,47 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint16_t pa8val, pa9val, pa10val, pa11val, pb5val;
-  int8_t pa8step, pa9step, pa10step, pa11step, pb5step;
-//int8_t
+    uint16_t pa8val=0, pa9val=0, pa10val=0, pa11val=0, pb5val=0;
+    int8_t pa8stepUp=1, pa9stepUp=1, pa10stepUp=1, pa11stepUp=1, pb5stepUp=1;
+    int8_t pa8stepDown=1, pa9stepDown=1, pa10stepDown=1, pa11stepDown=1, pb5stepDown=1;
+    int8_t pa8Direction=1, pa9Direction=1, pa10Direction=1, pa11Direction=1, pb5Direction=1;
+    uint32_t pa8DownTime, pa8UpTime, pa9DownTime, pa9UpTime, pa10DownTime, pa10UpTime, pa11DownTime,pa11UpTime,pb5DownTime, pb5UpTime;
+    int32_t pa8DownDur=3000, pa8UpDur=3000, pa9DownDur=0, pa9UpDur=0, pa10DownDur=3000, pa10UpDur=3000, pa11DownDur=3000,pa11UpDur=3000,pb5DownDur=3000, pb5UpDur=3000;
+    uint16_t cicle = 400;
+    uint32_t currTime;
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 
-    if(pa9val <= 0) {pa9step = 2;} //1
-    if(pa9val >= 500){pa9step = -2 ;}
-    pa9val += pa9step; setPWMP(&htim1, TIM_CHANNEL_2, pa9val); //PA9
+    if(pa9val <= 0) { //1  PA9
+        pa9Direction = 1; //идем вверх
+        pa9DownTime = HAL_GetTick();
+    }
+    if(pa9val >= cicle){
+        pa9Direction = 0; //идем вниз
+        pa9UpTime = HAL_GetTick();
+    }
+    switch (pa9Direction) {
+    case 0:
+//        if(HAL_GetTick() - pa9UpTime > pa9UpDur)
+//        {
+            pa9val -= pa9stepDown;
+            setPWMP(&htim1, TIM_CHANNEL_2, pa9val);
+//        }
+        break;
+    case 1:
 
-    if(pb5val <= 0) {pb5step =  5;} //2
-    if(pb5val >= 500){pb5step = -5 ;}
-    pb5val += pb5step; setPWMP(&htim3, TIM_CHANNEL_2, pb5val); //PB5
-
-
-    if(pa8val <= 0) {pa8step = 1;}  //3
-    if(pa8val >= 500){pa8step = -1 ;}
-    pa8val += pa8step; setPWMP(&htim1, TIM_CHANNEL_1, pa8val); //PA8
-
-    if(pa11val <= 0) {pa11step =  2;} //4
-    if(pa11val >= 500){pa11step = -2 ;}
-    pa11val += pa10step; setPWMP(&htim1, TIM_CHANNEL_4, pa11val); //PA11
-
-    if(pa10val <= 0) {pa10step = 3;} //5
-    if(pa10val >= 500){pa10step = -3 ;}
-    pa10val += pa10step; setPWMP(&htim1, TIM_CHANNEL_3, pa10val); //PA10
-
-
-
-
-
-
-//uint8_t num = (RTC->SSR % 9);
-
+//        if(HAL_GetTick() - pa9DownTime < pa9DownDur)
+//        {
+            pa9val += pa9stepUp;
+            setPWMP(&htim1, TIM_CHANNEL_2, pa9val);
+//        }
+        break;
+    default:
+        break;
+    }
 
 HAL_Delay(5);
 
