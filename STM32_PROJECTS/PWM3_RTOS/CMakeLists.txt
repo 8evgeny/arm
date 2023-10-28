@@ -24,14 +24,20 @@ SET(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld)
 SET(FPU_FLAGS "-mfloat-abi=soft")
 
 SET(COMMON_FLAGS
-    "-mcpu=cortex-m3 ${FPU_FLAGS} -mthumb -mthumb-interwork -ffunction-sections -fdata-sections \
-    -g -fno-common -fmessage-length=0 ")
+    "-mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c \
+    -O0 \
+    -ffunction-sections \
+    -fdata-sections \
+    -Wall \
+    -fstack-usage \
+    --specs=nano.specs \
+    -mfloat-abi=soft -mthumb")
 
 SET(CMAKE_CXX_FLAGS_INIT "${COMMON_FLAGS} -std=c++11")
 SET(CMAKE_C_FLAGS_INIT "${COMMON_FLAGS} -std=gnu99")
 SET(CMAKE_EXE_LINKER_FLAGS_INIT "-Wl,-gc-sections,--print-memory-usage -T ${LINKER_SCRIPT}")
 
-PROJECT(PWM C CXX ASM)
+PROJECT(PWM3_RTOS C CXX ASM)
 set(CMAKE_CXX_STANDARD 11)
 
 add_definitions(-DDEBUG
@@ -39,25 +45,14 @@ add_definitions(-DDEBUG
     -DSTM32F103xB)
 
 
-#SET(COMMON_FLAGS
-#    "-mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage --specs=nano.specs -mfloat-abi=soft -mthumb")
-#add_definitions(
-#    -DDEBUG
-#    -DUSE_FULL_LL_DRIVER
-#    -DHSE_VALUE=8000000
-#    -DHSE_STARTUP_TIMEOUT=100
-#    -DLSE_STARTUP_TIMEOUT=5000
-#    -DLSE_VALUE=32768
-#    -DHSI_VALUE=8000000
-#    -DLSI_VALUE=40000
-#    -DVDD_VALUE=3300
-#    -DPREFETCH_ENABLE=1
-#    -DSTM32F103xB
-#)
+
 
 file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
 
 include_directories(
+    Middlewares/Third_Party/FreeRTOS/Source/include
+    Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
+    Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
     Core/Inc
     Drivers/STM32F1xx_HAL_Driver/Inc
     Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
