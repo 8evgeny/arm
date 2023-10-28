@@ -91,16 +91,18 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint16_t pa9val, pa10val, pb5val;
-  int8_t pa9step, pa10step, pb5step;
+  uint16_t pa8val, pa9val, pa10val, pa11val, pb5val;
+  int8_t pa8step, pa9step, pa10step, pa11step, pb5step;
 
   while (1)
   {
@@ -108,22 +110,31 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-
+    if(pa8val == 0) pa8step = 1;
+    if(pa8val == 200) pa8step = -1;
+    pa8val += pa8step;
 
     if(pa9val == 0) pa9step = 1;
-    if(pa9val == 500) pa9step = -1;
+    if(pa9val == 300) pa9step = -1;
     pa9val += pa9step;
 
-    if(pa10val == 0) pa10step = 2;
-    if(pa10val == 500) pa10step = -2;
+    if(pa10val == 0) pa10step = 1;
+    if(pa10val == 400) pa10step = -1;
     pa10val += pa10step;
 
+    if(pa11val == 0) pa11step = 1;
+    if(pa11val == 500) pa11step = -1;
+    pa11val += pa11step;
+
     if(pb5val == 0) pb5step = 1;
-    if(pb5val == 300) pb5step = -1;
+    if(pb5val == 600) pb5step = -1;
     pb5val += pb5step;
 
-    setPWMP(&htim1, TIM_CHANNEL_2, pa10val); //PA9
+
+    setPWMP(&htim1, TIM_CHANNEL_1, pa8val); //PA8
+    setPWMP(&htim1, TIM_CHANNEL_2, pa9val); //PA9
     setPWMP(&htim1, TIM_CHANNEL_3, pa10val); //PA10
+    setPWMP(&htim1, TIM_CHANNEL_4, pa11val); //PA11
     setPWMP(&htim3, TIM_CHANNEL_2, pb5val); //PB5
 
 
@@ -219,6 +230,10 @@ static void MX_TIM1_Init(void)
     Error_Handler();
   }
   if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
   {
     Error_Handler();
   }
