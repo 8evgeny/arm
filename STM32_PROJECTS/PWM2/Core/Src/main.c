@@ -91,30 +91,42 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint16_t pa10val = 0, pb5val = 0;
-  int8_t pa10step =0, pb5step = 0;
+  uint16_t pa9val, pa10val, pb5val;
+  int8_t pa9step, pa10step, pb5step;
 
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+
+
+    if(pa9val == 0) pa9step = 1;
+    if(pa9val == 500) pa9step = -1;
+    pa9val += pa9step;
+
     if(pa10val == 0) pa10step = 2;
     if(pa10val == 500) pa10step = -2;
     pa10val += pa10step;
 
     if(pb5val == 0) pb5step = 1;
-    if(pb5val == 700) pb5step = -1;
+    if(pb5val == 300) pb5step = -1;
     pb5val += pb5step;
 
+    setPWMP(&htim1, TIM_CHANNEL_2, pa10val); //PA9
     setPWMP(&htim1, TIM_CHANNEL_3, pa10val); //PA10
     setPWMP(&htim3, TIM_CHANNEL_2, pb5val); //PB5
+
+
 	HAL_Delay(5);
   }
   /* USER CODE END 3 */
@@ -198,6 +210,14 @@ static void MX_TIM1_Init(void)
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
   sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
   if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
   {
     Error_Handler();
