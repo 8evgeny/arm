@@ -10,3 +10,5 @@ STM32_PROJECTS/PWM1/.settings/stm32cubeide.project.prefs
 STM32_PROJECTS/PWM1/CMakeLists.txt.user
 
 STM32_PROJECTS/PWM2/CMakeLists.txt.user
+
+STM32_PROJECTS/PWM2/.settings/stm32cubeide.project.prefs
