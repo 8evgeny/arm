@@ -73,10 +73,8 @@ typedef struct lcd {
     uint16_t DownDur;
     uint16_t UpDur;
     uint16_t maxValue;
-    TIM_HandleTypeDef * numTimer;
-    uint32_t numChannel;
 } lcd;
-void setLcdPwm(struct lcd * led);
+uint32_t setValue(struct lcd * led);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -132,35 +130,43 @@ int main(void)
     pa9.maxValue = 600;
     pa9.stepUp = 1;
     pa9.stepDown = 1;
-    pa9.DownDur = 8000;
-    pa9.UpDur = 3000;
-    pa9.numTimer = &htim1;
-    pa9.numChannel = TIM_CHANNEL_2;
+    pa9.DownDur = 5000;
+    pa9.UpDur = 1000;
 
-    lcd pa11;
-    pa11.maxValue = 600;
-    pa11.stepUp = 1;
-    pa11.stepDown = 1;
-    pa11.DownDur = 5000;
-    pa11.UpDur = 1000;
-    pa11.numTimer = &htim1;
-    pa11.numChannel = TIM_CHANNEL_4;
+    lcd pa10;
+    pa10.maxValue = 600;
+    pa10.stepUp = 1;
+    pa10.stepDown = 1;
+    pa10.DownDur = 5000;
+    pa10.UpDur = 1000;
 
-    lcd pa8;
-    pa8.maxValue = 600;
-    pa8.stepUp = 1;
-    pa8.stepDown = 1;
-    pa8.DownDur = 1000;
-    pa8.UpDur = 8000;
-    pa8.numTimer = &htim1;
-    pa8.numChannel = TIM_CHANNEL_1;
+    lcd pb5;
+    pb5.maxValue = 600;
+    pb5.stepUp = 1;
+    pb5.stepDown = 1;
+    pb5.DownDur = 10000;
+    pb5.UpDur = 1000;
 
+//    lcd pa11;
+//    pa11.maxValue = 600;
+//    pa11.stepUp = 1;
+//    pa11.stepDown = 1;
+//    pa11.DownDur = 0;
+//    pa11.UpDur = 0;
+
+//    lcd pa8;
+//    pa8.maxValue = 600;
+//    pa8.stepUp = 1;
+//    pa8.stepDown = 1;
+//    pa8.DownDur = 0;
+//    pa8.UpDur = 0;
 
     while (1)
     {
-//        setLcdPwm(&pa9);
-        setLcdPwm(&pa11);
-
+        setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
+        setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
+//        setLcdPwm(&pa11);
+//        setPWMP(&htim3, TIM_CHANNEL_2, setValue(&pb5));
 //        HAL_Delay(2);
 //        setLcdPwm(&pa8);
 
@@ -460,16 +466,16 @@ void setPWMP(TIM_HandleTypeDef * tim, uint16_t channel, uint32_t value)
     HAL_TIM_PWM_ConfigChannel(tim, &sConfigOC, channel);
     HAL_TIM_PWM_Start(tim, channel);
 }
-void setLcdPwm(struct lcd * pin)
+uint32_t setValue(struct lcd * pin)
 {
     char buf[24];
     if(pin->Direction == 1)
     {
         if(pin->val >= pin->maxValue)
         {
-            HAL_UART_Transmit(&huart2,(uint8_t*)"Down\r\n", sizeof("Down\r\n") - 1 ,1000);
-            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
-            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+//            HAL_UART_Transmit(&huart2,(uint8_t*)"Down\r\n", sizeof("Down\r\n") - 1 ,1000);
+//            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
+//            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
 
             pin->Direction = 0; //идем вниз
             pin->UpTime = HAL_GetTick();
@@ -487,9 +493,9 @@ void setLcdPwm(struct lcd * pin)
     {
         if(pin->val <= 0)
         {
-            HAL_UART_Transmit(&huart2,(uint8_t*)"Up\r\n", sizeof("Up\r\n") - 1 ,1000);
-            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
-            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+//            HAL_UART_Transmit(&huart2,(uint8_t*)"Up\r\n", sizeof("Up\r\n") - 1 ,1000);
+//            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
+//            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
             pin->Direction = 1; //идем вверх
             pin->DownTime = HAL_GetTick();
             HAL_Delay(100);
@@ -502,7 +508,7 @@ void setLcdPwm(struct lcd * pin)
             }
         }
     }
-    setPWMP(pin->numTimer, pin->numChannel, pin->val);
+    return pin->val;
 }
 /* USER CODE END 4 */
 
