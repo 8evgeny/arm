@@ -150,21 +150,21 @@ int main(void)
     lcd pa8;
     pa8.val = 0;
     pa8.maxValue = 600;
-    pa8.stepUp = 1;
-    pa8.stepDown = 1;
-    pa8.DownDur = 0;
+    pa8.stepUp = 2;
+    pa8.stepDown = 2;
+    pa8.DownDur = 50000;
     pa8.UpDur = 0;
 
   while (1)
   {
         setPWMP(&htim1, TIM_CHANNEL_1, setValue(&pa8));
-        HAL_Delay(10);
+        HAL_Delay(3);
         setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
-        HAL_Delay(10);
+        HAL_Delay(3);
         setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
-        HAL_Delay(10);
+        HAL_Delay(3);
         setPWMP(&htim1, TIM_CHANNEL_4, setValue(&pa11));
-        HAL_Delay(10);
+        HAL_Delay(3);
 
     /* USER CODE END WHILE */
 
