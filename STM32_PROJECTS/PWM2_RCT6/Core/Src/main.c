@@ -128,16 +128,16 @@ int main(void)
     pa9.maxValue = 600;
     pa9.stepUp = 1;
     pa9.stepDown = 1;
-    pa9.DownDur = 0;
-    pa9.UpDur = 0;
+    pa9.DownDur = 2000;
+    pa9.UpDur = 1000;
 
     lcd pa10;
     pa10.val = 0;
     pa10.maxValue = 600;
     pa10.stepUp = 1;
     pa10.stepDown = 1;
-    pa10.DownDur = 0;
-    pa10.UpDur = 0;
+    pa10.DownDur = 10000;
+    pa10.UpDur = 2000;
 
     lcd pa11;
     pa11.val = 0;
