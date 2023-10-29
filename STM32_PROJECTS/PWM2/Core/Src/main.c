@@ -130,7 +130,7 @@ int main(void)
     pa9.maxValue = 600;
     pa9.stepUp = 1;
     pa9.stepDown = 1;
-    pa9.DownDur = 5000;
+    pa9.DownDur = 15000;
     pa9.UpDur = 1000;
 
     lcd pa10;
