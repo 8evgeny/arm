@@ -124,6 +124,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
     lcd pa9;
+    pa9.val = 0;
     pa9.maxValue = 600;
     pa9.stepUp = 1;
     pa9.stepDown = 1;
@@ -131,6 +132,7 @@ int main(void)
     pa9.UpDur = 0;
 
     lcd pa10;
+    pa10.val = 0;
     pa10.maxValue = 600;
     pa10.stepUp = 1;
     pa10.stepDown = 1;
@@ -138,6 +140,7 @@ int main(void)
     pa10.UpDur = 0;
 
     lcd pa11;
+    pa11.val = 0;
     pa11.maxValue = 600;
     pa11.stepUp = 1;
     pa11.stepDown = 1;
@@ -145,6 +148,7 @@ int main(void)
     pa11.UpDur = 0;
 
     lcd pa8;
+    pa8.val = 0;
     pa8.maxValue = 600;
     pa8.stepUp = 1;
     pa8.stepDown = 1;
@@ -153,14 +157,14 @@ int main(void)
 
   while (1)
   {
-//      setPWMP(&htim1, TIM_CHANNEL_1, setValue(&pa8));
-//      HAL_Delay(5);
-//      setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
-//      HAL_Delay(5);
-//      setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
-//      HAL_Delay(5);
-        setPWMP(&htim1, TIM_CHANNEL_4, setValue(&pa11));
-        HAL_Delay(5);
+//        setPWMP(&htim1, TIM_CHANNEL_1, setValue(&pa8));
+//        HAL_Delay(5);
+        setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
+        HAL_Delay(10);
+        setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
+        HAL_Delay(10);
+//        setPWMP(&htim1, TIM_CHANNEL_4, setValue(&pa11));
+//        HAL_Delay(5);
 
     /* USER CODE END WHILE */
 
@@ -411,9 +415,9 @@ uint32_t setValue(struct lcd * pin)
     {
         if(pin->val >= pin->maxValue)
         {
-//            HAL_UART_Transmit(&huart2,(uint8_t*)"Down\r\n", sizeof("Down\r\n") - 1 ,1000);
-//            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
-//            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+            HAL_UART_Transmit(&huart2,(uint8_t*)"Down\r\n", sizeof("Down\r\n") - 1 ,1000);
+            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
+            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
 
             pin->Direction = 0; //идем вниз
             pin->UpTime = HAL_GetTick();
@@ -431,9 +435,9 @@ uint32_t setValue(struct lcd * pin)
     {
         if(pin->val <= 0)
         {
-//            HAL_UART_Transmit(&huart2,(uint8_t*)"Up\r\n", sizeof("Up\r\n") - 1 ,1000);
-//            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
-//            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+            HAL_UART_Transmit(&huart2,(uint8_t*)"Up\r\n", sizeof("Up\r\n") - 1 ,1000);
+            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
+            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
             pin->Direction = 1; //идем вверх
             pin->DownTime = HAL_GetTick();
             HAL_Delay(100);
@@ -446,6 +450,8 @@ uint32_t setValue(struct lcd * pin)
             }
         }
     }
+    sprintf(buf,"Curr valu: %10u\r\n", pin->val);
+    HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
     return pin->val;
 }
 /* USER CODE END 4 */
