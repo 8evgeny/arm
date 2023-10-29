@@ -54,7 +54,7 @@ add_executable(${PROJECT_NAME}.elf
     )
 
 set(CMAKE_EXE_LINKER_FLAGS
-    "${CMAKE_EXE_LINKER_FLAGS} -mcpu=cortex-m3 -T\"/home/evg/SOFT/Github/Arm/STM32_PROJECTS/PWM2_RCT6/STM32F103RCTX_FLASH.ld\" --specs=nosys.specs -Wl,-Map=\"${BuildArtifactFileBaseName}.map\" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group")
+    "${CMAKE_EXE_LINKER_FLAGS} -mcpu=cortex-m3 --specs=nosys.specs -Wl,-Map=\"${BuildArtifactFileBaseName}.map\" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group")
 
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)

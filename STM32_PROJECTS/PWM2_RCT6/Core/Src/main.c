@@ -117,7 +117,7 @@ int main(void)
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
 //  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
-  HAL_UART_Transmit(&huart2,(uint8_t*)"Test UART2\n", sizeof("Test UART2\n") - 1 ,1000);
+  HAL_UART_Transmit(&huart2,(uint8_t*)"Test UART2\r\n", sizeof("Test UART2\r\n") - 1 ,1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
