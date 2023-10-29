@@ -138,13 +138,13 @@ int main(void)
     pa10.stepUp = 1;
     pa10.stepDown = 1;
     pa10.DownDur = 5000;
-    pa10.UpDur = 1000;
+    pa10.UpDur = 5000;
 
     lcd pb5;
     pb5.maxValue = 600;
     pb5.stepUp = 1;
     pb5.stepDown = 1;
-    pb5.DownDur = 10000;
+    pb5.DownDur = 15000;
     pb5.UpDur = 1000;
 
 //    lcd pa11;
@@ -164,6 +164,7 @@ int main(void)
     while (1)
     {
         setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
+        HAL_Delay(5);
         setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
 //        setLcdPwm(&pa11);
 //        setPWMP(&htim3, TIM_CHANNEL_2, setValue(&pb5));
