@@ -118,14 +118,15 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-//  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
-//  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
 
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
-  HAL_UART_Transmit(&huart2,(uint8_t*)"Test UART2\r\n", sizeof("Test UART2\r\n") - 1 ,1000);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
+
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+
+    HAL_UART_Transmit(&huart2,(uint8_t*)"Test UART2\r\n", sizeof("Test UART2\r\n") - 1 ,1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -147,22 +148,6 @@ int main(void)
     a2.DownDur = 1000;
     a2.UpDur = 1000;
 
-    lcd a3;
-    a3.val = 0;
-    a3.maxValue = 500;
-    a3.stepUp = 2;
-    a3.stepDown = 2;
-    a3.DownDur = 1000;
-    a3.UpDur = 1000;
-
-    lcd pa8;
-    pa8.val = 0;
-    pa8.maxValue = 500;
-    pa8.stepUp = 2;
-    pa8.stepDown = 2;
-    pa8.DownDur = 1000;
-    pa8.UpDur = 1000;
-
     lcd c1;
     c1.val = 0;
     c1.maxValue = 500;
@@ -179,18 +164,24 @@ int main(void)
     c2.DownDur = 4000;
     c2.UpDur = 2000;
 
+    lcd b1;
+    b1.val = 0;
+    b1.maxValue = 500;
+    b1.stepUp = 2;
+    b1.stepDown = 2;
+    b1.DownDur = 4000;
+    b1.UpDur = 2000;
+
   while (1)
   {
 //        setPWMP(&htim1, TIM_CHANNEL_1, setValue(&pa8));
  TIM1->CCR1 = setValue(&a1);
-//        setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
  TIM1->CCR2 = setValue(&a2);
-//        setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
-// TIM1->CCR3 = setValue(&a3);
-//        setPWMP(&htim1, TIM_CHANNEL_4, setValue(&pa11));
- TIM3->CCR3 = setValue(&c2);
 
- TIM3->CCR4 = setValue(&c1);
+ TIM2->CCR4 = setValue(&b1);
+
+ TIM3->CCR3 = setValue(&c2);
+// TIM3->CCR4 = setValue(&c1);
 
         HAL_Delay(3);
 
