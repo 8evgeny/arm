@@ -114,22 +114,22 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
     uint16_t pa8val=0, pa9val=0, pa10val=0, pa11val=0, pb5val=0;
-    int8_t pa8stepUp=1, pa9stepUp=1, pa10stepUp=1, pa11stepUp=1, pb5stepUp=1;
-volatile int8_t pa8stepDown=1, pa9stepDown=1, pa10stepDown=1, pa11stepDown=1, pb5stepDown=1;
-volatile int8_t pa8Direction=0, pa9Direction=0, pa10Direction=0, pa11Direction=0, pb5Direction=0;
-//volatile uint32_t pa8DownTime, pa8UpTime, pa9DownTime, pa9UpTime, pa10DownTime, pa10UpTime, pa11DownTime,pa11UpTime,pb5DownTime, pb5UpTime;
-//volatile int32_t pa8DownDur=0, pa8UpDur=0, pa9DownDur=0, pa9UpDur=0, pa10DownDur=0, pa10UpDur=0, pa11DownDur=0,pa11UpDur=0,pb5DownDur=0, pb5UpDur=0;
-volatile uint16_t cicle = 600;
-volatile uint32_t currTime;
+    uint8_t pa8stepUp=1, pa9stepUp=1, pa10stepUp=1, pa11stepUp=1, pb5stepUp=1;
+    uint8_t pa8stepDown=1, pa9stepDown=1, pa10stepDown=1, pa11stepDown=1, pb5stepDown=1;
+    int8_t pa8Direction=0, pa9Direction=0, pa10Direction=0, pa11Direction=0, pb5Direction=0;
+    uint32_t pa8DownTime, pa8UpTime, pa9DownTime, pa9UpTime, pa10DownTime, pa10UpTime, pa11DownTime,pa11UpTime,pb5DownTime, pb5UpTime;
+    uint32_t pa8DownDur=0, pa8UpDur=0, pa9DownDur=10000, pa9UpDur=2000, pa10DownDur=0, pa10UpDur=0, pa11DownDur=0,pa11UpDur=0,pb5DownDur=0, pb5UpDur=0;
+uint16_t cicle = 600;
+uint32_t currTime;
 
 
 char buf[24];
 sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
 HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
-volatile uint32_t pa9UpTime=0;
-volatile uint32_t pa9DownTime=0;
-volatile uint32_t pa9DownDur=5000;
-volatile uint32_t pa9UpDur=2000;
+//uint32_t pa9UpTime=0;
+//uint32_t pa9DownTime=0;
+//uint32_t pa9DownDur=5000;
+//uint32_t pa9UpDur=2000;
 
 
   while (1)
@@ -143,7 +143,7 @@ volatile uint32_t pa9UpDur=2000;
   {
       if(pa9val >= cicle){
 
-HAL_UART_Transmit(&huart2,(uint8_t*)"Direction 0\r\n", sizeof("Direction 0\r\n") - 1 ,1000);
+HAL_UART_Transmit(&huart2,(uint8_t*)"Down\r\n", sizeof("Down\r\n") - 1 ,1000);
 sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
 HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
           pa9Direction = 0; //идем вниз
@@ -162,7 +162,7 @@ HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
   if(pa9Direction == 0)
   {
       if(pa9val <= 0) { //1  PA9
-HAL_UART_Transmit(&huart2,(uint8_t*)"Direction 1\r\n", sizeof("Direction 1\r\n") - 1 ,1000);
+HAL_UART_Transmit(&huart2,(uint8_t*)"Up\r\n", sizeof("Up\r\n") - 1 ,1000);
 sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
 HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
           pa9Direction = 1; //идем вверх
