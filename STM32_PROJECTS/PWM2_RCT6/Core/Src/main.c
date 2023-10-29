@@ -116,6 +116,7 @@ int main(void)
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
+
 //  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
   HAL_UART_Transmit(&huart2,(uint8_t*)"Test UART2\r\n", sizeof("Test UART2\r\n") - 1 ,1000);
   /* USER CODE END 2 */
@@ -125,45 +126,46 @@ int main(void)
 
     lcd pa9;
     pa9.val = 0;
-    pa9.maxValue = 600;
+    pa9.maxValue = 500;
     pa9.stepUp = 4;
     pa9.stepDown = 4;
-    pa9.DownDur = 1000;
+    pa9.DownDur = 6000;
     pa9.UpDur = 1000;
 
     lcd pa10;
     pa10.val = 0;
-    pa10.maxValue = 600;
-    pa10.stepUp = 3;
-    pa10.stepDown = 3;
-    pa10.DownDur = 1000;
+    pa10.maxValue = 500;
+    pa10.stepUp = 5;
+    pa10.stepDown = 5;
+    pa10.DownDur = 3000;
     pa10.UpDur = 2000;
 
     lcd pa11;
     pa11.val = 0;
-    pa11.maxValue = 600;
-    pa11.stepUp = 2;
-    pa11.stepDown = 2;
-    pa11.DownDur = 1000;
-    pa11.UpDur = 0;
+    pa11.maxValue = 500;
+    pa11.stepUp = 5;
+    pa11.stepDown = 5;
+    pa11.DownDur = 7000;
+    pa11.UpDur = 1000;
 
     lcd pa8;
     pa8.val = 0;
-    pa8.maxValue = 600;
+    pa8.maxValue = 500;
     pa8.stepUp = 2;
     pa8.stepDown = 2;
-    pa8.DownDur = 5000;
-    pa8.UpDur = 0;
+    pa8.DownDur = 9000;
+    pa8.UpDur = 2000;
 
   while (1)
   {
-        setPWMP(&htim1, TIM_CHANNEL_1, setValue(&pa8));
-
-        setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
-
-        setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
-
-        setPWMP(&htim1, TIM_CHANNEL_4, setValue(&pa11));
+//        setPWMP(&htim1, TIM_CHANNEL_1, setValue(&pa8));
+ TIM1->CCR1 = setValue(&pa8);
+//        setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
+ TIM1->CCR2 = setValue(&pa9);
+//        setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
+ TIM1->CCR3 = setValue(&pa10);
+//        setPWMP(&htim1, TIM_CHANNEL_4, setValue(&pa11));
+ TIM1->CCR4 = setValue(&pa11);
         HAL_Delay(3);
 
     /* USER CODE END WHILE */
@@ -398,16 +400,16 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void setPWMP(TIM_HandleTypeDef * tim, uint16_t channel, uint32_t value)
-{
-    TIM_OC_InitTypeDef sConfigOC;
-    sConfigOC.OCMode = TIM_OCMODE_PWM1;
-    sConfigOC.Pulse = value;
-    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-    HAL_TIM_PWM_ConfigChannel(tim, &sConfigOC, channel);
-    HAL_TIM_PWM_Start(tim, channel);
-}
+//void setPWMP(TIM_HandleTypeDef * tim, uint16_t channel, uint32_t value)
+//{
+//    TIM_OC_InitTypeDef sConfigOC;
+//    sConfigOC.OCMode = TIM_OCMODE_PWM1;
+//    sConfigOC.Pulse = value;
+//    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+//    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+//    HAL_TIM_PWM_ConfigChannel(tim, &sConfigOC, channel);
+//    HAL_TIM_PWM_Start(tim, channel);
+//}
 uint32_t setValue(struct lcd * pin)
 {
     char buf[24];
