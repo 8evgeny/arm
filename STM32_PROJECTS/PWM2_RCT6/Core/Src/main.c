@@ -126,25 +126,25 @@ int main(void)
     lcd pa9;
     pa9.val = 0;
     pa9.maxValue = 600;
-    pa9.stepUp = 10;
-    pa9.stepDown = 10;
-    pa9.DownDur = 0;
+    pa9.stepUp = 4;
+    pa9.stepDown = 4;
+    pa9.DownDur = 1000;
     pa9.UpDur = 1000;
 
     lcd pa10;
     pa10.val = 0;
     pa10.maxValue = 600;
-    pa10.stepUp = 2;
-    pa10.stepDown = 2;
-    pa10.DownDur = 10000;
+    pa10.stepUp = 3;
+    pa10.stepDown = 3;
+    pa10.DownDur = 1000;
     pa10.UpDur = 2000;
 
     lcd pa11;
     pa11.val = 0;
     pa11.maxValue = 600;
-    pa11.stepUp = 4;
-    pa11.stepDown = 4;
-    pa11.DownDur = 10000;
+    pa11.stepUp = 2;
+    pa11.stepDown = 2;
+    pa11.DownDur = 1000;
     pa11.UpDur = 0;
 
     lcd pa8;
@@ -152,17 +152,17 @@ int main(void)
     pa8.maxValue = 600;
     pa8.stepUp = 2;
     pa8.stepDown = 2;
-    pa8.DownDur = 50000;
+    pa8.DownDur = 5000;
     pa8.UpDur = 0;
 
   while (1)
   {
         setPWMP(&htim1, TIM_CHANNEL_1, setValue(&pa8));
-        HAL_Delay(3);
+
         setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
-        HAL_Delay(3);
+
         setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
-        HAL_Delay(3);
+
         setPWMP(&htim1, TIM_CHANNEL_4, setValue(&pa11));
         HAL_Delay(3);
 
