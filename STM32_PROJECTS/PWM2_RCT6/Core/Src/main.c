@@ -68,9 +68,9 @@ typedef struct lcd {
     int8_t Direction;
     uint32_t DownTime;
     uint32_t UpTime;
-    uint16_t DownDur;
-    uint16_t UpDur;
-    uint16_t maxValue;
+    uint32_t DownDur;
+    uint32_t UpDur;
+    uint32_t maxValue;
 } lcd;
 uint32_t setValue(struct lcd * led);
 /* USER CODE END PFP */
@@ -126,25 +126,25 @@ int main(void)
     lcd pa9;
     pa9.val = 0;
     pa9.maxValue = 600;
-    pa9.stepUp = 1;
-    pa9.stepDown = 1;
-    pa9.DownDur = 2000;
+    pa9.stepUp = 10;
+    pa9.stepDown = 10;
+    pa9.DownDur = 0;
     pa9.UpDur = 1000;
 
     lcd pa10;
     pa10.val = 0;
     pa10.maxValue = 600;
-    pa10.stepUp = 1;
-    pa10.stepDown = 1;
+    pa10.stepUp = 2;
+    pa10.stepDown = 2;
     pa10.DownDur = 10000;
     pa10.UpDur = 2000;
 
     lcd pa11;
     pa11.val = 0;
     pa11.maxValue = 600;
-    pa11.stepUp = 1;
-    pa11.stepDown = 1;
-    pa11.DownDur = 0;
+    pa11.stepUp = 4;
+    pa11.stepDown = 4;
+    pa11.DownDur = 10000;
     pa11.UpDur = 0;
 
     lcd pa8;
@@ -157,14 +157,14 @@ int main(void)
 
   while (1)
   {
-//        setPWMP(&htim1, TIM_CHANNEL_1, setValue(&pa8));
-//        HAL_Delay(5);
+        setPWMP(&htim1, TIM_CHANNEL_1, setValue(&pa8));
+        HAL_Delay(10);
         setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
         HAL_Delay(10);
         setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
         HAL_Delay(10);
-//        setPWMP(&htim1, TIM_CHANNEL_4, setValue(&pa11));
-//        HAL_Delay(5);
+        setPWMP(&htim1, TIM_CHANNEL_4, setValue(&pa11));
+        HAL_Delay(10);
 
     /* USER CODE END WHILE */
 
