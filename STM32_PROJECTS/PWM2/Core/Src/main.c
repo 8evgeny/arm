@@ -63,6 +63,18 @@ static void MX_RTC_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 void setPWMP(TIM_HandleTypeDef * tim, uint16_t channel, uint16_t pwm_value);
+typedef struct lcd {
+    uint16_t val;
+    uint8_t stepUp;
+    uint8_t stepDown;
+    int8_t Direction;
+    uint32_t DownTime;
+    uint32_t UpTime;
+    uint16_t DownDur;
+    uint16_t UpDur;
+    uint16_t maxValue;
+} lcd;
+void setLcdPwm(struct lcd * led);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -114,80 +126,112 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-typedef struct lcd {
-    uint16_t val;
-    uint8_t stepUp;
-    uint8_t stepDown;
-    int8_t Direction;
-    uint32_t DownTime;
-    uint32_t UpTime;
-    uint16_t DownDur;
-    uint16_t UpDur;
-    uint16_t maxValue;
-} lcd;
+    lcd pa9;
+    pa9.maxValue = 600;
+    pa9.stepUp = 1;
+    pa9.stepDown = 1;
+    pa9.DownDur = 8000;
+    pa9.UpDur = 2000;
 
-lcd pa9;
-pa9.maxValue = 600;
-pa9.stepUp = 1;
-pa9.stepDown = 1;
-pa9.DownDur = 8000;
-pa9.UpDur = 2000;
+    while (1)
+    {
+        setLcdPwm(&pa9);
 
-char buf[24];
-sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
-HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
-
-  while (1)
-  {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 
-    if(pa9.Direction == 1)
+//    if(pa9.Direction == 1)
+//    {
+//        if(pa9.val >= pa9.maxValue)
+//        {
+//            HAL_UART_Transmit(&huart2,(uint8_t*)"Down\r\n", sizeof("Down\r\n") - 1 ,1000);
+//            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
+//            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+
+//            pa9.Direction = 0; //идем вниз
+//            pa9.UpTime = HAL_GetTick();
+//            HAL_Delay(100);
+//        }
+//        else
+//        {
+//            if(HAL_GetTick() >= pa9.DownTime + pa9.DownDur)
+//            {
+//              pa9.val += pa9.stepUp;
+//            }
+//        }
+//    }
+//    if(pa9.Direction == 0)
+//    {
+//        if(pa9.val <= 0)
+//        {
+//            HAL_UART_Transmit(&huart2,(uint8_t*)"Up\r\n", sizeof("Up\r\n") - 1 ,1000);
+//            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
+//            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+//            pa9.Direction = 1; //идем вверх
+//            pa9.DownTime = HAL_GetTick();
+//            HAL_Delay(100);
+//        }
+//        else
+//        {
+//            if(HAL_GetTick() >= pa9.UpTime  + pa9.UpDur)
+//            {
+//              pa9.val -= pa9.stepDown;
+//            }
+//        }
+//    }
+//    setPWMP(&htim1, TIM_CHANNEL_2, pa9.val);
+
+//setLcdPwm(struct lcd & led);
+    HAL_Delay(5);
+  }
+
+  /* USER CODE END 3 */
+}
+
+void setLcdPwm(struct lcd * pin)
+{
+    char buf[24];
+    if(pin->Direction == 1)
     {
-        if(pa9.val >= pa9.maxValue)
+        if(pin->val >= pin->maxValue)
         {
             HAL_UART_Transmit(&huart2,(uint8_t*)"Down\r\n", sizeof("Down\r\n") - 1 ,1000);
             sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
             HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
 
-            pa9.Direction = 0; //идем вниз
-            pa9.UpTime = HAL_GetTick();
+            pin->Direction = 0; //идем вниз
+            pin->UpTime = HAL_GetTick();
             HAL_Delay(100);
         }
         else
         {
-            if(HAL_GetTick() >= pa9.DownTime + pa9.DownDur)
+            if(HAL_GetTick() >= pin->DownTime + pin->DownDur)
             {
-              pa9.val += pa9.stepUp;
+              pin->val += pin->stepUp;
             }
         }
     }
-    if(pa9.Direction == 0)
+    if(pin->Direction == 0)
     {
-        if(pa9.val <= 0)
+        if(pin->val <= 0)
         {
             HAL_UART_Transmit(&huart2,(uint8_t*)"Up\r\n", sizeof("Up\r\n") - 1 ,1000);
             sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
             HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
-            pa9.Direction = 1; //идем вверх
-            pa9.DownTime = HAL_GetTick();
+            pin->Direction = 1; //идем вверх
+            pin->DownTime = HAL_GetTick();
             HAL_Delay(100);
         }
         else
         {
-            if(HAL_GetTick() >= pa9.UpTime  + pa9.UpDur)
+            if(HAL_GetTick() >= pin->UpTime  + pin->UpDur)
             {
-              pa9.val -= pa9.stepDown;
+              pin->val -= pin->stepDown;
             }
         }
     }
-    setPWMP(&htim1, TIM_CHANNEL_2, pa9.val);
-
-
-    HAL_Delay(5);
-  }
-  /* USER CODE END 3 */
+    setPWMP(&htim1, TIM_CHANNEL_2, pin->val);
 }
 
 /**
