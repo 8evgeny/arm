@@ -130,7 +130,7 @@ int main(void)
     lcd1.maxValue = 600;
     lcd1.stepUp = 2;
     lcd1.stepDown = 2;
-    lcd1.DownDur = 10000;
+    lcd1.DownDur = 3000;
     lcd1.UpDur = 1000;
 
     lcd lcd2;
@@ -158,16 +158,16 @@ int main(void)
     lcd5.maxValue = 600;
     lcd5.stepUp = 1;
     lcd5.stepDown = 1;
-    lcd5.DownDur = 0;
+    lcd5.DownDur = 3000;
     lcd5.UpDur = 1000;
 
     while (1)
     {
-        TIM1->CCR1 = setValue(&lcd1);
+//        TIM1->CCR1 = setValue(&lcd1);
 //        TIM1->CCR2 = setValue(&lcd2);
 //        TIM1->CCR3 = setValue(&lcd3);
 //        TIM1->CCR4 = setValue(&lcd4);
-//        TIM3->CCR1 = setValue(&lcd5);
+        TIM3->CCR1 = setValue(&lcd5);
 
 
         HAL_Delay(5);
