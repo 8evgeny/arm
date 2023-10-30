@@ -62,7 +62,7 @@ static void MX_TIM3_Init(void);
 static void MX_RTC_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
-void setPWMP(TIM_HandleTypeDef * tim, uint16_t channel, uint32_t pwm_value);
+//void setPWMP(TIM_HandleTypeDef * tim, uint16_t channel, uint32_t pwm_value);
 typedef struct lcd {
     uint32_t val;
     uint8_t stepUp;
@@ -119,59 +119,59 @@ int main(void)
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
-    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
     HAL_UART_Transmit(&huart2,(uint8_t*)"Test UART2\n", sizeof("Test UART2\n") - 1 ,1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    lcd pa9;
-    pa9.maxValue = 600;
-    pa9.stepUp = 1;
-    pa9.stepDown = 1;
-    pa9.DownDur = 15000;
-    pa9.UpDur = 1000;
+    lcd lcd1;
+    lcd1.maxValue = 600;
+    lcd1.stepUp = 1;
+    lcd1.stepDown = 1;
+    lcd1.DownDur = 0;
+    lcd1.UpDur = 1000;
 
-    lcd pa10;
-    pa10.maxValue = 600;
-    pa10.stepUp = 1;
-    pa10.stepDown = 1;
-    pa10.DownDur = 5000;
-    pa10.UpDur = 5000;
+    lcd lcd2;
+    lcd2.maxValue = 600;
+    lcd2.stepUp = 1;
+    lcd2.stepDown = 1;
+    lcd2.DownDur = 0;
+    lcd2.UpDur = 1000;
 
-    lcd pb5;
-    pb5.maxValue = 600;
-    pb5.stepUp = 1;
-    pb5.stepDown = 1;
-    pb5.DownDur = 15000;
-    pb5.UpDur = 1000;
+    lcd lcd3;
+    lcd3.maxValue = 600;
+    lcd3.stepUp = 1;
+    lcd3.stepDown = 1;
+    lcd3.DownDur = 0;
+    lcd3.UpDur = 1000;
 
-//    lcd pa11;
-//    pa11.maxValue = 600;
-//    pa11.stepUp = 1;
-//    pa11.stepDown = 1;
-//    pa11.DownDur = 0;
-//    pa11.UpDur = 0;
+    lcd lcd4;
+    lcd4.maxValue = 600;
+    lcd4.stepUp = 1;
+    lcd4.stepDown = 1;
+    lcd4.DownDur = 0;
+    lcd4.UpDur = 1000;
 
-//    lcd pa8;
-//    pa8.maxValue = 600;
-//    pa8.stepUp = 1;
-//    pa8.stepDown = 1;
-//    pa8.DownDur = 0;
-//    pa8.UpDur = 0;
+    lcd lcd5;
+    lcd5.maxValue = 600;
+    lcd5.stepUp = 1;
+    lcd5.stepDown = 1;
+    lcd5.DownDur = 0;
+    lcd5.UpDur = 1000;
 
     while (1)
     {
-        setPWMP(&htim1, TIM_CHANNEL_2, setValue(&pa9));
-        HAL_Delay(5);
-        setPWMP(&htim1, TIM_CHANNEL_3, setValue(&pa10));
-//        setLcdPwm(&pa11);
-//        setPWMP(&htim3, TIM_CHANNEL_2, setValue(&pb5));
-//        HAL_Delay(2);
-//        setLcdPwm(&pa8);
+        TIM1->CCR1 = setValue(&lcd1);
+//        TIM1->CCR2 = setValue(&lcd2);
+//        TIM1->CCR3 = setValue(&lcd3);
+//        TIM1->CCR4 = setValue(&lcd4);
+//        TIM3->CCR1 = setValue(&lcd5);
+
 
         HAL_Delay(5);
+
     }
     /* USER CODE END WHILE */
 
@@ -294,6 +294,7 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 0 */
 
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
   TIM_OC_InitTypeDef sConfigOC = {0};
   TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
@@ -308,6 +309,15 @@ static void MX_TIM1_Init(void)
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
   if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
   {
     Error_Handler();
@@ -371,6 +381,7 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 0 */
 
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
   TIM_OC_InitTypeDef sConfigOC = {0};
 
@@ -383,6 +394,15 @@ static void MX_TIM3_Init(void)
   htim3.Init.Period = 500-1;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
   {
     Error_Handler();
@@ -397,7 +417,7 @@ static void MX_TIM3_Init(void)
   sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
   {
     Error_Handler();
   }
@@ -457,16 +477,16 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void setPWMP(TIM_HandleTypeDef * tim, uint16_t channel, uint32_t value)
-{
-    TIM_OC_InitTypeDef sConfigOC;
-    sConfigOC.OCMode = TIM_OCMODE_PWM1;
-    sConfigOC.Pulse = value;
-    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-    HAL_TIM_PWM_ConfigChannel(tim, &sConfigOC, channel);
-    HAL_TIM_PWM_Start(tim, channel);
-}
+//void setPWMP(TIM_HandleTypeDef * tim, uint16_t channel, uint32_t value)
+//{
+//    TIM_OC_InitTypeDef sConfigOC;
+//    sConfigOC.OCMode = TIM_OCMODE_PWM1;
+//    sConfigOC.Pulse = value;
+//    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+//    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+//    HAL_TIM_PWM_ConfigChannel(tim, &sConfigOC, channel);
+//    HAL_TIM_PWM_Start(tim, channel);
+//}
 uint32_t setValue(struct lcd * pin)
 {
     char buf[24];
