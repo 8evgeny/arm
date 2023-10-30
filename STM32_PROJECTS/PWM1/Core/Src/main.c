@@ -39,7 +39,6 @@
 
 #include <stdint.h>
 /* USER CODE END Header */
-
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
@@ -104,7 +103,7 @@ int main(void)
 
   /* System interrupt init*/
 
-  /**NOJTAG: JTAG-DP Disabled and SW-DP Enabled
+  /** NOJTAG: JTAG-DP Disabled and SW-DP Enabled
   */
   LL_GPIO_AF_Remap_SWJ_NOJTAG();
 
@@ -165,10 +164,8 @@ int main(void)
 void SystemClock_Config(void)
 {
   LL_FLASH_SetLatency(LL_FLASH_LATENCY_2);
-
-   if(LL_FLASH_GetLatency() != LL_FLASH_LATENCY_2)
+  while(LL_FLASH_GetLatency()!= LL_FLASH_LATENCY_2)
   {
-    Error_Handler();
   }
   LL_RCC_HSE_Enable();
 
@@ -196,7 +193,6 @@ void SystemClock_Config(void)
 
   }
   LL_Init1msTick(72000000);
-  LL_SYSTICK_SetClkSource(LL_SYSTICK_CLKSOURCE_HCLK);
   LL_SetSystemCoreClock(72000000);
 }
 
@@ -239,8 +235,6 @@ static void MX_TIM2_Init(void)
   LL_TIM_OC_Init(TIM2, LL_TIM_CHANNEL_CH3, &TIM_OC_InitStruct);
   LL_TIM_OC_DisableFast(TIM2, LL_TIM_CHANNEL_CH3);
   LL_TIM_OC_EnablePreload(TIM2, LL_TIM_CHANNEL_CH4);
-  TIM_OC_InitStruct.OCState = LL_TIM_OCSTATE_DISABLE;
-  TIM_OC_InitStruct.OCNState = LL_TIM_OCSTATE_DISABLE;
   LL_TIM_OC_Init(TIM2, LL_TIM_CHANNEL_CH4, &TIM_OC_InitStruct);
   LL_TIM_OC_DisableFast(TIM2, LL_TIM_CHANNEL_CH4);
   LL_TIM_SetTriggerOutput(TIM2, LL_TIM_TRGO_RESET);
@@ -300,18 +294,12 @@ static void MX_TIM3_Init(void)
   LL_TIM_OC_Init(TIM3, LL_TIM_CHANNEL_CH1, &TIM_OC_InitStruct);
   LL_TIM_OC_DisableFast(TIM3, LL_TIM_CHANNEL_CH1);
   LL_TIM_OC_EnablePreload(TIM3, LL_TIM_CHANNEL_CH2);
-  TIM_OC_InitStruct.OCState = LL_TIM_OCSTATE_DISABLE;
-  TIM_OC_InitStruct.OCNState = LL_TIM_OCSTATE_DISABLE;
   LL_TIM_OC_Init(TIM3, LL_TIM_CHANNEL_CH2, &TIM_OC_InitStruct);
   LL_TIM_OC_DisableFast(TIM3, LL_TIM_CHANNEL_CH2);
   LL_TIM_OC_EnablePreload(TIM3, LL_TIM_CHANNEL_CH3);
-  TIM_OC_InitStruct.OCState = LL_TIM_OCSTATE_DISABLE;
-  TIM_OC_InitStruct.OCNState = LL_TIM_OCSTATE_DISABLE;
   LL_TIM_OC_Init(TIM3, LL_TIM_CHANNEL_CH3, &TIM_OC_InitStruct);
   LL_TIM_OC_DisableFast(TIM3, LL_TIM_CHANNEL_CH3);
   LL_TIM_OC_EnablePreload(TIM3, LL_TIM_CHANNEL_CH4);
-  TIM_OC_InitStruct.OCState = LL_TIM_OCSTATE_DISABLE;
-  TIM_OC_InitStruct.OCNState = LL_TIM_OCSTATE_DISABLE;
   LL_TIM_OC_Init(TIM3, LL_TIM_CHANNEL_CH4, &TIM_OC_InitStruct);
   LL_TIM_OC_DisableFast(TIM3, LL_TIM_CHANNEL_CH4);
   LL_TIM_SetTriggerOutput(TIM3, LL_TIM_TRGO_RESET);
@@ -392,4 +380,3 @@ void assert_failed(uint8_t *file, uint32_t line)
 }
 #endif /* USE_FULL_ASSERT */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

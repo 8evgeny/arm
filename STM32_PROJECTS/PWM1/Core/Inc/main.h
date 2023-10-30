@@ -57,7 +57,6 @@ extern "C" {
 #include "stm32f1xx_ll_pwr.h"
 #include "stm32f1xx_ll_dma.h"
 #include "stm32f1xx_ll_tim.h"
-#include "stm32f1xx.h"
 #include "stm32f1xx_ll_gpio.h"
 
 #if defined(USE_FULL_ASSERT)
@@ -113,5 +112,3 @@ void Error_Handler(void);
 #endif
 
 #endif /* __MAIN_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
