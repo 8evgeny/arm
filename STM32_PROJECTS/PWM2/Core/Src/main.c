@@ -128,9 +128,9 @@ int main(void)
 
     lcd lcd1;
     lcd1.maxValue = 600;
-    lcd1.stepUp = 1;
-    lcd1.stepDown = 1;
-    lcd1.DownDur = 0;
+    lcd1.stepUp = 2;
+    lcd1.stepDown = 2;
+    lcd1.DownDur = 10000;
     lcd1.UpDur = 1000;
 
     lcd lcd2;
@@ -494,9 +494,9 @@ uint32_t setValue(struct lcd * pin)
     {
         if(pin->val >= pin->maxValue)
         {
-//            HAL_UART_Transmit(&huart2,(uint8_t*)"Down\r\n", sizeof("Down\r\n") - 1 ,1000);
-//            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
-//            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+            HAL_UART_Transmit(&huart2,(uint8_t*)"Down\r\n", sizeof("Down\r\n") - 1 ,1000);
+            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
+            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
 
             pin->Direction = 0; //идем вниз
             pin->UpTime = HAL_GetTick();
@@ -514,9 +514,9 @@ uint32_t setValue(struct lcd * pin)
     {
         if(pin->val <= 0)
         {
-//            HAL_UART_Transmit(&huart2,(uint8_t*)"Up\r\n", sizeof("Up\r\n") - 1 ,1000);
-//            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
-//            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
+            HAL_UART_Transmit(&huart2,(uint8_t*)"Up\r\n", sizeof("Up\r\n") - 1 ,1000);
+            sprintf(buf,"Curr time: %10u\r\n", HAL_GetTick());
+            HAL_UART_Transmit(&huart2,(uint8_t*)buf, sizeof(buf)-1 ,1000);
             pin->Direction = 1; //идем вверх
             pin->DownTime = HAL_GetTick();
             HAL_Delay(100);
