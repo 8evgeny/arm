@@ -176,11 +176,11 @@ int main(void)
   {
 //        setPWMP(&htim1, TIM_CHANNEL_1, setValue(&pa8));
  TIM1->CCR1 = setValue(&a1);
- TIM1->CCR2 = setValue(&a2);
+// TIM1->CCR2 = setValue(&a2);
 
- TIM2->CCR4 = setValue(&b1);
+// TIM2->CCR4 = setValue(&b1);
 
- TIM3->CCR3 = setValue(&c2);
+// TIM3->CCR3 = setValue(&c2);
 // TIM3->CCR4 = setValue(&c1);
 
         HAL_Delay(3);
