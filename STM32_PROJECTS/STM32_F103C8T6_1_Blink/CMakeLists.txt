@@ -52,6 +52,7 @@ set(LINKER_FLAGS "SHELL: \
     -mcpu=cortex-m3 \
     --specs=nosys.specs \
     -Wl,--gc-sections \
+    -Wl,--no-warn-rwx-segments \
     -static \
     --specs=nano.specs \
     -mfloat-abi=soft \
