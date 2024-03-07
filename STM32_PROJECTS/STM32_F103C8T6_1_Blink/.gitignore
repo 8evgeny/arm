@@ -1,5 +1,6 @@
 build
 Debug
+cmake-build-debug
 Release
 tmp
 /CMakeLists.txt.user

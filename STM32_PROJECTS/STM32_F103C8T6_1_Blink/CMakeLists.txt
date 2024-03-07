@@ -52,7 +52,6 @@ set(LINKER_FLAGS "SHELL: \
     -mcpu=cortex-m3 \
     --specs=nosys.specs \
     -Wl,--gc-sections \
-    -Wl,--no-warn-rwx-segments \
     -static \
     --specs=nano.specs \
     -mfloat-abi=soft \
@@ -63,6 +62,7 @@ set(LINKER_FLAGS "SHELL: \
     -Wl,--end-group \
     ")
 #-Wl,-Map="${BuildArtifactFileBaseName}.map"
+#-Wl,--no-warn-rwx-segments \
 target_link_options(${PROJECT_NAME}.elf PRIVATE ${LINKER_FLAGS})
 
 
