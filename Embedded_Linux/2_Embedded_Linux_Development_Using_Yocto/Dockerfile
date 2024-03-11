@@ -10,7 +10,7 @@ WORKDIR /home/evg
 RUN git clone git://git.yoctoproject.org/poky -b rocko 
 RUN cd /home/evg/poky && . ./oe-init-build-env && bitbake core-image-full-cmdline
 USER root
-RUN apt-get install -y mc
+RUN apt-get install -y mc qemu-kvm qemu virt-manager virt-viewer libvirt-bin
 USER evg
 CMD ["/bin/bash"]
 
