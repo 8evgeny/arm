@@ -9,7 +9,6 @@ USER evg
 WORKDIR /home/evg
 # RUN git clone git://git.buildroot.net/buildroot -b 2020.02.9
 RUN git clone git://git.buildroot.net/buildroot 
-RUN cd buildroot && make imx8mmpico_defconfig && make
-# RUN make qemu_arm_versatile_defconfig  
+RUN cd buildroot && make beaglebone_qt5_defconfig && make
 CMD ["/bin/bash"]
 
