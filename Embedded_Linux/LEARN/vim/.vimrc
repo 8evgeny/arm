@@ -29,7 +29,7 @@ set hls
 " Использовать инкреминтированный поиск
 set is
 " ширина текста 
-set textwidth=80
+set textwidth=120
  
 " Не делать все окна одинакового размера
 set noequalalways
@@ -85,6 +85,7 @@ set exrc
 set secure
  
 "Clang-completer
+let g:clang_library_path = '/usr/lib/x86_64-linux-gnu/libclang-10.so.1'
 " Включить дополнительные подсказки (аргументы функций, шаблонов и т.д.)
 let g:clang_snippets=1
 " Использоать ultisnips для дополнительных подскахок (чтобы подсказки шаблонов
