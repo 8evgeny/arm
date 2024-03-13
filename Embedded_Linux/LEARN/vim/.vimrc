@@ -15,7 +15,10 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Rip-Rip/clang_complete'
- 
+Plugin 'c.vim'
+" :source %
+" :PluginInstall
+
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -30,7 +33,11 @@ set hls
 set is
 " ширина текста 
 set textwidth=120
- 
+
+
+ let &path.="src/include,src"
+
+
 " Не делать все окна одинакового размера
 set noequalalways
 " Высота окон по-умолчанию 20 строк
