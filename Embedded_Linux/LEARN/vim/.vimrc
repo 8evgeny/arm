@@ -16,8 +16,9 @@ Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'c.vim'
-" :source %
-" :PluginInstall
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'vhdirk/vim-cmake'
+
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
