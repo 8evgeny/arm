@@ -4,7 +4,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
  
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -22,7 +21,7 @@ Plugin 'vhdirk/vim-cmake'
 
 Plugin 'junegunn/vim-plug'
 Plugin 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 Plugin 'jackguo380/vim-lsp-cxx-highlight'
 Plugin 'vim-airline/vim-airline'
 

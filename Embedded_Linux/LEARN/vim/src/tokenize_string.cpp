@@ -24,7 +24,6 @@ int main()
 
     //возвращает первый токен
     char *token = strtok(str, &tok);
-
     while(token != NULL)
     {
         printf("%s\n", token);

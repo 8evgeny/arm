@@ -13,6 +13,7 @@ bool containOnlyDigits(std::string const&str)
 int main()
 {
     std::string str{"String"};
+   str.data();
     std::string str1{"String1"};
     std::cout<<std::boolalpha << containOnlyLetters(str)<<std::endl;
     std::cout<<std::boolalpha << containOnlyLetters(str1)<<std::endl;
