@@ -4,6 +4,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
  
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -13,16 +14,29 @@ Plugin 'gmarik/Vundle.vim'
 " User defined plugins
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdtree'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'c.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'vhdirk/vim-cmake'
 
+Plugin 'junegunn/vim-plug'
+Plugin 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'jackguo380/vim-lsp-cxx-highlight'
+Plugin 'vim-airline/vim-airline'
+
+"colorschemes
+Plugin 'sickill/vim-monokai'
+Plugin 'morhetz/gruvbox'
+Plugin 'joshdick/onedark.vim'
+Plugin 'rakr/vim-one'
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+
 " Put your non-Plugin stuff after this line
 " 
  
