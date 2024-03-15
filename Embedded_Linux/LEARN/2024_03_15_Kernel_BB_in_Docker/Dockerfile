@@ -13,5 +13,20 @@ ENV LC_ALL en_US.UTF-8
 RUN groupadd evg && useradd -p 123 -b /home -d /home/evg -m -g evg -s /bin/bash -G sudo evg
 USER evg
 WORKDIR /home/evg
+RUN git clone --single-branch --branch u-boot-2016.09.y git://git.denx.de/u-boot.git u-boot/ && cd u-boot &&  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- am335x_boneblack_defconfig && make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
+# RUN wget -c https://rcn-ee.com/repos/git/u-boot-patches/v2016.03/0001-am335x_evm-uEnv.txt-bootz-n-fixes.patch
+# RUN patch -p1 < 0001-am335x_evm-uEnv.txt-bootz-n-fixes.patch
 CMD ["/bin/bash"]
+
+
+# * master
+#   remotes/origin/HEAD -> origin/master
+#   remotes/origin/WIP/resync-dtc-v1.6.0-31-gcbca977ea121-v5
+#   remotes/origin/master
+#   remotes/origin/next
+#   remotes/origin/u-boot-2009.11.y
+#   remotes/origin/u-boot-2013.01.y
+#   remotes/origin/u-boot-2016.09.y
+#   remotes/origin/u-boot-2023.07.y
+
 
