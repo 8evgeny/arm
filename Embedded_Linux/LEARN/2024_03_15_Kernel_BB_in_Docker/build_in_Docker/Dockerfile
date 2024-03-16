@@ -26,9 +26,9 @@ RUN git clone --single-branch --branch beaglev-v5.10.113-1.1.2-ubuntu  --progres
 USER root
 RUN apt-get install -y flex bison libgmp3-dev libmpfr-dev libmpc-dev libssl-dev
 USER evg
-WORKDIR /home/evg
-RUN cd linux && make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig
-# RUN cd linux && make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
+WORKDIR /home/evg/linux
+RUN make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig
+# RUN make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
 
 CMD ["/bin/bash"]
 
