@@ -28,5 +28,14 @@ echo "uenvcmd=run netboot" >> uEnv.txt
 echo "Files for BOOT create in folder SDCARD_BOOT"
 cd ../..
 # ls
+if [[ ! -d linux ]]; then 
+    echo clone to linux
+    git clone --single-branch --branch beaglev-v5.10.113-1.1.2-ubuntu  --progress  https://github.com/beagleboard/linux.git
 
+else
+    echo linux exist
+fi
+cd linux
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
 
