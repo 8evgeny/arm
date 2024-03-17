@@ -35,7 +35,11 @@ if [[ ! -d linux ]]; then
 else
     echo linux exist
 fi
+
+Копируем внутрь linux ранее созданный файл .config
+cp .config linux/
 cd linux
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig
+# make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig
+# make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
 
