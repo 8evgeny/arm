@@ -31,6 +31,13 @@ WORKDIR /home/evg/linux
 # ошибка при дальнейшей сборке поэтому копируем готовый конфиг
 COPY .config /home/evg/linux
 RUN make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
+# Ядро собрано переходим к rootfs
+
+
+
+
+
+
 
 CMD ["/bin/bash"]
 
