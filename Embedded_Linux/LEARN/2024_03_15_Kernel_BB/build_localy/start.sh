@@ -28,6 +28,29 @@ echo "uenvcmd=run netboot" >> uEnv.txt
 echo "Files for BOOT create in folder SDCARD_BOOT"
 cd ../..
 # ls
+
+
+#Переходим к RFS
+
+#sudo mkdir /media/RFS
+#sudo mount /dev/sdc2 /media/RFS/
+#sudo tar -xvf rootfs.tar.xz -C /media/RFS/
+#cd /media/RFS/rootfs/
+#sudo mv ./* ../
+#cd ../
+#sudo rmdir rootfs
+
+rm -R SDCARD_BOOT/RFS
+mkdir -p SDCARD_BOOT/RFS
+tar -xvf rootfs.tar.xz -C SDCARD_BOOT/RFS/
+cd SDCARD_BOOT/RFS/rootfs/
+mv ./* ../
+cd ../
+rmdir rootfs
+cd ../..
+
+
+
 if [[ ! -d linux ]]; then 
     echo clone to linux
     git clone --single-branch --branch beaglev-v5.10.113-1.1.2-ubuntu  --progress  https://github.com/beagleboard/linux.git
@@ -42,28 +65,8 @@ cd linux
 # make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig
 # make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
-
-#Переходим к RFS
-
-#sudo mkdir /media/RFS
-#sudo mount /dev/sdc2 /media/RFS/
-#sudo tar -xvf rootfs.tar.xz -C /media/RFS/
-#cd /media/RFS/rootfs/
-#sudo mv ./* ../
-#cd ../
-#sudo rmdir rootfs
-
-#cd ..
-#rm -R SDCARD_BOOT/RFS
-#mkdir -p SDCARD_BOOT/RFS
-#tar -xvf rootfs.tar.xz -C SDCARD_BOOT/RFS/
-#cd SDCARD_BOOT/RFS/rootfs/
-#mv ./* ../
-#cd ../
-#rmdir rootfs
-#cd linux
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 modules
-#sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/media/RFS/ modules_install
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=../SDCARD_BOOT/RFS/ modules_install
 
 
 
