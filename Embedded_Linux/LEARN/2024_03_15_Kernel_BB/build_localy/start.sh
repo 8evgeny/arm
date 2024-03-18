@@ -17,7 +17,8 @@ if [[ ! -d SDCARD_BOOT ]]; then  # создаю директорию SDCARD_BOOT
     echo create SDCARD_BOOT
     mkdir SDCARD_BOOT
 fi
-mkdir -p SDCARD_BOOT/BOOT/ && cp -f u-boot/MLO "$_"
+mkdir -p SDCARD_BOOT/BOOT/ 
+cp -f u-boot/MLO SDCARD_BOOT/BOOT/
 cp -f u-boot/u-boot.img SDCARD_BOOT/BOOT/
 cd SDCARD_BOOT/BOOT
 touch uEnv.txt
@@ -67,7 +68,9 @@ cd linux
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 modules
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=../SDCARD_BOOT/RFS/ modules_install
-
+pwd
+cp -f arch/arm/boot/uImage ../SDCARD_BOOT/RFS/boot
+cp -f arch/arm/boot/dts/am335x-boneblack.dtb ../SDCARD_BOOT/RFS/boot
 
 
 
