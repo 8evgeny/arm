@@ -36,10 +36,35 @@ else
     echo linux exist
 fi
 
-Копируем внутрь linux ранее созданный файл .config
+#Копируем внутрь linux ранее созданный файл .config
 cp .config linux/
 cd linux
 # make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig
 # make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
+
+#Переходим к RFS
+
+#sudo mkdir /media/RFS
+#sudo mount /dev/sdc2 /media/RFS/
+#sudo tar -xvf rootfs.tar.xz -C /media/RFS/
+#cd /media/RFS/rootfs/
+#sudo mv ./* ../
+#cd ../
+#sudo rmdir rootfs
+
+#cd ..
+#rm -R SDCARD_BOOT/RFS
+#mkdir -p SDCARD_BOOT/RFS
+#tar -xvf rootfs.tar.xz -C SDCARD_BOOT/RFS/
+#cd SDCARD_BOOT/RFS/rootfs/
+#mv ./* ../
+#cd ../
+#rmdir rootfs
+#cd linux
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 modules
+#sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=/media/RFS/ modules_install
+
+
+
 
