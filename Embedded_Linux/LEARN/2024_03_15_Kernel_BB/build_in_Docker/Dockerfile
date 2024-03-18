@@ -27,8 +27,17 @@ USER root
 RUN apt-get install -y flex bison libgmp3-dev libmpfr-dev libmpc-dev libssl-dev gcc-arm-linux-gnueabihf
 USER evg
 WORKDIR /home/evg/linux
-RUN make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig
+#RUN make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig   
+# ошибка при дальнейшей сборке поэтому копируем готовый конфиг
+COPY .config /home/evg/linux
 RUN make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
+# Ядро собрано переходим к rootfs
+
+
+
+
+
+
 
 CMD ["/bin/bash"]
 
