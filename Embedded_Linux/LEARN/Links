@@ -2,17 +2,22 @@ https://lists.openembedded.org/g/main
 https://embeddeduse.com/2019/02/11/using-docker-containers-for-yocto-builds/
 https://git.openembedded.org/openembedded-core/
 
-https://www.qemu.org/docs/master/system/arm/versatile.html        QEMU
+https://www.qemu.org/docs/master/system/arm/versatile.html                      QEMU
 
-https://www.youtube.com/watch?v=9vsu67uMcko&t=942s                video buildroot
-https://www.youtube.com/watch?v=2-PwskQrZac                       video Yocto
+https://www.youtube.com/watch?v=9vsu67uMcko&t=942s                              video buildroot
+https://www.youtube.com/watch?v=2-PwskQrZac                                     video Yocto
 https://www.youtube.com/watch?v=KU8_HMfpv0s
 https://www.youtube.com/watch?v=bTEdfwtPtNY
-https://www.youtube.com/watch?v=srM6u8e4tyw                        dts
-https://www.youtube.com/watch?v=DVlQZnFjO9o                       add custom application
-https://www.youtube.com/watch?v=OlMY7iDoN_w                       wifi
-https://www.youtube.com/watch?v=gaxQoucrWrk&t=2618s             Настройка VIM
+https://www.youtube.com/watch?v=srM6u8e4tyw                                     dts
+https://www.youtube.com/watch?v=DVlQZnFjO9o                                     add custom application
+https://www.youtube.com/watch?v=OlMY7iDoN_w                                     wifi
+https://www.youtube.com/watch?v=gaxQoucrWrk&t=2618s                             Настройка VIM
 
-https://buildelinux.github.io                                     Сборка BB
-https://help.ubuntu.ru/wiki/сборка_ядра#how-toсборка_ядра_linux
+https://embedjournal.com/kernel-compilation-beaglebone-black/                   Compiling and Deploying BeagleBone Black Kernel       ++
+https://elinux.org/Building_BBB_Kernel                                          Building BBB Kernel
+https://buildelinux.github.io                                                   Сборка BB
+https://help.ubuntu.ru/wiki/сборка_ядра#how-toсборка_ядра_linux                 HOW-TO: Сборка ядра Linux
 https://wiki.beyondlogic.org/index.php/BeagleBoneBlack_Building_Kernel       
+
+https://developer.toradex.com/linux-bsp/os-development/boot/boot-from-a-tftpnfs-server/    Boot from a TFTP/NFS Server
+
