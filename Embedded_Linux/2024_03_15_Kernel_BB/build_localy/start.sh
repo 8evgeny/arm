@@ -66,11 +66,12 @@ cd linux
 # make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig
 # make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 modules
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=../SDCARD_BOOT/RFS/ modules_install
+# make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 modules
+# make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=../SDCARD_BOOT/RFS/ modules_install
 pwd
-cp -f arch/arm/boot/uImage ../SDCARD_BOOT/RFS/boot
-cp -f arch/arm/boot/dts/am335x-boneblack.dtb ../SDCARD_BOOT/RFS/boot
-
+# cp -f arch/arm/boot/uImage ../SDCARD_BOOT/RFS/boot
+# cp -f arch/arm/boot/dts/am335x-boneblack.dtb ../SDCARD_BOOT/RFS/boot
+cp -f arch/arm/boot/uImage ../SDCARD_BOOT/BOOT
+cp -f arch/arm/boot/dts/am335x-boneblack.dtb ../SDCARD_BOOT/BOOT
 
 
