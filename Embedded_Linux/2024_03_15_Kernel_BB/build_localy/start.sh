@@ -12,7 +12,6 @@ if [[ ! -d u-boot ]]; then # если нет папки u-boot
 else
     echo u-boot exist
 fi
-
 if [[ ! -d SDCARD ]]; then  # создаю директорию SDCARD 
     echo create SDCARD
     mkdir SDCARD
@@ -28,11 +27,8 @@ echo "netboot=echo Booting from microSD ...; setenv autoload no ; load mmc 0:1 $
 echo "uenvcmd=run netboot" >> uEnv.txt
 echo "Files for BOOT create in folder SDCARD"
 cd ../..
-# ls
-
 
 #Переходим к RFS
-
 #sudo mkdir /media/RFS
 #sudo mount /dev/sdc2 /media/RFS/
 #sudo tar -xvf rootfs.tar.xz -C /media/RFS/
@@ -50,11 +46,9 @@ cd ../
 rmdir rootfs
 cd ../..
 
-
 if [[ ! -d linux ]]; then 
     echo clone to linux
     git clone --single-branch --branch beaglev-v5.10.113-1.1.2-ubuntu  --progress  https://github.com/beagleboard/linux.git
-
 else
     echo linux exist
 fi
@@ -73,4 +67,4 @@ pwd
 cp -f arch/arm/boot/uImage ../SDCARD/BOOT
 cp -f arch/arm/boot/dts/am335x-boneblack.dtb ../SDCARD/BOOT
 
-# cd linux && make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- clean && cd ..
+# ручная очистка     cd linux && make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- clean && cd ..
