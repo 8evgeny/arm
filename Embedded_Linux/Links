@@ -21,3 +21,9 @@ https://wiki.beyondlogic.org/index.php/BeagleBoneBlack_Building_Kernel
 
 https://developer.toradex.com/linux-bsp/os-development/boot/boot-from-a-tftpnfs-server/    Boot from a TFTP/NFS Server
 
+https://www.beagleboard.org/distros                                              Образы BBB
+http://rcn-ee.com/rootfs/                             ОБРАЗЫ RFS
+
+https://elinux.org/BeagleBoardUbuntu           !!!!!!!!!!!!!!!
+https://github.com/RobertCNelson/armv7-multiplatform/tree/master    ВЫБРАТЬ ВЕТКУ
+https://github.com/beagleboard/image-builder      
