@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-if [ ! -d ti-linux-kernel-dev ] then
+if [ ! -d ti-linux-kernel-dev ]; then
     git clone https://github.com/RobertCNelson/ti-linux-kernel-dev.git
 fi
 cd ti-linux-kernel-dev
