@@ -1,0 +1,5 @@
+split -a 1 --numeric-suffixes=1 -n 3 bone-debian-10.3-console-armhf-2020-04-06-1gb.img.xz split.part_   (чтобы положить на github)
+md5sum bone-debian-10.3-console-armhf-2020-04-06-1gb.img.xz 
+0965c341c49319e29cc07bc88ec7c069  bone-debian-10.3-console-armhf-2020-04-06-1gb.img.xz
+rm bone-debian-10.3-console-armhf-2020-04-06-1gb.img.xz
+cat split.part_* > bone-debian-10.3-console-armhf-2020-04-06-1gb.img.xz

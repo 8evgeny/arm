@@ -28,6 +28,7 @@ https://elinux.org/BeagleBoardUbuntu           !!!!!!!!!!!!!!!
 https://github.com/RobertCNelson/armv7-multiplatform/tree/master    ВЫБРАТЬ ВЕТКУ
 https://github.com/beagleboard/image-builder      
 
-https://github.com/beagleboard/beaglebone-black/wiki          !!!  Все о BBB
-https://alexrhodes.io/blog/post/22/                           Пример драйвера BBB
-https://www.kernel.org/doc/Documentation/devicetree/          dev tree doc
+https://github.com/beagleboard/beaglebone-black/wiki                            !!!  Все о BBB
+https://alexrhodes.io/blog/post/22/                                             !!!!  Пример драйвера BBB
+https://www.kernel.org/doc/Documentation/devicetree/                            dev tree doc
+https://bootlin.com                                                   !!!!
