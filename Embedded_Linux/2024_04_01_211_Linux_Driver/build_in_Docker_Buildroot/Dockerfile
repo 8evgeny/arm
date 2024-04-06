@@ -7,7 +7,12 @@ ENV LC_ALL en_US.UTF-8
 RUN groupadd evg && useradd -p 123 -b /home -d /home/evg -m -g evg -s /bin/bash -G sudo evg
 USER evg
 WORKDIR /home/evg
-RUN git clone --single-branch --branch 2020.11.x --progress git://git.buildroot.net/buildroot  && cd buildroot &&  make raspberrypi4_64_defconfig && make 
+RUN git clone --single-branch --branch 2023.02.x --progress git://git.buildroot.net/buildroot  
+RUN cd buildroot &&  make raspberrypi4_64_defconfig && make 
+USER root
+RUN apt-get install -y libncurses-dev
+USER evg
+WORKDIR /home/evg/buildroot
 CMD ["/bin/bash"]
 
 
