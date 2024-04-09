@@ -1,22 +1,41 @@
 #Пример
 #https://kodekloud.com/blog/fix-docker-build-one-argument-error/  
 FROM ubuntu:16.04
-ENV DEBIAN_FRONTEND noninteractive  #не задавать вопросов
+WORKDIR /root
+RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y --purge && \
+    apt-get install -y cpio python3 gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath python \
+    vim locales
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+
+RUN git clone git://git.yoctoproject.org/poky -b langdale  && \
+    cd poky && \
+    git clone git://git.openembedded.org/openembedded-core -b langdale && \
+    git clone git://git.openembedded.org/meta-openembedded -b langdale && \
+    git clone git://git.yoctoproject.org/meta-raspberrypi -b langdale && \
+    git clone git://git.yoctoproject.org/meta-security -b langdale 
+    
+COPY build.sh /root/build.sh
+CMD ["/bin/bash", "/root/build.sh"]    
+
+# ENV DEBIAN_FRONTEND noninteractive  #не задавать вопросов
 #RUN apt-get update && apt-get install -y make binutils build-essential diffutils gcc g++ patch bzip2 cpio unzip rsync file bc findutils wget git locales gawk diffstat texinfo gcc-multilib chrpath socat libsdl1.2-dev xterm sed cvs subversion coreutils texi2html docbook-utils python-pysqlite2 help2man desktop-file-utils libgl1-mesa-dev libglu1-mesa-dev mercurial autoconf automake groff curl lzop asciidoc u-boot-tools sudo python python3 python3-pip python3-pexpect python3-git xz-utils debianutils iputils-ping zstd liblz4-tool
-RUN apt-get update && apt-get install -y gawk wget git diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio  python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping libsdl1.2-dev xterm locales nano mc qemu sudo
+# RUN apt-get update && apt-get install -y gawk wget git diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio  python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping libsdl1.2-dev xterm locales nano mc qemu sudo
 #In Ubuntu, /bin/sh is a link to /bin/dash. The dash shell does not support the source command. However, we need the source command in the very last line of the Dockerfile. We replace dash by bash with
 #RUN rm /bin/sh && ln -s bash /bin/sh
-RUN export DEBIAN_FRONTEND=noninteractive && locale-gen en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-ENV USER_NAME evg
-ENV LANG en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
-ARG host_uid=1001
-ARG host_gid=1001
-RUN groupadd -g $host_gid $USER_NAME && useradd -g $host_gid -p 123 -b /home -d /home/$USER_NAME -m -g $USER_NAME -s /bin/bash -G sudo $USER_NAME
-USER $USER_NAME
-WORKDIR /home/$USER_NAME
-RUN mkdir raspberrypi && cd raspberrypi && git clone git://git.yoctoproject.org/poky -b langdale  && cd poky && git clone git://git.openembedded.org/openembedded-core -b langdale && git clone git://git.openembedded.org/meta-openembedded -b langdale && git clone git://git.yoctoproject.org/meta-raspberrypi -b langdale && git clone git://git.yoctoproject.org/meta-security -b langdale 
-RUN cd /home/$USER_NAME/raspberrypi/poky && . ./oe-init-build-env && bitbake core-image-full-cmdline
+# RUN export DEBIAN_FRONTEND=noninteractive && locale-gen en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+# ENV USER_NAME evg
+# ENV LANG en_US.UTF-8
+# ENV LC_ALL en_US.UTF-8
+# ARG host_uid=1001
+# ARG host_gid=1001
+# RUN groupadd -g $host_gid $USER_NAME && useradd -g $host_gid -p 123 -b /home -d /home/$USER_NAME -m -g $USER_NAME -s /bin/bash -G sudo $USER_NAME
+# USER $USER_NAME
+# WORKDIR /home/$USER_NAME
+# RUN mkdir raspberrypi && cd raspberrypi && git clone git://git.yoctoproject.org/poky -b langdale  && cd poky && git clone git://git.openembedded.org/openembedded-core -b langdale && git clone git://git.openembedded.org/meta-openembedded -b langdale && git clone git://git.yoctoproject.org/meta-raspberrypi -b langdale && git clone git://git.yoctoproject.org/meta-security -b langdale 
+# RUN cd /home/$USER_NAME/raspberrypi/poky && . ./oe-init-build-env && bitbake core-image-full-cmdline
 
 #&& rm /home/evg/raspberrypi/poky/build-rpi/conf/local.conf \
 #&& echo \
@@ -73,11 +92,11 @@ RUN cd /home/$USER_NAME/raspberrypi/poky && . ./oe-init-build-env && bitbake cor
 #' "'>>build-rpi/conf/local.conf  
 #&& bitbake core-image-minimal
 
-WORKDIR /home/$USER_NAME/raspberrypi/poky 
+# WORKDIR /home/$USER_NAME/raspberrypi/poky 
 #RUN cd /home/evg/poky && . ./oe-init-build-env && bitbake core-image-full-cmdline
 #The command CMD in the last line is only executed when the Docker image is run and not when the Docker image is built
 #CMD ./oe-init-build-env build && bitbake core-image-minimal
-CMD ["/bin/bash"]
+# CMD ["/bin/bash"]
 
 
 
