@@ -2,3 +2,4 @@
 qemux86
 configs
 images
+.~lock*
