@@ -1,24 +1,54 @@
 #Пример
 #https://kodekloud.com/blog/fix-docker-build-one-argument-error/  
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 WORKDIR /root
-RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y --purge && \
-    apt-get install -y cpio python3 gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath python \
-    vim locales
+# RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y --purge && \
+#     apt-get install -y cpio python-is-python3 gawk wget git-core diffstat && \ 
+#     unzip texinfo gcc-multilib build-essential chrpath file lz4c pzstd unzstd && \
+#     zstd liblz4-tool vim locales lz4 
+ENV DEBIAN_FRONTEND noninteractive  #не задавать вопросов
+RUN apt-get update && apt-get install -y make binutils build-essential diffutils gcc g++ patch bzip2 cpio unzip rsync file bc findutils wget git locales gawk diffstat texinfo gcc-multilib chrpath socat libsdl1.2-dev xterm sed cvs subversion coreutils texi2html docbook-utils python-pysqlite2 help2man desktop-file-utils libgl1-mesa-dev libglu1-mesa-dev mercurial autoconf automake groff curl lzop asciidoc u-boot-tools sudo python python3 python3-pip python3-pexpect python3-git xz-utils debianutils iputils-ping zstd liblz4-tool
+RUN apt-get update && apt-get install -y gawk wget git diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio  python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping libsdl1.2-dev xterm locales nano mc qemu sudo   
+    
+    
+    
+    
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
-RUN git clone git://git.yoctoproject.org/poky -b langdale  && \
+# RUN git clone git://git.yoctoproject.org/poky -b langdale  && \
+#     cd poky && \
+#     git clone git://git.openembedded.org/openembedded-core -b langdale && \
+#     git clone git://git.openembedded.org/meta-openembedded -b langdale && \
+#     git clone git://git.yoctoproject.org/meta-raspberrypi -b langdale && \
+#     git clone git://git.yoctoproject.org/meta-security -b langdale 
+    
+# RUN git clone -b morty git://git.yoctoproject.org/poky.git poky-morty && \
+#     cd poky-morty && \
+#     git clone -b morty git://git.openembedded.org/meta-openembedded --depth=1 && \
+#     git clone -b morty git://git.yoctoproject.org/meta-raspberrypi --depth=1 && \
+#     git clone -b morty https://github.com/meta-qt5/meta-qt5.git --depth=1 && \
+#     cd /root && \
+#     mkdir rpi && \
+#     cd rpi
+# RUN cd /root/rpi && git clone -b morty https://github.com/jumpnow/meta-rpi.git --depth=1   
+   
+RUN git clone git://git.yoctoproject.org/poky.git && \
     cd poky && \
-    git clone git://git.openembedded.org/openembedded-core -b langdale && \
-    git clone git://git.openembedded.org/meta-openembedded -b langdale && \
-    git clone git://git.yoctoproject.org/meta-raspberrypi -b langdale && \
-    git clone git://git.yoctoproject.org/meta-security -b langdale 
+    git clone git://git.openembedded.org/meta-openembedded --depth=1 && \
+    git clone git://git.yoctoproject.org/meta-raspberrypi --depth=1 && \
+    git clone https://github.com/meta-qt5/meta-qt5.git --depth=1 && \
+    git clone git://git.yoctoproject.org/meta-security --depth=1 && \ 
+    cd /root && \
+    mkdir rpi && \
+    cd rpi
+   
     
 COPY build.sh /root/build.sh
 CMD ["/bin/bash", "/root/build.sh"]    
+# CMD ["/bin/bash"]
 
 # ENV DEBIAN_FRONTEND noninteractive  #не задавать вопросов
 #RUN apt-get update && apt-get install -y make binutils build-essential diffutils gcc g++ patch bzip2 cpio unzip rsync file bc findutils wget git locales gawk diffstat texinfo gcc-multilib chrpath socat libsdl1.2-dev xterm sed cvs subversion coreutils texi2html docbook-utils python-pysqlite2 help2man desktop-file-utils libgl1-mesa-dev libglu1-mesa-dev mercurial autoconf automake groff curl lzop asciidoc u-boot-tools sudo python python3 python3-pip python3-pexpect python3-git xz-utils debianutils iputils-ping zstd liblz4-tool
