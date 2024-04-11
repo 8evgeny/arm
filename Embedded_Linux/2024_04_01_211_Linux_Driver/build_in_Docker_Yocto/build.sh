@@ -4,7 +4,7 @@ TARGET=/mnt
 BUILD=/root/rpi/build
 
 mkdir -p $BUILD/conf
-source /root/poky-morty/oe-init-build-env $BUILD
+source /root/poky/oe-init-build-env $BUILD
 
 if [ -f $TARGET/local.conf ]; then
   cp -f $TARGET/local.conf $BUILD/conf/local.conf
@@ -20,5 +20,5 @@ fi
 
 touch $BUILD/conf/sanity.conf
 cd $BUILD
-bitbake console-image
+bitbake core-image-minimal
 cp -r $BUILD/tmp/deploy/images/* $TARGET/
