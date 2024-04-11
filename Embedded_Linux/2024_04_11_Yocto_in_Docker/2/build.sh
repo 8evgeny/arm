@@ -23,4 +23,4 @@ touch $BUILD/conf/sanity.conf
 cd $BUILD
 cp -r $BUILD/conf/* $TARGET/configs/
 bitbake core-image-minimal
-cp -r $BUILD/tmp/deploy/images/* $TARGET/
+cp -r $BUILD/tmp/deploy/images/* $TARGET/images/
