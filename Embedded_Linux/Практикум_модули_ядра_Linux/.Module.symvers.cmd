@@ -1,0 +1,1 @@
+savedcmd_/home/user/WORK/Github/Arm/Embedded_Linux/Практикум_модули_ядра_Linux/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/user/WORK/Github/Arm/Embedded_Linux/Практикум_модули_ядра_Linux/Module.symvers -T /home/user/WORK/Github/Arm/Embedded_Linux/Практикум_модули_ядра_Linux/modules.order -i Module.symvers -e 

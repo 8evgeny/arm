@@ -1,0 +1,1 @@
+savedcmd_/home/user/WORK/Github/Arm/Embedded_Linux/Практикум_модули_ядра_Linux/hello_printk.mod := printf '%s\n'   hello_printk.o | awk '!x[$$0]++ { print("/home/user/WORK/Github/Arm/Embedded_Linux/Практикум_модули_ядра_Linux/"$$0) }' > /home/user/WORK/Github/Arm/Embedded_Linux/Практикум_модули_ядра_Linux/hello_printk.mod
