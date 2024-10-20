@@ -1,0 +1,25 @@
+Author(s): Alessandro Rubini, Jonathan Corbet
+ISBN(s): 0596000081
+Publisher(s): O'Reilly, 2001
+Page(s): 586
+
+
+
+This book is for anyone who wants to support computer peripherals under the Linux operating system or who wants to develop new hardware and run it under Linux. Linux is the fastest-growing segment of the Unix market, is winning over enthusiastic adherents in many application areas, and is being viewed more and more as a good platform for embedded systems. Linux Device Drivers, already a classic in its second edition, reveals information that heretofore has been shared by word of mouth or in cryptic source code comments, on how to write drivers for a wide range of devices.
+
+Version 2.4 of the Linux kernel includes significant changes to device drivers, simplifying many activities, but providing subtle new features that can make a driver both more efficient and more flexible. The second edition of this book thoroughly covers these changes, as well as new processors and buses.
+
+You don't have to be a kernel hacker to understand and enjoy this book; all you need is an understanding of C and some background in Unix system calls. You'll learn how to write drivers for character devices, block devices, and network interfaces, guided by full-featured examples that you can compile and run without special hardware. Major changes in the second edition include discussions of symmetric multiprocessing (SMP) and locking, new CPUs, and recently supported buses. For those who are curious about how an operating system does its job, this book provides insights into address spaces, asynchronous events, and I/O.
+
+Portability is a major concern in the text. The book is centered on version 2.4, but includes information for kernels back to 2.0 where feasible. Linux Device Driver also shows how to maximize portability among hardware platforms; examples were tested on IA32 (PC) and IA64, PowerPC, SPARC and SPARC64, Alpha, ARM, and MIPS.
+
+Contents include:
+- Building a driver and loading modules
+- Complete character, block, and network drivers
+- Debugging a driver
+- Timing
+- Handling symmetric multiprocessing (SMP) systems
+- Memory management and DMA
+- Interrupts
+- Portability issues
+- Peripheral Component Interconnect (PCI) 

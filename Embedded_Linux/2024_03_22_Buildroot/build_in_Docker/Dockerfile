@@ -9,7 +9,7 @@ RUN groupadd user && useradd -p 123 -b /home -d /home/user -m -g user -s /bin/ba
 USER user
 WORKDIR /home/user
 RUN git clone --single-branch --branch 2024.08.x --progress git://git.buildroot.net/buildroot  
-RUN cd buildroot &&  make orangepi_one_defconfig && make 
+#RUN cd buildroot &&  make orangepi_one_defconfig && make 
 CMD ["/bin/bash"]
 
 
