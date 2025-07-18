@@ -1,12 +1,12 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.10)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # Set ARM compiler
-set(TOOLS_PATH /home/evg/toolchain/gcc-arm-none-eabi-new)
+set(TOOLS_PATH /home/user/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi)
 #set(CMAKE_C_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-gcc)
 #set(CMAKE_CXX_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
 #set(CMAKE_CXX_LINKER_LAUNCHER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
-set(CMAKE_OBJCOPY ${TOOLS_PATH}/bin/arm-none-eabi-objcopy)
+#set(CMAKE_OBJCOPY ${TOOLS_PATH}/bin/arm-none-eabi-objcopy)
 
 project(STM32_F103C8T6_1_Blink C CXX ASM)
 
@@ -80,6 +80,6 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
     COMMENT "Building ${BIN_FILE} ")
 
-add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
-    COMMAND st-flash --reset write ${BIN_FILE} 0x8000000
-    COMMENT "Write Flash ")
+#add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
+#    COMMAND st-flash --reset write ${BIN_FILE} 0x8000000
+#    COMMENT "Write Flash ")
