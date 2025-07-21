@@ -8,13 +8,13 @@ set(TOOLS_PATH /home/user/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi)
 #set(CMAKE_CXX_LINKER_LAUNCHER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
 #set(CMAKE_OBJCOPY ${TOOLS_PATH}/bin/arm-none-eabi-objcopy)
 
-project(STM32_F103C8T6_1_Blink C CXX ASM)
+project(STM32G030F6P6TR C CXX ASM)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
-    -mcpu=cortex-m3 \
+    -mcpu=cortex-m0plus \
     -std=gnu11 \
     -DUSE_HAL_DRIVER \
-    -DSTM32F103xB \
+    -DSTM32G030xx \
     -c \
     -Os \
     -ffunction-sections \
@@ -25,31 +25,29 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -mfloat-abi=soft \
     -mthumb \
     ")
-#    --specs=nano.specs \
-
+#    -fcyclomatic-complexity \
 include_directories(
     Core/Inc
-    Drivers/STM32F1xx_HAL_Driver/Inc
-    Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
-    Drivers/CMSIS/Device/ST/STM32F1xx/Include
+    Drivers/STM32G0xx_HAL_Driver/Inc
+    Drivers/STM32G0xx_HAL_Driver/Inc/Legacy
+    Drivers/CMSIS/Device/ST/STM32G0xx/Include
     Drivers/CMSIS/Include
     )
 file (GLOB SOURCES_C
     Core/Src/*.c
-    Core/Startup/startup_stm32f103c8tx.s
-    Drivers/STM32F1xx_HAL_Driver/Src/*.c
+    Core/Startup/startup_stm32g030f6px.s
+    Drivers/STM32G0xx_HAL_Driver/Src/*.c
     )
-
 
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
     )
 
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE CXX)
-set(LINKER_SCRIPT_FLASH "${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld")
+set(LINKER_SCRIPT_FLASH "${CMAKE_SOURCE_DIR}/STM32G030F6PX_FLASH.ld")
 set(LINKER_FLAGS "SHELL: \
     -T${LINKER_SCRIPT_FLASH} \
-    -mcpu=cortex-m3 \
+    -mcpu=cortex-m0plus \
     --specs=nosys.specs \
     -Wl,--gc-sections \
     -static \
@@ -59,12 +57,11 @@ set(LINKER_FLAGS "SHELL: \
     -Wl,--start-group \
     -lc \
     -lm \
+    -lstdc++ -lsupc++ \
     -Wl,--end-group \
     ")
-#-Wl,-Map="${BuildArtifactFileBaseName}.map"
-#-Wl,--no-warn-rwx-segments \
-target_link_options(${PROJECT_NAME}.elf PRIVATE ${LINKER_FLAGS})
 
+target_link_options(${PROJECT_NAME}.elf PRIVATE ${LINKER_FLAGS})
 
 #target_link_libraries(${PROJECT_NAME}.elf PUBLIC
 #    )
