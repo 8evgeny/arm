@@ -26,6 +26,7 @@
 /* USER CODE BEGIN Includes */
 #include "SEGGER_RTT.h"
 #include "SEGGER_RTT_Conf.h"
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -97,21 +98,43 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-      HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_SET);           //8pin
-      HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);     //11pin
-      HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);         //13pin
-      SEGGER_RTT_printf(0, "GPIO_PIN_SET\n");
-      HAL_Delay(2000);
-      HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
-      HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
-      HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
-      SEGGER_RTT_printf(0, "GPIO_PIN_RESET\n");
-      HAL_Delay(2000);
+
 //MP2790  I2C address - 0x02
 //MPF42790  I2C address - 0x08
 
+  while (1)
+  {
+    HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_SET);           //8pin
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);     //11pin
+    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);         //13pin
+    SEGGER_RTT_printf(0, "GPIO_PIN_SET\n");
+    HAL_Delay(2000);
+    HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
+    SEGGER_RTT_printf(0, "GPIO_PIN_RESET\n");
+    HAL_Delay(2000);
+
+    uint16_t DevAddress = 0x0002;
+    uint16_t RegAddress = 0x0000;
+    char wmsg[] ="We love STM32!";
+    char rmsg[20];
+    while(HAL_I2C_IsDeviceReady(&hi2c2, DevAddress, 1, HAL_MAX_DELAY) != HAL_OK);
+    HAL_I2C_Mem_Write(&hi2c2, DevAddress, RegAddress, I2C_MEMADD_SIZE_16BIT, (uint8_t*)wmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
+    while(HAL_I2C_IsDeviceReady(&hi2c2, DevAddress, 1, HAL_MAX_DELAY) != HAL_OK);
+    HAL_I2C_Mem_Read(&hi2c2, DevAddress, RegAddress, I2C_MEMADD_SIZE_16BIT, (uint8_t*)rmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
+    if(strcmp(wmsg, rmsg) == 0)
+    {
+        SEGGER_RTT_printf(0, "--- OK ---\n");
+    }
+    HAL_Delay(2000);
+
+//HAL_I2C_Master_Seq_Transmit_IT
+
+//HAL_I2C_Mem_Write(hi2c2, DevAddress, RegAddress, )
+//HAL_I2C_IsDeviceReady
+//HAL_I2C_Master_Transmit
+//HAL_I2C_Master_Receive
 
 
 
