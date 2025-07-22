@@ -57,6 +57,24 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define GPIO2_IN_Pin GPIO_PIN_7
+#define GPIO2_IN_GPIO_Port GPIOB
+#define IRQ_IN_Pin GPIO_PIN_0
+#define IRQ_IN_GPIO_Port GPIOA
+#define CE_OUT_Pin GPIO_PIN_1
+#define CE_OUT_GPIO_Port GPIOA
+#define UART_SEL_OUT_Pin GPIO_PIN_4
+#define UART_SEL_OUT_GPIO_Port GPIOA
+#define NSHDN_IN_Pin GPIO_PIN_5
+#define NSHDN_IN_GPIO_Port GPIOA
+#define One_Wire_Pin GPIO_PIN_6
+#define One_Wire_GPIO_Port GPIOA
+#define WDT_IN_Pin GPIO_PIN_7
+#define WDT_IN_GPIO_Port GPIOA
+#define XALERT_IN_Pin GPIO_PIN_8
+#define XALERT_IN_GPIO_Port GPIOA
+#define GPIO1_IN_Pin GPIO_PIN_3
+#define GPIO1_IN_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

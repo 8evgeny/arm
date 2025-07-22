@@ -249,25 +249,25 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1|GPIO_PIN_4, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin|UART_SEL_OUT_Pin|One_Wire_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pins : PB7 PB3 */
-  GPIO_InitStruct.Pin = GPIO_PIN_7|GPIO_PIN_3;
+  /*Configure GPIO pins : GPIO2_IN_Pin GPIO1_IN_Pin */
+  GPIO_InitStruct.Pin = GPIO2_IN_Pin|GPIO1_IN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PA0 PA7 PA8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_7|GPIO_PIN_8;
+  /*Configure GPIO pins : IRQ_IN_Pin NSHDN_IN_Pin WDT_IN_Pin XALERT_IN_Pin */
+  GPIO_InitStruct.Pin = IRQ_IN_Pin|NSHDN_IN_Pin|WDT_IN_Pin|XALERT_IN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PA1 PA4 */
-  GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_4;
+  /*Configure GPIO pins : CE_OUT_Pin UART_SEL_OUT_Pin One_Wire_Pin */
+  GPIO_InitStruct.Pin = CE_OUT_Pin|UART_SEL_OUT_Pin|One_Wire_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
