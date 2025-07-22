@@ -1,5 +1,5 @@
 si 1                                  // Select interface
-speed 1000                            // Select speed
+speed 2000                            // Select speed
 /* Perform reset and halt */
 r
 h

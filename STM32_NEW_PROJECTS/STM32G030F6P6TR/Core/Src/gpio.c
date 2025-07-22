@@ -38,6 +38,7 @@
         * Output
         * EVENT_OUT
         * EXTI
+     PC15-OSC32_OUT (PC15)   ------> RCC_OSC_EN
 */
 void MX_GPIO_Init(void)
 {
@@ -57,6 +58,14 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PC15 */
+  GPIO_InitStruct.Pin = GPIO_PIN_15;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Alternate = GPIO_AF1_OSC;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : IRQ_IN_Pin NSHDN_IN_Pin WDT_IN_Pin XALERT_IN_Pin */
   GPIO_InitStruct.Pin = IRQ_IN_Pin|NSHDN_IN_Pin|WDT_IN_Pin|XALERT_IN_Pin;
