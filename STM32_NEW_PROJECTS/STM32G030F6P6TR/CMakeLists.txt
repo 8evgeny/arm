@@ -84,3 +84,9 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
 #add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
 #   COMMAND st-flash --reset write ${BIN_FILE} 0x8000000
 #   COMMENT "Write Flash ")
+
+#add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
+#   COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32G030F6 -if SWD -speed 1000 -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G030F6P6TR/flash_script.jlink"
+#   COMMENT "Write Flash ")
+
+

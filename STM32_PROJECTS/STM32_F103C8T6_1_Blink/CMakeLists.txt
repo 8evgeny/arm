@@ -92,4 +92,3 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
    COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32F103C8 -if SWD -speed 1000 -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_PROJECTS/STM32_F103C8T6_1_Blink/flash_script.jlink"
    COMMENT "Write Flash ")
 
-# /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32F103C8 -if SWD -speed 1000 -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_PROJECTS/STM32_F103C8T6_1_Blink/flash_script.jlink"
