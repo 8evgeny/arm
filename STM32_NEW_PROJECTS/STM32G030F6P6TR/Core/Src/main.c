@@ -24,7 +24,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "SEGGER_RTT.h"
+#include "SEGGER_RTT_Conf.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -66,7 +67,8 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+    SEGGER_RTT_Init();
+    SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -87,8 +89,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  SEGGER_RTT_printf(0, "MX_GPIO_Init\n");
   MX_USART2_UART_Init();
+  SEGGER_RTT_printf(0, "MX_USART2_UART_Init\n");
   MX_I2C2_Init();
+  SEGGER_RTT_printf(0, "MX_I2C2_Init\n");
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -97,14 +102,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-//CE_OUT_Pin|UART_SEL_OUT_Pin|One_Wire_Pin;
       HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_SET);           //8pin
       HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);     //11pin
       HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);         //13pin
+      SEGGER_RTT_printf(0, "GPIO_PIN_SET\n");
       HAL_Delay(1000);
       HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
       HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
       HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
+      SEGGER_RTT_printf(0, "GPIO_PIN_RESET\n");
       HAL_Delay(1000);
 
 

@@ -32,11 +32,15 @@ include_directories(
     Drivers/STM32G0xx_HAL_Driver/Inc/Legacy
     Drivers/CMSIS/Device/ST/STM32G0xx/Include
     Drivers/CMSIS/Include
+    SEGGER_RTT_V852/RTT
+    SEGGER_RTT_V852/Config
     )
 file (GLOB SOURCES_C
     Core/Src/*.c
     Core/Startup/startup_stm32g030f6px.s
     Drivers/STM32G0xx_HAL_Driver/Src/*.c
+    SEGGER_RTT_V852/RTT/SEGGER_RTT.c
+    SEGGER_RTT_V852/RTT/SEGGER_RTT_printf.c
     )
 
 add_executable(${PROJECT_NAME}.elf

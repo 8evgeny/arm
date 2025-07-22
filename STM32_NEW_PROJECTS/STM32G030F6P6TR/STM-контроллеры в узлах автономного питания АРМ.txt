@@ -1,5 +1,0 @@
-В ВУМ-02Е
-Микросхема STM32G431CBT6 «ST Microelectronics»
-
-В ВУБ-02Е
-Микросхема STM32G030F6P6TR «ST Microelectronics»

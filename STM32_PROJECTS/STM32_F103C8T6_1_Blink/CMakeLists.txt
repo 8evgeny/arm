@@ -41,7 +41,6 @@ file (GLOB SOURCES_C
     Core/Startup/startup_stm32f103c8tx.s
     Drivers/STM32F1xx_HAL_Driver/Src/*.c
     SEGGER_RTT_V852/RTT/SEGGER_RTT.c
-    SEGGER_RTT_V852/RTT/SEGGER_RTT.c
     SEGGER_RTT_V852/RTT/SEGGER_RTT_printf.c
     )
 
