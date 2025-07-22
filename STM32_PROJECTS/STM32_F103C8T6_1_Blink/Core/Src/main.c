@@ -22,6 +22,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "SEGGER_RTT.h"
+#include "SEGGER_RTT_Conf.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,7 +66,8 @@ static void MX_GPIO_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+    SEGGER_RTT_Init();
+    SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -96,6 +100,7 @@ int main(void)
       HAL_Delay(10);
       HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
       HAL_Delay(1500);
+      SEGGER_RTT_printf(0, "Hello from RTT!\n");
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

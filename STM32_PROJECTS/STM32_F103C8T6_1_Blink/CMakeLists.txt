@@ -33,11 +33,16 @@ include_directories(
     Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
     Drivers/CMSIS/Device/ST/STM32F1xx/Include
     Drivers/CMSIS/Include
+    SEGGER_RTT_V852/RTT
+    SEGGER_RTT_V852/Config
     )
 file (GLOB SOURCES_C
     Core/Src/*.c
     Core/Startup/startup_stm32f103c8tx.s
     Drivers/STM32F1xx_HAL_Driver/Src/*.c
+    SEGGER_RTT_V852/RTT/SEGGER_RTT.c
+    SEGGER_RTT_V852/RTT/SEGGER_RTT.c
+    SEGGER_RTT_V852/RTT/SEGGER_RTT_printf.c
     )
 
 
