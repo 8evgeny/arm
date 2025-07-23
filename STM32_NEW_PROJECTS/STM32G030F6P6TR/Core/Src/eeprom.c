@@ -1,10 +1,8 @@
 #include "eeprom.h"
 #include <string.h>
 #include "main.h"
-extern void printf_DMA(const char* fmt, ...);
-extern int AT24C_ReadBytes (uint16_t addr, uint8_t *buf, uint16_t bytes_count);
-extern int AT24C_WriteBytes (uint16_t addr,uint8_t *buf, uint16_t bytes_count);
 
+#if 0
 __IO uint16_t  EEPROMDataRead;
 __IO uint8_t   EEPROMDataWrite;
 // variables used by the filesystem
@@ -44,11 +42,9 @@ static uint32_t EEPROM_WritePage(uint8_t *pBuffer, uint16_t WriteAddr, uint8_t *
         return EEPROM_FAIL;
     }
 
-
     /* If all operations OK, return EEPROM_OK (0) */
     return status;
 }
-
 
 
 HAL_StatusTypeDef readData(uint16_t DevAddress, uint16_t MemAddress, uint8_t *pData, uint16_t Size)
@@ -64,10 +60,6 @@ HAL_StatusTypeDef readData(uint16_t DevAddress, uint16_t MemAddress, uint8_t *pD
                                                 I2C_MEMADD_SIZE_16BIT,
 #endif
                                                 pData, Size, HAL_MAX_DELAY);
-
-//    while(i2cReadReady != SET); //Выпилил
-//    i2cReadReady = RESET;
-
     return status;
 }
 
@@ -91,9 +83,6 @@ HAL_StatusTypeDef writeData(uint16_t DevAddress, uint16_t MemAddress, uint8_t *p
         if(status == HAL_OK)
             break;
     }
-
-//    while( i2cWriteReady != SET); //Выпилил
-//    i2cWriteReady = RESET;
 
     return status;
 }
@@ -272,3 +261,4 @@ void printFileFromAdressEEPROM(uint16_t ReadAddr, uint16_t numByteFile)
     Printf("\n");
     free (pindex);
 }
+#endif

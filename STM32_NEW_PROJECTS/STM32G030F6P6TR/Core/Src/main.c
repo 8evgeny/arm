@@ -102,16 +102,18 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  simpleTestI2C_EEPROM(0x000);
+    simpleTestI2C_EEPROM(24);
+
 
   while (1)
   {
     HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_SET);           //8pin
-    printf("CE_OUT_Pin_SET\n");
+    Printf("CE_OUT_Pin_SET\n");
     HAL_Delay(2000);
     HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
-    printf("CE_OUT_Pin_RESET\n");
+    Printf("CE_OUT_Pin_RESET\n");
     HAL_Delay(2000);
+
 
 
 //HAL_I2C_Master_Seq_Transmit_IT
@@ -245,46 +247,55 @@ uint8_t crc8(uint16_t input)
 
 void Printf(const char* fmt, ...)
 {
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     char buff[512];
     va_list args;
     va_start(args, fmt);
     vsnprintf(buff, sizeof(buff), fmt, args);
     HAL_UART_Transmit(&huart2, (uint8_t*)buff, strlen(buff), HAL_MAX_DELAY );
     va_end(args);
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
 }
 
 void simpleTestI2C_EEPROM(uint16_t addr)
 {
-    uint16_t num = 128;
-    SEGGER_RTT_printf(0,"Simple test I2C_EEPROM ...\r\n");
+// Пишет по 8 байт в адреса кратные 8
+    uint16_t num = 8;
+    printf("Simple test I2C_EEPROM ...\r\n");
 
-    uint8_t rd_value[128] = {0};
-    uint8_t wr_value[128] = {'-','-','-','-','5','6','7','8','F','F','F','F','d','e','f','='};
+    uint8_t rd_value[20] = {0};
+    uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
+//    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
 
-    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
+//    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
     printf("EEPROM read: %s\n",rd_value);
-    printf("EEPROM write:");
-    printf("%s\r\n",wr_value);
-    HAL_Delay(500);
-    BSP_EEPROM_WriteBuffer(wr_value, addr, 15);
-    HAL_Delay(500);
-    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
+
+//    BSP_EEPROM_WriteBuffer(wr_value, addr, num);
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, wr_value, num, HAL_MAX_DELAY);
+    printf("EEPROM write: %s\n", wr_value);
+
+//    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
     printf("EEPROM read: %s\r\n",rd_value);
 
 
 //    char wmsg[] ="We love STM32!";
 //    char rmsg[20];
 //    while(HAL_I2C_IsDeviceReady(&hi2c2, EEPROM_I2C_ADDRESS, 1, HAL_MAX_DELAY) != HAL_OK);
-//    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_16BIT, (uint8_t*)wmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
+//    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, (uint8_t*)wmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
 //    while(HAL_I2C_IsDeviceReady(&hi2c2, EEPROM_I2C_ADDRESS, 1, HAL_MAX_DELAY) != HAL_OK);
-//    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_16BIT, (uint8_t*)rmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
+//    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, (uint8_t*)rmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
 //    if(strcmp(wmsg, rmsg) == 0)
 //    {
-//        SEGGER_RTT_printf(0, "--- TEST EEPROM OK !!! ---\n");
+//        printf("--- TEST EEPROM OK !!! ---\n");
 //    }
 //    else
 //    {
-//        SEGGER_RTT_printf(0, "--- TEST EEPROM ERROR !!! ---\n");
+//        printf("--- TEST EEPROM ERROR !!! ---\n");
 //    }
 
 }
