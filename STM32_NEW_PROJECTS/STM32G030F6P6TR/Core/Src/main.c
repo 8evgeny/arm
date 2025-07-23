@@ -27,6 +27,7 @@
 #include "SEGGER_RTT.h"
 #include "SEGGER_RTT_Conf.h"
 #include <string.h>
+#include "eeprom.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -102,32 +103,35 @@ int main(void)
 //MP2790  I2C address - 0x02
 //MPF42790  I2C address - 0x08
 
+//  simpleTestI2C_EEPROM(0x000);
+
   while (1)
   {
     HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_SET);           //8pin
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);     //11pin
-    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);         //13pin
-    SEGGER_RTT_printf(0, "GPIO_PIN_SET\n");
-    HAL_Delay(2000);
-    HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
-    SEGGER_RTT_printf(0, "GPIO_PIN_RESET\n");
-    HAL_Delay(2000);
+//    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);     //11pin
 
-    uint16_t DevAddress = 0x0002;
-    uint16_t RegAddress = 0x0000;
-    char wmsg[] ="We love STM32!";
-    char rmsg[20];
-    while(HAL_I2C_IsDeviceReady(&hi2c2, DevAddress, 1, HAL_MAX_DELAY) != HAL_OK);
-    HAL_I2C_Mem_Write(&hi2c2, DevAddress, RegAddress, I2C_MEMADD_SIZE_16BIT, (uint8_t*)wmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
-    while(HAL_I2C_IsDeviceReady(&hi2c2, DevAddress, 1, HAL_MAX_DELAY) != HAL_OK);
-    HAL_I2C_Mem_Read(&hi2c2, DevAddress, RegAddress, I2C_MEMADD_SIZE_16BIT, (uint8_t*)rmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
-    if(strcmp(wmsg, rmsg) == 0)
-    {
-        SEGGER_RTT_printf(0, "--- OK ---\n");
-    }
-    HAL_Delay(2000);
+    SEGGER_RTT_printf(0, "CE_OUT_Pin_SET\n");
+    HAL_Delay(1000);
+    HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
+//    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    SEGGER_RTT_printf(0, "CE_OUT_Pin_RESET\n");
+    HAL_Delay(1000);
+
+//    uint16_t DevAddress = 0x0002;
+//    uint16_t RegAddress = 0x0000;
+//    char wmsg[] ="We love STM32!";
+//    char rmsg[20];
+//    while(HAL_I2C_IsDeviceReady(&hi2c2, DevAddress, 1, HAL_MAX_DELAY) != HAL_OK);
+//    HAL_I2C_Mem_Write(&hi2c2, DevAddress, RegAddress, I2C_MEMADD_SIZE_16BIT, (uint8_t*)wmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
+//    while(HAL_I2C_IsDeviceReady(&hi2c2, DevAddress, 1, HAL_MAX_DELAY) != HAL_OK);
+//    HAL_I2C_Mem_Read(&hi2c2, DevAddress, RegAddress, I2C_MEMADD_SIZE_16BIT, (uint8_t*)rmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
+//    if(strcmp(wmsg, rmsg) == 0)
+//    {
+//        SEGGER_RTT_printf(0, "--- OK ---\n");
+//    }
+//    HAL_Delay(2000);
+
+
 
 //HAL_I2C_Master_Seq_Transmit_IT
 
@@ -162,10 +166,12 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
   RCC_OscInitStruct.PLL.PLLN = 12;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
@@ -183,13 +189,62 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }
 }
 
 /* USER CODE BEGIN 4 */
+
+void Printf(const char* fmt, ...)
+{
+    char buff[512];
+    va_list args;
+    va_start(args, fmt);
+    vsnprintf(buff, sizeof(buff), fmt, args);
+    HAL_UART_Transmit(&huart2, (uint8_t*)buff, strlen(buff), HAL_MAX_DELAY );
+    va_end(args);
+}
+
+void simpleTestI2C_EEPROM(uint16_t addr)
+{
+    uint16_t num = 128;
+    printf("Simple test I2C_EEPROM ...\r\n");
+
+    uint8_t rd_value[128] = {0};
+    uint8_t wr_value[128] = {'1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
+                             'Q','W','R','_','_','*',
+                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','\0'};
+
+    uint8_t wr_value2[128] = {'A','B','3','D','E','F','J','K','L','M','N','O','P','Q','R','\0'};
+    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
+    printf("EEPROM read: %s\r\n",rd_value);
+    printf("EEPROM write:");
+    printf("%s\r\n",wr_value);
+    BSP_EEPROM_WriteBuffer(wr_value, addr, num);
+    delayUS_ASM(100000);
+    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
+    printf("EEPROM read: %s\r\n",rd_value);
+    delayUS_ASM(100000);
+
+    printf("EEPROM write:");
+    printf("%s\r\n",wr_value2);
+    BSP_EEPROM_WriteBuffer(wr_value2, addr, num);
+    delayUS_ASM(100000);
+    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
+    printf("EEPROM read: %s\r\n",rd_value);
+    delayUS_ASM(100000);
+    printf("Simple test I2C_EEPROM ..OK\r\n\n");
+}
+
+
 
 /* USER CODE END 4 */
 

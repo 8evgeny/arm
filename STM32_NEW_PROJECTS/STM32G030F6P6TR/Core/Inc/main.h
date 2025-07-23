@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.h
-  * @brief          : Header for main.c file.
-  *                   This file contains the common defines of the application.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+
+/*
+EEPROM I2C : Microchip (AT24CS01)
+1‑Kbit (128 x 8) 000 - 3FF
+128-Bit Unique Factory-Programmed Serial Number
+
+8 pages of 128-bites each
+000 - 07F   128b
+080 - 0FF   128b
+100 - 17F   128b
+180 - 1FF   128b
+200 - 27F   128b
+280 - 2FF   128b
+300 - 37F   128b
+380 - 3FF   128b
+*/
+
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
@@ -31,7 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -77,6 +77,18 @@ void Error_Handler(void);
 #define GPIO1_IN_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
+void Printf(const char* fmt, ...);
+void simpleTestI2C_EEPROM(uint16_t addr);
+#define delayUS_ASM(us) do {                           \
+asm volatile ("MOV R0,%[loops]\n                       \
+              1: \n                                    \
+              SUB R0, #1\n                             \
+              CMP R0, #0\n                             \
+              BNE 1b \t"                               \
+              : : [loops] "r" (34*us) : "memory"       \
+              );                                       \
+} while(0)
+
 
 /* USER CODE END Private defines */
 
