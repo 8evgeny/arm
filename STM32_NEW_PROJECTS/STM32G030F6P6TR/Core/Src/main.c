@@ -103,19 +103,19 @@ int main(void)
 //MP2790  I2C address - 0x02
 //MPF42790  I2C address - 0x08
 
-//  simpleTestI2C_EEPROM(0x000);
-
+  simpleTestI2C_EEPROM(0x100);
+SEGGER_RTT_printf(0, "simpleTestI2C_EEPROM OK\n");
   while (1)
   {
     HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_SET);           //8pin
 //    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);     //11pin
 
     SEGGER_RTT_printf(0, "CE_OUT_Pin_SET\n");
-    HAL_Delay(1000);
+    HAL_Delay(5000);
     HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
 //    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
     SEGGER_RTT_printf(0, "CE_OUT_Pin_RESET\n");
-    HAL_Delay(1000);
+    HAL_Delay(5000);
 
 //    uint16_t DevAddress = 0x0002;
 //    uint16_t RegAddress = 0x0000;
@@ -210,38 +210,21 @@ void Printf(const char* fmt, ...)
 void simpleTestI2C_EEPROM(uint16_t addr)
 {
     uint16_t num = 128;
-    printf("Simple test I2C_EEPROM ...\r\n");
+    SEGGER_RTT_printf(0,"Simple test I2C_EEPROM ...\r\n");
 
     uint8_t rd_value[128] = {0};
-    uint8_t wr_value[128] = {'1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
-                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
-                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
-                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
-                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
-                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
-                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f',
-                             'Q','W','R','_','_','*',
-                             '1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','\0'};
+    uint8_t wr_value[128] = {'-','-','-','-','5','6','7','8','F','F','F','F','d','e','f','='};
 
-    uint8_t wr_value2[128] = {'A','B','3','D','E','F','J','K','L','M','N','O','P','Q','R','\0'};
     BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
-    printf("EEPROM read: %s\r\n",rd_value);
-    printf("EEPROM write:");
-    printf("%s\r\n",wr_value);
-    BSP_EEPROM_WriteBuffer(wr_value, addr, num);
-    delayUS_ASM(100000);
+    SEGGER_RTT_printf(0,"EEPROM read: %s\r\n",rd_value);
+    SEGGER_RTT_printf(0,"EEPROM write:");
+    SEGGER_RTT_printf(0,"%s\r\n",wr_value);
+    HAL_Delay(500);
+    BSP_EEPROM_WriteBuffer(wr_value, addr, 15);
+    HAL_Delay(500);
     BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
-    printf("EEPROM read: %s\r\n",rd_value);
-    delayUS_ASM(100000);
+    SEGGER_RTT_printf(0,"EEPROM read: %s\r\n",rd_value);
 
-    printf("EEPROM write:");
-    printf("%s\r\n",wr_value2);
-    BSP_EEPROM_WriteBuffer(wr_value2, addr, num);
-    delayUS_ASM(100000);
-    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
-    printf("EEPROM read: %s\r\n",rd_value);
-    delayUS_ASM(100000);
-    printf("Simple test I2C_EEPROM ..OK\r\n\n");
 }
 
 

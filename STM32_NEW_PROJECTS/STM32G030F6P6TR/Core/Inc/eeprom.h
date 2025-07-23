@@ -14,7 +14,7 @@
 /* EEPROM hardware address and page size */
 //#define EEPROM_PAGESIZE             128
 //#define EEPROM_PAGESIZE             64
-#define EEPROM_PAGESIZE             16  //По другому глючит с маленькой eeprom
+#define EEPROM_PAGESIZE             128  //По другому глючит с маленькой eeprom
 #define EEPROM_MAX_SIZE             0x0400 //1024 bit
 /* Maximum Timeout values for flags and events waiting loops: This timeout is based
    on systick set to 1ms.
