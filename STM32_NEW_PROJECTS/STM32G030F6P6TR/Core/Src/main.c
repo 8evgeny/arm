@@ -68,6 +68,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
+// CRC   https://www.sunshine2k.de/articles/coding/crc/understanding_crc.html
     SEGGER_RTT_Init();
     SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
   /* USER CODE END 1 */
@@ -101,25 +102,16 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-
-
   simpleTestI2C_EEPROM(0x000);
-
-
-
 
   while (1)
   {
     HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_SET);           //8pin
-//    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);     //11pin
-
-    SEGGER_RTT_printf(0, "CE_OUT_Pin_SET\n");
-    HAL_Delay(5000);
+    printf("CE_OUT_Pin_SET\n");
+    HAL_Delay(2000);
     HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
-//    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
-    SEGGER_RTT_printf(0, "CE_OUT_Pin_RESET\n");
-    HAL_Delay(5000);
-
+    printf("CE_OUT_Pin_RESET\n");
+    HAL_Delay(2000);
 
 
 //HAL_I2C_Master_Seq_Transmit_IT
@@ -222,6 +214,34 @@ uint8_t crc_calc(uint8_t *data, uint8_t size)
     return crc;
 }//END crc_calc(uint8_t *data, uint8_t size)
 
+uint8_t crc8(uint16_t input)
+{
+    uint8_t crc[8] = { };
+    uint8_t i;
+    uint8_t inv;
+    uint8_t output = 0;
+
+    for(i = 0; i < 16; i++)
+    {
+        inv = ((((input >> i) & 1) ^ crc[7]) & 1);
+
+        crc[7] = (crc[6] & 1);
+        crc[6] = (crc[5] & 1);
+        crc[5] = (crc[4] ^ inv & 1);
+        crc[4] = (crc[3] ^ inv & 1);
+        crc[3] = (crc[2] & 1);
+        crc[2] = (crc[1] & 1);
+        crc[1] = (crc[0] & 1);
+        crc[0] = (inv & 1);
+    }
+
+    for(i = 0; i < 8; i++){
+        output |= ((crc[i] << i) & (1 << i));
+    }
+
+
+    return output;
+}
 
 void Printf(const char* fmt, ...)
 {
@@ -235,33 +255,37 @@ void Printf(const char* fmt, ...)
 
 void simpleTestI2C_EEPROM(uint16_t addr)
 {
-//    uint16_t num = 128;
-//    SEGGER_RTT_printf(0,"Simple test I2C_EEPROM ...\r\n");
+    uint16_t num = 128;
+    SEGGER_RTT_printf(0,"Simple test I2C_EEPROM ...\r\n");
 
-//    uint8_t rd_value[128] = {0};
-//    uint8_t wr_value[128] = {'-','-','-','-','5','6','7','8','F','F','F','F','d','e','f','='};
+    uint8_t rd_value[128] = {0};
+    uint8_t wr_value[128] = {'-','-','-','-','5','6','7','8','F','F','F','F','d','e','f','='};
 
-//    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
-//    SEGGER_RTT_printf(0,"EEPROM read: %s\r\n",rd_value);
-//    SEGGER_RTT_printf(0,"EEPROM write:");
-//    SEGGER_RTT_printf(0,"%s\r\n",wr_value);
-//    HAL_Delay(500);
-//    BSP_EEPROM_WriteBuffer(wr_value, addr, 15);
-//    HAL_Delay(500);
-//    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
-//    SEGGER_RTT_printf(0,"EEPROM read: %s\r\n",rd_value);
+    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
+    printf("EEPROM read: %s\n",rd_value);
+    printf("EEPROM write:");
+    printf("%s\r\n",wr_value);
+    HAL_Delay(500);
+    BSP_EEPROM_WriteBuffer(wr_value, addr, 15);
+    HAL_Delay(500);
+    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
+    printf("EEPROM read: %s\r\n",rd_value);
 
 
-    char wmsg[] ="We love STM32!";
-    char rmsg[20];
-    while(HAL_I2C_IsDeviceReady(&hi2c2, EEPROM_I2C_ADDRESS, 1, HAL_MAX_DELAY) != HAL_OK);
-    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_16BIT, (uint8_t*)wmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
-    while(HAL_I2C_IsDeviceReady(&hi2c2, EEPROM_I2C_ADDRESS, 1, HAL_MAX_DELAY) != HAL_OK);
-    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_16BIT, (uint8_t*)rmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
-    if(strcmp(wmsg, rmsg) == 0)
-    {
-        SEGGER_RTT_printf(0, "--- TEST EEPROM OK !!! ---\n");
-    }
+//    char wmsg[] ="We love STM32!";
+//    char rmsg[20];
+//    while(HAL_I2C_IsDeviceReady(&hi2c2, EEPROM_I2C_ADDRESS, 1, HAL_MAX_DELAY) != HAL_OK);
+//    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_16BIT, (uint8_t*)wmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
+//    while(HAL_I2C_IsDeviceReady(&hi2c2, EEPROM_I2C_ADDRESS, 1, HAL_MAX_DELAY) != HAL_OK);
+//    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_16BIT, (uint8_t*)rmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
+//    if(strcmp(wmsg, rmsg) == 0)
+//    {
+//        SEGGER_RTT_printf(0, "--- TEST EEPROM OK !!! ---\n");
+//    }
+//    else
+//    {
+//        SEGGER_RTT_printf(0, "--- TEST EEPROM ERROR !!! ---\n");
+//    }
 
 }
 

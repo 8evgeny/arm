@@ -75,6 +75,8 @@ void simpleTestI2C_EEPROM(uint16_t addr);
 void testRead_MP2790(uint8_t regAddr);
 uint8_t crc_calc(uint8_t *data, uint8_t size);
 void init_crc_calculation();
+uint8_t crc8(uint16_t input);
+
 
 #define delayUS_ASM(us) do {                           \
 asm volatile ("MOV R0,%[loops]\n                       \
