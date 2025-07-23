@@ -16,6 +16,9 @@ EEPROM I2C : Microchip (AT24CS01)
 380 - 3FF   128b
 */
 
+#define MP2790_I2C_ADDRESS          0x02
+#define MPF42790_I2C_ADDRESS          0x08
+
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
@@ -79,6 +82,7 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 void Printf(const char* fmt, ...);
 void simpleTestI2C_EEPROM(uint16_t addr);
+void testRead_MP2790(uint8_t regAddr);
 #define delayUS_ASM(us) do {                           \
 asm volatile ("MOV R0,%[loops]\n                       \
               1: \n                                    \
