@@ -24,10 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "SEGGER_RTT.h"
-#include "SEGGER_RTT_Conf.h"
-#include <string.h>
-#include "eeprom.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +44,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+#define CRC_TABLE_SIZE 256
+uint8_t _CRC8Table[CRC_TABLE_SIZE];
+uint32_t _poly_width = 8;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,6 +93,8 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
+
+    init_crc_calculation();
 
   /* USER CODE END 2 */
 
@@ -184,6 +185,43 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void init_crc_calculation()
+{
+    uint8_t poly = 0x31;
+    const uint32_t bits_mask = (1 << _poly_width) - 1;
+    const uint32_t top_bit = 1 << (_poly_width - 1);
+    uint32_t index;
+    for (index = 0; index < CRC_TABLE_SIZE; ++index)
+    {
+        uint32_t value = index << (_poly_width - 8);
+        uint32_t bit_index;
+        for (bit_index = 0; bit_index < 8; ++bit_index)
+        {
+            if (value & top_bit)
+            {
+                value = (value << 1) ^ poly;
+            }
+            else
+            {
+                value = value << 1;
+            }
+            value &= bits_mask;
+        }//END for (bit_index = 0; bit_index < 8; ++bit_index)
+        _CRC8Table[index] = value;
+    }//END for (index = 0; index < CRC_TABLE_SIZE; ++index)
+}//END init_crc_calculation()
+
+uint8_t crc_calc(uint8_t *data, uint8_t size)
+{
+    uint8_t init_value = 0xFF;
+    uint8_t crc = init_value;
+    while (size--)
+    {
+        crc = _CRC8Table[crc ^ *data++];
+    }
+    return crc;
+}//END crc_calc(uint8_t *data, uint8_t size)
+
 
 void Printf(const char* fmt, ...)
 {

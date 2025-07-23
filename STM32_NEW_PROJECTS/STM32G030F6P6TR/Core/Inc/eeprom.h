@@ -1,6 +1,20 @@
 ﻿#ifndef FSFOREEPROM_H
 #define FSFOREEPROM_H
+/*
+EEPROM I2C : Microchip (AT24CS01)
+1‑Kbit (128 x 8) 000 - 3FF
+128-Bit Unique Factory-Programmed Serial Number
 
+8 pages of 128-bites each
+000 - 07F   128b
+080 - 0FF   128b
+100 - 17F   128b
+180 - 1FF   128b
+200 - 27F   128b
+280 - 2FF   128b
+300 - 37F   128b
+380 - 3FF   128b
+*/
 #include <stdint.h>
 #include "main.h"
 #include "stm32g0xx_hal_def.h"

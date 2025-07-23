@@ -1,23 +1,12 @@
 /* USER CODE BEGIN Header */
 
-/*
-EEPROM I2C : Microchip (AT24CS01)
-1‑Kbit (128 x 8) 000 - 3FF
-128-Bit Unique Factory-Programmed Serial Number
+#include "SEGGER_RTT.h"
+#include "SEGGER_RTT_Conf.h"
+#include <string.h>
+#include "eeprom.h"
 
-8 pages of 128-bites each
-000 - 07F   128b
-080 - 0FF   128b
-100 - 17F   128b
-180 - 1FF   128b
-200 - 27F   128b
-280 - 2FF   128b
-300 - 37F   128b
-380 - 3FF   128b
-*/
-
-#define MP2790_I2C_ADDRESS          0x02
-#define MPF42790_I2C_ADDRESS          0x08
+#define MP2790_I2C_ADDRESS          0x01
+#define MPF2650_I2C_ADDRESS          0x08
 
 /* USER CODE END Header */
 
@@ -80,9 +69,13 @@ void Error_Handler(void);
 #define GPIO1_IN_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
+
 void Printf(const char* fmt, ...);
 void simpleTestI2C_EEPROM(uint16_t addr);
 void testRead_MP2790(uint8_t regAddr);
+uint8_t crc_calc(uint8_t *data, uint8_t size);
+void init_crc_calculation();
+
 #define delayUS_ASM(us) do {                           \
 asm volatile ("MOV R0,%[loops]\n                       \
               1: \n                                    \
