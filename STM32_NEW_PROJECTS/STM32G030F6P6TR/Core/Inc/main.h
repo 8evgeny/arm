@@ -76,7 +76,7 @@ void read_MP2790(uint8_t regAddr);
 uint8_t crc_calc(uint8_t *data, uint8_t size);
 void init_crc_calculation();
 uint8_t crc8(uint16_t input);
-
+void rand_str(char *, size_t);
 
 #define delayUS_ASM(us) do {                           \
 asm volatile ("MOV R0,%[loops]\n                       \

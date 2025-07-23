@@ -24,7 +24,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -102,8 +104,19 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
+    char str[] = { [8] = '\1' }; // make the last character non-zero so we can test based on it later
+    rand_str(str, sizeof str - 1);
+    assert(str[8] == '\0');      // test the correct insertion of string terminator
+    puts(str);
+
     simpleTestI2C_EEPROM(0);
-    read_MP2790(0);
+
+    for (int i=0; i < 15; ++i)
+    {
+        read_MP2790(i);
+    }
+
+
 
   while (1)
   {
@@ -245,6 +258,21 @@ uint8_t crc8(uint16_t input)
     return output;
 }
 
+void rand_str(char *dest, size_t length)
+{
+    char charset[] = "0123456789"
+                     "abcdefghijklmnopqrstuvwxyz"
+                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    while (length-- > 0)
+    {
+        size_t index = (double) rand() / RAND_MAX * (sizeof charset - 1);
+        *dest++ = charset[index];
+    }
+    *dest = '\0';
+}
+
+
 void Printf(const char* fmt, ...)
 {
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
@@ -302,7 +330,10 @@ void simpleTestI2C_EEPROM(uint16_t addr)
 
 void read_MP2790(uint8_t regAddr)
 {
-
+    uint8_t reg_value[2] = {0};
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, reg_value, 2, HAL_MAX_DELAY);
+    printf("MP2790 register %d value=%d crc=%d\n", regAddr, reg_value[0], reg_value[1]);
 }
 
 int _write(int fd, char *str, int len)
