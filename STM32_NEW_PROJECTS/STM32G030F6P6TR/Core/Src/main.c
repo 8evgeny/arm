@@ -227,7 +227,15 @@ void simpleTestI2C_EEPROM(uint16_t addr)
 
 }
 
-
+int _write(int fd, char *str, int len)
+{
+    for(int i=0; i<len; i++)
+    {
+        HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
+        SEGGER_RTT_PutChar(0, str[i]);
+    }
+    return len;
+}
 
 /* USER CODE END 4 */
 
