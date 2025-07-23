@@ -102,8 +102,8 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    simpleTestI2C_EEPROM(24);
-
+    simpleTestI2C_EEPROM(0);
+    read_MP2790(0);
 
   while (1)
   {
@@ -116,13 +116,13 @@ int main(void)
 
 
 
-//HAL_I2C_Master_Seq_Transmit_IT
+
 
 //HAL_I2C_Mem_Write(hi2c2, DevAddress, RegAddress, )
 //HAL_I2C_IsDeviceReady
 //HAL_I2C_Master_Transmit
 //HAL_I2C_Master_Receive
-
+//HAL_I2C_Master_Seq_Transmit_IT
 
 
 
@@ -259,7 +259,7 @@ void Printf(const char* fmt, ...)
 
 void simpleTestI2C_EEPROM(uint16_t addr)
 {
-// Пишет по 8 байт в адреса кратные 8
+// Пишет по 8 байт в адреса кратные 8 Читать может больше
     uint16_t num = 8;
     printf("Simple test I2C_EEPROM ...\r\n");
 
@@ -297,6 +297,11 @@ void simpleTestI2C_EEPROM(uint16_t addr)
 //    {
 //        printf("--- TEST EEPROM ERROR !!! ---\n");
 //    }
+
+}
+
+void read_MP2790(uint8_t regAddr)
+{
 
 }
 
