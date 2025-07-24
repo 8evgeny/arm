@@ -105,19 +105,20 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-//    simpleTestI2C_EEPROM(0);
+    simpleTestI2C_EEPROM(0);
 
 //    for (int i=0; i < 144; ++i)
 //    {
-//        read_MP2790(i);
+//        uint8_t reg_number = i;
+//        uint8_t * pRreg_number = &reg_number;
+//        read_MP2790(pRreg_number);
 //    }
 
-    uint8_t reg_addr = 0x00;
-    uint8_t reg_value[2] = {0};
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Master_Transmit(&hi2c2, MPF2650_I2C_ADDRESS, &reg_addr, 1, HAL_MAX_DELAY);
-    HAL_I2C_Mem_Read(&hi2c2, MPF2650_I2C_ADDRESS, reg_addr, I2C_MEMADD_SIZE_8BIT, reg_value, 2, HAL_MAX_DELAY);
-    printf("MP2790 register %d value=%d crc=%d\r\n", reg_addr, reg_value[0], reg_value[1]);
+    uint8_t reg_number = 0x2D;
+    uint8_t * pRreg_number = &reg_number;
+    read_MP2650(pRreg_number);
+
+
 
 
   while (1)
@@ -320,14 +321,25 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     printf("EEPROM read: %s\r\n",rd_value);
 }
 
-void read_MP2790(uint8_t regAddr)
+void read_MP2790(uint8_t * regAddr)
 {
-//    uint8_t reg_value[2] = {0};
-//    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-//    HAL_I2C_Mem_Write(&hi2c2, MP2790_I2C_ADDRESS, 0, I2C_MEMADD_SIZE_8BIT, &regAddr, 1, HAL_MAX_DELAY);
-//    HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, reg_value, 2, HAL_MAX_DELAY);
-//    printf("MP2790 register %d value=%d crc=%d\r\n", regAddr, reg_value[0], reg_value[1]);
+    uint8_t reg_value[3] = {0};
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Master_Transmit(&hi2c2, MP2650_I2C_ADDRESS, regAddr, 1, HAL_MAX_DELAY);
+    HAL_I2C_Master_Receive(&hi2c2, MP2650_I2C_ADDRESS, reg_value, 3, HAL_MAX_DELAY);
+    printf("MP2790 register %d value1=%d value2=%d crc=%d\r\n", *regAddr, reg_value[0], reg_value[1], reg_value[2]);
 }
+
+void read_MP2650(uint8_t * regAddr)
+{
+    uint8_t reg_value[2] = {0};
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Master_Transmit(&hi2c2, MP2650_I2C_ADDRESS, regAddr, 1, HAL_MAX_DELAY);
+    HAL_I2C_Master_Receive(&hi2c2, MP2650_I2C_ADDRESS, reg_value, 1, HAL_MAX_DELAY);
+    printf("MP2650 register %d value=%d\r\n", *regAddr, reg_value[0]);
+}
+
+
 
 int _write(int fd, char *str, int len)
 {

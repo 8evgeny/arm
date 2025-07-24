@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # Set ARM compiler
-set(TOOLS_PATH /home/user/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi)
+#set(TOOLS_PATH /home/user/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi)
+set(TOOLS_PATH /home/user/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi)
+
 #set(CMAKE_C_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-gcc)
 #set(CMAKE_CXX_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
 #set(CMAKE_CXX_LINKER_LAUNCHER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
@@ -85,8 +87,8 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
 #   COMMAND st-flash --reset write ${BIN_FILE} 0x8000000
 #   COMMENT "Write Flash ")
 
-add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
-   COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32G030F6 -if SWD -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G030F6P6TR/flash_script.jlink"
-   COMMENT "Write Flash ")
+#add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
+#   COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32G030F6 -if SWD -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G030F6P6TR/flash_script.jlink"
+#   COMMENT "Write Flash ")
 
 #-speed 2000
