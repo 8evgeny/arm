@@ -6,7 +6,7 @@
 #include "eeprom.h"
 
 // Реальный 0x02
-#define MP2790_I2C_ADDRESS          0x04
+#define MP2790_I2C_ADDRESS          0x02
 // Реальный 0x08
 #define MP42790_I2C_ADDRESS         0x10
 
