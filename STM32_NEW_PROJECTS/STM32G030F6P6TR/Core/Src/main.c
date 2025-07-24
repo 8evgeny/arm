@@ -105,7 +105,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-//    simpleTestI2C_EEPROM(0);
+    simpleTestI2C_EEPROM(0);
 
 //    for (int i=0; i < 144; ++i)
 //    {
@@ -119,10 +119,10 @@ int main(void)
 //    read_MP2790(pRreg_number);
 //    read_MP42790(pRreg_number);
 
-    uint8_t rd_value[10];
-    rd_value[0] = 0x22;
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, 0x55, I2C_MEMADD_SIZE_8BIT, rd_value, 3, HAL_MAX_DELAY);
+//    uint8_t rd_value[10];
+//    rd_value[0] = 0x22;
+//    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+//    HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, 0x55, I2C_MEMADD_SIZE_8BIT, rd_value, 3, HAL_MAX_DELAY);
 //    HAL_I2C_Master_Transmit(&hi2c2, MP2790_I2C_ADDRESS, rd_value, 2, HAL_MAX_DELAY);
 //    HAL_I2C_Master_Receive(&hi2c2, MP2790_I2C_ADDRESS, rd_value, 3, HAL_MAX_DELAY);
 
@@ -302,25 +302,19 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     uint16_t num = 8;
     printf("Simple test I2C_EEPROM ...\r\n");
 
-    srand(time(NULL)); // Seed the random number generator
-    int string_length = 8;
-    char random_string[string_length + 1]; // +1 for null terminator
-    generateRandomString(random_string, string_length);
-    printf("Random string: %s\r\n", random_string);
-
     uint8_t rd_value[20] = {0};
     uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
 //    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
 
 //    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
-    printf("EEPROM read: %s\r\n",rd_value);
+//    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+//    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
+//    printf("EEPROM read: %s\r\n",rd_value);
 
 //    BSP_EEPROM_WriteBuffer(wr_value, addr, num);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, random_string, num, HAL_MAX_DELAY);
-    printf("EEPROM write: %s\r\n", random_string);
+    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, wr_value, num, HAL_MAX_DELAY);
+    printf("EEPROM write: %s\r\n", wr_value);
 
 //    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
