@@ -27,6 +27,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,28 +105,29 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    char str[] = { [8] = '\1' }; // make the last character non-zero so we can test based on it later
-    rand_str(str, sizeof str - 1);
-    assert(str[8] == '\0');      // test the correct insertion of string terminator
-    puts(str);
+//    simpleTestI2C_EEPROM(0);
 
-    simpleTestI2C_EEPROM(0);
+//    for (int i=0; i < 144; ++i)
+//    {
+//        read_MP2790(i);
+//    }
 
-    for (int i=0; i < 15; ++i)
-    {
-        read_MP2790(i);
-    }
-
+    uint8_t reg_addr = 0x00;
+    uint8_t reg_value[2] = {0};
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Master_Transmit(&hi2c2, MPF2650_I2C_ADDRESS, &reg_addr, 1, HAL_MAX_DELAY);
+    HAL_I2C_Mem_Read(&hi2c2, MPF2650_I2C_ADDRESS, reg_addr, I2C_MEMADD_SIZE_8BIT, reg_value, 2, HAL_MAX_DELAY);
+    printf("MP2790 register %d value=%d crc=%d\r\n", reg_addr, reg_value[0], reg_value[1]);
 
 
   while (1)
   {
     HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_SET);           //8pin
-    Printf("CE_OUT_Pin_SET\n");
-    HAL_Delay(2000);
+    Printf("CE_OUT_Pin_SET\r\n");
+    HAL_Delay(10000);
     HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
-    Printf("CE_OUT_Pin_RESET\n");
-    HAL_Delay(2000);
+    Printf("CE_OUT_Pin_RESET\r\n");
+    HAL_Delay(10000);
 
 
 
@@ -216,7 +218,7 @@ void init_crc_calculation()
         }//END for (bit_index = 0; bit_index < 8; ++bit_index)
         _CRC8Table[index] = value;
     }//END for (index = 0; index < CRC_TABLE_SIZE; ++index)
-}//END init_crc_calculation()
+}
 
 uint8_t crc_calc(uint8_t *data, uint8_t size)
 {
@@ -227,7 +229,7 @@ uint8_t crc_calc(uint8_t *data, uint8_t size)
         crc = _CRC8Table[crc ^ *data++];
     }
     return crc;
-}//END crc_calc(uint8_t *data, uint8_t size)
+}
 
 uint8_t crc8(uint16_t input)
 {
@@ -258,20 +260,21 @@ uint8_t crc8(uint16_t input)
     return output;
 }
 
-void rand_str(char *dest, size_t length)
+void generateRandomString(char *str, int length)
 {
-    char charset[] = "0123456789"
-                     "abcdefghijklmnopqrstuvwxyz"
-                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-    while (length-- > 0)
+    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    int charset_size = strlen(charset);
+    if (length <= 0)
     {
-        size_t index = (double) rand() / RAND_MAX * (sizeof charset - 1);
-        *dest++ = charset[index];
+        str[0] = '\0'; // Empty string for length 0 or less
+        return;
     }
-    *dest = '\0';
+    for (int i = 0; i < length; i++)
+    {
+        str[i] = charset[rand() % charset_size];
+    }
+    str[length] = '\0'; // Null-terminate the string
 }
-
 
 void Printf(const char* fmt, ...)
 {
@@ -291,6 +294,12 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     uint16_t num = 8;
     printf("Simple test I2C_EEPROM ...\r\n");
 
+    srand(time(NULL)); // Seed the random number generator
+    int string_length = 8;
+    char random_string[string_length + 1]; // +1 for null terminator
+    generateRandomString(random_string, string_length);
+    printf("Random string: %s\r\n", random_string);
+
     uint8_t rd_value[20] = {0};
     uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
 //    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
@@ -298,42 +307,26 @@ void simpleTestI2C_EEPROM(uint16_t addr)
 //    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
-    printf("EEPROM read: %s\n",rd_value);
+    printf("EEPROM read: %s\r\n",rd_value);
 
 //    BSP_EEPROM_WriteBuffer(wr_value, addr, num);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, wr_value, num, HAL_MAX_DELAY);
-    printf("EEPROM write: %s\n", wr_value);
+    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, random_string, num, HAL_MAX_DELAY);
+    printf("EEPROM write: %s\r\n", random_string);
 
 //    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
     printf("EEPROM read: %s\r\n",rd_value);
-
-
-//    char wmsg[] ="We love STM32!";
-//    char rmsg[20];
-//    while(HAL_I2C_IsDeviceReady(&hi2c2, EEPROM_I2C_ADDRESS, 1, HAL_MAX_DELAY) != HAL_OK);
-//    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, (uint8_t*)wmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
-//    while(HAL_I2C_IsDeviceReady(&hi2c2, EEPROM_I2C_ADDRESS, 1, HAL_MAX_DELAY) != HAL_OK);
-//    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, (uint8_t*)rmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
-//    if(strcmp(wmsg, rmsg) == 0)
-//    {
-//        printf("--- TEST EEPROM OK !!! ---\n");
-//    }
-//    else
-//    {
-//        printf("--- TEST EEPROM ERROR !!! ---\n");
-//    }
-
 }
 
 void read_MP2790(uint8_t regAddr)
 {
-    uint8_t reg_value[2] = {0};
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, reg_value, 2, HAL_MAX_DELAY);
-    printf("MP2790 register %d value=%d crc=%d\n", regAddr, reg_value[0], reg_value[1]);
+//    uint8_t reg_value[2] = {0};
+//    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+//    HAL_I2C_Mem_Write(&hi2c2, MP2790_I2C_ADDRESS, 0, I2C_MEMADD_SIZE_8BIT, &regAddr, 1, HAL_MAX_DELAY);
+//    HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, reg_value, 2, HAL_MAX_DELAY);
+//    printf("MP2790 register %d value=%d crc=%d\r\n", regAddr, reg_value[0], reg_value[1]);
 }
 
 int _write(int fd, char *str, int len)
