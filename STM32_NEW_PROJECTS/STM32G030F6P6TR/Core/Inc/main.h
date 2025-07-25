@@ -5,10 +5,8 @@
 #include <string.h>
 #include "eeprom.h"
 
-// Реальный 0x02
 #define MP2790_I2C_ADDRESS          0x02
-// Реальный 0x08
-#define MP42790_I2C_ADDRESS         0x08
+#define MP42790_I2C_ADDRESS         0x10
 
 /* USER CODE END Header */
 
@@ -74,7 +72,8 @@ void Error_Handler(void);
 
 void Printf(const char* fmt, ...);
 void simpleTestI2C_EEPROM(uint16_t addr);
-void read_MP2790(uint16_t regAddr);
+void read_MP2790(uint8_t regAddr);
+void write_MP2790(uint8_t regAddr, uint16_t * regValue);
 void read_MP42790(uint16_t regAddr);
 uint8_t crc_calc(uint8_t *data, uint8_t size);
 void init_crc_calculation();

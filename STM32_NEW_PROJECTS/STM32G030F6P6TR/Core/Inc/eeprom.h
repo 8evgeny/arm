@@ -18,7 +18,7 @@ EEPROM I2C : Microchip (AT24CS01)
 #include <stdint.h>
 #include "main.h"
 #include "stm32g0xx_hal_def.h"
-//Реальный 50
+
 #define EEPROM_I2C_ADDRESS          0xA0
 #define EEPROM_I2C_SERIAL           0xB0
 #define EEPROMADRESS8bit
