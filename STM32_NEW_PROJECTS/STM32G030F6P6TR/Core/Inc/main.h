@@ -6,7 +6,7 @@
 #include "eeprom.h"
 
 // Реальный 0x02
-#define MP2790_I2C_ADDRESS          0x04
+#define MP2790_I2C_ADDRESS          0x02
 // Реальный 0x08
 #define MP42790_I2C_ADDRESS         0x08
 
@@ -59,8 +59,8 @@ void Error_Handler(void);
 #define CE_OUT_GPIO_Port GPIOA
 #define UART_SEL_OUT_Pin GPIO_PIN_4
 #define UART_SEL_OUT_GPIO_Port GPIOA
-#define NSHDN_IN_Pin GPIO_PIN_5
-#define NSHDN_IN_GPIO_Port GPIOA
+#define EnableI2C_Pin GPIO_PIN_5
+#define EnableI2C_GPIO_Port GPIOA
 #define One_Wire_Pin GPIO_PIN_6
 #define One_Wire_GPIO_Port GPIOA
 #define WDT_IN_Pin GPIO_PIN_7

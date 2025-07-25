@@ -97,7 +97,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
-
+    HAL_GPIO_WritePin(GPIOA, EnableI2C_Pin, GPIO_PIN_SET);
     init_crc_calculation();
 
   /* USER CODE END 2 */
@@ -115,9 +115,8 @@ int main(void)
 //    }
 
 
-//    read_MP2790(0x10);
-    read_MP42790(0x10);
-
+    read_MP2790(0xA3);
+//    read_MP42790(0x10);
 
 
   while (1)
