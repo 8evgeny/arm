@@ -105,7 +105,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    simpleTestI2C_EEPROM(0);
+    simpleTestI2C_EEPROM(0x10);
 
 //    for (int i=0; i < 144; ++i)
 //    {
@@ -313,9 +313,9 @@ void simpleTestI2C_EEPROM(uint16_t addr)
 //    printf("EEPROM read: %s\r\n",rd_value);
 
 //    BSP_EEPROM_WriteBuffer(wr_value, addr, num);
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, wr_value, num, HAL_MAX_DELAY);
-    printf("EEPROM write: %s\r\n", wr_value);
+//    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+//    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, wr_value, num, HAL_MAX_DELAY);
+//    printf("EEPROM write: %s\r\n", wr_value);
 
 //    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
