@@ -97,7 +97,8 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
-    HAL_GPIO_WritePin(GPIOA, EnableI2C_Pin, GPIO_PIN_SET);
+
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
     init_crc_calculation();
 
@@ -302,6 +303,8 @@ void simpleTestI2C_EEPROM(uint16_t addr)
 void read_MP2790(uint16_t regAddr)
 {
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
+    HAL_Delay(1);
     union
     {
         uint8_t reg_value[2];
@@ -312,6 +315,7 @@ void read_MP2790(uint16_t regAddr)
     printf("MP2790 read register: %02X value = %04X\r\n", regAddr, data.regValue);
 //delayUS_ASM(10);
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
 }
 
 void read_MP42790(uint16_t regAddr)

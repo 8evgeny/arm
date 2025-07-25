@@ -59,8 +59,8 @@ void Error_Handler(void);
 #define CE_OUT_GPIO_Port GPIOA
 #define UART_SEL_OUT_Pin GPIO_PIN_4
 #define UART_SEL_OUT_GPIO_Port GPIOA
-#define EnableI2C_Pin GPIO_PIN_5
-#define EnableI2C_GPIO_Port GPIOA
+#define Enable_I2C_2790_Pin GPIO_PIN_5
+#define Enable_I2C_2790_GPIO_Port GPIOA
 #define One_Wire_Pin GPIO_PIN_6
 #define One_Wire_GPIO_Port GPIOA
 #define WDT_IN_Pin GPIO_PIN_7
