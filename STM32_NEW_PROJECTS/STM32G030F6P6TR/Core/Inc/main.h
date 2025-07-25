@@ -6,7 +6,7 @@
 #include "eeprom.h"
 
 #define MP2790_I2C_ADDRESS          0x02
-#define MP42790_I2C_ADDRESS         0x10
+#define MP42790_I2C_ADDRESS         0x08
 
 /* USER CODE END Header */
 
