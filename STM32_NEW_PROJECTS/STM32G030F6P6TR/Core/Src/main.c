@@ -105,7 +105,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    simpleTestI2C_EEPROM(0x10);
+//    simpleTestI2C_EEPROM(0x10);
 
 //    for (int i=0; i < 144; ++i)
 //    {
@@ -114,18 +114,9 @@ int main(void)
 //        read_MP2790(pRreg_number);
 //    }
 
-//    uint8_t reg_number = 0x11;
-//    uint8_t * pRreg_number = &reg_number;
-//    read_MP2790(pRreg_number);
-//    read_MP42790(pRreg_number);
 
-    uint8_t data[3] = {0x0C,0x11, 0x22} ;
-
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Master_Transmit(&hi2c2, MP2790_I2C_ADDRESS << 1, data, 1, HAL_MAX_DELAY);
-delayUS_ASM(10);
-//    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-//    HAL_I2C_Master_Transmit(&hi2c2, MP2790_I2C_ADDRESS, data, 2, HAL_MAX_DELAY);
+//    read_MP2790(0x10);
+    read_MP42790(0x10);
 
 
 
@@ -307,42 +298,36 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
 //    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
 
-//    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
 //    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
 //    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
 //    printf("EEPROM read: %s\r\n",rd_value);
 
-//    BSP_EEPROM_WriteBuffer(wr_value, addr, num);
 //    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
 //    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, wr_value, num, HAL_MAX_DELAY);
 //    printf("EEPROM write: %s\r\n", wr_value);
 
-//    BSP_EEPROM_ReadBuffer(rd_value, addr, &num);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
     printf("EEPROM read: %s\r\n",rd_value);
 }
 
-void read_MP2790(uint8_t * regAddr)
+void read_MP2790(uint16_t regAddr)
 {
-    uint8_t reg_value[3] = {0};
+    uint8_t reg_value[10] = {0};
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Master_Transmit(&hi2c2, MP2790_I2C_ADDRESS, regAddr, 2, HAL_MAX_DELAY);
-delayUS_ASM(10);
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Master_Transmit(&hi2c2, MP2790_I2C_ADDRESS, regAddr, 2, HAL_MAX_DELAY);
+    HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, reg_value, 2, HAL_MAX_DELAY);
+    printf("MP2790 read: %s\r\n", reg_value);
+//delayUS_ASM(10);
 
-//    HAL_I2C_Master_Receive(&hi2c2, MP2790_I2C_ADDRESS, reg_value, 3, HAL_MAX_DELAY);
-    printf("MP2790 register %d value1=%d value2=%d crc=%d\r\n", *regAddr, reg_value[0], reg_value[1], reg_value[2]);
 }
 
-void read_MP42790(uint8_t * regAddr)
+void read_MP42790(uint16_t regAddr)
 {
-    uint8_t reg_value[2] = {0};
+    uint8_t reg_value[10] = {0};
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, regAddr, 1, HAL_MAX_DELAY);
-    HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, reg_value, 1, HAL_MAX_DELAY);
-    printf("MP42790 register %d value=%d\r\n", *regAddr, reg_value[0]);
+    HAL_I2C_Mem_Read(&hi2c2, MP42790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_16BIT, reg_value, 8, HAL_MAX_DELAY);
+    printf("MP42790 read: %s\r\n", reg_value);
+//delayUS_ASM(10);
 }
 
 
