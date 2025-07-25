@@ -328,7 +328,7 @@ void read_MP2790(uint8_t regAddr)
     }data;
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data.reg_value, 2, HAL_MAX_DELAY);
-    printf("MP2790 register %02X - %04X   ", regAddr, data.regValue);
+    printf("MP2790 register 0x%02X - %04X   ", regAddr, data.regValue);
     print_byte(data.reg_value[1]);
     printf(" ");
     print_byte(data.reg_value[0]);
