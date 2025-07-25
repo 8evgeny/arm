@@ -110,14 +110,17 @@ int main(void)
 
 //    simpleTestI2C_EEPROM(0x10);
 
-    for (int i=0; i <= 0xB9; ++i)
-    {
-        read_MP2790(i);
-        HAL_Delay(1);
-    }
+//    for (int i=0; i <= 0xB9; ++i)
+//    {
+//        read_MP2790(i);
+//        HAL_Delay(1);
+//    }
 
-read_MP2790(0xA3);
-
+    read_MP2790(0x1E);
+    write_MP2790(0x1E, 0x0001);
+    read_MP2790(0x1E);
+    write_MP2790(0x1E, 0x0002);
+    read_MP2790(0x1E);
 
 //    read_MP2790(0xA3);
 //    read_MP42790(0x10);
@@ -338,12 +341,14 @@ void read_MP2790(uint8_t regAddr)
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
 }
 
-void write_MP2790(uint8_t regAddr, uint16_t * regValue)
+void write_MP2790(uint8_t regAddr, uint16_t regValue)
 {
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
     HAL_Delay(1);
 
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Write(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
 
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
