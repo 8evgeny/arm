@@ -105,7 +105,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-//    simpleTestI2C_EEPROM(0);
+    simpleTestI2C_EEPROM(0);
 
 //    for (int i=0; i < 144; ++i)
 //    {
