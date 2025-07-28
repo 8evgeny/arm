@@ -99,10 +99,11 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+//    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_42790_Pin, GPIO_PIN_SET);
 
     HAL_Delay(1000);
-    init_crc_calculation();
+//    init_crc_calculation();
 
   /* USER CODE END 2 */
 
@@ -123,13 +124,14 @@ int main(void)
 //    write_MP2790(0x1E, 0x0002);
 //    read_MP2790(0x1E);
 
-    for (int i=0; i < 0x0300; i+=2)
-    {
-        read_MP42790(i);
-        HAL_Delay(1);
-    }
-//    read_MP42790(0x0200);
-
+//    for (int i=0; i < 0x0300; i+=2)
+//    {
+//        read_MP42790(i);
+//        HAL_Delay(1);
+//    }
+    read_MP42790(0x0020);
+    read_MP42790(0x0022);
+    read_MP42790(0x0074);
 
   while (1)
   {
@@ -361,25 +363,19 @@ void write_MP2790(uint8_t regAddr, uint16_t regValue)
 
 void read_MP42790(uint16_t regAddr)
 {
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
-    HAL_Delay(1);
-    HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_SET);
     union
     {
         uint8_t reg_value[2];
         uint16_t regValue;
     }data;
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Read(&hi2c2, MP42790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_16BIT, data.reg_value, 2, HAL_MAX_DELAY);
-    printf("MP42790 register 0x%04X - %04X   ", regAddr, data.regValue);
-    print_byte(data.reg_value[1]);
-    printf(" ");
-    print_byte(data.reg_value[0]);
-    printf("\r\n");
+        while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+        HAL_I2C_Mem_Read(&hi2c2, MP42790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_16BIT, data.reg_value, 2, 100);
+        printf("MP42790 register 0x%04X - %04X   ", regAddr, data.regValue);
+        print_byte(data.reg_value[1]);
+        printf(" ");
+        print_byte(data.reg_value[0]);
+        printf("\r\n");
 //delayUS_ASM(10);
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
-//    HAL_GPIO_WritePin(GPIOA, CE_OUT_Pin, GPIO_PIN_RESET);
 }
 
 

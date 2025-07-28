@@ -53,8 +53,8 @@ void Error_Handler(void);
 #define GPIO2_IN_GPIO_Port GPIOB
 #define IRQ_IN_Pin GPIO_PIN_0
 #define IRQ_IN_GPIO_Port GPIOA
-#define CE_OUT_Pin GPIO_PIN_1
-#define CE_OUT_GPIO_Port GPIOA
+#define Enable_I2C_42790_Pin GPIO_PIN_1
+#define Enable_I2C_42790_GPIO_Port GPIOA
 #define UART_SEL_OUT_Pin GPIO_PIN_4
 #define UART_SEL_OUT_GPIO_Port GPIOA
 #define Enable_I2C_2790_Pin GPIO_PIN_5
