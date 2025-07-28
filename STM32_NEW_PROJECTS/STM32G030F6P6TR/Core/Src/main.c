@@ -130,10 +130,11 @@ int main(void)
 //        HAL_Delay(1);
 //    }
     read_MP42790(0x0000);
-//    read_MP42790(0x0022);
+    read_MP42790(0x0002);
+    read_MP42790(0x0022);
 
 
-//    simpleTestI2C_EEPROM(0x10);
+    simpleTestI2C_EEPROM(0x10);
 
   while (1)
   {
@@ -288,7 +289,7 @@ void read_MP42790(uint16_t regAddr)
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
     HAL_Delay(4);
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET);
-    delayUS_ASM(10);
+//    delayUS_ASM(1);
     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_12);
     MX_I2C2_Init();
     union
