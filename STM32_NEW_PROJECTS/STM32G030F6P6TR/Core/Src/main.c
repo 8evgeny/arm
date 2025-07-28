@@ -95,7 +95,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-  MX_I2C2_Init();
+//  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
@@ -129,9 +129,11 @@ int main(void)
 //        read_MP42790(i);
 //        HAL_Delay(1);
 //    }
-    read_MP42790(0x0020);
-    read_MP42790(0x0022);
-    read_MP42790(0x0074);
+    read_MP42790(0x0000);
+//    read_MP42790(0x0022);
+
+
+//    simpleTestI2C_EEPROM(0x10);
 
   while (1)
   {
@@ -196,6 +198,125 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+const char *bit_rep[16] =
+{
+    [ 0] = "0000", [ 1] = "0001", [ 2] = "0010", [ 3] = "0011",
+    [ 4] = "0100", [ 5] = "0101", [ 6] = "0110", [ 7] = "0111",
+    [ 8] = "1000", [ 9] = "1001", [10] = "1010", [11] = "1011",
+    [12] = "1100", [13] = "1101", [14] = "1110", [15] = "1111",
+};
+
+void print_byte(uint8_t byte)
+{
+    printf("%s%s", bit_rep[byte >> 4], bit_rep[byte & 0x0F]);
+}
+
+void simpleTestI2C_EEPROM(uint16_t addr)
+{
+// Пишет по 8 байт в адреса кратные 8 Читать может больше
+    uint16_t num = 8;
+    printf("Simple test I2C_EEPROM ...\r\n");
+
+    uint8_t rd_value[20] = {0};
+//    uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
+    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
+
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
+    printf("EEPROM read: %s\r\n",rd_value);
+
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, wr_value, num, HAL_MAX_DELAY);
+    printf("EEPROM write: %s\r\n", wr_value);
+
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
+    printf("EEPROM read: %s\r\n",rd_value);
+}
+
+void read_MP2790(uint8_t regAddr)
+{
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
+    HAL_Delay(1);
+    union
+    {
+        uint8_t reg_value[2];
+        uint16_t regValue;
+    }data;
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data.reg_value, 2, HAL_MAX_DELAY);
+    printf("MP2790 register 0x%02X - %04X   ", regAddr, data.regValue);
+    print_byte(data.reg_value[1]);
+    printf(" ");
+    print_byte(data.reg_value[0]);
+    printf("\r\n");
+//delayUS_ASM(10);
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
+}
+
+void write_MP2790(uint8_t regAddr, uint16_t regValue)
+{
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
+    HAL_Delay(1);
+
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Write(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
+
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
+}
+
+void read_MP42790(uint16_t regAddr)
+{
+//    HAL_I2C_DeInit(&hi2c2);
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    /*Configure GPIO pin Output Level */
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET);
+
+    /*Configure GPIO pins : GPIO2_IN_Pin GPIO1_IN_Pin */
+    GPIO_InitStruct.Pin = GPIO_PIN_12;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
+    HAL_Delay(4);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET);
+    delayUS_ASM(10);
+    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_12);
+    MX_I2C2_Init();
+    union
+    {
+        uint8_t reg_value[2];
+        uint16_t regValue;
+    }data;
+        while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+        HAL_I2C_Mem_Read(&hi2c2, MP42790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_16BIT, data.reg_value, 2, 100);
+        printf("MP42790 register 0x%04X - %04X   ", regAddr, data.regValue);
+        print_byte(data.reg_value[1]);
+        printf(" ");
+        print_byte(data.reg_value[0]);
+        printf("\r\n");
+
+
+}
+
+int _write(int fd, char *str, int len)
+{
+    for(int i=0; i<len; i++)
+    {
+        HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
+        SEGGER_RTT_PutChar(0, str[i]);
+    }
+    return len;
+}
+
 void init_crc_calculation()
 {
     uint8_t poly = 0x31;
@@ -290,105 +411,6 @@ void Printf(const char* fmt, ...)
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
 }
 
-void simpleTestI2C_EEPROM(uint16_t addr)
-{
-// Пишет по 8 байт в адреса кратные 8 Читать может больше
-    uint16_t num = 8;
-    printf("Simple test I2C_EEPROM ...\r\n");
-
-    uint8_t rd_value[20] = {0};
-    uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
-//    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
-
-//    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-//    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
-//    printf("EEPROM read: %s\r\n",rd_value);
-
-//    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-//    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, wr_value, num, HAL_MAX_DELAY);
-//    printf("EEPROM write: %s\r\n", wr_value);
-
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
-    printf("EEPROM read: %s\r\n",rd_value);
-}
-
-const char *bit_rep[16] =
-{
-    [ 0] = "0000", [ 1] = "0001", [ 2] = "0010", [ 3] = "0011",
-    [ 4] = "0100", [ 5] = "0101", [ 6] = "0110", [ 7] = "0111",
-    [ 8] = "1000", [ 9] = "1001", [10] = "1010", [11] = "1011",
-    [12] = "1100", [13] = "1101", [14] = "1110", [15] = "1111",
-};
-
-void print_byte(uint8_t byte)
-{
-    printf("%s%s", bit_rep[byte >> 4], bit_rep[byte & 0x0F]);
-}
-
-void read_MP2790(uint8_t regAddr)
-{
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
-    HAL_Delay(1);
-    union
-    {
-        uint8_t reg_value[2];
-        uint16_t regValue;
-    }data;
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data.reg_value, 2, HAL_MAX_DELAY);
-    printf("MP2790 register 0x%02X - %04X   ", regAddr, data.regValue);
-    print_byte(data.reg_value[1]);
-    printf(" ");
-    print_byte(data.reg_value[0]);
-    printf("\r\n");
-//delayUS_ASM(10);
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
-}
-
-void write_MP2790(uint8_t regAddr, uint16_t regValue)
-{
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
-    HAL_Delay(1);
-
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Write(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
-
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
-}
-
-void read_MP42790(uint16_t regAddr)
-{
-    union
-    {
-        uint8_t reg_value[2];
-        uint16_t regValue;
-    }data;
-        while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-        HAL_I2C_Mem_Read(&hi2c2, MP42790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_16BIT, data.reg_value, 2, 100);
-        printf("MP42790 register 0x%04X - %04X   ", regAddr, data.regValue);
-        print_byte(data.reg_value[1]);
-        printf(" ");
-        print_byte(data.reg_value[0]);
-        printf("\r\n");
-//delayUS_ASM(10);
-}
-
-
-
-int _write(int fd, char *str, int len)
-{
-    for(int i=0; i<len; i++)
-    {
-        HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
-        SEGGER_RTT_PutChar(0, str[i]);
-    }
-    return len;
-}
 
 /* USER CODE END 4 */
 
