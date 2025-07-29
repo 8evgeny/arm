@@ -130,7 +130,7 @@ int main(void)
 //        HAL_Delay(1);
 //    }
 //    read_MP42790(0x4100);
-    read_MP42790(0x0575);
+    read_MP42790(0x1234);
 
 
 
@@ -302,20 +302,29 @@ void read_MP42790(uint16_t regAddr)
     #define NUM 2
     union
     {
-
         uint8_t reg_value[NUM];
         uint16_t regValue;
     }data;
 
-        while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-//        HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, data.reg_value, 4, HAL_MAX_DELAY);
-        HAL_I2C_Mem_Read(&hi2c2, MP42790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_16BIT, data.reg_value, NUM, HAL_MAX_DELAY);
-        printf("MP42790 register 0x%04X - 0x%02X   ", regAddr, data.regValue);
-        print_byte(data.reg_value[1]);
-        printf(" ");
-        print_byte(data.reg_value[0]);
-        printf("\r\n");
+//    union
+//    {
+//        uint32_t regAddressLentch;
+//        uint8_t toWrite[4];
+//    }dataWrite;
+//    dataWrite.regAddressLentch |= regAddr<<16;
+//    printf("regAddressLentch 0x%08X \r\n", dataWrite.regAddressLentch);
+//    dataWrite.regAddressLentch |= 0x00000200;
+//    printf("regAddressLentch 0x%08X \r\n", dataWrite.regAddressLentch);
 
+//    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+//    HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, dataWrite.toWrite, 3, HAL_MAX_DELAY);
+
+    HAL_I2C_Mem_Read(&hi2c2, MP42790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_16BIT, data.reg_value, NUM, HAL_MAX_DELAY);
+    printf("MP42790 register 0x%04X - 0x%02X   ", regAddr, data.regValue);
+    print_byte(data.reg_value[1]);
+    printf(" ");
+    print_byte(data.reg_value[0]);
+    printf("\r\n");
 
 }
 
