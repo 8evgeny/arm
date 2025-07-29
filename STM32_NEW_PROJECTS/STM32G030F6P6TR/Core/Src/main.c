@@ -125,16 +125,15 @@ int main(void)
 //    write_MP2790(0x1E, 0x0002);
 //    read_MP2790(0x1E);
 
-//    for (int i=0; i < 0x4101; i+=2)
-//    {
-//        read_MP42790(i);
-//        HAL_Delay(1);
-//    }
+    for (int i=0; i < 0x78; i+=2)
+    {
+        read_MP42790(i);
+        HAL_Delay(10);
+    }
 
-read_MP42790(0x4100);
+//read_MP42790(0x006E);
+//read_MP42790(0x0072);
 
-//    read_MP42790(0x4100);
-//    read_MP42790(0x0041);
 
 //    simpleTestI2C_EEPROM(0x10);
 
@@ -289,9 +288,9 @@ void pulse_SDA()
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
-    HAL_Delay(4);
+    HAL_Delay(5);
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET);
-    delayUS_ASM(1);
+//    delayUS_ASM(1);
     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_12);
     MX_I2C2_Init();
 }
