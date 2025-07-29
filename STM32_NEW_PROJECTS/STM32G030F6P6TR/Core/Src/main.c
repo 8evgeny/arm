@@ -51,6 +51,7 @@
 #define CRC_TABLE_SIZE 256
 uint8_t _CRC8Table[CRC_TABLE_SIZE];
 uint32_t _poly_width = 8;
+uint16_t U1,U2,U3,U4,I1,I2,I3,I4;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -159,6 +160,23 @@ void read_42790_REGS()
     read_MP42790_8(0x4000);
     read_MP42790_8(0x4100);
 }
+void read_U_I()
+{
+    write_MP2790(0x99, 0x0001);
+    U1 = read_MP2790(0x70);
+    U2 = read_MP2790(0x72);
+    U3 = read_MP2790(0x74);
+    U4 = read_MP2790(0x76);
+    I1 = read_MP2790(0x71);
+    I2 = read_MP2790(0x73);
+    I3 = read_MP2790(0x75);
+    I4 = read_MP2790(0x77);
+    Printf("U1=%04X I1=%04X\r\n",U1,I1);
+    Printf("U2=%04X I2=%04X\r\n",U2,I2);
+    Printf("U3=%04X I3=%04X\r\n",U3,I3);
+    Printf("U4=%04X I4=%04X\r\n",U4,I4);
+    Printf("\r\n");
+}
 /* USER CODE END 0 */
 
 /**
@@ -254,24 +272,11 @@ int main(void)
 
 
 
-uint16_t U1,U2,U3,U4,I1,I2,I3,I4;
+
 HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
   while (1)
   {
-      write_MP2790(0x99, 0x0001);
-      U1 = read_MP2790(0x70);
-      U2 = read_MP2790(0x72);
-      U3 = read_MP2790(0x74);
-      U4 = read_MP2790(0x76);
-      I1 = read_MP2790(0x71);
-      I2 = read_MP2790(0x73);
-      I3 = read_MP2790(0x75);
-      I4 = read_MP2790(0x77);
-      Printf("U1=%04X I1=%04X\r\n",U1,I1);
-      Printf("U2=%04X I2=%04X\r\n",U2,I2);
-      Printf("U3=%04X I3=%04X\r\n",U3,I3);
-      Printf("U4=%04X I4=%04X\r\n",U4,I4);
-      Printf("\r\n");
+    read_U_I();
 
     /* USER CODE END WHILE */
 
