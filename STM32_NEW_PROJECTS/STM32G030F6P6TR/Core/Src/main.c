@@ -197,7 +197,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
-//    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_42790_Pin, GPIO_PIN_SET);
 
     HAL_Delay(1000);
@@ -209,7 +209,22 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
 //    simpleTestI2C_EEPROM(0x10);
-    read_2790_REGS();
+//    read_MP2790(0x99);
+//    read_MP2790(0x93);
+
+
+//                                write_MP2790(0x99, 0x0001);
+//                                read_MP2790(0x99);
+//                                read_MP2790(0x93);
+//                                read_MP2790(0x99);
+//                                read_MP2790(0x93);
+
+//    read_2790_REGS();
+//    write_MP2790(0x99, 0x0001);
+//    printf("-------------------\n");
+//    read_2790_REGS();
+
+//    read_2790_REGS();
 //    read_MP2790(0x1E);
 //    write_MP2790(0x1E, 0x0001);
 //    read_MP2790(0x1E);
@@ -237,8 +252,26 @@ int main(void)
 //    write_MP42790_8(0x122F, 0x18);
 //    read_MP42790_8(0x122F);
 
+
+
+uint16_t U1,U2,U3,U4,I1,I2,I3,I4;
+HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
   while (1)
   {
+      write_MP2790(0x99, 0x0001);
+      U1 = read_MP2790(0x70);
+      U2 = read_MP2790(0x72);
+      U3 = read_MP2790(0x74);
+      U4 = read_MP2790(0x76);
+      I1 = read_MP2790(0x71);
+      I2 = read_MP2790(0x73);
+      I3 = read_MP2790(0x75);
+      I4 = read_MP2790(0x77);
+      Printf("U1=%04X I1=%04X\r\n",U1,I1);
+      Printf("U2=%04X I2=%04X\r\n",U2,I2);
+      Printf("U3=%04X I3=%04X\r\n",U3,I3);
+      Printf("U4=%04X I4=%04X\r\n",U4,I4);
+      Printf("\r\n");
 
     /* USER CODE END WHILE */
 
@@ -330,9 +363,9 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     printf("EEPROM read: %s\r\n",rd_value);
 }
 
-void read_MP2790(uint8_t regAddr)
+uint16_t read_MP2790(uint8_t regAddr)
 {
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+//    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
     HAL_Delay(1);
     union
@@ -342,14 +375,15 @@ void read_MP2790(uint8_t regAddr)
     }data;
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data.reg_value, 2, HAL_MAX_DELAY);
-    printf("MP2790 register 0x%02X - %04X   ", regAddr, data.regValue);
-    print_byte(data.reg_value[1]);
-    printf(" ");
-    print_byte(data.reg_value[0]);
-    printf("\r\n");
+//    printf("MP2790 register 0x%02X - %04X   ", regAddr, data.regValue);
+//    print_byte(data.reg_value[1]);
+//    printf(" ");
+//    print_byte(data.reg_value[0]);
+//    printf("\r\n");
 //delayUS_ASM(10);
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+//    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
+    return data.regValue;
 }
 
 void write_MP2790(uint8_t regAddr, uint16_t regValue)

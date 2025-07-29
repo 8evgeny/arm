@@ -72,7 +72,7 @@ void Error_Handler(void);
 
 void Printf(const char* fmt, ...);
 void simpleTestI2C_EEPROM(uint16_t addr);
-void read_MP2790(uint8_t regAddr);
+uint16_t read_MP2790(uint8_t regAddr);
 void write_MP2790(uint8_t regAddr, uint16_t regValue);
 void read_MP42790_8(uint16_t regAddr);
 void read_MP42790_16(uint16_t regAddr);
