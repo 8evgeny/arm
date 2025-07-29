@@ -46,6 +46,21 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
+//The ADC_CTRL command reports whether an error has occurred when starting the high-resolution voltage scan. It also controls the start of a high-resolution scan for all the selected channels
+#define ADC_CTRL 0x99
+
+//Voltage = Reading x 5000 / 32768 (mV)
+#define RD_VCELL3 0x70
+#define RD_VCELL4 0x72
+#define RD_VCELL5 0x74
+#define RD_VCELL6 0x76
+
+//Current = Reading x 100 / 32768 / RSENSE (A)
+#define RD_ICELL3 0x71
+#define RD_ICELL4 0x73
+#define RD_ICELL5 0x75
+#define RD_ICELL6 0x77
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

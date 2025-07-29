@@ -162,15 +162,15 @@ void read_42790_REGS()
 }
 void read_U_I()
 {
-    write_MP2790(0x99, 0x0001);
-    U1 = read_MP2790(0x70);
-    U2 = read_MP2790(0x72);
-    U3 = read_MP2790(0x74);
-    U4 = read_MP2790(0x76);
-    I1 = read_MP2790(0x71);
-    I2 = read_MP2790(0x73);
-    I3 = read_MP2790(0x75);
-    I4 = read_MP2790(0x77);
+    write_MP2790(ADC_CTRL, 0x0001);
+    U1 = read_MP2790(RD_VCELL3);
+    U2 = read_MP2790(RD_VCELL4);
+    U3 = read_MP2790(RD_VCELL5);
+    U4 = read_MP2790(RD_VCELL6);
+    I1 = read_MP2790(RD_ICELL3);
+    I2 = read_MP2790(RD_ICELL4);
+    I3 = read_MP2790(RD_ICELL5);
+    I4 = read_MP2790(RD_ICELL6);
     Printf("U1=%04X I1=%04X\r\n",U1,I1);
     Printf("U2=%04X I2=%04X\r\n",U2,I2);
     Printf("U3=%04X I3=%04X\r\n",U3,I3);
