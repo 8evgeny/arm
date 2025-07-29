@@ -368,16 +368,16 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     printf("EEPROM read: %s\r\n",rd_value);
 }
 
+union
+{
+    uint8_t reg_value[2];
+    uint16_t regValue;
+}data;
+
 uint16_t read_MP2790(uint8_t regAddr)
 {
-//    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
-    HAL_Delay(1);
-    union
-    {
-        uint8_t reg_value[2];
-        uint16_t regValue;
-    }data;
+//    HAL_Delay(1);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data.reg_value, 2, HAL_MAX_DELAY);
 //    printf("MP2790 register 0x%02X - %04X   ", regAddr, data.regValue);
@@ -385,8 +385,8 @@ uint16_t read_MP2790(uint8_t regAddr)
 //    printf(" ");
 //    print_byte(data.reg_value[0]);
 //    printf("\r\n");
-//delayUS_ASM(10);
-//    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+//    delayUS_ASM(10);
+
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
     return data.regValue;
 }
