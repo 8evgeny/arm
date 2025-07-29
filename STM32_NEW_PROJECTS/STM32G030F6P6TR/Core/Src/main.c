@@ -95,7 +95,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-//  MX_I2C2_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
@@ -129,12 +129,12 @@ int main(void)
 //        read_MP42790(i);
 //        HAL_Delay(1);
 //    }
-    read_MP42790(0x0000);
-    read_MP42790(0x0002);
-    read_MP42790(0x0022);
+//    read_MP42790(0x4100);
+    read_MP42790(0x0575);
 
 
-    simpleTestI2C_EEPROM(0x10);
+
+//    simpleTestI2C_EEPROM(0x10);
 
   while (1)
   {
@@ -271,9 +271,9 @@ void write_MP2790(uint8_t regAddr, uint16_t regValue)
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
 }
 
-void read_MP42790(uint16_t regAddr)
+void pulse_SDA()
 {
-//    HAL_I2C_DeInit(&hi2c2);
+    HAL_I2C_DeInit(&hi2c2);
     GPIO_InitTypeDef GPIO_InitStruct = {0};
     __HAL_RCC_GPIOA_CLK_ENABLE();
     /*Configure GPIO pin Output Level */
@@ -289,17 +289,28 @@ void read_MP42790(uint16_t regAddr)
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
     HAL_Delay(4);
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET);
-//    delayUS_ASM(1);
+    delayUS_ASM(1);
     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_12);
     MX_I2C2_Init();
+}
+
+
+
+void read_MP42790(uint16_t regAddr)
+{
+    pulse_SDA();
+    #define NUM 2
     union
     {
-        uint8_t reg_value[2];
+
+        uint8_t reg_value[NUM];
         uint16_t regValue;
     }data;
+
         while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-        HAL_I2C_Mem_Read(&hi2c2, MP42790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_16BIT, data.reg_value, 2, 100);
-        printf("MP42790 register 0x%04X - %04X   ", regAddr, data.regValue);
+//        HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, data.reg_value, 4, HAL_MAX_DELAY);
+        HAL_I2C_Mem_Read(&hi2c2, MP42790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_16BIT, data.reg_value, NUM, HAL_MAX_DELAY);
+        printf("MP42790 register 0x%04X - 0x%02X   ", regAddr, data.regValue);
         print_byte(data.reg_value[1]);
         printf(" ");
         print_byte(data.reg_value[0]);
