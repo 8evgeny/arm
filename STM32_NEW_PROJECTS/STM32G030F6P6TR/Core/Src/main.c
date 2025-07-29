@@ -68,12 +68,6 @@ void read_2790_REGS()
         read_MP2790(i);
         HAL_Delay(1);
     }
-
-    read_MP2790(0x1E);
-    write_MP2790(0x1E, 0x0001);
-    read_MP2790(0x1E);
-    write_MP2790(0x1E, 0x0002);
-    read_MP2790(0x1E);
 }
 void read_42790_REGS()
 {
@@ -215,8 +209,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
 //    simpleTestI2C_EEPROM(0x10);
+    read_2790_REGS();
+//    read_MP2790(0x1E);
+//    write_MP2790(0x1E, 0x0001);
+//    read_MP2790(0x1E);
+//    write_MP2790(0x1E, 0x0002);
+//    read_MP2790(0x1E);
 
-//    read_2790_REGS();
+
+//    read_42790_REGS();
+
 
 //    read_MP42790_16(0x72);
 //    read_MP42790_8(0x1001);
@@ -224,10 +226,12 @@ int main(void)
 //    read_MP42790_8(0x1204);
 //    read_MP42790_8(0x1205);
 //    read_MP42790_8(0x1206);
-
-    read_42790_REGS();
-
 //    read_MP42790_8(0x122F);
+
+//    uint8_t data2[4] = {0x00, 0x41, 0x01, 0x08};
+//    uint32_t CRC_SUMM = crc32(regAddr, 4, data2);
+//    printf("CRC= %08X\r\n", CRC_SUMM);
+
 //    write_MP42790_8(0x122F, 0x15);
 //    read_MP42790_8(0x122F);
 //    write_MP42790_8(0x122F, 0x18);
@@ -555,7 +559,6 @@ void write_MP42790_8(uint16_t regAddr, uint8_t value)
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 4, HAL_MAX_DELAY);
 }
 
-
 void read_MP42790_16(uint16_t regAddr)
 {
     HAL_Delay(10);
@@ -563,24 +566,6 @@ void read_MP42790_16(uint16_t regAddr)
 //    disable_CRC();
     send_Address_Len_16(regAddr);
     receive_Data_16(regAddr);
-
-//    uint8_t data2[4] = {0x00, 0x41, 0x01, 0x08};
-//    uint32_t CRC_SUMM = crc32(regAddr, 4, data2);
-//    printf("CRC= %08X\r\n", CRC_SUMM);
-
-//    #define NUM 2
-//    union
-//    {
-//        uint8_t reg_value[NUM];
-//        uint16_t regValue;
-//    }data;
-//    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-//    HAL_I2C_Mem_Read(&hi2c2, MP42790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_16BIT, data.reg_value, NUM, HAL_MAX_DELAY);
-//    printf("MP42790 register 0x%04X - 0x%02X   ", regAddr, data.regValue);
-//    print_byte(data.reg_value[1]);
-//    printf(" ");
-//    print_byte(data.reg_value[0]);
-//    printf("\r\n");
 }
 
 void read_MP42790_32(uint16_t regAddr)
