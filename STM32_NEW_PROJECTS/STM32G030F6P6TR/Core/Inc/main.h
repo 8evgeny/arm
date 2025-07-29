@@ -77,6 +77,7 @@ void write_MP2790(uint8_t regAddr, uint16_t regValue);
 void read_MP42790_8(uint16_t regAddr);
 void read_MP42790_16(uint16_t regAddr);
 void read_MP42790_32(uint16_t regAddr);
+void write_MP42790_8(uint16_t regAddr, uint8_t value);
 uint8_t crc_calc(uint8_t *data, uint8_t size);
 void init_crc_calculation();
 uint8_t crc8(uint16_t input);

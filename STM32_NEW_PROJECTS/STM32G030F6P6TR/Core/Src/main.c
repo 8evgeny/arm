@@ -80,70 +80,90 @@ void read_42790_REGS()
     for (int i=0; i < 0x78; i+=2)
     {
         read_MP42790_16(i);
-        HAL_Delay(10);
     }
     for (int i=0x200; i <= 0x023C; i+=4)
     {
         read_MP42790_32(i);
-        HAL_Delay(10);
     }
     for (int i=0x280; i <= 0x02C0; i+=0xF)
     {
         read_MP42790_16(i);
-        HAL_Delay(10);
     }
     for (int i=0x0564; i <= 0x058C; i+=1)
     {
         read_MP42790_8(i);
-        HAL_Delay(10);
     }
 
     read_MP42790_16(0x058D);
-    HAL_Delay(10);
     read_MP42790_16(0x0590);
-    HAL_Delay(10);
     read_MP42790_16(0x0593);
-    HAL_Delay(10);
     read_MP42790_16(0x0597);
-    HAL_Delay(10);
     read_MP42790_16(0x059B);
-    HAL_Delay(10);
     read_MP42790_16(0x059F);
-    HAL_Delay(10);
     read_MP42790_16(0x05A3);
-    HAL_Delay(10);
     read_MP42790_16(0x05A5);
-    HAL_Delay(10);
 
     for (int i=0x05A8; i <= 0x05B7; i+=1)
     {
         read_MP42790_8(i);
-        HAL_Delay(10);
     }
     for (int i=0x608; i <= 0x0648; i+=4)
     {
         read_MP42790_32(i);
-        HAL_Delay(10);
     }
     for (int i=0x0C00; i <= 0x0C3E; i+=2)
     {
         read_MP42790_16(i);
-        HAL_Delay(10);
     }
     for (int i=0x0C62; i <= 0x0C6A; i+=1)
     {
         read_MP42790_8(i);
-        HAL_Delay(10);
     }
     read_MP42790_8(0x0C89);
     read_MP42790_8(0x1000);
     read_MP42790_8(0x1001);
     read_MP42790_8(0x1100);
-    for (int i=0x1200; i <= 0x123E; i+=1)
+    for (int i=0x1200; i <= 0x1206; i+=1)
     {
         read_MP42790_8(i);
-        HAL_Delay(10);
     }
+    for (int i=0x1207; i <= 0x122D; i+=2)
+    {
+        read_MP42790_16(i);
+    }
+    read_MP42790_8(0x122F);
+    read_MP42790_16(0x1230);
+    read_MP42790_8(0x1232);
+    read_MP42790_16(0x1233);
+    read_MP42790_8(0x1235);
+    read_MP42790_16(0x1236);
+    read_MP42790_8(0x1238);
+    read_MP42790_16(0x1239);
+    read_MP42790_8(0x123B);
+    read_MP42790_16(0x123C);
+    read_MP42790_8(0x123E);
+    read_MP42790_16(0x1400);
+    read_MP42790_16(0x1402);
+    read_MP42790_8(0x1406);
+    read_MP42790_16(0x1500);
+    read_MP42790_16(0x1502);
+    read_MP42790_16(0x1504);
+    read_MP42790_8(0x1506);
+    read_MP42790_8(0x150A);
+    for (int i=0x1600; i <= 0x1605; i+=1)
+    {
+        read_MP42790_8(i);
+    }
+    for (int i=0x1700; i <= 0x1704; i+=1)
+    {
+        read_MP42790_8(i);
+    }
+    for (int i=0x1800; i <= 0x1806; i+=1)
+    {
+        read_MP42790_8(i);
+    }
+    read_MP42790_8(0x4000);
+    read_MP42790_8(0x4100);
 }
 /* USER CODE END 0 */
 
@@ -197,12 +217,21 @@ int main(void)
 //    simpleTestI2C_EEPROM(0x10);
 
 //    read_2790_REGS();
-//    read_42790_REGS();
 
-    read_MP42790_16(0x72);
-    read_MP42790_8(0x122F);
-    read_MP42790_8(0x1232);
+//    read_MP42790_16(0x72);
+//    read_MP42790_8(0x1001);
+//    read_MP42790_8(0x1100);
+//    read_MP42790_8(0x1204);
+//    read_MP42790_8(0x1205);
+//    read_MP42790_8(0x1206);
 
+    read_42790_REGS();
+
+//    read_MP42790_8(0x122F);
+//    write_MP42790_8(0x122F, 0x15);
+//    read_MP42790_8(0x122F);
+//    write_MP42790_8(0x122F, 0x18);
+//    read_MP42790_8(0x122F);
 
   while (1)
   {
@@ -501,8 +530,35 @@ void read_MP42790_8(uint16_t regAddr)
     receive_Data_8(regAddr);
 }
 
+void write_MP42790_8(uint16_t regAddr, uint8_t value)
+{
+    HAL_Delay(10);
+    pulse_SDA();
+    union
+    {
+        uint32_t toSend;
+        uint8_t tmp[4];
+    }dataWrite;
+    uint8_t toWrite[4];
+    dataWrite.toSend = 0;
+    dataWrite.toSend |= regAddr<<16;
+    dataWrite.toSend |= 0x00000100;
+    dataWrite.toSend |= value;
+
+    toWrite[0] = dataWrite.tmp[2];
+    toWrite[1] = dataWrite.tmp[3];
+    toWrite[2] = dataWrite.tmp[1];
+    toWrite[3] = dataWrite.tmp[0];
+
+    printf("toSend 0x%02X%02X%02X%02X \r\n", toWrite[0],  toWrite[1], toWrite[2], toWrite[3]);
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 4, HAL_MAX_DELAY);
+}
+
+
 void read_MP42790_16(uint16_t regAddr)
 {
+    HAL_Delay(10);
     pulse_SDA();
 //    disable_CRC();
     send_Address_Len_16(regAddr);
@@ -529,6 +585,7 @@ void read_MP42790_16(uint16_t regAddr)
 
 void read_MP42790_32(uint16_t regAddr)
 {
+    HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_32(regAddr);
     receive_Data_32(regAddr);
