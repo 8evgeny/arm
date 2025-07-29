@@ -163,6 +163,7 @@ void read_42790_REGS()
 void read_U_I()
 {
     write_MP2790(ADC_CTRL, 0x0001);
+    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
     U1 = read_MP2790(RD_VCELL3);
     U2 = read_MP2790(RD_VCELL4);
     U3 = read_MP2790(RD_VCELL5);
@@ -273,10 +274,11 @@ int main(void)
 
 
 
-HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    read_U_I();
   while (1)
   {
-    read_U_I();
+//    read_U_I();
 
     /* USER CODE END WHILE */
 
