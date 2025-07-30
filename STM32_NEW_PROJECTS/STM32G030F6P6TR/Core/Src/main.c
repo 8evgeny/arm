@@ -140,12 +140,12 @@ int main(void)
 
 
     read_MP42790_16_CRC(0x72);
-//    read_MP42790_8_CRC(0x1001);
-//    read_MP42790_8_CRC(0x1100);
-//    read_MP42790_8_CRC(0x1204);
-//    read_MP42790_8_CRC(0x1205);
-//    read_MP42790_8_CRC(0x1206);
-//    read_MP42790_8_CRC(0x122F);
+    read_MP42790_8_CRC(0x1001);
+    read_MP42790_8_CRC(0x1100);
+    read_MP42790_8_CRC(0x1204);
+    read_MP42790_8_CRC(0x1205);
+    read_MP42790_8_CRC(0x1206);
+    read_MP42790_8_CRC(0x122F);
 
 
   while (1)
@@ -544,7 +544,13 @@ void receive_Data_32(uint16_t regAddr)
 
 void receive_Data_32_CRC(uint16_t regAddr)
 {
-
+    uint8_t toRead32CRC[8];
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead32CRC, 8, HAL_MAX_DELAY);
+    uint32_t sum = crc32(regAddr, 4, toRead32CRC);
+    printf("reg 0x%04X data - 0x%02X%02X%02X%02X CRC - %02X%02X%02X%02X calcCRC - %08lX\r\n",
+        regAddr, toRead32CRC[0], toRead32CRC[1], toRead32CRC[2], toRead32CRC[3],
+        toRead32CRC[7], toRead32CRC[6], toRead32CRC[5], toRead32CRC[4], (unsigned long)sum);
 }
 
 uint32_t crc32 (uint16_t Reg_Address, uint8_t len, uint8_t *data)
