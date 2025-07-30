@@ -139,26 +139,13 @@ int main(void)
 //    read_42790_REGS();
 
 
-//    read_MP42790_16(0x72);
-//    read_MP42790_8(0x1001);
-//    read_MP42790_8(0x1100);
-//    read_MP42790_8(0x1204);
-//    read_MP42790_8(0x1205);
-//    read_MP42790_8(0x1206);
-//    read_MP42790_8(0x122F);
-
-//    uint8_t data2[4] = {0x00, 0x41, 0x01, 0x08};
-//    uint32_t CRC_SUMM = crc32(regAddr, 4, data2);
-//    printf("CRC= %08X\r\n", CRC_SUMM);
-
-//    write_MP42790_8(0x122F, 0x15);
-//    read_MP42790_8(0x122F);
-//    write_MP42790_8(0x122F, 0x18);
-//    read_MP42790_8(0x122F);
-
-//read_MP42790_8(0x122F);
-read_MP42790_8_CRC(0x122F);
-
+    read_MP42790_16(0x72);
+    read_MP42790_8_CRC(0x1001);
+    read_MP42790_8_CRC(0x1100);
+    read_MP42790_8_CRC(0x1204);
+    read_MP42790_8_CRC(0x1205);
+    read_MP42790_8_CRC(0x1206);
+    read_MP42790_8_CRC(0x122F);
 
 
   while (1)
