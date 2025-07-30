@@ -109,11 +109,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+    init_2790();
+
 
 //    simpleTestI2C_EEPROM(0x10);
-//    read_42790_RsEGS();
+//    read_42790_REGS();
 //    read_2790_REGS();
-//    disable_4s2790_REGS_CRC();
+//    disable_42790_REGS_CRC();
 
 
 //    read_MP42790_16_CRC(0x72);
@@ -133,9 +135,7 @@ int main(void)
   {
 //    read_Temp();
 //    read_U_I();
-    set_ACT_CFG_reg_05(0x0200);
-    set_ACT_CFG_reg_05(0x0218);  //on  3 4 bits
-    Printf("\r\n");
+
 
     HAL_Delay(3000);
     /* USER CODE END WHILE */
@@ -191,6 +191,17 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void init_2790()
+{
+    write_MP2790(CELLS_CTRL, 0x0003);
+    Printf("init reg_CELLS_CTRL_00 \t0x%04X\r\n", read_MP2790(CELLS_CTRL));
+
+    set_ACT_CFG_reg_05(0x0218);//on  3 4 bits
+
+
+
+}
 
 void disable_42790_REGS_CRC()
 {
@@ -310,7 +321,7 @@ void set_ACT_CFG_reg_05(uint16_t value)
     write_MP2790(ADC_CTRL, 0x0001);
     while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
     write_MP2790(ACT_CFG, value);
-    Printf("reg_05 = 0x%04X\r\n",read_MP2790(ACT_CFG));
+    Printf("init reg_ACT_CFG_05  \t0x%04X\r\n",read_MP2790(ACT_CFG));
 }
 
 void read_U_I()

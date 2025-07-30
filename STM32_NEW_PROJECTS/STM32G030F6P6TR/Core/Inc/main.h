@@ -45,6 +45,8 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
+//The CELLS_CTRL command controls the number of stacked cells in use
+#define CELLS_CTRL 0x00
 
 //The ADC_CTRL command reports whether an error has occurred when starting the high-resolution voltage scan. It also controls the start of a high-resolution scan for all the selected channels
 #define ADC_CTRL 0x99
@@ -91,7 +93,7 @@ void Error_Handler(void);
 
 void Printf(const char* fmt, ...);
 
-
+void init_2790();
 void disable_42790_REGS_CRC();
 void read_2790_REGS();
 void read_42790_REGS();
