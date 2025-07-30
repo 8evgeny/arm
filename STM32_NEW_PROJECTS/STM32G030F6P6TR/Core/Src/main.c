@@ -195,9 +195,10 @@ void SystemClock_Config(void)
 void init_2790()
 {
     write_MP2790(CELLS_CTRL, 0x0003);
-    Printf("init reg_CELLS_CTRL_00 \t0x%04X\r\n", read_MP2790(CELLS_CTRL));
+    Printf("init reg_CELLS_CTRL_00 \t\t0x%04X\r\n", read_MP2790(CELLS_CTRL));
 
     set_ACT_CFG_reg_05(0x0218);//on  3 4 bits
+    Printf("init reg_LOAD_CHARGER_CFG_09 \t0x%04X\r\n", read_MP2790(LOAD_CHARGER_CFG));
 
 
 
@@ -321,7 +322,7 @@ void set_ACT_CFG_reg_05(uint16_t value)
     write_MP2790(ADC_CTRL, 0x0001);
     while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
     write_MP2790(ACT_CFG, value);
-    Printf("init reg_ACT_CFG_05  \t0x%04X\r\n",read_MP2790(ACT_CFG));
+    Printf("init reg_ACT_CFG_05  \t\t0x%04X\r\n", read_MP2790(ACT_CFG));
 }
 
 void read_U_I()
