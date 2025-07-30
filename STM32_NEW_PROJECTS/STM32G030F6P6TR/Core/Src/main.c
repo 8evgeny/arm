@@ -115,16 +115,12 @@ int main(void)
 //    disable_4s2790_REGS_CRC();
 
 
-
-
-
-
     read_MP42790_16_CRC(0x72);
-    read_MP42790_8_CRC(0x1001);
-    read_MP42790_8_CRC(0x1100);
-    read_MP42790_8_CRC(0x1204);
-    read_MP42790_8_CRC(0x1205);
-    read_MP42790_8_CRC(0x1206);
+//    read_MP42790_8_CRC(0x1001);
+//    read_MP42790_8_CRC(0x1100);
+//    read_MP42790_8_CRC(0x1204);
+//    read_MP42790_8_CRC(0x1205);
+//    read_MP42790_8_CRC(0x1206);
     read_MP42790_8_CRC(0x122F);
 
 
@@ -500,7 +496,7 @@ void receive_Data_8_CRC(uint16_t regAddr)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead8CRC, 5, HAL_MAX_DELAY);
     uint32_t sum = crc32(regAddr, 1, toRead8CRC);
-    printf("reg 0x%04X data - 0x%02X CRC - %02X%02X%02X%02X calcCRC - %08lX\r\n",
+    printf("reg 0x%04X data - 0x%02X \t\tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
     regAddr, toRead8CRC[0], toRead8CRC[4], toRead8CRC[3], toRead8CRC[2], toRead8CRC[1], (unsigned long)sum);
 }
 
@@ -518,7 +514,7 @@ void receive_Data_16_CRC(uint16_t regAddr)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead16CRC, 6, HAL_MAX_DELAY);
     uint32_t sum = crc32(regAddr, 2, toRead16CRC);
-    printf("reg 0x%04X data - 0x%02X%02X CRC - %02X%02X%02X%02X calcCRC - %08lX\r\n",
+    printf("reg 0x%04X data - 0x%02X%02X \tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
     regAddr, toRead16CRC[0], toRead16CRC[1], toRead16CRC[5], toRead16CRC[4], toRead16CRC[3], toRead16CRC[2], (unsigned long)sum);
 }
 
@@ -536,7 +532,7 @@ void receive_Data_32_CRC(uint16_t regAddr)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead32CRC, 8, HAL_MAX_DELAY);
     uint32_t sum = crc32(regAddr, 4, toRead32CRC);
-    printf("reg 0x%04X data - 0x%02X%02X%02X%02X CRC - %02X%02X%02X%02X calcCRC - %08lX\r\n",
+    printf("reg 0x%04X data - 0x%02X%02X%02X%02X \tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
         regAddr, toRead32CRC[0], toRead32CRC[1], toRead32CRC[2], toRead32CRC[3],
         toRead32CRC[7], toRead32CRC[6], toRead32CRC[5], toRead32CRC[4], (unsigned long)sum);
 }
