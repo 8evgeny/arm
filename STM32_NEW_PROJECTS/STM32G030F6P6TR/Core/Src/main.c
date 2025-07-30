@@ -116,6 +116,9 @@ int main(void)
 //    read_MP2790(0x99);
 //    read_MP2790(0x93);
 
+    read_MP42790_8_CRC(0x4100);
+    write_MP42790_8_CRC(0x4100,0x08); //Disable CRC
+    read_MP42790_8_CRC(0x4100);
 
 //                                write_MP2790(0x99, 0x0001);
 //                                read_MP2790(0x99);
@@ -146,6 +149,8 @@ int main(void)
     read_MP42790_8_CRC(0x1205);
     read_MP42790_8_CRC(0x1206);
     read_MP42790_8_CRC(0x122F);
+
+
 
 
   while (1)
@@ -613,29 +618,42 @@ void read_MP42790_8_CRC(uint16_t regAddr)
     receive_Data_8_CRC(regAddr);
 }
 
-void write_MP42790_8(uint16_t regAddr, uint8_t value)
+void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
 {
+    uint8_t toWrite[8];
     HAL_Delay(10);
     pulse_SDA();
     union
     {
-        uint32_t toSend;
-        uint8_t tmp[4];
-    }dataWrite;
-    uint8_t toWrite[4];
-    dataWrite.toSend = 0;
-    dataWrite.toSend |= regAddr<<16;
-    dataWrite.toSend |= 0x00000100;
-    dataWrite.toSend |= value;
+        uint32_t toSend1;
+        uint8_t tmp1[4];
+    }dataWrite1;
+    union
+    {
+        uint32_t toSend2;
+        uint8_t tmp2[4];
+    }dataWrite2;
 
-    toWrite[0] = dataWrite.tmp[2];
-    toWrite[1] = dataWrite.tmp[3];
-    toWrite[2] = dataWrite.tmp[1];
-    toWrite[3] = dataWrite.tmp[0];
+    dataWrite1.toSend1 = 0;
+    dataWrite1.toSend1 |= regAddr<<16;
+    dataWrite1.toSend1 |= 0x00000100;
+    dataWrite1.toSend1 |= value;
 
-    printf("toSend 0x%02X%02X%02X%02X \r\n", toWrite[0],  toWrite[1], toWrite[2], toWrite[3]);
+    dataWrite2.toSend2 = crc32(regAddr, 1, &value);
+
+    toWrite[0] = dataWrite1.tmp1[2];  //младший адреса
+    toWrite[1] = dataWrite1.tmp1[3];  //старший адреса
+    toWrite[2] = dataWrite1.tmp1[1];  //длина - 1
+    toWrite[3] = dataWrite1.tmp1[0];  //value
+    toWrite[4] = dataWrite2.tmp2[0];  //младший CRC
+    toWrite[5] = dataWrite2.tmp2[1];
+    toWrite[6] = dataWrite2.tmp2[2];
+    toWrite[7] = dataWrite2.tmp2[3];  //старший CRC
+
+    printf("toSend - %02X%02X%02X%02X%02X%02X%02X%02X \r\n",
+           toWrite[0], toWrite[1], toWrite[2], toWrite[3], toWrite[4], toWrite[5],  toWrite[6], toWrite[7]);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 4, HAL_MAX_DELAY);
+    HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 8, HAL_MAX_DELAY);
 }
 
 void read_MP42790_16(uint16_t regAddr)
