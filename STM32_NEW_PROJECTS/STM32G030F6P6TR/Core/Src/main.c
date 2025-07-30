@@ -62,6 +62,165 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
+int main(void)
+{
+
+  /* USER CODE BEGIN 1 */
+// CRC   https://www.sunshine2k.de/articles/coding/crc/understanding_crc.html
+    SEGGER_RTT_Init();
+    SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
+  /* USER CODE END 1 */
+
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* USER CODE BEGIN Init */
+
+  /* USER CODE END Init */
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+  /* USER CODE BEGIN SysInit */
+
+  /* USER CODE END SysInit */
+
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_USART2_UART_Init();
+  MX_I2C2_Init();
+  /* USER CODE BEGIN 2 */
+
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_42790_Pin, GPIO_PIN_SET);
+
+    HAL_Delay(1000);
+//    init_crc_calculation();
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+
+//    simpleTestI2C_EEPROM(0x10);
+//    read_MP2790(0x99);
+//    read_MP2790(0x93);
+
+
+//                                write_MP2790(0x99, 0x0001);
+//                                read_MP2790(0x99);
+//                                read_MP2790(0x93);
+//                                read_MP2790(0x99);
+//                                read_MP2790(0x93);
+
+//    read_2790_REGS();
+//    write_MP2790(0x99, 0x0001);
+//    printf("-------------------\n");
+//    read_2790_REGS();
+
+//    read_2790_REGS();
+//    read_MP2790(0x1E);
+//    write_MP2790(0x1E, 0x0001);
+//    read_MP2790(0x1E);
+//    write_MP2790(0x1E, 0x0002);
+//    read_MP2790(0x1E);
+
+
+//    read_42790_REGS();
+
+
+//    read_MP42790_16(0x72);
+//    read_MP42790_8(0x1001);
+//    read_MP42790_8(0x1100);
+//    read_MP42790_8(0x1204);
+//    read_MP42790_8(0x1205);
+//    read_MP42790_8(0x1206);
+//    read_MP42790_8(0x122F);
+
+//    uint8_t data2[4] = {0x00, 0x41, 0x01, 0x08};
+//    uint32_t CRC_SUMM = crc32(regAddr, 4, data2);
+//    printf("CRC= %08X\r\n", CRC_SUMM);
+
+//    write_MP42790_8(0x122F, 0x15);
+//    read_MP42790_8(0x122F);
+//    write_MP42790_8(0x122F, 0x18);
+//    read_MP42790_8(0x122F);
+
+
+
+
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    read_U_I();
+  while (1)
+  {
+    read_U_I();
+    HAL_Delay(5500);
+
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+  }
+  /* USER CODE END 3 */
+}
+
+/**
+  * @brief System Clock Configuration
+  * @retval None
+  */
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+  /** Configure the main internal regulator output voltage
+  */
+  HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
+
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
+  */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
+  RCC_OscInitStruct.PLL.PLLN = 12;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV6;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+/* USER CODE BEGIN 4 */
+
+
 void read_2790_REGS()
 {
     for (int i=0; i <= 0xB9; ++i)
@@ -178,161 +337,6 @@ void read_U_I()
     Printf("U4=%04X I4=%04X\r\n",U4,I4);
     Printf("\r\n");
 }
-/* USER CODE END 0 */
-
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
-int main(void)
-{
-
-  /* USER CODE BEGIN 1 */
-// CRC   https://www.sunshine2k.de/articles/coding/crc/understanding_crc.html
-    SEGGER_RTT_Init();
-    SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
-  SystemClock_Config();
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_USART2_UART_Init();
-  MX_I2C2_Init();
-  /* USER CODE BEGIN 2 */
-
-    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, Enable_I2C_42790_Pin, GPIO_PIN_SET);
-
-    HAL_Delay(1000);
-//    init_crc_calculation();
-
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-
-//    simpleTestI2C_EEPROM(0x10);
-//    read_MP2790(0x99);
-//    read_MP2790(0x93);
-
-
-//                                write_MP2790(0x99, 0x0001);
-//                                read_MP2790(0x99);
-//                                read_MP2790(0x93);
-//                                read_MP2790(0x99);
-//                                read_MP2790(0x93);
-
-//    read_2790_REGS();
-//    write_MP2790(0x99, 0x0001);
-//    printf("-------------------\n");
-//    read_2790_REGS();
-
-//    read_2790_REGS();
-//    read_MP2790(0x1E);
-//    write_MP2790(0x1E, 0x0001);
-//    read_MP2790(0x1E);
-//    write_MP2790(0x1E, 0x0002);
-//    read_MP2790(0x1E);
-
-
-//    read_42790_REGS();
-
-
-//    read_MP42790_16(0x72);
-//    read_MP42790_8(0x1001);
-//    read_MP42790_8(0x1100);
-//    read_MP42790_8(0x1204);
-//    read_MP42790_8(0x1205);
-//    read_MP42790_8(0x1206);
-//    read_MP42790_8(0x122F);
-
-//    uint8_t data2[4] = {0x00, 0x41, 0x01, 0x08};
-//    uint32_t CRC_SUMM = crc32(regAddr, 4, data2);
-//    printf("CRC= %08X\r\n", CRC_SUMM);
-
-//    write_MP42790_8(0x122F, 0x15);
-//    read_MP42790_8(0x122F);
-//    write_MP42790_8(0x122F, 0x18);
-//    read_MP42790_8(0x122F);
-
-
-
-
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
-    read_U_I();
-  while (1)
-  {
-//    read_U_I();
-
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-  }
-  /* USER CODE END 3 */
-}
-
-/**
-  * @brief System Clock Configuration
-  * @retval None
-  */
-void SystemClock_Config(void)
-{
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-
-  /** Configure the main internal regulator output voltage
-  */
-  HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
-
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
-  RCC_OscInitStruct.PLL.PLLN = 12;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV6;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-}
-
-/* USER CODE BEGIN 4 */
 
 const char *bit_rep[16] =
 {
@@ -341,7 +345,6 @@ const char *bit_rep[16] =
     [ 8] = "1000", [ 9] = "1001", [10] = "1010", [11] = "1011",
     [12] = "1100", [13] = "1101", [14] = "1110", [15] = "1111",
 };
-
 void print_byte(uint8_t byte)
 {
     printf("%s%s", bit_rep[byte >> 4], bit_rep[byte & 0x0F]);
@@ -370,14 +373,13 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     printf("EEPROM read: %s\r\n",rd_value);
 }
 
-union
-{
-    uint8_t reg_value[2];
-    uint16_t regValue;
-}data;
-
 uint16_t read_MP2790(uint8_t regAddr)
 {
+    union
+    {
+        uint8_t reg_value[2];
+        uint16_t regValue;
+    }data;
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
 //    HAL_Delay(1);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
@@ -500,17 +502,17 @@ void send_Address_Len_32(uint16_t regAddr)
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 3, HAL_MAX_DELAY);
 }
 
-uint8_t toRead8[1];
 void receive_Data_8(uint16_t regAddr)
 {
+    uint8_t toRead8[1];
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead8, 1, HAL_MAX_DELAY);
     printf("reg 0x%04X data - 0x%02X\r\n", regAddr,toRead8[0]);
 }
 
-uint8_t toRead16[2];
 void receive_Data_16(uint16_t regAddr)
 {
+    uint8_t toRead16[2];
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead16, 2, HAL_MAX_DELAY);
     printf("reg 0x%04X data - 0x%02X%02X\r\n", regAddr,toRead16[1],toRead16[0]);
@@ -604,7 +606,6 @@ void read_MP42790_16(uint16_t regAddr)
 {
     HAL_Delay(10);
     pulse_SDA();
-//    disable_CRC();
     send_Address_Len_16(regAddr);
     receive_Data_16(regAddr);
 }
@@ -662,35 +663,6 @@ uint8_t crc_calc(uint8_t *data, uint8_t size)
         crc = _CRC8Table[crc ^ *data++];
     }
     return crc;
-}
-
-uint8_t crc8(uint16_t input)
-{
-    uint8_t crc[8] = { };
-    uint8_t i;
-    uint8_t inv;
-    uint8_t output = 0;
-
-    for(i = 0; i < 16; i++)
-    {
-        inv = ((((input >> i) & 1) ^ crc[7]) & 1);
-
-        crc[7] = (crc[6] & 1);
-        crc[6] = (crc[5] & 1);
-        crc[5] = (crc[4] ^ inv & 1);
-        crc[4] = (crc[3] ^ inv & 1);
-        crc[3] = (crc[2] & 1);
-        crc[2] = (crc[1] & 1);
-        crc[1] = (crc[0] & 1);
-        crc[0] = (inv & 1);
-    }
-
-    for(i = 0; i < 8; i++){
-        output |= ((crc[i] << i) & (1 << i));
-    }
-
-
-    return output;
 }
 
 void generateRandomString(char *str, int length)

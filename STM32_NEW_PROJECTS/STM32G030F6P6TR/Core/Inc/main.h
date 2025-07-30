@@ -86,19 +86,36 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 
 void Printf(const char* fmt, ...);
+
+
+
+void read_2790_REGS();
+void read_42790_REGS();
+void read_U_I();
+void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);
 uint16_t read_MP2790(uint8_t regAddr);
-void read_U_I();
 void write_MP2790(uint8_t regAddr, uint16_t regValue);
-void read_MP42790_8(uint16_t regAddr);
-void read_MP42790_16(uint16_t regAddr);
-void read_MP42790_32(uint16_t regAddr);
-void write_MP42790_8(uint16_t regAddr, uint8_t value);
+void pulse_SDA();
+void disable_CRC();
+void send_Address_Len_8(uint16_t regAddr);
+void send_Address_Len_16(uint16_t regAddr);
+void send_Address_Len_32(uint16_t regAddr);
+void receive_Data_8(uint16_t regAddr);
+void receive_Data_16(uint16_t regAddr);
+void receive_Data_32(uint16_t regAddr);
 uint32_t crc32 (uint16_t Reg_Address, uint8_t len, uint8_t *data);
-uint8_t crc_calc(uint8_t *data, uint8_t size);
+void read_MP42790_8(uint16_t regAddr);
+void write_MP42790_8(uint16_t regAddr, uint8_t value);
+void read_MP42790_16(uint16_t regAddr);
+
+void read_MP42790_32(uint16_t regAddr);
+
+int _write(int fd, char *str, int len);
 void init_crc_calculation();
-uint8_t crc8(uint16_t input);
+uint8_t crc_calc(uint8_t *data, uint8_t size);
 void generateRandomString(char *str, int length);
+void Printf(const char* fmt, ...);
 
 #define delayUS_ASM(us) do {                           \
 asm volatile ("MOV R0,%[loops]\n                       \
