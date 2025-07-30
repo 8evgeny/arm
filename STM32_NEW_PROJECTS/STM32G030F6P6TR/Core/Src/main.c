@@ -21,7 +21,6 @@
 #include "i2c.h"
 #include "usart.h"
 #include "gpio.h"
-#include <inttypes.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -116,9 +115,9 @@ int main(void)
 //    read_MP2790(0x99);
 //    read_MP2790(0x93);
 
-    read_MP42790_8_CRC(0x4100);
-    write_MP42790_8_CRC(0x4100,0x08); //Disable CRC
-    read_MP42790_8_CRC(0x4100);
+//    read_MP42790_8_CRC(0x4100);
+//    write_MP42790_8_CRC(0x4100,0x08); //Disable CRC
+//    read_MP42790_8_CRC(0x4100);
 
 //                                write_MP2790(0x99, 0x0001);
 //                                read_MP2790(0x99);
