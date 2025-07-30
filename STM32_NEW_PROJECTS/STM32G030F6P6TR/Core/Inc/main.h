@@ -96,7 +96,7 @@ void disable_42790_REGS_CRC();
 void read_2790_REGS();
 void read_42790_REGS();
 void read_Temp();
-void set_CFG_reg_05(uint16_t value);
+void set_ACT_CFG_reg_05(uint16_t value);
 void read_U_I();
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);

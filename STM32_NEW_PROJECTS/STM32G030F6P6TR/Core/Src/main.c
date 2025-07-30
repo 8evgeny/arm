@@ -133,9 +133,9 @@ int main(void)
   {
 //    read_Temp();
 //    read_U_I();
-    set_CFG_reg_05(0x0200);
-    set_CFG_reg_05(0x0218);
-
+    set_ACT_CFG_reg_05(0x0200);
+    set_ACT_CFG_reg_05(0x0218);  //on  3 4 bits
+    Printf("\r\n");
 
     HAL_Delay(3000);
     /* USER CODE END WHILE */
@@ -305,7 +305,7 @@ void read_Temp()
     Printf("T=%04X\r\n",Temperature);
 }
 
-void set_CFG_reg_05(uint16_t value)
+void set_ACT_CFG_reg_05(uint16_t value)
 {
     write_MP2790(ADC_CTRL, 0x0001);
     while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
