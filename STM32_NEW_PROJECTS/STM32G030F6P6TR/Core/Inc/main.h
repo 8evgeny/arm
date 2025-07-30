@@ -92,7 +92,7 @@ void Error_Handler(void);
 void Printf(const char* fmt, ...);
 
 
-
+void disable_42790_REGS_CRC();
 void read_2790_REGS();
 void read_42790_REGS();
 void read_Temp();

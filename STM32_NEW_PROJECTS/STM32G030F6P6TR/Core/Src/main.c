@@ -104,41 +104,19 @@ int main(void)
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_42790_Pin, GPIO_PIN_SET);
 
-//    init_crc_calculation();
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
 //    simpleTestI2C_EEPROM(0x10);
-//    read_MP2790(0x99);
-//    read_MP2790(0x93);
-
-//    read_MP42790_8_CRC(0x4100);
-//    write_MP42790_8_CRC(0x4100,0x08); //Disable CRC
-//    read_MP42790_8_CRC(0x4100);
-
-//                                write_MP2790(0x99, 0x0001);
-//                                read_MP2790(0x99);
-//                                read_MP2790(0x93);
-//                                read_MP2790(0x99);
-//                                read_MP2790(0x93);
-
+    read_42790_REGS();
 //    read_2790_REGS();
-//    write_MP2790(0x99, 0x0001);
-//    printf("-------------------\n");
-//    read_2790_REGS();
-
-//    read_2790_REGS();
-//    read_MP2790(0x1E);
-//    write_MP2790(0x1E, 0x0001);
-//    read_MP2790(0x1E);
-//    write_MP2790(0x1E, 0x0002);
-//    read_MP2790(0x1E);
+//    disable_4s2790_REGS_CRC();
 
 
-//    read_42790_REGS();
+
+
 
 
     read_MP42790_16_CRC(0x72);
@@ -213,6 +191,12 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 
+void disable_42790_REGS_CRC()
+{
+    read_MP42790_8_CRC(0x4100);
+    write_MP42790_8_CRC(0x4100,0x08); //Disable CRC
+    read_MP42790_8_CRC(0x4100);
+}
 
 void read_2790_REGS()
 {
@@ -226,91 +210,91 @@ void read_42790_REGS()
 {
     for (int i=0; i < 0x78; i+=2)
     {
-        read_MP42790_16(i);
+        read_MP42790_16_CRC(i);
     }
     for (int i=0x200; i <= 0x023C; i+=4)
     {
-        read_MP42790_32(i);
+        read_MP42790_32_CRC(i);
     }
     for (int i=0x280; i <= 0x02C0; i+=0xF)
     {
-        read_MP42790_16(i);
+        read_MP42790_16_CRC(i);
     }
     for (int i=0x0564; i <= 0x058C; i+=1)
     {
-        read_MP42790_8(i);
+        read_MP42790_8_CRC(i);
     }
 
-    read_MP42790_16(0x058D);
-    read_MP42790_16(0x0590);
-    read_MP42790_16(0x0593);
-    read_MP42790_16(0x0597);
-    read_MP42790_16(0x059B);
-    read_MP42790_16(0x059F);
-    read_MP42790_16(0x05A3);
-    read_MP42790_16(0x05A5);
+    read_MP42790_16_CRC(0x058D);
+    read_MP42790_16_CRC(0x0590);
+    read_MP42790_16_CRC(0x0593);
+    read_MP42790_16_CRC(0x0597);
+    read_MP42790_16_CRC(0x059B);
+    read_MP42790_16_CRC(0x059F);
+    read_MP42790_16_CRC(0x05A3);
+    read_MP42790_16_CRC(0x05A5);
 
     for (int i=0x05A8; i <= 0x05B7; i+=1)
     {
-        read_MP42790_8(i);
+        read_MP42790_8_CRC(i);
     }
     for (int i=0x608; i <= 0x0648; i+=4)
     {
-        read_MP42790_32(i);
+        read_MP42790_32_CRC(i);
     }
     for (int i=0x0C00; i <= 0x0C3E; i+=2)
     {
-        read_MP42790_16(i);
+        read_MP42790_16_CRC(i);
     }
     for (int i=0x0C62; i <= 0x0C6A; i+=1)
     {
-        read_MP42790_8(i);
+        read_MP42790_8_CRC(i);
     }
-    read_MP42790_8(0x0C89);
-    read_MP42790_8(0x1000);
-    read_MP42790_8(0x1001);
-    read_MP42790_8(0x1100);
+    read_MP42790_8_CRC(0x0C89);
+    read_MP42790_8_CRC(0x1000);
+    read_MP42790_8_CRC(0x1001);
+    read_MP42790_8_CRC(0x1100);
     for (int i=0x1200; i <= 0x1206; i+=1)
     {
-        read_MP42790_8(i);
+        read_MP42790_8_CRC(i);
     }
     for (int i=0x1207; i <= 0x122D; i+=2)
     {
-        read_MP42790_16(i);
+        read_MP42790_16_CRC(i);
     }
-    read_MP42790_8(0x122F);
-    read_MP42790_16(0x1230);
-    read_MP42790_8(0x1232);
-    read_MP42790_16(0x1233);
-    read_MP42790_8(0x1235);
-    read_MP42790_16(0x1236);
-    read_MP42790_8(0x1238);
-    read_MP42790_16(0x1239);
-    read_MP42790_8(0x123B);
-    read_MP42790_16(0x123C);
-    read_MP42790_8(0x123E);
-    read_MP42790_16(0x1400);
-    read_MP42790_16(0x1402);
-    read_MP42790_8(0x1406);
-    read_MP42790_16(0x1500);
-    read_MP42790_16(0x1502);
-    read_MP42790_16(0x1504);
-    read_MP42790_8(0x1506);
-    read_MP42790_8(0x150A);
+    read_MP42790_8_CRC(0x122F);
+    read_MP42790_16_CRC(0x1230);
+    read_MP42790_8_CRC(0x1232);
+    read_MP42790_16_CRC(0x1233);
+    read_MP42790_8_CRC(0x1235);
+    read_MP42790_16_CRC(0x1236);
+    read_MP42790_8_CRC(0x1238);
+    read_MP42790_16_CRC(0x1239);
+    read_MP42790_8_CRC(0x123B);
+    read_MP42790_16_CRC(0x123C);
+    read_MP42790_8_CRC(0x123E);
+    read_MP42790_16_CRC(0x1400);
+    read_MP42790_16_CRC(0x1402);
+    read_MP42790_8_CRC(0x1406);
+    read_MP42790_16_CRC(0x1500);
+    read_MP42790_16_CRC(0x1502);
+    read_MP42790_16_CRC(0x1504);
+    read_MP42790_8_CRC(0x1506);
+    read_MP42790_8_CRC(0x150A);
     for (int i=0x1600; i <= 0x1605; i+=1)
     {
-        read_MP42790_8(i);
+        read_MP42790_8_CRC(i);
     }
     for (int i=0x1700; i <= 0x1704; i+=1)
     {
-        read_MP42790_8(i);
+        read_MP42790_8_CRC(i);
     }
     for (int i=0x1800; i <= 0x1806; i+=1)
     {
-        read_MP42790_8(i);
+        read_MP42790_8_CRC(i);
     }
-    read_MP42790_8(0x4000);
-    read_MP42790_8(0x4100);
+    read_MP42790_8_CRC(0x4000);
+    read_MP42790_8_CRC(0x4100);
 }
 void read_Temp()
 {
