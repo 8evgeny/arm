@@ -156,15 +156,15 @@ int main(void)
 //    write_MP42790_8(0x122F, 0x18);
 //    read_MP42790_8(0x122F);
 
-//read_MP42790_8(0x122F);
+read_MP42790_8(0x122F);
 
 
 
 
   while (1)
   {
-    read_Temp();
-    read_U_I();
+//    read_Temp();
+//    read_U_I();
 
     HAL_Delay(3000);
 
@@ -581,6 +581,7 @@ uint32_t crc32 (uint16_t Reg_Address, uint8_t len, uint8_t *data)
 
 void read_MP42790_8(uint16_t regAddr)
 {
+    HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_8(regAddr);
     receive_Data_8(regAddr);
