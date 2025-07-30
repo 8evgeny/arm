@@ -52,7 +52,6 @@ uint8_t _CRC8Table[CRC_TABLE_SIZE];
 uint32_t _poly_width = 8;
 uint16_t U1,U2,U3,U4,I1,I2,I3,I4;
 uint16_t Temperature;
-uint16_t reg0005;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
