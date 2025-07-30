@@ -52,6 +52,7 @@
 uint8_t _CRC8Table[CRC_TABLE_SIZE];
 uint32_t _poly_width = 8;
 uint16_t U1,U2,U3,U4,I1,I2,I3,I4;
+uint16_t Temperature;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -104,7 +105,6 @@ int main(void)
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_42790_Pin, GPIO_PIN_SET);
 
-    HAL_Delay(1000);
 //    init_crc_calculation();
 
   /* USER CODE END 2 */
@@ -156,15 +156,17 @@ int main(void)
 //    write_MP42790_8(0x122F, 0x18);
 //    read_MP42790_8(0x122F);
 
+//read_MP42790_8(0x122F);
 
 
 
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
-    read_U_I();
+
   while (1)
   {
+    read_Temp();
     read_U_I();
-    HAL_Delay(5500);
+
+    HAL_Delay(3000);
 
     /* USER CODE END WHILE */
 
@@ -318,6 +320,13 @@ void read_42790_REGS()
     }
     read_MP42790_8(0x4000);
     read_MP42790_8(0x4100);
+}
+void read_Temp()
+{
+    write_MP2790(ADC_CTRL, 0x0001);
+    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
+    Temperature = read_MP2790(RD_TDIE);
+    Printf("T=%04X\r\n",Temperature);
 }
 void read_U_I()
 {

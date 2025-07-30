@@ -61,6 +61,10 @@ void Error_Handler(void);
 #define RD_ICELL5 0x75
 #define RD_ICELL6 0x77
 
+//Temperature = Reading x 0.01481 - 269.12 (°C)
+#define RD_TDIE 0x93
+
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -91,6 +95,7 @@ void Printf(const char* fmt, ...);
 
 void read_2790_REGS();
 void read_42790_REGS();
+void read_Temp();
 void read_U_I();
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);
