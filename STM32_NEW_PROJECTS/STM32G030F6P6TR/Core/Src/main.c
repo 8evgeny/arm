@@ -52,6 +52,7 @@ uint8_t _CRC8Table[CRC_TABLE_SIZE];
 uint32_t _poly_width = 8;
 uint16_t U1,U2,U3,U4,I1,I2,I3,I4;
 uint16_t Temperature;
+uint16_t reg0005;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -110,18 +111,20 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
 //    simpleTestI2C_EEPROM(0x10);
-    read_42790_REGS();
+//    read_42790_RsEGS();
 //    read_2790_REGS();
 //    disable_4s2790_REGS_CRC();
 
 
-    read_MP42790_16_CRC(0x72);
+//    read_MP42790_16_CRC(0x72);
 //    read_MP42790_8_CRC(0x1001);
 //    read_MP42790_8_CRC(0x1100);
 //    read_MP42790_8_CRC(0x1204);
 //    read_MP42790_8_CRC(0x1205);
 //    read_MP42790_8_CRC(0x1206);
-    read_MP42790_8_CRC(0x122F);
+//    read_MP42790_8_CRC(0x122F);
+
+
 
 
 
@@ -130,9 +133,11 @@ int main(void)
   {
 //    read_Temp();
 //    read_U_I();
+    set_CFG_reg_05(0x0200);
+    set_CFG_reg_05(0x0218);
+
 
     HAL_Delay(3000);
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -299,6 +304,15 @@ void read_Temp()
     Temperature = read_MP2790(RD_TDIE);
     Printf("T=%04X\r\n",Temperature);
 }
+
+void set_CFG_reg_05(uint16_t value)
+{
+    write_MP2790(ADC_CTRL, 0x0001);
+    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
+    write_MP2790(ACT_CFG, value);
+    Printf("reg_05 = 0x%04X\r\n",read_MP2790(ACT_CFG));
+}
+
 void read_U_I()
 {
     write_MP2790(ADC_CTRL, 0x0001);
@@ -364,11 +378,11 @@ uint16_t read_MP2790(uint8_t regAddr)
 //    HAL_Delay(1);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data.reg_value, 2, HAL_MAX_DELAY);
-//    printf("MP2790 register 0x%02X - %04X   ", regAddr, data.regValue);
+//    Printf("MP2790 register 0x%02X - %04X   ", regAddr, data.regValue);
 //    print_byte(data.reg_value[1]);
-//    printf(" ");
+//    Printf(" ");
 //    print_byte(data.reg_value[0]);
-//    printf("\r\n");
+//    Printf("\r\n");
 //    delayUS_ASM(10);
 
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
@@ -380,10 +394,8 @@ void write_MP2790(uint8_t regAddr, uint16_t regValue)
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
     HAL_Delay(1);
-
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Write(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
-
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
 }
