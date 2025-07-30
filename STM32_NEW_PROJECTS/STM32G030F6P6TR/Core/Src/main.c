@@ -139,13 +139,13 @@ int main(void)
 //    read_42790_REGS();
 
 
-    read_MP42790_16(0x72);
-    read_MP42790_8_CRC(0x1001);
-    read_MP42790_8_CRC(0x1100);
-    read_MP42790_8_CRC(0x1204);
-    read_MP42790_8_CRC(0x1205);
-    read_MP42790_8_CRC(0x1206);
-    read_MP42790_8_CRC(0x122F);
+    read_MP42790_16_CRC(0x72);
+//    read_MP42790_8_CRC(0x1001);
+//    read_MP42790_8_CRC(0x1100);
+//    read_MP42790_8_CRC(0x1204);
+//    read_MP42790_8_CRC(0x1205);
+//    read_MP42790_8_CRC(0x1206);
+//    read_MP42790_8_CRC(0x122F);
 
 
   while (1)
@@ -508,12 +508,12 @@ void receive_Data_8(uint16_t regAddr)
 
 void receive_Data_8_CRC(uint16_t regAddr)
 {
-    uint8_t toRead8[5];
+    uint8_t toRead8CRC[5];
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead8, 5, HAL_MAX_DELAY);
-    uint32_t sum = crc32(regAddr, 1, toRead8);
-    printf("reg 0x%04X data - 0x%02X CRC - 0x%02X%02X%02X%02X calcCRC - %08lX\r\n", regAddr, toRead8[0], toRead8[4], toRead8[3], toRead8[2], toRead8[1], sum);
-
+    HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead8CRC, 5, HAL_MAX_DELAY);
+    uint32_t sum = crc32(regAddr, 1, toRead8CRC);
+    printf("reg 0x%04X data - 0x%02X CRC - %02X%02X%02X%02X calcCRC - %08lX\r\n",
+    regAddr, toRead8CRC[0], toRead8CRC[4], toRead8CRC[3], toRead8CRC[2], toRead8CRC[1], (unsigned long)sum);
 }
 
 void receive_Data_16(uint16_t regAddr)
@@ -526,7 +526,12 @@ void receive_Data_16(uint16_t regAddr)
 
 void receive_Data_16_CRC(uint16_t regAddr)
 {
-
+    uint8_t toRead16CRC[6];
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead16CRC, 6, HAL_MAX_DELAY);
+    uint32_t sum = crc32(regAddr, 2, toRead16CRC);
+    printf("reg 0x%04X data - 0x%02X%02X CRC - %02X%02X%02X%02X calcCRC - %08lX\r\n",
+    regAddr, toRead16CRC[0], toRead16CRC[1], toRead16CRC[5], toRead16CRC[4], toRead16CRC[3], toRead16CRC[2], (unsigned long)sum);
 }
 
 void receive_Data_32(uint16_t regAddr)
@@ -635,12 +640,28 @@ void read_MP42790_16(uint16_t regAddr)
     receive_Data_16(regAddr);
 }
 
+void read_MP42790_16_CRC(uint16_t regAddr)
+{
+    HAL_Delay(10);
+    pulse_SDA();
+    send_Address_Len_16(regAddr);
+    receive_Data_16_CRC(regAddr);
+}
+
 void read_MP42790_32(uint16_t regAddr)
 {
     HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_32(regAddr);
     receive_Data_32(regAddr);
+}
+
+void read_MP42790_32_CRC(uint16_t regAddr)
+{
+    HAL_Delay(10);
+    pulse_SDA();
+    send_Address_Len_32(regAddr);
+    receive_Data_32_CRC(regAddr);
 }
 
 int _write(int fd, char *str, int len)
