@@ -162,8 +162,8 @@ int main(void)
 //    simpleTestI2C_EEPROM(0x10);
 //    read_42790_REGS();
 //    read_2790_REGS();
+    enable_42790_REGS_CRC();
 
-    disable_42790_REGS_CRC();
 
     print_MP42790_16_CRC(0x1207);
     print_MP42790_8_CRC(0x1001);
@@ -173,8 +173,8 @@ int main(void)
     print_MP42790_8_CRC(0x1206);
     print_MP42790_8_CRC(0x122F);
 
-    enable_42790_REGS_CRC();
 
+    disable_42790_REGS_CRC();
     print_MP42790_16_CRC(0x1207);
     print_MP42790_8_CRC(0x1001);
     print_MP42790_8_CRC(0x1100);
@@ -774,7 +774,7 @@ void read_MP42790_16(uint16_t regAddr)
 
 void read_MP42790_16_CRC(uint16_t regAddr)
 {
-    HAL_Delay(60);
+    HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_16(regAddr);
     receive_Data_16_CRC(regAddr);
