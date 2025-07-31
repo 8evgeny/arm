@@ -67,7 +67,12 @@ typedef struct _reg_16
 
 typedef struct _reg_32
 {
-    uint16_t value;
+    union
+    {
+        uint32_t value;
+        uint8_t val[4];
+    }value;
+
     uint32_t CRC_calc;
     union
     {
