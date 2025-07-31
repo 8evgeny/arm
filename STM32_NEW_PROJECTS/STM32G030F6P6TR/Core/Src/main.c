@@ -167,11 +167,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-    init_2790();
 
+    init_2790();
 //    simpleTestI2C_EEPROM(0x10);
 //    read_42790_REGS();
-    read_2790_REGS();
+//    read_2790_REGS();
 //    disable_42790_REGS_CRC();
 //    enable_42790_REGS_CRC();
 
@@ -268,27 +268,26 @@ void SystemClock_Config(void)
 
 void init_2790()
 {
+
     printf("\r\n------ init_2790 ------\r\n\n");
 
     write_MP2790(CELLS_CTRL, 0x0003);
-    read_MP2790(CELLS_CTRL);
-    printf("CELLS_CTRL \t\t0x%04X\r\n", data16.value.value);
+    print_MP2790(CELLS_CTRL);
 
     printf("\r\n");
 
-    read_MP2790(PWR_STATUS);
-    printf("PWR_STATUS \t\t0x%04X\r\n", data16.value.value);
-
+    print_MP2790(PWR_STATUS);
     write_MP2790(ACT_CFG, 0x0200);
-    read_MP2790(ACT_CFG);
-    printf("reg_ACT_CFG \t\t0x%04X\r\n", data16.value.value);
-
+    print_MP2790(ACT_CFG);
     write_MP2790(ACT_CFG, 0x0218);
-    read_MP2790(ACT_CFG);
-    printf("reg_ACT_CFG  \t\t0x%04X\r\n", data16.value.value);
-
-    read_MP2790(PWR_STATUS);
-    printf("PWR_STATUS \t\t0x%04X\r\n", data16.value.value);
+    print_MP2790(ACT_CFG);
+    print_MP2790(PWR_STATUS);
+    write_MP2790(ACT_CFG, 0x0200);
+    print_MP2790(ACT_CFG);
+    print_MP2790(PWR_STATUS);
+    write_MP2790(ACT_CFG, 0x0218);
+    print_MP2790(ACT_CFG);
+    print_MP2790(PWR_STATUS);
 
 //HAL_Delay(50);
 //    set_ACT_CFG_reg_05(0x0200);//on  3 4 bits
@@ -340,7 +339,7 @@ void read_2790_REGS()
 {
     for (int i=0; i <= 0xB9; ++i)
     {
-        read_MP2790(i);
+        print_MP2790(i);
         HAL_Delay(1);
     }
 }
@@ -511,6 +510,16 @@ void read_MP2790(uint8_t regAddr)
 //    delayUS_ASM(10);
     write_MP2790(GPIO_STATUS, 0x0000); //Фейковая запись чтобы далее шло чтение
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
+}
+
+void print_MP2790(uint8_t regAddr)
+{
+    read_MP2790(regAddr);
+    printf("MP2790 reg %02X \t0x%04X ", regAddr, data16.value.value);
+    print_byte(data16.value.val[1]);
+    printf(" ");
+    print_byte(data16.value.val[0]);
+    printf("\r\n");
 }
 
 void write_MP2790(uint8_t regAddr, uint16_t regValue)
