@@ -194,10 +194,10 @@ void SystemClock_Config(void)
 void init_2790()
 {
     write_MP2790(CELLS_CTRL, 0x0003);
-    Printf("init reg_CELLS_CTRL_00 \t\t0x%04X\r\n", read_MP2790(CELLS_CTRL));
+    printf("init reg_CELLS_CTRL_00 \t\t0x%04X\r\n", read_MP2790(CELLS_CTRL));
 
     set_ACT_CFG_reg_05(0x0218);//on  3 4 bits
-    Printf("init reg_LOAD_CHARGER_CFG_09 \t0x%04X\r\n", read_MP2790(LOAD_CHARGER_CFG));
+    printf("init reg_LOAD_CHARGER_CFG_09 \t0x%04X\r\n", read_MP2790(LOAD_CHARGER_CFG));
 
 
 
@@ -313,7 +313,7 @@ void read_Temp()
     write_MP2790(ADC_CTRL, 0x0001);
     while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
     Temperature = read_MP2790(RD_TDIE);
-    Printf("T=%04X\r\n",Temperature);
+    printf("T=%04X\r\n",Temperature);
 }
 
 void set_ACT_CFG_reg_05(uint16_t value)
@@ -321,7 +321,7 @@ void set_ACT_CFG_reg_05(uint16_t value)
     write_MP2790(ADC_CTRL, 0x0001);
     while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
     write_MP2790(ACT_CFG, value);
-    Printf("init reg_ACT_CFG_05  \t\t0x%04X\r\n", read_MP2790(ACT_CFG));
+    printf("init reg_ACT_CFG_05  \t\t0x%04X\r\n", read_MP2790(ACT_CFG));
 }
 
 void read_U_I()
@@ -336,11 +336,11 @@ void read_U_I()
     I2 = read_MP2790(RD_ICELL4);
     I3 = read_MP2790(RD_ICELL5);
     I4 = read_MP2790(RD_ICELL6);
-    Printf("U1=%04X I1=%04X\r\n",U1,I1);
-    Printf("U2=%04X I2=%04X\r\n",U2,I2);
-    Printf("U3=%04X I3=%04X\r\n",U3,I3);
-    Printf("U4=%04X I4=%04X\r\n",U4,I4);
-    Printf("\r\n");
+    printf("U1=%04X I1=%04X\r\n",U1,I1);
+    printf("U2=%04X I2=%04X\r\n",U2,I2);
+    printf("U3=%04X I3=%04X\r\n",U3,I3);
+    printf("U4=%04X I4=%04X\r\n",U4,I4);
+    printf("\r\n");
 }
 
 const char *bit_rep[16] =
@@ -389,11 +389,11 @@ uint16_t read_MP2790(uint8_t regAddr)
 //    HAL_Delay(1);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data.reg_value, 2, HAL_MAX_DELAY);
-//    Printf("MP2790 register 0x%02X - %04X   ", regAddr, data.regValue);
+//    printf("MP2790 register 0x%02X - %04X   ", regAddr, data.regValue);
 //    print_byte(data.reg_value[1]);
-//    Printf(" ");
+//    printf(" ");
 //    print_byte(data.reg_value[0]);
-//    Printf("\r\n");
+//    printf("\r\n");
 //    delayUS_ASM(10);
 
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
@@ -694,16 +694,6 @@ void read_MP42790_32_CRC(uint16_t regAddr)
     receive_Data_32_CRC(regAddr);
 }
 
-int _write(int fd, char *str, int len)
-{
-    for(int i=0; i<len; i++)
-    {
-        HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
-        SEGGER_RTT_PutChar(0, str[i]);
-    }
-    return len;
-}
-
 void init_crc_calculation()
 {
     uint8_t poly = 0x31;
@@ -769,6 +759,17 @@ void Printf(const char* fmt, ...)
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
 }
 
+int _write(int fd, char *str, int len)
+{
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    for(int i=0; i<len; i++)
+    {
+        HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
+        SEGGER_RTT_PutChar(0, str[i]);
+    }
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    return len;
+}
 
 /* USER CODE END 4 */
 
