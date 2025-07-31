@@ -288,7 +288,7 @@ void read_42790_REGS()
     }
     for (int i=0x200; i <= 0x023C; i+=4)
     {
-        read_MP42790_32_CRC(i);
+        print_MP42790_32_CRC(i);
     }
     for (int i=0x280; i <= 0x02C0; i+=0xF)
     {
@@ -314,7 +314,7 @@ void read_42790_REGS()
     }
     for (int i=0x608; i <= 0x0648; i+=4)
     {
-        read_MP42790_32_CRC(i);
+        print_MP42790_32_CRC(i);
     }
     for (int i=0x0C00; i <= 0x0C3E; i+=2)
     {
@@ -631,9 +631,18 @@ void receive_Data_32_CRC(uint16_t regAddr)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead32CRC, 8, HAL_MAX_DELAY);
     uint32_t sum = crc32(regAddr, 4, toRead32CRC);
-    printf("reg 0x%04X data - 0x%02X%02X%02X%02X \tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
-        regAddr, toRead32CRC[0], toRead32CRC[1], toRead32CRC[2], toRead32CRC[3],
-        toRead32CRC[7], toRead32CRC[6], toRead32CRC[5], toRead32CRC[4], (unsigned long)sum);
+//    printf("reg 0x%04X data - 0x%02X%02X%02X%02X \tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
+//        regAddr, toRead32CRC[0], toRead32CRC[1], toRead32CRC[2], toRead32CRC[3],
+//        toRead32CRC[7], toRead32CRC[6], toRead32CRC[5], toRead32CRC[4], (unsigned long)sum);
+    reg32.value.val[0] = toRead32CRC[0];
+    reg32.value.val[1] = toRead32CRC[1];
+    reg32.value.val[2] = toRead32CRC[2];
+    reg32.value.val[3] = toRead32CRC[3];
+    reg32.CRC_calc = sum;
+    reg32.readCRC.CRC_[3] = toRead32CRC[7];
+    reg32.readCRC.CRC_[2] = toRead32CRC[6];
+    reg32.readCRC.CRC_[1] = toRead32CRC[5];
+    reg32.readCRC.CRC_[0] = toRead32CRC[4];
 }
 
 uint32_t crc32 (uint16_t Reg_Address, uint8_t len, uint8_t *data)
@@ -779,6 +788,13 @@ void read_MP42790_32_CRC(uint16_t regAddr)
     pulse_SDA();
     send_Address_Len_32(regAddr);
     receive_Data_32_CRC(regAddr);
+}
+
+void print_MP42790_32_CRC(uint16_t regAddr)
+{
+    read_MP42790_32_CRC(regAddr);
+    printf("reg 0x%04X data - 0x%08X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
+    regAddr, reg32.value.value, (unsigned long)reg32.readCRC.CRC_read, (unsigned long)reg32.CRC_calc);
 }
 
 void init_crc_calculation()
