@@ -198,10 +198,13 @@ int main(void)
     read_Temp();
     read_U_I();
 
-    set_ACT_CFG_reg_05(0x0218);
+//    set_ACT_CFG_reg_05(0x0218);
+//    HAL_Delay(2000);
+//    set_ACT_CFG_reg_05(0x0200);
     HAL_Delay(2000);
-    set_ACT_CFG_reg_05(0x0200);
-    HAL_Delay(2000);
+
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
