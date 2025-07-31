@@ -49,7 +49,36 @@ typedef struct _reg_8
     }readCRC;
 }reg_8;
 
+typedef struct _reg_16
+{
+    union
+    {
+        uint16_t value;
+        uint8_t val[2];
+    }value;
+
+    uint32_t CRC_calc;
+    union
+    {
+        uint32_t CRC_read;
+        uint8_t CRC_[4];
+    }readCRC;
+}reg_16;
+
+typedef struct _reg_32
+{
+    uint16_t value;
+    uint32_t CRC_calc;
+    union
+    {
+        uint32_t CRC_read;
+        uint8_t CRC_[4];
+    }readCRC;
+}reg_32;
+
 reg_8 reg8;
+reg_16 reg16;
+reg_32 reg32;
 
 /* USER CODE END PD */
 
@@ -131,6 +160,7 @@ int main(void)
 
     disable_42790_REGS_CRC();
 
+    print_MP42790_16_CRC(0x1207);
     print_MP42790_8_CRC(0x1001);
     print_MP42790_8_CRC(0x1100);
     print_MP42790_8_CRC(0x1204);
@@ -249,7 +279,7 @@ void read_42790_REGS()
 {
     for (int i=0; i < 0x78; i+=2)
     {
-        read_MP42790_16_CRC(i);
+        print_MP42790_16_CRC(i);
     }
     for (int i=0x200; i <= 0x023C; i+=4)
     {
@@ -257,21 +287,21 @@ void read_42790_REGS()
     }
     for (int i=0x280; i <= 0x02C0; i+=0xF)
     {
-        read_MP42790_16_CRC(i);
+        print_MP42790_16_CRC(i);
     }
     for (int i=0x0564; i <= 0x058C; i+=1)
     {
         print_MP42790_8_CRC(i);
     }
 
-    read_MP42790_16_CRC(0x058D);
-    read_MP42790_16_CRC(0x0590);
-    read_MP42790_16_CRC(0x0593);
-    read_MP42790_16_CRC(0x0597);
-    read_MP42790_16_CRC(0x059B);
-    read_MP42790_16_CRC(0x059F);
-    read_MP42790_16_CRC(0x05A3);
-    read_MP42790_16_CRC(0x05A5);
+    print_MP42790_16_CRC(0x058D);
+    print_MP42790_16_CRC(0x0590);
+    print_MP42790_16_CRC(0x0593);
+    print_MP42790_16_CRC(0x0597);
+    print_MP42790_16_CRC(0x059B);
+    print_MP42790_16_CRC(0x059F);
+    print_MP42790_16_CRC(0x05A3);
+    print_MP42790_16_CRC(0x05A5);
 
     for (int i=0x05A8; i <= 0x05B7; i+=1)
     {
@@ -283,7 +313,7 @@ void read_42790_REGS()
     }
     for (int i=0x0C00; i <= 0x0C3E; i+=2)
     {
-        read_MP42790_16_CRC(i);
+        print_MP42790_16_CRC(i);
     }
     for (int i=0x0C62; i <= 0x0C6A; i+=1)
     {
@@ -299,25 +329,25 @@ void read_42790_REGS()
     }
     for (int i=0x1207; i <= 0x122D; i+=2)
     {
-        read_MP42790_16_CRC(i);
+        print_MP42790_16_CRC(i);
     }
     print_MP42790_8_CRC(0x122F);
-    read_MP42790_16_CRC(0x1230);
+    print_MP42790_16_CRC(0x1230);
     print_MP42790_8_CRC(0x1232);
-    read_MP42790_16_CRC(0x1233);
+    print_MP42790_16_CRC(0x1233);
     print_MP42790_8_CRC(0x1235);
-    read_MP42790_16_CRC(0x1236);
+    print_MP42790_16_CRC(0x1236);
     print_MP42790_8_CRC(0x1238);
-    read_MP42790_16_CRC(0x1239);
+    print_MP42790_16_CRC(0x1239);
     print_MP42790_8_CRC(0x123B);
-    read_MP42790_16_CRC(0x123C);
+    print_MP42790_16_CRC(0x123C);
     print_MP42790_8_CRC(0x123E);
-    read_MP42790_16_CRC(0x1400);
-    read_MP42790_16_CRC(0x1402);
+    print_MP42790_16_CRC(0x1400);
+    print_MP42790_16_CRC(0x1402);
     print_MP42790_8_CRC(0x1406);
-    read_MP42790_16_CRC(0x1500);
-    read_MP42790_16_CRC(0x1502);
-    read_MP42790_16_CRC(0x1504);
+    print_MP42790_16_CRC(0x1500);
+    print_MP42790_16_CRC(0x1502);
+    print_MP42790_16_CRC(0x1504);
     print_MP42790_8_CRC(0x1506);
     print_MP42790_8_CRC(0x150A);
     for (int i=0x1600; i <= 0x1605; i+=1)
@@ -571,8 +601,15 @@ void receive_Data_16_CRC(uint16_t regAddr)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead16CRC, 6, HAL_MAX_DELAY);
     uint32_t sum = crc32(regAddr, 2, toRead16CRC);
-    printf("reg 0x%04X data - 0x%02X%02X \tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
-    regAddr, toRead16CRC[0], toRead16CRC[1], toRead16CRC[5], toRead16CRC[4], toRead16CRC[3], toRead16CRC[2], (unsigned long)sum);
+//    printf("reg 0x%04X data - 0x%02X%02X \tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
+//    regAddr, toRead16CRC[0], toRead16CRC[1], toRead16CRC[5], toRead16CRC[4], toRead16CRC[3], toRead16CRC[2], (unsigned long)sum);
+    reg16.value.val[0] = toRead16CRC[0];
+    reg16.value.val[1] = toRead16CRC[1];
+    reg16.CRC_calc = sum;
+    reg16.readCRC.CRC_[3] = toRead16CRC[5];
+    reg16.readCRC.CRC_[2] = toRead16CRC[4];
+    reg16.readCRC.CRC_[1] = toRead16CRC[3];
+    reg16.readCRC.CRC_[0] = toRead16CRC[2];
 }
 
 void receive_Data_32(uint16_t regAddr)
@@ -714,6 +751,13 @@ void read_MP42790_16_CRC(uint16_t regAddr)
     pulse_SDA();
     send_Address_Len_16(regAddr);
     receive_Data_16_CRC(regAddr);
+}
+
+void print_MP42790_16_CRC(uint16_t regAddr)
+{
+    read_MP42790_16_CRC(regAddr);
+    printf("reg 0x%04X data - 0x%04X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
+    regAddr, reg16.value.value, (unsigned long)reg16.readCRC.CRC_read, (unsigned long)reg16.CRC_calc);
 }
 
 void read_MP42790_32(uint16_t regAddr)
