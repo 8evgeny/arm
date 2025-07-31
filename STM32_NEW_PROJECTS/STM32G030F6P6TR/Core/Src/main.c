@@ -37,6 +37,20 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+typedef struct _reg_8
+{
+    uint8_t value;
+    uint32_t CRC_calc;
+    union
+    {
+        uint32_t CRC_read;
+        uint8_t CRC_[4];
+    }readCRC;
+}reg_8;
+
+reg_8 reg8;
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -116,24 +130,21 @@ int main(void)
 //    read_2790_REGS();
     disable_42790_REGS_CRC();
 
-
-    read_MP42790_16_CRC(0x72);
-    read_MP42790_8_CRC(0x1001);
-    read_MP42790_8_CRC(0x1100);
-    read_MP42790_8_CRC(0x1204);
-    read_MP42790_8_CRC(0x1205);
-    read_MP42790_8_CRC(0x1206);
-    read_MP42790_8_CRC(0x122F);
+    print_MP42790_8_CRC(0x1001);
+    print_MP42790_8_CRC(0x1100);
+    print_MP42790_8_CRC(0x1204);
+    print_MP42790_8_CRC(0x1205);
+    print_MP42790_8_CRC(0x1206);
+    print_MP42790_8_CRC(0x122F);
 
     enable_42790_REGS_CRC();
 
-    read_MP42790_16_CRC(0x72);
-    read_MP42790_8_CRC(0x1001);
-    read_MP42790_8_CRC(0x1100);
-    read_MP42790_8_CRC(0x1204);
-    read_MP42790_8_CRC(0x1205);
-    read_MP42790_8_CRC(0x1206);
-    read_MP42790_8_CRC(0x122F);
+    print_MP42790_8_CRC(0x1001);
+    print_MP42790_8_CRC(0x1100);
+    print_MP42790_8_CRC(0x1204);
+    print_MP42790_8_CRC(0x1205);
+    print_MP42790_8_CRC(0x1206);
+    print_MP42790_8_CRC(0x122F);
 
 
   while (1)
@@ -528,16 +539,21 @@ void receive_Data_8(uint16_t regAddr)
     printf("reg 0x%04X data - 0x%02X\r\n", regAddr,toRead8[0]);
 }
 
-uint8_t receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
+void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
 {
     uint8_t toRead8CRC[5];
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead8CRC, 5, HAL_MAX_DELAY);
     uint32_t sum = crc32(regAddr, 1, toRead8CRC);
-    printf("reg 0x%04X data - 0x%02X \t\tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
-    regAddr, toRead8CRC[0], toRead8CRC[4], toRead8CRC[3], toRead8CRC[2], toRead8CRC[1], (unsigned long)sum);
+//    printf("reg 0x%04X data - 0x%02X \t\tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
+//    regAddr, toRead8CRC[0], toRead8CRC[4], toRead8CRC[3], toRead8CRC[2], toRead8CRC[1], (unsigned long)sum);
 
-    return toRead8CRC[0];
+    reg8.value = toRead8CRC[0];
+    reg8.CRC_calc = sum;
+    reg8.readCRC.CRC_[3] = toRead8CRC[4];
+    reg8.readCRC.CRC_[2] = toRead8CRC[3];
+    reg8.readCRC.CRC_[1] = toRead8CRC[2];
+    reg8.readCRC.CRC_[0] = toRead8CRC[1];
 }
 
 void receive_Data_16(uint16_t regAddr)
@@ -629,14 +645,21 @@ void read_MP42790_8(uint16_t regAddr)
     receive_Data_8(regAddr);
 }
 
-uint8_t read_MP42790_8_CRC(uint16_t regAddr)
+void read_MP42790_8_CRC(uint16_t regAddr)
 {
     HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_8(regAddr);
     int8_t CRC_OK = -1;
     int8_t * pCRC_OK = &CRC_OK;
-    return receive_Data_8_CRC(regAddr, pCRC_OK);
+    receive_Data_8_CRC(regAddr, pCRC_OK);
+}
+
+void print_MP42790_8_CRC(uint16_t regAddr)
+{
+    read_MP42790_8_CRC(regAddr);
+    printf("reg 0x%04X data - 0x%02X \t\tCRC - %08lX \tcalcCRC - %08lX\r\n",
+    regAddr, reg8.value, (unsigned long)reg8.readCRC.CRC_read, (unsigned long)reg8.CRC_calc);
 }
 
 void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
