@@ -194,6 +194,7 @@ void SystemClock_Config(void)
 
 void init_2790()
 {
+    printf("\r\n------ init_2790 ------\r\n\n");
     write_MP2790(CELLS_CTRL, 0x0003);
     printf("init reg_CELLS_CTRL_00 \t\t0x%04X\r\n", read_MP2790(CELLS_CTRL));
 
@@ -685,7 +686,7 @@ void read_MP42790_16(uint16_t regAddr)
 
 void read_MP42790_16_CRC(uint16_t regAddr)
 {
-    HAL_Delay(100);
+    HAL_Delay(60);
     pulse_SDA();
     send_Address_Len_16(regAddr);
     receive_Data_16_CRC(regAddr);
