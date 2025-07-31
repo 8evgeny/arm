@@ -87,6 +87,7 @@ void Error_Handler(void);
 #define WDT_IN_GPIO_Port GPIOA
 #define XALERT_INT_Pin GPIO_PIN_8
 #define XALERT_INT_GPIO_Port GPIOA
+#define XALERT_INT_EXTI_IRQn EXTI4_15_IRQn
 #define GPIO1_IN_Pin GPIO_PIN_3
 #define GPIO1_IN_GPIO_Port GPIOB
 
