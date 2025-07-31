@@ -160,7 +160,7 @@ int main(void)
 
 
 //    simpleTestI2C_EEPROM(0x10);
-    read_42790_REGS();
+//    read_42790_REGS();
 //    read_2790_REGS();
 
     disable_42790_REGS_CRC();
@@ -175,6 +175,7 @@ int main(void)
 
     enable_42790_REGS_CRC();
 
+    print_MP42790_16_CRC(0x1207);
     print_MP42790_8_CRC(0x1001);
     print_MP42790_8_CRC(0x1100);
     print_MP42790_8_CRC(0x1204);
@@ -255,21 +256,33 @@ void init_2790()
 void disable_42790_REGS_CRC()
 {
     printf("\r\n----- Disable CRC ------\r\n");
-//    read_MP42790_8_CRC(0x4100);
     write_MP42790_8_CRC(0x4100,0x08);
-//    read_MP42790_8_CRC(0x4100);
-    printf("\r\n");
     HAL_Delay(50);
+    read_MP42790_8_CRC(0x4100);
+    while(reg8.value != 0x08)
+    {
+        HAL_Delay(50);
+        write_MP42790_8_CRC(0x4100,0x08);
+        HAL_Delay(50);
+        read_MP42790_8_CRC(0x4100);
+    }
+    printf("\r\n");
 }
 
 void enable_42790_REGS_CRC()
 {
     printf("\r\n----- Enable CRC ------\r\n");
-//    read_MP42790_8_CRC(0x4100);
-    write_MP42790_8_CRC(0x4100,0x88);
-//    read_MP42790_8_CRC(0x4100);
-    printf("\r\n");
+    write_MP42790_8_CRC(0x4100, 0x88);
     HAL_Delay(50);
+    read_MP42790_8_CRC(0x4100);
+    while(reg8.value != 0x88)
+    {
+        HAL_Delay(50);
+        write_MP42790_8_CRC(0x4100,0x88);
+        HAL_Delay(50);
+        read_MP42790_8_CRC(0x4100);
+    }
+    printf("\r\n");
 }
 
 void read_2790_REGS()
