@@ -70,8 +70,8 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Alternate = GPIO_AF1_OSC;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : IRQ_IN_Pin WDT_IN_Pin XALERT_IN_Pin */
-  GPIO_InitStruct.Pin = IRQ_IN_Pin|WDT_IN_Pin|XALERT_IN_Pin;
+  /*Configure GPIO pins : IRQ_IN_Pin WDT_IN_Pin */
+  GPIO_InitStruct.Pin = IRQ_IN_Pin|WDT_IN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -89,6 +89,12 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(Enable_I2C_2790_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : XALERT_INT_Pin */
+  GPIO_InitStruct.Pin = XALERT_INT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(XALERT_INT_GPIO_Port, &GPIO_InitStruct);
 
 }
 
