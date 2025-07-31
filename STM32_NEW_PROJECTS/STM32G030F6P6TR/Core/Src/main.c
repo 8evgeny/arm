@@ -158,39 +158,50 @@ int main(void)
   /* USER CODE BEGIN WHILE */
     init_2790();
 
-
 //    simpleTestI2C_EEPROM(0x10);
 //    read_42790_REGS();
 //    read_2790_REGS();
-    enable_42790_REGS_CRC();
+//    enable_42790_REGS_CRC();
+//    print_MP42790_16_CRC(0x1207);
+//    print_MP42790_8_CRC(0x1001);
+//    print_MP42790_8_CRC(0x1100);
+//    print_MP42790_8_CRC(0x1204);
+//    print_MP42790_8_CRC(0x1205);
+//    print_MP42790_8_CRC(0x1206);
+//    print_MP42790_8_CRC(0x122F);
+
+//    disable_42790_REGS_CRC();
+//    print_MP42790_16_CRC(0x1207);
+//    print_MP42790_8_CRC(0x1001);
+//    print_MP42790_8_CRC(0x1100);
+//    print_MP42790_8_CRC(0x1204);
+//    print_MP42790_8_CRC(0x1205);
+//    print_MP42790_8_CRC(0x1206);
+//    print_MP42790_8_CRC(0x122F);
 
 
-    print_MP42790_16_CRC(0x1207);
-    print_MP42790_8_CRC(0x1001);
-    print_MP42790_8_CRC(0x1100);
-    print_MP42790_8_CRC(0x1204);
-    print_MP42790_8_CRC(0x1205);
-    print_MP42790_8_CRC(0x1206);
-    print_MP42790_8_CRC(0x122F);
-
-
-    disable_42790_REGS_CRC();
-    print_MP42790_16_CRC(0x1207);
-    print_MP42790_8_CRC(0x1001);
-    print_MP42790_8_CRC(0x1100);
-    print_MP42790_8_CRC(0x1204);
-    print_MP42790_8_CRC(0x1205);
-    print_MP42790_8_CRC(0x1206);
-    print_MP42790_8_CRC(0x122F);
+//    print_MP42790_8_CRC(0x1205);
+//    HAL_Delay(50);
+//    write_MP42790_8_CRC(0x1205, 0x02);
+//    while(reg8.value != 0x02)
+//    {
+//        write_MP42790_8_CRC(0x1205, 0x02);
+//        HAL_Delay(50);
+//        print_MP42790_8_CRC(0x1205);
+//        HAL_Delay(50);
+//    }
+//    print_MP42790_8_CRC(0x1205);
 
 
   while (1)
   {
-//    read_Temp();
-//    read_U_I();
+    read_Temp();
+    read_U_I();
 
-
-    HAL_Delay(3000);
+    set_ACT_CFG_reg_05(0x0218);
+    HAL_Delay(2000);
+    set_ACT_CFG_reg_05(0x0200);
+    HAL_Delay(2000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -393,8 +404,6 @@ void read_Temp()
 
 void set_ACT_CFG_reg_05(uint16_t value)
 {
-    write_MP2790(ADC_CTRL, 0x0001);
-    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
     write_MP2790(ACT_CFG, value);
     printf("init reg_ACT_CFG_05  \t\t0x%04X\r\n", read_MP2790(ACT_CFG));
 }
