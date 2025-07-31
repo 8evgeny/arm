@@ -122,6 +122,17 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if(GPIO_Pin == XALERT_INT_Pin)
+  {
+    printf("\r\n========== xALERT ===========\r\n");
+  } else
+  {
+      printf("\r\nEXTI ERROR\r\n");
+  }
+}
+
 /* USER CODE END 0 */
 
 /**
