@@ -36,6 +36,7 @@
 ENTRY(Reset_Handler)
 
 /* Highest address of the user mode stack */
+. = ALIGN(8);
 _estack = ORIGIN(RAM) + LENGTH(RAM); /* end of "RAM" Ram type memory */
 
 _Min_Heap_Size = 0x500; /* required amount of heap */
@@ -134,14 +135,14 @@ SECTIONS
   /* Initialized data sections into "RAM" Ram type memory */
   .data :
   {
-    . = ALIGN(4);
+    . = ALIGN(8);
     _sdata = .;        /* create a global symbol at data start */
     *(.data)           /* .data sections */
     *(.data*)          /* .data* sections */
     *(.RamFunc)        /* .RamFunc sections */
     *(.RamFunc*)       /* .RamFunc* sections */
 
-    . = ALIGN(4);
+    . = ALIGN(8);
     _edata = .;        /* define a global symbol at data end */
 
   } >RAM AT> FLASH
@@ -157,7 +158,7 @@ SECTIONS
     *(.bss*)
     *(COMMON)
 
-    . = ALIGN(4);
+    . = ALIGN(8);
     _ebss = .;         /* define a global symbol at bss end */
     __bss_end__ = _ebss;
   } >RAM

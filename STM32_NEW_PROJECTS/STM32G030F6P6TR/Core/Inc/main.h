@@ -45,12 +45,13 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-//The CELLS_CTRL command controls the number of stacked cells in use
-#define CELLS_CTRL          0x00
+
+#define CELLS_CTRL          0x00 //The CELLS_CTRL command controls the number of stacked cells in use
+#define PWR_STATUS          0x01 //The PWR_STATUS command reports the pack current status and the power state status.
 #define LOAD_CHARGER_CFG    0x09
 //The ADC_CTRL command reports whether an error has occurred when starting the high-resolution voltage scan. It also controls the start of a high-resolution scan for all the selected channels
-#define ADC_CTRL 0x99
-
+#define ADC_CTRL            0x99
+#define GPIO_STATUS         0x0A
 //Voltage = Reading x 5000 / 32768 (mV)
 #define RD_VCELL3           0x70
 #define RD_VCELL4           0x72
@@ -99,11 +100,11 @@ void enable_42790_REGS_CRC();
 void read_2790_REGS();
 void read_42790_REGS();
 void read_Temp();
-void set_ACT_CFG_reg_05(uint16_t value);
+
 void read_U_I();
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);
-uint16_t read_MP2790(uint8_t regAddr);
+void read_MP2790(uint8_t regAddr);
 void write_MP2790(uint8_t regAddr, uint16_t regValue);
 void pulse_SDA();
 void disable_CRC();
