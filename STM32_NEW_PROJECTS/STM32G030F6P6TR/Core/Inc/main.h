@@ -95,6 +95,7 @@ void Printf(const char* fmt, ...);
 
 void init_2790();
 void disable_42790_REGS_CRC();
+void enable_42790_REGS_CRC();
 void read_2790_REGS();
 void read_42790_REGS();
 void read_Temp();

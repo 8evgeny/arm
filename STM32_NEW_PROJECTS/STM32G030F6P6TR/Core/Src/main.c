@@ -114,26 +114,32 @@ int main(void)
 //    simpleTestI2C_EEPROM(0x10);
 //    read_42790_REGS();
 //    read_2790_REGS();
-//    disable_42790_REGS_CRC();
+    disable_42790_REGS_CRC();
 
 
-//    read_MP42790_16_CRC(0x72);
-//    read_MP42790_8_CRC(0x1001);
-//    read_MP42790_8_CRC(0x1100);
-//    read_MP42790_8_CRC(0x1204);
-//    read_MP42790_8_CRC(0x1205);
-//    read_MP42790_8_CRC(0x1206);
-//    read_MP42790_8_CRC(0x122F);
+    read_MP42790_16_CRC(0x72);
+    read_MP42790_8_CRC(0x1001);
+    read_MP42790_8_CRC(0x1100);
+    read_MP42790_8_CRC(0x1204);
+    read_MP42790_8_CRC(0x1205);
+    read_MP42790_8_CRC(0x1206);
+    read_MP42790_8_CRC(0x122F);
 
+    enable_42790_REGS_CRC();
 
-
-
+    read_MP42790_16_CRC(0x72);
+    read_MP42790_8_CRC(0x1001);
+    read_MP42790_8_CRC(0x1100);
+    read_MP42790_8_CRC(0x1204);
+    read_MP42790_8_CRC(0x1205);
+    read_MP42790_8_CRC(0x1206);
+    read_MP42790_8_CRC(0x122F);
 
 
   while (1)
   {
-    read_Temp();
-    read_U_I();
+//    read_Temp();
+//    read_U_I();
 
 
     HAL_Delay(3000);
@@ -200,9 +206,22 @@ void init_2790()
 
 void disable_42790_REGS_CRC()
 {
-    read_MP42790_8_CRC(0x4100);
-    write_MP42790_8_CRC(0x4100,0x08); //Disable CRC
-    read_MP42790_8_CRC(0x4100);
+    printf("\r\n----- Disable CRC ------\r\n");
+//    read_MP42790_8_CRC(0x4100);
+    write_MP42790_8_CRC(0x4100,0x08);
+//    read_MP42790_8_CRC(0x4100);
+    printf("\r\n");
+    HAL_Delay(50);
+}
+
+void enable_42790_REGS_CRC()
+{
+    printf("\r\n----- Enable CRC ------\r\n");
+//    read_MP42790_8_CRC(0x4100);
+    write_MP42790_8_CRC(0x4100,0x88);
+//    read_MP42790_8_CRC(0x4100);
+    printf("\r\n");
+    HAL_Delay(50);
 }
 
 void read_2790_REGS()
@@ -651,8 +670,7 @@ void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
     toWrite[6] = dataWrite2.tmp2[2];
     toWrite[7] = dataWrite2.tmp2[3];  //старший CRC
 
-    printf("toSend - %02X%02X%02X%02X%02X%02X%02X%02X \r\n",
-           toWrite[0], toWrite[1], toWrite[2], toWrite[3], toWrite[4], toWrite[5],  toWrite[6], toWrite[7]);
+//    printf("toSend - %02X%02X%02X%02X%02X%02X%02X%02X \r\n", toWrite[0], toWrite[1], toWrite[2], toWrite[3], toWrite[4], toWrite[5],  toWrite[6], toWrite[7]);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 8, HAL_MAX_DELAY);
 }
@@ -667,7 +685,7 @@ void read_MP42790_16(uint16_t regAddr)
 
 void read_MP42790_16_CRC(uint16_t regAddr)
 {
-    HAL_Delay(10);
+    HAL_Delay(100);
     pulse_SDA();
     send_Address_Len_16(regAddr);
     receive_Data_16_CRC(regAddr);
