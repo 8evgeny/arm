@@ -495,7 +495,7 @@ uint16_t read_MP2790(uint8_t regAddr)
 }
 void print_MP2790(uint8_t regAddr)
 {
-    printf("MP2790 reg %02X \t0x%04X ", regAddr, read_MP2790(regAddr));
+    printf("MP2790  reg %02X     0x%04X  ", regAddr, read_MP2790(regAddr));
     print_byte(data16.value.val[1]);
     printf(" ");
     print_byte(data16.value.val[0]);
@@ -706,7 +706,7 @@ uint8_t read_MP42790_8_CRC(uint16_t regAddr)
 void print_MP42790_8_CRC(uint16_t regAddr)
 {
     read_MP42790_8_CRC(regAddr);
-    printf("reg 0x%04X data - 0x%02X \t\tCRC - %08lX \tcalcCRC - %08lX\r\n",
+    printf("MP42790 reg %04X   0x%02X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
     regAddr, reg8.value, (unsigned long)reg8.readCRC.CRC_read, (unsigned long)reg8.CRC_calc);
 }
 void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
@@ -756,7 +756,7 @@ uint16_t read_MP42790_16_CRC(uint16_t regAddr)
 void print_MP42790_16_CRC(uint16_t regAddr)
 {
     read_MP42790_16_CRC(regAddr);
-    printf("reg 0x%04X data - 0x%04X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
+    printf("MP42790 reg %04X   0x%04X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
     regAddr, reg16.value.value, (unsigned long)reg16.readCRC.CRC_read, (unsigned long)reg16.CRC_calc);
 }
 uint32_t read_MP42790_32_CRC(uint16_t regAddr)
@@ -770,7 +770,7 @@ uint32_t read_MP42790_32_CRC(uint16_t regAddr)
 void print_MP42790_32_CRC(uint16_t regAddr)
 {
     read_MP42790_32_CRC(regAddr);
-    printf("reg 0x%04X data - 0x%08X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
+    printf("MP42790 reg %04X   0x%08X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
     regAddr, reg32.value.value, (unsigned long)reg32.readCRC.CRC_read, (unsigned long)reg32.CRC_calc);
 }
 void RST_CMD()             //Reset the fuel gauge. This is a self-clearing function
