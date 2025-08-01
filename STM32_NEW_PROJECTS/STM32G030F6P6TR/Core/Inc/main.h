@@ -130,16 +130,12 @@ void receive_Data_16_CRC(uint16_t regAddr);
 void receive_Data_32(uint16_t regAddr);
 void receive_Data_32_CRC(uint16_t regAddr);
 uint32_t crc32 (uint16_t Reg_Address, uint8_t len, uint8_t *data);
-void read_MP42790_8(uint16_t regAddr);
-void read_MP42790_8_CRC(uint16_t regAddr);
+uint8_t read_MP42790_8_CRC(uint16_t regAddr);
 void print_MP42790_8_CRC(uint16_t regAddr);
 void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value);
-void read_MP42790_16(uint16_t regAddr);
-void read_MP42790_16_CRC(uint16_t regAddr);
+uint16_t read_MP42790_16_CRC(uint16_t regAddr);
 void print_MP42790_16_CRC(uint16_t regAddr);
-
-void read_MP42790_32(uint16_t regAddr);
-void read_MP42790_32_CRC(uint16_t regAddr);
+uint32_t read_MP42790_32_CRC(uint16_t regAddr);
 void print_MP42790_32_CRC(uint16_t regAddr);
 
 //Команды 42790

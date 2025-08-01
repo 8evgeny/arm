@@ -184,41 +184,34 @@ int main(void)
 
 
 #endif
-//    init_2790();
+    init_2790();
 //    simpleTestI2C_EEPROM(0x10);
 //    read_42790_REGS();
 //    read_2790_REGS();
 //    disable_42790_REGS_CRC();
 //    enable_42790_REGS_CRC();
 
-//    print_MP42790_16_CRC(0x1207);
-//    print_MP42790_8_CRC(0x1001);
-//    print_MP42790_8_CRC(0x1100);
-//    print_MP42790_8_CRC(0x1204);
-//    print_MP42790_8_CRC(0x1205);
-//    print_MP42790_8_CRC(0x1206);
-//    print_MP42790_8_CRC(0x122F);
 
-//    disable_42790_REGS_CRC();
-//    print_MP42790_16_CRC(0x1207);
-//    print_MP42790_8_CRC(0x1001);
-//    print_MP42790_8_CRC(0x1100);
-//    print_MP42790_8_CRC(0x1204);
-//    print_MP42790_8_CRC(0x1205);
-//    print_MP42790_8_CRC(0x1206);
-//    print_MP42790_8_CRC(0x122F);
+    print_MP42790_16_CRC(0x1207);
+    print_MP42790_8_CRC(0x1001);
+    print_MP42790_8_CRC(0x1100);
+    print_MP42790_8_CRC(0x1204);
+    print_MP42790_8_CRC(0x1205);
+    print_MP42790_8_CRC(0x1206);
+    print_MP42790_8_CRC(0x122F);
 
-CONFIG_MODE_CMD();
-    uint16_t reg = 0x1000;
-    print_MP42790_8_CRC(reg);
-    uint8_t value = reg8.value;
-    ++value;
-    while(reg8.value != value)
-    {
-        write_MP42790_8_CRC(reg, value);
-        print_MP42790_8_CRC(reg);
-        HAL_Delay(50);
-    }
+
+//CONFIG_MODE_CMD();
+//    uint16_t reg = 0x1000;
+//    print_MP42790_8_CRC(reg);
+//    uint8_t value = reg8.value;
+//    ++value;
+//    while(reg8.value != value)
+//    {
+//        write_MP42790_8_CRC(reg, value);
+//        print_MP42790_8_CRC(reg);
+//        HAL_Delay(50);
+//    }
 
 
   while (1)
@@ -226,9 +219,6 @@ CONFIG_MODE_CMD();
 //    read_Temp();
 //    read_U_I();
 
-//    set_ACT_CFG_reg_05(0x0218);
-//    HAL_Delay(2000);
-//    set_ACT_CFG_reg_05(0x0200);
     HAL_Delay(2000);
 
 
@@ -298,20 +288,8 @@ void init_2790()
     print_MP2790(ACT_CFG);
     print_MP2790(PWR_STATUS);
 
-//HAL_Delay(50);
-//    set_ACT_CFG_reg_05(0x0200);//on  3 4 bits
 
-
-
-
-//HAL_Delay(50);
-//    set_ACT_CFG_reg_05(0x0218);//on  3 4 bits
-
-//HAL_Delay(50);
-//    printf("PWR_STATUS_reg \t0x%04X\r\n", read_MP2790(PWR_STATUS));
-//HAL_Delay(50);
 }
-
 void disable_42790_REGS_CRC()
 {
     printf("\r\n----- Disable CRC ------\r\n");
@@ -327,7 +305,6 @@ void disable_42790_REGS_CRC()
     }
     printf("\r\n");
 }
-
 void enable_42790_REGS_CRC()
 {
     printf("\r\n----- Enable CRC ------\r\n");
@@ -343,7 +320,6 @@ void enable_42790_REGS_CRC()
     }
     printf("\r\n");
 }
-
 void read_2790_REGS()
 {
     for (int i=0; i <= 0xB9; ++i)
@@ -450,7 +426,6 @@ void read_Temp()
     Temperature = read_MP2790(RD_TDIE);
     printf("T=%04X\r\n",Temperature);
 }
-
 void read_U_I()
 {
     write_MP2790(ADC_CTRL, 0x0001);
@@ -469,7 +444,6 @@ void read_U_I()
     printf("U4=%04X I4=%04X\r\n",U4,I4);
     printf("\r\n");
 }
-
 const char *bit_rep[16] =
 {
     [ 0] = "0000", [ 1] = "0001", [ 2] = "0010", [ 3] = "0011",
@@ -481,7 +455,6 @@ void print_byte(uint8_t byte)
 {
     printf("%s%s", bit_rep[byte >> 4], bit_rep[byte & 0x0F]);
 }
-
 void simpleTestI2C_EEPROM(uint16_t addr)
 {
 // Пишет по 8 байт в адреса кратные 8 Читать может больше
@@ -504,8 +477,6 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
     printf("EEPROM read: %s\r\n",rd_value);
 }
-
-
 uint16_t read_MP2790(uint8_t regAddr)
 {
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
@@ -522,17 +493,14 @@ uint16_t read_MP2790(uint8_t regAddr)
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
     return data16.value.value;
 }
-
 void print_MP2790(uint8_t regAddr)
 {
-    read_MP2790(regAddr);
-    printf("MP2790 reg %02X \t0x%04X ", regAddr, data16.value.value);
+    printf("MP2790 reg %02X \t0x%04X ", regAddr, read_MP2790(regAddr));
     print_byte(data16.value.val[1]);
     printf(" ");
     print_byte(data16.value.val[0]);
     printf("\r\n");
 }
-
 void write_MP2790(uint8_t regAddr, uint16_t regValue)
 {
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
@@ -543,7 +511,6 @@ void write_MP2790(uint8_t regAddr, uint16_t regValue)
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
 }
-
 void pulse_SDA()
 {
     HAL_I2C_DeInit(&hi2c2);
@@ -565,7 +532,6 @@ void pulse_SDA()
     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_12);
     MX_I2C2_Init();
 }
-
 void disable_CRC()
 {
     uint8_t DisableCRC[8] = {0x00, 0x41, 0x01, 0x08, 0x94, 0xA0, 0xDE, 0xDD};
@@ -573,7 +539,6 @@ void disable_CRC()
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, DisableCRC, 8, HAL_MAX_DELAY);
 }
-
 void send_Address_Len_8(uint16_t regAddr)
 {
     union
@@ -594,7 +559,6 @@ void send_Address_Len_8(uint16_t regAddr)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 3, HAL_MAX_DELAY);
 }
-
 void send_Address_Len_16(uint16_t regAddr)
 {
     union
@@ -615,7 +579,6 @@ void send_Address_Len_16(uint16_t regAddr)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 3, HAL_MAX_DELAY);
 }
-
 void send_Address_Len_32(uint16_t regAddr)
 {
     union
@@ -636,15 +599,6 @@ void send_Address_Len_32(uint16_t regAddr)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 3, HAL_MAX_DELAY);
 }
-
-void receive_Data_8(uint16_t regAddr)
-{
-    uint8_t toRead8[1];
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead8, 1, HAL_MAX_DELAY);
-    printf("reg 0x%04X data - 0x%02X\r\n", regAddr,toRead8[0]);
-}
-
 void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
 {
     uint8_t toRead8CRC[5];
@@ -661,15 +615,6 @@ void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
     reg8.readCRC.CRC_[1] = toRead8CRC[2];
     reg8.readCRC.CRC_[0] = toRead8CRC[1];
 }
-
-void receive_Data_16(uint16_t regAddr)
-{
-    uint8_t toRead16[2];
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead16, 2, HAL_MAX_DELAY);
-    printf("reg 0x%04X data - 0x%02X%02X\r\n", regAddr,toRead16[1],toRead16[0]);
-}
-
 void receive_Data_16_CRC(uint16_t regAddr)
 {
     uint8_t toRead16CRC[6];
@@ -686,15 +631,6 @@ void receive_Data_16_CRC(uint16_t regAddr)
     reg16.readCRC.CRC_[1] = toRead16CRC[3];
     reg16.readCRC.CRC_[0] = toRead16CRC[2];
 }
-
-void receive_Data_32(uint16_t regAddr)
-{
-    uint8_t toRead[4];
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead, 4, HAL_MAX_DELAY);
-    printf("reg 0x%04X data - 0x%02X%02X%02X%02X\r\n", regAddr,toRead[3],toRead[2],toRead[1],toRead[0]);
-}
-
 void receive_Data_32_CRC(uint16_t regAddr)
 {
     uint8_t toRead32CRC[8];
@@ -714,7 +650,6 @@ void receive_Data_32_CRC(uint16_t regAddr)
     reg32.readCRC.CRC_[1] = toRead32CRC[5];
     reg32.readCRC.CRC_[0] = toRead32CRC[4];
 }
-
 uint32_t crc32 (uint16_t Reg_Address, uint8_t len, uint8_t *data)
 {
     short i;
@@ -758,16 +693,7 @@ uint32_t crc32 (uint16_t Reg_Address, uint8_t len, uint8_t *data)
     }
     return crc;
 }
-
-void read_MP42790_8(uint16_t regAddr)
-{
-    HAL_Delay(10);
-    pulse_SDA();
-    send_Address_Len_8(regAddr);
-    receive_Data_8(regAddr);
-}
-
-void read_MP42790_8_CRC(uint16_t regAddr)
+uint8_t read_MP42790_8_CRC(uint16_t regAddr)
 {
     HAL_Delay(10);
     pulse_SDA();
@@ -775,15 +701,14 @@ void read_MP42790_8_CRC(uint16_t regAddr)
     int8_t CRC_OK = -1;
     int8_t * pCRC_OK = &CRC_OK;
     receive_Data_8_CRC(regAddr, pCRC_OK);
+    return reg8.value;
 }
-
 void print_MP42790_8_CRC(uint16_t regAddr)
 {
     read_MP42790_8_CRC(regAddr);
     printf("reg 0x%04X data - 0x%02X \t\tCRC - %08lX \tcalcCRC - %08lX\r\n",
     regAddr, reg8.value, (unsigned long)reg8.readCRC.CRC_read, (unsigned long)reg8.CRC_calc);
 }
-
 void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
 {
     uint8_t toWrite[8];
@@ -820,93 +745,66 @@ void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 8, HAL_MAX_DELAY);
 }
-
-void read_MP42790_16(uint16_t regAddr)
-{
-    HAL_Delay(10);
-    pulse_SDA();
-    send_Address_Len_16(regAddr);
-    receive_Data_16(regAddr);
-}
-
-void read_MP42790_16_CRC(uint16_t regAddr)
+uint16_t read_MP42790_16_CRC(uint16_t regAddr)
 {
     HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_16(regAddr);
     receive_Data_16_CRC(regAddr);
+    return reg16.value.value;
 }
-
 void print_MP42790_16_CRC(uint16_t regAddr)
 {
     read_MP42790_16_CRC(regAddr);
     printf("reg 0x%04X data - 0x%04X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
     regAddr, reg16.value.value, (unsigned long)reg16.readCRC.CRC_read, (unsigned long)reg16.CRC_calc);
 }
-
-void read_MP42790_32(uint16_t regAddr)
-{
-    HAL_Delay(10);
-    pulse_SDA();
-    send_Address_Len_32(regAddr);
-    receive_Data_32(regAddr);
-}
-
-void read_MP42790_32_CRC(uint16_t regAddr)
+uint32_t read_MP42790_32_CRC(uint16_t regAddr)
 {
     HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_32(regAddr);
     receive_Data_32_CRC(regAddr);
+    return reg32.value.value;
 }
-
 void print_MP42790_32_CRC(uint16_t regAddr)
 {
     read_MP42790_32_CRC(regAddr);
     printf("reg 0x%04X data - 0x%08X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
     regAddr, reg32.value.value, (unsigned long)reg32.readCRC.CRC_read, (unsigned long)reg32.CRC_calc);
 }
-
 void RST_CMD()             //Reset the fuel gauge. This is a self-clearing function
 {
     write_MP42790_8_CRC(0x7FFE, 0x01);
 }
-
 void EXE_CMD()             //Trigger a fuel gauge update refresh
 {
     write_MP42790_8_CRC(0x7FFE, 0x01);
 }
-
 void EDIT_CONFIG_CMD()     //The fuel gauge settings can be edited
 {
     write_MP42790_8_CRC(0x7FFD, 0x01);
 }
-
 void END_EDIT_CONFIG_CMD() //The fuel gauge settings cannot be edited
 {
     write_MP42790_8_CRC(0x7FFC, 0x01);
 }
-
 void CONFIG_MODE_CMD()     //Enter configuration mode
 {
     write_MP42790_8_CRC(0x7FFB, 0x01);
 }
-
 void CONFIG_EXIT_CMD()     //The fuel gauge settings cannot be edited
 {
     write_MP42790_8_CRC(0x7FFA, 0x01);
 }
-
 void CONFIG_RST_CMD()      //Enter configuration mode
 {
     write_MP42790_8_CRC(0x7FF9, 0x01);
 }
-
 void LOG_RST_CMD()         //Exit configuration mode. The new configuration is stored in the NVM
 {
     write_MP42790_8_CRC(0x7FF8, 0x01);
 }
-
 void init_crc_calculation()
 {
     uint8_t poly = 0x31;
@@ -932,7 +830,6 @@ void init_crc_calculation()
         _CRC8Table[index] = value;
     }//END for (index = 0; index < CRC_TABLE_SIZE; ++index)
 }
-
 uint8_t crc_calc(uint8_t *data, uint8_t size)
 {
     uint8_t init_value = 0xFF;
@@ -943,7 +840,6 @@ uint8_t crc_calc(uint8_t *data, uint8_t size)
     }
     return crc;
 }
-
 void generateRandomString(char *str, int length)
 {
     const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -959,7 +855,6 @@ void generateRandomString(char *str, int length)
     }
     str[length] = '\0'; // Null-terminate the string
 }
-
 void Printf(const char* fmt, ...)
 {
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
@@ -971,7 +866,6 @@ void Printf(const char* fmt, ...)
     va_end(args);
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
 }
-
 int _write(int fd, char *str, int len)
 {
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
