@@ -207,30 +207,13 @@ CONFIG_MODE_CMD();
 
 
 
-
-//    uint16_t reg = 0x1207;
-//    print_MP42790_16_CRC(reg);
-//    uint16_t value = read_MP42790_16_CRC(reg);
-//    ++value;
-//    while(reg16.value.value != value)
-//    {
-//        write_MP42790_16_CRC(reg, value);
-//        print_MP42790_16_CRC(reg);
-//        HAL_Delay(50);
-//    }
-
-
-
-    uint16_t reg = 0x1207;
+//    Работает  reg 8
+    uint16_t reg = 0x1001;
     print_MP42790_8_CRC(reg);
-    uint8_t value = reg8.value;
+    uint8_t value = read_MP42790_8_CRC(reg);
     ++value;
-    while(reg8.value != value)
-    {
-        write_MP42790_8_CRC(reg, value);
-        print_MP42790_8_CRC(reg);
-        HAL_Delay(50);
-    }
+    write_MP42790_8_CRC(reg, value);
+    print_MP42790_8_CRC(reg);
 
 
   while (1)
