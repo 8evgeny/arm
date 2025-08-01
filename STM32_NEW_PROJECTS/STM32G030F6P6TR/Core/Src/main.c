@@ -178,7 +178,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+#if 0
+Пишутся регистры 4000 4001 4002 4100
+Для записи группы Fuel Gauge Model (0x2000 - 0x2043) подать команду CONFIG_MODE_CMD();
 
+
+#endif
 //    init_2790();
 //    simpleTestI2C_EEPROM(0x10);
 //    read_42790_REGS();
@@ -203,23 +208,23 @@ int main(void)
 //    print_MP42790_8_CRC(0x1206);
 //    print_MP42790_8_CRC(0x122F);
 
-
-//    uint16_t reg = 0x4000;
-//    print_MP42790_8_CRC(reg);
-//    uint8_t value = reg8.value;
-//    ++value;
-//    while(reg8.value != value)
-//    {
-//        write_MP42790_8_CRC(reg, value);
-//        print_MP42790_8_CRC(reg);
-//        HAL_Delay(50);
-//    }
+CONFIG_MODE_CMD();
+    uint16_t reg = 0x2043;
+    print_MP42790_8_CRC(reg);
+    uint8_t value = reg8.value;
+    ++value;
+    while(reg8.value != value)
+    {
+        write_MP42790_8_CRC(reg, value);
+        print_MP42790_8_CRC(reg);
+        HAL_Delay(50);
+    }
 
 
   while (1)
   {
-    read_Temp();
-    read_U_I();
+//    read_Temp();
+//    read_U_I();
 
 //    set_ACT_CFG_reg_05(0x0218);
 //    HAL_Delay(2000);
@@ -860,6 +865,46 @@ void print_MP42790_32_CRC(uint16_t regAddr)
     read_MP42790_32_CRC(regAddr);
     printf("reg 0x%04X data - 0x%08X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
     regAddr, reg32.value.value, (unsigned long)reg32.readCRC.CRC_read, (unsigned long)reg32.CRC_calc);
+}
+
+void RST_CMD()             //Reset the fuel gauge. This is a self-clearing function
+{
+    write_MP42790_8_CRC(0x7FFE, 0x01);
+}
+
+void EXE_CMD()             //Trigger a fuel gauge update refresh
+{
+    write_MP42790_8_CRC(0x7FFE, 0x01);
+}
+
+void EDIT_CONFIG_CMD()     //The fuel gauge settings can be edited
+{
+    write_MP42790_8_CRC(0x7FFD, 0x01);
+}
+
+void END_EDIT_CONFIG_CMD() //The fuel gauge settings cannot be edited
+{
+    write_MP42790_8_CRC(0x7FFC, 0x01);
+}
+
+void CONFIG_MODE_CMD()     //Enter configuration mode
+{
+    write_MP42790_8_CRC(0x7FFB, 0x01);
+}
+
+void CONFIG_EXIT_CMD()     //The fuel gauge settings cannot be edited
+{
+    write_MP42790_8_CRC(0x7FFA, 0x01);
+}
+
+void CONFIG_RST_CMD()      //Enter configuration mode
+{
+    write_MP42790_8_CRC(0x7FF9, 0x01);
+}
+
+void LOG_RST_CMD()         //Exit configuration mode. The new configuration is stored in the NVM
+{
+    write_MP42790_8_CRC(0x7FF8, 0x01);
 }
 
 void init_crc_calculation()
