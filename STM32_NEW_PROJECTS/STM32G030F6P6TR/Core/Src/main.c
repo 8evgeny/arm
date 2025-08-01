@@ -180,7 +180,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 #if 0
 Пишутся регистры 4000 4001 4002 4100
-Для записи группы Fuel Gauge Model (0x2000 - 0x2043) подать команду CONFIG_MODE_CMD();
+Для записи групп Fuel Gauge Settings Fuel Gauge Model (0x1000 - 0x1806) (0x2000 - 0x2043) подать команду CONFIG_MODE_CMD();
 
 
 #endif
@@ -209,7 +209,7 @@ int main(void)
 //    print_MP42790_8_CRC(0x122F);
 
 CONFIG_MODE_CMD();
-    uint16_t reg = 0x2043;
+    uint16_t reg = 0x1000;
     print_MP42790_8_CRC(reg);
     uint8_t value = reg8.value;
     ++value;

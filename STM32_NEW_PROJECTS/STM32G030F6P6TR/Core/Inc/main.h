@@ -148,9 +148,9 @@ void EXE_CMD();             //Trigger a fuel gauge update refresh
 void EDIT_CONFIG_CMD();     //The fuel gauge settings can be edited
 void END_EDIT_CONFIG_CMD(); //The fuel gauge settings cannot be edited
 void CONFIG_MODE_CMD();     //Enter configuration mode
-void CONFIG_EXIT_CMD();     //The fuel gauge settings cannot be edited
-void CONFIG_RST_CMD();      //Enter configuration mode
-void LOG_RST_CMD();         //Exit configuration mode. The new configuration is stored in the NVM
+void CONFIG_EXIT_CMD();     //Exit configuration mode. The new configuration is stored in the NVM
+void CONFIG_RST_CMD();      //Reset the configuration. This is a self-clearing function
+void LOG_RST_CMD();         //Re-initialize the lifetime log registers. This is a self-clearing function
 
 int _write(int fd, char *str, int len);
 void init_crc_calculation();
