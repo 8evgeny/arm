@@ -184,15 +184,15 @@ int main(void)
 
 
 #endif
-//    init_2790();
+    init_2790();
 //    simpleTestI2C_EEPROM(0x10);
-    read_42790_REGS();
+//    read_42790_REGS();
 //    read_2790_REGS();
 //    disable_42790_REGS_CRC();
 //    enable_42790_REGS_CRC();
 
 
-    print_MP42790_8_CRC(0x1001);
+//    print_MP42790_8_CRC(0x1001);
 //    print_MP42790_16_CRC(0x1207);
 //    print_MP42790_32_CRC(0x005A);
 
@@ -203,8 +203,8 @@ int main(void)
 
   while (1)
   {
-//    read_Temp();
-//    read_U_I();
+    read_Temp();
+    read_U_I();
 
     HAL_Delay(2000);
 

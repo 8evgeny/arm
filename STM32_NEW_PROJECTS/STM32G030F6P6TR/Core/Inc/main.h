@@ -4,6 +4,7 @@
 #include "SEGGER_RTT_Conf.h"
 #include <string.h>
 #include "eeprom.h"
+#include "MP2790_reg.h"
 
 #define MP2790_I2C_ADDRESS          0x02
 #define MP42790_I2C_ADDRESS         0x10
@@ -56,28 +57,6 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
-#define CELLS_CTRL          0x00 //The CELLS_CTRL command controls the number of stacked cells in use
-#define PWR_STATUS          0x01 //The PWR_STATUS command reports the pack current status and the power state status.
-#define LOAD_CHARGER_CFG    0x09
-//The ADC_CTRL command reports whether an error has occurred when starting the high-resolution voltage scan. It also controls the start of a high-resolution scan for all the selected channels
-#define ADC_CTRL            0x99
-#define GPIO_STATUS         0x0A
-//Voltage = Reading x 5000 / 32768 (mV)
-#define RD_VCELL3           0x70
-#define RD_VCELL4           0x72
-#define RD_VCELL5           0x74
-#define RD_VCELL6           0x76
-
-//Current = Reading x 100 / 32768 / RSENSE (A)
-#define RD_ICELL3           0x71
-#define RD_ICELL4           0x73
-#define RD_ICELL5           0x75
-#define RD_ICELL6           0x77
-
-//Temperature = Reading x 0.01481 - 269.12 (°C)
-#define RD_TDIE 0x93
-
-#define ACT_CFG 0x05
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
