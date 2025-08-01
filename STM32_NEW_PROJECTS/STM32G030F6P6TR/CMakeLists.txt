@@ -16,6 +16,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -mcpu=cortex-m0plus \
     -std=gnu11 \
     -DUSE_HAL_DRIVER \
+    -DUSE_FULL_LL_DRIVER \
     -DSTM32G030xx \
     -c \
     -Os \
