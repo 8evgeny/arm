@@ -142,6 +142,16 @@ void read_MP42790_32(uint16_t regAddr);
 void read_MP42790_32_CRC(uint16_t regAddr);
 void print_MP42790_32_CRC(uint16_t regAddr);
 
+//Команды 42790
+void RST_CMD();             //Reset the fuel gauge. This is a self-clearing function
+void EXE_CMD();             //Trigger a fuel gauge update refresh
+void EDIT_CONFIG_CMD();     //The fuel gauge settings can be edited
+void END_EDIT_CONFIG_CMD(); //The fuel gauge settings cannot be edited
+void CONFIG_MODE_CMD();     //Enter configuration mode
+void CONFIG_EXIT_CMD();     //The fuel gauge settings cannot be edited
+void CONFIG_RST_CMD();      //Enter configuration mode
+void LOG_RST_CMD();         //Exit configuration mode. The new configuration is stored in the NVM
+
 int _write(int fd, char *str, int len);
 void init_crc_calculation();
 uint8_t crc_calc(uint8_t *data, uint8_t size);
