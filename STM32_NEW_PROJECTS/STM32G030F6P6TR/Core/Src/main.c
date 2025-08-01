@@ -184,7 +184,7 @@ int main(void)
 
 
 #endif
-    init_2790();
+//    init_2790();
 //    simpleTestI2C_EEPROM(0x10);
 //    read_42790_REGS();
 //    read_2790_REGS();
@@ -192,13 +192,13 @@ int main(void)
 //    enable_42790_REGS_CRC();
 
 
-//    print_MP42790_8_CRC(0x1001);
+    print_MP42790_8_CRC(0x1001);
 //    print_MP42790_16_CRC(0x1207);
 //    print_MP42790_32_CRC(0x005A);
 
 
-    CONFIG_MODE_CMD();
-    test_write_42790();
+//    CONFIG_MODE_CMD();
+//    test_write_42790();
 
 
   while (1)
@@ -601,6 +601,22 @@ void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
     reg8.readCRC.CRC_[2] = toRead8CRC[3];
     reg8.readCRC.CRC_[1] = toRead8CRC[2];
     reg8.readCRC.CRC_[0] = toRead8CRC[1];
+
+    union
+    {
+        uint32_t readCRC;
+        uint8_t crc[4];
+    }data;
+    data.readCRC = sum;
+
+    if((data.crc[0] == toRead8CRC[1]) && (data.crc[1] == toRead8CRC[2]) && (data.crc[2] == toRead8CRC[3]) && (data.crc[3] == toRead8CRC[4]) )
+    {
+        printf("----- CRC  OK !!!! ----\r\n");
+    }
+    else
+    {
+        printf("----- CRC  ERROR !!!! ----\r\n");
+    }
 }
 void receive_Data_16_CRC(uint16_t regAddr)
 {
