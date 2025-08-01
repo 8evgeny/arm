@@ -179,7 +179,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    init_2790();
+//    init_2790();
 //    simpleTestI2C_EEPROM(0x10);
 //    read_42790_REGS();
 //    read_2790_REGS();
@@ -218,8 +218,8 @@ int main(void)
 
   while (1)
   {
-//    read_Temp();
-//    read_U_I();
+    read_Temp();
+    read_U_I();
 
 //    set_ACT_CFG_reg_05(0x0218);
 //    HAL_Delay(2000);
@@ -241,35 +241,28 @@ int main(void)
   */
 void SystemClock_Config(void)
 {
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-
-  /** Configure the main internal regulator output voltage
-  */
-  HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
-
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  /* HSI configuration and activation */
+  LL_RCC_HSI_Enable();
+  while(LL_RCC_HSI_IsReady() != 1)
   {
-    Error_Handler();
   }
 
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  /* Set AHB prescaler*/
+  LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  /* Sysclk activation on the HSI */
+  LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_HSI);
+  while(LL_RCC_GetSysClkSource() != LL_RCC_SYS_CLKSOURCE_STATUS_HSI)
+  {
+  }
+
+  /* Set APB1 prescaler*/
+  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
+  /* Update CMSIS variable (which can be updated also through SystemCoreClockUpdate function) */
+  LL_SetSystemCoreClock(16000000);
+
+   /* Update the time base */
+  if (HAL_InitTick (TICK_INT_PRIORITY) != HAL_OK)
   {
     Error_Handler();
   }
@@ -446,24 +439,25 @@ void read_42790_REGS()
 }
 void read_Temp()
 {
-//    write_MP2790(ADC_CTRL, 0x0001);
-//    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
-//    Temperature = read_MP2790(RD_TDIE);
-//    printf("T=%04X\r\n",Temperature);
+    write_MP2790(ADC_CTRL, 0x0001);
+    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
+    read_MP2790(RD_TDIE);
+    Temperature = read_MP2790(RD_TDIE);
+    printf("T=%04X\r\n",Temperature);
 }
 
 void read_U_I()
 {
-//    write_MP2790(ADC_CTRL, 0x0001);
-//    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);s
-//    U1 = read_MP2790(RD_VCELL3);//Voltage = Reading x 5000 / 32768 (mV)
-//    U2 = read_MP2790(RD_VCELL4);
-//    U3 = read_MP2790(RD_VCELL5);
-//    U4 = read_MP2790(RD_VCELL6);
-//    I1 = read_MP2790(RD_ICELL3);
-//    I2 = read_MP2790(RD_ICELL4);
-//    I3 = read_MP2790(RD_ICELL5);
-//    I4 = read_MP2790(RD_ICELL6);
+    write_MP2790(ADC_CTRL, 0x0001);
+    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
+    U1 = read_MP2790(RD_VCELL3);//Voltage = Reading x 5000 / 32768 (mV)
+    U2 = read_MP2790(RD_VCELL4);
+    U3 = read_MP2790(RD_VCELL5);
+    U4 = read_MP2790(RD_VCELL6);
+    I1 = read_MP2790(RD_ICELL3);
+    I2 = read_MP2790(RD_ICELL4);
+    I3 = read_MP2790(RD_ICELL5);
+    I4 = read_MP2790(RD_ICELL6);
     printf("U1=%04X I1=%04X\r\n",U1,I1);
     printf("U2=%04X I2=%04X\r\n",U2,I2);
     printf("U3=%04X I3=%04X\r\n",U3,I3);
@@ -507,7 +501,7 @@ void simpleTestI2C_EEPROM(uint16_t addr)
 }
 
 
-void read_MP2790(uint8_t regAddr)
+uint16_t read_MP2790(uint8_t regAddr)
 {
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
 //    HAL_Delay(1);
@@ -521,6 +515,7 @@ void read_MP2790(uint8_t regAddr)
 //    delayUS_ASM(10);
     write_MP2790(GPIO_STATUS, 0x0000); //Фейковая запись чтобы далее шло чтение
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
+    return data16.value.value;
 }
 
 void print_MP2790(uint8_t regAddr)

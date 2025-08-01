@@ -21,6 +21,16 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32g0xx_hal.h"
 
+#include "stm32g0xx_ll_rcc.h"
+#include "stm32g0xx_ll_bus.h"
+#include "stm32g0xx_ll_system.h"
+#include "stm32g0xx_ll_exti.h"
+#include "stm32g0xx_ll_cortex.h"
+#include "stm32g0xx_ll_utils.h"
+#include "stm32g0xx_ll_pwr.h"
+#include "stm32g0xx_ll_dma.h"
+#include "stm32g0xx_ll_gpio.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
@@ -105,7 +115,7 @@ void read_Temp();
 void read_U_I();
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);
-void read_MP2790(uint8_t regAddr);
+uint16_t read_MP2790(uint8_t regAddr);
 void print_MP2790(uint8_t regAddr);
 void write_MP2790(uint8_t regAddr, uint16_t regValue);
 void pulse_SDA();
