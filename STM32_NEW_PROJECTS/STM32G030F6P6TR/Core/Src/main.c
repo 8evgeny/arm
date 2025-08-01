@@ -196,24 +196,25 @@ CONFIG_MODE_CMD();
     print_MP42790_16_CRC(0x1207);
     print_MP42790_32_CRC(0x0022);
 
-//    uint16_t reg = 0x1001;
-//    print_MP42790_8_CRC(reg);
-//    uint8_t value = read_MP42790_8_CRC(reg);
-//    ++value;
-//    write_MP42790_8_CRC(reg, value);
-//    print_MP42790_8_CRC(reg);
-//    write_MP42790_8_CRC(reg, value);
-//    print_MP42790_8_CRC(reg);
-
-
 
 //    Работает  reg 8
-    uint16_t reg = 0x1001;
-    print_MP42790_8_CRC(reg);
-    uint8_t value = read_MP42790_8_CRC(reg);
-    ++value;
-    write_MP42790_8_CRC(reg, value);
-    print_MP42790_8_CRC(reg);
+    printf("\r\n--- test write reg 8 ---\r\n");
+    uint16_t reg8 = 0x1001;
+    print_MP42790_8_CRC(reg8);
+    uint8_t value8 = read_MP42790_8_CRC(reg8);
+    ++value8;
+    write_MP42790_8_CRC(reg8, value8);
+    print_MP42790_8_CRC(reg8);
+
+//    Работает  reg 16
+    printf("\r\n--- test write reg 16 ---\r\n");
+    uint16_t reg16 = 0x1207;
+    print_MP42790_16_CRC(reg16);
+    uint8_t value16 = read_MP42790_16_CRC(reg16);
+    ++value16;
+    write_MP42790_16_CRC(reg16, value16);
+    print_MP42790_16_CRC(reg16);
+
 
 
   while (1)
