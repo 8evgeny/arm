@@ -135,6 +135,7 @@ void print_MP42790_8_CRC(uint16_t regAddr);
 void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value);
 uint16_t read_MP42790_16_CRC(uint16_t regAddr);
 void print_MP42790_16_CRC(uint16_t regAddr);
+void write_MP42790_16_CRC(uint16_t regAddr, uint16_t value);
 uint32_t read_MP42790_32_CRC(uint16_t regAddr);
 void print_MP42790_32_CRC(uint16_t regAddr);
 

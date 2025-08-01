@@ -191,23 +191,46 @@ int main(void)
 //    disable_42790_REGS_CRC();
 //    enable_42790_REGS_CRC();
 
-
+CONFIG_MODE_CMD();
     print_MP42790_8_CRC(0x1001);
     print_MP42790_16_CRC(0x1207);
     print_MP42790_32_CRC(0x0022);
 
-
-//CONFIG_MODE_CMD();
-//    uint16_t reg = 0x1000;
+//    uint16_t reg = 0x1001;
 //    print_MP42790_8_CRC(reg);
-//    uint8_t value = reg8.value;
+//    uint8_t value = read_MP42790_8_CRC(reg);
 //    ++value;
-//    while(reg8.value != value)
+//    write_MP42790_8_CRC(reg, value);
+//    print_MP42790_8_CRC(reg);
+//    write_MP42790_8_CRC(reg, value);
+//    print_MP42790_8_CRC(reg);
+
+
+
+
+//    uint16_t reg = 0x1207;
+//    print_MP42790_16_CRC(reg);
+//    uint16_t value = read_MP42790_16_CRC(reg);
+//    ++value;
+//    while(reg16.value.value != value)
 //    {
-//        write_MP42790_8_CRC(reg, value);
-//        print_MP42790_8_CRC(reg);
+//        write_MP42790_16_CRC(reg, value);
+//        print_MP42790_16_CRC(reg);
 //        HAL_Delay(50);
 //    }
+
+
+
+    uint16_t reg = 0x1207;
+    print_MP42790_8_CRC(reg);
+    uint8_t value = reg8.value;
+    ++value;
+    while(reg8.value != value)
+    {
+        write_MP42790_8_CRC(reg, value);
+        print_MP42790_8_CRC(reg);
+        HAL_Delay(50);
+    }
 
 
   while (1)
@@ -761,6 +784,29 @@ void print_MP42790_16_CRC(uint16_t regAddr)
     printf("\t\t\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg16.readCRC.CRC_read, (unsigned long)reg16.CRC_calc);
     printf("\r\n");
 }
+void write_MP42790_16_CRC(uint16_t regAddr, uint16_t value)
+{
+    uint8_t toWrite[9] = {0};
+    HAL_Delay(10);
+    pulse_SDA();
+    union
+    {
+        uint32_t sendCRC;
+        uint8_t crc[4];
+    }crc;
+    crc.sendCRC = crc32(regAddr, 2, (uint8_t *)&value);
+    toWrite[0] = regAddr;       //младший байт адреса
+    toWrite[1] = regAddr>>8;    //старший байт адреса
+    toWrite[2] = 0x02;          //число байт
+    toWrite[3] = value;         //младший байт данных
+    toWrite[4] = value>>8;
+    toWrite[5] = crc.crc[0];    //младший байтCRC
+    toWrite[6] = crc.crc[1];
+    toWrite[7] = crc.crc[2];
+    toWrite[8] = crc.crc[3];    //старший байт CRC
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 9, HAL_MAX_DELAY);
+}
 uint32_t read_MP42790_32_CRC(uint16_t regAddr)
 {
     HAL_Delay(10);
@@ -785,34 +831,42 @@ void print_MP42790_32_CRC(uint16_t regAddr)
 }
 void RST_CMD()             //Reset the fuel gauge. This is a self-clearing function
 {
+    printf("\r\n----- RST_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFE, 0x01);
 }
 void EXE_CMD()             //Trigger a fuel gauge update refresh
 {
+    printf("\r\n----- EXE_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFE, 0x01);
 }
 void EDIT_CONFIG_CMD()     //The fuel gauge settings can be edited
 {
+    printf("\r\n----- EDIT_CONFIG_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFD, 0x01);
 }
 void END_EDIT_CONFIG_CMD() //The fuel gauge settings cannot be edited
 {
+    printf("\r\n----- END_EDIT_CONFIG_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFC, 0x01);
 }
 void CONFIG_MODE_CMD()     //Enter configuration mode
 {
+    printf("\r\n----- CONFIG_MODE_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFB, 0x01);
 }
 void CONFIG_EXIT_CMD()     //The fuel gauge settings cannot be edited
 {
+    printf("\r\n----- CONFIG_EXIT_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFA, 0x01);
 }
 void CONFIG_RST_CMD()      //Enter configuration mode
 {
+    printf("\r\n----- CONFIG_RST_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FF9, 0x01);
 }
 void LOG_RST_CMD()         //Exit configuration mode. The new configuration is stored in the NVM
 {
+    printf("\r\n----- LOG_RST_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FF8, 0x01);
 }
 void init_crc_calculation()
