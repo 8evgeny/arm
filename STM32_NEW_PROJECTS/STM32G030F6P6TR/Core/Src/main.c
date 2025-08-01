@@ -95,7 +95,6 @@ reg_16 reg16;
 reg_32 reg32;   //42790
 
 data_16 data16; //2790
-uint8_t num_attempt_read = 5;
 
 /* USER CODE END PD */
 
@@ -538,12 +537,9 @@ void send_Address_Len_8(uint16_t regAddr)
     dataWrite.regAddressLentch = 0;
     dataWrite.regAddressLentch |= regAddr<<16;
     dataWrite.regAddressLentch |= 0x00000100;
-//    printf("regAddressLentch 0x%02X%02X%02X%02X \r\n", dataWrite.tmp[3],  dataWrite.tmp[2], dataWrite.tmp[1], dataWrite.tmp[0]);
-
     toWrite[0] = dataWrite.tmp[2];
     toWrite[1] = dataWrite.tmp[3];
     toWrite[2] = dataWrite.tmp[1];
-
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 3, HAL_MAX_DELAY);
 }
@@ -558,12 +554,9 @@ void send_Address_Len_16(uint16_t regAddr)
     dataWrite.regAddressLentch = 0;
     dataWrite.regAddressLentch |= regAddr<<16;
     dataWrite.regAddressLentch |= 0x00000200;
-//    printf("regAddressLentch 0x%02X%02X%02X%02X \r\n", dataWrite.tmp[3],  dataWrite.tmp[2], dataWrite.tmp[1], dataWrite.tmp[0]);
-
     toWrite[0] = dataWrite.tmp[2];
     toWrite[1] = dataWrite.tmp[3];
     toWrite[2] = dataWrite.tmp[1];
-
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 3, HAL_MAX_DELAY);
 }
@@ -578,38 +571,31 @@ void send_Address_Len_32(uint16_t regAddr)
     dataWrite.regAddressLentch = 0;
     dataWrite.regAddressLentch |= regAddr<<16;
     dataWrite.regAddressLentch |= 0x00000400;
-//    printf("regAddressLentch 0x%02X%02X%02X%02X \r\n", dataWrite.tmp[3],  dataWrite.tmp[2], dataWrite.tmp[1], dataWrite.tmp[0]);
-
     toWrite[0] = dataWrite.tmp[2];
     toWrite[1] = dataWrite.tmp[3];
     toWrite[2] = dataWrite.tmp[1];
-
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 3, HAL_MAX_DELAY);
 }
+uint8_t toRead8CRC[5];
+uint32_t sum;
+union
+{
+    uint32_t readCRC;
+    uint8_t crc[4];
+}data;
 void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
 {
-    uint8_t toRead8CRC[5];
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead8CRC, 5, HAL_MAX_DELAY);
-    uint32_t sum = crc32(regAddr, 1, toRead8CRC);
-//    printf("reg 0x%04X data - 0x%02X \t\tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
-//    regAddr, toRead8CRC[0], toRead8CRC[4], toRead8CRC[3], toRead8CRC[2], toRead8CRC[1], (unsigned long)sum);
-
+    sum = crc32(regAddr, 1, toRead8CRC);
     reg8.value = toRead8CRC[0];
     reg8.CRC_calc = sum;
     reg8.readCRC.CRC_[3] = toRead8CRC[4];
     reg8.readCRC.CRC_[2] = toRead8CRC[3];
     reg8.readCRC.CRC_[1] = toRead8CRC[2];
     reg8.readCRC.CRC_[0] = toRead8CRC[1];
-
-    union
-    {
-        uint32_t readCRC;
-        uint8_t crc[4];
-    }data;
     data.readCRC = sum;
-
     if((data.crc[0] == toRead8CRC[1]) && (data.crc[1] == toRead8CRC[2]) && (data.crc[2] == toRead8CRC[3]) && (data.crc[3] == toRead8CRC[4]) )
     {
 //        printf("----- CRC  OK !!!! ----\r\n");
@@ -617,7 +603,7 @@ void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
     }
     else
     {
-//        printf("----- CRC  ERROR !!!! ----\r\n");
+        printf("----- CRC  ERROR !!!! ----\r\n");
         *pCRC_OK = -1;
     }
 }
@@ -627,8 +613,6 @@ void receive_Data_16_CRC(uint16_t regAddr)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead16CRC, 6, HAL_MAX_DELAY);
     uint32_t sum = crc32(regAddr, 2, toRead16CRC);
-//    printf("reg 0x%04X data - 0x%02X%02X \tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
-//    regAddr, toRead16CRC[0], toRead16CRC[1], toRead16CRC[5], toRead16CRC[4], toRead16CRC[3], toRead16CRC[2], (unsigned long)sum);
     reg16.value.val[0] = toRead16CRC[0];
     reg16.value.val[1] = toRead16CRC[1];
     reg16.CRC_calc = sum;
@@ -643,9 +627,6 @@ void receive_Data_32_CRC(uint16_t regAddr)
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead32CRC, 8, HAL_MAX_DELAY);
     uint32_t sum = crc32(regAddr, 4, toRead32CRC);
-//    printf("reg 0x%04X data - 0x%02X%02X%02X%02X \tCRC - %02X%02X%02X%02X \tcalcCRC - %08lX\r\n",
-//        regAddr, toRead32CRC[0], toRead32CRC[1], toRead32CRC[2], toRead32CRC[3],
-//        toRead32CRC[7], toRead32CRC[6], toRead32CRC[5], toRead32CRC[4], (unsigned long)sum);
     reg32.value.val[0] = toRead32CRC[0];
     reg32.value.val[1] = toRead32CRC[1];
     reg32.value.val[2] = toRead32CRC[2];
@@ -707,23 +688,10 @@ uint8_t read_MP42790_8_CRC(uint16_t regAddr)
     int8_t CRC_OK = -1;
     int8_t * pCRC_OK = &CRC_OK;
     receive_Data_8_CRC(regAddr, pCRC_OK);
-    uint8_t num = num_attempt_read;
-    while(CRC_OK != 0)
+    if(CRC_OK != 0)
     {
-        if(num == 0)
-        {
-            printf("----- CRC  ERROR !!!! ----\r\n");
-            return 0xFF;
-        }
-
-        HAL_I2C_DeInit(&hi2c2);
-        HAL_Delay(1);
-        HAL_I2C_Init(&hi2c2);
-        receive_Data_8_CRC(regAddr, pCRC_OK);
-        --num;
+        reg8.value = 0xFF;
     }
-    if (num!=num_attempt_read)
-        printf("----- num_attempt = %d ----\r\n", 5 - num);
     return reg8.value;
 }
 void print_MP42790_8_CRC(uint16_t regAddr)
