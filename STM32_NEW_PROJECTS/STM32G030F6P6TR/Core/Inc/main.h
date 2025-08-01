@@ -5,7 +5,7 @@
 #include <string.h>
 #include "eeprom.h"
 #include "MP2790_reg.h"
-
+#include "i2c.h"
 #define MP2790_I2C_ADDRESS          0x02
 #define MP42790_I2C_ADDRESS         0x10
 
@@ -85,6 +85,7 @@ void Error_Handler(void);
 void Printf(const char* fmt, ...);
 
 void init_2790();
+void init_42790();
 void disable_42790_REGS_CRC();
 void enable_42790_REGS_CRC();
 void read_2790_REGS();
