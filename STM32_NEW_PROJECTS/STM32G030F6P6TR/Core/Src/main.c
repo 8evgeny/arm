@@ -192,13 +192,9 @@ int main(void)
 //    enable_42790_REGS_CRC();
 
 
-    print_MP42790_16_CRC(0x1207);
     print_MP42790_8_CRC(0x1001);
-    print_MP42790_8_CRC(0x1100);
-    print_MP42790_8_CRC(0x1204);
-    print_MP42790_8_CRC(0x1205);
-    print_MP42790_8_CRC(0x1206);
-    print_MP42790_8_CRC(0x122F);
+    print_MP42790_16_CRC(0x1207);
+    print_MP42790_32_CRC(0x0022);
 
 
 //CONFIG_MODE_CMD();
@@ -495,7 +491,7 @@ uint16_t read_MP2790(uint8_t regAddr)
 }
 void print_MP2790(uint8_t regAddr)
 {
-    printf("MP2790  reg %02X     0x%04X  ", regAddr, read_MP2790(regAddr));
+    printf("MP2790  reg %02X     0x%04X\t", regAddr, read_MP2790(regAddr));
     print_byte(data16.value.val[1]);
     printf(" ");
     print_byte(data16.value.val[0]);
@@ -706,7 +702,7 @@ uint8_t read_MP42790_8_CRC(uint16_t regAddr)
 void print_MP42790_8_CRC(uint16_t regAddr)
 {
     read_MP42790_8_CRC(regAddr);
-    printf("MP42790 reg %04X   0x%02X    ", regAddr, reg8.value);
+    printf("MP42790 reg %04X   0x%02X\t\t", regAddr, reg8.value);
     print_byte(reg8.value);
     printf("\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg8.readCRC.CRC_read, (unsigned long)reg8.CRC_calc);
     printf("\r\n");
