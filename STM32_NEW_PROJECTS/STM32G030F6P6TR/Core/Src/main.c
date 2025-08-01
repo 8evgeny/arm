@@ -95,6 +95,7 @@ reg_16 reg16;
 reg_32 reg32;   //42790
 
 data_16 data16; //2790
+uint8_t num_attempt_read = 5;
 
 /* USER CODE END PD */
 
@@ -186,7 +187,7 @@ int main(void)
 #endif
 //    init_2790();
 //    simpleTestI2C_EEPROM(0x10);
-//    read_42790_REGS();
+    read_42790_REGS();
 //    read_2790_REGS();
 //    disable_42790_REGS_CRC();
 //    enable_42790_REGS_CRC();
@@ -377,9 +378,9 @@ void read_42790_REGS()
     print_MP42790_16_CRC(0x1233);
     print_MP42790_8_CRC(0x1235);
     print_MP42790_16_CRC(0x1236);
-    print_MP42790_8_CRC(0x1238);
+//    print_MP42790_8_CRC(0x1238);
     print_MP42790_16_CRC(0x1239);
-    print_MP42790_8_CRC(0x123B);
+//    print_MP42790_8_CRC(0x123B);
     print_MP42790_16_CRC(0x123C);
     print_MP42790_8_CRC(0x123E);
     print_MP42790_16_CRC(0x1400);
@@ -611,11 +612,13 @@ void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
 
     if((data.crc[0] == toRead8CRC[1]) && (data.crc[1] == toRead8CRC[2]) && (data.crc[2] == toRead8CRC[3]) && (data.crc[3] == toRead8CRC[4]) )
     {
-        printf("----- CRC  OK !!!! ----\r\n");
+//        printf("----- CRC  OK !!!! ----\r\n");
+        *pCRC_OK = 0;
     }
     else
     {
-        printf("----- CRC  ERROR !!!! ----\r\n");
+//        printf("----- CRC  ERROR !!!! ----\r\n");
+        *pCRC_OK = -1;
     }
 }
 void receive_Data_16_CRC(uint16_t regAddr)
@@ -704,6 +707,23 @@ uint8_t read_MP42790_8_CRC(uint16_t regAddr)
     int8_t CRC_OK = -1;
     int8_t * pCRC_OK = &CRC_OK;
     receive_Data_8_CRC(regAddr, pCRC_OK);
+    uint8_t num = num_attempt_read;
+    while(CRC_OK != 0)
+    {
+        if(num == 0)
+        {
+            printf("----- CRC  ERROR !!!! ----\r\n");
+            return 0xFF;
+        }
+
+        HAL_I2C_DeInit(&hi2c2);
+        HAL_Delay(1);
+        HAL_I2C_Init(&hi2c2);
+        receive_Data_8_CRC(regAddr, pCRC_OK);
+        --num;
+    }
+    if (num!=num_attempt_read)
+        printf("----- num_attempt = %d ----\r\n", 5 - num);
     return reg8.value;
 }
 void print_MP42790_8_CRC(uint16_t regAddr)
