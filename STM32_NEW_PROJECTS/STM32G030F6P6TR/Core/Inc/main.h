@@ -138,7 +138,8 @@ void print_MP42790_16_CRC(uint16_t regAddr);
 void write_MP42790_16_CRC(uint16_t regAddr, uint16_t value);
 uint32_t read_MP42790_32_CRC(uint16_t regAddr);
 void print_MP42790_32_CRC(uint16_t regAddr);
-
+void write_MP42790_32_CRC(uint16_t regAddr, uint32_t value);
+void test_write_42790();
 //Команды 42790
 void RST_CMD();             //Reset the fuel gauge. This is a self-clearing function
 void EXE_CMD();             //Trigger a fuel gauge update refresh

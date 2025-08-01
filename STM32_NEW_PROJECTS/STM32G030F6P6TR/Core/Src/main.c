@@ -191,30 +191,14 @@ int main(void)
 //    disable_42790_REGS_CRC();
 //    enable_42790_REGS_CRC();
 
-CONFIG_MODE_CMD();
-    print_MP42790_8_CRC(0x1001);
-    print_MP42790_16_CRC(0x1207);
-    print_MP42790_32_CRC(0x0022);
+
+//    print_MP42790_8_CRC(0x1001);
+//    print_MP42790_16_CRC(0x1207);
+//    print_MP42790_32_CRC(0x005A);
 
 
-//    Работает  reg 8
-    printf("\r\n--- test write reg 8 ---\r\n");
-    uint16_t reg8 = 0x1001;
-    print_MP42790_8_CRC(reg8);
-    uint8_t value8 = read_MP42790_8_CRC(reg8);
-    ++value8;
-    write_MP42790_8_CRC(reg8, value8);
-    print_MP42790_8_CRC(reg8);
-
-//    Работает  reg 16
-    printf("\r\n--- test write reg 16 ---\r\n");
-    uint16_t reg16 = 0x1207;
-    print_MP42790_16_CRC(reg16);
-    uint8_t value16 = read_MP42790_16_CRC(reg16);
-    ++value16;
-    write_MP42790_16_CRC(reg16, value16);
-    print_MP42790_16_CRC(reg16);
-
+    CONFIG_MODE_CMD();
+    test_write_42790();
 
 
   while (1)
@@ -812,6 +796,57 @@ void print_MP42790_32_CRC(uint16_t regAddr)
     print_byte(reg32.value.val[0]);
     printf("\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg32.readCRC.CRC_read, (unsigned long)reg32.CRC_calc);
     printf("\r\n");
+}
+void write_MP42790_32_CRC(uint16_t regAddr, uint32_t value)
+{
+    uint8_t toWrite[11] = {0};
+    HAL_Delay(10);
+    pulse_SDA();
+    union
+    {
+        uint32_t sendCRC;
+        uint8_t crc[4];
+    }crc;
+    crc.sendCRC = crc32(regAddr, 4, (uint8_t *)&value);
+    toWrite[0] = regAddr;       //младший байт адреса
+    toWrite[1] = regAddr>>8;    //старший байт адреса
+    toWrite[2] = 0x04;          //число байт
+    toWrite[3] = value;         //младший байт данных
+    toWrite[4] = value>>8;
+    toWrite[5] = value>>16;
+    toWrite[6] = value>>24;
+    toWrite[7] = crc.crc[0];    //младший байтCRC
+    toWrite[8] = crc.crc[1];
+    toWrite[9] = crc.crc[2];
+    toWrite[10] = crc.crc[3];    //старший байт CRC
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 11, HAL_MAX_DELAY);
+}
+void test_write_42790()
+{
+    printf("\r\n--- test write reg 8 ---\r\n");
+    uint16_t reg8 = 0x1001;
+    print_MP42790_8_CRC(reg8);
+    uint8_t value8 = read_MP42790_8_CRC(reg8);
+    ++value8;
+    write_MP42790_8_CRC(reg8, value8);
+    print_MP42790_8_CRC(reg8);
+
+    printf("\r\n--- test write reg 16 ---\r\n");
+    uint16_t reg16 = 0x1207;
+    print_MP42790_16_CRC(reg16);
+    uint8_t value16 = read_MP42790_16_CRC(reg16);
+    ++value16;
+    write_MP42790_16_CRC(reg16, value16);
+    print_MP42790_16_CRC(reg16);
+
+    printf("\r\n--- test write reg 32 ---\r\n");
+    uint16_t reg32 = 0x005A;
+    print_MP42790_32_CRC(reg32);
+    uint8_t value32 = read_MP42790_32_CRC(reg32);
+    ++value32;
+    write_MP42790_32_CRC(reg32, value32);
+    print_MP42790_32_CRC(reg32);
 }
 void RST_CMD()             //Reset the fuel gauge. This is a self-clearing function
 {
