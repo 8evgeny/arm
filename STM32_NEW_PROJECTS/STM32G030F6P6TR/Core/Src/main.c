@@ -179,7 +179,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    init_2790();
+//    init_2790();
 //    simpleTestI2C_EEPROM(0x10);
 //    read_42790_REGS();
 //    read_2790_REGS();
@@ -218,8 +218,8 @@ int main(void)
 
   while (1)
   {
-//    read_Temp();
-//    read_U_I();
+    read_Temp();
+    read_U_I();
 
 //    set_ACT_CFG_reg_05(0x0218);
 //    HAL_Delay(2000);
@@ -439,24 +439,25 @@ void read_42790_REGS()
 }
 void read_Temp()
 {
-//    write_MP2790(ADC_CTRL, 0x0001);
-//    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
-//    Temperature = read_MP2790(RD_TDIE);
-//    printf("T=%04X\r\n",Temperature);
+    write_MP2790(ADC_CTRL, 0x0001);
+    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
+    read_MP2790(RD_TDIE);
+    Temperature = read_MP2790(RD_TDIE);
+    printf("T=%04X\r\n",Temperature);
 }
 
 void read_U_I()
 {
-//    write_MP2790(ADC_CTRL, 0x0001);
-//    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);s
-//    U1 = read_MP2790(RD_VCELL3);//Voltage = Reading x 5000 / 32768 (mV)
-//    U2 = read_MP2790(RD_VCELL4);
-//    U3 = read_MP2790(RD_VCELL5);
-//    U4 = read_MP2790(RD_VCELL6);
-//    I1 = read_MP2790(RD_ICELL3);
-//    I2 = read_MP2790(RD_ICELL4);
-//    I3 = read_MP2790(RD_ICELL5);
-//    I4 = read_MP2790(RD_ICELL6);
+    write_MP2790(ADC_CTRL, 0x0001);
+    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
+    U1 = read_MP2790(RD_VCELL3);//Voltage = Reading x 5000 / 32768 (mV)
+    U2 = read_MP2790(RD_VCELL4);
+    U3 = read_MP2790(RD_VCELL5);
+    U4 = read_MP2790(RD_VCELL6);
+    I1 = read_MP2790(RD_ICELL3);
+    I2 = read_MP2790(RD_ICELL4);
+    I3 = read_MP2790(RD_ICELL5);
+    I4 = read_MP2790(RD_ICELL6);
     printf("U1=%04X I1=%04X\r\n",U1,I1);
     printf("U2=%04X I2=%04X\r\n",U2,I2);
     printf("U3=%04X I3=%04X\r\n",U3,I3);
@@ -500,7 +501,7 @@ void simpleTestI2C_EEPROM(uint16_t addr)
 }
 
 
-void read_MP2790(uint8_t regAddr)
+uint16_t read_MP2790(uint8_t regAddr)
 {
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
 //    HAL_Delay(1);
@@ -514,6 +515,7 @@ void read_MP2790(uint8_t regAddr)
 //    delayUS_ASM(10);
     write_MP2790(GPIO_STATUS, 0x0000); //Фейковая запись чтобы далее шло чтение
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
+    return data16.value.value;
 }
 
 void print_MP2790(uint8_t regAddr)

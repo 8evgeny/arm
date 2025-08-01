@@ -115,7 +115,7 @@ void read_Temp();
 void read_U_I();
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);
-void read_MP2790(uint8_t regAddr);
+uint16_t read_MP2790(uint8_t regAddr);
 void print_MP2790(uint8_t regAddr);
 void write_MP2790(uint8_t regAddr, uint16_t regValue);
 void pulse_SDA();
