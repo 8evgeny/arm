@@ -706,8 +706,10 @@ uint8_t read_MP42790_8_CRC(uint16_t regAddr)
 void print_MP42790_8_CRC(uint16_t regAddr)
 {
     read_MP42790_8_CRC(regAddr);
-    printf("MP42790 reg %04X   0x%02X \tCRC - %08lX \tcalcCRC - %08lX\r\n",
-    regAddr, reg8.value, (unsigned long)reg8.readCRC.CRC_read, (unsigned long)reg8.CRC_calc);
+    printf("MP42790 reg %04X   0x%02X    ", regAddr, reg8.value);
+    print_byte(reg8.value);
+    printf("\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg8.readCRC.CRC_read, (unsigned long)reg8.CRC_calc);
+    printf("\r\n");
 }
 void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
 {
