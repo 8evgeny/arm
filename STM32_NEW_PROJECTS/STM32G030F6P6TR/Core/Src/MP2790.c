@@ -18,23 +18,42 @@ void init_2790()
     printf("\r\n------ init_2790 ------\r\n\n");
 //    read_2790_REGS();
 
+    print_MP2790(LOCK_REGISTER);
+//    write_MP2790(0xAA, data16.value.value |= 0x0008);
+//    print_MP2790(0xAA);
 
-    write_MP2790(CELLS_CTRL, 0x0003);
+//Конфигурирование
+    write_MP2790(CELLS_CTRL, 0x0003); //Определяет состав батарейного блока (четыре батареи с третьей по шестую)
     print_MP2790(CELLS_CTRL);
+
+    print_MP2790(ACT_CFG); //05h
+    write_MP2790(ACT_CFG, data16.value.value |= 0x0200);    // O5h 9 bits to 1
+    write_MP2790(ACT_CFG, data16.value.value &= 0xFFFD);    // O5h 1 bits to 0
+    print_MP2790(ACT_CFG);
+
+    print_MP2790(PINS_CFG); //0Dh
+    write_MP2790(PINS_CFG, data16.value.value &= 0xFF9F);   // ODh 5 6 bits to 0
+    print_MP2790(PINS_CFG);
+
+//Инициализация
+    print_MP2790(INT0_EN); //19h
+    write_MP2790(INT0_EN, data16.value.value |= 0x48FF);   // 19h 14 11 0-7 bits to 1
+    print_MP2790(INT0_EN);
+
     printf("\r\n");
 
-    print_MP2790(PWR_STATUS);
-    write_MP2790(ACT_CFG, 0x0200);
-    print_MP2790(ACT_CFG);
-    write_MP2790(ACT_CFG, 0x0218);
-    print_MP2790(ACT_CFG);
-    print_MP2790(PWR_STATUS);
-    write_MP2790(ACT_CFG, 0x0200);
-    print_MP2790(ACT_CFG);
-    print_MP2790(PWR_STATUS);
-    write_MP2790(ACT_CFG, 0x0218);
-    print_MP2790(ACT_CFG);
-    print_MP2790(PWR_STATUS);
+//    print_MP2790(PWR_STATUS);
+//    write_MP2790(ACT_CFG, 0x0200);
+//    print_MP2790(ACT_CFG);
+//    write_MP2790(ACT_CFG, 0x0218);
+//    print_MP2790(ACT_CFG);
+//    print_MP2790(PWR_STATUS);
+//    write_MP2790(ACT_CFG, 0x0200);
+//    print_MP2790(ACT_CFG);
+//    print_MP2790(PWR_STATUS);
+//    write_MP2790(ACT_CFG, 0x0218);
+//    print_MP2790(ACT_CFG);
+//    print_MP2790(PWR_STATUS);
 }
 
 void read_2790_REGS()

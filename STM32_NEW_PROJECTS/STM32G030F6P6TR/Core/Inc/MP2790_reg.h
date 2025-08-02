@@ -149,3 +149,4 @@
 #define MEM_STATUS              0xB4
 #define OTP_STORE_CMD           0xB8
 #define STORE_CMD_ACCESS_CODE   0xB9
+#define LOCK_REGISTER           0xAA
