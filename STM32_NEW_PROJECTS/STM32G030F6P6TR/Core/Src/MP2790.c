@@ -87,10 +87,27 @@ void init_2790()
     print_MP2790(ACT_CFG);
     printf("\r\n");
 
+//    printf("set FET_MODE\r\n");
+//    print_MP2790(FET_MODE);  //13h
+//    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111110111);  // bit  3  to 0
+//    print_MP2790(FET_MODE);
+//    printf("\r\n");
+
     printf("set NTC_CFG\r\n");         //4 термистора
     print_MP2790(NTC_CFG); //47h
     write_MP2790(NTC_CFG, data16.value.value &= 0b1111101101010101);  // bit  1  3  5  7  10  to 0
     print_MP2790(NTC_CFG);
+    printf("\r\n");
+
+    //Читаю термисторы
+    printf("get RD_V_NTC1_LR\r\n");
+    print_MP2790(RD_V_NTC1_LR);   //42h
+    printf("get RD_V_NTC2_LR\r\n");
+    print_MP2790(RD_V_NTC2_LR);   //41h
+    printf("get RD_V_NTC3_LR\r\n");
+    print_MP2790(RD_V_NTC3_LR);   //40h
+    printf("get RD_V_NTC4_LR\r\n");
+    print_MP2790(RD_V_NTC4_LR);   //3Fh
     printf("\r\n");
 
     printf("get FET_STATUS\r\n"); //Сосояние ключей
@@ -100,7 +117,6 @@ void init_2790()
     printf("get PWR_STATUS\r\n");
     print_MP2790(PWR_STATUS);    //01h
     printf("\r\n");
-
 
 
 
