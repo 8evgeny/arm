@@ -133,10 +133,10 @@ int main(void)
 
   while (1)
   {
-//    read_Temp();
-//    read_U_I();
+    read_Temp();
+    read_U_I();
 
-    HAL_Delay(2000);
+    HAL_Delay(4000);
 
 
 

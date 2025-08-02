@@ -82,18 +82,25 @@ void init_2790()
 
     printf("set ACT_CFG\r\n");
     write_MP2790(ACT_CFG, data16.value.value &= 0xFFE7);  // bit  4  3  to 0
-    print_MP2790(ACT_CFG);
+    print_MP2790(ACT_CFG);  //05h
     write_MP2790(ACT_CFG, data16.value.value |= 0x0018);  // bit  4  3  to 1
     print_MP2790(ACT_CFG);
     printf("\r\n");
 
-    printf("get PWR_STATUS\r\n");
-    print_MP2790(PWR_STATUS);
+    printf("set NTC_CFG\r\n");         //4 термистора
+    print_MP2790(NTC_CFG); //47h
+    write_MP2790(NTC_CFG, data16.value.value &= 0b1111101101010101);  // bit  1  3  5  7  10  to 0
+    print_MP2790(NTC_CFG);
     printf("\r\n");
 
     printf("get FET_STATUS\r\n"); //Сосояние ключей
-    print_MP2790(FET_STATUS);
+    print_MP2790(FET_STATUS);   //11h
     printf("\r\n");
+
+    printf("get PWR_STATUS\r\n");
+    print_MP2790(PWR_STATUS);    //01h
+    printf("\r\n");
+
 
 
 
@@ -162,17 +169,17 @@ void read_U_I()
 {
     write_MP2790(ADC_CTRL, 0x0001);
     while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
-    U1 = read_MP2790(RD_VCELL3);//Voltage = Reading x 5000 / 32768 (mV)
-    U2 = read_MP2790(RD_VCELL4);
-    U3 = read_MP2790(RD_VCELL5);
-    U4 = read_MP2790(RD_VCELL6);
+    U1 = read_MP2790(RD_VCELL3) * 5000 / 32768;//Voltage = Reading x 5000 / 32768 (mV)
+    U2 = read_MP2790(RD_VCELL4) * 5000 / 32768;
+    U3 = read_MP2790(RD_VCELL5) * 5000 / 32768;
+    U4 = read_MP2790(RD_VCELL6) * 5000 / 32768;
     I1 = read_MP2790(RD_ICELL3);
     I2 = read_MP2790(RD_ICELL4);
     I3 = read_MP2790(RD_ICELL5);
     I4 = read_MP2790(RD_ICELL6);
-    printf("U1=%04X I1=%04X\r\n",U1,I1);
-    printf("U2=%04X I2=%04X\r\n",U2,I2);
-    printf("U3=%04X I3=%04X\r\n",U3,I3);
-    printf("U4=%04X I4=%04X\r\n",U4,I4);
+    printf("U1=%dmV I1=%04X\r\n",U1,I1);
+    printf("U2=%dmV I2=%04X\r\n",U2,I2);
+    printf("U3=%dmV I3=%04X\r\n",U3,I3);
+    printf("U4=%dmV I4=%04X\r\n",U4,I4);
     printf("\r\n");
 }
