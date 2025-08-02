@@ -18,8 +18,20 @@ void init_2790()
     printf("\r\n------ init_2790 ------\r\n\n");
 //    read_2790_REGS();
 
-    printf("get LOCK_REGISTER\r\n");
-    print_MP2790(LOCK_REGISTER);
+    printf("get LOCK_REGISTER1\r\n");
+    print_MP2790(LOCK_REGISTER1);
+    printf("get LOCK_REGISTER2\r\n");
+    print_MP2790(LOCK_REGISTER2);
+    printf("get LOCK_REGISTER3\r\n");
+    print_MP2790(LOCK_REGISTER3);
+    printf("get LOCK_REGISTER4\r\n");
+    print_MP2790(LOCK_REGISTER4);
+    printf("get LOCK_REGISTER5\r\n");
+    print_MP2790(LOCK_REGISTER5);
+    printf("get LOCK_REGISTER6\r\n");
+    print_MP2790(LOCK_REGISTER6);
+    printf("get LOCK_REGISTER7\r\n");
+    print_MP2790(LOCK_REGISTER7);
     printf("\r\n");
 
 //Конфигурирование
@@ -73,6 +85,14 @@ void init_2790()
     print_MP2790(INT_TYPE2);
     printf("\r\n");
 
+    printf("get LOAD_CHARGER_STATUS\r\n");
+    print_MP2790(LOAD_CHARGER_STATUS);
+    printf("\r\n");
+
+    printf("get LOAD_CHARGER_CFG\r\n");
+    print_MP2790(LOAD_CHARGER_CFG);
+    printf("\r\n");
+
     printf("set FET_CFG\r\n");
     print_MP2790(FET_CFG); //14h
     write_MP2790(FET_CFG, data16.value.value |= 0x0400);  // bit  13  to 1
@@ -88,7 +108,7 @@ void init_2790()
 
     printf("set GPIO_CFG\r\n");
     print_MP2790(GPIO_CFG);
-    write_MP2790(GPIO_CFG, data16.value.value |= 0b0000000000010001); // bits 0 4  to 1
+    write_MP2790(GPIO_CFG, data16.value.value |= 0b000000000100101);
     print_MP2790(GPIO_CFG);
     printf("\r\n");
 
