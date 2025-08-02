@@ -80,12 +80,21 @@ void init_2790()
     print_MP2790(FET_CFG);
     printf("\r\n");
 
+    printf("set HR_SCAN2\r\n");
+    print_MP2790(HR_SCAN2); //9Eh
+    write_MP2790(HR_SCAN2, data16.value.value |= 0b0000000111100011); // bits 0 1 5-8  to 1
+    print_MP2790(HR_SCAN2);
+    printf("\r\n");
+
     printf("set ACT_CFG\r\n");
     write_MP2790(ACT_CFG, data16.value.value &= 0xFFE7);  // bit  4  3  to 0
     print_MP2790(ACT_CFG);  //05h
     write_MP2790(ACT_CFG, data16.value.value |= 0x0018);  // bit  4  3  to 1
+    //Пробуем управление ключами через GPIO
+    write_MP2790(ACT_CFG, data16.value.value |= 0x0002);  // bit  1  to 1
     print_MP2790(ACT_CFG);
     printf("\r\n");
+
 
 //    printf("set FET_MODE\r\n");
 //    print_MP2790(FET_MODE);  //13h
@@ -95,19 +104,19 @@ void init_2790()
 
     printf("set NTC_CFG\r\n");         //4 термистора
     print_MP2790(NTC_CFG); //47h
-    write_MP2790(NTC_CFG, data16.value.value &= 0b1111101101010101);  // bit  1  3  5  7  10  to 0
+    write_MP2790(NTC_CFG, data16.value.value &= 0b1111101101010101);  // bits  10  7  5  3  1  to 0
     print_MP2790(NTC_CFG);
     printf("\r\n");
 
     //Читаю термисторы
-    printf("get RD_V_NTC1_LR\r\n");
-    print_MP2790(RD_V_NTC1_LR);   //42h
-    printf("get RD_V_NTC2_LR\r\n");
-    print_MP2790(RD_V_NTC2_LR);   //41h
-    printf("get RD_V_NTC3_LR\r\n");
-    print_MP2790(RD_V_NTC3_LR);   //40h
-    printf("get RD_V_NTC4_LR\r\n");
-    print_MP2790(RD_V_NTC4_LR);   //3Fh
+    printf("get RD_VNTC1\r\n");
+    print_MP2790(RD_VNTC1);
+    printf("get RD_VNTC2\r\n");
+    print_MP2790(RD_VNTC2);
+    printf("get RD_VNTC3\r\n");
+    print_MP2790(RD_VNTC3);
+    printf("get RD_VNTC4\r\n");
+    print_MP2790(RD_VNTC4);
     printf("\r\n");
 
     printf("get FET_STATUS\r\n"); //Сосояние ключей
@@ -118,9 +127,8 @@ void init_2790()
     print_MP2790(PWR_STATUS);    //01h
     printf("\r\n");
 
-
-
-
+HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
+HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
 
 //    write_MP2790(ACT_CFG, 0x0200);
 //    print_MP2790(ACT_CFG);

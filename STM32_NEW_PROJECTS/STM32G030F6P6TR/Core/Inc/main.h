@@ -60,8 +60,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define GPIO2_IN_Pin GPIO_PIN_7
-#define GPIO2_IN_GPIO_Port GPIOB
+#define GPIO_2_Pin GPIO_PIN_7
+#define GPIO_2_GPIO_Port GPIOB
 #define IRQ_IN_Pin GPIO_PIN_0
 #define IRQ_IN_GPIO_Port GPIOA
 #define Enable_I2C_42790_Pin GPIO_PIN_1
@@ -77,8 +77,8 @@ void Error_Handler(void);
 #define XALERT_INT_Pin GPIO_PIN_8
 #define XALERT_INT_GPIO_Port GPIOA
 #define XALERT_INT_EXTI_IRQn EXTI4_15_IRQn
-#define GPIO1_IN_Pin GPIO_PIN_3
-#define GPIO1_IN_GPIO_Port GPIOB
+#define GPIO_1_Pin GPIO_PIN_3
+#define GPIO_1_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
