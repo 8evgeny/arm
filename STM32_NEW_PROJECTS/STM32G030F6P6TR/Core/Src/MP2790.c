@@ -86,15 +86,31 @@ void init_2790()
     print_MP2790(HR_SCAN2);
     printf("\r\n");
 
+    printf("set GPIO_CFG\r\n");
+    print_MP2790(GPIO_CFG);
+    write_MP2790(GPIO_CFG, data16.value.value |= 0b0000000000010001); // bits 0 4  to 1
+    print_MP2790(GPIO_CFG);
+    printf("\r\n");
+
     printf("set ACT_CFG\r\n");
     write_MP2790(ACT_CFG, data16.value.value &= 0xFFE7);  // bit  4  3  to 0
     print_MP2790(ACT_CFG);  //05h
     write_MP2790(ACT_CFG, data16.value.value |= 0x0018);  // bit  4  3  to 1
-    //Пробуем управление ключами через GPIO
-    write_MP2790(ACT_CFG, data16.value.value |= 0x0002);  // bit  1  to 1
+//Пробуем управление ключами через GPIO
+//    write_MP2790(ACT_CFG, data16.value.value |= 0x0002);  // bit  1  to 1
     print_MP2790(ACT_CFG);
     printf("\r\n");
 
+    printf("get GPIO_STATUS\r\n");
+    print_MP2790(GPIO_STATUS);
+    printf("\r\n");
+
+    HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
+
+    printf("get GPIO_STATUS\r\n");
+    print_MP2790(GPIO_STATUS);
+    printf("\r\n");
 
 //    printf("set FET_MODE\r\n");
 //    print_MP2790(FET_MODE);  //13h
@@ -127,8 +143,6 @@ void init_2790()
     print_MP2790(PWR_STATUS);    //01h
     printf("\r\n");
 
-HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
-HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
 
 //    write_MP2790(ACT_CFG, 0x0200);
 //    print_MP2790(ACT_CFG);
