@@ -73,6 +73,13 @@ void init_2790()
     print_MP2790(INT_TYPE2);
     printf("\r\n");
 
+    printf("set FET_CFG\r\n");
+    print_MP2790(FET_CFG); //14h
+    write_MP2790(FET_CFG, data16.value.value |= 0x0400);  // bit  13  to 1
+    write_MP2790(FET_CFG, data16.value.value &= 0xAFFF);  // bit  12 14  to 0
+    print_MP2790(FET_CFG);
+    printf("\r\n");
+
     printf("set ACT_CFG\r\n");
     write_MP2790(ACT_CFG, data16.value.value &= 0xFFE7);  // bit  4  3  to 0
     print_MP2790(ACT_CFG);
