@@ -55,6 +55,25 @@ void init_2790()
     print_MP2790(INT1_EN);
     printf("\r\n");
 
+    printf("INT_TYPE0\r\n");
+    print_MP2790(INT_TYPE0); //1Bh
+    write_MP2790(INT_TYPE0, data16.value.value |= 0x00FF);
+    print_MP2790(INT_TYPE0);
+    printf("\r\n");
+
+    printf("INT_TYPE1\r\n");
+    print_MP2790(INT_TYPE1); //1Ch
+    write_MP2790(INT_TYPE1, data16.value.value |= 0x3F00);
+    print_MP2790(INT_TYPE1);
+    printf("\r\n");
+
+    printf("INT_TYPE2\r\n");
+    print_MP2790(INT_TYPE2); //1Dh
+    write_MP2790(INT_TYPE2, data16.value.value |= 0x0CFF);
+    print_MP2790(INT_TYPE2);
+    printf("\r\n");
+
+
 
     printf("\r\n");
 
