@@ -158,28 +158,37 @@ void write_MP2790(uint8_t regAddr, uint16_t regValue)
 
 void read_Temp()
 {
+    //T = Reading x 0.01481 - 269.12 (°C)
     write_MP2790(ADC_CTRL, 0x0001);
     while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
     read_MP2790(RD_TDIE);
     Temperature = read_MP2790(RD_TDIE);
-    printf("T=%04X\r\n",Temperature);
+//    printf("T=%04X\r\n",Temperature);
+    float t = Temperature * 0.01481f;
+    t-=269.12f;
+    t*=100;
+    printf("T=%d,%02d°C\r\n",(int)t/100, (int)t%100);
 }
 
 void read_U_I()
 {
+    //Voltage = Reading x 5000 / 32768 (mV)
+    //I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
     write_MP2790(ADC_CTRL, 0x0001);
     while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
-    U1 = read_MP2790(RD_VCELL3) * 5000 / 32768;//Voltage = Reading x 5000 / 32768 (mV)
+    U1 = read_MP2790(RD_VCELL3) * 5000 / 32768;
     U2 = read_MP2790(RD_VCELL4) * 5000 / 32768;
     U3 = read_MP2790(RD_VCELL5) * 5000 / 32768;
     U4 = read_MP2790(RD_VCELL6) * 5000 / 32768;
-    I1 = read_MP2790(RD_ICELL3);
-    I2 = read_MP2790(RD_ICELL4);
-    I3 = read_MP2790(RD_ICELL5);
-    I4 = read_MP2790(RD_ICELL6);
-    printf("U1=%dmV I1=%04X\r\n",U1,I1);
-    printf("U2=%dmV I2=%04X\r\n",U2,I2);
-    printf("U3=%dmV I3=%04X\r\n",U3,I3);
-    printf("U4=%dmV I4=%04X\r\n",U4,I4);
+
+    I1 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
+    I2 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
+    I3 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
+    I4 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
+
+    printf("U1=%d,%03dV I1=%d,%03dmA\r\n",U1/1000, U1%1000, I1/1000,I1%1000);
+    printf("U2=%d,%03dV I2=%d,%03dmA\r\n",U2/1000, U2%1000, I2/1000,I2%1000);
+    printf("U3=%d,%03dV I3=%d,%03dmA\r\n",U3/1000, U3%1000, I3/1000,I3%1000);
+    printf("U4=%d,%03dV I4=%d,%03dmA\r\n",U4/1000, U4%1000, I4/1000,I4%1000);
     printf("\r\n");
 }
