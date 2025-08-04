@@ -44,18 +44,23 @@ void init_2790()
 
 //Инициализация
 
-printf("reset FT_CLR\r\n");
-write_MP2790(FT_CLR, 0xFFFF);
-printf("reset FT_REC\r\n");
-write_MP2790(FT_REC, 0xFFFF);
-printf("\r\n");
+    printf("reset FT_CLR\r\n");
+    write_MP2790(FT_CLR, 0xFFFF);
+    printf("reset FT_REC\r\n");
+    write_MP2790(FT_REC, 0xFFFF);
+    printf("\r\n");
 
-printf("reset FT_CLR\r\n");
-print_MP2790(FT_CLR); //1Bh
-write_MP2790(FT_CLR, 0xFFFF);
-print_MP2790(FT_CLR);
-printf("\r\n");
+    printf("set OCFT_CTRL\r\n");
+    print_MP2790(OCFT_CTRL);
+    write_MP2790(OCFT_CTRL, data16.value.value = 0x0000);
+    print_MP2790(OCFT_CTRL);
+    printf("\r\n");
 
+    printf("set SCFT_CTRL\r\n");
+    print_MP2790(SCFT_CTRL);
+    write_MP2790(SCFT_CTRL, data16.value.value = 0x0000);
+    print_MP2790(SCFT_CTRL);
+    printf("\r\n");
 
     printf("set INT0_EN\r\n");
     print_MP2790(INT0_EN); //19h
@@ -106,14 +111,27 @@ printf("\r\n");
     print_MP2790(GPIO_CFG);
     printf("\r\n");
 
+printf("get FT_STS1\r\n");
+print_MP2790(FT_STS1);
+printf("get FT_STS2\r\n");
+print_MP2790(FT_STS2);
+printf("\r\n");
+
     printf("set ACT_CFG\r\n");
     write_MP2790(ACT_CFG, data16.value.value &= 0xFFE7);  // bit  4  3  to 0
     print_MP2790(ACT_CFG);  //05h
     write_MP2790(ACT_CFG, data16.value.value |= 0x0018);  // bit  4  3  to 1
 //Пробуем управление ключами через GPIO
-//    write_MP2790(ACT_CFG, data16.value.value |= 0x0002);  // bit  1  to 1
+    write_MP2790(ACT_CFG, data16.value.value |= 0x0002);  // bit  1  to 1
     print_MP2790(ACT_CFG);
     printf("\r\n");
+
+printf("get FT_STS1\r\n");
+print_MP2790(FT_STS1);
+printf("get FT_STS2\r\n");
+print_MP2790(FT_STS2);
+printf("\r\n");
+
 
     printf("get GPIO_STATUS\r\n");
     print_MP2790(GPIO_STATUS);
@@ -121,12 +139,6 @@ printf("\r\n");
 
     HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
-
-//    printf("set FET_MODE\r\n");
-//    print_MP2790(FET_MODE);  //13h
-//    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111110111);  // bit  3  to 0
-//    print_MP2790(FET_MODE);
-//    printf("\r\n");
 
     printf("set NTC_CFG\r\n");         //4 термистора
     print_MP2790(NTC_CFG); //47h
@@ -144,18 +156,6 @@ printf("\r\n");
     printf("get RD_VNTC4\r\n");
     print_MP2790(RD_VNTC4);
     printf("\r\n");
-
-printf("set OCFT_CTRL\r\n");
-print_MP2790(OCFT_CTRL);
-write_MP2790(OCFT_CTRL, data16.value.value = 0x0000);
-print_MP2790(OCFT_CTRL);
-printf("\r\n");
-
-printf("set DSGOC_LIM\r\n");
-print_MP2790(DSGOC_LIM);
-write_MP2790(DSGOC_LIM, data16.value.value = 0x0000);
-print_MP2790(DSGOC_LIM);
-printf("\r\n");
 
     printf("get FT_STS1\r\n");
     print_MP2790(FT_STS1);
