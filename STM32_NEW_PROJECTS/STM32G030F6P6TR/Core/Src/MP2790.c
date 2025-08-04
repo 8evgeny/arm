@@ -17,8 +17,11 @@ void init_2790()
 {
     printf("\r\n------ init_2790 ------\r\n\n");
 
-    printf("get LOCK_REGISTER\r\n");
-    print_MP2790(LOCK_REGISTER);
+    printf("get LOCK_REGISTERS\r\n");
+    for(uint8_t i = 0xAA; i <= 0xB0; ++i)
+    {
+        print_MP2790(i);
+    }
     printf("\r\n");
 
 //Конфигурирование
@@ -185,6 +188,7 @@ uint16_t read_MP2790(uint8_t regAddr)
     data16.value.value = 0xFFFF;
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_Delay(3);
     HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data16.value.val, 2, HAL_MAX_DELAY);
 
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
@@ -204,7 +208,7 @@ void write_MP2790(uint8_t regAddr, uint16_t regValue)
 {
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
-    HAL_Delay(1);
+    HAL_Delay(3);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Write(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
