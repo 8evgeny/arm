@@ -43,6 +43,20 @@ void init_2790()
     printf("\r\n");
 
 //Инициализация
+
+printf("reset FT_CLR\r\n");
+write_MP2790(FT_CLR, 0xFFFF);
+printf("reset FT_REC\r\n");
+write_MP2790(FT_REC, 0xFFFF);
+printf("\r\n");
+
+printf("reset FT_CLR\r\n");
+print_MP2790(FT_CLR); //1Bh
+write_MP2790(FT_CLR, 0xFFFF);
+print_MP2790(FT_CLR);
+printf("\r\n");
+
+
     printf("set INT0_EN\r\n");
     print_MP2790(INT0_EN); //19h
     write_MP2790(INT0_EN, data16.value.value |= 0x48FF);   // 19h 14 11 0-7 bits to 1
