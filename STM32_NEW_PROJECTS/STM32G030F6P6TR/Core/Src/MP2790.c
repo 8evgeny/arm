@@ -123,9 +123,18 @@ void init_2790()
     print_MP2790(ACT_CFG);
     printf("\r\n");
 
+    printf("set FET_MODE\r\n");
+    print_MP2790(FET_MODE);
+    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111110111);
+    write_MP2790(FET_MODE, data16.value.value |= 0b0000000011100000);
+    print_MP2790(FET_MODE);
+    printf("\r\n");
+
+
     printf("set NTC_CFG\r\n");         //4 термистора
     print_MP2790(NTC_CFG); //47h
-    write_MP2790(NTC_CFG, data16.value.value &= 0b1111101101010101);  // bits  10  7  5  3  1  to 0
+    write_MP2790(NTC_CFG, data16.value.value |= 0b0000000000000001);
+    write_MP2790(NTC_CFG, data16.value.value &= 0b1111111101010101);  // bits  7  5  3  1  to 0
     print_MP2790(NTC_CFG);
     printf("\r\n");
 
@@ -142,8 +151,6 @@ void init_2790()
 
     printf("get GPIO_STATUS\r\n");
     print_MP2790(GPIO_STATUS);
-    printf("\r\n");
-
     HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
     printf("get GPIO_STATUS\r\n");
