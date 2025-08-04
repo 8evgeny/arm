@@ -108,10 +108,6 @@ void init_2790()
     HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
 
-    printf("get GPIO_STATUS\r\n");
-    print_MP2790(GPIO_STATUS);
-    printf("\r\n");
-
 //    printf("set FET_MODE\r\n");
 //    print_MP2790(FET_MODE);  //13h
 //    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111110111);  // bit  3  to 0
@@ -141,6 +137,12 @@ write_MP2790(OCFT_CTRL, data16.value.value = 0x0000);
 print_MP2790(OCFT_CTRL);
 printf("\r\n");
 
+printf("set DSGOC_LIM\r\n");
+print_MP2790(DSGOC_LIM);
+write_MP2790(DSGOC_LIM, data16.value.value = 0x0000);
+print_MP2790(DSGOC_LIM);
+printf("\r\n");
+
     printf("get FT_STS1\r\n");
     print_MP2790(FT_STS1);
     printf("get FT_STS2\r\n");
@@ -149,6 +151,10 @@ printf("\r\n");
 
     printf("get FET_STATUS\r\n"); //Сосояние ключей
     print_MP2790(FET_STATUS);   //11h
+    printf("\r\n");
+
+    printf("get GPIO_STATUS\r\n");
+    print_MP2790(GPIO_STATUS);
     printf("\r\n");
 
     printf("get PWR_STATUS\r\n");
