@@ -135,6 +135,12 @@ void init_2790()
     print_MP2790(RD_VNTC4);
     printf("\r\n");
 
+    printf("get FT_STS1\r\n");
+    print_MP2790(FT_STS1);
+    printf("get FT_STS2\r\n");
+    print_MP2790(FT_STS2);
+    printf("\r\n");
+
     printf("get FET_STATUS\r\n"); //Сосояние ключей
     print_MP2790(FET_STATUS);   //11h
     printf("\r\n");
@@ -144,12 +150,6 @@ void init_2790()
     printf("\r\n");
 
 
-//    write_MP2790(ACT_CFG, 0x0200);
-//    print_MP2790(ACT_CFG);
-//    print_MP2790(PWR_STATUS);
-//    write_MP2790(ACT_CFG, 0x0218);
-//    print_MP2790(ACT_CFG);
-//    print_MP2790(PWR_STATUS);
 }
 
 void read_2790_REGS()
