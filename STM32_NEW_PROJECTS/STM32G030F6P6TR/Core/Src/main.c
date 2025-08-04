@@ -128,7 +128,7 @@ int main(void)
 //    simpleTestI2C_EEPROM(0x10);
     init_2790();
 //    init_42790();
-
+//    read_2790_REGS();
 
 
   while (1)

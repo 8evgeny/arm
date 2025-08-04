@@ -16,7 +16,6 @@ uint16_t Temperature;
 void init_2790()
 {
     printf("\r\n------ init_2790 ------\r\n\n");
-//    read_2790_REGS();
 
     printf("get LOCK_REGISTER\r\n");
     print_MP2790(LOCK_REGISTER);
