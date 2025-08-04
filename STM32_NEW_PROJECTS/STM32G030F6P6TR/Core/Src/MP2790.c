@@ -116,20 +116,19 @@ void init_2790()
     print_MP2790(FT_STS2);
     printf("\r\n");
 
+    printf("set FET_MODE\r\n");
+    print_MP2790(FET_MODE);
+    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111110101);
+    write_MP2790(FET_MODE, data16.value.value |= 0b0000000011100000);
+    print_MP2790(FET_MODE);
+    printf("\r\n");
+
     printf("set ACT_CFG\r\n");
     print_MP2790(ACT_CFG);  //05h
 //Пробуем управление ключами через GPIO
     write_MP2790(ACT_CFG, data16.value.value |= 0b0000000000011011);  // bits 0 1 3 4 to 1 CHG and DSG MOSFETs turn on
     print_MP2790(ACT_CFG);
     printf("\r\n");
-
-    printf("set FET_MODE\r\n");
-    print_MP2790(FET_MODE);
-    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111110111);
-    write_MP2790(FET_MODE, data16.value.value |= 0b0000000011100000);
-    print_MP2790(FET_MODE);
-    printf("\r\n");
-
 
     printf("set NTC_CFG\r\n");         //4 термистора
     print_MP2790(NTC_CFG); //47h
@@ -157,21 +156,19 @@ void init_2790()
     print_MP2790(GPIO_STATUS);
     printf("\r\n");
 
-    printf("get FT_STS1\r\n");
-    print_MP2790(FT_STS1);
-    printf("get FT_STS2\r\n");
-    print_MP2790(FT_STS2);
-    printf("\r\n");
-
     printf("get FET_STATUS\r\n"); //Сосояние ключей
     print_MP2790(FET_STATUS);   //11h
+    printf("\r\n");
+
+    printf("get FT_STS2\r\n");
+    print_MP2790(FT_STS2);
+    printf("get FT_STS1\r\n");
+    print_MP2790(FT_STS1);
     printf("\r\n");
 
     printf("get PWR_STATUS\r\n");
     print_MP2790(PWR_STATUS);    //01h
     printf("\r\n");
-
-
 }
 
 void read_2790_REGS()
@@ -185,6 +182,7 @@ void read_2790_REGS()
 
 uint16_t read_MP2790(uint8_t regAddr)
 {
+    data16.value.value = 0xFFFF;
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data16.value.val, 2, HAL_MAX_DELAY);
