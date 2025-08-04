@@ -111,34 +111,18 @@ void init_2790()
     print_MP2790(GPIO_CFG);
     printf("\r\n");
 
-printf("get FT_STS1\r\n");
-print_MP2790(FT_STS1);
-printf("get FT_STS2\r\n");
-print_MP2790(FT_STS2);
-printf("\r\n");
+    printf("get FT_STS1\r\n");
+    print_MP2790(FT_STS1);
+    printf("get FT_STS2\r\n");
+    print_MP2790(FT_STS2);
+    printf("\r\n");
 
     printf("set ACT_CFG\r\n");
-    write_MP2790(ACT_CFG, data16.value.value &= 0xFFE7);  // bit  4  3  to 0
     print_MP2790(ACT_CFG);  //05h
-    write_MP2790(ACT_CFG, data16.value.value |= 0x0018);  // bit  4  3  to 1
 //Пробуем управление ключами через GPIO
-    write_MP2790(ACT_CFG, data16.value.value |= 0x0002);  // bit  1  to 1
+    write_MP2790(ACT_CFG, data16.value.value |= 0b0000000000011011);  // bits 0 1 3 4 to 1 CHG and DSG MOSFETs turn on
     print_MP2790(ACT_CFG);
     printf("\r\n");
-
-printf("get FT_STS1\r\n");
-print_MP2790(FT_STS1);
-printf("get FT_STS2\r\n");
-print_MP2790(FT_STS2);
-printf("\r\n");
-
-
-    printf("get GPIO_STATUS\r\n");
-    print_MP2790(GPIO_STATUS);
-    printf("\r\n");
-
-    HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
 
     printf("set NTC_CFG\r\n");         //4 термистора
     print_MP2790(NTC_CFG); //47h
@@ -157,6 +141,16 @@ printf("\r\n");
     print_MP2790(RD_VNTC4);
     printf("\r\n");
 
+    printf("get GPIO_STATUS\r\n");
+    print_MP2790(GPIO_STATUS);
+    printf("\r\n");
+
+    HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
+    printf("get GPIO_STATUS\r\n");
+    print_MP2790(GPIO_STATUS);
+    printf("\r\n");
+
     printf("get FT_STS1\r\n");
     print_MP2790(FT_STS1);
     printf("get FT_STS2\r\n");
@@ -165,10 +159,6 @@ printf("\r\n");
 
     printf("get FET_STATUS\r\n"); //Сосояние ключей
     print_MP2790(FET_STATUS);   //11h
-    printf("\r\n");
-
-    printf("get GPIO_STATUS\r\n");
-    print_MP2790(GPIO_STATUS);
     printf("\r\n");
 
     printf("get PWR_STATUS\r\n");
