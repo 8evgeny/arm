@@ -135,6 +135,12 @@ void init_2790()
     print_MP2790(RD_VNTC4);
     printf("\r\n");
 
+printf("set OCFT_CTRL\r\n");
+print_MP2790(OCFT_CTRL);
+write_MP2790(OCFT_CTRL, data16.value.value = 0x0000);
+print_MP2790(OCFT_CTRL);
+printf("\r\n");
+
     printf("get FT_STS1\r\n");
     print_MP2790(FT_STS1);
     printf("get FT_STS2\r\n");
