@@ -21,6 +21,8 @@ void init_2790()
     for(uint8_t i = 0xAA; i <= 0xB0; ++i)
     {
         print_MP2790(i);
+//        write_MP2790(i, 0x0000);
+//        print_MP2790(i);
     }
     printf("\r\n");
 
