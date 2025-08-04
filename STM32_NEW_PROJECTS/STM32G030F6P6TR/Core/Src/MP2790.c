@@ -105,7 +105,7 @@ void init_2790()
     print_MP2790(HR_SCAN2);
     printf("\r\n");
 
-    printf("set GPIO_CFG\r\n");
+    printf("set GPIO_CFG\r\n"); //GPIO 1 2 - INPUT
     print_MP2790(GPIO_CFG);
     write_MP2790(GPIO_CFG, data16.value.value |= 0b0000000000010001); // bits 0 4  to 1
     print_MP2790(GPIO_CFG);
@@ -180,11 +180,8 @@ void read_2790_REGS()
 uint16_t read_MP2790(uint8_t regAddr)
 {
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
-//    HAL_Delay(1);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data16.value.val, 2, HAL_MAX_DELAY);
-
-write_MP2790(GPIO_STATUS, 0x0000); //Фейковая запись чтобы далее шло чтение
 
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
     return data16.value.value;
