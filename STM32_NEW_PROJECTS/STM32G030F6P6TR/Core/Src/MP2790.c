@@ -33,6 +33,24 @@ void init_2790()
     print_MP2790(CELLS_CTRL);
     printf("\r\n");
 
+printf("set CELL_UV\r\n");
+print_MP2790(CELL_UV);
+write_MP2790(CELL_UV, 0x088F);
+print_MP2790(CELL_UV);
+printf("\r\n");
+
+printf("set PACK_UV\r\n");
+print_MP2790(PACK_UV);
+write_MP2790(PACK_UV, 0x823E);
+print_MP2790(PACK_UV);
+printf("\r\n");
+
+printf("set PACK_OV\r\n");
+print_MP2790(PACK_OV);
+write_MP2790(PACK_OV, 0x8361);
+print_MP2790(PACK_OV);
+printf("\r\n");
+
     printf("set ACT_CFG\r\n");
     print_MP2790(ACT_CFG); //05h
     write_MP2790(ACT_CFG, data16.value.value |= 0x0200);    // O5h 9 bits to 1
@@ -157,23 +175,24 @@ void init_2790()
     print_MP2790(GPIO_STATUS);
     HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
+    HAL_Delay(1000);
     printf("get GPIO_STATUS\r\n");
     print_MP2790(GPIO_STATUS);
-    printf("\r\n");
+    printf("------------------------------------------------- \r\n");
 
     printf("get FET_STATUS\r\n"); //Сосояние ключей
     print_MP2790(FET_STATUS);   //11h
     printf("\r\n");
-
     printf("get FT_STS2\r\n");
     print_MP2790(FT_STS2);
     printf("get FT_STS1\r\n");
     print_MP2790(FT_STS1);
     printf("\r\n");
-
     printf("get PWR_STATUS\r\n");
     print_MP2790(PWR_STATUS);    //01h
-    printf("\r\n");
+    printf("------------------------------------------------- \r\n");
+
+
 }
 
 void read_2790_REGS()
