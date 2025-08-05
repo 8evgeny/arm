@@ -190,7 +190,7 @@ void init_2790()
     print_MP2790(RD_VNTC3);
     printf("-------- get RD_VNTC4 --------\r\n");
     print_MP2790(RD_VNTC4);
-    printf("\r\n");
+    printf("\r\n=========================== STATUS =========================\r\n\n");
 
     printf("-------- get GPIO_STATUS --------\r\n");
     print_MP2790(GPIO_STATUS);
@@ -199,20 +199,20 @@ void init_2790()
     HAL_Delay(1000);
     printf("-------- get GPIO_STATUS --------\r\n");
     print_MP2790(GPIO_STATUS);
-    printf("------------------------------------------------- \r\n");
+    printf("\r\n");
 
-    printf("-------- get FET_STATUS --------\r\n"); //Сосояние ключей
+    printf("-------- get FET_STATUS --------\r\n");
+    printf("  Сосояние ключей\r\n");
     print_MP2790(FET_STATUS);   //11h
     printf("\r\n");
     printf("-------- get FT_STS2 --------\r\n");
     print_MP2790(FT_STS2);
-    printf("get FT_STS1 --------\r\n");
+    printf("-------- get FT_STS1 --------\r\n");
     print_MP2790(FT_STS1);
     printf("\r\n");
     printf("-------- get PWR_STATUS --------\r\n");
     print_MP2790(PWR_STATUS);    //01h
 
-    printf("--------------------- STATUS --------------------\r\n");
     printf("-------- get WDT_STATUS --------\r\n");
     print_MP2790(WDT_STATUS);
     printf("-------- get WDT_CFG --------\r\n");
