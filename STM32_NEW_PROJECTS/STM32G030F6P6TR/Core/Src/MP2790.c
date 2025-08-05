@@ -10,7 +10,7 @@ typedef struct _data16
     }value;
 }data_16;
 data_16 data16; //2790
-uint16_t U1,U2,U3,U4,I1,I2,I3,I4;
+uint16_t U1,U2,U3,U4,I1,I2,I3,I4,V_PACK,V_TOP;
 uint16_t Temperature;
 
 void init_2790()
@@ -28,7 +28,7 @@ void init_2790()
 
     printf("-------- set CELLS_CTRL --------\r\n");
 //    print_MP2790(CELLS_CTRL);
-    printf("  Определяем состав батарейного блока (четыре батареи с третьей по шестую)\r\n");
+//    printf("  Определяем состав батарейного блока (четыре батареи с третьей по шестую)\r\n");
     //Определяет состав батарейного блока (четыре батареи с третьей по шестую)
     write_MP2790(CELLS_CTRL, 0x0003);
     print_MP2790(CELLS_CTRL);
@@ -42,24 +42,23 @@ void init_2790()
     printf("\r\n");
 
     printf("-------- set PACK_UV --------\r\n");
-    printf("  PACK_UV command configures the VTOP under-voltage (UV) threshold and deglitch delay\r\n");
+//    printf("  PACK_UV command configures the VTOP under-voltage (UV) threshold and deglitch delay\r\n");
     print_MP2790(PACK_UV);
     write_MP2790(PACK_UV, 0x823E);
     print_MP2790(PACK_UV);
     printf("\r\n");
 
     printf("-------- set PACK_OV --------\r\n");
-    printf("  PACK_OV command configures the VTOP over-voltage (OV) threshold and deglitch delay\r\n");
+//    printf("  PACK_OV command configures the VTOP over-voltage (OV) threshold and deglitch delay\r\n");
     print_MP2790(PACK_OV);
     write_MP2790(PACK_OV, 0x8361);
     print_MP2790(PACK_OV);
     printf("\r\n");
 
     printf("-------- set ACT_CFG --------\r\n");
-    printf("  ACT_CFG command configures the MOSFET transition method, turn-on/off command, control logic, and control method\r\n");
-//    printf("  1 bits to 0 - set GPIO depending on FET_CFG\r\n");
-    printf("  9 bits to 1 - MOSFETs start up depending on the control source status\r\n");
-    printf("  bits 0 1 3 4 to 1 CHG and DSG MOSFETs turn on\r\n");
+//    printf("  ACT_CFG command configures the MOSFET transition method, turn-on/off command, control logic, and control method\r\n");
+//    printf("  9 bits to 1 - MOSFETs start up depending on the control source status\r\n");
+//    printf("  bits 0 1 3 4 to 1 CHG and DSG MOSFETs turn on\r\n");
     print_MP2790(ACT_CFG); //05h
     write_MP2790(ACT_CFG, data16.value.value |= 0x0200);    // 9 bits to 1
 //    write_MP2790(ACT_CFG, data16.value.value &= 0xFFFD);    // 1 bits to 0
@@ -74,12 +73,13 @@ void init_2790()
     print_MP2790(FET_CFG);
     write_MP2790(FET_CFG, data16.value.value |= 0x0400);  // bit  13  to 1
     write_MP2790(FET_CFG, data16.value.value &= 0xAFFF);  // bit  12 14  to 0
+    write_MP2790(FET_CFG, data16.value.value |= 0b0000000000000111);  // bit  0 1 2  to 1
     print_MP2790(FET_CFG);
     printf("\r\n");
 
     printf("-------- set PINS_CFG --------\r\n");
-    printf("  PINS_CFG command defines the direction of GPIOHV1, and the pull-up voltage of GPIO1~3. It also sets the behavior of the WDT pins and xALERT pin\r\n");
-    printf("  5 6 bits to 0  disable WDT\r\n");
+//    printf("  PINS_CFG command defines the direction of GPIOHV1, and the pull-up voltage of GPIO1~3. It also sets the behavior of the WDT pins and xALERT pin\r\n");
+//    printf("  5 6 bits to 0  disable WDT\r\n");
     print_MP2790(PINS_CFG);
     write_MP2790(PINS_CFG, data16.value.value &= 0xFF9F);   // 5 6 bits to 0
     print_MP2790(PINS_CFG);
@@ -92,9 +92,9 @@ void init_2790()
     printf("\r\n");
 
     printf("-------- set OCFT_CTRL --------\r\n");
-    printf("  OCFT_CTRL command controls the triggering logic for the interrupt of charge over-current (OC), discharge OC1, and discharge OC2 events. ");
-    printf("  It also enables the interrupts, faults, and monitoring for charge OC, discharge OC1, discharge OC2 events\r\n");
-    printf("  Выключаем прерывания\r\n");
+//    printf("  OCFT_CTRL command controls the triggering logic for the interrupt of charge over-current (OC), discharge OC1, and discharge OC2 events. ");
+//    printf("  It also enables the interrupts, faults, and monitoring for charge OC, discharge OC1, discharge OC2 events\r\n");
+//    printf("  Выключаем прерывания\r\n");
     print_MP2790(OCFT_CTRL);
     write_MP2790(OCFT_CTRL, data16.value.value = 0x0000);
     print_MP2790(OCFT_CTRL);
@@ -182,6 +182,8 @@ void init_2790()
     printf("\r\n");
 
     //Читаю термисторы
+    write_MP2790(ADC_CTRL, 0x0001);
+    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
     printf("-------- get RD_VNTC1 --------\r\n");
     print_MP2790(RD_VNTC1);
     printf("-------- get RD_VNTC2 --------\r\n");
@@ -194,22 +196,43 @@ void init_2790()
 
     printf("-------- get GPIO_STATUS --------\r\n");
     print_MP2790(GPIO_STATUS);
-    HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
-    HAL_Delay(1000);
+HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);  //TEST
+
+    HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);  // Срабатывает
+HAL_Delay(100);
+
+write_MP2790(ADC_CTRL, 0x0001);
+while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
+    printf("-------- get RD_VPACKP --------\r\n");
+    print_MP2790(RD_VPACKP);
+    V_PACK = read_MP2790(V_PACK) * 80000 / 32768;
+    printf("V_PACK=%d,%03dV\r\n",V_PACK/1000, V_PACK%1000);
+    printf("\r\n");
+write_MP2790(ADC_CTRL, 0x0001);
+while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
+    printf("-------- get RD_VTOP --------\r\n");
+    print_MP2790(RD_VTOP);
+    V_TOP = read_MP2790(RD_VTOP) * 80000 / 32768;
+    printf("V_TOP=%d,%03dV\r\n",V_TOP/1000, V_TOP%1000);
+    printf("\r\n");
+
+
     printf("-------- get GPIO_STATUS --------\r\n");
     print_MP2790(GPIO_STATUS);
     printf("\r\n");
 
     printf("-------- get FET_STATUS --------\r\n");
-    printf("  Сосояние ключей\r\n");
+    printf("  Состояние ключей\r\n");
     print_MP2790(FET_STATUS);   //11h
     printf("\r\n");
-    printf("-------- get FT_STS2 --------\r\n");
-    print_MP2790(FT_STS2);
+
     printf("-------- get FT_STS1 --------\r\n");
     print_MP2790(FT_STS1);
+    printf("-------- get FT_STS2 --------\r\n");
+    print_MP2790(FT_STS2);
     printf("\r\n");
+
     printf("-------- get PWR_STATUS --------\r\n");
     print_MP2790(PWR_STATUS);    //01h
 
@@ -223,7 +246,6 @@ void init_2790()
     printf("-------- get RD_VA3P3 --------\r\n");
     print_MP2790(RD_VA3P3);
     printf("------------------------------------------------- \r\n");
-
 }
 
 void read_2790_REGS()

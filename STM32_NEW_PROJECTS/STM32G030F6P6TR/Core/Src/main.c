@@ -111,9 +111,10 @@ int main(void)
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 
-    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
+//    HAL_GPIO_WritePin(GPIOA, Enable_I2sC_2790_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_42790_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
 
   /* USER CODE END 2 */
 
@@ -135,8 +136,8 @@ int main(void)
 
   while (1)
   {
-//    read_Temp();
-//    read_U_I();
+    read_Temp();
+    read_U_I();
 //    printf("get RD_VA1P8\r\n");
 //    print_MP2790(RD_VA1P8);
 //    printf("get RD_VA3P3\r\n");
