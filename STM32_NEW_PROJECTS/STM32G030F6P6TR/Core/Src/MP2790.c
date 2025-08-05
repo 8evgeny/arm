@@ -77,6 +77,13 @@ void init_2790()
     print_MP2790(FET_CFG);
     printf("\r\n");
 
+    printf("-------- set FT1_CFG --------\r\n");
+    print_MP2790(FT1_CFG);
+    write_MP2790(FT1_CFG, data16.value.value = 0b0000000000001110);
+    print_MP2790(FT1_CFG);
+    printf("\r\n");
+
+
     printf("-------- set PINS_CFG --------\r\n");
 //    printf("  PINS_CFG command defines the direction of GPIOHV1, and the pull-up voltage of GPIO1~3. It also sets the behavior of the WDT pins and xALERT pin\r\n");
 //    printf("  5 6 bits to 0  disable WDT\r\n");
@@ -198,9 +205,9 @@ void init_2790()
     print_MP2790(GPIO_STATUS);
 HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);  //TEST
 
-    HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);  // Срабатывает
-HAL_Delay(100);
+    HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
+//HAL_Delay(100);
 
 write_MP2790(ADC_CTRL, 0x0001);
 while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
