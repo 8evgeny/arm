@@ -80,8 +80,8 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Enable_I2C_42790_Pin UART_SEL_OUT_Pin One_Wire_Pin */
-  GPIO_InitStruct.Pin = Enable_I2C_42790_Pin|UART_SEL_OUT_Pin|One_Wire_Pin;
+  /*Configure GPIO pins : Enable_I2C_42790_Pin UART_SEL_OUT_Pin */
+  GPIO_InitStruct.Pin = Enable_I2C_42790_Pin|UART_SEL_OUT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
@@ -93,6 +93,13 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(Enable_I2C_2790_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : One_Wire_Pin */
+  GPIO_InitStruct.Pin = One_Wire_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
+  HAL_GPIO_Init(One_Wire_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : XALERT_INT_Pin */
   GPIO_InitStruct.Pin = XALERT_INT_Pin;
