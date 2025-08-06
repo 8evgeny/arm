@@ -128,29 +128,17 @@ int main(void)
 #endif
 //    simpleTestI2C_EEPROM(0x10);
     init_2790();
-//    HAL_Delay(1000);
-//    init_2790();
 //    init_42790();
 //    read_2790_REGS();
+//    read_42790_REGS();
 
-    read_Temp();
-    read_U_I();
-    HAL_Delay(1000);
-    read_Temp();
-    HAL_Delay(1000);
-    read_Temp();
 
   while (1)
   {
-//    read_Temp();
-//    read_U_I();
-//    printf("get RD_VA1P8\r\n");
-//    print_MP2790(RD_VA1P8);
-//    printf("get RD_VA3P3\r\n");
-//    print_MP2790(RD_VA3P3);
-//    printf("\r\n");
+    read_Temp();
+    read_U_I();
 
-    HAL_Delay(4000);
+    HAL_Delay(10000);
 
 
 
