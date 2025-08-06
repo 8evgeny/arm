@@ -94,7 +94,7 @@ void read_Temp();
 void read_U_I();
 void adcOn();
 void resetErrors();
-void getV_PACKandV_TOP();
+void get_V_PACK_TOP();
 void initInterrupts();
 void getLockRegisters();
 void initBatteryNum();

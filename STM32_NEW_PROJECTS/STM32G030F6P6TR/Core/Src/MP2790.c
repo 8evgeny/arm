@@ -24,10 +24,13 @@ void init_2790()
     initPins();
     initFET_CFG();
     init_NTC();
-    getV_PACKandV_TOP();
+    get_V_PACK_TOP();
 //    init_UV_OV();   //Тут перестает ключ включаться
     init_time_SC_detection();
     init_CHG_DSG_MOSFET();
+
+    getStatus();
+    HAL_Delay(1);
     getStatus();
 }
 
@@ -113,7 +116,7 @@ void adcOn()
     while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
 }
 
-void getV_PACKandV_TOP()
+void get_V_PACK_TOP()
 {
     adcOn();
 //    printf("  get RD_VPACKP\r\n");
