@@ -15,7 +15,7 @@ uint16_t Temperature;
 
 void init_2790()
 {
-    printf("\r\n=========== init_MP2790 ===========\r\n\n");
+    printf("\r\n========== init_MP2790 ===========\r\n\n");
     getWDTStatus();
     resetErrors();
     getLockRegisters();
