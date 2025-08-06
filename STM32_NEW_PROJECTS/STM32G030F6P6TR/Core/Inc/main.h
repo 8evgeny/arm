@@ -104,6 +104,7 @@ void init_time_SC_detection();
 void initPins();
 void init_NTC();
 void getStatus();
+void getWDTStatus();
 void init_CHG_DSG_MOSFET();
 
 void print_byte(uint8_t byte);

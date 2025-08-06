@@ -16,67 +16,20 @@ uint16_t Temperature;
 void init_2790()
 {
     printf("\r\n=========== init_MP2790 ===========\r\n\n");
+    getWDTStatus();
     resetErrors();
     getLockRegisters();
     initBatteryNum();
     initInterrupts();
-//    init_UV_OV();
-//    initFET_CFG();
-//    init_time_SC_detection();
-//    initPins();
-//    init_NTC();
-//    init_CHG_DSG_MOSFET();
-//    getV_PACKandV_TOP();
-//    getStatus();
-
-    printf("get LOCK_REGISTER\r\n");
-    print_MP2790(LOCK_REGISTER);
-    printf("\r\n");
-
-    printf("set ACT_CFG\r\n");
-    print_MP2790(ACT_CFG); //05h
-    write_MP2790(ACT_CFG, data16.value.value |= 0x0200);    // O5h 9 bits to 1
-    write_MP2790(ACT_CFG, data16.value.value &= 0xFFFD);    // O5h 1 bits to 0
-    print_MP2790(ACT_CFG);
-    printf("\r\n");
-
-    printf("set PINS_CFG\r\n");
-    print_MP2790(PINS_CFG); //0Dh
-    write_MP2790(PINS_CFG, data16.value.value &= 0xFF9F);   // ODh 5 6 bits to 0
-    print_MP2790(PINS_CFG);
-    printf("\r\n");
-
-//Инициализация
-
-
-    printf("set FET_CFG\r\n");
-    print_MP2790(FET_CFG); //14h
-    write_MP2790(FET_CFG, data16.value.value |= 0x0400);  // bit  13  to 1
-    write_MP2790(FET_CFG, data16.value.value &= 0xAFFF);  // bit  12 14  to 0
-    print_MP2790(FET_CFG);
-    printf("\r\n");
-
-    printf("set ACT_CFG\r\n");
-    write_MP2790(ACT_CFG, data16.value.value &= 0xFFE7);  // bit  4  3  to 0
-    print_MP2790(ACT_CFG);  //05h
-    write_MP2790(ACT_CFG, data16.value.value |= 0x0018);  // bit  4  3  to 1
-    print_MP2790(ACT_CFG);
-    printf("\r\n");
-
-    printf("set NTC_CFG\r\n");         //4 термистора
-    print_MP2790(NTC_CFG); //47h
-    write_MP2790(NTC_CFG, data16.value.value &= 0b1111101101010101);  // bit  1  3  5  7  10  to 0
-    print_MP2790(NTC_CFG);
-    printf("\r\n");
-
-    printf("get FET_STATUS\r\n"); //Сосояние ключей
-    print_MP2790(FET_STATUS);   //11h
-    printf("\r\n");
-
-    printf("get PWR_STATUS\r\n");
-    print_MP2790(PWR_STATUS);    //01h
-    printf("\r\n");
-
+    initPins();
+    initFET_CFG();
+    init_NTC();
+    getV_PACKandV_TOP();
+//    init_UV_OV();   //Тут перестает ключ включаться
+    init_time_SC_detection();
+    getStatus();
+    init_CHG_DSG_MOSFET();
+    getStatus();
 }
 
 void read_2790_REGS()
@@ -209,18 +162,15 @@ void getLockRegisters()
 void init_UV_OV()
 {
     printf("  init_UV_OV()\r\n");
-//    printf("  CELL_UV command configures the cell under-voltage (UV) threshold and deglitch delay\r\n");
-//    print_MP2790(CELL_UV);
+    read_MP2790(CELL_UV);
     write_MP2790(CELL_UV, 0x088F);
     print_MP2790(CELL_UV);
 
-//    printf("  PACK_UV command configures the VTOP under-voltage (UV) threshold and deglitch delay\r\n");
-//    print_MP2790(PACK_UV);
+    read_MP2790(PACK_UV);
     write_MP2790(PACK_UV, 0x823E);
     print_MP2790(PACK_UV);
 
-//    printf("  PACK_OV command configures the VTOP over-voltage (OV) threshold and deglitch delay\r\n");
-//    print_MP2790(PACK_OV);
+    read_MP2790(PACK_OV);
     write_MP2790(PACK_OV, 0x8361);
     print_MP2790(PACK_OV);
     printf("\r\n");
@@ -229,12 +179,9 @@ void init_UV_OV()
 void initFET_CFG()
 {
     printf("  initFET_CFG()\r\n");
-//    printf("  FET_CFG configures the driver voltages of CHG and DSG MOSFETs, and it configures soft start for the CHG and DSG MOSFETs\r\n");
-//    printf("  12 14 bits to 0 13 bit to 1 set 7V with a lower CP voltage\r\n");
     read_MP2790(FET_CFG);
     write_MP2790(FET_CFG, data16.value.value |= 0x0400);  // bit  13  to 1
     write_MP2790(FET_CFG, data16.value.value &= 0xAFFF);  // bit  12 14  to 0
-    write_MP2790(FET_CFG, data16.value.value |= 0b0000000000000111);  // bit  0 1 2  to 1
     print_MP2790(FET_CFG);
     printf("\r\n");
 }
@@ -269,39 +216,25 @@ void resetErrors()
 void initPins()
 {
     printf("  initPins()\r\n");
-    read_MP2790(GPIO_CFG);
-    write_MP2790(GPIO_CFG, data16.value.value |= 0b0000000000010001); // bits 0 4  to 1
-    print_MP2790(GPIO_CFG);
-
-//PINS_CFG command defines the direction of GPIOHV1, and the pull-up voltage of GPIO1~3.
-//It also sets the behavior of the WDT pins and xALERT pin
-    read_MP2790(PINS_CFG);
-    write_MP2790(PINS_CFG, data16.value.value &= 0xFF9F);   // 5 6 bits to 0  disable WDT
+    printf("set PINS_CFG\r\n");
+    print_MP2790(PINS_CFG); //0Dh
+    write_MP2790(PINS_CFG, data16.value.value &= 0xFF9F);   // ODh 5 6 bits to 0
     print_MP2790(PINS_CFG);
-    printf("  GPIO 1 set ON\r\n");
-    printf("  GPIO 2 set ON\r\n");
-    HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
-    print_MP2790(GPIO_STATUS);
     printf("\r\n");
 }
 
 void init_NTC()
 {
-    printf("  init_scan_NTC()\r\n");
-//HR_SCAN0 command enables ADC cell measurement compensation for voltage drop caused by the cell’s input resistor. \r\n");
-//It also enables voltage and currentADC scanning for the synchronous TOP current,synchronous cell current, LDOs, \r\n");
-//die temperature, NTCs, GPIO, PACKP, TOP voltage, and cell voltage \r\n");
+    printf("  init_NTC()\r\n");
     read_MP2790(HR_SCAN0);
     write_MP2790(HR_SCAN0, data16.value.value |= 0b0000000001000000); // bits 6  to 1
     print_MP2790(HR_SCAN0);
 
-//HR_SCAN2 command enables the ADC voltage scans for NTC1~4 and the high-resolution voltage scans for GPIO1~3\r\n");
     read_MP2790(HR_SCAN2);
     write_MP2790(HR_SCAN2, data16.value.value |= 0b0000000111100011); // bits 0 1 5-8  to 1
     print_MP2790(HR_SCAN2);
 
-    read_MP2790(NTC_CFG); //47h
+    read_MP2790(NTC_CFG);
     write_MP2790(NTC_CFG, data16.value.value |= 0b0000000000000001);
     write_MP2790(NTC_CFG, data16.value.value &= 0b1111111101010101);  // bits  7  5  3  1  to 0
     print_MP2790(NTC_CFG);
@@ -320,9 +253,7 @@ void init_NTC()
 
 void getStatus()
 {
-//    printf("  getStatus()\r\n");
-    printf("  WDT_STATUS\r\n");
-    print_MP2790(WDT_STATUS);
+    printf("  getStatus()\r\n");
     printf("  FT_STS\r\n");
     print_MP2790(FT_STS1);
     print_MP2790(FT_STS2);
@@ -334,25 +265,23 @@ void getStatus()
 
 }
 
+void getWDTStatus()
+{
+    printf("  WDT_STATUS\r\n");
+    print_MP2790(WDT_STATUS);
+    printf("\r\n");
+}
+
 void init_CHG_DSG_MOSFET()
 {
     printf("  init_CHG_DSG_MOSFET()\r\n");
-// CT_CFG command configures the MOSFET transition method, turn-on/off command, control logic, and control method
-// 9 bits to 1 - MOSFETs start up depending on the control source status
-//bits 0 1 3 4 to 1 CHG and DSG MOSFETs turn on
     read_MP2790(ACT_CFG);
-    write_MP2790(ACT_CFG, data16.value.value |= 0x0200);    // 9 bits to 1
-//    write_MP2790(ACT_CFG, data16.value.value &= 0xFFFD);    // 1 bits to 0
-    //Пробуем управление ключами через GPIO
-    write_MP2790(ACT_CFG, data16.value.value |= 0b0000000000011011);  // bits 0 1 3 4 to 1 CHG and DSG MOSFETs turn on
+    write_MP2790(ACT_CFG, data16.value.value |= 0x0200);    // O5h 9 bits to 1
+    write_MP2790(ACT_CFG, data16.value.value &= 0xFFFD);    // O5h 1 bits to 0
+
+    write_MP2790(ACT_CFG, data16.value.value &= 0xFFE7);  // bit  4  3  to 0
+    write_MP2790(ACT_CFG, data16.value.value |= 0x0018);  // bit  4  3  to 1
     print_MP2790(ACT_CFG);
 
-HAL_Delay(100);
-
-//FET_MODE configures soft start for the CHG and DSG MOSFETs, and it enables manual control of the SBYDSG MOSFET
-    read_MP2790(FET_MODE);
-    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111110101);
-    write_MP2790(FET_MODE, data16.value.value |= 0b0000000011100000);
-    print_MP2790(FET_MODE);
 printf("\r\n");
 }
