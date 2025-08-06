@@ -133,11 +133,19 @@ int main(void)
 //    init_42790();
 //    read_2790_REGS();
 
+    getV_PACKandV_TOP();
+
+    read_Temp();
+    read_U_I();
+    HAL_Delay(1000);
+    read_Temp();
+    HAL_Delay(1000);
+    read_Temp();
 
   while (1)
   {
-    read_Temp();
-    read_U_I();
+//    read_Temp();
+//    read_U_I();
 //    printf("get RD_VA1P8\r\n");
 //    print_MP2790(RD_VA1P8);
 //    printf("get RD_VA3P3\r\n");

@@ -91,8 +91,21 @@ void enable_42790_REGS_CRC();
 void read_2790_REGS();
 void read_42790_REGS();
 void read_Temp();
-
 void read_U_I();
+void adcOn();
+void resetErrors();
+void getV_PACKandV_TOP();
+void initInterrupts();
+void getLockRegisters();
+void initBatteryNum();
+void init_UV_OV();
+void initFET_CFG();
+void init_time_SC_detection();
+void initPins();
+void init_scan_NTC();
+void getFaultStatus();
+void init_CHG_DSG_MOSFET();
+
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);
 uint16_t read_MP2790(uint8_t regAddr);
