@@ -27,7 +27,6 @@ void init_2790()
     getV_PACKandV_TOP();
 //    init_UV_OV();   //Тут перестает ключ включаться
     init_time_SC_detection();
-    getStatus();
     init_CHG_DSG_MOSFET();
     getStatus();
 }
