@@ -276,12 +276,8 @@ void init_CHG_DSG_MOSFET()
 {
     printf("  init_CHG_DSG_MOSFET()\r\n");
     read_MP2790(ACT_CFG);
-    write_MP2790(ACT_CFG, data16.value.value |= 0x0200);    // O5h 9 bits to 1
-    write_MP2790(ACT_CFG, data16.value.value &= 0xFFFD);    // O5h 1 bits to 0
-
-    write_MP2790(ACT_CFG, data16.value.value &= 0xFFE7);  // bit  4  3  to 0
-    write_MP2790(ACT_CFG, data16.value.value |= 0x0018);  // bit  4  3  to 1
+    write_MP2790(ACT_CFG, data16.value.value |= 0b00000001000011000);    //  3  4  9 bits to 1
+    write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);     //  1 bit to 0
     print_MP2790(ACT_CFG);
-
-printf("\r\n");
+    printf("\r\n");
 }
