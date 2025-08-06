@@ -20,14 +20,62 @@ void init_2790()
     getLockRegisters();
     initBatteryNum();
     initInterrupts();
-    init_UV_OV();
-    initFET_CFG();
-    init_time_SC_detection();
-    initPins();
-    init_NTC();
-    init_CHG_DSG_MOSFET();
-    getV_PACKandV_TOP();
-    getStatus();
+//    init_UV_OV();
+//    initFET_CFG();
+//    init_time_SC_detection();
+//    initPins();
+//    init_NTC();
+//    init_CHG_DSG_MOSFET();
+//    getV_PACKandV_TOP();
+//    getStatus();
+
+    printf("get LOCK_REGISTER\r\n");
+    print_MP2790(LOCK_REGISTER);
+    printf("\r\n");
+
+    printf("set ACT_CFG\r\n");
+    print_MP2790(ACT_CFG); //05h
+    write_MP2790(ACT_CFG, data16.value.value |= 0x0200);    // O5h 9 bits to 1
+    write_MP2790(ACT_CFG, data16.value.value &= 0xFFFD);    // O5h 1 bits to 0
+    print_MP2790(ACT_CFG);
+    printf("\r\n");
+
+    printf("set PINS_CFG\r\n");
+    print_MP2790(PINS_CFG); //0Dh
+    write_MP2790(PINS_CFG, data16.value.value &= 0xFF9F);   // ODh 5 6 bits to 0
+    print_MP2790(PINS_CFG);
+    printf("\r\n");
+
+//Инициализация
+
+
+    printf("set FET_CFG\r\n");
+    print_MP2790(FET_CFG); //14h
+    write_MP2790(FET_CFG, data16.value.value |= 0x0400);  // bit  13  to 1
+    write_MP2790(FET_CFG, data16.value.value &= 0xAFFF);  // bit  12 14  to 0
+    print_MP2790(FET_CFG);
+    printf("\r\n");
+
+    printf("set ACT_CFG\r\n");
+    write_MP2790(ACT_CFG, data16.value.value &= 0xFFE7);  // bit  4  3  to 0
+    print_MP2790(ACT_CFG);  //05h
+    write_MP2790(ACT_CFG, data16.value.value |= 0x0018);  // bit  4  3  to 1
+    print_MP2790(ACT_CFG);
+    printf("\r\n");
+
+    printf("set NTC_CFG\r\n");         //4 термистора
+    print_MP2790(NTC_CFG); //47h
+    write_MP2790(NTC_CFG, data16.value.value &= 0b1111101101010101);  // bit  1  3  5  7  10  to 0
+    print_MP2790(NTC_CFG);
+    printf("\r\n");
+
+    printf("get FET_STATUS\r\n"); //Сосояние ключей
+    print_MP2790(FET_STATUS);   //11h
+    printf("\r\n");
+
+    printf("get PWR_STATUS\r\n");
+    print_MP2790(PWR_STATUS);    //01h
+    printf("\r\n");
 
 }
 
@@ -130,35 +178,18 @@ void getV_PACKandV_TOP()
 void initInterrupts()
 {
     printf("  initInterrupts()\r\n");
-//    printf("  SCFT_CTRL command enables the fault protection, interrupt, and monitoring of charge short-circuit (SC) and discharge SC events\r\n");
-//    printf("  Выключаем прерывания и мониторинг\r\n");
-    read_MP2790(SCFT_CTRL);
-    write_MP2790(SCFT_CTRL, data16.value.value = 0x0000);
-    print_MP2790(SCFT_CTRL);
-
-//  OCFT_CTRL command controls the triggering logic for the interrupt of charge over-current (OC), discharge OC1, and discharge OC2 events. ");
-//  It also enables the interrupts, faults, and monitoring for charge OC, discharge OC1, discharge OC2 events\r\n");
-//  Выключаем прерывания\r\n");
-    read_MP2790(OCFT_CTRL);
-    write_MP2790(OCFT_CTRL, data16.value.value = 0x0000);
-    print_MP2790(OCFT_CTRL);
-
     read_MP2790(INT0_EN);
-    write_MP2790(INT0_EN, data16.value.value |= 0x48FF);   // 14 11 0-7 bits to 1
+    write_MP2790(INT0_EN, data16.value.value |= 0x48FF);   // 19h 14 11 0-7 bits to 1
     print_MP2790(INT0_EN);
-
     read_MP2790(INT1_EN);
     write_MP2790(INT1_EN, data16.value.value |= 0x3FFE);   // 1Ah 1-13 bits to 1
     print_MP2790(INT1_EN);
-
     read_MP2790(INT_TYPE0);
     write_MP2790(INT_TYPE0, data16.value.value |= 0x00FF);
     print_MP2790(INT_TYPE0);
-
     read_MP2790(INT_TYPE1);
     write_MP2790(INT_TYPE1, data16.value.value |= 0x3F00);
     print_MP2790(INT_TYPE1);
-
     read_MP2790(INT_TYPE2);
     write_MP2790(INT_TYPE2, data16.value.value |= 0x0CFF);
     print_MP2790(INT_TYPE2);
