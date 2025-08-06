@@ -215,9 +215,7 @@ void resetErrors()
 void initPins()
 {
     printf("  initPins()\r\n");
-    printf("set PINS_CFG\r\n");
-    print_MP2790(PINS_CFG); //0Dh
-    write_MP2790(PINS_CFG, data16.value.value &= 0xFF9F);   // ODh 5 6 bits to 0
+    write_MP2790(PINS_CFG, data16.value.value &= 0b1111111110011111);   // 5 6 bits to 0
     print_MP2790(PINS_CFG);
     printf("\r\n");
 }
@@ -266,7 +264,7 @@ void getStatus()
 
 void getWDTStatus()
 {
-    printf("  WDT_STATUS\r\n");
+    printf("  getWDTStatus()\r\n");
     print_MP2790(WDT_STATUS);
     printf("\r\n");
 }
