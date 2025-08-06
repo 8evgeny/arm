@@ -10,7 +10,7 @@ typedef struct _data16
     }value;
 }data_16;
 data_16 data16; //2790
-uint16_t U1,U2,U3,U4,I1,I2,I3,I4,V_PACK,V_TOP;
+uint16_t U1,U2,U3,U4,I1,I2,I3,I4,V_PACK,V_TOP,NTC1,NTC2,NTC3,NTC4;
 uint16_t Temperature;
 
 void init_2790()
@@ -24,51 +24,11 @@ void init_2790()
     initFET_CFG();
     init_time_SC_detection();
     initPins();
-    init_scan_NTC();
+    init_NTC();
     init_CHG_DSG_MOSFET();
-    getFaultStatus();
+    getV_PACKandV_TOP();
+    getStatus();
 
-    printf("\r\n=========================== STATUS =========================\r\n\n");
-
-
-
-    printf("-------- get GPIO_STATUS --------\r\n");
-    print_MP2790(GPIO_STATUS);
-
-    HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
-
-
-
-
-    printf("-------- get GPIO_STATUS --------\r\n");
-    print_MP2790(GPIO_STATUS);
-    printf("\r\n");
-
-    printf("-------- get FET_STATUS --------\r\n");
-    printf("  Состояние ключей\r\n");
-    print_MP2790(FET_STATUS);   //11h
-    printf("\r\n");
-
-    printf("-------- get FT_STS1 --------\r\n");
-    print_MP2790(FT_STS1);
-    printf("-------- get FT_STS2 --------\r\n");
-    print_MP2790(FT_STS2);
-    printf("\r\n");
-
-    printf("-------- get PWR_STATUS --------\r\n");
-    print_MP2790(PWR_STATUS);    //01h
-
-    printf("-------- get WDT_STATUS --------\r\n");
-    print_MP2790(WDT_STATUS);
-    printf("-------- get WDT_CFG --------\r\n");
-    print_MP2790(WDT_CFG);
-    printf("\r\n");
-    printf("-------- get RD_VA1P8 --------\r\n");
-    print_MP2790(RD_VA1P8);
-    printf("-------- get RD_VA3P3 --------\r\n");
-    print_MP2790(RD_VA3P3);
-    printf("------------------------------------------------- \r\n");
 }
 
 void read_2790_REGS()
@@ -155,7 +115,6 @@ void adcOn()
 
 void getV_PACKandV_TOP()
 {
-    printf("\r\n");
     adcOn();
 //    printf("  get RD_VPACKP\r\n");
 //    print_MP2790(RD_VPACKP);
@@ -288,10 +247,15 @@ void initPins()
     read_MP2790(PINS_CFG);
     write_MP2790(PINS_CFG, data16.value.value &= 0xFF9F);   // 5 6 bits to 0  disable WDT
     print_MP2790(PINS_CFG);
+    printf("  GPIO 1 set ON\r\n");
+    printf("  GPIO 2 set ON\r\n");
+    HAL_GPIO_WritePin(GPIOB, GPIO_1_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin, GPIO_PIN_SET);
+    print_MP2790(GPIO_STATUS);
     printf("\r\n");
 }
 
-void init_scan_NTC()
+void init_NTC()
 {
     printf("  init_scan_NTC()\r\n");
 //HR_SCAN0 command enables ADC cell measurement compensation for voltage drop caused by the cell’s input resistor. \r\n");
@@ -313,19 +277,30 @@ void init_scan_NTC()
 
 //Читаю термисторы
     adcOn();
+//    Value = Reading x 100 / 32768 (%NTCB)
     print_MP2790(RD_VNTC1);
+//    NTC1 = read_MP2790(RD_VNTC1) * 100000 / 32768;
+//    printf("NTC1=%d,%03dV\r\n",NTC1/1000, NTC1%1000);
     print_MP2790(RD_VNTC2);
     print_MP2790(RD_VNTC3);
     print_MP2790(RD_VNTC4);
     printf("\r\n");
 }
 
-void getFaultStatus()
+void getStatus()
 {
-    printf("  getFaultStatus()\r\n");
+//    printf("  getStatus()\r\n");
+    printf("  WDT_STATUS\r\n");
+    print_MP2790(WDT_STATUS);
+    printf("  FT_STS\r\n");
     print_MP2790(FT_STS1);
     print_MP2790(FT_STS2);
+    printf("  FET_STATUS\r\n");
+    print_MP2790(FET_STATUS);
+    printf("  PWR_STATUS\r\n");
+    print_MP2790(PWR_STATUS);
     printf("\r\n");
+
 }
 
 void init_CHG_DSG_MOSFET()

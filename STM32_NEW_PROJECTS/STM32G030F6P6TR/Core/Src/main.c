@@ -133,8 +133,6 @@ int main(void)
 //    init_42790();
 //    read_2790_REGS();
 
-    getV_PACKandV_TOP();
-
     read_Temp();
     read_U_I();
     HAL_Delay(1000);

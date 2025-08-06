@@ -102,8 +102,8 @@ void init_UV_OV();
 void initFET_CFG();
 void init_time_SC_detection();
 void initPins();
-void init_scan_NTC();
-void getFaultStatus();
+void init_NTC();
+void getStatus();
 void init_CHG_DSG_MOSFET();
 
 void print_byte(uint8_t byte);
