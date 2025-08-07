@@ -43,17 +43,6 @@ void init_2790()
 //print_MP2790(OCFT_CTRL);
 //printf("\r\n");
 
-    init_CHG_DSG_MOSFET();
-
-
-
-    printf("  FET_MODE\r\n");
-    read_MP2790(FET_MODE);
-    write_MP2790(FET_MODE, data16.value.value |= 0b0000000000000000);
-    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111111101);
-    print_MP2790(FET_MODE);
-    printf("\r\n");
-
     printf("  DSGOC_LIM\r\n");
     read_MP2790(DSGOC_LIM);
     write_MP2790(DSGOC_LIM, data16.value.value |= 0b0001000000010000);
@@ -65,6 +54,16 @@ void init_2790()
     write_MP2790(DSGSC_CFG, data16.value.value |= 0b0111111100111111);
     print_MP2790(DSGSC_CFG);
     printf("\r\n");
+
+    printf("  FET_MODE\r\n");
+    read_MP2790(FET_MODE);
+    write_MP2790(FET_MODE, data16.value.value |= 0b0000000000000000);
+    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111111101);
+    print_MP2790(FET_MODE);
+    printf("\r\n");
+
+    init_CHG_DSG_MOSFET();
+
 
     printf("  OC_STATUS\r\n");
     print_MP2790(OC_STATUS);
@@ -328,7 +327,7 @@ void init_CHG_DSG_MOSFET()
 {
     printf("  init_CHG_DSG_MOSFET()\r\n");
     read_MP2790(ACT_CFG);
-    write_MP2790(ACT_CFG, data16.value.value |= 0b00000001000011000);    //  3  4  9 bits to 1
+    write_MP2790(ACT_CFG, data16.value.value |= 0b0000001000011000);    //  3  4  9 bits to 1
     write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);     //  1 bit to 0
     print_MP2790(ACT_CFG);
     printf("\r\n");
