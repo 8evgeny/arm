@@ -24,12 +24,20 @@ void init_2790()
     initPins();
     initFET_CFG();
 
-    // printf("  FET_MODE\r\n");
-    // read_MP2790(FET_MODE);
-    // write_MP2790(FET_MODE, data16.value.value |= 0b0000000000000000);
-    // write_MP2790(FET_MODE, data16.value.value &= 0b1111111111111101);
-    // print_MP2790(FET_MODE);
-    // printf("\r\n");
+
+    init_NTC();
+    get_V_PACK_TOP();
+    // init_UV_OV();   //Тут перестает ключ включаться
+    init_time_SC_detection();
+    init_CHG_DSG_MOSFET();
+
+
+    printf("  FET_MODE\r\n");
+    read_MP2790(FET_MODE);
+    write_MP2790(FET_MODE, data16.value.value |= 0b0000000000000000);
+    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111111101);
+    print_MP2790(FET_MODE);
+    printf("\r\n");
 
     printf("  DSGOC_LIM\r\n");
     read_MP2790(DSGOC_LIM);
@@ -47,11 +55,7 @@ void init_2790()
     print_MP2790(OC_STATUS);
     printf("\r\n");
 
-    init_NTC();
-    get_V_PACK_TOP();
-    // init_UV_OV();   //Тут перестает ключ включаться
-    init_time_SC_detection();
-    init_CHG_DSG_MOSFET();
+
 
     getStatus();
     get_V_PACK_TOP();
