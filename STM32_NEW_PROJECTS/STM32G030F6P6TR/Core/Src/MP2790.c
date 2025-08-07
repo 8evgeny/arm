@@ -23,6 +23,30 @@ void init_2790()
     initInterrupts();
     initPins();
     initFET_CFG();
+
+    // printf("  FET_MODE\r\n");
+    // read_MP2790(FET_MODE);
+    // write_MP2790(FET_MODE, data16.value.value |= 0b0000000000000000);
+    // write_MP2790(FET_MODE, data16.value.value &= 0b1111111111111101);
+    // print_MP2790(FET_MODE);
+    // printf("\r\n");
+
+    printf("  DSGOC_LIM\r\n");
+    read_MP2790(DSGOC_LIM);
+    write_MP2790(DSGOC_LIM, data16.value.value |= 0b0001000000010000);
+    print_MP2790(DSGOC_LIM);
+    printf("\r\n");
+
+    printf("  DSGSC_CFG\r\n");
+    read_MP2790(DSGSC_CFG);
+    write_MP2790(DSGSC_CFG, data16.value.value |= 0b0100000000000000);
+    print_MP2790(DSGSC_CFG);
+    printf("\r\n");
+
+    printf("  OC_STATUS\r\n");
+    print_MP2790(OC_STATUS);
+    printf("\r\n");
+
     init_NTC();
     get_V_PACK_TOP();
     // init_UV_OV();   //Тут перестает ключ включаться
@@ -30,8 +54,16 @@ void init_2790()
     init_CHG_DSG_MOSFET();
 
     getStatus();
+    get_V_PACK_TOP();
     HAL_Delay(1);
+    printf("------------- after 1ms ------------ \r\n");
     getStatus();
+    get_V_PACK_TOP();
+
+    // HAL_Delay(50);
+    // printf("------------- after 50ms ------------ \r\n");
+    // getStatus();
+    // get_V_PACK_TOP();
 }
 
 void read_2790_REGS()
@@ -122,11 +154,11 @@ void get_V_PACK_TOP()
 //    printf("  get RD_VPACKP\r\n");
 //    print_MP2790(RD_VPACKP);
     V_PACK = read_MP2790(V_PACK) * 80000 / 32768;
-    printf("V_PACK=%d,%03dV\r\n",V_PACK/1000, V_PACK%1000);
+    printf("  V_PACK=%d,%03dV\r\n",V_PACK/1000, V_PACK%1000);
 //    printf("  get RD_VTOP\r\n");
 //    print_MP2790(RD_VTOP);
     V_TOP = read_MP2790(RD_VTOP) * 80000 / 32768;
-    printf("V_TOP=%d,%03dV\r\n",V_TOP/1000, V_TOP%1000);
+    printf("  V_TOP=%d,%03dV\r\n",V_TOP/1000, V_TOP%1000);
     printf("\r\n");
 }
 
@@ -184,6 +216,7 @@ void initFET_CFG()
     read_MP2790(FET_CFG);
     write_MP2790(FET_CFG, data16.value.value |= 0x0400);  // bit  13  to 1
     write_MP2790(FET_CFG, data16.value.value &= 0xAFFF);  // bit  12 14  to 0
+    write_MP2790(FET_CFG, data16.value.value |= 0b0000000000000111);
     print_MP2790(FET_CFG);
     printf("\r\n");
 }
