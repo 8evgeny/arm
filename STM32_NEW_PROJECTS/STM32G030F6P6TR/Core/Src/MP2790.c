@@ -235,7 +235,7 @@ void initFET_CFG()
     read_MP2790(FET_CFG);
     write_MP2790(FET_CFG, data16.value.value |= 0x0400);  // bit  13  to 1
     write_MP2790(FET_CFG, data16.value.value &= 0xAFFF);  // bit  12 14  to 0
-    write_MP2790(FET_CFG, data16.value.value |= 0b0000000000000111);
+    write_MP2790(FET_CFG, data16.value.value |= 0b0000000111000000);
     print_MP2790(FET_CFG);
     printf("\r\n");
 }

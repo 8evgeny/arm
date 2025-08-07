@@ -106,6 +106,8 @@ void init_NTC();
 void getStatus();
 void getWDTStatus();
 void init_CHG_DSG_MOSFET();
+void init_OCFT_CTRL();
+
 
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);
