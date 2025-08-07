@@ -62,7 +62,20 @@ void init_2790()
     print_MP2790(FET_MODE);
     printf("\r\n");
 
+    printf("  LOAD_CHARGER_STATUS\r\n");
+    print_MP2790(LOAD_CHARGER_STATUS);
+    printf("\r\n");
+
+
+    printf("  LOAD_CHARGER_CFG\r\n");
+    read_MP2790(LOAD_CHARGER_CFG);
+    write_MP2790(LOAD_CHARGER_CFG, data16.value.value |= 0b0000000000000110);
+    print_MP2790(LOAD_CHARGER_CFG);
+    printf("\r\n");
+
     init_CHG_DSG_MOSFET();
+
+
 
 
     printf("  OC_STATUS\r\n");
