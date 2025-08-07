@@ -25,7 +25,7 @@ void init_2790()
     initFET_CFG();
     init_NTC();
     get_V_PACK_TOP();
-//    init_UV_OV();   //Тут перестает ключ включаться
+    // init_UV_OV();   //Тут перестает ключ включаться
     init_time_SC_detection();
     init_CHG_DSG_MOSFET();
 

@@ -133,7 +133,9 @@ int main(void)
 //    read_42790_REGS();
 
 read_Temp();
-HAL_Delay(1000);
+HAL_Delay(500);
+read_Temp();
+HAL_Delay(500);
 read_Temp();
   while (1)
   {
