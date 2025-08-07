@@ -29,7 +29,22 @@ void init_2790()
     get_V_PACK_TOP();
     // init_UV_OV();   //Тут перестает ключ включаться
     init_time_SC_detection();
+
+    printf("  SCFT_CTRL\r\n");
+    read_MP2790(SCFT_CTRL);
+    write_MP2790(SCFT_CTRL, data16.value.value &= 0b1111111111001100);
+    print_MP2790(SCFT_CTRL);
+    printf("\r\n");
+
+
+//printf("  OCFT_CTRL\r\n");
+//read_MP2790(OCFT_CTRL);
+//write_MP2790(OCFT_CTRL, data16.value.value &= 0b1111111100111100);
+//print_MP2790(OCFT_CTRL);
+//printf("\r\n");
+
     init_CHG_DSG_MOSFET();
+
 
 
     printf("  FET_MODE\r\n");
@@ -47,7 +62,7 @@ void init_2790()
 
     printf("  DSGSC_CFG\r\n");
     read_MP2790(DSGSC_CFG);
-    write_MP2790(DSGSC_CFG, data16.value.value |= 0b0100000000000000);
+    write_MP2790(DSGSC_CFG, data16.value.value |= 0b0111111100111111);
     print_MP2790(DSGSC_CFG);
     printf("\r\n");
 
