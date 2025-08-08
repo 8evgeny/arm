@@ -106,8 +106,8 @@ void init_NTC();
 void getStatus();
 void getWDTStatus();
 void init_CHG_DSG_MOSFET();
-void init_OCFT_CTRL();
-
+//void init_OCFT_CTRL();
+void delay_mks(uint16_t delay);
 
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);
@@ -158,7 +158,7 @@ asm volatile ("MOV R0,%[loops]\n                       \
               SUB R0, #1\n                             \
               CMP R0, #0\n                             \
               BNE 1b \t"                               \
-              : : [loops] "r" (34*us) : "memory"       \
+              : : [loops] "r" (4*us) : "memory"       \
               );                                       \
 } while(0)
 

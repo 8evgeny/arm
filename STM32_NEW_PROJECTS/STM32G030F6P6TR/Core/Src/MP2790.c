@@ -70,37 +70,21 @@ printf("\r\n");
     print_MP2790(LOAD_CHARGER_CFG);
     printf("\r\n");
 
-//HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
-//HAL_Delay(1);
-//HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);
-
-//HAL_Delay(100);
     initFET_CFG();
-//HAL_Delay(1);
     init_CHG_DSG_MOSFET();
-//HAL_Delay(10);
 
-HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
-HAL_Delay(1);
-HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
+    delay_mks(1);
+    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);
 
     printf("  OC_STATUS\r\n");
     print_MP2790(OC_STATUS);
     printf("\r\n");
 
-
+//init_CHG_DSG_MOSFET();
 
     getStatus();
     get_V_PACK_TOP();
-    HAL_Delay(1);
-    printf("------------- after 1ms ------------ \r\n");
-    getStatus();
-    get_V_PACK_TOP();
-
-    // HAL_Delay(50);
-    // printf("------------- after 50ms ------------ \r\n");
-    // getStatus();
-    // get_V_PACK_TOP();
 }
 
 void read_2790_REGS()
@@ -251,8 +235,7 @@ void initFET_CFG()
 {
     printf("  initFET_CFG()\r\n");
     read_MP2790(FET_CFG);
-    write_MP2790(FET_CFG, data16.value.value |= 0x0400);  // bit  13  to 1
-    write_MP2790(FET_CFG, data16.value.value &= 0xAFFF);  // bit  12 14  to 0
+    write_MP2790(FET_CFG, data16.value.value &= 0b1000111111111111);  // bit  12 14  to 0
     write_MP2790(FET_CFG, data16.value.value |= 0b0000000111000000);
     print_MP2790(FET_CFG);
     printf("\r\n");
@@ -344,10 +327,15 @@ void getWDTStatus()
 
 void init_CHG_DSG_MOSFET()
 {
-    printf("  init_CHG_DSG_MOSFET()\r\n");
+//    printf("  init_CHG_DSG_MOSFET()\r\n");
     read_MP2790(ACT_CFG);
     write_MP2790(ACT_CFG, data16.value.value |= 0b0000001000011000);    //  3  4  9 bits to 1
     write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);     //  1 bit to 0
-    print_MP2790(ACT_CFG);
-    printf("\r\n");
+//    print_MP2790(ACT_CFG);
+//    printf("\r\n");
+}
+
+void delay_mks(uint16_t delay)
+{
+    delayUS_ASM(delay);
 }
