@@ -146,7 +146,11 @@ int main(void)
 
     read_Temp();
     read_U_I();
-//    get_V_PACK_TOP();
+    get_V_PACK_TOP();
+
+    printf("  RD_ITOP\r\n");
+    print_MP2790(RD_ITOP);
+
     HAL_Delay(2000);
 
 //    getStatus();

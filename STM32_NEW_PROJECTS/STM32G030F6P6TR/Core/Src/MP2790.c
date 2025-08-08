@@ -129,7 +129,7 @@ void get_V_PACK_TOP()
     adcOn();
 //    printf("  get RD_VPACKP\r\n");
 //    print_MP2790(RD_VPACKP);
-    V_PACK = read_MP2790(V_PACK) * 80000 / 32768;
+    V_PACK = read_MP2790(RD_VPACKP) * 80000 / 32768;
     printf("  V_PACK=%d,%03dV\r\n",V_PACK/1000, V_PACK%1000);
 //    printf("  get RD_VTOP\r\n");
 //    print_MP2790(RD_VTOP);
