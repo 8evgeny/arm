@@ -35,11 +35,11 @@ void init_2790()
     printf("\r\n");
 
 
-//printf("  OCFT_CTRL\r\n");
-//read_MP2790(OCFT_CTRL);
-//write_MP2790(OCFT_CTRL, data16.value.value &= 0b1111111100111100);
-//print_MP2790(OCFT_CTRL);
-//printf("\r\n");
+printf("  OCFT_CTRL\r\n");
+read_MP2790(OCFT_CTRL);
+write_MP2790(OCFT_CTRL, data16.value.value &= 0b1111111100111100);
+print_MP2790(OCFT_CTRL);
+printf("\r\n");
 
     printf("  DSGOC_LIM\r\n");
     read_MP2790(DSGOC_LIM);
@@ -70,13 +70,19 @@ void init_2790()
     print_MP2790(LOAD_CHARGER_CFG);
     printf("\r\n");
 
+//HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
+//HAL_Delay(1);
+//HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);
+
 //HAL_Delay(100);
     initFET_CFG();
 //HAL_Delay(1);
     init_CHG_DSG_MOSFET();
 //HAL_Delay(10);
 
-
+HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
+HAL_Delay(1);
+HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);
 
     printf("  OC_STATUS\r\n");
     print_MP2790(OC_STATUS);
