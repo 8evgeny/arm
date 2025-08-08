@@ -36,12 +36,7 @@ void init_2790()
     pulse_DOUN_UP(1);
     initFET_CFG();
     init_CHG_DSG_MOSFET();
-
-
-
-    printf("  OC_STATUS\r\n");
-    print_MP2790(OC_STATUS);
-    printf("\r\n");
+    get_OC_Status();
 
 //init_CHG_DSG_MOSFET();
 
@@ -63,7 +58,7 @@ uint16_t read_MP2790(uint8_t regAddr)
     data16.value.value = 0xFFFF;
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_Delay(5);
+//    HAL_Delay(5);
     HAL_I2C_Mem_Read(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data16.value.val, 2, HAL_MAX_DELAY);
 
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
@@ -83,7 +78,7 @@ void write_MP2790(uint8_t regAddr, uint16_t regValue)
 {
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
-    HAL_Delay(5);
+    HAL_Delay(3);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Write(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
     HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
@@ -363,5 +358,12 @@ void init_SCFT_CTRL()
     read_MP2790(SCFT_CTRL);
     write_MP2790(SCFT_CTRL, data16.value.value &= 0b1111111111001100);
     print_MP2790(SCFT_CTRL);
+    printf("\r\n");
+}
+
+void get_OC_Status()
+{
+    printf("  get_OC_Status()\r\n");
+    print_MP2790(OC_STATUS);
     printf("\r\n");
 }

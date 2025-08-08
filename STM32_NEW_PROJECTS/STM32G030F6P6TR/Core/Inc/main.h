@@ -114,7 +114,7 @@ void init_DSGOC_LIM();
 void init_DSGSC_CFG();
 void init_OCFT_CTRL();
 void init_SCFT_CTRL();
-
+void get_OC_Status();
 
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);
