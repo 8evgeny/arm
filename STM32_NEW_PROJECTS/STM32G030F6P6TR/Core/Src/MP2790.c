@@ -69,7 +69,7 @@ printf("\r\n");
     write_MP2790(LOAD_CHARGER_CFG, data16.value.value |= 0b0000000000000110);
     print_MP2790(LOAD_CHARGER_CFG);
     printf("\r\n");
-
+//HAL_Delay(100);
     initFET_CFG();
     init_CHG_DSG_MOSFET();
 
