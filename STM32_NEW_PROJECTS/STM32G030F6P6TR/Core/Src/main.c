@@ -137,13 +137,14 @@ int main(void)
 //read_Temp();
 //HAL_Delay(500);
 //read_Temp();
+
 //  read_U_I();
   while (1)
   {
-//    read_Temp();
-//    read_U_I();
-    init_CHG_DSG_MOSFET();
-    HAL_Delay(1);
+    read_Temp();
+    read_U_I();
+    HAL_Delay(3000);
+
 //    getStatus();
 
 

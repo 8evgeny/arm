@@ -37,9 +37,6 @@ void init_2790()
     initFET_CFG();
     init_CHG_DSG_MOSFET();
     get_OC_Status();
-
-//init_CHG_DSG_MOSFET();
-
     getStatus();
     get_V_PACK_TOP();
 }
@@ -81,7 +78,7 @@ void read_Temp()
 {
     //T = Reading x 0.01481 - 269.12 (°C)
     adcOn();
-    read_MP2790(RD_TDIE);
+    HAL_Delay(1);
     Temperature = read_MP2790(RD_TDIE);
 //    printf("T=%04X\r\n",Temperature);
     float t = Temperature * 0.01481f;
