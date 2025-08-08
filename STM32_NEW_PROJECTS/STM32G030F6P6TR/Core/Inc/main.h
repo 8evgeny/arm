@@ -107,7 +107,7 @@ void getStatus();
 void getWDTStatus();
 void init_CHG_DSG_MOSFET();
 void delay_mks(uint16_t delay);
-void pulse_DOUN_UP(uint16_t delay);
+void pulse_DOUN_UP(uint16_t pin, uint16_t delay);
 void init_LOAD_CHARGER();
 void init_FET_MODE();
 void init_DSGOC_LIM();

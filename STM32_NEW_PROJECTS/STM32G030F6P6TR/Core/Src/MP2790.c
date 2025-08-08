@@ -33,7 +33,7 @@ void init_2790()
     init_FET_MODE();
     init_LOAD_CHARGER();
 //HAL_Delay(100);
-    pulse_DOUN_UP(1);
+    pulse_DOUN_UP(One_Wire_Pin, 1);
     initFET_CFG();
     init_CHG_DSG_MOSFET();
     get_OC_Status();
@@ -76,9 +76,11 @@ void write_MP2790(uint8_t regAddr, uint16_t regValue)
 
 void read_Temp()
 {
+
+
+
     //T = Reading x 0.01481 - 269.12 (°C)
     adcOn();
-    HAL_Delay(1);
     Temperature = read_MP2790(RD_TDIE);
 //    printf("T=%04X\r\n",Temperature);
     float t = Temperature * 0.01481f;
@@ -111,8 +113,15 @@ void read_U_I()
 
 void adcOn()
 {
-    write_MP2790(ADC_CTRL, 0x0001);
-    while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
+    write_MP2790(ADC_CTRL, 0x0000);
+//    print_MP2790(ADC_STS);
+//    print_MP2790(ADC_CTRL);
+    if(read_MP2790(ADC_STS) == 0b0001000000000000)
+    {
+        write_MP2790(ADC_CTRL, 0x0001);
+        while((read_MP2790(ADC_CTRL) & 0x0002) != 0x0002);
+//        print_MP2790(ADC_CTRL);
+    }
 }
 
 void get_V_PACK_TOP()
@@ -286,11 +295,11 @@ void delay_mks(uint16_t delay)
     delayUS_ASM(delay);
 }
 
-void pulse_DOUN_UP(uint16_t delay)
+void pulse_DOUN_UP(uint16_t pin, uint16_t delay)
 {
-    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, pin, GPIO_PIN_RESET);
     delay_mks(delay);
-    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, pin, GPIO_PIN_SET);
 }
 
 void init_LOAD_CHARGER()

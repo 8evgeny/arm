@@ -141,10 +141,13 @@ int main(void)
 //  read_U_I();
   while (1)
   {
+//    pulse_DOUN_UP(Enable_I2C_2790_Pin, 8000);
+
+
     read_Temp();
     read_U_I();
-    get_V_PACK_TOP();
-    HAL_Delay(3000);
+//    get_V_PACK_TOP();
+    HAL_Delay(2000);
 
 //    getStatus();
 
