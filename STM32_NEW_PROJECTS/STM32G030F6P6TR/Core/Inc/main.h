@@ -108,6 +108,9 @@ void getWDTStatus();
 void init_CHG_DSG_MOSFET();
 //void init_OCFT_CTRL();
 void delay_mks(uint16_t delay);
+void init_LOAD_CHARGER();
+
+
 
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);

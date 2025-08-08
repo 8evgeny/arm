@@ -60,15 +60,8 @@ printf("\r\n");
     print_MP2790(FET_MODE);
     printf("\r\n");
 
-    printf("  LOAD_CHARGER_STATUS\r\n");
-    print_MP2790(LOAD_CHARGER_STATUS);
-    printf("\r\n");
+    init_LOAD_CHARGER();
 
-    printf("  LOAD_CHARGER_CFG\r\n");
-    read_MP2790(LOAD_CHARGER_CFG);
-    write_MP2790(LOAD_CHARGER_CFG, data16.value.value |= 0b0000000000000110);
-    print_MP2790(LOAD_CHARGER_CFG);
-    printf("\r\n");
 //HAL_Delay(100);
     initFET_CFG();
     init_CHG_DSG_MOSFET();
@@ -338,4 +331,14 @@ void init_CHG_DSG_MOSFET()
 void delay_mks(uint16_t delay)
 {
     delayUS_ASM(delay);
+}
+
+void init_LOAD_CHARGER()
+{
+    printf("  init_LOAD_CHARGER()\r\n");
+    read_MP2790(LOAD_CHARGER_CFG);
+    write_MP2790(LOAD_CHARGER_CFG, data16.value.value |= 0b0000000000000110);
+    print_MP2790(LOAD_CHARGER_CFG);
+    print_MP2790(LOAD_CHARGER_STATUS);
+    printf("\r\n");
 }
