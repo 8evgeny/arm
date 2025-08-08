@@ -22,12 +22,10 @@ void init_2790()
     initBatteryNum();
     initInterrupts();
     initPins();
-    initFET_CFG();
-
 
     init_NTC();
     get_V_PACK_TOP();
-    // init_UV_OV();   //Тут перестает ключ включаться
+    init_UV_OV();
     init_time_SC_detection();
 
     printf("  SCFT_CTRL\r\n");
@@ -66,15 +64,17 @@ void init_2790()
     print_MP2790(LOAD_CHARGER_STATUS);
     printf("\r\n");
 
-
     printf("  LOAD_CHARGER_CFG\r\n");
     read_MP2790(LOAD_CHARGER_CFG);
     write_MP2790(LOAD_CHARGER_CFG, data16.value.value |= 0b0000000000000110);
     print_MP2790(LOAD_CHARGER_CFG);
     printf("\r\n");
 
+//HAL_Delay(100);
+    initFET_CFG();
+//HAL_Delay(1);
     init_CHG_DSG_MOSFET();
-
+//HAL_Delay(10);
 
 
 
