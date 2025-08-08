@@ -106,10 +106,14 @@ void init_NTC();
 void getStatus();
 void getWDTStatus();
 void init_CHG_DSG_MOSFET();
-//void init_OCFT_CTRL();
 void delay_mks(uint16_t delay);
+void pulse_DOUN_UP(uint16_t delay);
 void init_LOAD_CHARGER();
-
+void init_FET_MODE();
+void init_DSGOC_LIM();
+void init_DSGSC_CFG();
+void init_OCFT_CTRL();
+void init_SCFT_CTRL();
 
 
 void print_byte(uint8_t byte);

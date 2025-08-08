@@ -22,53 +22,22 @@ void init_2790()
     initBatteryNum();
     initInterrupts();
     initPins();
-
     init_NTC();
     get_V_PACK_TOP();
     init_UV_OV();
     init_time_SC_detection();
-
-    printf("  SCFT_CTRL\r\n");
-    read_MP2790(SCFT_CTRL);
-    write_MP2790(SCFT_CTRL, data16.value.value &= 0b1111111111001100);
-    print_MP2790(SCFT_CTRL);
-    printf("\r\n");
-
-
-printf("  OCFT_CTRL\r\n");
-read_MP2790(OCFT_CTRL);
-write_MP2790(OCFT_CTRL, data16.value.value &= 0b1111111100111100);
-print_MP2790(OCFT_CTRL);
-printf("\r\n");
-
-    printf("  DSGOC_LIM\r\n");
-    read_MP2790(DSGOC_LIM);
-    write_MP2790(DSGOC_LIM, data16.value.value |= 0b0001000000010000);
-    print_MP2790(DSGOC_LIM);
-    printf("\r\n");
-
-    printf("  DSGSC_CFG\r\n");
-    read_MP2790(DSGSC_CFG);
-    write_MP2790(DSGSC_CFG, data16.value.value |= 0b0111111100111111);
-    print_MP2790(DSGSC_CFG);
-    printf("\r\n");
-
-    printf("  FET_MODE\r\n");
-    read_MP2790(FET_MODE);
-    write_MP2790(FET_MODE, data16.value.value |= 0b0000000000000000);
-    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111111101);
-    print_MP2790(FET_MODE);
-    printf("\r\n");
-
+    init_SCFT_CTRL();
+    init_OCFT_CTRL();
+    init_DSGOC_LIM();
+    init_DSGSC_CFG();
+    init_FET_MODE();
     init_LOAD_CHARGER();
-
 //HAL_Delay(100);
+    pulse_DOUN_UP(1);
     initFET_CFG();
     init_CHG_DSG_MOSFET();
 
-    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
-    delay_mks(1);
-    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);
+
 
     printf("  OC_STATUS\r\n");
     print_MP2790(OC_STATUS);
@@ -333,6 +302,13 @@ void delay_mks(uint16_t delay)
     delayUS_ASM(delay);
 }
 
+void pulse_DOUN_UP(uint16_t delay)
+{
+    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_RESET);
+    delay_mks(delay);
+    HAL_GPIO_WritePin(GPIOA, One_Wire_Pin, GPIO_PIN_SET);
+}
+
 void init_LOAD_CHARGER()
 {
     printf("  init_LOAD_CHARGER()\r\n");
@@ -340,5 +316,52 @@ void init_LOAD_CHARGER()
     write_MP2790(LOAD_CHARGER_CFG, data16.value.value |= 0b0000000000000110);
     print_MP2790(LOAD_CHARGER_CFG);
     print_MP2790(LOAD_CHARGER_STATUS);
+    printf("\r\n");
+}
+
+void init_FET_MODE()
+{
+    printf("  init_FET_MODE()\r\n");
+    read_MP2790(FET_MODE);
+    write_MP2790(FET_MODE, data16.value.value |= 0b0000000000000000);
+    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111111101);
+    print_MP2790(FET_MODE);
+    printf("\r\n");
+}
+
+void init_DSGOC_LIM()
+{
+    printf("  init_DSGOC_LIM()\r\n");
+    read_MP2790(DSGOC_LIM);
+    write_MP2790(DSGOC_LIM, data16.value.value |= 0b0001000000010000);
+    print_MP2790(DSGOC_LIM);
+    printf("\r\n");
+}
+
+void init_DSGSC_CFG()
+{
+    printf("  init_DSGSC_CFG()\r\n");
+    read_MP2790(DSGSC_CFG);
+    write_MP2790(DSGSC_CFG, data16.value.value |= 0b0111111100111111);
+    print_MP2790(DSGSC_CFG);
+    printf("\r\n");
+
+}
+
+void init_OCFT_CTRL()
+{
+    printf("  init_OCFT_CTRL()\r\n");
+    read_MP2790(OCFT_CTRL);
+    write_MP2790(OCFT_CTRL, data16.value.value &= 0b1111111100111100);
+    print_MP2790(OCFT_CTRL);
+    printf("\r\n");
+}
+
+void init_SCFT_CTRL()
+{
+    printf("  init_SCFT_CTRL()\r\n");
+    read_MP2790(SCFT_CTRL);
+    write_MP2790(SCFT_CTRL, data16.value.value &= 0b1111111111001100);
+    print_MP2790(SCFT_CTRL);
     printf("\r\n");
 }
