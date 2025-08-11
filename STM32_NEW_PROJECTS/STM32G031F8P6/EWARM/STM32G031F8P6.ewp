@@ -1083,6 +1083,15 @@
           <name>$PROJ_DIR$/../Core/Src/main.c</name>
         </file>
         <file>
+          <name>$PROJ_DIR$/../Core/Src/gpio.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$/../Core/Src/i2c.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$/../Core/Src/usart.c</name>
+        </file>
+        <file>
           <name>$PROJ_DIR$/../Core/Src/stm32g0xx_it.c</name>
         </file>
         <file>
@@ -1095,6 +1104,12 @@
     <name>Drivers</name>
     <group>
       <name>STM32G0xx_HAL_Driver</name>
+      <file>
+        <name>$PROJ_DIR$/../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c</name>
+      </file>
       <file>
         <name>$PROJ_DIR$/../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c</name>
       </file>
@@ -1133,6 +1148,12 @@
       </file>
       <file>
         <name>$PROJ_DIR$/../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$/../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c</name>
       </file>
     </group>
     <group>

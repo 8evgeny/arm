@@ -121,20 +121,5 @@
 			<type>1</type>
 			<locationURI>PROJECT_LOC/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c</locationURI>
 		</link>
-		<link>
-			<name>Application/User/Core/main.c</name>
-			<type>1</type>
-			<locationURI>PROJECT_LOC/Core/Src/main.c</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/stm32g0xx_hal_msp.c</name>
-			<type>1</type>
-			<locationURI>PROJECT_LOC/Core/Src/stm32g0xx_hal_msp.c</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/stm32g0xx_it.c</name>
-			<type>1</type>
-			<locationURI>PROJECT_LOC/Core/Src/stm32g0xx_it.c</locationURI>
-		</link>
 	</linkedResources>
 </projectDescription>
