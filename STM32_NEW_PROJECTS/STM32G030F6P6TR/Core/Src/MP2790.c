@@ -24,7 +24,7 @@ void init_2790()
     initPins();
     init_NTC();
     get_V_PACK_TOP();
-    init_UV_OV();
+//    init_UV_OV();
     init_time_SC_detection();
     init_SCFT_CTRL();
     init_OCFT_CTRL();
@@ -36,9 +36,10 @@ void init_2790()
     pulse_DOUN_UP(One_Wire_Pin, 1);
     initFET_CFG();
     init_CHG_DSG_MOSFET();
-    get_OC_Status();
+//    get_OC_Status();
     getStatus();
-    get_V_PACK_TOP();
+
+//    get_V_PACK_TOP();
 }
 
 void read_2790_REGS()
@@ -317,7 +318,7 @@ void init_FET_MODE()
     printf("  init_FET_MODE()\r\n");
     read_MP2790(FET_MODE);
     write_MP2790(FET_MODE, data16.value.value |= 0b0000000000000000);
-    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111111101);
+    write_MP2790(FET_MODE, data16.value.value &= 0b1111111111110100);
     print_MP2790(FET_MODE);
     printf("\r\n");
 }
