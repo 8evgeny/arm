@@ -66,7 +66,9 @@ void init_42790()
         the host system must send the CONFIG_EXIT_CMD command to save the
         configuration into non-volatile memory (NVM).
 
-
+- Editing  mode is enabled by sending the EDIT_CONFIG_CMD command and can be confirmed
+        by reading the EDIT_SETTINGS_FLAG. The host system can exit this mode by sending
+        the END_EDIT_CONFIG_CMD
 
 
 
