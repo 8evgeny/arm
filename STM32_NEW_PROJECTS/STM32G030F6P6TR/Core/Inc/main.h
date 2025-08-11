@@ -92,6 +92,8 @@ void read_2790_REGS();
 void read_42790_REGS();
 void read_Temp();
 void read_U_I();
+void read_U();
+void read_I();
 void adcOn();
 void resetErrors();
 void get_V_PACK_TOP();

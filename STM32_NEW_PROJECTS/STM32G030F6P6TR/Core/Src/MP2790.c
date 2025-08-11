@@ -24,7 +24,7 @@ void init_2790()
     initPins();
     init_NTC();
     get_V_PACK_TOP();
-//    init_UV_OV();
+    init_UV_OV();
     init_time_SC_detection();
     init_SCFT_CTRL();
     init_OCFT_CTRL();
@@ -109,6 +109,38 @@ void read_U_I()
     printf("U2=%d,%03dV I2=%d,%03dmA\r\n",U2/1000, U2%1000, I2/1000,I2%1000);
     printf("U3=%d,%03dV I3=%d,%03dmA\r\n",U3/1000, U3%1000, I3/1000,I3%1000);
     printf("U4=%d,%03dV I4=%d,%03dmA\r\n",U4/1000, U4%1000, I4/1000,I4%1000);
+    printf("\r\n");
+}
+
+void read_U()
+{
+    //Voltage = Reading x 5000 / 32768 (mV)
+    adcOn();
+    U1 = read_MP2790(RD_VCELL3) * 5000 / 32768;
+    U2 = read_MP2790(RD_VCELL4) * 5000 / 32768;
+    U3 = read_MP2790(RD_VCELL5) * 5000 / 32768;
+    U4 = read_MP2790(RD_VCELL6) * 5000 / 32768;
+
+    printf("U1=%d,%03dV\r\n",U1/1000, U1%1000);
+    printf("U2=%d,%03dV\r\n",U2/1000, U2%1000);
+    printf("U3=%d,%03dV\r\n",U3/1000, U3%1000);
+    printf("U4=%d,%03dV\r\n",U4/1000, U4%1000);
+    printf("\r\n");
+}
+
+void read_I()
+{
+    //I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
+    adcOn();
+    I1 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
+    I2 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
+    I3 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
+    I4 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
+
+    printf("I1=%d,%03dmA\r\n",I1/1000,I1%1000);
+    printf("I2=%d,%03dmA\r\n",I2/1000,I2%1000);
+    printf("I3=%d,%03dmA\r\n",I3/1000,I3%1000);
+    printf("I4=%d,%03dmA\r\n",I4/1000,I4%1000);
     printf("\r\n");
 }
 
