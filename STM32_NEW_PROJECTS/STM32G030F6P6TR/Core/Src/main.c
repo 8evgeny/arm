@@ -122,7 +122,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 #if 0
 Пишутся регистры 4000 4001 4002 4100
-Для записи групп Fuel Gauge Settings Fuel Gauge Model (0x1000 - 0x1806) (0x2000 - 0x2043) подать команду CONFIG_MODE_CMD();
+Для записи групп Fuel Gauge Settings Fuel Gauge Model
+(0x1000 - 0x1806) (0x2000 - 0x2043) подать команду CONFIG_MODE_CMD();
 
 
 #endif
@@ -141,15 +142,12 @@ int main(void)
 //  read_U_I();
   while (1)
   {
-//    pulse_DOUN_UP(Enable_I2C_2790_Pin, 8000);
 
-
-    read_Temp();
-    read_U_I();
-    get_V_PACK_TOP();
-
-    printf("  RD_ITOP\r\n");
-    print_MP2790(RD_ITOP);
+//    read_Temp();
+//    read_U_I();
+//    get_V_PACK_TOP();
+//    printf("  RD_ITOP\r\n");
+//    print_MP2790(RD_ITOP);
 
     HAL_Delay(2000);
 

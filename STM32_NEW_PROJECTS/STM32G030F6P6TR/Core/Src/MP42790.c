@@ -49,6 +49,28 @@ reg_32 reg32;   //42790
 
 void init_42790()
 {
+#if 0
+- Сell voltages (via the VRDG_CELLxx registers), current (via the IRDG_CELLxx registers),
+    and temperature (via the TRDG_TSx registers).
+
+- The host MCU sends the EXE_CMD command to trigger the fuel gauge  execution and
+        waits until the iteration is completed (FG_EXE_FLAG = 0)
+- Then the host MCU can read back the fuel gauge’s output registers, such as
+        the pack state-of-charge (SOC)
+
+- The interrupt request (IRQ) pin can be configured to notify several events,
+        such as a completed iteration or other conditions.
+
+- Configuration mode is enabled by sending the CONFIG_MODE_CMD and can be confirmed
+        by reading the CONFIG_MODE_FLAG register. After the fuel gauge configurations are successfully updated,
+        the host system must send the CONFIG_EXIT_CMD command to save the
+        configuration into non-volatile memory (NVM).
+
+
+
+
+
+#endif
     printf("\r\n------ init_42790 ------\r\n\n");
 //    disable_42790_REGS_CRC();
 //    enable_42790_REGS_CRC();
