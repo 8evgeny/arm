@@ -1,0 +1,3 @@
+/home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/G030_test.elf.dir
+/home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/edit_cache.dir
+/home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/rebuild_cache.dir

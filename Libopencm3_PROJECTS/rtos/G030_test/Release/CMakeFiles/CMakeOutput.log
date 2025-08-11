@@ -1,0 +1,70 @@
+The target system is: Generic - 1 - 
+The host system is: Linux - 6.5.0-35-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/arm-none-eabi-gcc 
+Build flags: ;;;;-mcpu=cortex-m0plus;;;;;-std=gnu11;;;;;-DUSE_HAL_DRIVER;;;;;-DUSE_FULL_LL_DRIVER;;;;;-DSTM32G030xx;;;;;-c;;;;;-Os;;;;;-ffunction-sections;;;;;-fdata-sections;;;;;-Wall;;;;;-fstack-usage;;;;;--specs=nano.specs;;;;;-mfloat-abi=soft;;;;;-mthumb;;;;;;-std=gnu99
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.su"
+
+The C compiler identification is GNU, found in "/home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/3.22.1/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/arm-none-eabi-g++ 
+Build flags: ;;;;-mcpu=cortex-m0plus;;;;;-std=gnu11;;;;;-DUSE_HAL_DRIVER;;;;;-DUSE_FULL_LL_DRIVER;;;;;-DSTM32G030xx;;;;;-c;;;;;-Os;;;;;-ffunction-sections;;;;;-fdata-sections;;;;;-Wall;;;;;-fstack-usage;;;;;--specs=nano.specs;;;;;-mfloat-abi=soft;;;;;-mthumb;;;;;;-std=c++11
+Id flags:  
+
+The output was:
+0
+cc1plus: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.su"
+
+The CXX compiler identification is GNU, found in "/home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/3.22.1/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-none-eabi-gcc (15:10.3-2021.07-4) 10.3.1 20210621 (release)
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ac499/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ac499.dir/build.make CMakeFiles/cmTC_ac499.dir/build
+gmake[1]: Entering directory '/home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ac499.dir/testCCompiler.c.obj
+/usr/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus     -std=gnu11     -DUSE_HAL_DRIVER     -DUSE_FULL_LL_DRIVER     -DSTM32G030xx     -c     -Os     -ffunction-sections     -fdata-sections     -Wall     -fstack-usage     --specs=nano.specs     -mfloat-abi=soft     -mthumb      -std=gnu99  -o CMakeFiles/cmTC_ac499.dir/testCCompiler.c.obj -c /home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_ac499
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac499.dir/link.txt --verbose=1
+/usr/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus     -std=gnu11     -DUSE_HAL_DRIVER     -DUSE_FULL_LL_DRIVER     -DSTM32G030xx     -c     -Os     -ffunction-sections     -fdata-sections     -Wall     -fstack-usage     --specs=nano.specs     -mfloat-abi=soft     -mthumb      -std=gnu99  -Wl,-gc-sections,--print-memory-usage     -T /home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/STM32G030F6PX_FLASH.ld  CMakeFiles/cmTC_ac499.dir/testCCompiler.c.obj -o cmTC_ac499 
+arm-none-eabi-gcc: warning: CMakeFiles/cmTC_ac499.dir/testCCompiler.c.obj: linker input file unused because linking not done
+gmake[1]: Leaving directory '/home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1b943/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1b943.dir/build.make CMakeFiles/cmTC_1b943.dir/build
+gmake[1]: Entering directory '/home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1b943.dir/testCXXCompiler.cxx.obj
+/usr/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus     -std=gnu11     -DUSE_HAL_DRIVER     -DUSE_FULL_LL_DRIVER     -DSTM32G030xx     -c     -Os     -ffunction-sections     -fdata-sections     -Wall     -fstack-usage     --specs=nano.specs     -mfloat-abi=soft     -mthumb      -std=c++11  -o CMakeFiles/cmTC_1b943.dir/testCXXCompiler.cxx.obj -c /home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+cc1plus: warning: command-line option '-std=gnu11' is valid for C/ObjC but not for C++
+Linking CXX executable cmTC_1b943
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b943.dir/link.txt --verbose=1
+/usr/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus     -std=gnu11     -DUSE_HAL_DRIVER     -DUSE_FULL_LL_DRIVER     -DSTM32G030xx     -c     -Os     -ffunction-sections     -fdata-sections     -Wall     -fstack-usage     --specs=nano.specs     -mfloat-abi=soft     -mthumb      -std=c++11  -Wl,-gc-sections,--print-memory-usage     -T /home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/STM32G030F6PX_FLASH.ld  CMakeFiles/cmTC_1b943.dir/testCXXCompiler.cxx.obj -o cmTC_1b943 
+arm-none-eabi-g++: warning: CMakeFiles/cmTC_1b943.dir/testCXXCompiler.cxx.obj: linker input file unused because linking not done
+gmake[1]: Leaving directory '/home/user/WORK/Github/Arm/Libopencm3_PROJECTS/rtos/G030_test/Release/CMakeFiles/CMakeTmp'
+
+
+
