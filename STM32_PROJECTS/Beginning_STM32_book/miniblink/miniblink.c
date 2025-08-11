@@ -43,7 +43,7 @@ gpio_setup(void) {
 
 void delay()
 {
-    for (int i = 0; i < 200000; i++)
+    for (int i = 0; i < 10000; i++)
         __asm__("nop");
 }
 
@@ -60,7 +60,11 @@ main(void) {
         delay();
         gpio_clear(GPIOC,GPIO13);
 //        gpio_clear(GPIOD,GPIO2);
-        delay();
+        for(int i = 0; i<200; ++i)
+        {
+            delay();
+        }
+
 
 //        gpio_set(GPIOB,GPIO1);
 //        delay();
