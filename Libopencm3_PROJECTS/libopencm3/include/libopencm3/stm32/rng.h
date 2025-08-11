@@ -34,6 +34,8 @@
 #       include <libopencm3/stm32/l4/rng.h>
 #elif defined(STM32G0)
 #       include <libopencm3/stm32/g0/rng.h>
+#elif defined(STM32G4)
+#       include <libopencm3/stm32/g4/rng.h>
 #else
 #       error "stm32 family not defined."
 #endif

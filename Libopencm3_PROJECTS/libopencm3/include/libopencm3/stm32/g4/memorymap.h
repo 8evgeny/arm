@@ -115,8 +115,8 @@
 #define DAC2_BASE			(PERIPH_BASE_AHB2 + 0x0c00)
 #define DAC3_BASE			(PERIPH_BASE_AHB2 + 0x1000)
 #define DAC4_BASE			(PERIPH_BASE_AHB2 + 0x1400)
-#define AES_BASE			(PERIPH_BASE_AHB2 + 0x6000)
-#define RNG_BASE			(PERIPH_BASE_AHB2 + 0x6800)
+#define AES_BASE			(PERIPH_BASE_AHB2 + 0x60000)
+#define RNG_BASE			(PERIPH_BASE_AHB2 + 0x60800)
 
 #define FMC_BASE		(0xa0000000U)
 #define QUADSPI_BASE		(0xa0001000U)
@@ -135,6 +135,6 @@
 /* ST provided factory calibration values @ 3.0V */
 #define ST_VREFINT_CAL			MMIO16((INFO_BASE + 0x75aa))
 #define ST_TSENSE_CAL1_30C		MMIO16((INFO_BASE + 0x75a8))
-#define ST_TSENSE_CAL2_110C		MMIO16((INFO_BASE + 0x75ca))
+#define ST_TSENSE_CAL2_130C		MMIO16((INFO_BASE + 0x75ca))
 
 #endif

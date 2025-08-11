@@ -45,6 +45,8 @@
 
 /* --- RCC registers ------------------------------------------------------- */
 
+#include "inttypes.h"
+
 #define RCC_CR					MMIO32(RCC_BASE + 0x00)
 #define RCC_CFGR				MMIO32(RCC_BASE + 0x04)
 #define RCC_CIR					MMIO32(RCC_BASE + 0x08)

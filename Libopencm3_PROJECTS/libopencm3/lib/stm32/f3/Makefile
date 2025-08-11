@@ -49,12 +49,13 @@ OBJS += iwdg_common_all.o
 OBJS += opamp_common_all.o opamp_common_v1.o
 OBJS += pwr_common_v1.o
 OBJS += rcc.o rcc_common_all.o
+OBJS += rtc_common_l1f024.o
 OBJS += spi_common_all.o spi_common_v2.o
 OBJS += timer_common_all.o timer_common_f0234.o
 OBJS += usart_common_v2.o usart_common_all.o
 
 OBJS += usb.o usb_control.o usb_standard.o usb_msc.o
-OBJS += usb_hid.o
+OBJS += usb_hid.o usb_bos.o usb_microsoft.o
 OBJS += usb_audio.o usb_cdc.o usb_midi.o
 OBJS += st_usbfs_core.o st_usbfs_v1.o
 

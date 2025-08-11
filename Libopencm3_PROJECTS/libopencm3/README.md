@@ -1,8 +1,7 @@
 README
 ======
-[![Build Status](https://travis-ci.org/libopencm3/libopencm3.svg?branch=master)](https://travis-ci.org/libopencm3/libopencm3)
 
-[![Gitter channel](https://badges.gitter.im/libopencm3/discuss.svg)](https://gitter.im/libopencm3/discuss)
+[![Discord](https://img.shields.io/discord/613131135903596547?logo=discord)](https://discord.gg/P7FYThy)
 
 The libopencm3 project aims to create an open-source firmware library for
 various ARM Cortex-M microcontrollers.
@@ -80,15 +79,15 @@ After that you can navigate to the folder where you've extracted libopencm3 and 
 Toolchain
 ---------
 
-The most heavily tested toolchain is "gcc-arm-embedded"
-https://launchpad.net/gcc-arm-embedded
+The most heavily tested toolchain is ["gcc-arm-embedded"](https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain)
+This used to be available at https://launchpad.net/gcc-arm-embedded
 
 Other toolchains _should_ work, but they have not been nearly as well tested.
 Toolchains targeting Linux, such as "gcc-arm-linux-gnu" or the like are
 _not_ appropriate.
 
-_NOTE_: We recommend that you use gcc-arm-embedded version 4.8 2014q3 or newer
-to build all platforms covered by libopencm3 successfully.
+_NOTE_: GCC version 6 or later is required, as we're using attributes on enumerators
+to help mark deprecations.
 
 Building
 --------

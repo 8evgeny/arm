@@ -1143,6 +1143,12 @@ enum tim_et_pol {
 	TIM_ET_FALLING,
 };
 
+/** External clock mode 2 */
+enum tim_ecm2_state {
+    TIM_ECM2_DISABLED,
+    TIM_ECM2_ENABLED,
+};
+
 /* --- TIM function prototypes --------------------------------------------- */
 
 BEGIN_DECLS
@@ -1186,6 +1192,10 @@ void timer_enable_oc_clear(uint32_t timer_peripheral, enum tim_oc_id oc_id);
 void timer_disable_oc_clear(uint32_t timer_peripheral, enum tim_oc_id oc_id);
 void timer_set_oc_fast_mode(uint32_t timer_peripheral, enum tim_oc_id oc_id);
 void timer_set_oc_slow_mode(uint32_t timer_peripheral, enum tim_oc_id oc_id);
+void timer_set_oc1_mode(uint32_t timer_peripheral, enum tim_oc_mode oc_mode);
+void timer_set_oc2_mode(uint32_t timer_peripheral, enum tim_oc_mode oc_mode);
+void timer_set_oc3_mode(uint32_t timer_peripheral, enum tim_oc_mode oc_mode);
+void timer_set_oc4_mode(uint32_t timer_peripheral, enum tim_oc_mode oc_mode);
 void timer_set_oc_mode(uint32_t timer_peripheral, enum tim_oc_id oc_id,
 		       enum tim_oc_mode oc_mode);
 void timer_enable_oc_preload(uint32_t timer_peripheral, enum tim_oc_id oc_id);
@@ -1233,6 +1243,8 @@ void timer_slave_set_prescaler(uint32_t timer, enum tim_ic_psc psc);
 void timer_slave_set_polarity(uint32_t timer, enum tim_et_pol pol);
 void timer_slave_set_mode(uint32_t timer, uint8_t mode);
 void timer_slave_set_trigger(uint32_t timer, uint8_t trigger);
+void timer_slave_set_extclockmode2(uint32_t timer_peripheral,
+            enum tim_ecm2_state state);
 
 END_DECLS
 

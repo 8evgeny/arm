@@ -20,8 +20,6 @@
 #ifndef LIBOPENCM3_MEMORYMAP_COMMON_H
 #define LIBOPENCM3_MEMORYMAP_COMMON_H
 
-//#define STM32F1
-
 #if defined(STM32F0)
 #	include <libopencm3/stm32/f0/memorymap.h>
 #elif defined(STM32F1)
@@ -46,6 +44,8 @@
 #	include <libopencm3/stm32/g4/memorymap.h>
 #elif defined(STM32H7)
 #       include <libopencm3/stm32/h7/memorymap.h>
+#elif defined(STM32U5)
+#       include <libopencm3/stm32/u5/memorymap.h>
 #elif defined(GD32F1X0)
 #       include <libopencm3/gd32/f1x0/memorymap.h>
 #else
