@@ -18,10 +18,16 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "i2c.h"
+#include "usart.h"
+#include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -40,25 +46,33 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-I2C_HandleTypeDef hi2c2;
-
-UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+#define CRC_TABLE_SIZE 256
+uint8_t _CRC8Table[CRC_TABLE_SIZE];
+uint32_t _poly_width = 8;
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-static void MX_GPIO_Init(void);
-static void MX_USART2_UART_Init(void);
-static void MX_I2C2_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if(GPIO_Pin == XALERT_INT_Pin)
+  {
+    printf("\r\n========== xALERT ===========\r\n");
+  } else
+  {
+      printf("\r\nEXTI ERROR\r\n");
+  }
+}
 
 /* USER CODE END 0 */
 
@@ -70,7 +84,9 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+// CRC   https://www.sunshine2k.de/articles/coding/crc/understanding_crc.html
+    SEGGER_RTT_Init();
+    SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -95,12 +111,50 @@ int main(void)
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 
+//    HAL_GPIO_WritePin(GPIOA, Enable_I2sC_2790_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_42790_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+#if 0
+Пишутся регистры 4000 4001 4002 4100
+Для записи групп Fuel Gauge Settings Fuel Gauge Model
+(0x1000 - 0x1806) (0x2000 - 0x2043) подать команду CONFIG_MODE_CMD();
+
+
+#endif
+//    simpleTestI2C_EEPROM(0x10);
+    init_2790();
+//    init_42790();
+//    read_2790_REGS();
+//    read_42790_REGS();
+
+//read_Temp();
+//HAL_Delay(500);
+//read_Temp();
+//HAL_Delay(500);
+//read_Temp();
+
+//  read_U_I();
   while (1)
   {
+//      read_U_I();
+      print_MP2790(RD_ICELL3);
+      print_MP2790(RD_ITOP);
+//    read_I();
+//    get_V_PACK_TOP();
+//    printf("  RD_ITOP\r\n");
+//    print_MP2790(RD_ITOP);
+
+    HAL_Delay(1000);
+
+//    getStatus();
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -114,184 +168,183 @@ int main(void)
   */
 void SystemClock_Config(void)
 {
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  /* HSI configuration and activation */
+  LL_RCC_HSI_Enable();
+  while(LL_RCC_HSI_IsReady() != 1)
+  {
+  }
 
-  /** Configure the main internal regulator output voltage
-  */
-  HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
+  /* Set AHB prescaler*/
+  LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
 
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  /* Sysclk activation on the HSI */
+  LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_HSI);
+  while(LL_RCC_GetSysClkSource() != LL_RCC_SYS_CLKSOURCE_STATUS_HSI)
+  {
+  }
+
+  /* Set APB1 prescaler*/
+  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
+  /* Update CMSIS variable (which can be updated also through SystemCoreClockUpdate function) */
+  LL_SetSystemCoreClock(16000000);
+
+   /* Update the time base */
+  if (HAL_InitTick (TICK_INT_PRIORITY) != HAL_OK)
   {
     Error_Handler();
   }
-
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
-  {
-    Error_Handler();
-  }
-}
-
-/**
-  * @brief I2C2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_I2C2_Init(void)
-{
-
-  /* USER CODE BEGIN I2C2_Init 0 */
-
-  /* USER CODE END I2C2_Init 0 */
-
-  /* USER CODE BEGIN I2C2_Init 1 */
-
-  /* USER CODE END I2C2_Init 1 */
-  hi2c2.Instance = I2C2;
-  hi2c2.Init.Timing = 0x00503D58;
-  hi2c2.Init.OwnAddress1 = 0;
-  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
-  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
-  hi2c2.Init.OwnAddress2 = 0;
-  hi2c2.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
-  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
-  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
-  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Configure Analogue filter
-  */
-  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c2, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Configure Digital filter
-  */
-  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c2, 0) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN I2C2_Init 2 */
-
-  /* USER CODE END I2C2_Init 2 */
-
-}
-
-/**
-  * @brief USART2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USART2_UART_Init(void)
-{
-
-  /* USER CODE BEGIN USART2_Init 0 */
-
-  /* USER CODE END USART2_Init 0 */
-
-  /* USER CODE BEGIN USART2_Init 1 */
-
-  /* USER CODE END USART2_Init 1 */
-  huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
-  huart2.Init.WordLength = UART_WORDLENGTH_8B;
-  huart2.Init.StopBits = UART_STOPBITS_1;
-  huart2.Init.Parity = UART_PARITY_NONE;
-  huart2.Init.Mode = UART_MODE_TX_RX;
-  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
-  huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-  huart2.Init.ClockPrescaler = UART_PRESCALER_DIV1;
-  huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_SWAP_INIT;
-  huart2.AdvancedInit.Swap = UART_ADVFEATURE_SWAP_ENABLE;
-  if (HAL_UART_Init(&huart2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART2_Init 2 */
-
-  /* USER CODE END USART2_Init 2 */
-
-}
-
-/**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_GPIO_Init(void)
-{
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
-  /* USER CODE BEGIN MX_GPIO_Init_1 */
-
-  /* USER CODE END MX_GPIO_Init_1 */
-
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin|GPIO_1_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin|Enable_RS485_Pin|Enable_2790_Pin|One_Wire_Pin
-                          |WDT_OUT_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pins : GPIO_2_Pin GPIO_1_Pin */
-  GPIO_InitStruct.Pin = GPIO_2_Pin|GPIO_1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : IRQ_FROM_42790_Pin IRQ_FROM_7920_Pin */
-  GPIO_InitStruct.Pin = IRQ_FROM_42790_Pin|IRQ_FROM_7920_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : Enable_42790_Pin Enable_RS485_Pin Enable_2790_Pin One_Wire_Pin
-                           WDT_OUT_Pin */
-  GPIO_InitStruct.Pin = Enable_42790_Pin|Enable_RS485_Pin|Enable_2790_Pin|One_Wire_Pin
-                          |WDT_OUT_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI0_1_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI0_1_IRQn);
-
-  HAL_NVIC_SetPriority(EXTI4_15_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
-
-  /* USER CODE BEGIN MX_GPIO_Init_2 */
-
-  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
+
+const char *bit_rep[16] =
+{
+    [ 0] = "0000", [ 1] = "0001", [ 2] = "0010", [ 3] = "0011",
+    [ 4] = "0100", [ 5] = "0101", [ 6] = "0110", [ 7] = "0111",
+    [ 8] = "1000", [ 9] = "1001", [10] = "1010", [11] = "1011",
+    [12] = "1100", [13] = "1101", [14] = "1110", [15] = "1111",
+};
+void print_byte(uint8_t byte)
+{
+    printf("%s%s", bit_rep[byte >> 4], bit_rep[byte & 0x0F]);
+}
+void simpleTestI2C_EEPROM(uint16_t addr)
+{
+// Пишет по 8 байт в адреса кратные 8 Читать может больше
+    uint16_t num = 8;
+    printf("Simple test I2C_EEPROM ...\r\n");
+
+    uint8_t rd_value[20] = {0};
+//    uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
+    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
+
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
+    printf("EEPROM read: %s\r\n",rd_value);
+
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, wr_value, num, HAL_MAX_DELAY);
+    printf("EEPROM write: %s\r\n", wr_value);
+
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
+    printf("EEPROM read: %s\r\n",rd_value);
+}
+uint32_t crc32 (uint16_t Reg_Address, uint8_t len, uint8_t *data)
+{
+    short i;
+    uint32_t crc = 0xFFFFFFFF;
+    unsigned char dataTemp[4];
+    for (i=-1; i<len; i++)
+    {
+        if(i==-1)
+        {
+            dataTemp[0]=len;
+            dataTemp[1]=Reg_Address&0x00FF;
+            dataTemp[2]=(Reg_Address&0xFF00)>>8;
+            dataTemp[3]=0;
+        }
+        else
+        {
+            dataTemp[i%4]=data[i];
+        }
+        if((i%4)==3 || i == len-1 || i == -1)
+        {
+            for (char j=0; j<4; j++)
+            {
+                crc ^= dataTemp[3-j] << 24;
+                for (char k = 0; k < 8; ++k)
+                {
+                    if ((crc & 0x80000000) != 0)
+                    {
+                        crc = (crc << 1) ^ 0x04C11DB7;
+                    }
+                    else
+                    {
+                        crc <<= 1;
+                    }
+                }
+            }
+            dataTemp[0]=0;
+            dataTemp[1]=0;
+            dataTemp[2]=0;
+            dataTemp[3]=0;
+        }
+    }
+    return crc;
+}
+void init_crc_calculation()
+{
+    uint8_t poly = 0x31;
+    const uint32_t bits_mask = (1 << _poly_width) - 1;
+    const uint32_t top_bit = 1 << (_poly_width - 1);
+    uint32_t index;
+    for (index = 0; index < CRC_TABLE_SIZE; ++index)
+    {
+        uint32_t value = index << (_poly_width - 8);
+        uint32_t bit_index;
+        for (bit_index = 0; bit_index < 8; ++bit_index)
+        {
+            if (value & top_bit)
+            {
+                value = (value << 1) ^ poly;
+            }
+            else
+            {
+                value = value << 1;
+            }
+            value &= bits_mask;
+        }//END for (bit_index = 0; bit_index < 8; ++bit_index)
+        _CRC8Table[index] = value;
+    }//END for (index = 0; index < CRC_TABLE_SIZE; ++index)
+}
+uint8_t crc_calc(uint8_t *data, uint8_t size)
+{
+    uint8_t init_value = 0xFF;
+    uint8_t crc = init_value;
+    while (size--)
+    {
+        crc = _CRC8Table[crc ^ *data++];
+    }
+    return crc;
+}
+void generateRandomString(char *str, int length)
+{
+    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    int charset_size = strlen(charset);
+    if (length <= 0)
+    {
+        str[0] = '\0'; // Empty string for length 0 or less
+        return;
+    }
+    for (int i = 0; i < length; i++)
+    {
+        str[i] = charset[rand() % charset_size];
+    }
+    str[length] = '\0'; // Null-terminate the string
+}
+void Printf(const char* fmt, ...)
+{
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    char buff[512];
+    va_list args;
+    va_start(args, fmt);
+    vsnprintf(buff, sizeof(buff), fmt, args);
+    HAL_UART_Transmit(&huart2, (uint8_t*)buff, strlen(buff), HAL_MAX_DELAY );
+    va_end(args);
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+}
+int _write(int fd, char *str, int len)
+{
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    for(int i=0; i<len; i++)
+    {
+        HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
+        SEGGER_RTT_PutChar(0, str[i]);
+    }
+    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    return len;
+}
 
 /* USER CODE END 4 */
 
