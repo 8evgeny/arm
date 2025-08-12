@@ -133,6 +133,16 @@ int main(void)
 //    read_2790_REGS();
 //    read_42790_REGS();
 
+
+    adcOn();
+// Voltage = Reading x 3300 / 32768 (mV)
+    uint16_t rd_V1P8  = read_MP2790(RD_V1P8) * 3300 / 32768;
+    printf("rd_V1P8=%d,%03dV\r\n",rd_V1P8/1000, rd_V1P8%1000);
+    uint16_t rd_V3P3  = read_MP2790(RD_V3P3) * 6600 / 32768;
+    printf("rd_V3P3=%d,%03dV\r\n",rd_V3P3/1000, rd_V3P3%1000);
+    uint16_t rd_V5  = read_MP2790(RD_V5) * 6600 / 32768;
+    printf("rd_V5=%d,%03dV\r\n",rd_V5/1000, rd_V5%1000);
+
   while (1)
   {
       HAL_Delay(10000);
