@@ -10,7 +10,7 @@ typedef struct _data16
     }value;
 }data_16;
 data_16 data16; //2790
-uint16_t U1,U2,U3,U4,I1,I2,I3,I4,V_PACK,V_TOP,NTC1,NTC2,NTC3,NTC4;
+uint16_t U1,U2,U3,U4,I1,I2,I3,I4,I_TOP,V_PACK,V_TOP,NTC1,NTC2,NTC3,NTC4;
 uint16_t Temperature;
 
 void init_2790()
@@ -104,11 +104,13 @@ void read_U_I()
     I2 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
     I3 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
     I4 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
+    I_TOP = (read_MP2790(RD_ITOP) & 0x7FFF) * 20000000 / 32768 ;
 
     printf("U1=%d,%03dV I1=%d,%03dmA\r\n",U1/1000, U1%1000, I1/1000,I1%1000);
     printf("U2=%d,%03dV I2=%d,%03dmA\r\n",U2/1000, U2%1000, I2/1000,I2%1000);
     printf("U3=%d,%03dV I3=%d,%03dmA\r\n",U3/1000, U3%1000, I3/1000,I3%1000);
     printf("U4=%d,%03dV I4=%d,%03dmA\r\n",U4/1000, U4%1000, I4/1000,I4%1000);
+    printf("I_TOP=%d,%03dmA\r\n",I_TOP/1000,I_TOP%1000);
     printf("\r\n");
 }
 

@@ -142,9 +142,7 @@ int main(void)
 //  read_U_I();
   while (1)
   {
-//      read_U_I();
-      print_MP2790(RD_ICELL3);
-      print_MP2790(RD_ITOP);
+      read_U_I();
 //    read_I();
 //    get_V_PACK_TOP();
 //    printf("  RD_ITOP\r\n");
