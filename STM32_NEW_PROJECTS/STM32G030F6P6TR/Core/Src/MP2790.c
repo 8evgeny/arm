@@ -25,7 +25,7 @@ void init_2790()
     init_NTC();
     get_V_PACK_TOP();
     init_UV_OV();
-    init_time_SC_detection();
+//    init_time_SC_detection();
     init_SCFT_CTRL();
     init_OCFT_CTRL();
     init_DSGOC_LIM();
@@ -261,8 +261,14 @@ void resetErrors()
 void initPins()
 {
     printf("  initPins()\r\n");
+    read_MP2790(PINS_CFG);
     write_MP2790(PINS_CFG, data16.value.value &= 0b1111111110011111);   // 5 6 bits to 0
     print_MP2790(PINS_CFG);
+
+    read_MP2790(GPIO_CFG);
+    write_MP2790(GPIO_CFG, data16.value.value |= 0b0000010001000100); //Pull-up 20kOm GPIO 1 2 3
+    print_MP2790(GPIO_CFG);
+
     printf("\r\n");
 }
 
@@ -317,12 +323,12 @@ void getWDTStatus()
 
 void init_CHG_DSG_MOSFET()
 {
-//    printf("  init_CHG_DSG_MOSFET()\r\n");
+    printf("  init_CHG_DSG_MOSFET()\r\n");
     read_MP2790(ACT_CFG);
     write_MP2790(ACT_CFG, data16.value.value |= 0b0000000000011000);    //  3  4  bits to 1
     write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);     //  1 bit to 0
-//    print_MP2790(ACT_CFG);
-//    printf("\r\n");
+    print_MP2790(ACT_CFG);
+    printf("\r\n");
 }
 
 void delay_mks(uint16_t delay)
@@ -380,7 +386,7 @@ void init_OCFT_CTRL()
 {
     printf("  init_OCFT_CTRL()\r\n");
     read_MP2790(OCFT_CTRL);
-    write_MP2790(OCFT_CTRL, data16.value.value &= 0b1111111100111100);
+    write_MP2790(OCFT_CTRL, data16.value.value &= 0b1111111000111000);
     print_MP2790(OCFT_CTRL);
     printf("\r\n");
 }
