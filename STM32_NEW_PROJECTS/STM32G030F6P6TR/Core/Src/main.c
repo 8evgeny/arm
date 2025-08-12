@@ -130,11 +130,11 @@ int main(void)
 //    simpleTestI2C_EEPROM(0x10);
 
 
-    init_2790();
-    get_self_U();
-//    init_42790();
+//    init_2790();
+//    get_self_U();
+    init_42790();
 //    read_2790_REGS();
-//    read_42790_REGS();
+    read_42790_REGS();
 
 
 

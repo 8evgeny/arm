@@ -39,6 +39,12 @@ void init_2790()
     getStatus();
     get_OC_Status();
 
+    printf("  SELF_CFG\r\n");
+    read_MP2790(SELF_CFG);
+    write_MP2790(SELF_CFG, data16.value.value |= 0b0000000000001000);
+    print_MP2790(SELF_CFG);
+    printf("\r\n");
+
 
 //    get_V_PACK_TOP();
 }
@@ -419,4 +425,8 @@ void get_self_U()
     printf("rd_V3P3=%d,%03dV\r\n",rd_V3P3/1000, rd_V3P3%1000);
     uint16_t rd_V5  = read_MP2790(RD_V5) * 6600 / 32768;
     printf("rd_V5=%d,%03dV\r\n",rd_V5/1000, rd_V5%1000);
+//Value = Setting x 3.2227mV
+    uint16_t rd_VASELF  = read_MP2790(RD_VASELF) * 32227 / 10000;
+    printf("rd_VASELF=%d,%03dV\r\n",rd_VASELF/1000, rd_VASELF%1000);
+
 }
