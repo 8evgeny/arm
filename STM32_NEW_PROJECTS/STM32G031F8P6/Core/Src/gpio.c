@@ -38,7 +38,6 @@
         * Output
         * EVENT_OUT
         * EXTI
-     PC15-OSC32_OUT (PC15)   ------> RCC_OSC_EN
 */
 void MX_GPIO_Init(void)
 {
@@ -54,10 +53,8 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOB, GPIO_2_Pin|GPIO_1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, Enable_I2C_42790_Pin|UART_SEL_OUT_Pin|One_Wire_Pin, GPIO_PIN_SET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(Enable_I2C_2790_GPIO_Port, Enable_I2C_2790_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin|Enable_RS485_Pin|Enable_2790_Pin|One_Wire_Pin
+                          |WDT_OUT_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : GPIO_2_Pin GPIO_1_Pin */
   GPIO_InitStruct.Pin = GPIO_2_Pin|GPIO_1_Pin;
@@ -66,41 +63,25 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PC15 */
-  GPIO_InitStruct.Pin = GPIO_PIN_15;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF1_OSC;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : IRQ_IN_Pin WDT_IN_Pin */
-  GPIO_InitStruct.Pin = IRQ_IN_Pin|WDT_IN_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : Enable_I2C_42790_Pin UART_SEL_OUT_Pin One_Wire_Pin */
-  GPIO_InitStruct.Pin = Enable_I2C_42790_Pin|UART_SEL_OUT_Pin|One_Wire_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : Enable_I2C_2790_Pin */
-  GPIO_InitStruct.Pin = Enable_I2C_2790_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(Enable_I2C_2790_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : XALERT_INT_Pin */
-  GPIO_InitStruct.Pin = XALERT_INT_Pin;
+  /*Configure GPIO pins : IRQ_FROM_42790_Pin IRQ_FROM_7920_Pin */
+  GPIO_InitStruct.Pin = IRQ_FROM_42790_Pin|IRQ_FROM_7920_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(XALERT_INT_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : Enable_42790_Pin Enable_RS485_Pin Enable_2790_Pin One_Wire_Pin
+                           WDT_OUT_Pin */
+  GPIO_InitStruct.Pin = Enable_42790_Pin|Enable_RS485_Pin|Enable_2790_Pin|One_Wire_Pin
+                          |WDT_OUT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI0_1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_1_IRQn);
+
   HAL_NVIC_SetPriority(EXTI4_15_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 

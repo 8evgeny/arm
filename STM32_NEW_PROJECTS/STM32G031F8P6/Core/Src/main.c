@@ -65,7 +65,7 @@ void SystemClock_Config(void);
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-  if(GPIO_Pin == XALERT_INT_Pin)
+  if(GPIO_Pin == IRQ_FROM_42790_Pin)
   {
     printf("\r\n========== xALERT ===========\r\n");
   } else
@@ -112,9 +112,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 //    HAL_GPIO_WritePin(GPIOA, Enable_I2sC_2790_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, Enable_I2C_42790_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, Enable_I2C_2790_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_2790_Pin, GPIO_PIN_SET);
 
   /* USER CODE END 2 */
 
@@ -184,7 +184,7 @@ void SystemClock_Config(void)
   }
 
   /* Set APB1 prescaler*/
-  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
+  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
   /* Update CMSIS variable (which can be updated also through SystemCoreClockUpdate function) */
   LL_SetSystemCoreClock(16000000);
 
@@ -325,24 +325,24 @@ void generateRandomString(char *str, int length)
 }
 void Printf(const char* fmt, ...)
 {
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
     char buff[512];
     va_list args;
     va_start(args, fmt);
     vsnprintf(buff, sizeof(buff), fmt, args);
     HAL_UART_Transmit(&huart2, (uint8_t*)buff, strlen(buff), HAL_MAX_DELAY );
     va_end(args);
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_RESET);
 }
 int _write(int fd, char *str, int len)
 {
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
     for(int i=0; i<len; i++)
     {
         HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
         SEGGER_RTT_PutChar(0, str[i]);
     }
-    HAL_GPIO_WritePin(GPIOA, UART_SEL_OUT_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_RESET);
     return len;
 }
 
