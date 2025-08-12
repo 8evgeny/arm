@@ -25,19 +25,20 @@ void init_2790()
     init_NTC();
     get_V_PACK_TOP();
     init_UV_OV();
-//    init_time_SC_detection();
+    init_time_SC_detection();
     init_SCFT_CTRL();
     init_OCFT_CTRL();
     init_DSGOC_LIM();
     init_DSGSC_CFG();
     init_FET_MODE();
     init_LOAD_CHARGER();
-//HAL_Delay(100);
-    pulse_DOUN_UP(One_Wire_Pin, 1);
+//    pulse_DOUN_UP(One_Wire_Pin, 1);
     initFET_CFG();
-    init_CHG_DSG_MOSFET();
-//    get_OC_Status();
+    init_ACT_CFG();
+    HAL_Delay(100);
     getStatus();
+    get_OC_Status();
+
 
 //    get_V_PACK_TOP();
 }
@@ -302,7 +303,7 @@ void init_NTC()
 
 void getStatus()
 {
-    printf("  getStatus()\r\n");
+//    printf("getStatus()\r\n");
     printf("  FT_STS\r\n");
     print_MP2790(FT_STS1);
     print_MP2790(FT_STS2);
@@ -321,9 +322,9 @@ void getWDTStatus()
     printf("\r\n");
 }
 
-void init_CHG_DSG_MOSFET()
+void init_ACT_CFG()
 {
-    printf("  init_CHG_DSG_MOSFET()\r\n");
+    printf("  init_ACT_CFG()\r\n");
     read_MP2790(ACT_CFG);
     write_MP2790(ACT_CFG, data16.value.value |= 0b0000000000011000);    //  3  4  bits to 1
     write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);     //  1 bit to 0

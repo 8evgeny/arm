@@ -135,11 +135,9 @@ int main(void)
 
   while (1)
   {
+      HAL_Delay(10000);
       read_Temp();
       read_U_I();
-      HAL_Delay(5000);
-      getStatus();
-
 
     /* USER CODE END WHILE */
 

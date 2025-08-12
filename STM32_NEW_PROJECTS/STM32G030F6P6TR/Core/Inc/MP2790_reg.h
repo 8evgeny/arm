@@ -4,9 +4,9 @@
 //Current = Reading x 100 / 32768 / RSENSE (A)
 //Temperature = Reading x 0.01481 - 269.12 (°C)
 
-#define CELLS_CTRL              0x00  //The CELLS_CTRL command controls the number of stacked cells in use
-#define PWR_STATUS              0x01  //The PWR_STATUS command reports the pack current status and the power state status.
-#define STB_STATUS              0x02
+#define CELLS_CTRL              0x00    //The CELLS_CTRL command controls the number of stacked cells in use
+#define PWR_STATUS              0x01    //The PWR_STATUS command reports the pack current status and the power state status.
+#define STB_STATUS              0x02    //
 #define LOAD_CHARGER_STATUS     0x03
 #define ACT_CFG                 0x05
 #define STB_CFG                 0x06
