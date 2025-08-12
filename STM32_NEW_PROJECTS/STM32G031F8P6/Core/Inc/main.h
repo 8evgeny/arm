@@ -57,6 +57,26 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define GPIO_2_Pin GPIO_PIN_7
+#define GPIO_2_GPIO_Port GPIOB
+#define IRQ_FROM_42790_Pin GPIO_PIN_0
+#define IRQ_FROM_42790_GPIO_Port GPIOA
+#define IRQ_FROM_42790_EXTI_IRQn EXTI0_1_IRQn
+#define Enable_42790_Pin GPIO_PIN_1
+#define Enable_42790_GPIO_Port GPIOA
+#define Enable_RS485_Pin GPIO_PIN_4
+#define Enable_RS485_GPIO_Port GPIOA
+#define Enable_2790_Pin GPIO_PIN_5
+#define Enable_2790_GPIO_Port GPIOA
+#define One_Wire_Pin GPIO_PIN_6
+#define One_Wire_GPIO_Port GPIOA
+#define WDT_OUT_Pin GPIO_PIN_7
+#define WDT_OUT_GPIO_Port GPIOA
+#define IRQ_FROM_7920_Pin GPIO_PIN_8
+#define IRQ_FROM_7920_GPIO_Port GPIOA
+#define IRQ_FROM_7920_EXTI_IRQn EXTI4_15_IRQn
+#define GPIO_1_Pin GPIO_PIN_3
+#define GPIO_1_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
