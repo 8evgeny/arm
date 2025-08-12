@@ -17,7 +17,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -std=gnu11 \
     -DUSE_HAL_DRIVER \
     -DUSE_FULL_LL_DRIVER \
-    -DSTM32G030xx \
+    -DSTM32G031xx \
     -c \
     -Os \
     -ffunction-sections \
@@ -89,7 +89,7 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
 #   COMMENT "Write Flash ")
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
-   COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32G030F6 -if SWD -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G030F6P6TR/flash_script.jlink"
+   COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32G031F8 -if SWD -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G031F8P6/flash_script.jlink"
    COMMENT "Write Flash ")
 
 #-speed 2000
