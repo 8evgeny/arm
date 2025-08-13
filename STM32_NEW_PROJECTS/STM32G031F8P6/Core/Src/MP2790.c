@@ -35,17 +35,13 @@ void init_2790()
 //    pulse_DOUN_UP(One_Wire_Pin, 1);
     initFET_CFG();
     init_ACT_CFG();
-    HAL_Delay(100);
+    HAL_Delay(300);
     getStatus();
     get_OC_Status();
-
-    printf("  SELF_CFG\r\n");
-    read_MP2790(SELF_CFG);
-    write_MP2790(SELF_CFG, data16.value.value |= 0b0000000000001000);
-    print_MP2790(SELF_CFG);
-    printf("\r\n");
-
+    get_SELF_CFG();
     get_V_PACK_TOP();
+
+
 }
 
 void read_2790_REGS()
@@ -427,5 +423,12 @@ void get_self_U()
 //Value = Setting x 3.2227mV
     uint16_t rd_VASELF  = read_MP2790(RD_VASELF) * 32227 / 10000;
     printf("rd_VASELF=%d,%03dV\r\n\n",rd_VASELF/1000, rd_VASELF%1000);
-
+}
+void get_SELF_CFG()
+{
+    printf("  get_SELF_CFG()\r\n");
+    read_MP2790(SELF_CFG);
+    write_MP2790(SELF_CFG, data16.value.value |= 0b0000000000001000);
+    print_MP2790(SELF_CFG);
+    printf("\r\n");
 }

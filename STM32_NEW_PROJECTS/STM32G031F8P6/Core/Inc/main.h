@@ -119,7 +119,7 @@ void init_OCFT_CTRL();
 void init_SCFT_CTRL();
 void get_OC_Status();
 void get_self_U();
-
+void get_SELF_CFG();
 
 void print_byte(uint8_t byte);
 void simpleTestI2C_EEPROM(uint16_t addr);
