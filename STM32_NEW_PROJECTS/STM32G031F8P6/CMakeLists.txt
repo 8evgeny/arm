@@ -59,8 +59,6 @@ set(LINKER_FLAGS "SHELL: \
     --specs=nosys.specs \
     -Wl,--gc-sections \
     -static \
-    -u _printf_float \
-    -u _sscanf_float \
     --specs=nano.specs \
     -Wl,--gc-sections,--print-memory-usage \
     -mfloat-abi=soft \
@@ -72,7 +70,8 @@ set(LINKER_FLAGS "SHELL: \
     -Wl,--end-group \
     -Xlinker -Map=${PROJECT_NAME}.map \
     ")
-
+#-u _printf_float \
+#-u _scanf_float \
 target_link_options(${PROJECT_NAME}.elf PRIVATE ${LINKER_FLAGS})
 
 set(HEX_FILE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex)
