@@ -116,7 +116,6 @@ void enable_42790_REGS_CRC()
 }
 void read_42790_REGS()
 {
-    HAL_GPIO_WritePin(GPIOA, Enable_2790_Pin, GPIO_PIN_RESET);
     for (int i=0; i < 0x78; i+=2)
     {
         print_MP42790_16_CRC(i);
@@ -205,7 +204,6 @@ void read_42790_REGS()
     print_MP42790_8_CRC(0x4000);
     print_MP42790_8_CRC(0x4100);
 
-    HAL_GPIO_WritePin(GPIOA, Enable_2790_Pin, GPIO_PIN_SET);
 }
 void pulse_SDA()
 {
@@ -399,7 +397,7 @@ void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
 }
 uint16_t read_MP42790_16_CRC(uint16_t regAddr)
 {
-    HAL_Delay(10);
+//    HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_16(regAddr);
     receive_Data_16_CRC(regAddr);

@@ -127,14 +127,13 @@ int main(void)
 
 
 #endif
-//    simpleTestI2C_EEPROM(0x10);
+//    simpleTestI2C_EEPROM(0x00);
 
 
-    init_2790();
-//    get_self_U();
-//    init_42790();
+//    init_2790();
+    init_42790();
 //    read_2790_REGS();
-//    read_42790_REGS();
+    read_42790_REGS();
 
 
 
@@ -143,9 +142,9 @@ int main(void)
   {
       HAL_Delay(3000);
 //      getStatus();
-      get_self_U();
-      read_Temp();
-      read_U_I();
+//      get_self_U();
+//      read_Temp();
+//      read_U_I();
 
     /* USER CODE END WHILE */
 
