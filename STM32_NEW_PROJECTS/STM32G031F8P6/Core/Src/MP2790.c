@@ -426,6 +426,6 @@ void get_self_U()
     printf("rd_V5=%d,%03dV\r\n",rd_V5/1000, rd_V5%1000);
 //Value = Setting x 3.2227mV
     uint16_t rd_VASELF  = read_MP2790(RD_VASELF) * 32227 / 10000;
-    printf("rd_VASELF=%d,%03dV\r\n",rd_VASELF/1000, rd_VASELF%1000);
+    printf("rd_VASELF=%d,%03dV\r\n\n",rd_VASELF/1000, rd_VASELF%1000);
 
 }
