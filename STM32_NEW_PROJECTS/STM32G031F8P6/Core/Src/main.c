@@ -141,7 +141,8 @@ int main(void)
 
   while (1)
   {
-      HAL_Delay(10000);
+      HAL_Delay(3000);
+//      getStatus();
       read_Temp();
       read_U_I();
 

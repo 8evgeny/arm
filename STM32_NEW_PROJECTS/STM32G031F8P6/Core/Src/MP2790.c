@@ -10,7 +10,7 @@ typedef struct _data16
     }value;
 }data_16;
 data_16 data16; //2790
-uint16_t U1,U2,U3,U4,I1,I2,I3,I4,V_PACK,V_TOP,NTC1,NTC2,NTC3,NTC4;
+uint16_t U1,U2,U3,U4,I1,I2,I3,I4,I_TOP,V_PACK,V_TOP,NTC1,NTC2,NTC3,NTC4;
 uint16_t Temperature;
 
 void init_2790()
@@ -32,14 +32,20 @@ void init_2790()
     init_DSGSC_CFG();
     init_FET_MODE();
     init_LOAD_CHARGER();
-//HAL_Delay(100);
-    pulse_DOUN_UP(One_Wire_Pin, 1);
+//    pulse_DOUN_UP(One_Wire_Pin, 1);
     initFET_CFG();
-    init_CHG_DSG_MOSFET();
-//    get_OC_Status();
+    init_ACT_CFG();
+    HAL_Delay(100);
     getStatus();
+    get_OC_Status();
 
-//    get_V_PACK_TOP();
+    printf("  SELF_CFG\r\n");
+    read_MP2790(SELF_CFG);
+    write_MP2790(SELF_CFG, data16.value.value |= 0b0000000000001000);
+    print_MP2790(SELF_CFG);
+    printf("\r\n");
+
+    get_V_PACK_TOP();
 }
 
 void read_2790_REGS()
@@ -104,11 +110,13 @@ void read_U_I()
     I2 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
     I3 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
     I4 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
+    I_TOP = (read_MP2790(RD_ITOP) & 0x7FFF) * 20000000 / 32768 ;
 
     printf("U1=%d,%03dV I1=%d,%03dmA\r\n",U1/1000, U1%1000, I1/1000,I1%1000);
     printf("U2=%d,%03dV I2=%d,%03dmA\r\n",U2/1000, U2%1000, I2/1000,I2%1000);
     printf("U3=%d,%03dV I3=%d,%03dmA\r\n",U3/1000, U3%1000, I3/1000,I3%1000);
     printf("U4=%d,%03dV I4=%d,%03dmA\r\n",U4/1000, U4%1000, I4/1000,I4%1000);
+    printf("I_TOP=%d,%03dmA\r\n",I_TOP/1000,I_TOP%1000);
     printf("\r\n");
 }
 
@@ -259,8 +267,14 @@ void resetErrors()
 void initPins()
 {
     printf("  initPins()\r\n");
+    read_MP2790(PINS_CFG);
     write_MP2790(PINS_CFG, data16.value.value &= 0b1111111110011111);   // 5 6 bits to 0
     print_MP2790(PINS_CFG);
+
+    read_MP2790(GPIO_CFG);
+    write_MP2790(GPIO_CFG, data16.value.value |= 0b0000010001000100); //Pull-up 20kOm GPIO 1 2 3
+    print_MP2790(GPIO_CFG);
+
     printf("\r\n");
 }
 
@@ -294,7 +308,7 @@ void init_NTC()
 
 void getStatus()
 {
-    printf("  getStatus()\r\n");
+//    printf("getStatus()\r\n");
     printf("  FT_STS\r\n");
     print_MP2790(FT_STS1);
     print_MP2790(FT_STS2);
@@ -313,14 +327,14 @@ void getWDTStatus()
     printf("\r\n");
 }
 
-void init_CHG_DSG_MOSFET()
+void init_ACT_CFG()
 {
-//    printf("  init_CHG_DSG_MOSFET()\r\n");
+    printf("  init_ACT_CFG()\r\n");
     read_MP2790(ACT_CFG);
     write_MP2790(ACT_CFG, data16.value.value |= 0b0000000000011000);    //  3  4  bits to 1
     write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);     //  1 bit to 0
-//    print_MP2790(ACT_CFG);
-//    printf("\r\n");
+    print_MP2790(ACT_CFG);
+    printf("\r\n");
 }
 
 void delay_mks(uint16_t delay)
@@ -378,7 +392,7 @@ void init_OCFT_CTRL()
 {
     printf("  init_OCFT_CTRL()\r\n");
     read_MP2790(OCFT_CTRL);
-    write_MP2790(OCFT_CTRL, data16.value.value &= 0b1111111100111100);
+    write_MP2790(OCFT_CTRL, data16.value.value &= 0b1111111000111000);
     print_MP2790(OCFT_CTRL);
     printf("\r\n");
 }
@@ -397,4 +411,21 @@ void get_OC_Status()
     printf("  get_OC_Status()\r\n");
     print_MP2790(OC_STATUS);
     printf("\r\n");
+}
+
+void get_self_U()
+{
+    adcOn();
+// Voltage = Reading x 3300 / 32768 (mV)
+    uint16_t rd_V1P8  = read_MP2790(RD_V1P8) * 3300 / 32768;
+    printf("rd_V1P8=%d,%03dV\r\n",rd_V1P8/1000, rd_V1P8%1000);
+// Voltage = Reading x 6600 / 32768 (mV)
+    uint16_t rd_V3P3  = read_MP2790(RD_V3P3) * 6600 / 32768;
+    printf("rd_V3P3=%d,%03dV\r\n",rd_V3P3/1000, rd_V3P3%1000);
+    uint16_t rd_V5  = read_MP2790(RD_V5) * 6600 / 32768;
+    printf("rd_V5=%d,%03dV\r\n",rd_V5/1000, rd_V5%1000);
+//Value = Setting x 3.2227mV
+    uint16_t rd_VASELF  = read_MP2790(RD_VASELF) * 32227 / 10000;
+    printf("rd_VASELF=%d,%03dV\r\n",rd_VASELF/1000, rd_VASELF%1000);
+
 }

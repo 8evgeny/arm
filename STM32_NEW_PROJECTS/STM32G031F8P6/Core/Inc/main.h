@@ -108,7 +108,7 @@ void initPins();
 void init_NTC();
 void getStatus();
 void getWDTStatus();
-void init_CHG_DSG_MOSFET();
+void init_ACT_CFG();
 void delay_mks(uint16_t delay);
 void pulse_DOUN_UP(uint16_t pin, uint16_t delay);
 void init_LOAD_CHARGER();
