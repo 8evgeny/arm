@@ -65,7 +65,7 @@ void SystemClock_Config(void);
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-  if(GPIO_Pin == IRQ_FROM_42790_Pin)
+  if(GPIO_Pin == IRQ_FROM_7920_EXTI_IRQn)
   {
     printf("\r\n========== xALERT ===========\r\n");
   } else
@@ -113,7 +113,7 @@ int main(void)
 
 //    HAL_GPIO_WritePin(GPIOA, Enable_I2sC_2790_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
+//    HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Enable_2790_Pin, GPIO_PIN_SET);
 
   /* USER CODE END 2 */
@@ -128,32 +128,22 @@ int main(void)
 
 #endif
 //    simpleTestI2C_EEPROM(0x10);
+
+
     init_2790();
+//    get_self_U();
 //    init_42790();
 //    read_2790_REGS();
 //    read_42790_REGS();
 
-//read_Temp();
-//HAL_Delay(500);
-//read_Temp();
-//HAL_Delay(500);
-//read_Temp();
 
-//  read_U_I();
+
+
   while (1)
   {
-//      read_U_I();
-      print_MP2790(RD_ICELL3);
-      print_MP2790(RD_ITOP);
-//    read_I();
-//    get_V_PACK_TOP();
-//    printf("  RD_ITOP\r\n");
-//    print_MP2790(RD_ITOP);
-
-    HAL_Delay(1000);
-
-//    getStatus();
-
+      HAL_Delay(10000);
+      read_Temp();
+      read_U_I();
 
     /* USER CODE END WHILE */
 
@@ -184,7 +174,7 @@ void SystemClock_Config(void)
   }
 
   /* Set APB1 prescaler*/
-  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
+  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
   /* Update CMSIS variable (which can be updated also through SystemCoreClockUpdate function) */
   LL_SetSystemCoreClock(16000000);
 
