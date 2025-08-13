@@ -131,12 +131,24 @@ int main(void)
 
 
 //    init_2790();
-    init_42790();
+//    init_42790();
 //    read_2790_REGS();
-    read_42790_REGS();
+//    read_42790_REGS();
 
+//    CONFIG_MODE_CMD();
 
+    print_MP42790_8_CRC(0x1001);
+//    print_MP42790_16_CRC(0x1207);
+//    print_MP42790_32_CRC(0x0022);
 
+//    uint16_t reg = 0x1001;
+//    print_MP42790_8_CRC(reg);
+//    uint8_t value = read_MP42790_8_CRC(reg);
+//    ++value;
+//    write_MP42790_8_CRC(reg, value);
+//    print_MP42790_8_CRC(reg);
+
+//    CONFIG_EXIT_CMD();
 
   while (1)
   {
