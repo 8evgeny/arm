@@ -143,6 +143,7 @@ int main(void)
   {
       HAL_Delay(3000);
 //      getStatus();
+      get_self_U();
       read_Temp();
       read_U_I();
 
