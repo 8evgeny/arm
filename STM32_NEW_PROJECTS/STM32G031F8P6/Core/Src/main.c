@@ -111,10 +111,9 @@ int main(void)
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 
-//    HAL_GPIO_WritePin(GPIOA, Enable_I2sC_2790_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
-//    HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, Enable_2790_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
+//    HAL_GPIO_WritePin(GPIOA, Enable_2790_Pin, GPIO_PIN_SET);
 
   /* USER CODE END 2 */
 
