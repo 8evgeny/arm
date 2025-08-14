@@ -114,6 +114,8 @@ int main(void)
 
     SEGGER_RTT_Init();
     SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
+    HAL_GPIO_WritePin(USART2_CS_GPIO_Port, USART2_CS_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(USART3_CS_GPIO_Port, USART3_CS_Pin, GPIO_PIN_SET);
     all_led_OFF();
     simpleTestI2C_EEPROM(0x00);
 
@@ -126,8 +128,14 @@ int main(void)
       GPIO_ON(Blue_LED_Pin);
       HAL_Delay(10);
       GPIO_OFF(Blue_LED_Pin);
-      HAL_Delay(1000);
-      printf("UART Test\r\n");
+      HAL_Delay(5000);
+      printf("UART2 Test\r\n");
+      GPIO_ON(Red_LED_Pin);
+      HAL_Delay(10);
+      GPIO_OFF(Red_LED_Pin);
+      HAL_Delay(5000);
+
+
 
     /* USER CODE END WHILE */
 
@@ -537,14 +545,14 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, ACOK_1_Pin|PROCHOT_2_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(USART2_ENABLE_GPIO_Port, USART2_ENABLE_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(USART2_CS_GPIO_Port, USART2_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, PROCHOT_1_Pin|ACOK_2_Pin|Blue_LED_Pin|Red_LED_Pin
                           |Green_LED_Pin|Yellow_LED_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(USART2_ENABLEB14_GPIO_Port, USART2_ENABLEB14_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(USART3_CS_GPIO_Port, USART3_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : Power_GOOD_Pin */
   GPIO_InitStruct.Pin = Power_GOOD_Pin;
@@ -552,8 +560,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(Power_GOOD_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : ACOK_1_Pin USART2_ENABLE_Pin PROCHOT_2_Pin */
-  GPIO_InitStruct.Pin = ACOK_1_Pin|USART2_ENABLE_Pin|PROCHOT_2_Pin;
+  /*Configure GPIO pins : ACOK_1_Pin USART2_CS_Pin PROCHOT_2_Pin */
+  GPIO_InitStruct.Pin = ACOK_1_Pin|USART2_CS_Pin|PROCHOT_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -565,9 +573,9 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PROCHOT_1_Pin ACOK_2_Pin USART2_ENABLEB14_Pin Blue_LED_Pin
+  /*Configure GPIO pins : PROCHOT_1_Pin ACOK_2_Pin USART3_CS_Pin Blue_LED_Pin
                            Red_LED_Pin Green_LED_Pin Yellow_LED_Pin */
-  GPIO_InitStruct.Pin = PROCHOT_1_Pin|ACOK_2_Pin|USART2_ENABLEB14_Pin|Blue_LED_Pin
+  GPIO_InitStruct.Pin = PROCHOT_1_Pin|ACOK_2_Pin|USART3_CS_Pin|Blue_LED_Pin
                           |Red_LED_Pin|Green_LED_Pin|Yellow_LED_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -590,13 +598,11 @@ void all_led_OFF()
 }
 int _write(int fd, char *str, int len)
 {
-//    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
     for(int i=0; i<len; i++)
     {
         HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
         SEGGER_RTT_PutChar(0, str[i]);
     }
-//    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_RESET);
     return len;
 }
 

@@ -55,8 +55,8 @@ void Error_Handler(void);
 #define Power_GOOD_GPIO_Port GPIOC
 #define ACOK_1_Pin GPIO_PIN_0
 #define ACOK_1_GPIO_Port GPIOA
-#define USART2_ENABLE_Pin GPIO_PIN_1
-#define USART2_ENABLE_GPIO_Port GPIOA
+#define USART2_CS_Pin GPIO_PIN_1
+#define USART2_CS_GPIO_Port GPIOA
 #define ADC_IAM_1_Pin GPIO_PIN_4
 #define ADC_IAM_1_GPIO_Port GPIOA
 #define ADC_IBM_1_Pin GPIO_PIN_5
@@ -75,8 +75,8 @@ void Error_Handler(void);
 #define ACOK_2_GPIO_Port GPIOB
 #define INT_2_Pin GPIO_PIN_13
 #define INT_2_GPIO_Port GPIOB
-#define USART2_ENABLEB14_Pin GPIO_PIN_14
-#define USART2_ENABLEB14_GPIO_Port GPIOB
+#define USART3_CS_Pin GPIO_PIN_14
+#define USART3_CS_GPIO_Port GPIOB
 #define PROCHOT_2_Pin GPIO_PIN_10
 #define PROCHOT_2_GPIO_Port GPIOA
 #define Blue_LED_Pin GPIO_PIN_3
