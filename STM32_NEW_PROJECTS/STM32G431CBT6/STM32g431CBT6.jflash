@@ -3,7 +3,7 @@
 [GENERAL]
   aATEModuleSel[24] = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
   ConnectMode = 0
-  CurrentFile = ""
+  CurrentFile = "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G431CBT6/build/STM32G431CBT6.elf"
   DataFileSAddr = 0x00000000
   GUIMode = 0
   HostName = ""

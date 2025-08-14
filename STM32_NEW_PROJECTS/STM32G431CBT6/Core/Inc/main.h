@@ -94,6 +94,9 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN Private defines */
 
+#define GPIO_ON(x) HAL_GPIO_WritePin(GPIOB, x, GPIO_PIN_RESET)
+#define GPIO_OFF(x) HAL_GPIO_WritePin(GPIOB, x, GPIO_PIN_SET)
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

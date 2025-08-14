@@ -112,12 +112,23 @@ int main(void)
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
 
+  //ALL GPIO OFF
+    GPIO_OFF(Blue_LED_Pin);
+    GPIO_OFF(Red_LED_Pin);
+    GPIO_OFF(Green_LED_Pin);
+    GPIO_OFF(Yellow_LED_Pin);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+      GPIO_ON(Blue_LED_Pin);
+      HAL_Delay(10);
+      GPIO_OFF(Blue_LED_Pin);
+      HAL_Delay(1000);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
