@@ -7,6 +7,8 @@
 #include <time.h>
 #include "SEGGER_RTT.h"
 #include "SEGGER_RTT_Conf.h"
+//#define MP2650_ADDRESS 0x5C
+#define MP2650_ADDRESS 0xB8
 
 /* USER CODE END Header */
 
