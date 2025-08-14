@@ -127,7 +127,7 @@ int main(void)
       GPIO_ON(Blue_LED_Pin);
       HAL_Delay(10);
       GPIO_OFF(Blue_LED_Pin);
-      HAL_Delay(1000);
+      HAL_Delay(3000);
 
     /* USER CODE END WHILE */
 
