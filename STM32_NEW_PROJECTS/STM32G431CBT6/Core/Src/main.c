@@ -526,10 +526,11 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, ACOK_1_Pin|PROCHOT_2_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, PROCHOT_1_Pin|ACOK_2_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, PROCHOT_1_Pin|ACOK_2_Pin|Blue_LED_Pin|Red_LED_Pin
+                          |Green_LED_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, Blue_LED_Pin|Red_LED_Pin|Green_LED_Pin|Yellow_LED_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(Yellow_LED_GPIO_Port, Yellow_LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : Power_GOOD_Pin */
   GPIO_InitStruct.Pin = Power_GOOD_Pin;
