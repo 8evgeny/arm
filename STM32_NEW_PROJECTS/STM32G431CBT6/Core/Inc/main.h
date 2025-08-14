@@ -94,6 +94,7 @@ void Error_Handler(void);
 #define GPIO_OFF(x) HAL_GPIO_WritePin(GPIOB, x, GPIO_PIN_SET)
 
 void simpleTestI2C_EEPROM(uint16_t addr);
+void led_Test();
 
 /* USER CODE END Private defines */
 

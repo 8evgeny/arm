@@ -125,17 +125,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-      GPIO_ON(Blue_LED_Pin);
-      HAL_Delay(10);
-      GPIO_OFF(Blue_LED_Pin);
-      HAL_Delay(500);
-//      printf("UART2 Test\r\n");
-      GPIO_ON(Red_LED_Pin);
-      HAL_Delay(10);
-      GPIO_OFF(Red_LED_Pin);
-      HAL_Delay(500);
-
-
+//    printf("UART2 Test\r\n");
+      led_Test();
 
     /* USER CODE END WHILE */
 
@@ -629,6 +620,45 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
     printf("EEPROM read: %s\r\n",rd_value);
 }
+
+void led_Test()
+{
+    GPIO_ON(Blue_LED_Pin);
+    HAL_Delay(30);
+    GPIO_OFF(Blue_LED_Pin);
+    HAL_Delay(30);
+    GPIO_ON(Red_LED_Pin);
+    HAL_Delay(30);
+    GPIO_OFF(Red_LED_Pin);
+    HAL_Delay(30);
+    GPIO_ON(Green_LED_Pin);
+    HAL_Delay(30);
+    GPIO_OFF(Green_LED_Pin);
+    HAL_Delay(30);
+    GPIO_ON(Yellow_LED_Pin);
+    HAL_Delay(30);
+    GPIO_OFF(Yellow_LED_Pin);
+
+    HAL_Delay(500);
+
+    GPIO_ON(Yellow_LED_Pin);
+    HAL_Delay(30);
+    GPIO_OFF(Yellow_LED_Pin);
+    GPIO_ON(Green_LED_Pin);
+    HAL_Delay(30);
+    GPIO_OFF(Green_LED_Pin);
+    HAL_Delay(30);
+    GPIO_ON(Red_LED_Pin);
+    HAL_Delay(30);
+    GPIO_OFF(Red_LED_Pin);
+    HAL_Delay(30);
+    GPIO_ON(Blue_LED_Pin);
+    HAL_Delay(30);
+    GPIO_OFF(Blue_LED_Pin);
+
+    HAL_Delay(500);
+}
+
 /* USER CODE END 4 */
 
 /**
