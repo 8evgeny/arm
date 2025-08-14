@@ -132,7 +132,8 @@ int main(void)
       GPIO_ON(Blue_LED_Pin);
       HAL_Delay(10);
       GPIO_OFF(Blue_LED_Pin);
-      HAL_Delay(3000);
+      HAL_Delay(2000);
+      printf("GPIO_ON_OFF\r\n");
 
     /* USER CODE END WHILE */
 

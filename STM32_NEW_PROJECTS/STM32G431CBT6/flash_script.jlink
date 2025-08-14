@@ -4,4 +4,5 @@ speed 2000                            // Select speed
 r
 h
 loadfile /home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G431CBT6/build/STM32G431CBT6.bin 0x08000000   // Load data file
+r
 exit
