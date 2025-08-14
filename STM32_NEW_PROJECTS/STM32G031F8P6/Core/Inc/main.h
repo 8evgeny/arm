@@ -171,7 +171,7 @@ asm volatile ("MOV R0,%[loops]\n                       \
               SUB R0, #1\n                             \
               CMP R0, #0\n                             \
               BNE 1b \t"                               \
-              : : [loops] "r" (9*us) : "memory"       \
+              : : [loops] "r" (40*us) : "memory"       \
               );                                       \
 } while(0)
 

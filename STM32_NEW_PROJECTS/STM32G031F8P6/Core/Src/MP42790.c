@@ -341,7 +341,7 @@ void receive_Data_32_CRC(uint16_t regAddr)
 }
 uint8_t read_MP42790_8_CRC(uint16_t regAddr)
 {
-    HAL_Delay(10);
+//    HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_8(regAddr);
     int8_t CRC_OK = -1;

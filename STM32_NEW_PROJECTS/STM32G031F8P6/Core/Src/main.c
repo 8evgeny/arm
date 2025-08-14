@@ -112,7 +112,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   init_Print_to_RS485();
-//  init_2790();
+  init_2790();
   init_42790();
 
   /* USER CODE END 2 */
@@ -126,7 +126,7 @@ int main(void)
 
 
 #endif
-//    simpleTestI2C_EEPROM(0x00);
+    simpleTestI2C_EEPROM(0x00);
 
 //    read_2790_REGS();
 //    read_42790_REGS();
@@ -151,8 +151,8 @@ int main(void)
       HAL_Delay(3000);
 //      getStatus();
 //      get_self_U();
-//      read_Temp();
-//      read_U_I();
+      read_Temp();
+      read_U_I();
 
     /* USER CODE END WHILE */
 
@@ -173,7 +173,6 @@ void SystemClock_Config(void)
   {
   }
 
-  LL_RCC_SetHSIDiv(LL_RCC_HSI_DIV_4);
   /* Set AHB prescaler*/
   LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
 
@@ -184,9 +183,9 @@ void SystemClock_Config(void)
   }
 
   /* Set APB1 prescaler*/
-  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
+  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
   /* Update CMSIS variable (which can be updated also through SystemCoreClockUpdate function) */
-  LL_SetSystemCoreClock(4000000);
+  LL_SetSystemCoreClock(16000000);
 
    /* Update the time base */
   if (HAL_InitTick (TICK_INT_PRIORITY) != HAL_OK)
@@ -215,8 +214,8 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     printf("Simple test I2C_EEPROM ...\r\n");
 
     uint8_t rd_value[20] = {0};
-//    uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
-    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
+    uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
+//    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
 
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
