@@ -22,13 +22,12 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -fdata-sections \
     -Wall \
     -fstack-usage \
-    -fcyclomatic-complexity \
     --specs=nano.specs \
     -mfpu=fpv4-sp-d16 \
     -mfloat-abi=hard \
     -mthumb \
     ")
-
+#-fcyclomatic-complexity \
 
 include_directories(
     Core/Inc
@@ -90,7 +89,7 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
 #   COMMENT "Write Flash ")
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
-   COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32G030F6 -if SWD -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G030F6P6TR/flash_script.jlink"
+   COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32G431CB -if SWD -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G431CBT6/flash_script.jlink"
    COMMENT "Write Flash ")
 
 #-speed 2000
