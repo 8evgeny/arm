@@ -16,6 +16,7 @@ uint16_t Temperature;
 void init_2790()
 {
     printf("\r\n========== init_MP2790 ===========\r\n\n");
+    HAL_GPIO_WritePin(GPIOA, Enable_2790_Pin, GPIO_PIN_SET);
     getWDTStatus();
     resetErrors();
     getLockRegisters();

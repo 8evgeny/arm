@@ -85,6 +85,7 @@ void Error_Handler(void);
 
 void Printf(const char* fmt, ...);
 
+void init_Print_to_RS485();
 void init_2790();
 void init_42790();
 void disable_42790_REGS_CRC();
@@ -170,7 +171,7 @@ asm volatile ("MOV R0,%[loops]\n                       \
               SUB R0, #1\n                             \
               CMP R0, #0\n                             \
               BNE 1b \t"                               \
-              : : [loops] "r" (4*us) : "memory"       \
+              : : [loops] "r" (9*us) : "memory"       \
               );                                       \
 } while(0)
 

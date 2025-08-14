@@ -111,9 +111,9 @@ int main(void)
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 
-    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
-//    HAL_GPIO_WritePin(GPIOA, Enable_2790_Pin, GPIO_PIN_SET);
+  init_Print_to_RS485();
+//  init_2790();
+  init_42790();
 
   /* USER CODE END 2 */
 
@@ -128,9 +128,6 @@ int main(void)
 #endif
 //    simpleTestI2C_EEPROM(0x00);
 
-
-//    init_2790();
-//    init_42790();
 //    read_2790_REGS();
 //    read_42790_REGS();
 
@@ -347,6 +344,11 @@ int _write(int fd, char *str, int len)
     }
     HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_RESET);
     return len;
+}
+
+void init_Print_to_RS485()
+{
+    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
 }
 
 /* USER CODE END 4 */
