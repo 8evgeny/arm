@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # Set ARM compiler
-#set(TOOLS_PATH /home/user/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi)
-set(TOOLS_PATH /home/user/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi)
+set(TOOLS_PATH /home/user/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi)
+#set(TOOLS_PATH /home/user/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi)
 
 #set(CMAKE_C_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-gcc)
 #set(CMAKE_CXX_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
@@ -49,7 +49,7 @@ file (GLOB SOURCES_C
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
     )
-#-mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE CXX)
 set(LINKER_SCRIPT_FLASH "${CMAKE_SOURCE_DIR}/STM32G431CBTX_FLASH.ld")
 set(LINKER_FLAGS "SHELL: \
@@ -60,15 +60,11 @@ set(LINKER_FLAGS "SHELL: \
     -Wl,--gc-sections \
     -static \
     --specs=nano.specs \
+    -mfpu=fpv4-sp-d16 \
+    -mfloat-abi=hard \
+    -mthumb \
+    -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
     -Wl,--gc-sections,--print-memory-usage \
-    -mfloat-abi=soft \
-    -mthumb
-    -Wl,--start-group \
-    -lc \
-    -lm \
-    -lstdc++ -lsupc++ \
-    -Wl,--end-group \
-    -Xlinker -Map=${PROJECT_NAME}.map \
     ")
 
 target_link_options(${PROJECT_NAME}.elf PRIVATE ${LINKER_FLAGS})
