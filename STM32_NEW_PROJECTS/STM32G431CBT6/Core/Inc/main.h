@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define Power_GOOD_Pin GPIO_PIN_13
+#define Power_GOOD_GPIO_Port GPIOC
 #define ACOK_1_Pin GPIO_PIN_0
 #define ACOK_1_GPIO_Port GPIOA
 #define ADC_IAM_1_Pin GPIO_PIN_4
@@ -81,6 +83,14 @@ void Error_Handler(void);
 #define INT_2_GPIO_Port GPIOB
 #define PROCHOT_2_Pin GPIO_PIN_10
 #define PROCHOT_2_GPIO_Port GPIOA
+#define Blue_LED_Pin GPIO_PIN_3
+#define Blue_LED_GPIO_Port GPIOB
+#define Red_LED_Pin GPIO_PIN_5
+#define Red_LED_GPIO_Port GPIOB
+#define Green_LED_Pin GPIO_PIN_6
+#define Green_LED_GPIO_Port GPIOB
+#define Yellow_LED_Pin GPIO_PIN_9
+#define Yellow_LED_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

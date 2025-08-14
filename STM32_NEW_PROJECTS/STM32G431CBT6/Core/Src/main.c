@@ -162,8 +162,8 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
   {
@@ -246,7 +246,7 @@ static void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.Timing = 0x00503D58;
+  hi2c1.Init.Timing = 0x00201D2B;
   hi2c1.Init.OwnAddress1 = 0;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -294,7 +294,7 @@ static void MX_I2C2_Init(void)
 
   /* USER CODE END I2C2_Init 1 */
   hi2c2.Instance = I2C2;
-  hi2c2.Init.Timing = 0x00503D58;
+  hi2c2.Init.Timing = 0x00201D2B;
   hi2c2.Init.OwnAddress1 = 0;
   hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -517,6 +517,8 @@ static void MX_GPIO_Init(void)
   /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
@@ -524,7 +526,16 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, ACOK_1_Pin|PROCHOT_2_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, INT_1_Pin|PROCHOT_1_Pin|ACOK_2_Pin|INT_2_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, PROCHOT_1_Pin|ACOK_2_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, Blue_LED_Pin|Red_LED_Pin|Green_LED_Pin|Yellow_LED_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : Power_GOOD_Pin */
+  GPIO_InitStruct.Pin = Power_GOOD_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(Power_GOOD_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : ACOK_1_Pin PROCHOT_2_Pin */
   GPIO_InitStruct.Pin = ACOK_1_Pin|PROCHOT_2_Pin;
@@ -533,8 +544,16 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : INT_1_Pin PROCHOT_1_Pin ACOK_2_Pin INT_2_Pin */
-  GPIO_InitStruct.Pin = INT_1_Pin|PROCHOT_1_Pin|ACOK_2_Pin|INT_2_Pin;
+  /*Configure GPIO pins : INT_1_Pin INT_2_Pin */
+  GPIO_InitStruct.Pin = INT_1_Pin|INT_2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PROCHOT_1_Pin ACOK_2_Pin Blue_LED_Pin Red_LED_Pin
+                           Green_LED_Pin Yellow_LED_Pin */
+  GPIO_InitStruct.Pin = PROCHOT_1_Pin|ACOK_2_Pin|Blue_LED_Pin|Red_LED_Pin
+                          |Green_LED_Pin|Yellow_LED_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
