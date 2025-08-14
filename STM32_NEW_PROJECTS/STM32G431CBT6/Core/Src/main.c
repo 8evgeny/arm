@@ -128,12 +128,12 @@ int main(void)
       GPIO_ON(Blue_LED_Pin);
       HAL_Delay(10);
       GPIO_OFF(Blue_LED_Pin);
-      HAL_Delay(5000);
+      HAL_Delay(500);
       printf("UART2 Test\r\n");
       GPIO_ON(Red_LED_Pin);
       HAL_Delay(10);
       GPIO_OFF(Red_LED_Pin);
-      HAL_Delay(5000);
+      HAL_Delay(500);
 
 
 
@@ -614,8 +614,8 @@ void simpleTestI2C_EEPROM(uint16_t addr)
     printf("Simple test I2C_EEPROM ...\r\n");
 
     uint8_t rd_value[20] = {0};
-    uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
-//    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
+//    uint8_t wr_value[20] = {'1','2','3','4','5','6','7','8'};
+    uint8_t wr_value[20] = {'=','=','=','1','2','=','=','='};
 
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, rd_value, num, HAL_MAX_DELAY);
