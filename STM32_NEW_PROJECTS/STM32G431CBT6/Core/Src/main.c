@@ -117,7 +117,7 @@ int main(void)
     HAL_GPIO_WritePin(USART2_CS_GPIO_Port, USART2_CS_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(USART3_CS_GPIO_Port, USART3_CS_Pin, GPIO_PIN_SET);
     all_led_OFF();
-    simpleTestI2C_EEPROM(0x00);
+//    simpleTestI2C_EEPROM(0x00);
 
   /* USER CODE END 2 */
 
@@ -129,7 +129,7 @@ int main(void)
       HAL_Delay(10);
       GPIO_OFF(Blue_LED_Pin);
       HAL_Delay(500);
-      printf("UART2 Test\r\n");
+//      printf("UART2 Test\r\n");
       GPIO_ON(Red_LED_Pin);
       HAL_Delay(10);
       GPIO_OFF(Red_LED_Pin);
