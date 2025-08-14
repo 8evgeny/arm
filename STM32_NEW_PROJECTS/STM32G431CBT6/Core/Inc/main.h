@@ -28,7 +28,7 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+void all_led_OFF();
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -92,9 +92,6 @@ void Error_Handler(void);
 void simpleTestI2C_EEPROM(uint16_t addr);
 
 /* USER CODE END Private defines */
-
-
-
 
 #ifdef __cplusplus
 }

@@ -112,16 +112,10 @@ int main(void)
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
 
-  SEGGER_RTT_Init();
-  SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
-
-  //ALL GPIO OFF
-    GPIO_OFF(Blue_LED_Pin);
-    GPIO_OFF(Red_LED_Pin);
-    GPIO_OFF(Green_LED_Pin);
-    GPIO_OFF(Yellow_LED_Pin);
-
-//    simpleTestI2C_EEPROM(0x00);
+    SEGGER_RTT_Init();
+    SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
+    all_led_OFF();
+    simpleTestI2C_EEPROM(0x00);
 
   /* USER CODE END 2 */
 
@@ -132,8 +126,8 @@ int main(void)
       GPIO_ON(Blue_LED_Pin);
       HAL_Delay(10);
       GPIO_OFF(Blue_LED_Pin);
-      HAL_Delay(2000);
-      printf("GPIO_ON_OFF\r\n");
+      HAL_Delay(1000);
+      printf("UART Test\r\n");
 
     /* USER CODE END WHILE */
 
@@ -581,6 +575,13 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+void all_led_OFF()
+{
+    GPIO_OFF(Blue_LED_Pin);
+    GPIO_OFF(Red_LED_Pin);
+    GPIO_OFF(Green_LED_Pin);
+    GPIO_OFF(Yellow_LED_Pin);
+}
 int _write(int fd, char *str, int len)
 {
 //    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
