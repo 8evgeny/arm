@@ -25,6 +25,14 @@ typedef struct _data16
 }data_16;
 data_16 data16; //2650
 
+typedef struct _data8
+{
+    uint8_t value;
+}data_8;
+
+data_16 data16;
+data_8 data8;
+
 
 /* USER CODE END Includes */
 
@@ -129,7 +137,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
     print_Regs16();
-
+    print_Regs8();
 
   while (1)
   {
@@ -611,7 +619,6 @@ int _write(int fd, char *str, int len)
     return len;
 }
 
-
 void simpleTestI2C_EEPROM(uint16_t addr)
 {
 // Пишет по 8 байт в адреса кратные 8 Читать может больше
@@ -675,7 +682,8 @@ void led_Test()
 
 uint16_t read_MP2650_16(uint8_t regAddr)
 {
-    data16.value.value = 0x0000;
+    HAL_Delay(50);
+    data16.value.value = 0xFFFF;
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_StatusTypeDef ret;
     ret = HAL_I2C_Mem_Read(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data16.value.val, 2, HAL_MAX_DELAY);
@@ -685,8 +693,8 @@ uint16_t read_MP2650_16(uint8_t regAddr)
     }
     else
     {
-        printf("ret = %d\r\n", ret);
-        return 0x0A0A;
+        printf("error code = %d\r\n", ret);
+        return 0xFFFF;
     }
 }
 
@@ -700,7 +708,7 @@ void write_MP2650_16(uint8_t regAddr, uint16_t regValue)
 void print_MP2650_16(uint8_t regAddr)
 {
     data16.value.value = read_MP2650_16(regAddr);
-    printf("MP2650  reg %02X     0x%04X\t", regAddr, data16.value.value);
+    printf("MP2650_16 reg %02X     0x%04X\t", regAddr, data16.value.value);
     print_byte(data16.value.val[1]);
     printf(" ");
     print_byte(data16.value.val[0]);
@@ -728,6 +736,74 @@ void print_Regs16()
     print_MP2650_16(ADC_Result_for_NTC_Voltage_16BIT);
     printf("\r\n");
 }
+
+uint8_t read_MP2650_8(uint8_t regAddr)
+{
+    HAL_Delay(50);
+    data8.value = 0xFF;
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_StatusTypeDef ret;
+    ret = HAL_I2C_Mem_Read(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, &data8.value, 1, HAL_MAX_DELAY);
+    if(HAL_OK == ret)
+    {
+        return data8.value;
+    }
+    else
+    {
+        printf("error code = %d\r\n", ret);
+        return 0xFF;
+    }
+}
+
+void write_MP2650_8(uint8_t regAddr, uint8_t regValue)
+{
+    HAL_Delay(3);
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Write(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 1, HAL_MAX_DELAY);
+}
+
+void print_MP2650_8(uint8_t regAddr)
+{
+    data8.value = read_MP2650_8(regAddr);
+    printf("MP2650_8  reg %02X     0x%04X\t", regAddr, data8.value);
+    print_byte(data8.value);
+    printf("\r\n");
+}
+
+void print_Regs8()
+{
+    printf("\r\n");
+    print_MP2650_8(Input_Current_Limit_1_Setting);
+    print_MP2650_8(Input_Voltage_Limit_Setting);
+    print_MP2650_8(Charge_Current_Setting);
+    print_MP2650_8(Pre_Charge_and_Termination_Current_Setting);
+    print_MP2650_8(Battery_Full_Voltage_and_Recharge_Threshold_Setting);
+    print_MP2650_8(Battery_Impedance_Compensation_Junction_Temperature_Regulation);
+    print_MP2650_8(OTG_Voltage_Setting);
+    print_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
+    print_MP2650_8(Configuration_Register_0);
+    print_MP2650_8(Configuration_Register_1);
+    print_MP2650_8(Configuration_Register_2);
+    print_MP2650_8(Configuration_Register_3);
+    print_MP2650_8(Configuration_Register_4);
+    print_MP2650_8(System_OTG_Under_Voltage_and_Over_Voltage_Setting);
+    print_MP2650_8(PROCHOT_Interrupt_Debounce_Time_and_Duration_Time_Setting);
+    print_MP2650_8(Input_Current_Limit_2_Setting);
+    print_MP2650_8(Input_Current_Limit_2_Duration_Setting);
+    print_MP2650_8(Two_Level_Input_Current_Limit_Period_Setting);
+    print_MP2650_8(Input_OCP_Threshold_for_Triggering_PROCHOT);
+    print_MP2650_8(Status_Register);
+    print_MP2650_8(Fault_Register);
+    print_MP2650_8(Battery_OVP_Deglitch_Time);
+    print_MP2650_8(Battery_Voltage_Loop_Enable);
+    print_MP2650_8(Battery_Pre_Charge_Threshold_Option);
+    print_MP2650_8(System_Voltage_Threshold_for_Pulse_Skipping);
+    print_MP2650_8(INT_Mask_for_Hi_Z_Mode_Entry_and_Exit);
+    print_MP2650_8(Analog_Frequency_Loop_Enable);
+    print_MP2650_8(Hi_Z_Mode_Indication_DC_DC_Switcher_is_Off);
+    printf("\r\n");
+}
+
 
 /* USER CODE END 4 */
 

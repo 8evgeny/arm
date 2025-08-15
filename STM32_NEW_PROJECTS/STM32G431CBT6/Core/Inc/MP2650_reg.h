@@ -1,6 +1,6 @@
 ﻿/* Перечень регистров микросхемы MP2650 */
 
-//8 БИТНЫЕ
+//8 БИТНЫЕ - 28шт
 #define Input_Current_Limit_1_Setting                                       0x00
 #define Input_Voltage_Limit_Setting                                         0x01
 #define Charge_Current_Setting                                              0x02
@@ -30,7 +30,7 @@
 #define Analog_Frequency_Loop_Enable                                        0x36
 #define Hi_Z_Mode_Indication_DC_DC_Switcher_is_Off                          0x48
 
-//16 БИТНЫЕ
+//16 БИТНЫЕ - 11 шт
 #define ADC_Battery_Voltage_Result_16BIT                                    0x16
 #define ADC_System_Voltage_Result_16BIT                                     0x18
 #define ADC_Battery_Charge_Current_Result_16BIT                             0x1A
