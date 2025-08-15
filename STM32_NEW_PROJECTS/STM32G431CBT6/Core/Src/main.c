@@ -125,7 +125,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
     SEGGER_RTT_Init();
-    SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
+    SEGGER_RTT_printf(0, "\nSEGGER RTT Initialized\r\n\n");
     HAL_GPIO_WritePin(USART2_CS_GPIO_Port, USART2_CS_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(USART3_CS_GPIO_Port, USART3_CS_Pin, GPIO_PIN_SET);
     all_led_OFF();
@@ -137,7 +137,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
     print_Regs16();
-    print_Regs8();
+//    print_Regs8();
 
     print_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
     write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b11000000);
@@ -146,32 +146,37 @@ int main(void)
 
   while (1)
   {
-//    printf("UART2 Test\r\n");
       led_Test();
-      if (GPIO_PIN_SET == HAL_GPIO_ReadPin(ACOK_1_GPIO_Port, ACOK_1_Pin))
-      {
-          printf("ACOK_1_Pin SET\r\n");
-      }
-      if (GPIO_PIN_SET == HAL_GPIO_ReadPin(ACOK_2_GPIO_Port, ACOK_2_Pin))
-      {
-          printf("ACOK_2_Pin SET\r\n");
-      }
-      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(INT_1_GPIO_Port, INT_1_Pin))
-      {
-          printf("INT_1_Pin RESET\r\n");
-      }
-      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(INT_2_GPIO_Port, INT_2_Pin))
-      {
-          printf("INT_2_Pin RESET\r\n");
-      }
-      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(PROCHOT_1_GPIO_Port, PROCHOT_1_Pin))
-      {
-          printf("PROCHOT_1_Pin RESET\r\n");
-      }
-      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(PROCHOT_2_GPIO_Port, PROCHOT_2_Pin))
-      {
-          printf("PROCHOT_2_Pin RESET\r\n");
-      }
+
+//      if (GPIO_PIN_SET == HAL_GPIO_ReadPin(ACOK_1_GPIO_Port, ACOK_1_Pin))
+//      {
+//          printf("ACOK_1_Pin SET\r\n");
+//      }
+//      if (GPIO_PIN_SET == HAL_GPIO_ReadPin(ACOK_2_GPIO_Port, ACOK_2_Pin))
+//      {
+//          printf("ACOK_2_Pin SET\r\n");
+//      }
+//      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(INT_1_GPIO_Port, INT_1_Pin))
+//      {
+//          printf("INT_1_Pin RESET\r\n");
+//      }
+//      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(INT_2_GPIO_Port, INT_2_Pin))
+//      {
+//          printf("INT_2_Pin RESET\r\n");
+//      }
+//      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(PROCHOT_1_GPIO_Port, PROCHOT_1_Pin))
+//      {
+//          printf("PROCHOT_1_Pin RESET\r\n");
+//      }
+//      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(PROCHOT_2_GPIO_Port, PROCHOT_2_Pin))
+//      {
+//          printf("PROCHOT_2_Pin RESET\r\n");
+//      }
+
+
+
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -741,7 +746,88 @@ void print_MP2650_16(uint8_t regAddr)
     print_byte(data16.value.val[1]);
     printf(" ");
     print_byte(data16.value.val[0]);
+    ext_print_16(regAddr);
     printf("\r\n");
+}
+
+void ext_print_16(uint8_t regAddr)
+{
+    if(regAddr == ADC_Input_Voltage_Result_16BIT)
+    {
+        uint16_t U = 0;
+        U += ((data16.value.value >>6) & 0x0001) * 25; //mV
+        U += ((data16.value.value >>7) & 0x0001) * 50;
+        U += ((data16.value.value >>8) & 0x0001) * 100;
+        U += ((data16.value.value >>9) & 0x0001) * 200;
+        U += ((data16.value.value >>10) & 0x0001) * 400;
+        U += ((data16.value.value >>11) & 0x0001) * 800;
+        U += ((data16.value.value >>12) & 0x0001) * 1600;
+        U += ((data16.value.value >>13) & 0x0001) * 3200;
+        U += ((data16.value.value >>14) & 0x0001) * 6400;
+        U += ((data16.value.value >>15) & 0x0001) * 12800;
+        printf("  ADC_Input_Voltage_Result        %d.%03d V",U/1000,U%1000);
+    }
+    if(regAddr == ADC_Input_Current_Result_16BIT)
+    {
+        uint16_t I = 0;
+        I += ((data16.value.value >>6) & 0x0001) * 13; //В 2 раза больше
+        I += ((data16.value.value >>7) & 0x0001) * 25;
+        I += ((data16.value.value >>8) & 0x0001) * 50;
+        I += ((data16.value.value >>9) & 0x0001) * 100;
+        I += ((data16.value.value >>10) & 0x0001) * 200;
+        I += ((data16.value.value >>11) & 0x0001) * 400;
+        I += ((data16.value.value >>12) & 0x0001) * 800;
+        I += ((data16.value.value >>13) & 0x0001) * 1600;
+        I += ((data16.value.value >>14) & 0x0001) * 3200;
+        I += ((data16.value.value >>15) & 0x0001) * 6400;
+        printf("  ADC_Input_Current_Result        %d.%d mA", I/2, I%2);
+    }
+    if(regAddr == ADC_OTG_Output_Voltage_Result_16BIT)
+    {
+        uint16_t U = 0;
+        U += ((data16.value.value >>6) & 0x0001) * 25; //mV
+        U += ((data16.value.value >>7) & 0x0001) * 50;
+        U += ((data16.value.value >>8) & 0x0001) * 100;
+        U += ((data16.value.value >>9) & 0x0001) * 200;
+        U += ((data16.value.value >>10) & 0x0001) * 400;
+        U += ((data16.value.value >>11) & 0x0001) * 800;
+        U += ((data16.value.value >>12) & 0x0001) * 1600;
+        U += ((data16.value.value >>13) & 0x0001) * 3200;
+        U += ((data16.value.value >>14) & 0x0001) * 6400;
+        U += ((data16.value.value >>15) & 0x0001) * 12800;
+        printf("  ADC_OTG_Output_Voltage_Result   %d.%03d V",U/1000,U%1000);
+    }
+    if(regAddr == ADC_OTG_Output_Current_Result_16BIT)
+    {
+        uint16_t I = 0;
+        I += ((data16.value.value >>6) & 0x0001) * 13; //В 2 раза больше
+        I += ((data16.value.value >>7) & 0x0001) * 25;
+        I += ((data16.value.value >>8) & 0x0001) * 50;
+        I += ((data16.value.value >>9) & 0x0001) * 100;
+        I += ((data16.value.value >>10) & 0x0001) * 200;
+        I += ((data16.value.value >>11) & 0x0001) * 400;
+        I += ((data16.value.value >>12) & 0x0001) * 800;
+        I += ((data16.value.value >>13) & 0x0001) * 1600;
+        I += ((data16.value.value >>14) & 0x0001) * 3200;
+        I += ((data16.value.value >>15) & 0x0001) * 6400;
+        printf("  ADC_OTG_Output_Current_Result   %d.%d mA", I/2, I%2);
+    }
+    if(regAddr == ADC_Junction_Temperature_Result_16BIT)
+    {
+        uint16_t T = 0;
+        T += ((data16.value.value >>6) & 0x0001);
+        T += ((data16.value.value >>7) & 0x0001) * 2;
+        T += ((data16.value.value >>8) & 0x0001) * 4;
+        T += ((data16.value.value >>9) & 0x0001) * 8;
+        T += ((data16.value.value >>10) & 0x0001) * 16;
+        T += ((data16.value.value >>11) & 0x0001) * 32;
+        T += ((data16.value.value >>12) & 0x0001) * 64;
+        T += ((data16.value.value >>13) & 0x0001) * 128;
+        T += ((data16.value.value >>14) & 0x0001) * 256;
+        T += ((data16.value.value >>15) & 0x0001) * 512;
+        uint16_t temp = 903000 - 2578 * T;
+        printf("  ADC_Junction_Temperature_Result %d.%02d C", temp/1000, temp%100);
+    }
 }
 
 void print_byte(uint8_t byte)
