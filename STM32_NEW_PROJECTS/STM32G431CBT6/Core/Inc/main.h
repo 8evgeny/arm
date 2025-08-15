@@ -12,6 +12,16 @@
 //#define MP2650_ADDRESS 0x5C  //7bit address
 #define MP2650_ADDRESS 0xB8    //8bit address
 
+#define delayUS_ASM(us) do {                           \
+asm volatile ("MOV R0,%[loops]\n                       \
+              1: \n                                    \
+              SUB R0, #1\n                             \
+              CMP R0, #0\n                             \
+              BNE 1b \t"                               \
+              : : [loops] "r" (40*us) : "memory"       \
+              );                                       \
+} while(0)
+
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/

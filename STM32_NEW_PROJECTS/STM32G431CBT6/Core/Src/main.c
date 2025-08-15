@@ -141,13 +141,37 @@ int main(void)
 
     print_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
     write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b11000000);
+//    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value &= 0b00111111);
     print_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
 
   while (1)
   {
 //    printf("UART2 Test\r\n");
       led_Test();
-
+      if (GPIO_PIN_SET == HAL_GPIO_ReadPin(ACOK_1_GPIO_Port, ACOK_1_Pin))
+      {
+          printf("ACOK_1_Pin SET\r\n");
+      }
+      if (GPIO_PIN_SET == HAL_GPIO_ReadPin(ACOK_2_GPIO_Port, ACOK_2_Pin))
+      {
+          printf("ACOK_2_Pin SET\r\n");
+      }
+      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(INT_1_GPIO_Port, INT_1_Pin))
+      {
+          printf("INT_1_Pin RESET\r\n");
+      }
+      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(INT_2_GPIO_Port, INT_2_Pin))
+      {
+          printf("INT_2_Pin RESET\r\n");
+      }
+      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(PROCHOT_1_GPIO_Port, PROCHOT_1_Pin))
+      {
+          printf("PROCHOT_1_Pin RESET\r\n");
+      }
+      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(PROCHOT_2_GPIO_Port, PROCHOT_2_Pin))
+      {
+          printf("PROCHOT_2_Pin RESET\r\n");
+      }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -617,9 +641,9 @@ int _write(int fd, char *str, int len)
 {
     for(int i=0; i<len; i++)
     {
-//        HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
+        HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
         SEGGER_RTT_PutChar(0, str[i]);
-        HAL_Delay(1);
+        delayUS_ASM(100);
     }
     return len;
 }
@@ -726,7 +750,6 @@ void print_byte(uint8_t byte)
 
 void print_Regs16()
 {
-    printf("\r\n");
     print_MP2650_16(ADC_Battery_Voltage_Result_16BIT);
     print_MP2650_16(ADC_System_Voltage_Result_16BIT);
     print_MP2650_16(ADC_Battery_Charge_Current_Result_16BIT);
@@ -775,7 +798,6 @@ void print_MP2650_8(uint8_t regAddr)
 
 void print_Regs8()
 {
-    printf("\r\n");
     print_MP2650_8(Input_Current_Limit_1_Setting);
     print_MP2650_8(Input_Voltage_Limit_Setting);
     print_MP2650_8(Charge_Current_Setting);
