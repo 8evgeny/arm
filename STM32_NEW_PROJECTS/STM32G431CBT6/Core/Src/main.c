@@ -642,6 +642,7 @@ int _write(int fd, char *str, int len)
     for(int i=0; i<len; i++)
     {
         HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
+        HAL_UART_Transmit(&huart3, (uint8_t *)&str[i], 1, 0xFFFF);
         SEGGER_RTT_PutChar(0, str[i]);
         delayUS_ASM(100);
     }
