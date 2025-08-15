@@ -1,26 +1,30 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+const char *bit_rep[16] =
+{
+    [ 0] = "0000", [ 1] = "0001", [ 2] = "0010", [ 3] = "0011",
+    [ 4] = "0100", [ 5] = "0101", [ 6] = "0110", [ 7] = "0111",
+    [ 8] = "1000", [ 9] = "1001", [10] = "1010", [11] = "1011",
+    [12] = "1100", [13] = "1101", [14] = "1110", [15] = "1111",
+};
+
+typedef struct _data16
+{
+    union
+    {
+        uint16_t value;
+        uint8_t val[2];
+    }value;
+}data_16;
+data_16 data16; //2650
+
 
 /* USER CODE END Includes */
 
@@ -123,6 +127,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+    print_MP2650_16(ADC_Battery_Voltage_Result_16BIT);
+    print_MP2650_16(ADC_System_Voltage_Result_16BIT);
+    print_MP2650_16(ADC_Battery_Charge_Current_Result_16BIT);
+    print_MP2650_16(ADC_Input_Voltage_Result_16BIT);
+    print_MP2650_16(ADC_Input_Current_Result_16BIT);
+    print_MP2650_16(ADC_OTG_Output_Voltage_Result_16BIT);
+
   while (1)
   {
 //    printf("UART2 Test\r\n");
@@ -663,6 +675,39 @@ void led_Test()
     GPIO_OFF(Blue_LED_Pin);
 
     HAL_Delay(500);
+}
+
+uint16_t read_MP2650_16(uint8_t regAddr)
+{
+    data16.value.value = 0x0000;
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    if(HAL_OK == HAL_I2C_Mem_Read(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data16.value.val, 2, HAL_MAX_DELAY))
+    {
+        return data16.value.value;
+    }
+    return 0x0A0A;;
+}
+
+void write_MP2650_16(uint8_t regAddr, uint16_t regValue)
+{
+    HAL_Delay(3);
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Write(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
+}
+
+void print_MP2650_16(uint8_t regAddr)
+{
+    data16.value.value = read_MP2650_16(regAddr);
+    printf("MP2790  reg %02X     0x%04X\t", regAddr, data16.value.value);
+    print_byte(data16.value.val[1]);
+    printf(" ");
+    print_byte(data16.value.val[0]);
+    printf("\r\n");
+}
+
+void print_byte(uint8_t byte)
+{
+    printf("%s%s", bit_rep[byte >> 4], bit_rep[byte & 0x0F]);
 }
 
 /* USER CODE END 4 */
