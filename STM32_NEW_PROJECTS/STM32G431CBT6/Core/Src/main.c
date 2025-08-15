@@ -828,6 +828,21 @@ void ext_print_16(uint8_t regAddr)
         uint16_t temp = 903000 - 2578 * T;
         printf("  ADC_Junction_Temperature_Result %d.%02d C", temp/1000, temp%100);
     }
+    if(regAddr == ADC_System_Power_Result_16BIT)
+    {
+        uint16_t W = 0;
+        W += ((data16.value.value >>6) & 0x0001) * 125; //больше в 1000 раз
+        W += ((data16.value.value >>7) & 0x0001) * 250;
+        W += ((data16.value.value >>8) & 0x0001) * 500;
+        W += ((data16.value.value >>9) & 0x0001) * 1000;
+        W += ((data16.value.value >>10) & 0x0001) * 2000;
+        W += ((data16.value.value >>11) & 0x0001) * 4000;
+        W += ((data16.value.value >>12) & 0x0001) * 8000;
+        W += ((data16.value.value >>13) & 0x0001) * 16000;
+        W += ((data16.value.value >>14) & 0x0001) * 32000;
+        W += ((data16.value.value >>15) & 0x0001) * 64000;
+        printf("  ADC_System_Power_Result         %d.%03d W", W/1000, W%1000);
+    }
 }
 
 void print_byte(uint8_t byte)
