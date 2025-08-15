@@ -128,12 +128,8 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    print_MP2650_16(ADC_Battery_Voltage_Result_16BIT);
-    print_MP2650_16(ADC_System_Voltage_Result_16BIT);
-    print_MP2650_16(ADC_Battery_Charge_Current_Result_16BIT);
-    print_MP2650_16(ADC_Input_Voltage_Result_16BIT);
-    print_MP2650_16(ADC_Input_Current_Result_16BIT);
-    print_MP2650_16(ADC_OTG_Output_Voltage_Result_16BIT);
+    print_Regs16();
+
 
   while (1)
   {
@@ -681,11 +677,17 @@ uint16_t read_MP2650_16(uint8_t regAddr)
 {
     data16.value.value = 0x0000;
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    if(HAL_OK == HAL_I2C_Mem_Read(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data16.value.val, 2, HAL_MAX_DELAY))
+    HAL_StatusTypeDef ret;
+    ret = HAL_I2C_Mem_Read(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data16.value.val, 2, HAL_MAX_DELAY);
+    if(HAL_OK == ret)
     {
         return data16.value.value;
     }
-    return 0x0A0A;;
+    else
+    {
+        printf("ret = %d\r\n", ret);
+        return 0x0A0A;
+    }
 }
 
 void write_MP2650_16(uint8_t regAddr, uint16_t regValue)
@@ -698,7 +700,7 @@ void write_MP2650_16(uint8_t regAddr, uint16_t regValue)
 void print_MP2650_16(uint8_t regAddr)
 {
     data16.value.value = read_MP2650_16(regAddr);
-    printf("MP2790  reg %02X     0x%04X\t", regAddr, data16.value.value);
+    printf("MP2650  reg %02X     0x%04X\t", regAddr, data16.value.value);
     print_byte(data16.value.val[1]);
     printf(" ");
     print_byte(data16.value.val[0]);
@@ -708,6 +710,23 @@ void print_MP2650_16(uint8_t regAddr)
 void print_byte(uint8_t byte)
 {
     printf("%s%s", bit_rep[byte >> 4], bit_rep[byte & 0x0F]);
+}
+
+void print_Regs16()
+{
+    printf("\r\n");
+    print_MP2650_16(ADC_Battery_Voltage_Result_16BIT);
+    print_MP2650_16(ADC_System_Voltage_Result_16BIT);
+    print_MP2650_16(ADC_Battery_Charge_Current_Result_16BIT);
+    print_MP2650_16(ADC_Input_Voltage_Result_16BIT);
+    print_MP2650_16(ADC_Input_Current_Result_16BIT);
+    print_MP2650_16(ADC_OTG_Output_Voltage_Result_16BIT);
+    print_MP2650_16(ADC_OTG_Output_Current_Result_16BIT);
+    print_MP2650_16(ADC_Junction_Temperature_Result_16BIT);
+    print_MP2650_16(ADC_System_Power_Result_16BIT);
+    print_MP2650_16(ADC_Battery_Discharge_Current_Result_16BIT);
+    print_MP2650_16(ADC_Result_for_NTC_Voltage_16BIT);
+    printf("\r\n");
 }
 
 /* USER CODE END 4 */

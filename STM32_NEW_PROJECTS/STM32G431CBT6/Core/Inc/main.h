@@ -104,7 +104,7 @@ uint16_t read_MP2650_16(uint8_t regAddr);
 void write_MP2650_16(uint8_t regAddr, uint16_t regValue);
 void print_MP2650_16(uint8_t regAddr);
 void print_byte(uint8_t byte);
-
+void print_Regs16();
 
 /* USER CODE END Private defines */
 
