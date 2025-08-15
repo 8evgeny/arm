@@ -139,6 +139,10 @@ int main(void)
     print_Regs16();
     print_Regs8();
 
+    print_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
+    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b11000000);
+    print_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
+
   while (1)
   {
 //    printf("UART2 Test\r\n");
@@ -613,8 +617,9 @@ int _write(int fd, char *str, int len)
 {
     for(int i=0; i<len; i++)
     {
-        HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
+//        HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
         SEGGER_RTT_PutChar(0, str[i]);
+        HAL_Delay(1);
     }
     return len;
 }
@@ -682,7 +687,6 @@ void led_Test()
 
 uint16_t read_MP2650_16(uint8_t regAddr)
 {
-    HAL_Delay(50);
     data16.value.value = 0xFFFF;
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_StatusTypeDef ret;
@@ -739,7 +743,6 @@ void print_Regs16()
 
 uint8_t read_MP2650_8(uint8_t regAddr)
 {
-    HAL_Delay(50);
     data8.value = 0xFF;
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_StatusTypeDef ret;
@@ -765,7 +768,7 @@ void write_MP2650_8(uint8_t regAddr, uint8_t regValue)
 void print_MP2650_8(uint8_t regAddr)
 {
     data8.value = read_MP2650_8(regAddr);
-    printf("MP2650_8  reg %02X     0x%04X\t", regAddr, data8.value);
+    printf("MP2650_8  reg %02X     0x%02X\t", regAddr, data8.value);
     print_byte(data8.value);
     printf("\r\n");
 }
