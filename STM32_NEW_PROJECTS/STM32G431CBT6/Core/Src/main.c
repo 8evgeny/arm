@@ -135,6 +135,12 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
+    REG_00_set_Input_Current_Limit(1500);  //1500 mA default
+    REG_01_set_Input_Voltage_Limit(4500);  //4,5V default
+    REG_02_set_Charge_Current(300);        //1000 mA default
+//    REG_03_set_PreCharge_Current(180);  //Не реализовано   //180 mA default  (180 - 840 mA)
+    REG_03_set_Termination_Current(200);   //200 mA default  Range: 0mA to 1500mA
+
     set_4_battery();
     disable_BATTFET();
 //    enable_BATTFET();
@@ -142,14 +148,11 @@ int main(void)
 //    enable_CHARGE();
     disable_NTC_GCOMP_SEL();
 //    enable_NTC_GCOMP_SEL();
-    disable_Battery_Voltage_Loop();
+//    disable_Battery_Voltage_Loop();
 //    enable_Battery_Voltage_Loop();
 
-
-
-    print_Regs16();
     print_Regs8();
-
+    print_Regs16();
 
 
   while (1)
@@ -1048,6 +1051,44 @@ void enable_Battery_Voltage_Loop()
     read_MP2650_8(Battery_Voltage_Loop_Enable);
     write_MP2650_8(Battery_Voltage_Loop_Enable, data8.value |= 0b00000001);
 }
+void REG_00_set_Input_Current_Limit(u_int16_t value) //in mA
+{
+    if (value > (0b01111111 * 50)) value = 0b01111111 * 50;
+    uint8_t val = 0;
+    val += value/50;
+    write_MP2650_8(Input_Current_Limit_1_Setting, val);
+}
+void REG_01_set_Input_Voltage_Limit(u_int16_t value)
+{
+    if (value > (0b01111111 * 100)) value = 0b01111111 * 100;
+    uint8_t val = 0;
+    val += value/100;
+    write_MP2650_8(Input_Voltage_Limit_Setting, val);
+}
+void REG_02_set_Charge_Current(u_int16_t value) //in mA
+{
+    if (value > (0b01111111 * 50)) value = 0b01111111 * 50;
+    uint8_t val = 0;
+    val += value/50;
+    write_MP2650_8(Charge_Current_Setting, val);
+}
+void REG_03_set_PreCharge_Current(u_int16_t value)
+{
+
+}
+void REG_03_set_Termination_Current(u_int16_t value)
+{
+    if (value > (0b00001111 * 100)) value = 0b00001111 * 100;
+    uint8_t val = 0;
+    val += value/100;
+    val &= 0b00001111;
+    read_MP2650_8(Charge_Current_Setting);
+    data8.value &= 0b11110000;
+    data8.value |= val;
+    write_MP2650_8(Charge_Current_Setting, data8.value);
+}
+
+
 
 /* USER CODE END 4 */
 

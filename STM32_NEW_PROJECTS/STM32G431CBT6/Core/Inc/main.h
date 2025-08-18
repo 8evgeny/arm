@@ -132,6 +132,12 @@ void enable_NTC_GCOMP_SEL();
 void disable_Battery_Voltage_Loop();
 void enable_Battery_Voltage_Loop();
 
+void REG_00_set_Input_Current_Limit(u_int16_t);     //in mA
+void REG_01_set_Input_Voltage_Limit(u_int16_t);     //in mV
+void REG_02_set_Charge_Current(u_int16_t);          //in mA
+void REG_03_set_PreCharge_Current(u_int16_t);       //in mA
+void REG_03_set_Termination_Current(u_int16_t);     //in mA
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
