@@ -126,8 +126,7 @@ int main(void)
 
     SEGGER_RTT_Init();
     SEGGER_RTT_printf(0, "\nSEGGER RTT Initialized\r\n\n");
-    HAL_GPIO_WritePin(USART2_CS_GPIO_Port, USART2_CS_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(USART3_CS_GPIO_Port, USART3_CS_Pin, GPIO_PIN_SET);
+
     all_led_OFF();
 //    simpleTestI2C_EEPROM(0x00);
 
@@ -650,6 +649,8 @@ void all_led_OFF()
 }
 int _write(int fd, char *str, int len)
 {
+    HAL_GPIO_WritePin(USART2_CS_GPIO_Port, USART2_CS_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(USART3_CS_GPIO_Port, USART3_CS_Pin, GPIO_PIN_SET);
     for(int i=0; i<len; ++i)
     {
         HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
@@ -657,6 +658,8 @@ int _write(int fd, char *str, int len)
         SEGGER_RTT_PutChar(0, str[i]);
 //        delayUS_ASM(30);
     }
+    HAL_GPIO_WritePin(USART2_CS_GPIO_Port, USART2_CS_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(USART3_CS_GPIO_Port, USART3_CS_Pin, GPIO_PIN_RESET);
     return len;
 }
 
