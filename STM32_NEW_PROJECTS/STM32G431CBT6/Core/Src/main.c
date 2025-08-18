@@ -137,6 +137,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
     print_Regs16();
+
 //    print_Regs8();
 
     print_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
@@ -752,6 +753,51 @@ void print_MP2650_16(uint8_t regAddr)
 
 void ext_print_16(uint8_t regAddr)
 {
+    if(regAddr == ADC_Battery_Voltage_Result_16BIT)
+    {
+        uint16_t V = 0;
+        V += ((data16.value.value >>6) & 0x0001) * 125; //больше в 10 раз
+        V += ((data16.value.value >>7) & 0x0001) * 250;
+        V += ((data16.value.value >>8) & 0x0001) * 500;
+        V += ((data16.value.value >>9) & 0x0001) * 1000;
+        V += ((data16.value.value >>10) & 0x0001) * 2000;
+        V += ((data16.value.value >>11) & 0x0001) * 4000;
+        V += ((data16.value.value >>12) & 0x0001) * 8000;
+        V += ((data16.value.value >>13) & 0x0001) * 16000;
+        V += ((data16.value.value >>14) & 0x0001) * 32000;
+        V += ((data16.value.value >>15) & 0x0001) * 64000;
+        printf("  ADC_Battery_Voltage             %d.%03d V", V/10000, V%10000);
+    }
+    if(regAddr == ADC_System_Voltage_Result_16BIT)
+    {
+        uint16_t V = 0;
+        V += ((data16.value.value >>6) & 0x0001) * 125; //больше в 10 раз
+        V += ((data16.value.value >>7) & 0x0001) * 250;
+        V += ((data16.value.value >>8) & 0x0001) * 500;
+        V += ((data16.value.value >>9) & 0x0001) * 1000;
+        V += ((data16.value.value >>10) & 0x0001) * 2000;
+        V += ((data16.value.value >>11) & 0x0001) * 4000;
+        V += ((data16.value.value >>12) & 0x0001) * 8000;
+        V += ((data16.value.value >>13) & 0x0001) * 16000;
+        V += ((data16.value.value >>14) & 0x0001) * 32000;
+        V += ((data16.value.value >>15) & 0x0001) * 64000;
+        printf("  ADC_System_Voltage              %d.%03d V", V/10000, V%10000);
+    }
+    if(regAddr == ADC_Battery_Charge_Current_Result_16BIT)
+    {
+        uint16_t I = 0;
+        I += ((data16.value.value >>6) & 0x0001) * 125; //больше в 10 раз
+        I += ((data16.value.value >>7) & 0x0001) * 250;
+        I += ((data16.value.value >>8) & 0x0001) * 500;
+        I += ((data16.value.value >>9) & 0x0001) * 1000;
+        I += ((data16.value.value >>10) & 0x0001) * 2000;
+        I += ((data16.value.value >>11) & 0x0001) * 4000;
+        I += ((data16.value.value >>12) & 0x0001) * 8000;
+        I += ((data16.value.value >>13) & 0x0001) * 16000;
+        I += ((data16.value.value >>14) & 0x0001) * 32000;
+        I += ((data16.value.value >>15) & 0x0001) * 64000;
+        printf("  ADC_Battery_Charge_Current      %d.%03d mA", I/10, I%10);
+    }
     if(regAddr == ADC_Input_Voltage_Result_16BIT)
     {
         uint16_t U = 0;
@@ -765,7 +811,7 @@ void ext_print_16(uint8_t regAddr)
         U += ((data16.value.value >>13) & 0x0001) * 3200;
         U += ((data16.value.value >>14) & 0x0001) * 6400;
         U += ((data16.value.value >>15) & 0x0001) * 12800;
-        printf("  ADC_Input_Voltage_Result        %d.%03d V",U/1000,U%1000);
+        printf("  ADC_Input_Voltage               %d.%03d V",U/1000,U%1000);
     }
     if(regAddr == ADC_Input_Current_Result_16BIT)
     {
@@ -780,7 +826,7 @@ void ext_print_16(uint8_t regAddr)
         I += ((data16.value.value >>13) & 0x0001) * 1600;
         I += ((data16.value.value >>14) & 0x0001) * 3200;
         I += ((data16.value.value >>15) & 0x0001) * 6400;
-        printf("  ADC_Input_Current_Result        %d.%d mA", I/2, I%2);
+        printf("  ADC_Input_Current               %d.%d mA", I/2, I%2);
     }
     if(regAddr == ADC_OTG_Output_Voltage_Result_16BIT)
     {
@@ -795,7 +841,7 @@ void ext_print_16(uint8_t regAddr)
         U += ((data16.value.value >>13) & 0x0001) * 3200;
         U += ((data16.value.value >>14) & 0x0001) * 6400;
         U += ((data16.value.value >>15) & 0x0001) * 12800;
-        printf("  ADC_OTG_Output_Voltage_Result   %d.%03d V",U/1000,U%1000);
+        printf("  ADC_OTG_Output_Voltage          %d.%03d V",U/1000,U%1000);
     }
     if(regAddr == ADC_OTG_Output_Current_Result_16BIT)
     {
@@ -810,7 +856,7 @@ void ext_print_16(uint8_t regAddr)
         I += ((data16.value.value >>13) & 0x0001) * 1600;
         I += ((data16.value.value >>14) & 0x0001) * 3200;
         I += ((data16.value.value >>15) & 0x0001) * 6400;
-        printf("  ADC_OTG_Output_Current_Result   %d.%d mA", I/2, I%2);
+        printf("  ADC_OTG_Output_Current          %d.%d mA", I/2, I%2);
     }
     if(regAddr == ADC_Junction_Temperature_Result_16BIT)
     {
@@ -826,7 +872,7 @@ void ext_print_16(uint8_t regAddr)
         T += ((data16.value.value >>14) & 0x0001) * 256;
         T += ((data16.value.value >>15) & 0x0001) * 512;
         uint16_t temp = 903000 - 2578 * T;
-        printf("  ADC_Junction_Temperature_Result %d.%02d C", temp/1000, temp%100);
+        printf("  ADC_Junction_Temperature        %d.%02d C", temp/1000, temp%100);
     }
     if(regAddr == ADC_System_Power_Result_16BIT)
     {
@@ -841,7 +887,22 @@ void ext_print_16(uint8_t regAddr)
         W += ((data16.value.value >>13) & 0x0001) * 16000;
         W += ((data16.value.value >>14) & 0x0001) * 32000;
         W += ((data16.value.value >>15) & 0x0001) * 64000;
-        printf("  ADC_System_Power_Result         %d.%03d W", W/1000, W%1000);
+        printf("  ADC_System_Power                %d.%03d W", W/1000, W%1000);
+    }
+    if(regAddr == ADC_Battery_Discharge_Current_Result_16BIT)
+    {
+        uint16_t I = 0;
+        I += ((data16.value.value >>6) & 0x0001) * 125; //больше в 10 раз
+        I += ((data16.value.value >>7) & 0x0001) * 250;
+        I += ((data16.value.value >>8) & 0x0001) * 500;
+        I += ((data16.value.value >>9) & 0x0001) * 1000;
+        I += ((data16.value.value >>10) & 0x0001) * 2000;
+        I += ((data16.value.value >>11) & 0x0001) * 4000;
+        I += ((data16.value.value >>12) & 0x0001) * 8000;
+        I += ((data16.value.value >>13) & 0x0001) * 16000;
+        I += ((data16.value.value >>14) & 0x0001) * 32000;
+        I += ((data16.value.value >>15) & 0x0001) * 64000;
+        printf("  ADC_Battery_Discharge_Current   %d.%03d mA", I/10, I%10);
     }
 }
 
