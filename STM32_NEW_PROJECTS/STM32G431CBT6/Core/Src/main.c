@@ -136,16 +136,19 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
+    set_4_battery();
 //    disable_BATTFET();
 //    enable_BATTFET();
+//    disable_CHARGE();
+//    enable_CHARGE();
+    disable_NTC_GCOMP_SEL();
+//    enable_NTC_GCOMP_SEL();
+
 
     print_Regs16();
     print_Regs8();
 
-    print_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
-    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b11000000);
-//    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value &= 0b00111111);
-    print_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
+
 
   while (1)
   {
@@ -652,7 +655,8 @@ int _write(int fd, char *str, int len)
         HAL_UART_Transmit(&huart2, (uint8_t *)&str[i], 1, 0xFFFF);
         HAL_UART_Transmit(&huart3, (uint8_t *)&str[i], 1, 0xFFFF);
         SEGGER_RTT_PutChar(0, str[i]);
-        delayUS_ASM(100);
+//        delayUS_ASM(100);
+        HAL_Delay(1);
     }
     return len;
 }
@@ -994,6 +998,11 @@ void print_Regs8()
     printf("\r\n");
 }
 
+void set_4_battery()
+{
+    read_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
+    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b11000000);
+}
 void disable_BATTFET()
 {
     read_MP2650_8(Configuration_Register_0);
@@ -1004,6 +1013,28 @@ void enable_BATTFET()
     read_MP2650_8(Configuration_Register_0);
     write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000010);
 }
+void disable_CHARGE()
+{
+    read_MP2650_8(Configuration_Register_0);
+    write_MP2650_8(Configuration_Register_0, data8.value &= 0b11101111);
+}
+void enable_CHARGE()
+{
+    read_MP2650_8(Configuration_Register_0);
+    write_MP2650_8(Configuration_Register_0, data8.value |= 0b00010000);
+}
+void disable_NTC_GCOMP_SEL()
+{
+    read_MP2650_8(Configuration_Register_0);
+    write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111011);
+}
+void enable_NTC_GCOMP_SEL()
+{
+    read_MP2650_8(Configuration_Register_0);
+    write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000100);
+}
+
+
 /* USER CODE END 4 */
 
 /**

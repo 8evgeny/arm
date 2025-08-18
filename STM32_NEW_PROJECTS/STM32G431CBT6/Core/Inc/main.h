@@ -122,8 +122,14 @@ void write_MP2650_8(uint8_t regAddr, uint8_t regValue);
 void print_MP2650_8(uint8_t regAddr);
 void print_Regs8();
 
-void disable_CRG_DSRG();
-void enable_CRG_DSRG();
+void set_4_battery();
+void disable_BATTFET();
+void enable_BATTFET();
+void disable_CHARGE();
+void enable_CHARGE();
+void disable_NTC_GCOMP_SEL();
+void enable_NTC_GCOMP_SEL();
+
 
 /* USER CODE END Private defines */
 
