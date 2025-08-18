@@ -129,7 +129,8 @@ void disable_CHARGE();
 void enable_CHARGE();
 void disable_NTC_GCOMP_SEL();
 void enable_NTC_GCOMP_SEL();
-
+void disable_Battery_Voltage_Loop();
+void enable_Battery_Voltage_Loop();
 
 /* USER CODE END Private defines */
 

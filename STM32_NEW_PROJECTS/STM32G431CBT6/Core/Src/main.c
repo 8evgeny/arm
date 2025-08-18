@@ -136,12 +136,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
     set_4_battery();
-//    disable_BATTFET();
+    disable_BATTFET();
 //    enable_BATTFET();
-//    disable_CHARGE();
+    disable_CHARGE();
 //    enable_CHARGE();
     disable_NTC_GCOMP_SEL();
 //    enable_NTC_GCOMP_SEL();
+    disable_Battery_Voltage_Loop();
+//    enable_Battery_Voltage_Loop();
+
 
 
     print_Regs16();
@@ -1035,7 +1038,16 @@ void enable_NTC_GCOMP_SEL()
     read_MP2650_8(Configuration_Register_0);
     write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000100);
 }
-
+void disable_Battery_Voltage_Loop()
+{
+    read_MP2650_8(Battery_Voltage_Loop_Enable);
+    write_MP2650_8(Battery_Voltage_Loop_Enable, data8.value &= 0b11111110);
+}
+void enable_Battery_Voltage_Loop()
+{
+    read_MP2650_8(Battery_Voltage_Loop_Enable);
+    write_MP2650_8(Battery_Voltage_Loop_Enable, data8.value |= 0b00000001);
+}
 
 /* USER CODE END 4 */
 
