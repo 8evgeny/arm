@@ -135,11 +135,15 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    REG_00_set_Input_Current_Limit(1500);   //1500 mA default
-    REG_01_set_Input_Voltage_Limit(4500);   //4,5V default
-    REG_02_set_Charge_Current(300);         //1000 mA default
-    REG_03_set_PreCharge_Current(180);      //Всегда default   180 mA default  (180 - 840 mA)
-    REG_03_set_Termination_Current(200);    //200 mA default  Range: 0mA to 1500mA
+    REG_00_set_Input_Current_Limit(1500);               //1500 mA default
+    REG_01_set_Input_Voltage_Limit(4500);               //4,5V default
+    REG_02_set_Charge_Current(300);                     //1000 mA default
+    REG_03_set_PreCharge_Current(180);                  //Всегда default   180 mA default  (180 - 840 mA)
+    REG_03_set_Termination_Current(200);                //200 mA default  Range: 0mA to 1500mA
+    REG_04_set_Battery_Full_Voltage_for_one_Cell(4200); //Default: 4.2V/cell Range: 3.7125V/cell to 4.5V/cell
+    REG_04_set_Battery_Threshold_for_one_Cell_100mV();
+
+
 
     set_4_battery();
     disable_BATTFET();
@@ -1088,8 +1092,31 @@ void REG_03_set_Termination_Current(u_int16_t value)
     data8.value |= val;
     write_MP2650_8(Pre_Charge_and_Termination_Current_Setting, data8.value);
 }
+void REG_04_set_Battery_Full_Voltage_for_one_Cell(u_int16_t value)
+{
+    value *= 10;
+    read_MP2650_8(Battery_Full_Voltage_and_Recharge_Threshold_Setting);
+    data8.value &= 0b10000001;
 
-
+    if (value < 37125) value = 37125;
+    if (value > 45000) value = 45000;
+    value -= 37125;
+    uint8_t val = value / 125;
+    data8.value |= (val<<1);
+    write_MP2650_8(Battery_Full_Voltage_and_Recharge_Threshold_Setting, data8.value);
+}
+void REG_04_set_Battery_Threshold_for_one_Cell_100mV()
+{
+    read_MP2650_8(Battery_Full_Voltage_and_Recharge_Threshold_Setting);
+    data8.value &= 0b11111110;
+    write_MP2650_8(Battery_Full_Voltage_and_Recharge_Threshold_Setting, data8.value);
+}
+void REG_04_set_Battery_Threshold_for_one_Cell_200mV()
+{
+    read_MP2650_8(Battery_Full_Voltage_and_Recharge_Threshold_Setting);
+    data8.value |= 0b00000001;
+    write_MP2650_8(Battery_Full_Voltage_and_Recharge_Threshold_Setting, data8.value);
+}
 
 /* USER CODE END 4 */
 
