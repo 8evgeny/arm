@@ -135,11 +135,11 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    REG_00_set_Input_Current_Limit(1500);  //1500 mA default
-    REG_01_set_Input_Voltage_Limit(4500);  //4,5V default
-    REG_02_set_Charge_Current(300);        //1000 mA default
-//    REG_03_set_PreCharge_Current(180);  //Не реализовано   //180 mA default  (180 - 840 mA)
-    REG_03_set_Termination_Current(200);   //200 mA default  Range: 0mA to 1500mA
+    REG_00_set_Input_Current_Limit(1500);   //1500 mA default
+    REG_01_set_Input_Voltage_Limit(4500);   //4,5V default
+    REG_02_set_Charge_Current(300);         //1000 mA default
+    REG_03_set_PreCharge_Current(180);      //Всегда default   180 mA default  (180 - 840 mA)
+    REG_03_set_Termination_Current(200);    //200 mA default  Range: 0mA to 1500mA
 
     set_4_battery();
     disable_BATTFET();
@@ -1074,7 +1074,8 @@ void REG_02_set_Charge_Current(u_int16_t value) //in mA
 }
 void REG_03_set_PreCharge_Current(u_int16_t value)
 {
-
+    data8.value &= 0b00001111;
+    data8.value |= 0b00110000;
 }
 void REG_03_set_Termination_Current(u_int16_t value)
 {
@@ -1082,10 +1083,10 @@ void REG_03_set_Termination_Current(u_int16_t value)
     uint8_t val = 0;
     val += value/100;
     val &= 0b00001111;
-    read_MP2650_8(Charge_Current_Setting);
+    read_MP2650_8(Pre_Charge_and_Termination_Current_Setting);
     data8.value &= 0b11110000;
     data8.value |= val;
-    write_MP2650_8(Charge_Current_Setting, data8.value);
+    write_MP2650_8(Pre_Charge_and_Termination_Current_Setting, data8.value);
 }
 
 
