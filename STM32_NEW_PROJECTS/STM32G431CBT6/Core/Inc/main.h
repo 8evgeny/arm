@@ -122,6 +122,9 @@ void write_MP2650_8(uint8_t regAddr, uint8_t regValue);
 void print_MP2650_8(uint8_t regAddr);
 void print_Regs8();
 
+void disable_CRG_DSRG();
+void enable_CRG_DSRG();
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

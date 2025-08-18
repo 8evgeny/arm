@@ -136,9 +136,11 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    print_Regs16();
+//    disable_BATTFET();
+//    enable_BATTFET();
 
-//    print_Regs8();
+    print_Regs16();
+    print_Regs8();
 
     print_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
     write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b11000000);
@@ -992,7 +994,16 @@ void print_Regs8()
     printf("\r\n");
 }
 
-
+void disable_BATTFET()
+{
+    read_MP2650_8(Configuration_Register_0);
+    write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111101);
+}
+void enable_BATTFET()
+{
+    read_MP2650_8(Configuration_Register_0);
+    write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000010);
+}
 /* USER CODE END 4 */
 
 /**
