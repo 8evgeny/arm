@@ -925,10 +925,10 @@ void ext_print_16(uint8_t regAddr)
     if(regAddr == ADC_Result_for_NTC_Voltage_16BIT) //NTC[11:0] x 1.6V / 4096
     {
         uint16_t V = 0;
-        V = (data16.value.value & 0b0000111111111111) * 100;
-        V *= 16;
+        V = (data16.value.value & 0b0000111111111111) ;
+        V *= 16000;
         V /= 4096;
-        printf("  ADC_Result_for_NTC_Voltage      %d.%03d V", V/1000, V%1000);
+        printf("  ADC_Result_for_NTC_Voltage      %d.%01d mV", V/10, V%10);
     }
 }
 
