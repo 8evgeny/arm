@@ -138,7 +138,7 @@ int main(void)
     REG_00_set_Input_Current_Limit(1500);               //1500 mA default
     REG_01_set_Input_Voltage_Limit(4500);               //4,5V default
     REG_02_set_Charge_Current(300);                     //1000 mA default
-    REG_03_set_PreCharge_Current(180);                  //Всегда default   180 mA default  (180 - 840 mA)
+    REG_03_set_PreCharge_Current(180);                  //180 mA default  Range: 180 - 840 mA
     REG_03_set_Termination_Current(200);                //200 mA default  Range: 0mA to 1500mA
     REG_04_set_Battery_Full_Voltage_for_one_Cell(4200); //Default: 4.2V/cell Range: 3.7125V/cell to 4.5V/cell
     REG_04_set_Battery_Threshold_for_one_Cell_100mV();
@@ -1084,10 +1084,70 @@ void REG_02_set_Charge_Current(u_int16_t value) //in mA
     val += value/50;
     write_MP2650_8(Charge_Current_Setting, val);
 }
-void REG_03_set_PreCharge_Current(u_int16_t value)
+void REG_03_set_PreCharge_Current(u_int16_t value) //180 - 840
 {
-    data8.value &= 0b00001111;
-    data8.value |= 0b00110000;
+//    data8.value &= 0b00001111;
+//    data8.value |= 0b00110000;
+    if (value <=180)
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b01000000;
+    }
+    if ((value > 180) && (value <= 240))
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b01010000;
+    }
+    if ((value > 240) && (value <= 300))
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b01100000;
+    }
+    if ((value > 300) && (value <= 360))
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b01110000;
+    }
+    if ((value > 360) && (value <= 420))
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b10000000;
+    }
+    if ((value > 420) && (value <= 480))
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b10010000;
+    }
+    if ((value > 480) && (value <= 540))
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b10100000;
+    }
+    if ((value > 540) && (value <= 600))
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b10110000;
+    }
+    if ((value > 600) && (value <= 660))
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b11000000;
+    }
+    if ((value > 660) && (value <= 720))
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b11010000;
+    }
+    if ((value > 720) && (value <= 780))
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b11100000;
+    }
+    if (value > 780)
+    {
+        data8.value &= 0b00001111;
+        data8.value |= 0b11110000;
+    }
 }
 void REG_03_set_Termination_Current(u_int16_t value)
 {
