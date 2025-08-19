@@ -1,5 +1,6 @@
 /* USER CODE BEGIN Header */
 
+#include <stdbool.h>
 #include "eeprom.h"
 #include <assert.h>
 #include <stdio.h>
@@ -122,13 +123,7 @@ void write_MP2650_8(uint8_t regAddr, uint8_t regValue);
 void print_MP2650_8(uint8_t regAddr);
 void print_Regs8();
 
-void set_4_battery();
-void disable_BATTFET();
-void enable_BATTFET();
-void disable_CHARGE();
-void enable_CHARGE();
-void disable_NTC_GCOMP_SEL();
-void enable_NTC_GCOMP_SEL();
+
 void disable_Battery_Voltage_Loop();
 void enable_Battery_Voltage_Loop();
 
@@ -140,6 +135,10 @@ void REG_03_set_Termination_Current(u_int16_t);                 //in mA
 void REG_04_set_Battery_Full_Voltage_for_one_Cell(u_int16_t);   //in mV
 void REG_04_set_Battery_Threshold_for_one_Cell_100mV();
 void REG_04_set_Battery_Threshold_for_one_Cell_200mV();
+void REG_07_set_4_cells();
+void REG_08_BATTFET_EN(_Bool);
+void REG_08_CHARGE_EN(_Bool);
+void REG_08_NTC_GCOMP_SEL(_Bool);
 
 /* USER CODE END Private defines */
 

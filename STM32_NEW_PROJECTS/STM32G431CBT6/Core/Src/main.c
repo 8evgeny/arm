@@ -142,16 +142,13 @@ int main(void)
     REG_03_set_Termination_Current(200);                //200 mA default        Range: 0mA to 1500mA
     REG_04_set_Battery_Full_Voltage_for_one_Cell(4200); //Default: 4.2V/cell    Range: 3.7125V/cell to 4.5V/cell
     REG_04_set_Battery_Threshold_for_one_Cell_100mV();
+    REG_07_set_4_cells();
+    REG_08_CHARGE_EN(false);
+    REG_08_NTC_GCOMP_SEL(false);
+    REG_08_BATTFET_EN(true);
 
 
 
-    set_4_battery();
-    disable_BATTFET();
-//    enable_BATTFET();
-    disable_CHARGE();
-//    enable_CHARGE();
-    disable_NTC_GCOMP_SEL();
-//    enable_NTC_GCOMP_SEL();
 //    disable_Battery_Voltage_Loop();
 //    enable_Battery_Voltage_Loop();
 
@@ -1018,40 +1015,50 @@ void print_Regs8()
     printf("\r\n");
 }
 
-void set_4_battery()
+void REG_07_set_4_cells()
 {
     read_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
     write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b11000000);
 }
-void disable_BATTFET()
+
+void REG_08_BATTFET_EN(_Bool val)
 {
-    read_MP2650_8(Configuration_Register_0);
-    write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111101);
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000010);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111101);
+    }
 }
-void enable_BATTFET()
+void REG_08_CHARGE_EN(_Bool val)
 {
-    read_MP2650_8(Configuration_Register_0);
-    write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000010);
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value |= 0b00010000);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value &= 0b11101111);
+    }
 }
-void disable_CHARGE()
+void REG_08_NTC_GCOMP_SEL(_Bool val)
 {
-    read_MP2650_8(Configuration_Register_0);
-    write_MP2650_8(Configuration_Register_0, data8.value &= 0b11101111);
-}
-void enable_CHARGE()
-{
-    read_MP2650_8(Configuration_Register_0);
-    write_MP2650_8(Configuration_Register_0, data8.value |= 0b00010000);
-}
-void disable_NTC_GCOMP_SEL()
-{
-    read_MP2650_8(Configuration_Register_0);
-    write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111011);
-}
-void enable_NTC_GCOMP_SEL()
-{
-    read_MP2650_8(Configuration_Register_0);
-    write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000100);
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000100);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111011);
+    }
 }
 void disable_Battery_Voltage_Loop()
 {
