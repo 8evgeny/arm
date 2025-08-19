@@ -100,18 +100,15 @@ int main(void)
     SEGGER_RTT_Init();
     SEGGER_RTT_printf(0, "\nSEGGER RTT Initialized\r\n\n");
 
-    all_led_OFF();
+    init_MP2650();
 //    simpleTestI2C_EEPROM(0x00);
+    print_Regs8();
+    print_Regs16();
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
-    init_MP2650();
-
-    print_Regs8();
-    print_Regs16();
 
 
   while (1)
