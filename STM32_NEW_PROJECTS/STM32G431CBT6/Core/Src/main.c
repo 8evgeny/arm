@@ -135,7 +135,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    REG_00_set_Input_Current_Limit(1500);               //1500 mA default       Range: 0mA to 5A
+    REG_00_set_Input_Current_Limit_1(1500);             //1500 mA default       Range: 0mA to 5A
     REG_01_set_Input_Voltage_Limit(4500);               //4,5V default          Range: 0V to 25.5V
     REG_02_set_Charge_Current(300);                     //1000 mA default       Range: 0A to 5A
     REG_03_set_PreCharge_Current(180);                  //180 mA default        Range: 180 - 840 mA
@@ -146,7 +146,7 @@ int main(void)
     REG_08_CHARGE_EN(false);
     REG_08_NTC_GCOMP_SEL(false);
     REG_08_BATTFET_EN(true);
-
+    REG_0F_set_Input_Current_Limit_2(1500);             //1500 mA default       Range: 0mA to 5A
 
 
 //    disable_Battery_Voltage_Loop();
@@ -1015,51 +1015,6 @@ void print_Regs8()
     printf("\r\n");
 }
 
-void REG_07_set_4_cells()
-{
-    read_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
-    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b11000000);
-}
-
-void REG_08_BATTFET_EN(_Bool val)
-{
-    if(val)
-    {
-        read_MP2650_8(Configuration_Register_0);
-        write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000010);
-    }
-    else
-    {
-        read_MP2650_8(Configuration_Register_0);
-        write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111101);
-    }
-}
-void REG_08_CHARGE_EN(_Bool val)
-{
-    if(val)
-    {
-        read_MP2650_8(Configuration_Register_0);
-        write_MP2650_8(Configuration_Register_0, data8.value |= 0b00010000);
-    }
-    else
-    {
-        read_MP2650_8(Configuration_Register_0);
-        write_MP2650_8(Configuration_Register_0, data8.value &= 0b11101111);
-    }
-}
-void REG_08_NTC_GCOMP_SEL(_Bool val)
-{
-    if(val)
-    {
-        read_MP2650_8(Configuration_Register_0);
-        write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000100);
-    }
-    else
-    {
-        read_MP2650_8(Configuration_Register_0);
-        write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111011);
-    }
-}
 void disable_Battery_Voltage_Loop()
 {
     read_MP2650_8(Battery_Voltage_Loop_Enable);
@@ -1070,7 +1025,7 @@ void enable_Battery_Voltage_Loop()
     read_MP2650_8(Battery_Voltage_Loop_Enable);
     write_MP2650_8(Battery_Voltage_Loop_Enable, data8.value |= 0b00000001);
 }
-void REG_00_set_Input_Current_Limit(u_int16_t value) //in mA
+void REG_00_set_Input_Current_Limit_1(u_int16_t value) //in mA
 {
     if (value > (0b01111111 * 50)) value = 0b01111111 * 50;
     uint8_t val = 0;
@@ -1192,6 +1147,60 @@ void REG_04_set_Battery_Threshold_for_one_Cell_200mV()
     data8.value |= 0b00000001;
     write_MP2650_8(Battery_Full_Voltage_and_Recharge_Threshold_Setting, data8.value);
 }
+void REG_07_set_4_cells()
+{
+    read_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
+    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b11000000);
+}
+void REG_08_BATTFET_EN(_Bool val)
+{
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000010);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111101);
+    }
+}
+void REG_08_CHARGE_EN(_Bool val)
+{
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value |= 0b00010000);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value &= 0b11101111);
+    }
+}
+void REG_08_NTC_GCOMP_SEL(_Bool val)
+{
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value |= 0b00000100);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111011);
+    }
+}
+void REG_0F_set_Input_Current_Limit_2(u_int16_t value)
+{
+    if (value > (0b01111111 * 50)) value = 0b01111111 * 50;
+    uint8_t val = 0;
+    val += value/50;
+    write_MP2650_8(Input_Current_Limit_2_Setting, val);
+}
+
+
+
 
 /* USER CODE END 4 */
 

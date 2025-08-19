@@ -127,7 +127,7 @@ void print_Regs8();
 void disable_Battery_Voltage_Loop();
 void enable_Battery_Voltage_Loop();
 
-void REG_00_set_Input_Current_Limit(u_int16_t);                 //in mA
+void REG_00_set_Input_Current_Limit_1(u_int16_t);                 //in mA
 void REG_01_set_Input_Voltage_Limit(u_int16_t);                 //in mV
 void REG_02_set_Charge_Current(u_int16_t);                      //in mA
 void REG_03_set_PreCharge_Current(u_int16_t);                   //in mA
@@ -139,6 +139,9 @@ void REG_07_set_4_cells();
 void REG_08_BATTFET_EN(_Bool);
 void REG_08_CHARGE_EN(_Bool);
 void REG_08_NTC_GCOMP_SEL(_Bool);
+void REG_0F_set_Input_Current_Limit_2(u_int16_t);
+
+
 
 /* USER CODE END Private defines */
 
