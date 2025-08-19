@@ -101,7 +101,7 @@ int main(void)
     SEGGER_RTT_printf(0, "\nSEGGER RTT Initialized\r\n\n");
 
     init_MP2650();
-//    simpleTestI2C_EEPROM(0x00);
+//    test_EEPROM(0x00, "123=56-8");
     print_Regs8();
     print_Regs16();
 

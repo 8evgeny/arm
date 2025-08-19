@@ -108,7 +108,7 @@ void Error_Handler(void);
 #define GPIO_ON(x) HAL_GPIO_WritePin(GPIOB, x, GPIO_PIN_RESET)
 #define GPIO_OFF(x) HAL_GPIO_WritePin(GPIOB, x, GPIO_PIN_SET)
 
-void simpleTestI2C_EEPROM(uint16_t addr);
+void test_EEPROM(uint16_t addr, const char * data);
 void led_Test();
 void all_led_OFF();
 uint16_t read_MP2650_16(uint8_t regAddr);
