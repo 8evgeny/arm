@@ -135,12 +135,12 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-    REG_00_set_Input_Current_Limit(1500);               //1500 mA default
-    REG_01_set_Input_Voltage_Limit(4500);               //4,5V default
-    REG_02_set_Charge_Current(300);                     //1000 mA default
-    REG_03_set_PreCharge_Current(180);                  //180 mA default  Range: 180 - 840 mA
-    REG_03_set_Termination_Current(200);                //200 mA default  Range: 0mA to 1500mA
-    REG_04_set_Battery_Full_Voltage_for_one_Cell(4200); //Default: 4.2V/cell Range: 3.7125V/cell to 4.5V/cell
+    REG_00_set_Input_Current_Limit(1500);               //1500 mA default       Range: 0mA to 5A
+    REG_01_set_Input_Voltage_Limit(4500);               //4,5V default          Range: 0V to 25.5V
+    REG_02_set_Charge_Current(300);                     //1000 mA default       Range: 0A to 5A
+    REG_03_set_PreCharge_Current(180);                  //180 mA default        Range: 180 - 840 mA
+    REG_03_set_Termination_Current(200);                //200 mA default        Range: 0mA to 1500mA
+    REG_04_set_Battery_Full_Voltage_for_one_Cell(4200); //Default: 4.2V/cell    Range: 3.7125V/cell to 4.5V/cell
     REG_04_set_Battery_Threshold_for_one_Cell_100mV();
 
 
