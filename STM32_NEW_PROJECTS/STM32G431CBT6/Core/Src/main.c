@@ -113,33 +113,7 @@ int main(void)
 
   while (1)
   {
-      led_Test();
-
-//      if (GPIO_PIN_SET == HAL_GPIO_ReadPin(ACOK_1_GPIO_Port, ACOK_1_Pin))
-//      {
-//          printf("ACOK_1_Pin SET\r\n");
-//      }
-//      if (GPIO_PIN_SET == HAL_GPIO_ReadPin(ACOK_2_GPIO_Port, ACOK_2_Pin))
-//      {
-//          printf("ACOK_2_Pin SET\r\n");
-//      }
-//      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(INT_1_GPIO_Port, INT_1_Pin))
-//      {
-//          printf("INT_1_Pin RESET\r\n");
-//      }
-//      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(INT_2_GPIO_Port, INT_2_Pin))
-//      {
-//          printf("INT_2_Pin RESET\r\n");
-//      }
-//      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(PROCHOT_1_GPIO_Port, PROCHOT_1_Pin))
-//      {
-//          printf("PROCHOT_1_Pin RESET\r\n");
-//      }
-//      if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(PROCHOT_2_GPIO_Port, PROCHOT_2_Pin))
-//      {
-//          printf("PROCHOT_2_Pin RESET\r\n");
-//      }
-
+//      led_Test();
 
 
 

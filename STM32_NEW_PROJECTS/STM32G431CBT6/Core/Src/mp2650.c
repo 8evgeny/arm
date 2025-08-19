@@ -329,6 +329,7 @@ void print_Regs16()
 void init_MP2650()
 {
     all_led_OFF();
+    led_Test();
     REG_00_set_Input_Current_Limit_1(1500);             //1500 mA default       Range: 0mA to 5A
     REG_0F_set_Input_Current_Limit_2(1500);             //1500 mA default       Range: 0mA to 5A
     REG_01_set_Input_Voltage_Limit(4500);               //4,5V default          Range: 0V to 25.5V
