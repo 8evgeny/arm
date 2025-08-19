@@ -922,6 +922,14 @@ void ext_print_16(uint8_t regAddr)
         I += ((data16.value.value >>15) & 0x0001) * 64000;
         printf("  ADC_Battery_Discharge_Current   %d.%03d mA", I/10, I%10);
     }
+    if(regAddr == ADC_Result_for_NTC_Voltage_16BIT) //NTC[11:0] x 1.6V / 4096
+    {
+        uint16_t V = 0;
+        V = (data16.value.value & 0b0000111111111111) * 100;
+        V *= 16;
+        V /= 4096;
+        printf("  ADC_Result_for_NTC_Voltage      %d.%03d V", V/1000, V%1000);
+    }
 }
 
 void print_byte(uint8_t byte)
