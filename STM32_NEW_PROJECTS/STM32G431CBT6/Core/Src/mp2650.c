@@ -339,10 +339,10 @@ void init_MP2650()
     REG_04_set_Battery_Full_Voltage_for_one_Cell(4200); //Default: 4.2V/cell    Range: 3.7125V/cell to 4.5V/cell
     REG_04_set_Battery_Threshold_for_one_Cell_100mV();
     REG_07_set_4_cells();
-    REG_08_CHARGE_EN(false);
-    REG_08_NTC_GCOMP_SEL(false);
-    REG_08_BATTFET_EN(false);
-    REG_2D_VBATT_LP_EN(false);                          //  Default: 0
+    REG_08_CHARGE_EN(true);                             //  Default: 1
+    REG_08_NTC_GCOMP_SEL(true);                         //  Default: 1
+    REG_08_BATTFET_EN(true);                            //  Default: 1
+    REG_2D_VBATT_LP_EN(true);                           //  Default: 1
 }
 
 uint8_t read_MP2650_8(uint8_t regAddr)
