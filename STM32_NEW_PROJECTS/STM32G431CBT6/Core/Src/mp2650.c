@@ -341,7 +341,7 @@ void init_MP2650()
     REG_07_set_4_cells();
     REG_08_CHARGE_EN(false);
     REG_08_NTC_GCOMP_SEL(false);
-    REG_08_BATTFET_EN(true);
+    REG_08_BATTFET_EN(false);
     REG_2D_VBATT_LP_EN(false);                          //  Default: 0
 }
 
@@ -535,7 +535,8 @@ void REG_04_set_Battery_Threshold_for_one_Cell_200mV()
 void REG_07_set_4_cells()
 {
     read_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting);
-    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b11000000);
+    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value &= 0b00111111);
+    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b10000000);
 }
 void REG_08_BATTFET_EN(_Bool val)
 {
