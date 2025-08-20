@@ -101,7 +101,7 @@ int main(void)
     SEGGER_RTT_printf(0, "\nSEGGER RTT Initialized\r\n\n");
 
     init_MP2650();
-    test_EEPROM(0x00, "=2-45-7=");
+//    test_EEPROM(0x00, "=2-45-7=");
     print_Regs8();
     print_Regs16();
 
