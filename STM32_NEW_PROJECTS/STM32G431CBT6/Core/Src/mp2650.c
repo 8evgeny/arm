@@ -1,5 +1,6 @@
 #include "main.h"
 
+extern I2C_HandleTypeDef hi2c1;
 extern I2C_HandleTypeDef hi2c2;
 extern UART_HandleTypeDef huart2;
 extern UART_HandleTypeDef huart3;
@@ -110,9 +111,9 @@ void led_Test()
 uint16_t read_MP2650_16(uint8_t regAddr)
 {
     data16.value.value = 0xFFFF;
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
     HAL_StatusTypeDef ret;
-    ret = HAL_I2C_Mem_Read(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data16.value.val, 2, HAL_MAX_DELAY);
+    ret = HAL_I2C_Mem_Read(&hi2c1, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, data16.value.val, 2, HAL_MAX_DELAY);
     if(HAL_OK == ret)
     {
         return data16.value.value;
@@ -127,8 +128,8 @@ uint16_t read_MP2650_16(uint8_t regAddr)
 void write_MP2650_16(uint8_t regAddr, uint16_t regValue)
 {
     HAL_Delay(3);
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Write(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
+    while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Write(&hi2c1, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
 }
 
 void print_MP2650_16(uint8_t regAddr)
@@ -348,9 +349,9 @@ void init_MP2650()
 uint8_t read_MP2650_8(uint8_t regAddr)
 {
     data8.value = 0xFF;
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
     HAL_StatusTypeDef ret;
-    ret = HAL_I2C_Mem_Read(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, &data8.value, 1, HAL_MAX_DELAY);
+    ret = HAL_I2C_Mem_Read(&hi2c1, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, &data8.value, 1, HAL_MAX_DELAY);
     if(HAL_OK == ret)
     {
         return data8.value;
@@ -365,8 +366,8 @@ uint8_t read_MP2650_8(uint8_t regAddr)
 void write_MP2650_8(uint8_t regAddr, uint8_t regValue)
 {
     HAL_Delay(3);
-    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
-    HAL_I2C_Mem_Write(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 1, HAL_MAX_DELAY);
+    while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Write(&hi2c1, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 1, HAL_MAX_DELAY);
 }
 
 void print_MP2650_8(uint8_t regAddr)
