@@ -147,31 +147,31 @@ void ext_print_16(uint8_t regAddr)
     if(regAddr == ADC_Battery_Voltage_Result_16BIT)
     {
         uint16_t V = 0;
-        V += ((data16.value.value >>6) & 0x0001) * 125; //больше в 10 раз
-        V += ((data16.value.value >>7) & 0x0001) * 250;
-        V += ((data16.value.value >>8) & 0x0001) * 500;
-        V += ((data16.value.value >>9) & 0x0001) * 1000;
-        V += ((data16.value.value >>10) & 0x0001) * 2000;
-        V += ((data16.value.value >>11) & 0x0001) * 4000;
-        V += ((data16.value.value >>12) & 0x0001) * 8000;
-        V += ((data16.value.value >>13) & 0x0001) * 16000;
-        V += ((data16.value.value >>14) & 0x0001) * 32000;
-        V += ((data16.value.value >>15) & 0x0001) * 64000;
+        V += ((data16.value.value >>6) & 0x0001) * 250; //больше в 20 раз
+        V += ((data16.value.value >>7) & 0x0001) * 500;
+        V += ((data16.value.value >>8) & 0x0001) * 1000;
+        V += ((data16.value.value >>9) & 0x0001) * 2000;
+        V += ((data16.value.value >>10) & 0x0001) * 4000;
+        V += ((data16.value.value >>11) & 0x0001) * 8000;
+        V += ((data16.value.value >>12) & 0x0001) * 16000;
+        V += ((data16.value.value >>13) & 0x0001) * 32000;
+        V += ((data16.value.value >>14) & 0x0001) * 64000;
+        V += ((data16.value.value >>15) & 0x0001) * 128000;
         printf("  ADC_Battery_Voltage             %d.%03d V", V/10000, V%10000);
     }
     if(regAddr == ADC_System_Voltage_Result_16BIT)
     {
         uint16_t V = 0;
-        V += ((data16.value.value >>6) & 0x0001) * 125; //больше в 10 раз
-        V += ((data16.value.value >>7) & 0x0001) * 250;
-        V += ((data16.value.value >>8) & 0x0001) * 500;
-        V += ((data16.value.value >>9) & 0x0001) * 1000;
-        V += ((data16.value.value >>10) & 0x0001) * 2000;
-        V += ((data16.value.value >>11) & 0x0001) * 4000;
-        V += ((data16.value.value >>12) & 0x0001) * 8000;
-        V += ((data16.value.value >>13) & 0x0001) * 16000;
-        V += ((data16.value.value >>14) & 0x0001) * 32000;
-        V += ((data16.value.value >>15) & 0x0001) * 64000;
+        V += ((data16.value.value >>6) & 0x0001) * 250; //больше в 20 раз
+        V += ((data16.value.value >>7) & 0x0001) * 500;
+        V += ((data16.value.value >>8) & 0x0001) * 1000;
+        V += ((data16.value.value >>9) & 0x0001) * 2000;
+        V += ((data16.value.value >>10) & 0x0001) * 4000;
+        V += ((data16.value.value >>11) & 0x0001) * 8000;
+        V += ((data16.value.value >>12) & 0x0001) * 16000;
+        V += ((data16.value.value >>13) & 0x0001) * 32000;
+        V += ((data16.value.value >>14) & 0x0001) * 64000;
+        V += ((data16.value.value >>15) & 0x0001) * 128000;
         printf("  ADC_System_Voltage              %d.%03d V", V/10000, V%10000);
     }
     if(regAddr == ADC_Battery_Charge_Current_Result_16BIT)
