@@ -113,8 +113,8 @@ int main(void)
 
   while (1)
   {
-
-      HAL_Delay(1000);
+//      print_MP2650_8(Input_Current_Limit_1_Setting);
+      HAL_Delay(500);
 
     /* USER CODE END WHILE */
 
@@ -524,14 +524,10 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(USART2_CS_GPIO_Port, USART2_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, PROCHOT_1_Pin|Blue_LED_Pin|Red_LED_Pin|Green_LED_Pin
-                          |Yellow_LED_Pin, GPIO_PIN_SET);
-
-  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(USART3_CS_GPIO_Port, USART3_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(PROCHOT_2_GPIO_Port, PROCHOT_2_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, Blue_LED_Pin|Red_LED_Pin|Green_LED_Pin|Yellow_LED_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : Power_GOOD_Pin */
   GPIO_InitStruct.Pin = Power_GOOD_Pin;
@@ -539,29 +535,29 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(Power_GOOD_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : ACOK_1_Pin */
-  GPIO_InitStruct.Pin = ACOK_1_Pin;
+  /*Configure GPIO pins : ACOK_1_Pin PA10 */
+  GPIO_InitStruct.Pin = ACOK_1_Pin|GPIO_PIN_10;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(ACOK_1_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : USART2_CS_Pin PROCHOT_2_Pin */
-  GPIO_InitStruct.Pin = USART2_CS_Pin|PROCHOT_2_Pin;
+  /*Configure GPIO pin : USART2_CS_Pin */
+  GPIO_InitStruct.Pin = USART2_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(USART2_CS_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : INT_1_Pin ACOK_2_Pin INT_2_Pin */
-  GPIO_InitStruct.Pin = INT_1_Pin|ACOK_2_Pin|INT_2_Pin;
+  /*Configure GPIO pins : INT_1_Pin PB1 ACOK_2_Pin INT_2_Pin */
+  GPIO_InitStruct.Pin = INT_1_Pin|GPIO_PIN_1|ACOK_2_Pin|INT_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PROCHOT_1_Pin USART3_CS_Pin Blue_LED_Pin Red_LED_Pin
-                           Green_LED_Pin Yellow_LED_Pin */
-  GPIO_InitStruct.Pin = PROCHOT_1_Pin|USART3_CS_Pin|Blue_LED_Pin|Red_LED_Pin
-                          |Green_LED_Pin|Yellow_LED_Pin;
+  /*Configure GPIO pins : USART3_CS_Pin Blue_LED_Pin Red_LED_Pin Green_LED_Pin
+                           Yellow_LED_Pin */
+  GPIO_InitStruct.Pin = USART3_CS_Pin|Blue_LED_Pin|Red_LED_Pin|Green_LED_Pin
+                          |Yellow_LED_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
