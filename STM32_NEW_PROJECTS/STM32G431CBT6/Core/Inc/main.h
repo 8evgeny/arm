@@ -1,5 +1,6 @@
 /* USER CODE BEGIN Header */
 
+#include <stdbool.h>
 #include "eeprom.h"
 #include <assert.h>
 #include <stdio.h>
@@ -81,8 +82,6 @@ void Error_Handler(void);
 #define ADC_IBM_2_GPIO_Port GPIOA
 #define INT_1_Pin GPIO_PIN_0
 #define INT_1_GPIO_Port GPIOB
-#define PROCHOT_1_Pin GPIO_PIN_1
-#define PROCHOT_1_GPIO_Port GPIOB
 #define ADC_PSYS_1_Pin GPIO_PIN_2
 #define ADC_PSYS_1_GPIO_Port GPIOB
 #define ACOK_2_Pin GPIO_PIN_12
@@ -91,8 +90,6 @@ void Error_Handler(void);
 #define INT_2_GPIO_Port GPIOB
 #define USART3_CS_Pin GPIO_PIN_14
 #define USART3_CS_GPIO_Port GPIOB
-#define PROCHOT_2_Pin GPIO_PIN_10
-#define PROCHOT_2_GPIO_Port GPIOA
 #define Blue_LED_Pin GPIO_PIN_3
 #define Blue_LED_GPIO_Port GPIOB
 #define Red_LED_Pin GPIO_PIN_5
@@ -107,7 +104,7 @@ void Error_Handler(void);
 #define GPIO_ON(x) HAL_GPIO_WritePin(GPIOB, x, GPIO_PIN_RESET)
 #define GPIO_OFF(x) HAL_GPIO_WritePin(GPIOB, x, GPIO_PIN_SET)
 
-void simpleTestI2C_EEPROM(uint16_t addr);
+void test_EEPROM(uint16_t addr, const char * data);
 void led_Test();
 void all_led_OFF();
 uint16_t read_MP2650_16(uint8_t regAddr);
@@ -116,20 +113,25 @@ void print_MP2650_16(uint8_t regAddr);
 void print_byte(uint8_t byte);
 void ext_print_16(uint8_t regAddr);
 void print_Regs16();
-
+void init_MP2650();
 uint8_t read_MP2650_8(uint8_t regAddr);
 void write_MP2650_8(uint8_t regAddr, uint8_t regValue);
 void print_MP2650_8(uint8_t regAddr);
 void print_Regs8();
-
-void set_4_battery();
-void disable_BATTFET();
-void enable_BATTFET();
-void disable_CHARGE();
-void enable_CHARGE();
-void disable_NTC_GCOMP_SEL();
-void enable_NTC_GCOMP_SEL();
-
+void REG_00_set_Input_Current_Limit_1(u_int16_t);               //in mA
+void REG_01_set_Input_Voltage_Limit(u_int16_t);                 //in mV
+void REG_02_set_Charge_Current(u_int16_t);                      //in mA
+void REG_03_set_PreCharge_Current(u_int16_t);                   //in mA
+void REG_03_set_Termination_Current(u_int16_t);                 //in mA
+void REG_04_set_Battery_Full_Voltage_for_one_Cell(u_int16_t);   //in mV
+void REG_04_set_Battery_Threshold_for_one_Cell_100mV();
+void REG_04_set_Battery_Threshold_for_one_Cell_200mV();
+void REG_07_set_4_cells();
+void REG_08_BATTFET_EN(_Bool);
+void REG_08_CHARGE_EN(_Bool);
+void REG_08_NTC_GCOMP_SEL(_Bool);
+void REG_0F_set_Input_Current_Limit_2(u_int16_t);
+void REG_2D_VBATT_LP_EN(_Bool);
 
 /* USER CODE END Private defines */
 
