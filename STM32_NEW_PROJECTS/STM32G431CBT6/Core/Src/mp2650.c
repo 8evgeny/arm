@@ -496,6 +496,7 @@ void REG_03_set_PreCharge_Current(u_int16_t value) //180 - 840
         data8.value &= 0b00001111;
         data8.value |= 0b11110000;
     }
+    write_MP2650_8(Pre_Charge_and_Termination_Current_Setting, data8.value);
 }
 void REG_03_set_Termination_Current(u_int16_t value)
 {
