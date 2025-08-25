@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # Set ARM compiler
-#set(TOOLS_PATH /home/user/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi)
-set(TOOLS_PATH /home/user/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi)
+set(TOOLS_PATH /home/user/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi)
+#set(TOOLS_PATH /home/user/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi)
 
 #set(CMAKE_C_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-gcc)
 #set(CMAKE_CXX_COMPILER ${TOOLS_PATH}/bin/arm-none-eabi-g++)
@@ -22,13 +22,12 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}\
     -fdata-sections \
     -Wall \
     -fstack-usage \
-    -fcyclomatic-complexity \
     --specs=nano.specs \
     -mfpu=fpv4-sp-d16 \
     -mfloat-abi=hard \
     -mthumb \
     ")
-
+#-fcyclomatic-complexity \
 
 include_directories(
     Core/Inc
@@ -50,7 +49,7 @@ file (GLOB SOURCES_C
 add_executable(${PROJECT_NAME}.elf
     ${SOURCES_C}
     )
-#-mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+
 set_target_properties(${PROJECT_NAME}.elf PROPERTIES LINKER_LANGUAGE CXX)
 set(LINKER_SCRIPT_FLASH "${CMAKE_SOURCE_DIR}/STM32G431CBTX_FLASH.ld")
 set(LINKER_FLAGS "SHELL: \
@@ -61,15 +60,11 @@ set(LINKER_FLAGS "SHELL: \
     -Wl,--gc-sections \
     -static \
     --specs=nano.specs \
+    -mfpu=fpv4-sp-d16 \
+    -mfloat-abi=hard \
+    -mthumb \
+    -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
     -Wl,--gc-sections,--print-memory-usage \
-    -mfloat-abi=soft \
-    -mthumb
-    -Wl,--start-group \
-    -lc \
-    -lm \
-    -lstdc++ -lsupc++ \
-    -Wl,--end-group \
-    -Xlinker -Map=${PROJECT_NAME}.map \
     ")
 
 target_link_options(${PROJECT_NAME}.elf PRIVATE ${LINKER_FLAGS})
@@ -90,7 +85,8 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
 #   COMMENT "Write Flash ")
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
-   COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32G030F6 -if SWD -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G030F6P6TR/flash_script.jlink"
+   COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32G431CB -if SWD  -CommandFile "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G431CBT6/flash_script.jlink"
    COMMENT "Write Flash ")
 
-#-speed 2000
+
+#COMMAND /home/user/JLink_Linux_V852_x86_64/JLinkExe -device STM32G431CB -if SWD -autoconnect 1 -CommandFile "/home/user/WORK/Github/Arm/STM32_NEW_PROJECTS/STM32G431CBT6/flash_script.jlink"
