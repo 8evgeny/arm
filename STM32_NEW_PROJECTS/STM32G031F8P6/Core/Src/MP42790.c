@@ -448,6 +448,7 @@ void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
     toWrite[7] = dataWrite2.tmp2[3];  //старший CRC
 
 //    printf("toSend - %02X%02X%02X%02X%02X%02X%02X%02X \r\n", toWrite[0], toWrite[1], toWrite[2], toWrite[3], toWrite[4], toWrite[5],  toWrite[6], toWrite[7]);
+//    CONFIG_MODE_CMD();
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 8, HAL_MAX_DELAY);
 }
@@ -511,6 +512,7 @@ void write_MP42790_16_CRC(uint16_t regAddr, uint16_t value)
     toWrite[6] = crc.crc[1];
     toWrite[7] = crc.crc[2];
     toWrite[8] = crc.crc[3];    //старший байт CRC
+//    CONFIG_MODE_CMD();
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 9, HAL_MAX_DELAY);
 }
@@ -581,19 +583,20 @@ void write_MP42790_32_CRC(uint16_t regAddr, uint32_t value)
     toWrite[8] = crc.crc[1];
     toWrite[9] = crc.crc[2];
     toWrite[10] = crc.crc[3];    //старший байт CRC
+//    CONFIG_MODE_CMD();
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 11, HAL_MAX_DELAY);
 }
 void test_write_42790()
 {
-    CONFIG_MODE_CMD();
     printf("\r\n--- test write reg 8 ---\r\n");
     uint16_t reg8 = 0x1238;
     print_MP42790_8_CRC(reg8);
     uint8_t value8 = read_MP42790_8_CRC(reg8);
     ++value8;
-    HAL_Delay(10);
+    CONFIG_MODE_CMD();
     write_MP42790_8_CRC(reg8, value8);
+    HAL_Delay(100);
     print_MP42790_8_CRC(reg8);
 
     printf("\r\n--- test write reg 16 ---\r\n");
@@ -601,7 +604,9 @@ void test_write_42790()
     print_MP42790_16_CRC(reg16);
     uint8_t value16 = read_MP42790_16_CRC(reg16);
     ++value16;
+    CONFIG_MODE_CMD();
     write_MP42790_16_CRC(reg16, value16);
+    HAL_Delay(100);
     print_MP42790_16_CRC(reg16);
 
     printf("\r\n--- test write reg 32 ---\r\n");
@@ -609,7 +614,9 @@ void test_write_42790()
     print_MP42790_32_CRC(reg32);
     uint8_t value32 = read_MP42790_32_CRC(reg32);
     ++value32;
+    CONFIG_MODE_CMD();
     write_MP42790_32_CRC(reg32, value32);
+    HAL_Delay(100);
     print_MP42790_32_CRC(reg32);
 }
 void RST_CMD()             //Reset the fuel gauge. This is a self-clearing function
@@ -634,7 +641,7 @@ void END_EDIT_CONFIG_CMD() //The fuel gauge settings cannot be edited
 }
 void CONFIG_MODE_CMD()     //Enter configuration mode
 {
-    printf("\r\n----- CONFIG_MODE_CMD -------\r\n");
+    printf("----- CONFIG_MODE_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFB, 0x01);
 }
 void CONFIG_EXIT_CMD()     //The fuel gauge settings cannot be edited
