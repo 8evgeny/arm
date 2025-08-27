@@ -73,7 +73,7 @@ void print_MP2790(uint8_t regAddr)
 
 void write_MP2790(uint8_t regAddr, uint16_t regValue)
 {
-    HAL_Delay(3);
+    HAL_Delay(8);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Write(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
 }
@@ -329,7 +329,7 @@ void init_ACT_CFG()
     printf("  init_ACT_CFG()\r\n");
     read_MP2790(ACT_CFG);
     write_MP2790(ACT_CFG, data16.value.value |= 0b0000000000011000);    //  3  4  bits to 1
-    write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);     //  1 bit to 0
+    write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);    //  1 bit to 0
     print_MP2790(ACT_CFG);
     printf("\r\n");
 }

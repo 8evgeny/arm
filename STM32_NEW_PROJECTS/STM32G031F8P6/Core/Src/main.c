@@ -113,7 +113,7 @@ int main(void)
 
   init_Print_to_RS485();
   init_2790();
-  init_42790();
+//  init_42790();
 
   /* USER CODE END 2 */
 
