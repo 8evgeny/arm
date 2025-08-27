@@ -131,7 +131,7 @@ int main(void)
 //    read_2790_REGS();
 //    read_42790_REGS();
 
-//    test_write_42790();
+    test_write_42790();
 
   while (1)
   {
