@@ -320,7 +320,7 @@ void receive_Data_16_CRC(uint16_t regAddr)
     uint8_t toRead16CRC[6];
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead16CRC, 6, HAL_MAX_DELAY);
-    uint32_t sum = crc32(regAddr, 2, toRead16CRC);
+    sum = crc32(regAddr, 2, toRead16CRC);
     reg16.value.val[0] = toRead16CRC[0];
     reg16.value.val[1] = toRead16CRC[1];
     reg16.CRC_calc = sum;
@@ -347,11 +347,10 @@ void receive_Data_32_CRC(uint16_t regAddr)
 }
 uint8_t read_MP42790_8_CRC(uint16_t regAddr)
 {
-    CRC_OK = -1;
+    CRC_OK = 0;
     pulse_SDA();
     send_Address_Len_8(regAddr);
     receive_Data_8_CRC(regAddr);
-    HAL_Delay(10);
     if(CRC_OK != 0)
     { //Повторное чтение
         int num = 100;
@@ -422,10 +421,29 @@ void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
 }
 uint16_t read_MP42790_16_CRC(uint16_t regAddr)
 {
-    CRC_OK = -1;
+    CRC_OK = 0;
     pulse_SDA();
     send_Address_Len_16(regAddr);
     receive_Data_16_CRC(regAddr);
+    if(CRC_OK != 0)
+    { //Повторное чтение
+        int num = 100;
+        while(CRC_OK != 0)
+        {
+            write_MP42790_8_CRC(0x7FF9, 0x01); //CONFIG_RST_CMD();
+            write_MP42790_8_CRC(0x7FFB, 0x01); //CONFIG_MODE_CMD();
+            pulse_SDA();
+            send_Address_Len_16(regAddr);
+            receive_Data_16_CRC(regAddr);
+            --num;
+            if(num == 0)
+            {
+                printf("========== CRC ERROR ============ ");
+                reg16.value.value = 0xFFFF;
+                break;
+            }
+        }
+    }
     return reg16.value.value;
 }
 void print_MP42790_16_CRC(uint16_t regAddr)
