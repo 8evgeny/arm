@@ -1,5 +1,6 @@
 #include "main.h"
 extern I2C_HandleTypeDef hi2c2;
+int8_t CRC_OK = -1;
 typedef struct _reg_8
 {
     uint8_t value;
@@ -286,7 +287,7 @@ union
     uint32_t readCRC;
     uint8_t crc[4];
 }data;
-void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
+void receive_Data_8_CRC(uint16_t regAddr)
 {
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead8CRC, 5, HAL_MAX_DELAY);
@@ -298,15 +299,20 @@ void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
     reg8.readCRC.CRC_[1] = toRead8CRC[2];
     reg8.readCRC.CRC_[0] = toRead8CRC[1];
     data.readCRC = sum;
-    if((data.crc[0] == toRead8CRC[1]) && (data.crc[1] == toRead8CRC[2]) && (data.crc[2] == toRead8CRC[3]) && (data.crc[3] == toRead8CRC[4]) )
+    if(
+        (data.crc[0] == toRead8CRC[1]) &&
+        (data.crc[1] == toRead8CRC[2]) &&
+        (data.crc[2] == toRead8CRC[3]) &&
+        (data.crc[3] == toRead8CRC[4])
+      )
     {
-//        printf("----- CRC  OK !!!! ----\r\n");
-        *pCRC_OK = 0;
+        printf("CRC OK    ");
+        CRC_OK = 0;
     }
     else
     {
-        printf("----- CRC  ERROR !!!! ----\r\n");
-        *pCRC_OK = -1;
+        printf("CRC ERROR ");
+        CRC_OK = -1;
     }
 }
 void receive_Data_16_CRC(uint16_t regAddr)
@@ -341,12 +347,12 @@ void receive_Data_32_CRC(uint16_t regAddr)
 }
 uint8_t read_MP42790_8_CRC(uint16_t regAddr)
 {
-//    HAL_Delay(10);
+//    HAL_Delay(5);
+        CRC_OK = -1;
     pulse_SDA();
     send_Address_Len_8(regAddr);
-    int8_t CRC_OK = -1;
-    int8_t * pCRC_OK = &CRC_OK;
-    receive_Data_8_CRC(regAddr, pCRC_OK);
+    receive_Data_8_CRC(regAddr);
+    HAL_Delay(10);
     if(CRC_OK != 0)
     {
 //        reg8.value = 0xFF;
@@ -358,7 +364,10 @@ void print_MP42790_8_CRC(uint16_t regAddr)
     read_MP42790_8_CRC(regAddr);
     printf("MP42790 reg %04X   0x%02X\t\t", regAddr, reg8.value);
     print_byte(reg8.value);
-    printf("\t\t\t\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg8.readCRC.CRC_read, (unsigned long)reg8.CRC_calc);
+    if(CRC_OK != 0)
+    {
+        printf("\t\t\t\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg8.readCRC.CRC_read, (unsigned long)reg8.CRC_calc);
+    }
     printf("\r\n");
 }
 void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)

@@ -133,7 +133,7 @@ void send_Address_Len_8(uint16_t regAddr);
 void send_Address_Len_16(uint16_t regAddr);
 void send_Address_Len_32(uint16_t regAddr);
 void receive_Data_8(uint16_t regAddr);
-void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK);
+void receive_Data_8_CRC(uint16_t regAddr);
 void receive_Data_16(uint16_t regAddr);
 void receive_Data_16_CRC(uint16_t regAddr);
 void receive_Data_32(uint16_t regAddr);
