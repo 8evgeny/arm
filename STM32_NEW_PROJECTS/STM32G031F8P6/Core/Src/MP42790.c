@@ -282,6 +282,7 @@ void send_Address_Len_32(uint16_t regAddr)
 }
 uint8_t toRead8CRC[5];
 uint8_t toRead16CRC[6];
+uint8_t toRead32CRC[8];
 uint32_t sum;
 union
 {
@@ -307,7 +308,7 @@ void receive_Data_8_CRC(uint16_t regAddr)
         (data.crc[3] == toRead8CRC[4])
       )
     {
-        printf("CRC OK    ");
+//        printf("CRC OK    ");
         CRC_OK = 0;
     }
     else
@@ -336,7 +337,7 @@ void receive_Data_16_CRC(uint16_t regAddr)
         (data.crc[3] == toRead16CRC[5])
       )
     {
-        printf("CRC OK    ");
+//        printf("CRC OK    ");
         CRC_OK = 0;
     }
     else
@@ -347,10 +348,9 @@ void receive_Data_16_CRC(uint16_t regAddr)
 }
 void receive_Data_32_CRC(uint16_t regAddr)
 {
-    uint8_t toRead32CRC[8];
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead32CRC, 8, HAL_MAX_DELAY);
-    uint32_t sum = crc32(regAddr, 4, toRead32CRC);
+    sum = crc32(regAddr, 4, toRead32CRC);
     reg32.value.val[0] = toRead32CRC[0];
     reg32.value.val[1] = toRead32CRC[1];
     reg32.value.val[2] = toRead32CRC[2];
@@ -360,6 +360,22 @@ void receive_Data_32_CRC(uint16_t regAddr)
     reg32.readCRC.CRC_[2] = toRead32CRC[6];
     reg32.readCRC.CRC_[1] = toRead32CRC[5];
     reg32.readCRC.CRC_[0] = toRead32CRC[4];
+    data.readCRC = sum;
+    if(
+        (data.crc[0] == toRead32CRC[4]) &&
+        (data.crc[1] == toRead32CRC[5]) &&
+        (data.crc[2] == toRead32CRC[6]) &&
+        (data.crc[3] == toRead32CRC[7])
+      )
+    {
+//        printf("CRC OK    ");
+        CRC_OK = 0;
+    }
+    else
+    {
+//        printf("CRC ERROR ");
+        CRC_OK = -1;
+    }
 }
 uint8_t read_MP42790_8_CRC(uint16_t regAddr)
 {
@@ -391,7 +407,7 @@ uint8_t read_MP42790_8_CRC(uint16_t regAddr)
 void print_MP42790_8_CRC(uint16_t regAddr)
 {
     read_MP42790_8_CRC(regAddr);
-    printf("MP42790 reg %04X   0x%02X\t", regAddr, reg8.value);
+    printf("MP42790 reg %04X   0x%02X\t\t  ", regAddr, reg8.value);
     print_byte(reg8.value);
     if(CRC_OK != 0)
     {
@@ -465,7 +481,7 @@ uint16_t read_MP42790_16_CRC(uint16_t regAddr)
 void print_MP42790_16_CRC(uint16_t regAddr)
 {
     read_MP42790_16_CRC(regAddr);
-    printf("MP42790 reg %04X   0x%04X\t", regAddr, reg16.value.value);
+    printf("MP42790 reg %04X   0x%04X\t  ", regAddr, reg16.value.value);
     print_byte(reg16.value.val[1]);
     printf(" ");
     print_byte(reg16.value.val[0]);
@@ -500,16 +516,36 @@ void write_MP42790_16_CRC(uint16_t regAddr, uint16_t value)
 }
 uint32_t read_MP42790_32_CRC(uint16_t regAddr)
 {
-    HAL_Delay(10);
+    CRC_OK = 0;
+//    HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_32(regAddr);
     receive_Data_32_CRC(regAddr);
+    if(CRC_OK != 0)
+    { //Повторное чтение
+        int num = 100;
+        while(CRC_OK != 0)
+        {
+            write_MP42790_8_CRC(0x7FF9, 0x01); //CONFIG_RST_CMD();
+            write_MP42790_8_CRC(0x7FFB, 0x01); //CONFIG_MODE_CMD();
+            pulse_SDA();
+            send_Address_Len_32(regAddr);
+            receive_Data_32_CRC(regAddr);
+            --num;
+            if(num == 0)
+            {
+                printf("========== CRC ERROR ============ ");
+                reg32.value.value = 0xFFFFFFFF;
+                break;
+            }
+        }
+    }
     return reg32.value.value;
 }
 void print_MP42790_32_CRC(uint16_t regAddr)
 {
     read_MP42790_32_CRC(regAddr);
-    printf("MP42790 reg %04X   0x%08X\t", regAddr, reg32.value.value);
+    printf("MP42790 reg %04X   0x%08X\t  ", regAddr, reg32.value.value);
     print_byte(reg32.value.val[3]);
     printf(" ");
     print_byte(reg32.value.val[2]);
@@ -517,7 +553,10 @@ void print_MP42790_32_CRC(uint16_t regAddr)
     print_byte(reg32.value.val[1]);
     printf(" ");
     print_byte(reg32.value.val[0]);
-    printf("\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg32.readCRC.CRC_read, (unsigned long)reg32.CRC_calc);
+    if(CRC_OK != 0)
+    {
+        printf("\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg32.readCRC.CRC_read, (unsigned long)reg32.CRC_calc);
+    }
     printf("\r\n");
 }
 void write_MP42790_32_CRC(uint16_t regAddr, uint32_t value)
