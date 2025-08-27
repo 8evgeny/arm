@@ -228,6 +228,8 @@ void init_UV_OV()
 void initFET_CFG() //000 010 01 11110000
 {
     printf("  initFET_CFG()\r\n");
+    write_MP2790(FET_CFG, 0b0110100011110000);
+
     read_MP2790(FET_CFG);
     write_MP2790(FET_CFG, data16.value.value &= 0b1000111111111111);    // bits  14:12  to 000
 
@@ -236,7 +238,7 @@ void initFET_CFG() //000 010 01 11110000
 
     write_MP2790(FET_CFG, data16.value.value |= 0b0000000111000000);
 
-//    write_MP2790(FET_CFG, 0b0110100011110000);
+
     print_MP2790(FET_CFG);
     printf("\r\n");
 }
