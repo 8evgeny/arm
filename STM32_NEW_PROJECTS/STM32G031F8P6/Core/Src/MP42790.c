@@ -75,10 +75,9 @@ void init_42790()
 #endif
     printf("\r\n------ init_42790 ------\r\n\n");
     HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
-
+    CONFIG_MODE_CMD();
 //    disable_42790_REGS_CRC();
 //    enable_42790_REGS_CRC();
-//    read_42790_REGS();
 
 //    test_write_42790();
 
@@ -118,6 +117,7 @@ void enable_42790_REGS_CRC()
 }
 void read_42790_REGS()
 {
+    printf("\n========= read_42790_REGS() ========\r\n");
     for (int i=0; i < 0x78; i+=2)
     {
         print_MP42790_16_CRC(i);

@@ -113,7 +113,7 @@ int main(void)
 
   init_Print_to_RS485();
   init_2790();
-//  init_42790();
+  init_42790();
 
   /* USER CODE END 2 */
 
@@ -126,14 +126,12 @@ int main(void)
 
 
 #endif
-    simpleTestI2C_EEPROM(0x00);
+//    simpleTestI2C_EEPROM(0x00);
 
 //    read_2790_REGS();
 //    read_42790_REGS();
 
-//    CONFIG_MODE_CMD();
-
-    print_MP42790_8_CRC(0x1001);
+//    print_MP42790_8_CRC(0x1001);
 //    print_MP42790_16_CRC(0x1207);
 //    print_MP42790_32_CRC(0x0022);
 

@@ -47,6 +47,7 @@ void init_2790()
 
 void read_2790_REGS()
 {
+    printf("\n========= read_2790_REGS() ========\r\n");
     for (int i=0; i <= 0xB9; ++i)
     {
         print_MP2790(i);
@@ -224,12 +225,18 @@ void init_UV_OV()
     printf("\r\n");
 }
 
-void initFET_CFG()
+void initFET_CFG() //000 010 01 11110000
 {
     printf("  initFET_CFG()\r\n");
     read_MP2790(FET_CFG);
-    write_MP2790(FET_CFG, data16.value.value &= 0b1000111111111111);  // bit  12 14  to 0
+    write_MP2790(FET_CFG, data16.value.value &= 0b1000111111111111);    // bits  14:12  to 000
+
+    write_MP2790(FET_CFG, data16.value.value |= 0b0000100000000000);    // bits 11:9 to 100
+    write_MP2790(FET_CFG, data16.value.value &= 0b1111100111111111);
+
     write_MP2790(FET_CFG, data16.value.value |= 0b0000000111000000);
+
+//    write_MP2790(FET_CFG, 0b0110100011110000);
     print_MP2790(FET_CFG);
     printf("\r\n");
 }
