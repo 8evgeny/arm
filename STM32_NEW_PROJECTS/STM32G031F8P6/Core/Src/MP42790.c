@@ -311,7 +311,7 @@ void receive_Data_8_CRC(uint16_t regAddr)
     }
     else
     {
-        printf("CRC ERROR ");
+//        printf("CRC ERROR ");
         CRC_OK = -1;
     }
 }
@@ -354,7 +354,16 @@ uint8_t read_MP42790_8_CRC(uint16_t regAddr)
     receive_Data_8_CRC(regAddr);
     HAL_Delay(10);
     if(CRC_OK != 0)
-    {
+    { //Повторно
+        HAL_Delay(300);
+        pulse_SDA();
+        send_Address_Len_8(regAddr);
+        receive_Data_8_CRC(regAddr);
+        if(CRC_OK != 0)
+        {
+            printf("CRC ERROR ");
+        }
+
 //        reg8.value = 0xFF;
     }
     return reg8.value;
