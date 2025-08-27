@@ -448,7 +448,6 @@ void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
     toWrite[7] = dataWrite2.tmp2[3];  //старший CRC
 
 //    printf("toSend - %02X%02X%02X%02X%02X%02X%02X%02X \r\n", toWrite[0], toWrite[1], toWrite[2], toWrite[3], toWrite[4], toWrite[5],  toWrite[6], toWrite[7]);
-//    CONFIG_MODE_CMD();
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 8, HAL_MAX_DELAY);
 }
@@ -512,7 +511,6 @@ void write_MP42790_16_CRC(uint16_t regAddr, uint16_t value)
     toWrite[6] = crc.crc[1];
     toWrite[7] = crc.crc[2];
     toWrite[8] = crc.crc[3];    //старший байт CRC
-//    CONFIG_MODE_CMD();
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 9, HAL_MAX_DELAY);
 }
@@ -583,7 +581,6 @@ void write_MP42790_32_CRC(uint16_t regAddr, uint32_t value)
     toWrite[8] = crc.crc[1];
     toWrite[9] = crc.crc[2];
     toWrite[10] = crc.crc[3];    //старший байт CRC
-//    CONFIG_MODE_CMD();
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 11, HAL_MAX_DELAY);
 }
