@@ -592,6 +592,7 @@ void test_write_42790()
     print_MP42790_8_CRC(reg8);
     uint8_t value8 = read_MP42790_8_CRC(reg8);
     ++value8;
+    HAL_Delay(10);
     write_MP42790_8_CRC(reg8, value8);
     print_MP42790_8_CRC(reg8);
 
