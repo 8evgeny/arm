@@ -131,15 +131,15 @@ int main(void)
 //    read_2790_REGS();
 //    read_42790_REGS();
 
-    test_write_42790();
+//    test_write_42790();
 
   while (1)
   {
-      HAL_Delay(3000);
+      HAL_Delay(10000);
 //      getStatus();
 //      get_self_U();
 //      read_Temp();
-//      read_U_I();
+      read_U_I();
 
     /* USER CODE END WHILE */
 
