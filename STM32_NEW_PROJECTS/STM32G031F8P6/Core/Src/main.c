@@ -139,13 +139,14 @@ int main(void)
       RST_CMD();
       CONFIG_RST_CMD();
       send_U_from_2790_to_42790();
+      send_I_from_2790_to_42790();
       EXE_CMD();
       HAL_Delay(100);
       get_empty_soc_cells();
       get_empty_RTIME();
       get_full_soc_cells();
       read_Temp();
-
+      read_U_I();
       HAL_Delay(5000);
 
     /* USER CODE END WHILE */

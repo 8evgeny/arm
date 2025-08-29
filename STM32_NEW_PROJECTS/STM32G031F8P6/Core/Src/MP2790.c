@@ -10,7 +10,7 @@ typedef struct _data16
     }value;
 }data_16;
 data_16 data16; //2790
-uint16_t U3,U4,U5,U6,I1,I2,I3,I4,I_TOP,U_PACK,U_PACK_to_42790, U_TOP,NTC1,NTC2,NTC3,NTC4;
+uint16_t U3,U4,U5,U6,I3,I4,I5,I6,I_TOP,U_PACK,U_PACK_to_42790, U_TOP,NTC1,NTC2,NTC3,NTC4;
 uint16_t Temperature;
 
 void init_2790()
@@ -105,14 +105,13 @@ void read_U_I()
     printf("U5=%d mV*10\r\n", U5);
     printf("U6=%d mV*10\r\n", U6);
 
+    receive_I();
 
-    I1 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
-    I2 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
-    I3 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
-    I4 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
-    I_TOP = (read_MP2790(RD_ITOP) & 0x7FFF) * 20000000 / 32768 ;
-
-//    printf("I_TOP=%d,%03dmA\r\n",I_TOP/1000,I_TOP%1000);
+    printf("I3=%d mkA\r\n", I3);
+    printf("I4=%d mkA\r\n", I4);
+    printf("I5=%d mkA\r\n", I5);
+    printf("I6=%d mkA\r\n", I6);
+    printf("I_TOP=%d mkA\r\n", I_TOP);
     printf("\r\n");
 }
 
@@ -120,15 +119,15 @@ void read_I()
 {
     //I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
     adcOn();
-    I1 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
-    I2 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
-    I3 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
-    I4 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
+    I3 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
+    I4 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
+    I5 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
+    I6 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
 
-    printf("I1=%d,%03dmA\r\n",I1/1000,I1%1000);
-    printf("I2=%d,%03dmA\r\n",I2/1000,I2%1000);
     printf("I3=%d,%03dmA\r\n",I3/1000,I3%1000);
     printf("I4=%d,%03dmA\r\n",I4/1000,I4%1000);
+    printf("I5=%d,%03dmA\r\n",I5/1000,I5%1000);
+    printf("I6=%d,%03dmA\r\n",I6/1000,I6%1000);
     printf("\r\n");
 }
 
@@ -430,6 +429,17 @@ void receive_U()
     U6 = read_MP2790(RD_VCELL6) * 50000 / 32768;
 
 }
+
+void receive_I()
+{
+    adcOn();
+    I3 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
+    I4 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
+    I5 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
+    I6 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
+    I_TOP = (read_MP2790(RD_ITOP) & 0x7FFF) * 20000000 / 32768 ;
+}
+
 void send_U_from_2790_to_42790()
 {
     printf("----- send_U_from_2790_to_42790() ------\r\n");
@@ -437,17 +447,6 @@ void send_U_from_2790_to_42790()
     get_U_PACK_TOP();
     U_PACK_to_42790 = U_PACK / 2;
 
-    printf("U3=%d mV*10\r\n", U3);
-    printf("U4=%d mV*10\r\n", U4);
-    printf("U5=%d mV*10\r\n", U5);
-    printf("U6=%d mV*10\r\n", U6);
-//    printf("U_PACK_to_42790=%d mV/2\r\n", U_PACK_to_42790);
-
-//    print_MP42790_16_CRC(VRDG_CELL3);
-//    print_MP42790_16_CRC(VRDG_CELL4);
-//    print_MP42790_16_CRC(VRDG_CELL5);
-//    print_MP42790_16_CRC(VRDG_CELL6);
-//    print_MP42790_16_CRC(VRDG_PACK);
     CONFIG_MODE_CMD();
     write_MP42790_16_CRC(VRDG_CELL3, U3);
     write_MP42790_16_CRC(VRDG_CELL4, U4);
@@ -455,9 +454,23 @@ void send_U_from_2790_to_42790()
     write_MP42790_16_CRC(VRDG_CELL6, U6);
     write_MP42790_16_CRC(VRDG_PACK, U_PACK_to_42790);
     CONFIG_EXIT_CMD();
-//    print_MP42790_16_CRC(VRDG_CELL3);
-//    print_MP42790_16_CRC(VRDG_CELL4);
-//    print_MP42790_16_CRC(VRDG_CELL5);
-//    print_MP42790_16_CRC(VRDG_CELL6);
-//    print_MP42790_16_CRC(VRDG_PACK);
+}
+
+void send_I_from_2790_to_42790()
+{
+    printf("----- send_I_from_2790_to_42790() ------\r\n");
+    receive_I();
+
+    CONFIG_MODE_CMD();
+    write_MP42790_32_CRC(IRDG_CELL3, I3);
+    write_MP42790_32_CRC(IRDG_CELL4, I4);
+    write_MP42790_32_CRC(IRDG_CELL5, I5);
+    write_MP42790_32_CRC(IRDG_CELL6, I6);
+    write_MP42790_32_CRC(IRDG_PACK, I_TOP);
+    CONFIG_EXIT_CMD();
+    print_MP42790_32_CRC(IRDG_CELL3);
+    print_MP42790_32_CRC(IRDG_CELL4);
+    print_MP42790_32_CRC(IRDG_CELL5);
+    print_MP42790_32_CRC(IRDG_CELL6);
+    print_MP42790_32_CRC(IRDG_PACK);
 }

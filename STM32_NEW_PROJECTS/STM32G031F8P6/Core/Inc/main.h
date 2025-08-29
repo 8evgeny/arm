@@ -160,7 +160,9 @@ void CONFIG_RST_CMD();      //Reset the configuration. This is a self-clearing f
 void LOG_RST_CMD();         //Re-initialize the lifetime log registers. This is a self-clearing function
 
 void receive_U();
+void receive_I();
 void send_U_from_2790_to_42790();
+void send_I_from_2790_to_42790();
 void get_empty_soc_cells();
 void get_full_soc_cells();
 void get_empty_ID();
