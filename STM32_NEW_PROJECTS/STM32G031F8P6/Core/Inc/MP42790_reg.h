@@ -70,3 +70,40 @@
 
 //16bit
 #define IDIS_AVG_BKUP           0x023C
+
+
+//============= Fuel Gauge Output
+//8bit
+#define EMTY_SOC_CELL1          0x0564 //Returns cell 1’s empty SOC in %
+#define EMTY_SOC_CELL2          0x0565
+#define EMTY_SOC_CELL3          0x0566
+#define EMTY_SOC_CELL4          0x0567
+#define EMTY_SOC_CELL5          0x0568
+#define EMTY_SOC_CELL6          0x0569
+#define EMTY_SOC_CELL7          0x056A
+#define EMTY_SOC_CELL8          0x056B
+#define EMTY_SOC_CELL9          0x056C
+#define EMTY_SOC_CELL10         0x056D
+#define EMTY_SOC_CELL11         0x056E
+#define EMTY_SOC_CELL12         0x056F
+#define EMTY_SOC_CELL13         0x0570
+#define EMTY_SOC_CELL14         0x0571
+#define EMTY_SOC_CELL15         0x0572
+#define EMTY_SOC_CELL16         0x0573 //Returns cell 16’s empty SOC in %
+#define EMTY_ID                 0x0574 //Returns 1 to 16 the cell ID for the cell that is empty limiting the pack
+#define EMTY_LIM                0x0577 //Outputs the pack’s empty limiting factor
+
+
+//16bit
+#define EMTY_RTIME              0x0575 //Returns the  seconds remaining time for the pack to become empty
+
+
+
+
+
+
+
+
+
+
+

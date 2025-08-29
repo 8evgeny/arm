@@ -114,9 +114,11 @@ int main(void)
   init_Print_to_RS485();
   init_2790();
   init_42790();
-
-  send_U_from_2790_to_42790();
-
+    RST_CMD();
+    send_U_from_2790_to_42790();
+    EXE_CMD();
+    HAL_Delay(100);
+    get_empty_soc_cells();
 
   /* USER CODE END 2 */
 

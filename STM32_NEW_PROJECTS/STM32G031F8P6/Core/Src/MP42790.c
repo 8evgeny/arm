@@ -618,12 +618,12 @@ void test_write_42790()
 }
 void RST_CMD()             //Reset the fuel gauge. This is a self-clearing function
 {
-    printf("\r\n----- RST_CMD -------\r\n");
+    printf("----- RST_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFE, 0x01);
 }
 void EXE_CMD()             //Trigger a fuel gauge update refresh
 {
-    printf("\r\n----- EXE_CMD -------\r\n");
+    printf("----- EXE_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFE, 0x01);
 }
 void EDIT_CONFIG_CMD()     //The fuel gauge settings can be edited
@@ -655,4 +655,13 @@ void LOG_RST_CMD()         //Exit configuration mode. The new configuration is s
 {
     printf("\r\n----- LOG_RST_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FF8, 0x01);
+}
+
+void get_empty_soc_cells()
+{
+    printf("----- get_empty_soc_cells() -------\r\n");
+    print_MP42790_8_CRC(EMTY_SOC_CELL3);
+    print_MP42790_8_CRC(EMTY_SOC_CELL4);
+    print_MP42790_8_CRC(EMTY_SOC_CELL5);
+    print_MP42790_8_CRC(EMTY_SOC_CELL6);
 }

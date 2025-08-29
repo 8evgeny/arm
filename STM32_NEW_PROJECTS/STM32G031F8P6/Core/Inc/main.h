@@ -161,6 +161,8 @@ void LOG_RST_CMD();         //Re-initialize the lifetime log registers. This is 
 
 void receive_U();
 void send_U_from_2790_to_42790();
+void get_empty_soc_cells();
+
 
 int _write(int fd, char *str, int len);
 void init_crc_calculation();
