@@ -100,10 +100,10 @@ void read_U_I()
 
     receive_U();
 
-    printf("U3=%d mV*10\r\n", U3);
-    printf("U4=%d mV*10\r\n", U4);
-    printf("U5=%d mV*10\r\n", U5);
-    printf("U6=%d mV*10\r\n", U6);
+    printf("U3=%d mV\r\n", U3/10);
+    printf("U4=%d mV\r\n", U4/10);
+    printf("U5=%d mV\r\n", U5/10);
+    printf("U6=%d mV\r\n", U6/10);
 
     receive_I();
 
@@ -433,11 +433,11 @@ void receive_U()
 void receive_I()
 {
     adcOn();
-    I3 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
-    I4 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
-    I5 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
-    I6 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
-    I_TOP = (read_MP2790(RD_ITOP) & 0x7FFF) * 20000000 / 32768 ;
+    I3 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000 / 32768 ; //in mA
+    I4 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000 / 32768;
+    I5 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000 / 32768 ;
+    I6 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000 / 32768 ;
+    I_TOP = (read_MP2790(RD_ITOP) & 0x7FFF) * 20000 / 32768 ;
 }
 
 void send_U_from_2790_to_42790()
@@ -462,11 +462,11 @@ void send_I_from_2790_to_42790()
     receive_I();
 
     CONFIG_MODE_CMD();
-    write_MP42790_32_CRC(IRDG_CELL3, I3);
-    write_MP42790_32_CRC(IRDG_CELL4, I4);
-    write_MP42790_32_CRC(IRDG_CELL5, I5);
-    write_MP42790_32_CRC(IRDG_CELL6, I6);
-    write_MP42790_32_CRC(IRDG_PACK, I_TOP);
+    write_MP42790_32_CRC(IRDG_CELL3, I3/1000);
+    write_MP42790_32_CRC(IRDG_CELL4, I4/1000);
+    write_MP42790_32_CRC(IRDG_CELL5, I5/1000);
+    write_MP42790_32_CRC(IRDG_CELL6, I6/1000);
+    write_MP42790_32_CRC(IRDG_PACK, I_TOP/1000);
     CONFIG_EXIT_CMD();
     print_MP42790_32_CRC(IRDG_CELL3);
     print_MP42790_32_CRC(IRDG_CELL4);
