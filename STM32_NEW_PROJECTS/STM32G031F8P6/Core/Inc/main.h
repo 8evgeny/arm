@@ -159,6 +159,8 @@ void CONFIG_EXIT_CMD();     //Exit configuration mode. The new configuration is 
 void CONFIG_RST_CMD();      //Reset the configuration. This is a self-clearing function
 void LOG_RST_CMD();         //Re-initialize the lifetime log registers. This is a self-clearing function
 
+void send_U_from_2790_to_42790();
+
 int _write(int fd, char *str, int len);
 void init_crc_calculation();
 uint8_t crc_calc(uint8_t *data, uint8_t size);

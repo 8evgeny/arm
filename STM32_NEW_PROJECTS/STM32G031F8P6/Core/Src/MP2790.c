@@ -442,3 +442,15 @@ void get_SELF_CFG()
     print_MP2790(SELF_CFG);
     printf("\r\n");
 }
+
+void send_U_from_2790_to_42790()
+{
+    U1 = read_MP2790(RD_VCELL3) * 5000 / 32768;
+    U2 = read_MP2790(RD_VCELL4) * 5000 / 32768;
+    U3 = read_MP2790(RD_VCELL5) * 5000 / 32768;
+    U4 = read_MP2790(RD_VCELL6) * 5000 / 32768;
+    printf("U1=%d mV\r\n", U1);
+    printf("U2=%d mV\r\n", U2);
+    printf("U3=%d mV\r\n", U3);
+    printf("U4=%d mV\r\n", U4);
+}
