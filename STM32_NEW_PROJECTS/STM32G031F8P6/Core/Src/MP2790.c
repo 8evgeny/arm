@@ -10,7 +10,7 @@ typedef struct _data16
     }value;
 }data_16;
 data_16 data16; //2790
-uint16_t U1,U2,U3,U4,I1,I2,I3,I4,I_TOP,U_PACK,U_PACK_to_42790, U_TOP,NTC1,NTC2,NTC3,NTC4;
+uint16_t U3,U4,U5,U6,I1,I2,I3,I4,I_TOP,U_PACK,U_PACK_to_42790, U_TOP,NTC1,NTC2,NTC3,NTC4;
 uint16_t Temperature;
 
 void init_2790()
@@ -100,10 +100,10 @@ void read_U_I()
 
     receive_U();
 
-    printf("U1=%d mV*10\r\n", U1);
-    printf("U2=%d mV*10\r\n", U2);
     printf("U3=%d mV*10\r\n", U3);
     printf("U4=%d mV*10\r\n", U4);
+    printf("U5=%d mV*10\r\n", U5);
+    printf("U6=%d mV*10\r\n", U6);
 
 
     I1 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
@@ -112,10 +112,6 @@ void read_U_I()
     I4 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
     I_TOP = (read_MP2790(RD_ITOP) & 0x7FFF) * 20000000 / 32768 ;
 
-//    printf("U1=%d,%04dV I1=%d,%03dmA\r\n",U1/10000, U1%10000, I1/1000,I1%1000);
-//    printf("U2=%d,%04dV I2=%d,%03dmA\r\n",U2/10000, U2%10000, I2/1000,I2%1000);
-//    printf("U3=%d,%04dV I3=%d,%03dmA\r\n",U3/10000, U3%10000, I3/1000,I3%1000);
-//    printf("U4=%d,%04dV I4=%d,%03dmA\r\n",U4/10000, U4%10000, I4/1000,I4%1000);
 //    printf("I_TOP=%d,%03dmA\r\n",I_TOP/1000,I_TOP%1000);
     printf("\r\n");
 }
@@ -428,10 +424,10 @@ void get_SELF_CFG()
 void receive_U()
 {
     adcOn();
-    U1 = read_MP2790(RD_VCELL3) * 50000 / 32768;
-    U2 = read_MP2790(RD_VCELL4) * 50000 / 32768;
-    U3 = read_MP2790(RD_VCELL5) * 50000 / 32768;
-    U4 = read_MP2790(RD_VCELL6) * 50000 / 32768;
+    U3 = read_MP2790(RD_VCELL3) * 50000 / 32768;
+    U4 = read_MP2790(RD_VCELL4) * 50000 / 32768;
+    U5 = read_MP2790(RD_VCELL5) * 50000 / 32768;
+    U6 = read_MP2790(RD_VCELL6) * 50000 / 32768;
 
 }
 void send_U_from_2790_to_42790()
@@ -440,23 +436,26 @@ void send_U_from_2790_to_42790()
     get_U_PACK_TOP();
     U_PACK_to_42790 = U_PACK / 2;
 
-    printf("U1=%d mV*10\r\n", U1);
-    printf("U2=%d mV*10\r\n", U2);
     printf("U3=%d mV*10\r\n", U3);
     printf("U4=%d mV*10\r\n", U4);
+    printf("U5=%d mV*10\r\n", U5);
+    printf("U6=%d mV*10\r\n", U6);
     printf("U_PACK_to_42790=%d mV/2\r\n", U_PACK_to_42790);
     print_MP42790_16_CRC(VRDG_CELL3);
     print_MP42790_16_CRC(VRDG_CELL4);
     print_MP42790_16_CRC(VRDG_CELL5);
     print_MP42790_16_CRC(VRDG_CELL6);
+    print_MP42790_16_CRC(VRDG_PACK);
     CONFIG_MODE_CMD();
-    write_MP42790_16_CRC(VRDG_CELL3, U1);
-    write_MP42790_16_CRC(VRDG_CELL4, U2);
-    write_MP42790_16_CRC(VRDG_CELL5, U3);
-    write_MP42790_16_CRC(VRDG_CELL6, U4);
+    write_MP42790_16_CRC(VRDG_CELL3, U3);
+    write_MP42790_16_CRC(VRDG_CELL4, U4);
+    write_MP42790_16_CRC(VRDG_CELL5, U5);
+    write_MP42790_16_CRC(VRDG_CELL6, U6);
+    write_MP42790_16_CRC(VRDG_PACK, U_PACK_to_42790);
     CONFIG_EXIT_CMD();
     print_MP42790_16_CRC(VRDG_CELL3);
     print_MP42790_16_CRC(VRDG_CELL4);
     print_MP42790_16_CRC(VRDG_CELL5);
     print_MP42790_16_CRC(VRDG_CELL6);
+    print_MP42790_16_CRC(VRDG_PACK);
 }

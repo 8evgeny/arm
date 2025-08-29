@@ -643,7 +643,7 @@ void CONFIG_MODE_CMD()     //Enter configuration mode
 }
 void CONFIG_EXIT_CMD()     //The fuel gauge settings cannot be edited
 {
-    printf("\r\n----- CONFIG_EXIT_CMD -------\r\n");
+    printf("----- CONFIG_EXIT_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFA, 0x01);
 }
 void CONFIG_RST_CMD()      //Enter configuration mode
