@@ -58,6 +58,9 @@ void init_42790()
     set_work_capacity_cell();
     set_maximum_charge_current();
     set_maximum_discharge_current();
+    set_number_cells();
+    set_number_sensors();
+    set_cells_sensor_source();
 
 #if 0
 - Сell voltages (via the VRDG_CELLxx registers), current (via the IRDG_CELLxx registers),
@@ -720,5 +723,27 @@ void set_maximum_discharge_current()
 {
     CONFIG_MODE_CMD();
     write_MP42790_16_CRC(0x2040, 10000); //10000mAh
+    CONFIG_EXIT_CMD();
+}
+
+void set_number_cells()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_8_CRC(0x1204, 4);
+    CONFIG_EXIT_CMD();
+}
+
+void set_number_sensors()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_8_CRC(0x1206, 4);
+    CONFIG_EXIT_CMD();
+}
+
+void set_cells_sensor_source()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_8_CRC(0x1200, 0b01000000);
+    write_MP42790_8_CRC(0x1201, 0b00001110);
     CONFIG_EXIT_CMD();
 }
