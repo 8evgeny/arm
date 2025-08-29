@@ -155,11 +155,9 @@ void get_U_PACK_TOP()
 //    printf("  get RD_VPACKP\r\n");
 //    print_MP2790(RD_VPACKP);
     U_PACK = read_MP2790(RD_VPACKP) * 80000 / 32768;
-    printf("  U_PACK=%d,%03dV\r\n",U_PACK/1000, U_PACK%1000);
-//    printf("  get RD_VTOP\r\n");
-//    print_MP2790(RD_VTOP);
+    printf("  U_PACK=%d mV\r\n", U_PACK);
     U_TOP = read_MP2790(RD_VTOP) * 80000 / 32768;
-    printf("  U_TOP=%d,%03dV\r\n",U_TOP/1000, U_TOP%1000);
+    printf("  U_TOP=%d mV\r\n",U_TOP);
     printf("\r\n");
 }
 
@@ -436,6 +434,7 @@ void receive_U()
     U2 = read_MP2790(RD_VCELL4) * 50000 / 32768;
     U3 = read_MP2790(RD_VCELL5) * 50000 / 32768;
     U4 = read_MP2790(RD_VCELL6) * 50000 / 32768;
+
 }
 void send_U_from_2790_to_42790()
 {
