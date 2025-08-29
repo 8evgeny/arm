@@ -92,6 +92,28 @@
 #define EMTY_SOC_CELL16         0x0573 //Returns cell 16’s empty SOC in %
 #define EMTY_ID                 0x0574 //Returns 1 to 16 the cell ID for the cell that is empty limiting the pack
 #define EMTY_LIM                0x0577 //Outputs the pack’s empty limiting factor
+#define FULL_SOC_CELL1          0x057C //Returns cell’s 1 full SOC in %
+#define FULL_SOC_CELL2          0x057D
+#define FULL_SOC_CELL3          0x057E
+#define FULL_SOC_CELL4          0x057F
+#define FULL_SOC_CELL5          0x0580
+#define FULL_SOC_CELL6          0x0581
+#define FULL_SOC_CELL7          0x0582
+#define FULL_SOC_CELL8          0x0583
+#define FULL_SOC_CELL9          0x0584
+#define FULL_SOC_CELL10         0x0585
+#define FULL_SOC_CELL11         0x0586
+#define FULL_SOC_CELL12         0x0587
+#define FULL_SOC_CELL13         0x0588
+#define FULL_SOC_CELL14         0x0589
+#define FULL_SOC_CELL15         0x058A
+#define FULL_SOC_CELL16         0x058B //Returns cell’s 16 full SOC in %
+
+
+
+
+
+
 
 
 //16bit

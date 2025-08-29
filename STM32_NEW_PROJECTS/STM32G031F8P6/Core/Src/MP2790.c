@@ -441,7 +441,8 @@ void send_U_from_2790_to_42790()
     printf("U4=%d mV*10\r\n", U4);
     printf("U5=%d mV*10\r\n", U5);
     printf("U6=%d mV*10\r\n", U6);
-    printf("U_PACK_to_42790=%d mV/2\r\n", U_PACK_to_42790);
+//    printf("U_PACK_to_42790=%d mV/2\r\n", U_PACK_to_42790);
+
 //    print_MP42790_16_CRC(VRDG_CELL3);
 //    print_MP42790_16_CRC(VRDG_CELL4);
 //    print_MP42790_16_CRC(VRDG_CELL5);
@@ -454,9 +455,9 @@ void send_U_from_2790_to_42790()
     write_MP42790_16_CRC(VRDG_CELL6, U6);
     write_MP42790_16_CRC(VRDG_PACK, U_PACK_to_42790);
     CONFIG_EXIT_CMD();
-    print_MP42790_16_CRC(VRDG_CELL3);
-    print_MP42790_16_CRC(VRDG_CELL4);
-    print_MP42790_16_CRC(VRDG_CELL5);
-    print_MP42790_16_CRC(VRDG_CELL6);
-    print_MP42790_16_CRC(VRDG_PACK);
+//    print_MP42790_16_CRC(VRDG_CELL3);
+//    print_MP42790_16_CRC(VRDG_CELL4);
+//    print_MP42790_16_CRC(VRDG_CELL5);
+//    print_MP42790_16_CRC(VRDG_CELL6);
+//    print_MP42790_16_CRC(VRDG_PACK);
 }

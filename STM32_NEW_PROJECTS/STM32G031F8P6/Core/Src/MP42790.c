@@ -2,6 +2,7 @@
 extern I2C_HandleTypeDef hi2c2;
 int8_t CRC_OK = -1;
 uint8_t CELL3_EMPTY_PERCENT, CELL4_EMPTY_PERCENT, CELL5_EMPTY_PERCENT, CELL6_EMPTY_PERCENT;
+uint8_t CELL3_FULL_PERCENT, CELL4_FULL_PERCENT, CELL5_FULL_PERCENT, CELL6_FULL_PERCENT;
 typedef struct _reg_8
 {
     uint8_t value;
@@ -51,6 +52,13 @@ reg_32 reg32;   //42790
 
 void init_42790()
 {
+    printf("------ init_42790 ------\r\n");
+    HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
+    set_nominal_capacity_cell();
+    set_work_capacity_cell();
+    set_maximum_charge_current();
+    set_maximum_discharge_current();
+
 #if 0
 - Сell voltages (via the VRDG_CELLxx registers), current (via the IRDG_CELLxx registers),
     and temperature (via the TRDG_TSx registers).
@@ -75,17 +83,7 @@ void init_42790()
 
 
 #endif
-    printf("\r\n------ init_42790 ------\r\n");
-    HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
 
-//    disable_42790_REGS_CRC();
-//    enable_42790_REGS_CRC();
-
-//    test_write_42790();
-
-//    print_MP42790_8_CRC(0x1001);
-//    print_MP42790_16_CRC(0x1207);
-//    print_MP42790_32_CRC(0x005A);
 }
 void disable_42790_REGS_CRC()
 {
@@ -624,7 +622,7 @@ void RST_CMD()             //Reset the fuel gauge. This is a self-clearing funct
 }
 void EXE_CMD()             //Trigger a fuel gauge update refresh
 {
-    printf("----- EXE_CMD -------\r\n");
+    printf("\r\n----- EXE_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFE, 0x01);
 }
 void EDIT_CONFIG_CMD()     //The fuel gauge settings can be edited
@@ -639,12 +637,12 @@ void END_EDIT_CONFIG_CMD() //The fuel gauge settings cannot be edited
 }
 void CONFIG_MODE_CMD()     //Enter configuration mode
 {
-    printf("----- CONFIG_MODE_CMD -------\r\n");
+//    printf("----- CONFIG_MODE_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFB, 0x01);
 }
 void CONFIG_EXIT_CMD()     //The fuel gauge settings cannot be edited
 {
-    printf("----- CONFIG_EXIT_CMD -------\r\n");
+//    printf("----- CONFIG_EXIT_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFA, 0x01);
 }
 void CONFIG_RST_CMD()      //Enter configuration mode
@@ -661,14 +659,27 @@ void LOG_RST_CMD()         //Exit configuration mode. The new configuration is s
 void get_empty_soc_cells()
 {
     printf("----- get_empty_soc_cells() -------\r\n");
-    CELL3_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL3);
-    CELL4_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL4);
-    CELL5_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL5);
-    CELL6_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL6);
+    CELL3_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL3) / 10 * 4;
+    CELL4_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL4) / 10 * 4;
+    CELL5_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL5) / 10 * 4;
+    CELL6_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL6) / 10 * 4;
     printf("CELL3_EMPTY_PERCENT = %d %%\r\n", CELL3_EMPTY_PERCENT);
     printf("CELL4_EMPTY_PERCENT = %d %%\r\n", CELL4_EMPTY_PERCENT);
     printf("CELL5_EMPTY_PERCENT = %d %%\r\n", CELL5_EMPTY_PERCENT);
     printf("CELL6_EMPTY_PERCENT = %d %%\r\n", CELL6_EMPTY_PERCENT);
+}
+
+void get_full_soc_cells()
+{
+    printf("----- get_full_soc_cells() -------\r\n");
+    CELL3_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL3) / 10 * 4;
+    CELL4_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL4) / 10 * 4;
+    CELL5_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL5) / 10 * 4;
+    CELL6_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL6) / 10 * 4;
+    printf("CELL3_FULL_PERCENT = %d %%\r\n", CELL3_FULL_PERCENT);
+    printf("CELL4_FULL_PERCENT = %d %%\r\n", CELL4_FULL_PERCENT);
+    printf("CELL5_FULL_PERCENT = %d %%\r\n", CELL5_FULL_PERCENT);
+    printf("CELL6_FULL_PERCENT = %d %%\r\n", CELL6_FULL_PERCENT);
 }
 
 void get_empty_ID()
@@ -682,4 +693,32 @@ void get_empty_RTIME()
     printf("----- get_empty_RTIME() -------\r\n");
 //    print_MP42790_16_CRC(EMTY_RTIME);
     printf("RTIME = %d min\r\n", read_MP42790_16_CRC(EMTY_RTIME) / 60);
+}
+
+void set_nominal_capacity_cell()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(0x2036, 3400); //3400mAh
+    CONFIG_EXIT_CMD();
+}
+
+void set_work_capacity_cell()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(0x2038, 3250); //3250mAh
+    CONFIG_EXIT_CMD();
+}
+
+void set_maximum_charge_current()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(0x203E, 3000); //3000mAh
+    CONFIG_EXIT_CMD();
+}
+
+void set_maximum_discharge_current()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(0x2040, 10000); //10000mAh
+    CONFIG_EXIT_CMD();
 }

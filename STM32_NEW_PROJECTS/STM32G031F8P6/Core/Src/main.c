@@ -114,14 +114,7 @@ int main(void)
   init_Print_to_RS485();
   init_2790();
   init_42790();
-    RST_CMD();
-    send_U_from_2790_to_42790();
 
-    EXE_CMD();
-    HAL_Delay(100);
-    get_empty_soc_cells();
-    get_empty_ID();
-    get_empty_RTIME();
 
   /* USER CODE END 2 */
 
@@ -143,11 +136,15 @@ int main(void)
 
   while (1)
   {
-//      read_U_I();
-      HAL_Delay(10000);
-//      getStatus();
-//      get_self_U();
-//      read_Temp();
+      send_U_from_2790_to_42790();
+      EXE_CMD();
+      HAL_Delay(100);
+      get_empty_soc_cells();
+      get_empty_RTIME();
+      get_full_soc_cells();
+      read_Temp();
+
+      HAL_Delay(5000);
 
     /* USER CODE END WHILE */
 
