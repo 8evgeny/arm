@@ -116,9 +116,12 @@ int main(void)
   init_42790();
     RST_CMD();
     send_U_from_2790_to_42790();
+
     EXE_CMD();
     HAL_Delay(100);
     get_empty_soc_cells();
+    get_empty_ID();
+    get_empty_RTIME();
 
   /* USER CODE END 2 */
 

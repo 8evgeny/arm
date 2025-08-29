@@ -432,6 +432,7 @@ void receive_U()
 }
 void send_U_from_2790_to_42790()
 {
+    printf("----- send_U_from_2790_to_42790() ------\r\n");
     receive_U();
     get_U_PACK_TOP();
     U_PACK_to_42790 = U_PACK / 2;
@@ -441,11 +442,11 @@ void send_U_from_2790_to_42790()
     printf("U5=%d mV*10\r\n", U5);
     printf("U6=%d mV*10\r\n", U6);
     printf("U_PACK_to_42790=%d mV/2\r\n", U_PACK_to_42790);
-    print_MP42790_16_CRC(VRDG_CELL3);
-    print_MP42790_16_CRC(VRDG_CELL4);
-    print_MP42790_16_CRC(VRDG_CELL5);
-    print_MP42790_16_CRC(VRDG_CELL6);
-    print_MP42790_16_CRC(VRDG_PACK);
+//    print_MP42790_16_CRC(VRDG_CELL3);
+//    print_MP42790_16_CRC(VRDG_CELL4);
+//    print_MP42790_16_CRC(VRDG_CELL5);
+//    print_MP42790_16_CRC(VRDG_CELL6);
+//    print_MP42790_16_CRC(VRDG_PACK);
     CONFIG_MODE_CMD();
     write_MP42790_16_CRC(VRDG_CELL3, U3);
     write_MP42790_16_CRC(VRDG_CELL4, U4);

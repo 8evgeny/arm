@@ -665,3 +665,16 @@ void get_empty_soc_cells()
     print_MP42790_8_CRC(EMTY_SOC_CELL5);
     print_MP42790_8_CRC(EMTY_SOC_CELL6);
 }
+
+void get_empty_ID()
+{
+    printf("----- get_empty_ID() -------\r\n");
+    print_MP42790_8_CRC(EMTY_ID);
+}
+
+void get_empty_RTIME()
+{
+    printf("----- get_empty_RTIME() -------\r\n");
+    print_MP42790_16_CRC(EMTY_RTIME);
+    printf("RTIME = %dsec\r\n", read_MP42790_16_CRC(EMTY_RTIME));
+}
