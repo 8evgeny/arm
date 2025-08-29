@@ -417,7 +417,7 @@ void receive_U()
 void receive_I()
 {
     adcOn();
-    I3 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000 / 32768 ; //in mA
+    I3 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000 / 32768 ; //in mkA
     I4 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000 / 32768;
     I5 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000 / 32768 ;
     I6 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000 / 32768 ;
