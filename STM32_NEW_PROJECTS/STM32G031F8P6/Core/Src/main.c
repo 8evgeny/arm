@@ -136,6 +136,8 @@ int main(void)
 
   while (1)
   {
+      RST_CMD();
+      CONFIG_RST_CMD();
       send_U_from_2790_to_42790();
       EXE_CMD();
       HAL_Delay(100);
