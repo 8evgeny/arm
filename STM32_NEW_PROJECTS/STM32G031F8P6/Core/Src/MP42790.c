@@ -1,6 +1,7 @@
 #include "main.h"
 extern I2C_HandleTypeDef hi2c2;
 int8_t CRC_OK = -1;
+uint8_t CELL3_EMPTY_PERCENT, CELL4_EMPTY_PERCENT, CELL5_EMPTY_PERCENT, CELL6_EMPTY_PERCENT;
 typedef struct _reg_8
 {
     uint8_t value;
@@ -660,10 +661,14 @@ void LOG_RST_CMD()         //Exit configuration mode. The new configuration is s
 void get_empty_soc_cells()
 {
     printf("----- get_empty_soc_cells() -------\r\n");
-    print_MP42790_8_CRC(EMTY_SOC_CELL3);
-    print_MP42790_8_CRC(EMTY_SOC_CELL4);
-    print_MP42790_8_CRC(EMTY_SOC_CELL5);
-    print_MP42790_8_CRC(EMTY_SOC_CELL6);
+    CELL3_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL3);
+    CELL4_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL4);
+    CELL5_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL5);
+    CELL6_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL6);
+    printf("CELL3_EMPTY_PERCENT = %d %%\r\n", CELL3_EMPTY_PERCENT);
+    printf("CELL4_EMPTY_PERCENT = %d %%\r\n", CELL4_EMPTY_PERCENT);
+    printf("CELL5_EMPTY_PERCENT = %d %%\r\n", CELL5_EMPTY_PERCENT);
+    printf("CELL6_EMPTY_PERCENT = %d %%\r\n", CELL6_EMPTY_PERCENT);
 }
 
 void get_empty_ID()
@@ -675,6 +680,6 @@ void get_empty_ID()
 void get_empty_RTIME()
 {
     printf("----- get_empty_RTIME() -------\r\n");
-    print_MP42790_16_CRC(EMTY_RTIME);
-    printf("RTIME = %dsec\r\n", read_MP42790_16_CRC(EMTY_RTIME));
+//    print_MP42790_16_CRC(EMTY_RTIME);
+    printf("RTIME = %d min\r\n", read_MP42790_16_CRC(EMTY_RTIME) / 60);
 }
