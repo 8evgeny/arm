@@ -5,6 +5,7 @@
 #include <string.h>
 #include "eeprom.h"
 #include "MP2790_reg.h"
+#include "MP42790_reg.h"
 #include "i2c.h"
 #define MP2790_I2C_ADDRESS          0x02
 #define MP42790_I2C_ADDRESS         0x10

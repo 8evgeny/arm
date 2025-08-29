@@ -10,7 +10,7 @@ typedef struct _data16
     }value;
 }data_16;
 data_16 data16; //2790
-uint16_t U1,U2,U3,U4,I1,I2,I3,I4,I_TOP,U_PACK,U_TOP,NTC1,NTC2,NTC3,NTC4;
+uint16_t U1,U2,U3,U4,I1,I2,I3,I4,I_TOP,U_PACK,U_PACK_to_42790, U_TOP,NTC1,NTC2,NTC3,NTC4;
 uint16_t Temperature;
 
 void init_2790()
@@ -152,12 +152,10 @@ void adcOn()
 void get_U_PACK_TOP()
 {
     adcOn();
-//    printf("  get RD_VPACKP\r\n");
-//    print_MP2790(RD_VPACKP);
     U_PACK = read_MP2790(RD_VPACKP) * 80000 / 32768;
-    printf("  U_PACK=%d mV\r\n", U_PACK);
+    printf("U_PACK=%d mV\r\n", U_PACK);
     U_TOP = read_MP2790(RD_VTOP) * 80000 / 32768;
-    printf("  U_TOP=%d mV\r\n",U_TOP);
+    printf("U_TOP=%d mV\r\n",U_TOP);
     printf("\r\n");
 }
 
@@ -439,8 +437,26 @@ void receive_U()
 void send_U_from_2790_to_42790()
 {
     receive_U();
+    get_U_PACK_TOP();
+    U_PACK_to_42790 = U_PACK / 2;
+
     printf("U1=%d mV*10\r\n", U1);
     printf("U2=%d mV*10\r\n", U2);
     printf("U3=%d mV*10\r\n", U3);
     printf("U4=%d mV*10\r\n", U4);
+    printf("U_PACK_to_42790=%d mV/2\r\n", U_PACK_to_42790);
+    print_MP42790_16_CRC(VRDG_CELL3);
+    print_MP42790_16_CRC(VRDG_CELL4);
+    print_MP42790_16_CRC(VRDG_CELL5);
+    print_MP42790_16_CRC(VRDG_CELL6);
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(VRDG_CELL3, U1);
+    write_MP42790_16_CRC(VRDG_CELL4, U2);
+    write_MP42790_16_CRC(VRDG_CELL5, U3);
+    write_MP42790_16_CRC(VRDG_CELL6, U4);
+    CONFIG_EXIT_CMD();
+    print_MP42790_16_CRC(VRDG_CELL3);
+    print_MP42790_16_CRC(VRDG_CELL4);
+    print_MP42790_16_CRC(VRDG_CELL5);
+    print_MP42790_16_CRC(VRDG_CELL6);
 }

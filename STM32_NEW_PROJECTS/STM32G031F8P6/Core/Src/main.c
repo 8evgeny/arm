@@ -138,7 +138,7 @@ int main(void)
 
   while (1)
   {
-      read_U_I();
+//      read_U_I();
       HAL_Delay(10000);
 //      getStatus();
 //      get_self_U();
