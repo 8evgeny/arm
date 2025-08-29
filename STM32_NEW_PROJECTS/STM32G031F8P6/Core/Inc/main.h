@@ -94,11 +94,10 @@ void read_2790_REGS();
 void read_42790_REGS();
 void read_Temp();
 void read_U_I();
-void read_U();
 void read_I();
 void adcOn();
 void resetErrors();
-void get_V_PACK_TOP();
+void get_U_PACK_TOP();
 void initInterrupts();
 void getLockRegisters();
 void initBatteryNum();
@@ -159,6 +158,7 @@ void CONFIG_EXIT_CMD();     //Exit configuration mode. The new configuration is 
 void CONFIG_RST_CMD();      //Reset the configuration. This is a self-clearing function
 void LOG_RST_CMD();         //Re-initialize the lifetime log registers. This is a self-clearing function
 
+void receive_U();
 void send_U_from_2790_to_42790();
 
 int _write(int fd, char *str, int len);

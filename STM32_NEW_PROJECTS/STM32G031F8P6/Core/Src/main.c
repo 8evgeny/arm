@@ -138,11 +138,11 @@ int main(void)
 
   while (1)
   {
+      read_U_I();
       HAL_Delay(10000);
 //      getStatus();
 //      get_self_U();
 //      read_Temp();
-//      read_U_I();
 
     /* USER CODE END WHILE */
 

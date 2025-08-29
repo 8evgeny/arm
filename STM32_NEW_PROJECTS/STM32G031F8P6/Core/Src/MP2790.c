@@ -10,7 +10,7 @@ typedef struct _data16
     }value;
 }data_16;
 data_16 data16; //2790
-uint16_t U1,U2,U3,U4,I1,I2,I3,I4,I_TOP,V_PACK,V_TOP,NTC1,NTC2,NTC3,NTC4;
+uint16_t U1,U2,U3,U4,I1,I2,I3,I4,I_TOP,U_PACK,U_TOP,NTC1,NTC2,NTC3,NTC4;
 uint16_t Temperature;
 
 void init_2790()
@@ -24,7 +24,6 @@ void init_2790()
     initInterrupts();
     initPins();
     init_NTC();
-    get_V_PACK_TOP();
     init_UV_OV();
     init_time_SC_detection();
     init_SCFT_CTRL();
@@ -40,7 +39,7 @@ void init_2790()
     getStatus();
     get_OC_Status();
     get_SELF_CFG();
-    get_V_PACK_TOP();
+    get_U_PACK_TOP();
 
 
 }
@@ -98,11 +97,14 @@ void read_U_I()
 {
     //Voltage = Reading x 5000 / 32768 (mV)
     //I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
-    adcOn();
-    U1 = read_MP2790(RD_VCELL3) * 5000 / 32768;
-    U2 = read_MP2790(RD_VCELL4) * 5000 / 32768;
-    U3 = read_MP2790(RD_VCELL5) * 5000 / 32768;
-    U4 = read_MP2790(RD_VCELL6) * 5000 / 32768;
+
+    receive_U();
+
+    printf("U1=%d mV*10\r\n", U1);
+    printf("U2=%d mV*10\r\n", U2);
+    printf("U3=%d mV*10\r\n", U3);
+    printf("U4=%d mV*10\r\n", U4);
+
 
     I1 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
     I2 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
@@ -110,27 +112,11 @@ void read_U_I()
     I4 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
     I_TOP = (read_MP2790(RD_ITOP) & 0x7FFF) * 20000000 / 32768 ;
 
-    printf("U1=%d,%03dV I1=%d,%03dmA\r\n",U1/1000, U1%1000, I1/1000,I1%1000);
-    printf("U2=%d,%03dV I2=%d,%03dmA\r\n",U2/1000, U2%1000, I2/1000,I2%1000);
-    printf("U3=%d,%03dV I3=%d,%03dmA\r\n",U3/1000, U3%1000, I3/1000,I3%1000);
-    printf("U4=%d,%03dV I4=%d,%03dmA\r\n",U4/1000, U4%1000, I4/1000,I4%1000);
-    printf("I_TOP=%d,%03dmA\r\n",I_TOP/1000,I_TOP%1000);
-    printf("\r\n");
-}
-
-void read_U()
-{
-    //Voltage = Reading x 5000 / 32768 (mV)
-    adcOn();
-    U1 = read_MP2790(RD_VCELL3) * 5000 / 32768;
-    U2 = read_MP2790(RD_VCELL4) * 5000 / 32768;
-    U3 = read_MP2790(RD_VCELL5) * 5000 / 32768;
-    U4 = read_MP2790(RD_VCELL6) * 5000 / 32768;
-
-    printf("U1=%d,%03dV\r\n",U1/1000, U1%1000);
-    printf("U2=%d,%03dV\r\n",U2/1000, U2%1000);
-    printf("U3=%d,%03dV\r\n",U3/1000, U3%1000);
-    printf("U4=%d,%03dV\r\n",U4/1000, U4%1000);
+//    printf("U1=%d,%04dV I1=%d,%03dmA\r\n",U1/10000, U1%10000, I1/1000,I1%1000);
+//    printf("U2=%d,%04dV I2=%d,%03dmA\r\n",U2/10000, U2%10000, I2/1000,I2%1000);
+//    printf("U3=%d,%04dV I3=%d,%03dmA\r\n",U3/10000, U3%10000, I3/1000,I3%1000);
+//    printf("U4=%d,%04dV I4=%d,%03dmA\r\n",U4/10000, U4%10000, I4/1000,I4%1000);
+//    printf("I_TOP=%d,%03dmA\r\n",I_TOP/1000,I_TOP%1000);
     printf("\r\n");
 }
 
@@ -163,17 +149,17 @@ void adcOn()
     }
 }
 
-void get_V_PACK_TOP()
+void get_U_PACK_TOP()
 {
     adcOn();
 //    printf("  get RD_VPACKP\r\n");
 //    print_MP2790(RD_VPACKP);
-    V_PACK = read_MP2790(RD_VPACKP) * 80000 / 32768;
-    printf("  V_PACK=%d,%03dV\r\n",V_PACK/1000, V_PACK%1000);
+    U_PACK = read_MP2790(RD_VPACKP) * 80000 / 32768;
+    printf("  U_PACK=%d,%03dV\r\n",U_PACK/1000, U_PACK%1000);
 //    printf("  get RD_VTOP\r\n");
 //    print_MP2790(RD_VTOP);
-    V_TOP = read_MP2790(RD_VTOP) * 80000 / 32768;
-    printf("  V_TOP=%d,%03dV\r\n",V_TOP/1000, V_TOP%1000);
+    U_TOP = read_MP2790(RD_VTOP) * 80000 / 32768;
+    printf("  U_TOP=%d,%03dV\r\n",U_TOP/1000, U_TOP%1000);
     printf("\r\n");
 }
 
@@ -443,14 +429,19 @@ void get_SELF_CFG()
     printf("\r\n");
 }
 
+void receive_U()
+{
+    adcOn();
+    U1 = read_MP2790(RD_VCELL3) * 50000 / 32768;
+    U2 = read_MP2790(RD_VCELL4) * 50000 / 32768;
+    U3 = read_MP2790(RD_VCELL5) * 50000 / 32768;
+    U4 = read_MP2790(RD_VCELL6) * 50000 / 32768;
+}
 void send_U_from_2790_to_42790()
 {
-    U1 = read_MP2790(RD_VCELL3) * 5000 / 32768;
-    U2 = read_MP2790(RD_VCELL4) * 5000 / 32768;
-    U3 = read_MP2790(RD_VCELL5) * 5000 / 32768;
-    U4 = read_MP2790(RD_VCELL6) * 5000 / 32768;
-    printf("U1=%d mV\r\n", U1);
-    printf("U2=%d mV\r\n", U2);
-    printf("U3=%d mV\r\n", U3);
-    printf("U4=%d mV\r\n", U4);
+    receive_U();
+    printf("U1=%d mV*10\r\n", U1);
+    printf("U2=%d mV*10\r\n", U2);
+    printf("U3=%d mV*10\r\n", U3);
+    printf("U4=%d mV*10\r\n", U4);
 }
