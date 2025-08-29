@@ -115,22 +115,6 @@ void read_U_I()
     printf("\r\n");
 }
 
-void read_I()
-{
-    //I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
-    adcOn();
-    I3 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
-    I4 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
-    I5 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
-    I6 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
-
-    printf("I3=%d,%03dmA\r\n",I3/1000,I3%1000);
-    printf("I4=%d,%03dmA\r\n",I4/1000,I4%1000);
-    printf("I5=%d,%03dmA\r\n",I5/1000,I5%1000);
-    printf("I6=%d,%03dmA\r\n",I6/1000,I6%1000);
-    printf("\r\n");
-}
-
 void adcOn()
 {
     write_MP2790(ADC_CTRL, 0x0000);
