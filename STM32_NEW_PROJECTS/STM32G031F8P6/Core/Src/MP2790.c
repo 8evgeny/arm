@@ -35,7 +35,7 @@ void init_2790()
 //    pulse_DOUN_UP(One_Wire_Pin, 1);
     initFET_CFG();
     init_ACT_CFG();
-    HAL_Delay(300);
+    HAL_Delay(100);
     getStatus();
     get_OC_Status();
     get_SELF_CFG();
@@ -197,7 +197,7 @@ void initFET_CFG() //000 010 01 11110000
     write_MP2790(FET_CFG, data16.value.value |= 0b0000100000000000);    // bits 11:9 to 100
     write_MP2790(FET_CFG, data16.value.value &= 0b1111100111111111);
 
-    write_MP2790(FET_CFG, data16.value.value |= 0b0000000111000000);
+//    write_MP2790(FET_CFG, data16.value.value |= 0b0000000111000000);
 
 
     print_MP2790(FET_CFG);
@@ -298,8 +298,9 @@ void init_ACT_CFG()
 {
     printf("  init_ACT_CFG()\r\n");
     read_MP2790(ACT_CFG);
-    write_MP2790(ACT_CFG, data16.value.value |= 0b0000000000011000);    //  3  4  bits to 1
     write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);    //  1 bit to 0
+    write_MP2790(ACT_CFG, data16.value.value |= 0b0000000000011000);    //  3  4  bits to 1
+
     print_MP2790(ACT_CFG);
     printf("\r\n");
 }
