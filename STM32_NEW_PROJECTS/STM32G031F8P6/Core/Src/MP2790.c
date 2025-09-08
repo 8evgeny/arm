@@ -31,15 +31,20 @@ void init_2790()
     init_DSGOC_LIM();
     init_DSGSC_CFG();
     init_FET_MODE();
+print_MP2790(FET_STATUS);
     init_LOAD_CHARGER();
 //    pulse_DOUN_UP(One_Wire_Pin, 1);
     initFET_CFG();
+print_MP2790(FET_STATUS);
     init_ACT_CFG();
+print_MP2790(FET_STATUS);
     HAL_Delay(100);
+print_MP2790(FET_STATUS);
     getStatus();
     get_OC_Status();
     get_SELF_CFG();
     get_U_PACK_TOP();
+print_MP2790(FET_STATUS);
 
 
 }

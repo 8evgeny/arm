@@ -147,8 +147,8 @@ int main(void)
 //      get_empty_RTIME();
 //      get_full_soc_cells();
 //      read_Temp();
-//      read_U_I();
-      HAL_Delay(50);
+      read_U_I();
+      HAL_Delay(5000);
 
     /* USER CODE END WHILE */
 
