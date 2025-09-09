@@ -10,7 +10,8 @@ typedef struct _data16
     }value;
 }data_16;
 data_16 data16; //2790
-uint16_t U3,U4,U5,U6,I3,I4,I5,I6,I_TOP,U_PACK,U_PACK_to_42790, U_TOP,NTC1,NTC2,NTC3,NTC4;
+uint16_t U3,U4,U5,U6,U_PACK,U_PACK_to_42790, U_TOP,NTC1,NTC2,NTC3,NTC4;
+int16_t I3,I4,I5,I6,I_TOP;
 uint16_t Temperature;
 
 void init_2790()
@@ -31,22 +32,15 @@ void init_2790()
     init_DSGOC_LIM();
     init_DSGSC_CFG();
     init_FET_MODE();
-print_MP2790(FET_STATUS);
     init_LOAD_CHARGER();
 //    pulse_DOUN_UP(One_Wire_Pin, 1);
     initFET_CFG();
-print_MP2790(FET_STATUS);
     init_ACT_CFG();
-print_MP2790(FET_STATUS);
     HAL_Delay(100);
-print_MP2790(FET_STATUS);
     getStatus();
     get_OC_Status();
     get_SELF_CFG();
     get_U_PACK_TOP();
-print_MP2790(FET_STATUS);
-
-
 }
 
 void read_2790_REGS()
@@ -112,11 +106,11 @@ void read_U_I()
 
     receive_I();
 
-    printf("I3=%d mkA\r\n", I3);
-    printf("I4=%d mkA\r\n", I4);
-    printf("I5=%d mkA\r\n", I5);
-    printf("I6=%d mkA\r\n", I6);
-    printf("I_TOP=%d mkA\r\n", I_TOP);
+    printf("I3=%d mA\r\n", I3);
+    printf("I4=%d mA\r\n", I4);
+    printf("I5=%d mA\r\n", I5);
+    printf("I6=%d mA\r\n", I6);
+    printf("I_TOP=%d mA\r\n", I_TOP);
     printf("\r\n");
 }
 
@@ -419,15 +413,15 @@ void receive_U()
     U6 = read_MP2790(RD_VCELL6) * 50000 / 32768;
 
 }
-
+float k = 0.879f;
 void receive_I()
-{
+{//I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
     adcOn();
-    I3 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000 / 32768 ; //in mkA
-    I4 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000 / 32768;
-    I5 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000 / 32768 ;
-    I6 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000 / 32768 ;
-    I_TOP = (read_MP2790(RD_ITOP) & 0x7FFF) * 20000 / 32768 ;
+    I3 = k * (read_MP2790(RD_ICELL3)^0xFFFF) * 20000 / 32768 ; //in mA
+    I4 = k * (read_MP2790(RD_ICELL4)^0xFFFF) * 20000 / 32768;
+    I5 = k * (read_MP2790(RD_ICELL5)^0xFFFF) * 20000 / 32768 ;
+    I6 = k * (read_MP2790(RD_ICELL6)^0xFFFF) * 20000 / 32768 ;
+    I_TOP = k * (read_MP2790(RD_ITOP)^0xFFFF) * 20000 / 32768  ;
 }
 
 void send_U_from_2790_to_42790()

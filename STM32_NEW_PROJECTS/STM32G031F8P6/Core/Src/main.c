@@ -146,8 +146,10 @@ int main(void)
 //      get_empty_soc_cells();
 //      get_empty_RTIME();
 //      get_full_soc_cells();
-//      read_Temp();
+      read_Temp();
       read_U_I();
+      get_U_PACK_TOP();
+      print_MP2790(RD_ITOP);
       HAL_Delay(5000);
 
     /* USER CODE END WHILE */
