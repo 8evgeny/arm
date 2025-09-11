@@ -1,5 +1,8 @@
 #include "main.h"
 extern I2C_HandleTypeDef hi2c2;
+int8_t CRC_OK = -1;
+uint8_t CELL3_EMPTY_PERCENT, CELL4_EMPTY_PERCENT, CELL5_EMPTY_PERCENT, CELL6_EMPTY_PERCENT;
+uint8_t CELL3_FULL_PERCENT, CELL4_FULL_PERCENT, CELL5_FULL_PERCENT, CELL6_FULL_PERCENT;
 typedef struct _reg_8
 {
     uint8_t value;
@@ -49,6 +52,16 @@ reg_32 reg32;   //42790
 
 void init_42790()
 {
+    printf("------ init_42790 ------\r\n");
+    HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
+    set_nominal_capacity_cell();
+    set_work_capacity_cell();
+    set_maximum_charge_current();
+    set_maximum_discharge_current();
+    set_number_cells();
+    set_number_sensors();
+    set_cells_sensor_source();
+
 #if 0
 - Сell voltages (via the VRDG_CELLxx registers), current (via the IRDG_CELLxx registers),
     and temperature (via the TRDG_TSx registers).
@@ -73,18 +86,7 @@ void init_42790()
 
 
 #endif
-    printf("\r\n------ init_42790 ------\r\n\n");
-    HAL_GPIO_WritePin(GPIOA, Enable_42790_Pin, GPIO_PIN_SET);
 
-//    disable_42790_REGS_CRC();
-//    enable_42790_REGS_CRC();
-//    read_42790_REGS();
-
-//    test_write_42790();
-
-//    print_MP42790_8_CRC(0x1001);
-//    print_MP42790_16_CRC(0x1207);
-//    print_MP42790_32_CRC(0x005A);
 }
 void disable_42790_REGS_CRC()
 {
@@ -118,6 +120,7 @@ void enable_42790_REGS_CRC()
 }
 void read_42790_REGS()
 {
+    printf("----- read_42790_REGS() -----\r\n");
     for (int i=0; i < 0x78; i+=2)
     {
         print_MP42790_16_CRC(i);
@@ -280,13 +283,15 @@ void send_Address_Len_32(uint16_t regAddr)
     HAL_I2C_Master_Transmit(&hi2c2, MP42790_I2C_ADDRESS, toWrite, 3, HAL_MAX_DELAY);
 }
 uint8_t toRead8CRC[5];
+uint8_t toRead16CRC[6];
+uint8_t toRead32CRC[8];
 uint32_t sum;
 union
 {
     uint32_t readCRC;
     uint8_t crc[4];
 }data;
-void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
+void receive_Data_8_CRC(uint16_t regAddr)
 {
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead8CRC, 5, HAL_MAX_DELAY);
@@ -298,23 +303,27 @@ void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK)
     reg8.readCRC.CRC_[1] = toRead8CRC[2];
     reg8.readCRC.CRC_[0] = toRead8CRC[1];
     data.readCRC = sum;
-    if((data.crc[0] == toRead8CRC[1]) && (data.crc[1] == toRead8CRC[2]) && (data.crc[2] == toRead8CRC[3]) && (data.crc[3] == toRead8CRC[4]) )
+    if(
+        (data.crc[0] == toRead8CRC[1]) &&
+        (data.crc[1] == toRead8CRC[2]) &&
+        (data.crc[2] == toRead8CRC[3]) &&
+        (data.crc[3] == toRead8CRC[4])
+      )
     {
-//        printf("----- CRC  OK !!!! ----\r\n");
-        *pCRC_OK = 0;
+//        printf("CRC OK    ");
+        CRC_OK = 0;
     }
     else
     {
-        printf("----- CRC  ERROR !!!! ----\r\n");
-        *pCRC_OK = -1;
+//        printf("CRC ERROR ");
+        CRC_OK = -1;
     }
 }
 void receive_Data_16_CRC(uint16_t regAddr)
 {
-    uint8_t toRead16CRC[6];
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead16CRC, 6, HAL_MAX_DELAY);
-    uint32_t sum = crc32(regAddr, 2, toRead16CRC);
+    sum = crc32(regAddr, 2, toRead16CRC);
     reg16.value.val[0] = toRead16CRC[0];
     reg16.value.val[1] = toRead16CRC[1];
     reg16.CRC_calc = sum;
@@ -322,13 +331,28 @@ void receive_Data_16_CRC(uint16_t regAddr)
     reg16.readCRC.CRC_[2] = toRead16CRC[4];
     reg16.readCRC.CRC_[1] = toRead16CRC[3];
     reg16.readCRC.CRC_[0] = toRead16CRC[2];
+    data.readCRC = sum;
+    if(
+        (data.crc[0] == toRead16CRC[2]) &&
+        (data.crc[1] == toRead16CRC[3]) &&
+        (data.crc[2] == toRead16CRC[4]) &&
+        (data.crc[3] == toRead16CRC[5])
+      )
+    {
+//        printf("CRC OK    ");
+        CRC_OK = 0;
+    }
+    else
+    {
+//        printf("CRC ERROR ");
+        CRC_OK = -1;
+    }
 }
 void receive_Data_32_CRC(uint16_t regAddr)
 {
-    uint8_t toRead32CRC[8];
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Master_Receive(&hi2c2, MP42790_I2C_ADDRESS, toRead32CRC, 8, HAL_MAX_DELAY);
-    uint32_t sum = crc32(regAddr, 4, toRead32CRC);
+    sum = crc32(regAddr, 4, toRead32CRC);
     reg32.value.val[0] = toRead32CRC[0];
     reg32.value.val[1] = toRead32CRC[1];
     reg32.value.val[2] = toRead32CRC[2];
@@ -338,27 +362,59 @@ void receive_Data_32_CRC(uint16_t regAddr)
     reg32.readCRC.CRC_[2] = toRead32CRC[6];
     reg32.readCRC.CRC_[1] = toRead32CRC[5];
     reg32.readCRC.CRC_[0] = toRead32CRC[4];
+    data.readCRC = sum;
+    if(
+        (data.crc[0] == toRead32CRC[4]) &&
+        (data.crc[1] == toRead32CRC[5]) &&
+        (data.crc[2] == toRead32CRC[6]) &&
+        (data.crc[3] == toRead32CRC[7])
+      )
+    {
+//        printf("CRC OK    ");
+        CRC_OK = 0;
+    }
+    else
+    {
+//        printf("CRC ERROR ");
+        CRC_OK = -1;
+    }
 }
 uint8_t read_MP42790_8_CRC(uint16_t regAddr)
 {
-//    HAL_Delay(10);
+    CRC_OK = 0;
     pulse_SDA();
     send_Address_Len_8(regAddr);
-    int8_t CRC_OK = -1;
-    int8_t * pCRC_OK = &CRC_OK;
-    receive_Data_8_CRC(regAddr, pCRC_OK);
+    receive_Data_8_CRC(regAddr);
     if(CRC_OK != 0)
-    {
-//        reg8.value = 0xFF;
+    { //Повторное чтение
+        int num = 100;
+        while(CRC_OK != 0)
+        {
+            write_MP42790_8_CRC(0x7FF9, 0x01); //CONFIG_RST_CMD();
+            write_MP42790_8_CRC(0x7FFB, 0x01); //CONFIG_MODE_CMD();
+            pulse_SDA();
+            send_Address_Len_8(regAddr);
+            receive_Data_8_CRC(regAddr);
+            --num;
+            if(num == 0)
+            {
+                printf("========== CRC ERROR ============ ");
+                reg8.value = 0xFF;
+                break;
+            }
+        }
     }
     return reg8.value;
 }
 void print_MP42790_8_CRC(uint16_t regAddr)
 {
     read_MP42790_8_CRC(regAddr);
-    printf("MP42790 reg %04X   0x%02X\t\t", regAddr, reg8.value);
+    printf("MP42790 reg %04X   0x%02X\t\t  ", regAddr, reg8.value);
     print_byte(reg8.value);
-    printf("\t\t\t\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg8.readCRC.CRC_read, (unsigned long)reg8.CRC_calc);
+    if(CRC_OK != 0)
+    {
+        printf("\t\t\t\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg8.readCRC.CRC_read, (unsigned long)reg8.CRC_calc);
+    }
     printf("\r\n");
 }
 void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
@@ -399,20 +455,42 @@ void write_MP42790_8_CRC(uint16_t regAddr, uint8_t value)
 }
 uint16_t read_MP42790_16_CRC(uint16_t regAddr)
 {
-//    HAL_Delay(10);
+    CRC_OK = 0;
     pulse_SDA();
     send_Address_Len_16(regAddr);
     receive_Data_16_CRC(regAddr);
+    if(CRC_OK != 0)
+    { //Повторное чтение
+        int num = 100;
+        while(CRC_OK != 0)
+        {
+            write_MP42790_8_CRC(0x7FF9, 0x01); //CONFIG_RST_CMD();
+            write_MP42790_8_CRC(0x7FFB, 0x01); //CONFIG_MODE_CMD();
+            pulse_SDA();
+            send_Address_Len_16(regAddr);
+            receive_Data_16_CRC(regAddr);
+            --num;
+            if(num == 0)
+            {
+                printf("========== CRC ERROR ============ ");
+                reg16.value.value = 0xFFFF;
+                break;
+            }
+        }
+    }
     return reg16.value.value;
 }
 void print_MP42790_16_CRC(uint16_t regAddr)
 {
     read_MP42790_16_CRC(regAddr);
-    printf("MP42790 reg %04X   0x%04X\t", regAddr, reg16.value.value);
+    printf("MP42790 reg %04X   0x%04X\t  ", regAddr, reg16.value.value);
     print_byte(reg16.value.val[1]);
     printf(" ");
     print_byte(reg16.value.val[0]);
-    printf("\t\t\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg16.readCRC.CRC_read, (unsigned long)reg16.CRC_calc);
+    if(CRC_OK != 0)
+    {
+        printf("\t\t\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg16.readCRC.CRC_read, (unsigned long)reg16.CRC_calc);
+    }
     printf("\r\n");
 }
 void write_MP42790_16_CRC(uint16_t regAddr, uint16_t value)
@@ -440,16 +518,36 @@ void write_MP42790_16_CRC(uint16_t regAddr, uint16_t value)
 }
 uint32_t read_MP42790_32_CRC(uint16_t regAddr)
 {
-    HAL_Delay(10);
+    CRC_OK = 0;
+//    HAL_Delay(10);
     pulse_SDA();
     send_Address_Len_32(regAddr);
     receive_Data_32_CRC(regAddr);
+    if(CRC_OK != 0)
+    { //Повторное чтение
+        int num = 100;
+        while(CRC_OK != 0)
+        {
+            write_MP42790_8_CRC(0x7FF9, 0x01); //CONFIG_RST_CMD();
+            write_MP42790_8_CRC(0x7FFB, 0x01); //CONFIG_MODE_CMD();
+            pulse_SDA();
+            send_Address_Len_32(regAddr);
+            receive_Data_32_CRC(regAddr);
+            --num;
+            if(num == 0)
+            {
+                printf("========== CRC ERROR ============ ");
+                reg32.value.value = 0xFFFFFFFF;
+                break;
+            }
+        }
+    }
     return reg32.value.value;
 }
 void print_MP42790_32_CRC(uint16_t regAddr)
 {
     read_MP42790_32_CRC(regAddr);
-    printf("MP42790 reg %04X   0x%08X\t", regAddr, reg32.value.value);
+    printf("MP42790 reg %04X   0x%08X\t  ", regAddr, reg32.value.value);
     print_byte(reg32.value.val[3]);
     printf(" ");
     print_byte(reg32.value.val[2]);
@@ -457,7 +555,10 @@ void print_MP42790_32_CRC(uint16_t regAddr)
     print_byte(reg32.value.val[1]);
     printf(" ");
     print_byte(reg32.value.val[0]);
-    printf("\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg32.readCRC.CRC_read, (unsigned long)reg32.CRC_calc);
+    if(CRC_OK != 0)
+    {
+        printf("\tCRC - %08lX \tcalcCRC - %08lX", (unsigned long)reg32.readCRC.CRC_read, (unsigned long)reg32.CRC_calc);
+    }
     printf("\r\n");
 }
 void write_MP42790_32_CRC(uint16_t regAddr, uint32_t value)
@@ -487,13 +588,14 @@ void write_MP42790_32_CRC(uint16_t regAddr, uint32_t value)
 }
 void test_write_42790()
 {
-    CONFIG_MODE_CMD();
     printf("\r\n--- test write reg 8 ---\r\n");
     uint16_t reg8 = 0x1238;
     print_MP42790_8_CRC(reg8);
     uint8_t value8 = read_MP42790_8_CRC(reg8);
     ++value8;
+    CONFIG_MODE_CMD();
     write_MP42790_8_CRC(reg8, value8);
+    HAL_Delay(100);
     print_MP42790_8_CRC(reg8);
 
     printf("\r\n--- test write reg 16 ---\r\n");
@@ -501,7 +603,9 @@ void test_write_42790()
     print_MP42790_16_CRC(reg16);
     uint8_t value16 = read_MP42790_16_CRC(reg16);
     ++value16;
+    CONFIG_MODE_CMD();
     write_MP42790_16_CRC(reg16, value16);
+    HAL_Delay(100);
     print_MP42790_16_CRC(reg16);
 
     printf("\r\n--- test write reg 32 ---\r\n");
@@ -509,12 +613,14 @@ void test_write_42790()
     print_MP42790_32_CRC(reg32);
     uint8_t value32 = read_MP42790_32_CRC(reg32);
     ++value32;
+    CONFIG_MODE_CMD();
     write_MP42790_32_CRC(reg32, value32);
+    HAL_Delay(100);
     print_MP42790_32_CRC(reg32);
 }
 void RST_CMD()             //Reset the fuel gauge. This is a self-clearing function
 {
-    printf("\r\n----- RST_CMD -------\r\n");
+    printf("----- RST_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFE, 0x01);
 }
 void EXE_CMD()             //Trigger a fuel gauge update refresh
@@ -534,12 +640,12 @@ void END_EDIT_CONFIG_CMD() //The fuel gauge settings cannot be edited
 }
 void CONFIG_MODE_CMD()     //Enter configuration mode
 {
-    printf("\r\n----- CONFIG_MODE_CMD -------\r\n");
+//    printf("----- CONFIG_MODE_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFB, 0x01);
 }
 void CONFIG_EXIT_CMD()     //The fuel gauge settings cannot be edited
 {
-    printf("\r\n----- CONFIG_EXIT_CMD -------\r\n");
+//    printf("----- CONFIG_EXIT_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FFA, 0x01);
 }
 void CONFIG_RST_CMD()      //Enter configuration mode
@@ -551,4 +657,93 @@ void LOG_RST_CMD()         //Exit configuration mode. The new configuration is s
 {
     printf("\r\n----- LOG_RST_CMD -------\r\n");
     write_MP42790_8_CRC(0x7FF8, 0x01);
+}
+
+void get_empty_soc_cells()
+{
+    printf("----- get_empty_soc_cells() -------\r\n");
+    CELL3_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL3) / 10 * 4;
+    CELL4_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL4) / 10 * 4;
+    CELL5_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL5) / 10 * 4;
+    CELL6_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL6) / 10 * 4;
+    printf("CELL3_EMPTY_PERCENT = %d %%\r\n", CELL3_EMPTY_PERCENT);
+    printf("CELL4_EMPTY_PERCENT = %d %%\r\n", CELL4_EMPTY_PERCENT);
+    printf("CELL5_EMPTY_PERCENT = %d %%\r\n", CELL5_EMPTY_PERCENT);
+    printf("CELL6_EMPTY_PERCENT = %d %%\r\n", CELL6_EMPTY_PERCENT);
+}
+
+void get_full_soc_cells()
+{
+    printf("----- get_full_soc_cells() -------\r\n");
+    CELL3_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL3) / 10 * 4;
+    CELL4_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL4) / 10 * 4;
+    CELL5_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL5) / 10 * 4;
+    CELL6_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL6) / 10 * 4;
+    printf("CELL3_FULL_PERCENT = %d %%\r\n", CELL3_FULL_PERCENT);
+    printf("CELL4_FULL_PERCENT = %d %%\r\n", CELL4_FULL_PERCENT);
+    printf("CELL5_FULL_PERCENT = %d %%\r\n", CELL5_FULL_PERCENT);
+    printf("CELL6_FULL_PERCENT = %d %%\r\n", CELL6_FULL_PERCENT);
+}
+
+void get_empty_ID()
+{
+    printf("----- get_empty_ID() -------\r\n");
+    print_MP42790_8_CRC(EMTY_ID);
+}
+
+void get_empty_RTIME()
+{
+    printf("----- get_empty_RTIME() -------\r\n");
+//    print_MP42790_16_CRC(EMTY_RTIME);
+    printf("RTIME = %d min\r\n", read_MP42790_16_CRC(EMTY_RTIME) / 60);
+}
+
+void set_nominal_capacity_cell()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(0x2036, 3400); //3400mAh
+    CONFIG_EXIT_CMD();
+}
+
+void set_work_capacity_cell()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(0x2038, 3250); //3250mAh
+    CONFIG_EXIT_CMD();
+}
+
+void set_maximum_charge_current()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(0x203E, 3000); //3000mAh
+    CONFIG_EXIT_CMD();
+}
+
+void set_maximum_discharge_current()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(0x2040, 10000); //10000mAh
+    CONFIG_EXIT_CMD();
+}
+
+void set_number_cells()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_8_CRC(0x1204, 4);
+    CONFIG_EXIT_CMD();
+}
+
+void set_number_sensors()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_8_CRC(0x1206, 4);
+    CONFIG_EXIT_CMD();
+}
+
+void set_cells_sensor_source()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_8_CRC(0x1200, 0b01000000);
+    write_MP42790_8_CRC(0x1201, 0b00001110);
+    CONFIG_EXIT_CMD();
 }

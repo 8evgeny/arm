@@ -5,6 +5,7 @@
 #include <string.h>
 #include "eeprom.h"
 #include "MP2790_reg.h"
+#include "MP42790_reg.h"
 #include "i2c.h"
 #define MP2790_I2C_ADDRESS          0x02
 #define MP42790_I2C_ADDRESS         0x10
@@ -94,11 +95,9 @@ void read_2790_REGS();
 void read_42790_REGS();
 void read_Temp();
 void read_U_I();
-void read_U();
-void read_I();
 void adcOn();
 void resetErrors();
-void get_V_PACK_TOP();
+void get_U_PACK_TOP();
 void initInterrupts();
 void getLockRegisters();
 void initBatteryNum();
@@ -133,7 +132,7 @@ void send_Address_Len_8(uint16_t regAddr);
 void send_Address_Len_16(uint16_t regAddr);
 void send_Address_Len_32(uint16_t regAddr);
 void receive_Data_8(uint16_t regAddr);
-void receive_Data_8_CRC(uint16_t regAddr, int8_t * pCRC_OK);
+void receive_Data_8_CRC(uint16_t regAddr);
 void receive_Data_16(uint16_t regAddr);
 void receive_Data_16_CRC(uint16_t regAddr);
 void receive_Data_32(uint16_t regAddr);
@@ -158,6 +157,22 @@ void CONFIG_MODE_CMD();     //Enter configuration mode
 void CONFIG_EXIT_CMD();     //Exit configuration mode. The new configuration is stored in the NVM
 void CONFIG_RST_CMD();      //Reset the configuration. This is a self-clearing function
 void LOG_RST_CMD();         //Re-initialize the lifetime log registers. This is a self-clearing function
+
+void receive_U();
+void receive_I();
+void send_U_from_2790_to_42790();
+void send_I_from_2790_to_42790();
+void get_empty_soc_cells();
+void get_full_soc_cells();
+void get_empty_ID();
+void get_empty_RTIME();
+void set_nominal_capacity_cell();
+void set_work_capacity_cell();
+void set_maximum_charge_current();
+void set_maximum_discharge_current();
+void set_number_cells();
+void set_number_sensors();
+void set_cells_sensor_source();
 
 int _write(int fd, char *str, int len);
 void init_crc_calculation();

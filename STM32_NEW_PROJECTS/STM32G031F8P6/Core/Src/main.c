@@ -115,6 +115,7 @@ int main(void)
   init_2790();
   init_42790();
 
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -126,33 +127,31 @@ int main(void)
 
 
 #endif
-    simpleTestI2C_EEPROM(0x00);
+//    simpleTestI2C_EEPROM(0x00);
 
 //    read_2790_REGS();
 //    read_42790_REGS();
 
-//    CONFIG_MODE_CMD();
-
-    print_MP42790_8_CRC(0x1001);
-//    print_MP42790_16_CRC(0x1207);
-//    print_MP42790_32_CRC(0x0022);
-
-//    uint16_t reg = 0x1001;
-//    print_MP42790_8_CRC(reg);
-//    uint8_t value = read_MP42790_8_CRC(reg);
-//    ++value;
-//    write_MP42790_8_CRC(reg, value);
-//    print_MP42790_8_CRC(reg);
-
-//    CONFIG_EXIT_CMD();
+//    test_write_42790();
 
   while (1)
   {
-      HAL_Delay(3000);
-//      getStatus();
-//      get_self_U();
+      printf("\r\n");
       read_Temp();
       read_U_I();
+      get_U_PACK_TOP();
+
+      RST_CMD();
+      CONFIG_RST_CMD();
+      send_U_from_2790_to_42790();
+      send_I_from_2790_to_42790();
+      EXE_CMD();
+      HAL_Delay(100);
+//      get_empty_soc_cells();
+      get_empty_RTIME();
+      get_full_soc_cells();
+
+      HAL_Delay(5000);
 
     /* USER CODE END WHILE */
 

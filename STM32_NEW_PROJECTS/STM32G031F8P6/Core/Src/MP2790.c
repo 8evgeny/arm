@@ -10,7 +10,8 @@ typedef struct _data16
     }value;
 }data_16;
 data_16 data16; //2790
-uint16_t U1,U2,U3,U4,I1,I2,I3,I4,I_TOP,V_PACK,V_TOP,NTC1,NTC2,NTC3,NTC4;
+uint16_t U3,U4,U5,U6,U_PACK,U_PACK_to_42790, U_TOP,NTC1,NTC2,NTC3,NTC4;
+int16_t I3,I4,I5,I6,I_TOP;
 uint16_t Temperature;
 
 void init_2790()
@@ -24,7 +25,6 @@ void init_2790()
     initInterrupts();
     initPins();
     init_NTC();
-    get_V_PACK_TOP();
     init_UV_OV();
     init_time_SC_detection();
     init_SCFT_CTRL();
@@ -36,17 +36,16 @@ void init_2790()
 //    pulse_DOUN_UP(One_Wire_Pin, 1);
     initFET_CFG();
     init_ACT_CFG();
-    HAL_Delay(300);
+    HAL_Delay(100);
     getStatus();
     get_OC_Status();
     get_SELF_CFG();
-    get_V_PACK_TOP();
-
-
+    get_U_PACK_TOP();
 }
 
 void read_2790_REGS()
 {
+    printf("\n========= read_2790_REGS() ========\r\n");
     for (int i=0; i <= 0xB9; ++i)
     {
         print_MP2790(i);
@@ -73,7 +72,7 @@ void print_MP2790(uint8_t regAddr)
 
 void write_MP2790(uint8_t regAddr, uint16_t regValue)
 {
-    HAL_Delay(3);
+    HAL_Delay(8);
     while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
     HAL_I2C_Mem_Write(&hi2c2, MP2790_I2C_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 2, HAL_MAX_DELAY);
 }
@@ -97,55 +96,22 @@ void read_U_I()
 {
     //Voltage = Reading x 5000 / 32768 (mV)
     //I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
-    adcOn();
-    U1 = read_MP2790(RD_VCELL3) * 5000 / 32768;
-    U2 = read_MP2790(RD_VCELL4) * 5000 / 32768;
-    U3 = read_MP2790(RD_VCELL5) * 5000 / 32768;
-    U4 = read_MP2790(RD_VCELL6) * 5000 / 32768;
 
-    I1 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
-    I2 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
-    I3 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
-    I4 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
-    I_TOP = (read_MP2790(RD_ITOP) & 0x7FFF) * 20000000 / 32768 ;
+    receive_U();
 
-    printf("U1=%d,%03dV I1=%d,%03dmA\r\n",U1/1000, U1%1000, I1/1000,I1%1000);
-    printf("U2=%d,%03dV I2=%d,%03dmA\r\n",U2/1000, U2%1000, I2/1000,I2%1000);
-    printf("U3=%d,%03dV I3=%d,%03dmA\r\n",U3/1000, U3%1000, I3/1000,I3%1000);
-    printf("U4=%d,%03dV I4=%d,%03dmA\r\n",U4/1000, U4%1000, I4/1000,I4%1000);
-    printf("I_TOP=%d,%03dmA\r\n",I_TOP/1000,I_TOP%1000);
-    printf("\r\n");
-}
+    printf("U3=%d mV\r\n", U3/10);
+    printf("U4=%d mV\r\n", U4/10);
+    printf("U5=%d mV\r\n", U5/10);
+    printf("U6=%d mV\r\n", U6/10);
 
-void read_U()
-{
-    //Voltage = Reading x 5000 / 32768 (mV)
-    adcOn();
-    U1 = read_MP2790(RD_VCELL3) * 5000 / 32768;
-    U2 = read_MP2790(RD_VCELL4) * 5000 / 32768;
-    U3 = read_MP2790(RD_VCELL5) * 5000 / 32768;
-    U4 = read_MP2790(RD_VCELL6) * 5000 / 32768;
+    receive_I();
 
-    printf("U1=%d,%03dV\r\n",U1/1000, U1%1000);
-    printf("U2=%d,%03dV\r\n",U2/1000, U2%1000);
-    printf("U3=%d,%03dV\r\n",U3/1000, U3%1000);
-    printf("U4=%d,%03dV\r\n",U4/1000, U4%1000);
-    printf("\r\n");
-}
-
-void read_I()
-{
-    //I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
-    adcOn();
-    I1 = (read_MP2790(RD_ICELL3) & 0x7FFF) * 20000000 / 32768 ; //in mkA
-    I2 = (read_MP2790(RD_ICELL4) & 0x7FFF) * 20000000 / 32768;
-    I3 = (read_MP2790(RD_ICELL5) & 0x7FFF) * 20000000 / 32768 ;
-    I4 = (read_MP2790(RD_ICELL6) & 0x7FFF) * 20000000 / 32768 ;
-
-    printf("I1=%d,%03dmA\r\n",I1/1000,I1%1000);
-    printf("I2=%d,%03dmA\r\n",I2/1000,I2%1000);
-    printf("I3=%d,%03dmA\r\n",I3/1000,I3%1000);
-    printf("I4=%d,%03dmA\r\n",I4/1000,I4%1000);
+    printf("I3=%d mA\r\n", I3);
+    printf("I4=%d mA\r\n", I4);
+    printf("I5=%d mA\r\n", I5);
+    printf("I6=%d mA\r\n", I6);
+    printf("I_TOP=%d mA\r\n", I_TOP);
+    print_MP2790(RD_ITOP);
     printf("\r\n");
 }
 
@@ -162,17 +128,13 @@ void adcOn()
     }
 }
 
-void get_V_PACK_TOP()
+void get_U_PACK_TOP()
 {
     adcOn();
-//    printf("  get RD_VPACKP\r\n");
-//    print_MP2790(RD_VPACKP);
-    V_PACK = read_MP2790(RD_VPACKP) * 80000 / 32768;
-    printf("  V_PACK=%d,%03dV\r\n",V_PACK/1000, V_PACK%1000);
-//    printf("  get RD_VTOP\r\n");
-//    print_MP2790(RD_VTOP);
-    V_TOP = read_MP2790(RD_VTOP) * 80000 / 32768;
-    printf("  V_TOP=%d,%03dV\r\n",V_TOP/1000, V_TOP%1000);
+    U_PACK = read_MP2790(RD_VPACKP) * 80000 / 32768;
+    printf("U_PACK=%d mV\r\n", U_PACK);
+    U_TOP = read_MP2790(RD_VTOP) * 80000 / 32768;
+    printf("U_TOP=%d mV\r\n",U_TOP);
     printf("\r\n");
 }
 
@@ -224,12 +186,20 @@ void init_UV_OV()
     printf("\r\n");
 }
 
-void initFET_CFG()
+void initFET_CFG() //000 010 01 11110000
 {
     printf("  initFET_CFG()\r\n");
+//    write_MP2790(FET_CFG, 0b0001100011110000);
+
     read_MP2790(FET_CFG);
-    write_MP2790(FET_CFG, data16.value.value &= 0b1000111111111111);  // bit  12 14  to 0
-    write_MP2790(FET_CFG, data16.value.value |= 0b0000000111000000);
+    write_MP2790(FET_CFG, data16.value.value &= 0b1000111111111111);    // bits  14:12  to 000
+
+    write_MP2790(FET_CFG, data16.value.value |= 0b0000100000000000);    // bits 11:9 to 100
+    write_MP2790(FET_CFG, data16.value.value &= 0b1111100111111111);
+
+//    write_MP2790(FET_CFG, data16.value.value |= 0b0000000111000000);
+
+
     print_MP2790(FET_CFG);
     printf("\r\n");
 }
@@ -328,8 +298,9 @@ void init_ACT_CFG()
 {
     printf("  init_ACT_CFG()\r\n");
     read_MP2790(ACT_CFG);
+    write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);    //  1 bit to 0
     write_MP2790(ACT_CFG, data16.value.value |= 0b0000000000011000);    //  3  4  bits to 1
-    write_MP2790(ACT_CFG, data16.value.value &= 0b1111111111111101);     //  1 bit to 0
+
     print_MP2790(ACT_CFG);
     printf("\r\n");
 }
@@ -432,4 +403,69 @@ void get_SELF_CFG()
     write_MP2790(SELF_CFG, data16.value.value |= 0b0000000000001000);
     print_MP2790(SELF_CFG);
     printf("\r\n");
+}
+
+void receive_U()
+{
+    adcOn();
+    U3 = read_MP2790(RD_VCELL3) * 50000 / 32768;
+    U4 = read_MP2790(RD_VCELL4) * 50000 / 32768;
+    U5 = read_MP2790(RD_VCELL5) * 50000 / 32768;
+    U6 = read_MP2790(RD_VCELL6) * 50000 / 32768;
+
+}
+float k = 0.879f;
+void receive_I()
+{//I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
+    adcOn();
+    uint16_t tmp = read_MP2790(RD_ICELL3);
+    if ((tmp >> 15) == 1) { I3 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { I3 = k * tmp * 20000 / 32768; }
+    tmp = read_MP2790(RD_ICELL4);
+    if ((tmp >> 15) == 1) { I4 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { I4 = k * tmp * 20000 / 32768; }
+    tmp = read_MP2790(RD_ICELL5);
+    if ((tmp >> 15) == 1) { I5 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { I5 = k * tmp * 20000 / 32768; }
+    tmp = read_MP2790(RD_ICELL6);
+    if ((tmp >> 15) == 1) { I6 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { I6 = k * tmp * 20000 / 32768; }
+    tmp = read_MP2790(RD_ITOP);
+    if ((tmp >> 15) == 1) { I_TOP = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { I_TOP = k * tmp * 20000 / 32768; }
+}
+
+void send_U_from_2790_to_42790()
+{
+    printf("----- send_U_from_2790_to_42790() ------\r\n");
+    receive_U();
+//    get_U_PACK_TOP();
+    U_PACK_to_42790 = U_PACK / 2;
+
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(VRDG_CELL3, U3);
+    write_MP42790_16_CRC(VRDG_CELL4, U4);
+    write_MP42790_16_CRC(VRDG_CELL5, U5);
+    write_MP42790_16_CRC(VRDG_CELL6, U6);
+    write_MP42790_16_CRC(VRDG_PACK, U_PACK_to_42790);
+    CONFIG_EXIT_CMD();
+}
+
+void send_I_from_2790_to_42790()
+{
+    printf("----- send_I_from_2790_to_42790() ------\r\n");
+    receive_I();
+
+    CONFIG_MODE_CMD();
+    write_MP42790_32_CRC(IRDG_CELL3, I3);
+    write_MP42790_32_CRC(IRDG_CELL4, I4);
+    write_MP42790_32_CRC(IRDG_CELL5, I5);
+    write_MP42790_32_CRC(IRDG_CELL6, I6);
+    write_MP42790_32_CRC(IRDG_PACK, I_TOP);
+    CONFIG_EXIT_CMD();
+//    print_MP42790_32_CRC(IRDG_CELL3);
+//    print_MP42790_32_CRC(IRDG_CELL4);
+//    print_MP42790_32_CRC(IRDG_CELL5);
+//    print_MP42790_32_CRC(IRDG_CELL6);
+//    print_MP42790_32_CRC(IRDG_PACK);
 }
