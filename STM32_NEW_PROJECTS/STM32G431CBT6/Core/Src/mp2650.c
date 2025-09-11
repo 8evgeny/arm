@@ -599,3 +599,8 @@ void REG_2D_VBATT_LP_EN(_Bool val)
         write_MP2650_8(Battery_Voltage_Loop_Enable, data8.value &= 0b11111110);
     }
 }
+
+void send_unique_CMD_toBUS_485()
+{
+    printf("########@@@@@@@@########\r\n");
+}

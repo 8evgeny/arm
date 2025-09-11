@@ -114,8 +114,10 @@ int main(void)
   while (1)
   {
 //      print_MP2650_8(Input_Current_Limit_1_Setting);
-      HAL_Delay(500);
-
+      print_Regs16();
+      led_Test();
+      send_unique_CMD_toBUS_485();
+      HAL_Delay(4000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
