@@ -180,6 +180,8 @@ uint8_t crc_calc(uint8_t *data, uint8_t size);
 void generateRandomString(char *str, int length);
 void Printf(const char* fmt, ...);
 
+void send_unique_CMD();
+
 #define delayUS_ASM(us) do {                           \
 asm volatile ("MOV R0,%[loops]\n                       \
               1: \n                                    \
