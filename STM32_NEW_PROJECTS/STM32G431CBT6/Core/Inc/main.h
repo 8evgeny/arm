@@ -133,7 +133,7 @@ void REG_08_NTC_GCOMP_SEL(_Bool);
 void REG_0F_set_Input_Current_Limit_2(u_int16_t);
 void REG_2D_VBATT_LP_EN(_Bool);
 
-void send_unique_CMD_toBUS_485();
+uint8_t CMD_print_from_485();
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

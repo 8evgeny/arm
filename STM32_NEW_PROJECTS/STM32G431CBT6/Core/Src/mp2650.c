@@ -600,7 +600,27 @@ void REG_2D_VBATT_LP_EN(_Bool val)
     }
 }
 
-void send_unique_CMD_toBUS_485()
+uint8_t CMD_print_from_485()
 {
-    printf("########@@@@@@@@########\r\n");
+    uint8_t ret = 0;
+    uint8_t tmp[4];
+    HAL_UART_Receive(&huart2, tmp, 1, 0xFFFF);
+    if (tmp[0] == '@')
+    {
+        HAL_UART_Receive(&huart2, tmp, 1, 0xFFFF);
+        if (tmp[0] == '#')
+        {
+            HAL_UART_Receive(&huart2, tmp, 1, 0xFFFF);
+            if (tmp[0] == '@')
+            {
+                HAL_UART_Receive(&huart2, tmp, 1, 0xFFFF);
+                if (tmp[0] == '#')
+                {
+                    ret = 1;
+                }
+            }
+        }
+    }
+
+    return ret;
 }
