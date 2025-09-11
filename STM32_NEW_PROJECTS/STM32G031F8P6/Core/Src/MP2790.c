@@ -111,7 +111,7 @@ void read_U_I()
     printf("I5=%d mA\r\n", I5);
     printf("I6=%d mA\r\n", I6);
     printf("I_TOP=%d mA\r\n", I_TOP);
-//    print_MP2790(RD_ITOP);
+    print_MP2790(RD_ITOP);
     printf("\r\n");
 }
 
@@ -439,7 +439,7 @@ void send_U_from_2790_to_42790()
 {
     printf("----- send_U_from_2790_to_42790() ------\r\n");
     receive_U();
-    get_U_PACK_TOP();
+//    get_U_PACK_TOP();
     U_PACK_to_42790 = U_PACK / 2;
 
     CONFIG_MODE_CMD();
@@ -457,15 +457,15 @@ void send_I_from_2790_to_42790()
     receive_I();
 
     CONFIG_MODE_CMD();
-    write_MP42790_32_CRC(IRDG_CELL3, I3/1000);
-    write_MP42790_32_CRC(IRDG_CELL4, I4/1000);
-    write_MP42790_32_CRC(IRDG_CELL5, I5/1000);
-    write_MP42790_32_CRC(IRDG_CELL6, I6/1000);
-    write_MP42790_32_CRC(IRDG_PACK, I_TOP/1000);
+    write_MP42790_32_CRC(IRDG_CELL3, I3);
+    write_MP42790_32_CRC(IRDG_CELL4, I4);
+    write_MP42790_32_CRC(IRDG_CELL5, I5);
+    write_MP42790_32_CRC(IRDG_CELL6, I6);
+    write_MP42790_32_CRC(IRDG_PACK, I_TOP);
     CONFIG_EXIT_CMD();
-    print_MP42790_32_CRC(IRDG_CELL3);
-    print_MP42790_32_CRC(IRDG_CELL4);
-    print_MP42790_32_CRC(IRDG_CELL5);
-    print_MP42790_32_CRC(IRDG_CELL6);
-    print_MP42790_32_CRC(IRDG_PACK);
+//    print_MP42790_32_CRC(IRDG_CELL3);
+//    print_MP42790_32_CRC(IRDG_CELL4);
+//    print_MP42790_32_CRC(IRDG_CELL5);
+//    print_MP42790_32_CRC(IRDG_CELL6);
+//    print_MP42790_32_CRC(IRDG_PACK);
 }
