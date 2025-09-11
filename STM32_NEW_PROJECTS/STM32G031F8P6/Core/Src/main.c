@@ -150,7 +150,7 @@ int main(void)
     //      get_empty_soc_cells();
           get_empty_RTIME();
           get_full_soc_cells();
-          send_unique_CMD();
+          send_CMD_print();
           HAL_Delay(4000);
     /* USER CODE END WHILE */
 
@@ -348,10 +348,9 @@ void init_Print_to_RS485()
     HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
 }
 
-void send_unique_CMD()
+void send_CMD_print()
 {
-//    HAL_UART_Transmit(&huart2, (uint8_t*)"@#@#", 4, 0xFFFF);
-    printf("@#@#\r\n");
+    printf("send CMD print - @#@#\r\n");
 }
 
 
