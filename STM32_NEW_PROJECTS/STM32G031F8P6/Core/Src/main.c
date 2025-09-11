@@ -149,7 +149,6 @@ int main(void)
       read_Temp();
       read_U_I();
       get_U_PACK_TOP();
-      print_MP2790(RD_ITOP);
       HAL_Delay(5000);
 
     /* USER CODE END WHILE */

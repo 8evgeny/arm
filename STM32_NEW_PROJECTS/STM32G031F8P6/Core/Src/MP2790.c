@@ -111,6 +111,7 @@ void read_U_I()
     printf("I5=%d mA\r\n", I5);
     printf("I6=%d mA\r\n", I6);
     printf("I_TOP=%d mA\r\n", I_TOP);
+    print_MP2790(RD_ITOP);
     printf("\r\n");
 }
 
@@ -417,11 +418,21 @@ float k = 0.879f;
 void receive_I()
 {//I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
     adcOn();
-    I3 = k * (read_MP2790(RD_ICELL3)^0xFFFF) * 20000 / 32768 ; //in mA
-    I4 = k * (read_MP2790(RD_ICELL4)^0xFFFF) * 20000 / 32768;
-    I5 = k * (read_MP2790(RD_ICELL5)^0xFFFF) * 20000 / 32768 ;
-    I6 = k * (read_MP2790(RD_ICELL6)^0xFFFF) * 20000 / 32768 ;
-    I_TOP = k * (read_MP2790(RD_ITOP)^0xFFFF) * 20000 / 32768  ;
+    uint16_t tmp = read_MP2790(RD_ICELL3);
+    if ((tmp >> 15) == 1) { I3 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { I3 = k * tmp * 20000 / 32768; }
+    tmp = read_MP2790(RD_ICELL4);
+    if ((tmp >> 15) == 1) { I4 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { I4 = k * tmp * 20000 / 32768; }
+    tmp = read_MP2790(RD_ICELL5);
+    if ((tmp >> 15) == 1) { I5 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { I5 = k * tmp * 20000 / 32768; }
+    tmp = read_MP2790(RD_ICELL6);
+    if ((tmp >> 15) == 1) { I6 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { I6 = k * tmp * 20000 / 32768; }
+    tmp = read_MP2790(RD_ITOP);
+    if ((tmp >> 15) == 1) { I_TOP = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { I_TOP = k * tmp * 20000 / 32768; }
 }
 
 void send_U_from_2790_to_42790()
