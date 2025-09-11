@@ -111,7 +111,6 @@ void read_U_I()
     printf("I5=%d mA\r\n", I5);
     printf("I6=%d mA\r\n", I6);
     printf("I_TOP=%d mA\r\n", I_TOP);
-    print_MP2790(RD_ITOP);
     printf("\r\n");
 }
 
