@@ -61,6 +61,11 @@ void init_42790()
     set_number_cells();
     set_number_sensors();
     set_cells_sensor_source();
+    set_BMS_resistence();
+    set_minimum_voltage();
+    set_max_VPACK_voltage();
+    set_VPACK_empty_voltage();
+    set_nominal_charge_voltage();
 
 #if 0
 - Сell voltages (via the VRDG_CELLxx registers), current (via the IRDG_CELLxx registers),
@@ -715,15 +720,28 @@ void set_work_capacity_cell()
 void set_maximum_charge_current()
 {
     CONFIG_MODE_CMD();
-    write_MP42790_16_CRC(0x203E, 3000); //3000mAh
+    write_MP42790_16_CRC(0x203E, 3000); //3000mA
+    write_MP42790_16_CRC(0x122D, 1500); //3000mA
     CONFIG_EXIT_CMD();
+    printf("maximum_charge_current = %d \r\n", 2 * read_MP42790_16_CRC(0x122D));
+
 }
 
 void set_maximum_discharge_current()
 {
     CONFIG_MODE_CMD();
     write_MP42790_16_CRC(0x2040, 10000); //10000mAh
+    uint16_t tmp = 0;
+    while(tmp != 6000)
+    {
+        tmp = read_MP42790_16_CRC(0x1230);
+        CONFIG_MODE_CMD();
+        write_MP42790_16_CRC(0x1230, 6000); //12000mA
+        HAL_Delay(100);
+        CONFIG_EXIT_CMD();
+    }
     CONFIG_EXIT_CMD();
+    printf("maximum_discharge_current = %d \r\n", 2 * tmp);
 }
 
 void set_number_cells()
@@ -746,4 +764,78 @@ void set_cells_sensor_source()
     write_MP42790_8_CRC(0x1200, 0b01000000);
     write_MP42790_8_CRC(0x1201, 0b00001110);
     CONFIG_EXIT_CMD();
+}
+
+void set_BMS_resistence()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(0x1209, 367); //36,7
+    printf("BMS_hi = %d \r\n", read_MP42790_16_CRC(0x1209));
+    uint16_t tmp = 0;
+    while(tmp != 120)
+    {
+        tmp = read_MP42790_16_CRC(0x120B);
+        CONFIG_MODE_CMD();
+        write_MP42790_16_CRC(0x120B, 120); //12
+        HAL_Delay(100);
+        CONFIG_EXIT_CMD();
+    }
+    printf("BMS_lo = %d \r\n", tmp);
+    CONFIG_EXIT_CMD();
+}
+
+void set_minimum_voltage()
+{
+    CONFIG_MODE_CMD();
+    write_MP42790_16_CRC(0x1236, 27000); //2700 mV
+    CONFIG_EXIT_CMD();
+    printf("minimum_voltage = %d mV\r\n", read_MP42790_16_CRC(0x1236)/10);
+}
+
+void set_max_VPACK_voltage()
+{
+    CONFIG_MODE_CMD();
+    uint16_t tmp = 0;
+    while(tmp != 8400)
+    {
+        tmp = read_MP42790_16_CRC(0x1239);
+        CONFIG_MODE_CMD();
+        write_MP42790_16_CRC(0x1239, 8400); //16800 mV
+        HAL_Delay(100);
+        CONFIG_EXIT_CMD();
+    }
+    CONFIG_EXIT_CMD();
+    printf("max_VPACK_voltage = %d mV\r\n", 2 * tmp);
+}
+
+void set_VPACK_empty_voltage()
+{
+    CONFIG_MODE_CMD();
+    uint16_t tmp = 0;
+    while(tmp != 5400)
+    {
+        tmp = read_MP42790_16_CRC(0x123C);
+        CONFIG_MODE_CMD();
+        write_MP42790_16_CRC(0x123C, 5400); //10800 mV
+        HAL_Delay(100);
+        CONFIG_EXIT_CMD();
+    }
+    CONFIG_EXIT_CMD();
+    printf("empty_VPACK_voltage = %d mV\r\n", 2 * tmp);
+}
+
+void set_nominal_charge_voltage()
+{
+    CONFIG_MODE_CMD();
+    uint16_t tmp = 0;
+    while(tmp != 8200)
+    {
+        tmp = read_MP42790_16_CRC(0x1504);
+        CONFIG_MODE_CMD();
+        write_MP42790_16_CRC(0x1504, 8200); //8200 mV
+        HAL_Delay(100);
+        CONFIG_EXIT_CMD();
+    }
+    CONFIG_EXIT_CMD();
+    printf("nominal_charge_voltage = %d mV\r\n", 2 * tmp);
 }

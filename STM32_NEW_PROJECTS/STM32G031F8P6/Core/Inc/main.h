@@ -173,6 +173,11 @@ void set_maximum_discharge_current();
 void set_number_cells();
 void set_number_sensors();
 void set_cells_sensor_source();
+void set_BMS_resistence();
+void set_minimum_voltage();
+void set_max_VPACK_voltage();
+void set_VPACK_empty_voltage();
+void set_nominal_charge_voltage();
 
 int _write(int fd, char *str, int len);
 void init_crc_calculation();
