@@ -263,7 +263,7 @@ void ext_print_16(uint8_t regAddr)
         T += ((data16.value.value >>13) & 0x0001) * 128;
         T += ((data16.value.value >>14) & 0x0001) * 256;
         T += ((data16.value.value >>15) & 0x0001) * 512;
-        int16_t temp = 90300 - 257 * T ;
+        uint16_t temp = 90300 - 257 * T ;
         printf("  ADC_Junction_Temperature        %d.%02d°C", temp/100, temp%100);
     }
     if(regAddr == ADC_System_Power_Result_16BIT)
@@ -346,6 +346,7 @@ void init_MP2650()
     REG_08_NTC_GCOMP_SEL(false);                        //  Default: 1
     REG_08_BATTFET_EN(true);                            //  Default: 1
     REG_08_OTG_set(true);                               //  Default: 0
+    REG_0C_VIRTUAL_DIODE_set(true);                     //  Default: 0
     REG_2D_VBATT_LP_EN(true);                           //  Default: 1
 }
 
@@ -599,6 +600,19 @@ void REG_08_OTG_set(_Bool val)
     {
         read_MP2650_8(Configuration_Register_0);
         write_MP2650_8(Configuration_Register_0, data8.value &= 0b11011111);
+    }
+}
+void REG_0C_VIRTUAL_DIODE_set(_Bool val)
+{
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_4);
+        write_MP2650_8(Configuration_Register_4, data8.value |= 0b00001000);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_4);
+        write_MP2650_8(Configuration_Register_4, data8.value &= 0b11110111);
     }
 }
 void REG_0F_set_Input_Current_Limit_2(u_int16_t value)
