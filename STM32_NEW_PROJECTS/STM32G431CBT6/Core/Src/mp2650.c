@@ -333,16 +333,19 @@ void init_MP2650()
     led_Test();
     REG_00_set_Input_Current_Limit_1(1500);             //1500 mA default       Range: 0mA to 5A
     REG_0F_set_Input_Current_Limit_2(1500);             //1500 mA default       Range: 0mA to 5A
-    REG_01_set_Input_Voltage_Limit(4500);               //4,5V default          Range: 0V to 25.5V
+    REG_01_set_Input_Voltage_Limit(13000);              //4,5V default          Range: 0V to 25.5V
     REG_02_set_Charge_Current(300);                     //1000 mA default       Range: 0A to 5A
     REG_03_set_PreCharge_Current(180);                  //180 mA default        Range: 180 - 840 mA
     REG_03_set_Termination_Current(200);                //200 mA default        Range: 0mA to 1500mA
     REG_04_set_Battery_Full_Voltage_for_one_Cell(4200); //Default: 4.2V/cell    Range: 3.7125V/cell to 4.5V/cell
     REG_04_set_Battery_Threshold_for_one_Cell_100mV();
+//    Pre-Charge Threshold
     REG_07_set_4_cells();
+    REG_07_set_Pre_Charge_Threshold_for_one_Cell_3700mV();
     REG_08_CHARGE_EN(true);                             //  Default: 1
-    REG_08_NTC_GCOMP_SEL(false);                         //  Default: 1
+    REG_08_NTC_GCOMP_SEL(false);                        //  Default: 1
     REG_08_BATTFET_EN(true);                            //  Default: 1
+    REG_08_OTG_set(true);                               //  Default: 0
     REG_2D_VBATT_LP_EN(true);                           //  Default: 1
 }
 
@@ -540,6 +543,12 @@ void REG_07_set_4_cells()
     write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value &= 0b00111111);
     write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b10000000);
 }
+void REG_07_set_Pre_Charge_Threshold_for_one_Cell_3700mV()
+{
+    read_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting); //D5 D6  to 10
+    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value &= 0b11101111);
+    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b00100000);
+}
 void REG_08_BATTFET_EN(_Bool val)
 {
     if(val)
@@ -579,6 +588,19 @@ void REG_08_NTC_GCOMP_SEL(_Bool val)
         write_MP2650_8(Configuration_Register_0, data8.value &= 0b11111011);
     }
 }
+void REG_08_OTG_set(_Bool val)
+{
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value |= 0b00100000);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_0);
+        write_MP2650_8(Configuration_Register_0, data8.value &= 0b11011111);
+    }
+}
 void REG_0F_set_Input_Current_Limit_2(u_int16_t value)
 {
     if (value > (0b01111111 * 50)) value = 0b01111111 * 50;
@@ -598,6 +620,11 @@ void REG_2D_VBATT_LP_EN(_Bool val)
         read_MP2650_8(Battery_Voltage_Loop_Enable);
         write_MP2650_8(Battery_Voltage_Loop_Enable, data8.value &= 0b11111110);
     }
+}
+void REG_30_set_VBATT_PRE_SEL()
+{
+    read_MP2650_8(Battery_Pre_Charge_Threshold_Option);
+    write_MP2650_8(Battery_Pre_Charge_Threshold_Option, data8.value |= 0b00001000);
 }
 
 uint8_t CMD_print_from_485()

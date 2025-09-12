@@ -127,11 +127,14 @@ void REG_04_set_Battery_Full_Voltage_for_one_Cell(u_int16_t);   //in mV
 void REG_04_set_Battery_Threshold_for_one_Cell_100mV();
 void REG_04_set_Battery_Threshold_for_one_Cell_200mV();
 void REG_07_set_4_cells();
+void REG_07_set_Pre_Charge_Threshold_for_one_Cell_3700mV();
 void REG_08_BATTFET_EN(_Bool);
 void REG_08_CHARGE_EN(_Bool);
 void REG_08_NTC_GCOMP_SEL(_Bool);
+void REG_08_OTG_set(_Bool);
 void REG_0F_set_Input_Current_Limit_2(u_int16_t);
 void REG_2D_VBATT_LP_EN(_Bool);
+void REG_30_set_VBATT_PRE_SEL();
 
 uint8_t CMD_print_from_485();
 /* USER CODE END Private defines */
