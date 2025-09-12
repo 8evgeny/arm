@@ -148,32 +148,32 @@ void ext_print_16(uint8_t regAddr)
     if(regAddr == ADC_Battery_Voltage_Result_16BIT)
     {
         uint16_t V = 0;
-        V += ((data16.value.value >>6) & 0x0001) * 250; //больше в 20 раз
-        V += ((data16.value.value >>7) & 0x0001) * 500;
-        V += ((data16.value.value >>8) & 0x0001) * 1000;
-        V += ((data16.value.value >>9) & 0x0001) * 2000;
-        V += ((data16.value.value >>10) & 0x0001) * 4000;
-        V += ((data16.value.value >>11) & 0x0001) * 8000;
-        V += ((data16.value.value >>12) & 0x0001) * 16000;
-        V += ((data16.value.value >>13) & 0x0001) * 32000;
-        V += ((data16.value.value >>14) & 0x0001) * 64000;
-        V += ((data16.value.value >>15) & 0x0001) * 128000;
-        printf("  ADC_Battery_Voltage             %d.%03d V", V/10000, V%10000);
+        V += ((data16.value.value >>6) & 0x0001) * 25; //больше в 20 раз
+        V += ((data16.value.value >>7) & 0x0001) * 50;
+        V += ((data16.value.value >>8) & 0x0001) * 100;
+        V += ((data16.value.value >>9) & 0x0001) * 200;
+        V += ((data16.value.value >>10) & 0x0001) * 400;
+        V += ((data16.value.value >>11) & 0x0001) * 800;
+        V += ((data16.value.value >>12) & 0x0001) * 1600;
+        V += ((data16.value.value >>13) & 0x0001) * 3200;
+        V += ((data16.value.value >>14) & 0x0001) * 6400;
+        V += ((data16.value.value >>15) & 0x0001) * 12800;
+        printf("  ADC_Battery_Voltage             %d.%03d V", V/1000, V%1000);
     }
     if(regAddr == ADC_System_Voltage_Result_16BIT)
     {
         uint16_t V = 0;
-        V += ((data16.value.value >>6) & 0x0001) * 250; //больше в 20 раз
-        V += ((data16.value.value >>7) & 0x0001) * 500;
-        V += ((data16.value.value >>8) & 0x0001) * 1000;
-        V += ((data16.value.value >>9) & 0x0001) * 2000;
-        V += ((data16.value.value >>10) & 0x0001) * 4000;
-        V += ((data16.value.value >>11) & 0x0001) * 8000;
-        V += ((data16.value.value >>12) & 0x0001) * 16000;
-        V += ((data16.value.value >>13) & 0x0001) * 32000;
-        V += ((data16.value.value >>14) & 0x0001) * 64000;
-        V += ((data16.value.value >>15) & 0x0001) * 128000;
-        printf("  ADC_System_Voltage              %d.%03d V", V/10000, V%10000);
+        V += ((data16.value.value >>6) & 0x0001) * 25; //больше в 20 раз
+        V += ((data16.value.value >>7) & 0x0001) * 50;
+        V += ((data16.value.value >>8) & 0x0001) * 100;
+        V += ((data16.value.value >>9) & 0x0001) * 200;
+        V += ((data16.value.value >>10) & 0x0001) * 400;
+        V += ((data16.value.value >>11) & 0x0001) * 800;
+        V += ((data16.value.value >>12) & 0x0001) * 1600;
+        V += ((data16.value.value >>13) & 0x0001) * 3200;
+        V += ((data16.value.value >>14) & 0x0001) * 6400;
+        V += ((data16.value.value >>15) & 0x0001) * 12800;
+        printf("  ADC_System_Voltage              %d.%03d V", V/1000, V%1000);
     }
     if(regAddr == ADC_Battery_Charge_Current_Result_16BIT)
     {
@@ -253,7 +253,7 @@ void ext_print_16(uint8_t regAddr)
     if(regAddr == ADC_Junction_Temperature_Result_16BIT)
     {
         uint16_t T = 0;
-        T += ((data16.value.value >>6) & 0x0001);
+        T += ((data16.value.value >>6) & 0x0001) ;
         T += ((data16.value.value >>7) & 0x0001) * 2;
         T += ((data16.value.value >>8) & 0x0001) * 4;
         T += ((data16.value.value >>9) & 0x0001) * 8;
@@ -263,8 +263,8 @@ void ext_print_16(uint8_t regAddr)
         T += ((data16.value.value >>13) & 0x0001) * 128;
         T += ((data16.value.value >>14) & 0x0001) * 256;
         T += ((data16.value.value >>15) & 0x0001) * 512;
-        uint16_t temp = 903000 - 2578 * T;
-        printf("  ADC_Junction_Temperature        %d.%02d C", temp/1000, temp%100);
+        int16_t temp = 90300 - 257 * T ;
+        printf("  ADC_Junction_Temperature        %d.%02d°C", temp/100, temp%100);
     }
     if(regAddr == ADC_System_Power_Result_16BIT)
     {
@@ -298,10 +298,10 @@ void ext_print_16(uint8_t regAddr)
     }
     if(regAddr == ADC_Result_for_NTC_Voltage_16BIT) //NTC[11:0] x 1.6V / 4096
     {
-        uint16_t V = 0;
+        uint32_t V = 0;
         V = (data16.value.value & 0b0000111111111111) ;
         V *= 16000;
-        V /= 4096;
+        V /= 40960;
         printf("  ADC_Result_for_NTC_Voltage      %d.%01d mV", V/10, V%10);
     }
 }
@@ -341,7 +341,7 @@ void init_MP2650()
     REG_04_set_Battery_Threshold_for_one_Cell_100mV();
     REG_07_set_4_cells();
     REG_08_CHARGE_EN(true);                             //  Default: 1
-    REG_08_NTC_GCOMP_SEL(true);                         //  Default: 1
+    REG_08_NTC_GCOMP_SEL(false);                         //  Default: 1
     REG_08_BATTFET_EN(true);                            //  Default: 1
     REG_2D_VBATT_LP_EN(true);                           //  Default: 1
 }

@@ -117,7 +117,7 @@ int main(void)
       while (CMD_print_from_485() != 1);
       HAL_Delay(100);
       printf("\n-------- CMD_print_from_485 --------\r\n");
-
+      print_Regs8();
       print_Regs16();
       led_Test();
 
