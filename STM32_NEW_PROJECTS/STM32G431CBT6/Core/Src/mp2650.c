@@ -345,9 +345,9 @@ void init_MP2650()
     REG_08_CHARGE_EN(true);                             //  Default: 1
     REG_08_NTC_GCOMP_SEL(false);                        //  Default: 1
     REG_08_BATTFET_EN(true);                            //  Default: 1
-    REG_08_OTG_set(true);                               //  Default: 0
+    REG_08_OTG_set(false);                               //  Default: 0
     REG_0C_VIRTUAL_DIODE_set(true);                     //  Default: 0
-    REG_2D_VBATT_LP_EN(true);                           //  Default: 1
+    REG_2D_VBATT_LP_EN(false);                           //  Default: 1
 }
 
 uint8_t read_MP2650_8(uint8_t regAddr)
