@@ -331,22 +331,25 @@ void init_MP2650()
 {
     all_led_OFF();
     led_Test();
+    REG_07_set_4_cells();
+    REG_07_set_Pre_Charge_Threshold_for_one_Cell_3700mV();
+
     REG_00_set_Input_Current_Limit_1(1500);             //1500 mA default       Range: 0mA to 5A
     REG_0F_set_Input_Current_Limit_2(1500);             //1500 mA default       Range: 0mA to 5A
-    REG_01_set_Input_Voltage_Limit(4500);              //4,5V default          Range: 0V to 25.5V
+    REG_01_set_Input_Voltage_Limit(13000);              //4,5V default          Range: 0V to 25.5V
     REG_02_set_Charge_Current(300);                     //1000 mA default       Range: 0A to 5A
     REG_03_set_PreCharge_Current(180);                  //180 mA default        Range: 180 - 840 mA
     REG_03_set_Termination_Current(200);                //200 mA default        Range: 0mA to 1500mA
     REG_04_set_Battery_Full_Voltage_for_one_Cell(4200); //Default: 4.2V/cell    Range: 3.7125V/cell to 4.5V/cell
     REG_04_set_Battery_Threshold_for_one_Cell_100mV();
-//    Pre-Charge Threshold
-    REG_07_set_4_cells();
-    REG_07_set_Pre_Charge_Threshold_for_one_Cell_3700mV();
+
     REG_08_CHARGE_EN(true);                             //  Default: 1
     REG_08_SUSP_EN(false);                              //  Default: 0
     REG_08_NTC_GCOMP_SEL(false);                        //  Default: 1
     REG_08_BATTFET_EN(true);                            //  Default: 1
     REG_08_OTG_set(false);                              //  Default: 0
+    REG_09_EN_TERM_set(false);                          //  Default: 1
+    REG_0B_Reflect_batterycharge_current_set(false);    //  Default: 0
     REG_0C_VIRTUAL_DIODE_set(true);                     //  Default: 0
     REG_2D_VBATT_LP_EN(true);                           //  Default: 1
 }
@@ -616,6 +619,32 @@ void REG_08_OTG_set(_Bool val)
     {
         read_MP2650_8(Configuration_Register_0);
         write_MP2650_8(Configuration_Register_0, data8.value &= 0b11011111);
+    }
+}
+void REG_09_EN_TERM_set(_Bool val)
+{
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_1);
+        write_MP2650_8(Configuration_Register_1, data8.value |= 0b01000000);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_1);
+        write_MP2650_8(Configuration_Register_1, data8.value &= 0b10111111);
+    }
+}
+void REG_0B_Reflect_batterycharge_current_set(_Bool val)
+{
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_3);
+        write_MP2650_8(Configuration_Register_3, data8.value |= 0b00100000);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_3);
+        write_MP2650_8(Configuration_Register_3, data8.value &= 0b11011111);
     }
 }
 void REG_0C_VIRTUAL_DIODE_set(_Bool val)

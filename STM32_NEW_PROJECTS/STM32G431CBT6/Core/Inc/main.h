@@ -133,6 +133,8 @@ void REG_08_CHARGE_EN(_Bool);
 void REG_08_SUSP_EN(_Bool);
 void REG_08_NTC_GCOMP_SEL(_Bool);
 void REG_08_OTG_set(_Bool);
+void REG_09_EN_TERM_set(_Bool);
+void REG_0B_Reflect_batterycharge_current_set(_Bool val);
 void REG_0C_VIRTUAL_DIODE_set(_Bool);
 void REG_0F_set_Input_Current_Limit_2(u_int16_t);
 void REG_2D_VBATT_LP_EN(_Bool);
