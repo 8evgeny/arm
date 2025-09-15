@@ -113,9 +113,7 @@ int main(void)
 
   while (1)
   {
-//      print_MP2650_8(Input_Current_Limit_1_Setting);
-//      while (CMD_print_from_485() != 1);
-      HAL_Delay(5000);
+      while (CMD_print_from_485() != 1);
       HAL_Delay(100);
       printf("\n-------- CMD_print_from_485 --------\r\n");
       print_Regs8();
