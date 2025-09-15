@@ -130,6 +130,7 @@ void REG_07_set_4_cells();
 void REG_07_set_Pre_Charge_Threshold_for_one_Cell_3700mV();
 void REG_08_BATTFET_EN(_Bool);
 void REG_08_CHARGE_EN(_Bool);
+void REG_08_SUSP_EN(_Bool);
 void REG_08_NTC_GCOMP_SEL(_Bool);
 void REG_08_OTG_set(_Bool);
 void REG_0C_VIRTUAL_DIODE_set(_Bool);
