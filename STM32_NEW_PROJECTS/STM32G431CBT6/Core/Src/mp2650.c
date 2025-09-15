@@ -300,7 +300,7 @@ void ext_print_16(uint8_t regAddr)
     {
         uint32_t V = 0;
         V = (data16.value.value & 0b0000111111111111) ;
-        V *= 16000;
+        V *= 160000;
         V /= 40960;
         printf("  ADC_Result_for_NTC_Voltage      %d.%01d mV", V/10, V%10);
     }
@@ -336,7 +336,7 @@ void init_MP2650()
 
     REG_00_set_Input_Current_Limit_1(1500);             //1500 mA default       Range: 0mA to 5A
     REG_0F_set_Input_Current_Limit_2(1500);             //1500 mA default       Range: 0mA to 5A
-    REG_01_set_Input_Voltage_Limit(13000);              //4,5V default          Range: 0V to 25.5V
+    REG_01_set_Input_Voltage_Limit(4500);              //4,5V default          Range: 0V to 25.5V
     REG_02_set_Charge_Current(300);                     //1000 mA default       Range: 0A to 5A
     REG_03_set_PreCharge_Current(180);                  //180 mA default        Range: 180 - 840 mA
     REG_03_set_Termination_Current(200);                //200 mA default        Range: 0mA to 1500mA
@@ -349,6 +349,7 @@ void init_MP2650()
     REG_08_BATTFET_EN(true);                            //  Default: 1
     REG_08_OTG_set(false);                              //  Default: 0
     REG_09_EN_TERM_set(false);                          //  Default: 1
+    REG_0A_NTC_WARM_set(true);
     REG_0B_Reflect_batterycharge_current_set(false);    //  Default: 0
     REG_0C_VIRTUAL_DIODE_set(true);                     //  Default: 0
     REG_2D_VBATT_LP_EN(true);                           //  Default: 1
@@ -632,6 +633,19 @@ void REG_09_EN_TERM_set(_Bool val)
     {
         read_MP2650_8(Configuration_Register_1);
         write_MP2650_8(Configuration_Register_1, data8.value &= 0b10111111);
+    }
+}
+void REG_0A_NTC_WARM_set(_Bool val)
+{
+    if(val)
+    {
+        read_MP2650_8(Configuration_Register_2);
+        write_MP2650_8(Configuration_Register_2, data8.value |= 0b00001100);
+    }
+    else
+    {
+        read_MP2650_8(Configuration_Register_2);
+        write_MP2650_8(Configuration_Register_2, data8.value &= 0b11110111);
     }
 }
 void REG_0B_Reflect_batterycharge_current_set(_Bool val)

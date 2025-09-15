@@ -109,7 +109,7 @@
 #define FULL_SOC_CELL15         0x058A
 #define FULL_SOC_CELL16         0x058B //Returns cell’s 16 full SOC in %
 
-
+#define FULL_SOC_PACK           0x05A5 //Returns the pack’s SOC.
 
 
 

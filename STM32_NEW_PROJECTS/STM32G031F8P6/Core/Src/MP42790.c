@@ -3,6 +3,7 @@ extern I2C_HandleTypeDef hi2c2;
 int8_t CRC_OK = -1;
 uint8_t CELL3_EMPTY_PERCENT, CELL4_EMPTY_PERCENT, CELL5_EMPTY_PERCENT, CELL6_EMPTY_PERCENT;
 uint8_t CELL3_FULL_PERCENT, CELL4_FULL_PERCENT, CELL5_FULL_PERCENT, CELL6_FULL_PERCENT;
+uint16_t CELLPACK_FULL_PERCENT;
 typedef struct _reg_8
 {
     uint8_t value;
@@ -684,10 +685,12 @@ void get_full_soc_cells()
     CELL4_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL4) / 10 * 4;
     CELL5_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL5) / 10 * 4;
     CELL6_FULL_PERCENT = read_MP42790_8_CRC(FULL_SOC_CELL6) / 10 * 4;
+    CELLPACK_FULL_PERCENT = read_MP42790_16_CRC(FULL_SOC_PACK) / 1000 * 2;
     printf("CELL3_FULL_PERCENT = %d %%\r\n", CELL3_FULL_PERCENT);
     printf("CELL4_FULL_PERCENT = %d %%\r\n", CELL4_FULL_PERCENT);
     printf("CELL5_FULL_PERCENT = %d %%\r\n", CELL5_FULL_PERCENT);
     printf("CELL6_FULL_PERCENT = %d %%\r\n", CELL6_FULL_PERCENT);
+    printf("PACK_FULL_PERCENT = %d %%\r\n", CELLPACK_FULL_PERCENT);
 }
 
 void get_empty_ID()
@@ -706,14 +709,14 @@ void get_empty_RTIME()
 void set_nominal_capacity_cell()
 {
     CONFIG_MODE_CMD();
-    write_MP42790_16_CRC(0x2036, 3400); //3400mAh
+    write_MP42790_16_CRC(0x2036, 3120); //3120mAh
     CONFIG_EXIT_CMD();
 }
 
 void set_work_capacity_cell()
 {
     CONFIG_MODE_CMD();
-    write_MP42790_16_CRC(0x2038, 3250); //3250mAh
+    write_MP42790_16_CRC(0x2038, 3000); //3000mAh
     CONFIG_EXIT_CMD();
 }
 
@@ -721,7 +724,7 @@ void set_maximum_charge_current()
 {
     CONFIG_MODE_CMD();
     write_MP42790_16_CRC(0x203E, 3000); //3000mA
-    write_MP42790_16_CRC(0x122D, 1500); //3000mA
+    write_MP42790_16_CRC(0x122D, 1500); //1500mA
     CONFIG_EXIT_CMD();
     printf("maximum_charge_current = %d \r\n", 2 * read_MP42790_16_CRC(0x122D));
 
