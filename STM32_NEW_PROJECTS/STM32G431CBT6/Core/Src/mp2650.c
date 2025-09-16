@@ -345,13 +345,13 @@ void init_MP2650()
 
     REG_08_CHARGE_EN(true);                             //  Default: 1
     REG_08_SUSP_EN(false);                              //  Default: 0
-    REG_08_NTC_GCOMP_SEL(false);                        //  Default: 1
+    REG_08_NTC_GCOMP_SEL(true);                         //  Default: 1
     REG_08_BATTFET_EN(true);                            //  Default: 1
     REG_08_OTG_set(false);                              //  Default: 0
-    REG_09_EN_TERM_set(false);                          //  Default: 1
+    REG_09_EN_TERM_set(true);                           //  Default: 1
     REG_0A_NTC_WARM_set(true);
     REG_0B_Reflect_batterycharge_current_set(false);    //  Default: 0
-    REG_0C_VIRTUAL_DIODE_set(true);                     //  Default: 0
+    REG_0C_VIRTUAL_DIODE_set(false);                     //  Default: 0
     REG_2D_VBATT_LP_EN(true);                           //  Default: 1
 }
 
