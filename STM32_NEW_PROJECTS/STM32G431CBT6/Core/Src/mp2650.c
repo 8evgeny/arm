@@ -336,7 +336,7 @@ void init_MP2650()
 
     REG_00_set_Input_Current_Limit_1(1500);             //1500 mA default       Range: 0mA to 5A
     REG_0F_set_Input_Current_Limit_2(1500);             //1500 mA default       Range: 0mA to 5A
-    REG_01_set_Input_Voltage_Limit(4500);              //4,5V default          Range: 0V to 25.5V
+    REG_01_set_Input_Voltage_Limit(10500);               //4,5V default          Range: 0V to 25.5V
     REG_02_set_Charge_Current(300);                     //1000 mA default       Range: 0A to 5A
     REG_03_set_PreCharge_Current(180);                  //180 mA default        Range: 180 - 840 mA
     REG_03_set_Termination_Current(200);                //200 mA default        Range: 0mA to 1500mA

@@ -110,7 +110,9 @@ int main(void)
   while (1)
   {
       while (CMD_print_from_485() != 1);
-      HAL_Delay(100);
+      REG_08_CHARGE_EN(false);
+      HAL_Delay(300);
+      REG_08_CHARGE_EN(true);
       printf("\n-------- CMD_print_from_485 --------\r\n");
       print_Regs8();
       print_Regs16();
