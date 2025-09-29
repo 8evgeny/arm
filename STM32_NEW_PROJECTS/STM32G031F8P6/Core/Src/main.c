@@ -150,7 +150,7 @@ int main(void)
     //      get_empty_soc_cells();
           get_empty_RTIME();
           get_full_soc_cells();
-          send_CMD_print();
+//          send_CMD_print();
           HAL_Delay(8000);
     /* USER CODE END WHILE */
 
