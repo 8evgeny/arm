@@ -345,6 +345,7 @@ void init_MP2650()
 
     REG_08_CHARGE_EN(true);                             //  Default: 1
     REG_08_SUSP_EN(false);                              //  Default: 0
+    REG_08_SUSP_EN_second_channel(true);
     REG_08_NTC_GCOMP_SEL(true);                         //  Default: 1
     REG_08_BATTFET_EN(true);                            //  Default: 1
     REG_08_OTG_set(false);                              //  Default: 0
@@ -353,6 +354,23 @@ void init_MP2650()
     REG_0B_Reflect_batterycharge_current_set(false);    //  Default: 0
     REG_0C_VIRTUAL_DIODE_set(false);                     //  Default: 0
     REG_2D_VBATT_LP_EN(true);                           //  Default: 1
+}
+
+uint8_t read_MP2650_8_second_channel(uint8_t regAddr)
+{
+    data8.value = 0xFF;
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_StatusTypeDef ret;
+    ret = HAL_I2C_Mem_Read(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, &data8.value, 1, HAL_MAX_DELAY);
+    if(HAL_OK == ret)
+    {
+        return data8.value;
+    }
+    else
+    {
+        printf("error code = %d\r\n", ret);
+        return 0xFF;
+    }
 }
 
 uint8_t read_MP2650_8(uint8_t regAddr)
@@ -370,6 +388,13 @@ uint8_t read_MP2650_8(uint8_t regAddr)
         printf("error code = %d\r\n", ret);
         return 0xFF;
     }
+}
+
+void write_MP2650_8_second_channel(uint8_t regAddr, uint8_t regValue)
+{
+    HAL_Delay(3);
+    while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+    HAL_I2C_Mem_Write(&hi2c2, MP2650_ADDRESS, regAddr, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&regValue, 1, HAL_MAX_DELAY);
 }
 
 void write_MP2650_8(uint8_t regAddr, uint8_t regValue)
@@ -585,6 +610,22 @@ void REG_08_CHARGE_EN(_Bool val)
         write_MP2650_8(Configuration_Register_0, data8.value &= 0b11101111);
     }
 }
+
+void REG_08_SUSP_EN_second_channel(_Bool val)
+{
+    if(val)
+    {
+        read_MP2650_8_second_channel(Configuration_Register_0);
+        write_MP2650_8_second_channel(Configuration_Register_0, data8.value |= 0b00001000);
+    }
+    else
+    {
+        read_MP2650_8_second_channel(Configuration_Register_0);
+        write_MP2650_8_second_channel(Configuration_Register_0, data8.value &= 0b11110111);
+    }
+}
+
+
 void REG_08_SUSP_EN(_Bool val)
 {
     if(val)

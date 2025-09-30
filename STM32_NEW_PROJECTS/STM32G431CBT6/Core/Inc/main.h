@@ -105,7 +105,9 @@ void ext_print_16(uint8_t regAddr);
 void print_Regs16();
 void init_MP2650();
 uint8_t read_MP2650_8(uint8_t regAddr);
+uint8_t read_MP2650_8_second_channel(uint8_t regAddr);
 void write_MP2650_8(uint8_t regAddr, uint8_t regValue);
+void write_MP2650_8_second_channel(uint8_t regAddr, uint8_t regValue);
 void print_MP2650_8(uint8_t regAddr);
 void print_Regs8();
 void REG_00_set_Input_Current_Limit_1(u_int16_t);               //in mA
@@ -121,6 +123,7 @@ void REG_07_set_Pre_Charge_Threshold_for_one_Cell_3700mV();
 void REG_08_BATTFET_EN(_Bool);
 void REG_08_CHARGE_EN(_Bool);
 void REG_08_SUSP_EN(_Bool);
+void REG_08_SUSP_EN_second_channel(_Bool);
 void REG_08_NTC_GCOMP_SEL(_Bool);
 void REG_08_OTG_set(_Bool);
 void REG_09_EN_TERM_set(_Bool);
