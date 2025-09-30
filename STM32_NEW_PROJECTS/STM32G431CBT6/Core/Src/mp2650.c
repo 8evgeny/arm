@@ -336,7 +336,7 @@ void init_MP2650()
 
     REG_00_set_Input_Current_Limit_1(1500);             //1500 mA default       Range: 0mA to 5A
     REG_0F_set_Input_Current_Limit_2(1500);             //1500 mA default       Range: 0mA to 5A
-    REG_01_set_Input_Voltage_Limit(10500);               //4,5V default          Range: 0V to 25.5V
+    REG_01_set_Input_Voltage_Limit(4500);               //4,5V default          Range: 0V to 25.5V
     REG_02_set_Charge_Current(300);                     //1000 mA default       Range: 0A to 5A
     REG_03_set_PreCharge_Current(180);                  //180 mA default        Range: 180 - 840 mA
     REG_03_set_Termination_Current(200);                //200 mA default        Range: 0mA to 1500mA
@@ -553,9 +553,11 @@ void REG_07_set_Pre_Charge_Threshold_for_one_Cell_3700mV()
 {
     read_MP2650_8(Battery_Pre_Charge_Threshold_Option);
     write_MP2650_8(Battery_Pre_Charge_Threshold_Option, data8.value |= 0b00001000); //D3  to 1
-    read_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting); //D5 D6  to 10
-    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value &= 0b11101111);
-    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b00100000);
+    read_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting); //D5 D4  to 10 (3,7V)  01(3,4V)
+//    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value &= 0b11101111);
+//    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b00100000);
+    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value &= 0b11011111); //3,4V
+    write_MP2650_8(Pre_Charge_Threshold_and_OTG_Output_Current_Limit_Setting, data8.value |= 0b00010000);
 }
 void REG_08_BATTFET_EN(_Bool val)
 {

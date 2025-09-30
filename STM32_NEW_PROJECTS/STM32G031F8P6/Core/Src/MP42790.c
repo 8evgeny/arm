@@ -668,10 +668,10 @@ void LOG_RST_CMD()         //Exit configuration mode. The new configuration is s
 void get_empty_soc_cells()
 {
     printf("----- get_empty_soc_cells() -------\r\n");
-    CELL3_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL3) / 10 * 4;
-    CELL4_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL4) / 10 * 4;
-    CELL5_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL5) / 10 * 4;
-    CELL6_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL6) / 10 * 4;
+    CELL3_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL3) * 4 / 10;
+    CELL4_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL4) * 4 / 10;
+    CELL5_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL5) * 4 / 10;
+    CELL6_EMPTY_PERCENT = read_MP42790_8_CRC(EMTY_SOC_CELL6) * 4 / 10;
     printf("CELL3_EMPTY_PERCENT = %d %%\r\n", CELL3_EMPTY_PERCENT);
     printf("CELL4_EMPTY_PERCENT = %d %%\r\n", CELL4_EMPTY_PERCENT);
     printf("CELL5_EMPTY_PERCENT = %d %%\r\n", CELL5_EMPTY_PERCENT);
