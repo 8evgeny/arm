@@ -97,7 +97,7 @@ int main(void)
   while (1)
   {
       HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
-      HAL_Delay(1000);
+      HAL_Delay(100);
       HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
       HAL_Delay(2000);
       SEGGER_RTT_printf(0, "Hello from RTT!\n");

@@ -12,6 +12,7 @@ typedef struct _data16
 data_16 data16; //2790
 uint16_t U3,U4,U5,U6,U_PACK,U_PACK_to_42790, U_TOP,NTC1,NTC2,NTC3,NTC4;
 int16_t I3,I4,I5,I6,I_TOP;
+_Bool i3,i4,i5,i6,itop;
 uint16_t Temperature;
 
 void init_2790()
@@ -106,11 +107,11 @@ void read_U_I()
 
     receive_I();
 
-    printf("I3=%d mA\r\n", I3);
-    printf("I4=%d mA\r\n", I4);
-    printf("I5=%d mA\r\n", I5);
-    printf("I6=%d mA\r\n", I6);
-    printf("I_TOP=%d mA\r\n", I_TOP);
+    i3 = 1 ? printf("I3=%d mA\r\n", I3) : printf("I3=-%d mA\r\n", I3) ;
+    i4 = 1 ? printf("I4=%d mA\r\n", I4) : printf("I4=-%d mA\r\n", I4) ;
+    i5 = 1 ? printf("I5=%d mA\r\n", I5) : printf("I5=-%d mA\r\n", I5) ;
+    i6 = 1 ? printf("I6=%d mA\r\n", I6) : printf("I6=-%d mA\r\n", I6) ;
+    itop = 1 ? printf("I_TOP=%d mA\r\n", I_TOP) : printf("I_TOP=-%d mA\r\n", I_TOP) ;
     printf("\r\n");
 }
 
@@ -418,20 +419,20 @@ void receive_I()
 {//I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
     adcOn();
     uint16_t tmp = read_MP2790(RD_ICELL3);
-    if ((tmp >> 15) == 1) { I3 = k * (tmp^0xFFFF) * 20000 / 32768; }
-    else { I3 = k * tmp * 20000 / 32768; }
+    if ((tmp >> 15) == 1) { i3 = 0; I3 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { i3 = 1; I3 = k * tmp * 20000 / 32768; }
     tmp = read_MP2790(RD_ICELL4);
-    if ((tmp >> 15) == 1) { I4 = k * (tmp^0xFFFF) * 20000 / 32768; }
-    else { I4 = k * tmp * 20000 / 32768; }
+    if ((tmp >> 15) == 1) { i4 = 0; I4 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { i4 = 1; I4 = k * tmp * 20000 / 32768; }
     tmp = read_MP2790(RD_ICELL5);
-    if ((tmp >> 15) == 1) { I5 = k * (tmp^0xFFFF) * 20000 / 32768; }
-    else { I5 = k * tmp * 20000 / 32768; }
+    if ((tmp >> 15) == 1) { i5 = 0; I5 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { i5 = 1; I5 = k * tmp * 20000 / 32768; }
     tmp = read_MP2790(RD_ICELL6);
-    if ((tmp >> 15) == 1) { I6 = k * (tmp^0xFFFF) * 20000 / 32768; }
-    else { I6 = k * tmp * 20000 / 32768; }
+    if ((tmp >> 15) == 1) { i6 = 0; I6 = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { i6 = 1; I6 = k * tmp * 20000 / 32768; }
     tmp = read_MP2790(RD_ITOP);
-    if ((tmp >> 15) == 1) { I_TOP = k * (tmp^0xFFFF) * 20000 / 32768; }
-    else { I_TOP = k * tmp * 20000 / 32768; }
+    if ((tmp >> 15) == 1) { itop = 0; I_TOP = k * (tmp^0xFFFF) * 20000 / 32768; }
+    else { itop = 1; I_TOP = k * tmp * 20000 / 32768; }
 }
 
 void send_U_from_2790_to_42790()
