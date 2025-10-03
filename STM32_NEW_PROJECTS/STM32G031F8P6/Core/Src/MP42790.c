@@ -67,7 +67,10 @@ void init_42790()
     set_max_VPACK_voltage();
     set_VPACK_empty_voltage();
     set_nominal_charge_voltage();
-
+    set_VCELL_MAX(4000);
+    set_VCELL_MIN(2700);
+    set_VPACK_MAX(16000);
+    set_VPACK_EMPTY(10800);
 
 #if 0
 - Сell voltages (via the VRDG_CELLxx registers), current (via the IRDG_CELLxx registers),
@@ -844,5 +847,23 @@ void set_nominal_charge_voltage()
     printf("nominal_charge_voltage = %d mV\r\n", 2 * tmp);
 }
 
-void set_VCELL_MAX()
-{}
+void set_VCELL_MAX(uint16_t input) //in mV
+{
+    write_MP42790_16_CRC(0x1233, 10 * input);
+}
+
+void set_VCELL_MIN(uint16_t input) //in mV
+{
+    write_MP42790_16_CRC(0x1236, 10 * input);
+}
+
+void set_VPACK_MAX(uint16_t input)
+{
+    write_MP42790_16_CRC(0x1239, input / 2);
+}
+
+void set_VPACK_EMPTY(uint16_t input)
+{
+    write_MP42790_16_CRC(0x123C, input / 2);
+}
+

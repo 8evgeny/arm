@@ -178,7 +178,10 @@ void set_minimum_voltage();
 void set_max_VPACK_voltage();
 void set_VPACK_empty_voltage();
 void set_nominal_charge_voltage();
-void set_VCELL_MAX();
+void set_VCELL_MAX(uint16_t);//in mV
+void set_VCELL_MIN(uint16_t);//in mV
+void set_VPACK_MAX(uint16_t);//in mV
+void set_VPACK_EMPTY(uint16_t);//in mV
 
 int _write(int fd, char *str, int len);
 void init_crc_calculation();
