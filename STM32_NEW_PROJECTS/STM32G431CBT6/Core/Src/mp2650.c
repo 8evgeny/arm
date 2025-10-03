@@ -753,9 +753,9 @@ void REG_30_set_VBATT_PRE_SEL()
     write_MP2650_8(Battery_Pre_Charge_Threshold_Option, data8.value |= 0b00001000);
 }
 
-uint8_t CMD_print_from_485()
+_Bool CMD_print_from_485()
 {
-    uint8_t ret = 0;
+    uint8_t ret = false;
     uint8_t tmp[4];
     HAL_UART_Receive(&huart2, tmp, 1, 0xFFFF);
     if (tmp[0] == '@')
@@ -769,7 +769,7 @@ uint8_t CMD_print_from_485()
                 HAL_UART_Receive(&huart2, tmp, 1, 0xFFFF);
                 if (tmp[0] == '#')
                 {
-                    ret = 1;
+                    ret = true;
                 }
             }
         }

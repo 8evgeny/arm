@@ -135,7 +135,7 @@ void REG_0F_set_Input_Current_Limit_2(u_int16_t);
 void REG_2D_VBATT_LP_EN(_Bool);
 void REG_30_set_VBATT_PRE_SEL();
 
-uint8_t CMD_print_from_485();
+_Bool CMD_print_from_485();
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
