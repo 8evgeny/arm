@@ -334,13 +334,13 @@ void init_MP2650()
     REG_07_set_4_cells();
     REG_07_set_Pre_Charge_Threshold_for_one_Cell_3700mV();
 
-    REG_00_set_Input_Current_Limit_1(1500);             //1500 mA default       Range: 0mA to 5A
-    REG_0F_set_Input_Current_Limit_2(1500);             //1500 mA default       Range: 0mA to 5A
+    REG_00_set_Input_Current_Limit_1(3500);             //1500 mA default       Range: 0mA to 5A
+    REG_0F_set_Input_Current_Limit_2(4000);             //1500 mA default       Range: 0mA to 5A
     REG_01_set_Input_Voltage_Limit(4500);               //4,5V default          Range: 0V to 25.5V
-    REG_02_set_Charge_Current(300);                     //1000 mA default       Range: 0A to 5A
+    REG_02_set_Charge_Current(1000);                     //1000 mA default       Range: 0A to 5A
     REG_03_set_PreCharge_Current(180);                  //180 mA default        Range: 180 - 840 mA
     REG_03_set_Termination_Current(200);                //200 mA default        Range: 0mA to 1500mA
-    REG_04_set_Battery_Full_Voltage_for_one_Cell(4200); //Default: 4.2V/cell    Range: 3.7125V/cell to 4.5V/cell
+    REG_04_set_Battery_Full_Voltage_for_one_Cell(4000); //Default: 4.2V/cell    Range: 3.7125V/cell to 4.5V/cell
     REG_04_set_Battery_Threshold_for_one_Cell_100mV();
 
     REG_08_CHARGE_EN(true);                             //  Default: 1
@@ -443,6 +443,16 @@ void print_Regs8()
     print_MP2650_8(Analog_Frequency_Loop_Enable);
     print_MP2650_8(Hi_Z_Mode_Indication_DC_DC_Switcher_is_Off);
     printf("\r\n");
+}
+
+_Bool check_INPUT_POWER()
+{
+    data8.value = read_MP2650_8(Status_Register);
+    if((data8.value & 0b00000010) == 2)
+    {
+        return true;
+    }
+    return false;
 }
 
 void REG_00_set_Input_Current_Limit_1(u_int16_t value) //in mA

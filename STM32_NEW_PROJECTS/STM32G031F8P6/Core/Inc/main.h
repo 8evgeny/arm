@@ -178,6 +178,7 @@ void set_minimum_voltage();
 void set_max_VPACK_voltage();
 void set_VPACK_empty_voltage();
 void set_nominal_charge_voltage();
+void set_VCELL_MAX();
 
 int _write(int fd, char *str, int len);
 void init_crc_calculation();

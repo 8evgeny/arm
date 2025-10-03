@@ -68,6 +68,7 @@ void init_42790()
     set_VPACK_empty_voltage();
     set_nominal_charge_voltage();
 
+
 #if 0
 - Сell voltages (via the VRDG_CELLxx registers), current (via the IRDG_CELLxx registers),
     and temperature (via the TRDG_TSx registers).
@@ -842,3 +843,6 @@ void set_nominal_charge_voltage()
     CONFIG_EXIT_CMD();
     printf("nominal_charge_voltage = %d mV\r\n", 2 * tmp);
 }
+
+void set_VCELL_MAX()
+{}

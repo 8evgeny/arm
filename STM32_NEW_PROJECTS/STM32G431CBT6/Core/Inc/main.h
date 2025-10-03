@@ -110,6 +110,7 @@ void write_MP2650_8(uint8_t regAddr, uint8_t regValue);
 void write_MP2650_8_second_channel(uint8_t regAddr, uint8_t regValue);
 void print_MP2650_8(uint8_t regAddr);
 void print_Regs8();
+_Bool check_INPUT_POWER();
 void REG_00_set_Input_Current_Limit_1(u_int16_t);               //in mA
 void REG_01_set_Input_Voltage_Limit(u_int16_t);                 //in mV
 void REG_02_set_Charge_Current(u_int16_t);                      //in mA

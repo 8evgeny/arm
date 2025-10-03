@@ -114,6 +114,15 @@ int main(void)
       HAL_Delay(300);
       REG_08_CHARGE_EN(true);
       printf("\n-------- CMD_print_from_485 --------\r\n");
+//      data8.value = read_MP2650_8(regAddr);
+      if(check_INPUT_POWER())
+      {
+          printf("-------- INPUT POWER ON --------\r\n");
+      }
+      else
+      {
+          printf("-------- INPUT POWER OFF --------\r\n");
+      }
       print_Regs8();
       print_Regs16();
       led_Test();
