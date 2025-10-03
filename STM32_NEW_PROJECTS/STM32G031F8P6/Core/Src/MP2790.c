@@ -107,11 +107,11 @@ void read_U_I()
 
     receive_I();
 
-    i3 = 1 ? printf("I3=-%d mA\r\n", I3) : printf("I3=%d mA\r\n", I3) ;
-    i4 = 1 ? printf("I4=-%d mA\r\n", I4) : printf("I4=%d mA\r\n", I4) ;
-    i5 = 1 ? printf("I5=-%d mA\r\n", I5) : printf("I5=%d mA\r\n", I5) ;
-    i6 = 1 ? printf("I6=-%d mA\r\n", I6) : printf("I6=%d mA\r\n", I6) ;
-    itop = 1 ? printf("I_TOP=-%d mA\r\n", I_TOP) : printf("I_TOP=%d mA\r\n", I_TOP) ;
+    i3 == 1 ? printf("I3=%d mA\r\n", I3) : printf("I3=-%d mA\r\n", I3) ;
+    i4 == 1 ? printf("I4=%d mA\r\n", I4) : printf("I4=-%d mA\r\n", I4) ;
+    i5 == 1 ? printf("I5=%d mA\r\n", I5) : printf("I5=-%d mA\r\n", I5) ;
+    i6 == 1 ? printf("I6=%d mA\r\n", I6) : printf("I6=-%d mA\r\n", I6) ;
+    itop == 1 ? printf("I_TOP=%d mA\r\n", I_TOP) : printf("I_TOP=-%d mA\r\n", I_TOP) ;
     printf("\r\n");
 }
 
