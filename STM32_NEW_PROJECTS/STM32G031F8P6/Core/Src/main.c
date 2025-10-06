@@ -133,7 +133,7 @@ int main(void)
 //    read_42790_REGS();
 
 //    test_write_42790();
-
+uint count = 0;
   while (1)
   {
       send_CMD_print();
@@ -152,7 +152,22 @@ int main(void)
       get_empty_soc_cells();
       get_empty_RTIME();
       get_full_soc_cells();
-      HAL_Delay(5000);
+//      HAL_Delay(5000);
+      count = 0;
+      while (receive_Data_to_EEPROM_from_Desktop() != 1)
+      {
+          HAL_Delay(1);
+          ++count;
+          if(count == 500)
+          {
+              break;
+          }
+      }
+      if(count != 500)
+      {
+          write_Data_to_EEPROM();
+      }
+
 
     /* USER CODE END WHILE */
 
@@ -355,6 +370,52 @@ void send_CMD_print()
     printf("send CMD print - @#@#\r\n");
 }
 
+void send_CMD_ready_receive_Data()
+{
+    printf("~`~`\r\n");
+}
+
+void write_Data_to_EEPROM()
+{
+    printf("\n============== write EEPROM ===============\r\n\n");
+}
+
+uint8_t data_from_Desktop[8 * 16];
+uint8_t synhroByte[4]; // Если приходит команда ~`~` это запись EEPROM - отправляем такой же ответ и затем получаем данные
+
+_Bool receive_Data_to_EEPROM_from_Desktop()
+{
+    if(HAL_UART_Receive(&huart2, synhroByte, 1, 10) == HAL_OK)
+    {
+        if (synhroByte[0] == '~')
+        {
+            if(HAL_UART_Receive(&huart2, synhroByte + 1, 1, 10) == HAL_OK)
+            {
+                if (synhroByte[1] == '`')
+                {
+                    if(HAL_UART_Receive(&huart2, synhroByte + 2, 1, 10) == HAL_OK)
+                    {
+                        if (synhroByte[2] == '~')
+                        {
+                            if(HAL_UART_Receive(&huart2, synhroByte + 3, 1, 10) == HAL_OK)
+                            {
+                                if (synhroByte[3] == '`')
+                                {
+                                    HAL_Delay(100);
+                                    send_CMD_ready_receive_Data();
+                                    HAL_Delay(10);
+                                    HAL_UART_Receive(&huart2, data_from_Desktop, 8 * 16, 1000);
+                                    return 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}
 
 /* USER CODE END 4 */
 

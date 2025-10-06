@@ -190,6 +190,9 @@ void generateRandomString(char *str, int length);
 void Printf(const char* fmt, ...);
 
 void send_CMD_print();
+_Bool receive_Data_to_EEPROM_from_Desktop();
+void send_CMD_ready_receive_Data();
+void write_Data_to_EEPROM();
 
 #define delayUS_ASM(us) do {                           \
 asm volatile ("MOV R0,%[loops]\n                       \
