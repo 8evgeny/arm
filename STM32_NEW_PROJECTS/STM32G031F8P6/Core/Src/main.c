@@ -157,7 +157,7 @@ uint count = 0;
 //      HAL_Delay(5000);
       count = 0;
 
-      printf("\r\nEEPROM read:\r\n");
+      printf("\r\nEEPROM read:\r\n\n");
       HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
       for(int i=0; i<16; i++)
       {
