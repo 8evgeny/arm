@@ -28,6 +28,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+char data_from_Desktop[8 * 16];
+uint8_t synhroByte[4]; // Если приходит команда ~`~` это запись EEPROM - отправляем такой же ответ и затем получаем данные
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -154,6 +156,19 @@ uint count = 0;
       get_full_soc_cells();
 //      HAL_Delay(5000);
       count = 0;
+
+      printf("\r\nEEPROM read:\r\n");
+      HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
+      for(int i=0; i<16; i++)
+      {
+          while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+          HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, i * 8, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&data_from_Desktop + i * 8, 8, HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart2, (uint8_t *)&data_from_Desktop + i * 8, 8, 0xFFFF);
+          HAL_UART_Transmit(&huart2, "\r\n", 2, 0xFFFF);
+      }
+      HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_RESET);
+
+
       while (receive_Data_to_EEPROM_from_Desktop() != 1)
       {
           HAL_Delay(1);
@@ -370,9 +385,6 @@ void send_CMD_print()
     printf("send CMD print - @#@#\r\n");
 }
 
-char data_from_Desktop[8 * 16];
-uint8_t synhroByte[4]; // Если приходит команда ~`~` это запись EEPROM - отправляем такой же ответ и затем получаем данные
-
 void write_Data_to_EEPROM()
 {
     HAL_UART_Receive(&huart2, (uint8_t *)data_from_Desktop, 8 * 16, 1000);
@@ -382,6 +394,9 @@ void write_Data_to_EEPROM()
     HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
     for(int i=0; i<16; i++)
     {
+        while (HAL_I2C_GetState(&hi2c2) != HAL_I2C_STATE_READY);
+        HAL_I2C_Mem_Write(&hi2c2, EEPROM_I2C_ADDRESS, i * 8, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&data_from_Desktop + i * 8, 8, HAL_MAX_DELAY);
+        HAL_Delay(100);
         HAL_UART_Transmit(&huart2, (uint8_t *)&data_from_Desktop + i * 8, 8, 0xFFFF);
         HAL_UART_Transmit(&huart2, "\r\n", 2, 0xFFFF);
     }
