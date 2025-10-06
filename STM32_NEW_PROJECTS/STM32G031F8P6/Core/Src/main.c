@@ -370,19 +370,26 @@ void send_CMD_print()
     printf("send CMD print - @#@#\r\n");
 }
 
-void send_CMD_ready_receive_Data()
-{
-    printf("~`~`\r\n");
-}
+char data_from_Desktop[8 * 16];
+uint8_t synhroByte[4]; // Если приходит команда ~`~` это запись EEPROM - отправляем такой же ответ и затем получаем данные
 
 void write_Data_to_EEPROM()
 {
-    printf("\n============== write EEPROM ===============\r\n\n");
+    HAL_UART_Receive(&huart2, (uint8_t *)data_from_Desktop, 8 * 16, 1000);
+
+    printf("============== write EEPROM ===============\r\n\n");
+    HAL_Delay(10);
+    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_SET);
+    for(int i=0; i<16; i++)
+    {
+        HAL_UART_Transmit(&huart2, (uint8_t *)&data_from_Desktop + i * 8, 8, 0xFFFF);
+        HAL_UART_Transmit(&huart2, "\r\n", 2, 0xFFFF);
+    }
+    HAL_UART_Transmit(&huart2, "\r\n", 2, 0xFFFF);
+    HAL_GPIO_WritePin(GPIOA, Enable_RS485_Pin, GPIO_PIN_RESET);
+    HAL_Delay(3000);
+
 }
-
-uint8_t data_from_Desktop[8 * 16];
-uint8_t synhroByte[4]; // Если приходит команда ~`~` это запись EEPROM - отправляем такой же ответ и затем получаем данные
-
 _Bool receive_Data_to_EEPROM_from_Desktop()
 {
     if(HAL_UART_Receive(&huart2, synhroByte, 1, 10) == HAL_OK)
@@ -401,10 +408,6 @@ _Bool receive_Data_to_EEPROM_from_Desktop()
                             {
                                 if (synhroByte[3] == '`')
                                 {
-                                    HAL_Delay(100);
-                                    send_CMD_ready_receive_Data();
-                                    HAL_Delay(10);
-                                    HAL_UART_Receive(&huart2, data_from_Desktop, 8 * 16, 1000);
                                     return 1;
                                 }
                             }
