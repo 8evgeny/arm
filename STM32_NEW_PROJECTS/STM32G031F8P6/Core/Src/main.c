@@ -138,6 +138,7 @@ int main(void)
 uint count = 0;
   while (1)
   {
+      read_K_from_EEPROM();
       send_CMD_print();
       HAL_Delay(1000);
       printf("\r\n");

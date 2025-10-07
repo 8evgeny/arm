@@ -42,6 +42,7 @@ void init_2790()
     get_OC_Status();
     get_SELF_CFG();
     get_U_PACK_TOP();
+    V3D3_SHDN_OFF();
 }
 
 void read_2790_REGS()
@@ -136,6 +137,12 @@ void get_U_PACK_TOP()
     U_TOP = read_MP2790(RD_VTOP) * 80000 / 32768;
     printf("U_TOP=%d mV\r\n",U_TOP);
     printf("\r\n");
+}
+
+void V3D3_SHDN_OFF()
+{
+    read_MP2790(RGL_CFG);
+    write_MP2790(RGL_CFG, data16.value.value &= 0b1111111111111011);
 }
 
 void initInterrupts()
@@ -414,25 +421,35 @@ void receive_U()
     U6 = read_MP2790(RD_VCELL6) * 50000 / 32768;
 
 }
-float k = 0.879f;
+
+char K_from_EEPROM[8];
+float K_float;
+void read_K_from_EEPROM()
+{
+    HAL_I2C_Mem_Read(&hi2c2, EEPROM_I2C_ADDRESS, 5 * 8, I2C_MEMADD_SIZE_8BIT, (uint8_t *)&K_from_EEPROM , 4, HAL_MAX_DELAY);
+//    printf("\r\n======= K_from_EEPROM = %s ==========\r\n\n", K_from_EEPROM);
+    K_float = atof(K_from_EEPROM);
+    printf("\r\n======= K = %f ==========\r\n\n", K_float);
+}
+
 void receive_I()
 {//I = Reading x 100 / 32768 / RSENSE (A) RSENSE is the external current-sense resistor (in mΩ)
     adcOn();
     uint16_t tmp = read_MP2790(RD_ICELL3);
-    if ((tmp >> 15) == 1) { i3 = 0; I3 = k * (tmp^0xFFFF) * 20000 / 32768; }
-    else { i3 = 1; I3 = k * tmp * 20000 / 32768; }
+    if ((tmp >> 15) == 1) { i3 = 0; I3 = K_float * (tmp^0xFFFF) * 20000 / 32768; }
+    else { i3 = 1; I3 = K_float * tmp * 20000 / 32768; }
     tmp = read_MP2790(RD_ICELL4);
-    if ((tmp >> 15) == 1) { i4 = 0; I4 = k * (tmp^0xFFFF) * 20000 / 32768; }
-    else { i4 = 1; I4 = k * tmp * 20000 / 32768; }
+    if ((tmp >> 15) == 1) { i4 = 0; I4 = K_float * (tmp^0xFFFF) * 20000 / 32768; }
+    else { i4 = 1; I4 = K_float * tmp * 20000 / 32768; }
     tmp = read_MP2790(RD_ICELL5);
-    if ((tmp >> 15) == 1) { i5 = 0; I5 = k * (tmp^0xFFFF) * 20000 / 32768; }
-    else { i5 = 1; I5 = k * tmp * 20000 / 32768; }
+    if ((tmp >> 15) == 1) { i5 = 0; I5 = K_float * (tmp^0xFFFF) * 20000 / 32768; }
+    else { i5 = 1; I5 = K_float * tmp * 20000 / 32768; }
     tmp = read_MP2790(RD_ICELL6);
-    if ((tmp >> 15) == 1) { i6 = 0; I6 = k * (tmp^0xFFFF) * 20000 / 32768; }
-    else { i6 = 1; I6 = k * tmp * 20000 / 32768; }
+    if ((tmp >> 15) == 1) { i6 = 0; I6 = K_float * (tmp^0xFFFF) * 20000 / 32768; }
+    else { i6 = 1; I6 = K_float * tmp * 20000 / 32768; }
     tmp = read_MP2790(RD_ITOP);
-    if ((tmp >> 15) == 1) { itop = 0; I_TOP = k * (tmp^0xFFFF) * 20000 / 32768; }
-    else { itop = 1; I_TOP = k * tmp * 20000 / 32768; }
+    if ((tmp >> 15) == 1) { itop = 0; I_TOP = K_float * (tmp^0xFFFF) * 20000 / 32768; }
+    else { itop = 1; I_TOP = K_float * tmp * 20000 / 32768; }
 }
 
 void send_U_from_2790_to_42790()
