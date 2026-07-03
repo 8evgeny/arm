@@ -62,7 +62,6 @@ set(LINKER_FLAGS "SHELL: \
     --specs=nano.specs \
     -Wl,--gc-sections,--print-memory-usage \
     -mfloat-abi=soft \
-    -u _printf_float \
     -mthumb
     -Wl,--start-group \
     -lc \

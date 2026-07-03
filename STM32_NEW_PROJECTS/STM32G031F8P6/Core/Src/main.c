@@ -89,6 +89,7 @@ int main(void)
 // CRC   https://www.sunshine2k.de/articles/coding/crc/understanding_crc.html
     SEGGER_RTT_Init();
     SEGGER_RTT_printf(0, "SEGGER RTT Initialized\n");
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
