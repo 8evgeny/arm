@@ -1,0 +1,36 @@
+# svc1_primes_lowcpu.service
+# CPU contrained version
+[Unit]
+Description=My test prime numbers generator app to launch at boot (CPU constrained version)
+#---------------------
+# After=<xxx.target>
+# See all targets with 
+#  ls /lib/systemd/system/*.target
+# See all dependencies on a given target with
+#  systemctl list-dependencies <target>
+After=mount.target
+
+[Service]
+# run_primegen: the script that launches the app.
+# Our setup_service script ensures it copies all required files to this location.
+# UPDATE the /path/to/executable if required.
+ExecStart=/usr/local/bin/systemd_svcunit_demo/run_primegen
+
+#--- Apply CPU constraints ---
+CPUQuota=10%
+AllowedCPUs=1
+#---
+
+# For security; also see systemd.exec(5) section 'SANDBOXING'
+NoNewPrivileges=true
+
+# If this user is there, it runs as him/her user else as root
+#User=osboxes
+#--- Hey, DON'T keep a comment or anything on the right of a statement!
+# When I tried that, I got this error:
+# "svc1.service: Failed to determine user credentials: No such process" yada yada... :-)
+
+# UPDATE to your preference
+[Install]
+WantedBy=graphical.target
+#WantedBy=multi-user.target

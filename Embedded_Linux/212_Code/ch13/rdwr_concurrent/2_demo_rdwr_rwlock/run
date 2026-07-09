@@ -1,0 +1,51 @@
+#!/bin/bash
+# Test script
+name=$(basename $0)
+KMOD=miscdrv_rdwr_rwlock
+DEV=/dev/lkp_miscdrv_rdwr_rwlock
+
+die()
+{
+echo >&2 "FATAL: $@"
+exit 1
+}
+
+reader()
+{
+	echo "$i: Read from the device"
+	dd if=${DEV} bs=1k count=1
+}
+writer()
+{
+	echo "$i: Write to the device"
+	dd if=${KMOD}.c of=${DEV} bs=1k count=1
+	#echo "write (no locks) $i" > ${DEV}
+}
+
+
+#--- 'main'
+MIN_R=2
+MAX_R=100
+[[ $# -ne 1 ]] && die "Usage: ${name} number-of-readers-to-concurrently-run"
+[[ $1 -lt ${MIN_R} || $1 -gt ${MAX_R} ]] && die "invalid input for number-of-readers-to-concurrently-run (range is $MIN_R to $MAX_R)"
+MAX=$1
+
+sudo rmmod ${KMOD} 2>/dev/null
+lsmod |grep ${KMOD} >/dev/null || {
+    [[ ! -f ${KMOD}.ko ]] && die "Build the module first"
+    sudo dmesg -C
+    sudo insmod ${KMOD}.ko || die "insmod failed"
+}
+[[ ! -c ${DEV} ]] && die "Device file ${DEV} not found.Module not inserted successfully?"
+
+# The I/O
+sudo dmesg -C
+for i in $(seq 1 ${MAX})
+do
+	reader &
+	[[ $(($i % 10)) -eq 0 ]] && writer
+done
+writer
+
+sudo dmesg
+exit 0

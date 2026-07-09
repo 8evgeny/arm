@@ -1,0 +1,165 @@
+--- ../../4_lockdep/fixed_thrdshow_eg/thrd_showall_fixed.c	2023-12-28 12:35:22.964512265 +0530
++++ thrd_showall_rcu.c	2024-01-07 16:36:03.291955860 +0530
+@@ -1,5 +1,5 @@
+ /*
+- * ch13/3_lockdep/buggy_thrdshow_eg/thrd_showall_buggy.c
++ * ch13/3_lockfree/thrdshowall_rcu/thrd_showall_rcu.c
+  ***************************************************************
+  * This program is part of the source code released for the book
+  *  "Linux Kernel Programming" 2E
+@@ -11,15 +11,18 @@
+  * From: Ch 13 : Kernel Synchronization, Part 2
+  ****************************************************************
+  * Brief Description:
+- * This kernel module is based upon our earlier kernel module from Ch 6:
+- *  ch6/foreach/thrd_showall/thrd_showall.c. 
+- * Earlier (in the buggy version), we refactored it to use the
+- * get_task_comm() routine to retrieve the name of the thread, it's buggy!
+- * The bug turns out to be a recursive locking issue, *detected by lockdep*.
++ * This kernel module is based upon our earlier kernel module here:
++ *  ch13/4_lockdep/fixed_thrdshow_eg/
++ * We had "fixed it" - refactored it, really - by using the task_{un}lock()
++ * pair of APIs to provide synchronization. However, this wasn't an ideal
++ * solution as it introduced the possibility of a race, plus, the
++ * task_{un}lock() routines employ a spinlock that’s effective for only some
++ * of the task structure members.
+  *
+- * So now let's fix it.
+- * Here, we fix the deadlock by first unlocking the relevant lock (struct
+- * task_struct alloc_lock), then calling get_task_comm() and then locking it.
++ * So, here, we do a proper fix by employing lockfree RCU! It's as-is very
++ * efficient for read-mostly situations, which this certainly qualifies as.
++ * Moreover, here, as we don’t ever modify any task structure's content,
++ * we even eliminate the need for write protection via a spinlock.
+  *
+  * For details, please refer the book, Ch 13.
+  */
+@@ -35,12 +38,12 @@
+ #include "../../../convenient.h"
+ 
+ MODULE_AUTHOR("Kaiwan N Billimoria");
+-MODULE_DESCRIPTION("LKP 2E book: ch13/4_lockdep/fixed_thrdshow_eg/:"
+-" FIX to the earlier buggy demo to display all threads by iterating over the task list");
++MODULE_DESCRIPTION("LKP 2E book: ch13/3_lockfree/thrdshowall_rcu/:"
++" Proper fix to the earlier buggy demos to display all threads by iterating over the task list, using RCU");
+ MODULE_LICENSE("Dual MIT/GPL");
+ MODULE_VERSION("0.2");
+ 
+-static int showthrds_buggy(void)
++static int showthrds_rcu(void)
+ {
+ 	struct task_struct *g, *t;  /* 'g' : process ptr; 't': thread ptr */
+ 	int nr_thrds = 1, total = 0;
+@@ -51,31 +54,47 @@
+ "--------------------------------------------------------------------------------\n"
+ "    TGID   PID         current        stack-start      Thread Name   MT? # thrds\n"
+ "--------------------------------------------------------------------------------\n";
++	struct task_struct *g_rcu, *t_rcu;  /* 'g_rcu' : process ptr; 't_rcu': thread ptr */
+ 
+ 	pr_info("%s", hdr);
++
++	rcu_read_lock(); /* This triggers off an RCU read-side critical section; ensure
++			  * you are non-blocking within it!
++			  */
++	/*
++	 * Interesting: we use the do_each_thread(g, t) to iterate over every
++	 * thread alive. Internally, it becomes:
++	 * include/linux/sched/signal.h:
++	 * ...
++	 * #define do_each_thread(g, t) \
++	 *	for (g = t = &init_task ; (g = t = next_task(g)) != &init_task ; ) do
++	 *
++	 * #define while_each_thread(g, t) \
++	 *	while ((t = next_thread(t)) != g)
++	 *  ...
++	 * Notice how both macros invoke the next_*() macro to iterate to the next
++	 * list member. Now, the implemetation of next_{task|thread}() uses
++	 * include/linux/rculist.h:list_entry_rcu(), which is the RCU protected means
++	 * of access!
++	 * As it's comment says: '...  This primitive may safely run concurrently with
++	 * the _rcu list-mutation primitives such as list_add_rcu() as long as it's
++	 * guarded by rcu_read_lock(). ...'
++	 */
+ 	do_each_thread(g, t) {     /* 'g' : process ptr; 't': thread ptr */
+-		get_task_struct(t);	/* take a reference to the task struct */
+-		task_lock(t);  /*** task lock taken here! ***/
++		g_rcu = rcu_dereference(g);
++		t_rcu = rcu_dereference(t);
++
++		get_task_struct(t_rcu);	/* take a reference to the task struct */
+ 
+-		snprintf_lkp(buf, BUFMAX-1, "%6d %6d ", g->tgid, t->pid);
++		snprintf_lkp(buf, BUFMAX-1, "%6d %6d ", g_rcu->tgid, t_rcu->pid);
+ 		/* task_struct addr and kernel-mode stack addr */
+-		snprintf_lkp(tmp, TMPMAX-1, "  0x%px", t);
++		snprintf_lkp(tmp, TMPMAX-1, "  0x%px", t_rcu);
+ 		strncat(buf, tmp, TMPMAX);
+-		snprintf_lkp(tmp, TMPMAX-1, "  0x%px", t->stack);
++		snprintf_lkp(tmp, TMPMAX-1, "  0x%px", t_rcu->stack);
+ 		strncat(buf, tmp, TMPMAX);
++		get_task_comm(tasknm, t_rcu);
+ 
+-        /* In the 'buggy' ver of this code, LOCKDEP did catch a deadlock here !!
+-         * (at the point that get_task_comm() was invoked).
+-         * The reason's clear: get_task_comm() attempts to take the very same lock
+-         * that we just took above via task_lock(t);  !! This is obvious self-deadlock...
+-         * So, we fix it here by first unlocking it, calling get_task_comm(), and
+-         * then re-locking it.
+-         */
+-                task_unlock(t);
+-                get_task_comm(tasknm, t);
+-                task_lock(t);
+-
+-		if (!g->mm)	// kernel thread
++		if (!g_rcu->mm)	// kernel thread
+ 			snprintf_lkp(tmp, sizeof(tasknm)+4, " [%16s]", tasknm);
+ 		else
+ 			snprintf_lkp(tmp, sizeof(tasknm)+4, "  %16s ", tasknm);
+@@ -88,8 +107,8 @@
+ 		 * If so, display the number of threads in the overall process
+ 		 * to the right..
+ 		 */
+-		nr_thrds = get_nr_threads(g);
+-		if (g->mm && (g->tgid == t->pid) && (nr_thrds > 1)) {
++		nr_thrds = get_nr_threads(g_rcu);
++		if (g_rcu->mm && (g_rcu->tgid == t_rcu->pid) && (nr_thrds > 1)) {
+ 			snprintf_lkp(tmp, TMPMAX-1, " %3d", nr_thrds);
+ 			strncat(buf, tmp, TMPMAX);
+ 		}
+@@ -101,28 +120,26 @@
+ 		total++;
+ 		memset(buf, 0, sizeof(buf));
+ 		memset(tmp, 0, sizeof(tmp));
+-		task_unlock(t);
+-		put_task_struct(t);	/* release reference to the task struct */
++		put_task_struct(t_rcu);	/* release reference to the task struct */
+ 	} while_each_thread(g, t);
+-
++	rcu_read_unlock();		/* This ends the RCU read-side critical section */
+ 	return total;
+ }
+ 
+-static int __init thrd_showall_buggy_init(void)
++static int __init thrd_showall_rcu_init(void)
+ {
+ 	int total;
+ 
+ 	pr_info("inserted\n");
+-	total = showthrds_buggy();
+-	pr_info("total # of threads on the system: %d\n",
+-		total);
++	total = showthrds_rcu();
++	pr_info("total # of threads on the system: %d\n", total);
+ 
+ 	return 0;		/* success */
+ }
+-static void __exit thrd_showall_buggy_exit(void)
++static void __exit thrd_showall_rcu_exit(void)
+ {
+ 	pr_info("removed\n");
+ }
+ 
+-module_init(thrd_showall_buggy_init);
+-module_exit(thrd_showall_buggy_exit);
++module_init(thrd_showall_rcu_init);
++module_exit(thrd_showall_rcu_exit);

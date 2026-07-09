@@ -1,0 +1,511 @@
+#!/bin/bash
+# cgroupsv2_explore
+# ***************************************************************
+# This program is part of the source code released for the book
+#  "Linux Kernel Programming" 2E
+#  (c) Author: Kaiwan N Billimoria
+#  Publisher:  Packt
+#  GitHub repository:
+#  https://github.com/PacktPublishing/Linux-Kernel-Programming_2E
+# ****************************************************************
+# Brief Description:
+#
+# Explore the system's Cgroups v2 hierarchy.
+# This script's written looking at the official kernel doc on cgroups v2:
+# https://docs.kernel.org/admin-guide/cgroup-v2.html
+# Please refer to it!
+#
+# TODO
+#  [ ] -p ^ -t; if -t specified, it subsumes -p so no need to show -p stuff
+#     [ ] -t: show thread names correctly
+#  [ ] Controller interface files - display
+#  [ ] Have it work with lightweight 'busybox'-type 'ps' as well...
+#  [ ] color / bold
+#
+# For details, pl refer to the book Ch 11.
+
+# Turn on unofficial Bash 'strict mode'! V useful
+# "Convert many kinds of hidden, intermittent, or subtle bugs into immediate, glaringly obvious errors"
+# ref: http://redsymbol.net/articles/unofficial-bash-strict-mode/
+set -euo pipefail
+
+name=$(basename $0)
+#----------------Convenience routines----------------------------------
+function die
+{
+echo >&2 "$@"
+exit 1
+}
+
+# runcmd
+# Parameters
+#   $1 ... : params are the command to run
+runcmd()
+{
+[ $# -eq 0 ] && return
+echo "> $@"
+eval "$@"
+}
+
+# Src: ChatGPT 3.5 ! (slightly modified)
+# Function to convert memory size to human-readable format
+memory_size_to_human_readable() {
+  # is $1 a number?
+  [[ $# -eq 1 ]] && [[ $1 =~ ^[+-]?[0-9]+(\.[0-9]+)?$ ]] || return
+
+  local size_in_bytes=$1
+
+  # Define the size units and their corresponding thresholds
+  local units=("B" "KB" "MB" "GB" "TB" "PB" "EB")
+  local thresholds=(1 1024 1048576 1073741824 1099511627776 1125899906842624 1152921504606846976)
+
+  # Iterate through the units and find the appropriate one
+  local unit=""
+  for ((i = 0; i < ${#thresholds[@]}; i++)); do
+    local threshold=${thresholds[i]}
+    if ((size_in_bytes < threshold * 1024)); then
+      unit=${units[i]}
+      break
+    fi
+  done
+
+  # Perform the conversion
+  local converted_size=$(echo "scale=2; $size_in_bytes / $threshold" | bc)
+
+  # Print the result
+  echo "$converted_size $unit"
+}
+# Usage example:
+#memory_size_to_human_readable 2147483648   # Output: "2.00 GB"
+#memory_size_to_human_readable 5000000      # Output: "4.77 MB"
+#memory_size_to_human_readable 123456789    # Output: "117.74 MB"
+#You can use the `memory_size_to_human_readable` function by passing the memory size in bytes as an argument, and it will print the size in the appropriate units (KB, MB, GB, or TB).
+#----------------------------------------------------------------------
+
+LINE="---------------------------------------------------------"
+title()
+{
+echo "${LINE}
+$*
+${LINE}"
+}
+
+# Params
+#  $1 : title
+#  $2 : footnote #
+verbose_title()
+{
+ printf ">---------------------- %s [verbose mode]    [%s] -----\n" "$1" "$2"
+}
+
+# Params
+#  $1 : path to cg
+#  $2 : controller
+#  $3 : footnote #
+verbose_display_cgctrl()
+{
+    verbose_title ${2^^} $3  # ${var^^} converts all to uppercase
+    grep --color=always . ${1}/$2.* 2>/dev/null || true
+    local ivar=SHOW_FOOTNOTE_$3
+    eval ${ivar}=1
+}
+
+# Params:
+#  $1 : path to cg
+core_cg_files_show()
+{
+  #--- Core interface files
+  # Any sub-controllers?
+  # core interface file: cgroup.subtree_control
+  # From https://docs.kernel.org/admin-guide/cgroup-v2.html
+  # "Top-down Constraint
+  # Resources are distributed top-down and a cgroup can further distribute a resource only if the resource has been distributed to it from the parent. This means that all non-root "cgroup.subtree_control" files can only contain controllers which are enabled in the parent's "cgroup.subtree_control" file. A controller can be enabled only if the parent has the controller enabled and a controller can't be disabled if one or more children have it enabled."
+  local ctrls=$(cat ${cg}/cgroup.subtree_control)
+  printf "    %-41s   : " "(Sub)Controllers"
+  [[ ! -z "${ctrls}" ]] && echo "${ctrls}" || {
+    echo "-none-    [1]"
+    SHOW_FOOTNOTE_1=1
+  }
+  # "... A controller name prefixed with '+' enables the controller and '-' disables. ..."
+
+  # Show the type
+  printf "    %-41s   : %s\n" "cg type" $(cat ${cg}/cgroup.type)
+  # Show frozen..
+  printf "    %-41s   : %s         [2]\n" "cg frozen?" $(cat ${cg}/cgroup.freeze)
+
+  # Show the process(es) belonging to this cg
+  local procs="$(cat ${cg}/cgroup.procs | tr '\n' ' ')"
+  local num_procs=$(echo "${procs}" | wc -w)
+  printf "    %-41s   : (%4d) : " "Process PIDs" ${num_procs}
+  [[ ! -z "${procs}" ]] && echo -n "${procs}" || echo -n "- "
+  # Careful, even if no processes show up here, they could well be underneath!
+  local num_descendants=$(grep "^nr_descendants" ${cg}/cgroup.stat  |cut -d' ' -f2)
+  [[ ${num_descendants} -ge 1 ]] && printf "(Has %d descendants)" ${num_descendants}
+  echo
+
+  ## TODO
+  # Have it work with lightweight 'busybox'-type 'ps' as well...
+  ##
+  # Show process name(s)
+  [[ ${SHOW_PROCESS_NAMES} -eq 1 ]] && [[ ! -z "${procs}" ]] && {
+    procs=${procs::-1} # get rid of trailing space char
+    #echo "procs=$procs"
+    # ps -fp <...> : show list of PIDs
+    ps -fp "${procs}" 2>/dev/null || true
+  }
+
+  # Show the threads belonging to this cg
+  local thrds="$(cat ${cg}/cgroup.threads | tr '\n' ' ')"
+  local num_thrds=$(echo "${thrds}" | wc -w)
+  printf "    %-41s   : (%4d) : " "Thread PIDs" ${num_thrds}
+  [[ ! -z "${thrds}" ]] && echo "${thrds}" || echo "-"
+  # Show thread name(s)
+  [[ ${SHOW_THREAD_NAMES} -eq 1 ]] && [[ ! -z "${thrds}" ]] && {
+    thrds=${thrds::-1} # get rid of trailing space char
+    #echo "thrds=$thrds"
+    # ps -fp <...> : show list of PIDs
+    ps -mL -fp "${thrds}" 2>/dev/null || true
+  }
+
+  # cgroup + irq pressure 
+  #local cgroup_pressure=$(cat ${cg}/cgroup.pressure 2>/dev/null)
+  #[[ ! -z "${cgroup_pressure}" ]] && printf "    %-41s   : %s    [3]\n" "cgroup.pressure" ${cgroup_pressure}
+  local irq_pressure=$(cat ${cg}/irq.pressure 2>/dev/null)
+  [[ ! -z "${irq_pressure}" ]] && printf "    %-41s   : %s    [3]\n" "irq.pressure" ${irq_pressure} || true
+}
+
+# Params:
+#  $1 : path to cg
+cpu_ctrl_show()
+{
+  #--- CPU controller
+  # https://docs.kernel.org/admin-guide/cgroup-v2.html#cpu
+  # "... WARNING: cgroup2 doesn't yet support control of realtime processes and the cpu controller can only be enabled when all RT processes are in the root cgroup. Be aware that system management software may already have placed RT processes into nonroot cgroups during the system boot process, and these processes may need to be moved to the root cgroup before the cpu controller can be enabled. ..."
+  
+ if [[ ${VERBOSE} -eq 1 ]] ; then
+    verbose_display_cgctrl ${cg} cpu 4
+ else
+  # We first query the interface files...
+  local cpu_weight=$(cat ${cg}/cpu.weight 2>/dev/null)
+  local cpu_weight_nice=$(cat ${cg}/cpu.weight.nice 2>/dev/null)
+  local cpu_max=$(cat ${cg}/cpu.max 2>/dev/null)
+  local cpu_pressure=$(cat ${cg}/cpu.pressure 2>/dev/null)
+  # then, if any are non-null, we print the 'CPU' title ...
+  [[ ! -z "${cpu_weight}" ]] || [[ ! -z "${cpu_weight_nice}" ]] || \
+     [[ ! -z "${cpu_max}" ]] || [[ ! -z "${cpu_pressure}" ]] && {
+    printf "    %-41s\n" "CPU              [4]"
+    SHOW_FOOTNOTE_4=1
+  }
+  [[ ! -z "${cpu_weight}" ]] &&      printf "      %-41s   : %s\n" "cpu.weight" "${cpu_weight}"
+  [[ ! -z "${cpu_weight_nice}" ]] && printf "      %-41s   : %s\n" "cpu.weight.nice" "${cpu_weight_nice}"
+  [[ ! -z "${cpu_max}" ]] &&         printf "      %-41s   : %s\n" "cpu.max" "${cpu_max}"
+  [[ ! -z "${cpu_pressure}" ]] &&    printf "      %-39s   : %s\n" "cpu.pressure" "${cpu_pressure}"
+ fi
+}
+
+# Params:
+#  $1 : path to cg
+mem_ctrl_show()
+{
+  #--- Memory controller
+  # https://docs.kernel.org/admin-guide/cgroup-v2.html#memory
+  local cg=$1
+
+  if [[ ${VERBOSE} -eq 1 ]] ; then
+    verbose_display_cgctrl ${cg} memory 5
+  else
+    # We first query the interface files...
+    local mem_current=$(cat ${cg}/memory.current 2>/dev/null)
+    local mem_min=$(cat ${cg}/memory.min 2>/dev/null)
+    local mem_low=$(cat ${cg}/memory.low 2>/dev/null)
+    local mem_high=$(cat ${cg}/memory.high 2>/dev/null)
+
+    printf "    %-41s\n" "MEMORY           [5]"
+    local numthrds="$(cat ${cg}/cgroup.threads | tr '\n' ' ' | wc -w)"
+    local mem_current_human=$(memory_size_to_human_readable ${mem_current})
+    printf "      %-39s   : %s (%s)\n" "mem.current" "${mem_current}" "${mem_current_human}"
+    # "If a memory cgroup is not populated with processes, its memory.min is ignored."
+    [[ ! -z "${mem_min}" ]] && [[ ${numthrds} -ge 1 ]] && printf "      %-39s   : %s\n" "mem.min" "${mem_min}"
+
+    local mem_low_human=$(memory_size_to_human_readable ${mem_low})
+    printf "      %-39s   : %s (%s)\n" "mem.low" "${mem_low}" "${mem_low_human}"
+
+    local mem_high_human=$(memory_size_to_human_readable ${mem_high})
+    [[ -z "${mem_high_human}" ]] && \
+		printf "      %-39s   : %s\n" "mem.high" "${mem_high}" \
+		|| \
+		printf "      %-39s   : %s (%s)\n" "mem.high" "${mem_high}" "${mem_high_human}"
+
+    SHOW_FOOTNOTE_5=1
+  fi
+}
+
+# https://docs.kernel.org/admin-guide/cgroup-v2.html#core-interface-files
+# Params:
+#  $1 : path to cg
+show_cg_dtl()
+{
+  local cg=$1
+
+  #--- Core interface files: cgroup.events
+  # Is it populated? Yes, if >=1 live processes within it, else no.
+  # core interface file: cgroup.events
+  local pop=$(grep "populated" ${cg}/cgroup.events |awk '{print $2}')
+  if [[ ${pop} -ne 0 ]] ; then
+     printf "\n<<---------------  %-45s -----------------------------\n" $cg
+  else
+     printf "  %-45s : " $cg
+     echo "unpopulated (no live processes)"
+     set +e
+     let num_unpop=num_unpop+1
+     return -1
+  fi
+  # A CG can also be 'frozen' via this interface file (cgroup.events)
+  # Or by writing 1 to cgroup.freeze
+
+  core_cg_files_show ${cg} || true
+  cpu_ctrl_show ${cg} || true
+  mem_ctrl_show ${cg} || true
+  ## TODO
+  # Display the cg io, irq, pids interface files...
+  ##
+
+  # Descendant cgroups?
+  printf "    %-41s   : %s\n" "cg stat" "$(cat ${cg}/cgroup.stat | tr '\n' ' ')"
+  echo "${LINE}----------------------------------->>"
+
+  return 0
+}
+
+show_common()
+{
+title "System-wide cgroups v2 info"
+runcmd "ls ${CGROUP_MOUNT}"
+
+title "All currently defined cgroups (includes root CGROUP @ ${CGROUP_MOUNT}; some may be empty)"
+runcmd "find ${CGROUP_MOUNT} -maxdepth 1 -type d|sort"
+
+title "All cgroup controllers (enabled within kernel)"
+runcmd "cat ${CGROUP_MOUNT}/cgroup.controllers"
+title "All controllers being applied to immediate children"
+runcmd "cat ${CGROUP_MOUNT}/cgroup.subtree_control"
+}
+
+usage()
+{
+ echo "Usage: ${name} [-v] [-p] [-t] [-d depth] [CGROUP]
+This script recursively shows the cgroups metadata from the specified
+CGROUP (the last parameter), down through it's hierarchy (tree).
+If no particular CGROUP's specified, it shows the entire system CGROUP
+hierarchy (typically the content of /sys/fs/cgroup). We assume we're
+running on a Cgroups v2 supported system.
+
+All parameters are optional, and can be used in any combination (except
+for CGROUP; it must be the last one. Also, the -v, -p, -t are Off by default).
+
+-v : run in verbose mode
+      Note! It's _very_ verbose, showing verbatim the content of all interface files for
+            the various controllers. On the plus side, it's nice colorful output! (provided
+	    your terminal supports it).
+-p : show the name(s) of the processes belonging to the cgroup
+     Note that this option can increase processing time.
+-t : show the name(s) of the *threads* belonging to the cgroup
+     Note that this option can increase processing time.
+
+-d depth : a positive integer that affects the depth to which the Cgroups v2 hierarchy
+is shown. The 'depth' value can be:
+ 1       => show only a very top-level overview of the hierarchy
+ 2,3,... => show to 2,3,... level(s) of the cgroup v2 hierarchy, whatever's specified.
+
+ Practically speaking, most distros (i tested on Ubuntu/Fedora) will max out at 6 or 7
+ levels of depth. (On mainstream distros, systemd typically sets up the Cgroup v2 hierarchy
+ at boot).
+ Default : shows _all_ levels of the specified CGROUP v2 hierarchy.
+
+CGROUP : Path to any cgroup; for example: /sys/fs/cgroup/system.slice/wpa_supplicant.service
+ (Tip: you can first use systemd-cgls, or this script, with no particular CGROUP parameter,
+  to list all cgroups currently defined in the system).
+ This Must be the last parameter."
+}
+
+
+#--- 'main'
+CGROUP_MOUNT=
+VERBOSE=0
+
+# cgroup2 mount point 'should' be /sys/fs/cgroup but let's not assume anything
+CGROUP_MOUNT=$(mount|grep -w cgroup2 2>/dev/null|awk '{print $3}' 2>/dev/null)
+[[ -z "${CGROUP_MOUNT}" ]] && die "Couldn't obtain cgroup2 mount point"
+
+# Footnotes
+SHOW_FOOTNOTE_1=0
+FOOTNOTE_1="[1] No sub-controllers in a cgroup implies no controllers are enabled; in effect, no cgroup constraints apply to it.
+    CAREFUL: If the parent cgroup has some controllers enabled, then the constraints imposed do apply on it's child(ren) cgroup(s)"
+SHOW_FOOTNOTE_2=1
+FOOTNOTE_2="[2] See cgroup.freeze (and cgroup.events) under https://docs.kernel.org/admin-guide/cgroup-v2.html#core-interface-files"
+SHOW_FOOTNOTE_3=1
+FOOTNOTE_3="[3] See cgroup.pressure, irq.pressure under https://docs.kernel.org/admin-guide/cgroup-v2.html#core-interface-files ; plus https://docs.kernel.org/accounting/psi.html#psi"
+SHOW_FOOTNOTE_4=0
+FOOTNOTE_4="[4] cpu: see https://docs.kernel.org/admin-guide/cgroup-v2.html#cpu-interface-files"
+SHOW_FOOTNOTE_5=0
+FOOTNOTE_5="[5] memory: see https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html#memory"
+
+# keep updated!
+declare -a FOOTNOTES_ARRAY=("${FOOTNOTE_1}" "${FOOTNOTE_2}" "${FOOTNOTE_3}"
+ "${FOOTNOTE_4}"
+ "${FOOTNOTE_5}"
+ )
+MAX_FOOTNOTES=${#FOOTNOTES_ARRAY[@]}
+
+DEPTH=0
+SHOW_COMMON=0
+SHOW_PROCESS_NAMES=0
+SHOW_THREAD_NAMES=0
+
+#--- Args processing
+start_cg=${CGROUP_MOUNT}
+lastarg=
+lastargnum=0
+
+# RELOOK
+# Must ensure that the CGROUP parameter, if passed, is the last one
+cgstartparam_pos=0
+i=1
+for param in "$@"
+do
+  # If it's the '-d n' parameter, then don't bother...(the space is what matters)
+  [[ "${param}" = "-d" ]] && {
+   nextp=$((i+1))
+   depthval=${!nextp}
+   #echo "depthval=$depthval"
+   [[ ${depthval} =~ ^[0-9]+$ ]] && break
+  }
+
+  [[ "${param:0:1}" != "-" ]] && {
+    cgstartparam_pos=$i
+    break
+  }
+  let i=i+1
+done
+#echo "cgstartparam_pos = $cgstartparam_pos"
+[[ ${cgstartparam_pos} -ne 0 ]] && [[ ${cgstartparam_pos} -lt $# ]] && {
+  echo "ERROR: the CGROUP parameter must be the last one."
+  echo
+  usage
+  exit 1
+}
+
+#---
+# If not starting with '-' the last arg is the Cgroup to show
+if [[ $# -eq 1 ]] ; then
+   lastargnum=1
+else
+   [[ $# -ge 1 ]] && lastargnum=$#  #$(($#-1))
+fi
+#echo "lastargnum=${lastargnum} val=${!lastargnum}"
+lastarg=${!lastargnum}
+
+# ... unless the user passed depth like this: -d n (where n is the depth, with a space!)
+if [[ $# -ge 1 ]] && [[ "${lastarg:0:1}" != "-" ]] ; then
+   if [[ ${lastarg} =~ ^[0-9]+$ ]] ; then
+     #echo "its a digit"
+     true
+   else
+     start_cg=${lastarg}
+   fi
+fi
+#echo "start_cg=${start_cg}"
+
+# Valid cgroup?
+[[ ! -f ${start_cg}/cgroup.controllers ]] && die "The CGROUP passed \"${start_cg}\" appears to be invalid? Aborting..."
+
+#-- getopts
+OPTARG=""
+# if the arg requires a param following it (like, -d 2), put a ':' after the arg letter!
+while getopts ":d:vpth" arg; do
+	#echo "arg = $arg"
+  case $arg in
+   d) DEPTH=${OPTARG}
+	#echo "arg = $arg; OPTARG=$OPTARG"
+      ;;
+   v|V) VERBOSE=1
+      ;;
+   p) SHOW_PROCESS_NAMES=1
+      ;;
+   t) SHOW_THREAD_NAMES=1
+      ;;
+   h) # Display help.
+      usage
+      exit 0
+      ;;
+    *) # Anything else, display help.
+      usage
+      exit 1
+      ;;
+  esac
+done
+[[ 0 -eq 1 ]] && {
+# arg debugging
+echo "
+Params: # = $# : $*
+"
+echo "verbose=${VERBOSE} depth=${DEPTH}"
+#exit 0
+}
+#---
+
+
+# TODO- sort option..
+if [[ ${DEPTH} -ne 0 ]] ; then
+   ALL_CGROUPS=$(find ${start_cg} -maxdepth ${DEPTH} -type d|sort)
+   depth_str=${DEPTH}
+else
+   ALL_CGROUPS=$(find ${start_cg} -type d|sort)
+   depth_str='full'
+fi
+
+[[ -z "${ALL_CGROUPS}" ]] && die "Didn't find any cgroups starting from ${start_cg}, aborting..."
+#echo "ALL_CGROUPS = ${ALL_CGROUPS}"
+
+printf "${name}: settings: [-d]depth=${depth_str}, [-v]verbose=${VERBOSE}, [-p]show-processes=${SHOW_PROCESS_NAMES}, [-t]show-threads=${SHOW_THREAD_NAMES}\n"
+[[ ${VERBOSE} -eq 1 ]] && show_common
+
+printf "\n==================== cgroups v2 hierarchy ====================\n"
+printf "<< Recursively from ${start_cg} >>\n"
+echo
+
+num_unpop=0
+i=0
+IFS=$'\n'
+for cg in ${ALL_CGROUPS}
+do
+  # First iteration: if no specific starting CG passed, skip first one as it's the root cgroup
+  [[ $i -eq 0 ]] && [[ "${cg}" = "${CGROUP_MOUNT}" ]] && {
+    printf "%s \n" ${start_cg}
+    i=1
+    continue
+  }
+
+  show_cg_dtl "${cg}" || true
+  [[ $? -eq 0 ]] && {
+    echo
+    set -e
+  }
+
+  let i=i+1
+done
+
+echo
+for fn in $(seq 1 ${MAX_FOOTNOTES})
+do
+  v1=SHOW_FOOTNOTE_${fn}
+  # indirect var usage!
+  [[ ${!v1} -eq 1 ]] && {
+    v2=FOOTNOTE_${fn}
+    echo "${!v2}"
+  }
+done
+
+echo "
+Parsed a total of $i (v2) CGROUPs ($num_unpop were empty / unpopulated)."
+exit 0

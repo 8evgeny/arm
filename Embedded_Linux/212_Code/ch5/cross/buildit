@@ -1,0 +1,14 @@
+#!/bin/bash
+die() {
+   echo >&2 "FATAL: $@" ; exit 1
+}
+
+CXX=aarch64-linux-gnu-
+which ${CXX}gcc >/dev/null || die "Cross compiler ${CXX}gcc not found (or not in PATH)"
+
+# Update as required; keep in sync with the Makefile
+KDIR=~/rpi_work/kernel_rpi/linux
+[[ ! -d ${KDIR} ]] && die "ARM64 kernel source tree at \"${KDIR}\" not found"
+
+echo "make ARCH=arm64 CROSS_COMPILE=${CXX}-"
+make ARCH=arm64 CROSS_COMPILE=${CXX}
