@@ -4,15 +4,18 @@ RUN apt-get update && apt-get install -y gawk wget git diffstat unzip texinfo gc
 RUN apt-get install -y gcc-5-multilib gcc-5-arm-linux-gnueabihf gcc-arm-linux-gnueabihf
 RUN export DEBIAN_FRONTEND=noninteractive && locale-gen en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 RUN mkdir -pv /opt/linaro
-RUN wget -P /opt/linaro -c https://releases.linaro.org/components/toolchain/binaries/5.3-2016.02/arm-linux-gnueabihf/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf.tar.xz
-RUN cd /opt/linaro && tar xf gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf.tar.xz && cd gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf && mv ./* ../ && cd ../ && rmdir gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf && rm gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf.tar.xz 
+#Новая ссылка https://fi.mirror.armbian.de/dl/_toolchain/
+#RUN wget -P /opt/linaro -c https://releases.linaro.org/components/toolchain/binaries/5.3-2016.02/arm-linux-gnueabihf/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf.tar.xz
+RUN wget -P /opt/linaro -c https://fi.mirror.armbian.de/dl/_toolchain/gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf.tar.xz
+#RUN cd /opt/linaro && tar xf gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf.tar.xz && cd gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf && mv ./* ../ && cd ../ && rmdir gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf && rm gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf.tar.xz
+RUN cd /opt/linaro && tar xf gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf.tar.xz && cd gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf && mv ./* ../ && cd ../ && rmdir gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf && rm gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf.tar.xz
 ENV PATH="/opt/linaro/bin:$PATH"
 RUN arm-linux-gnueabihf-gcc --version
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
-RUN groupadd evg && useradd -p 123 -b /home -d /home/evg -m -g evg -s /bin/bash -G sudo evg
-USER evg
-WORKDIR /home/evg
+RUN groupadd user && useradd -p 123 -b /home -d /home/user -m -g user -s /bin/bash -G sudo user
+USER user
+WORKDIR /home/user
 RUN git clone --single-branch --branch u-boot-2016.09.y --progress git://git.denx.de/u-boot.git u-boot/ && cd u-boot &&  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- am335x_boneblack_defconfig && make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
 # RUN wget -c https://rcn-ee.com/repos/git/u-boot-patches/v2016.03/0001-am335x_evm-uEnv.txt-bootz-n-fixes.patch
 # RUN patch -p1 < 0001-am335x_evm-uEnv.txt-bootz-n-fixes.patch
@@ -25,11 +28,11 @@ RUN git clone --single-branch --branch beaglev-v5.10.113-1.1.2-ubuntu  --progres
 # make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bb.org_defconfig     такого файла нет
 USER root
 RUN apt-get install -y flex bison libgmp3-dev libmpfr-dev libmpc-dev libssl-dev gcc-arm-linux-gnueabihf
-USER evg
-WORKDIR /home/evg/linux
+USER user
+WORKDIR /home/user/linux
 #RUN make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- omap2plus_defconfig   
 # ошибка при дальнейшей сборке поэтому копируем готовый конфиг
-COPY .config /home/evg/linux
+COPY .config /home/user/linux
 RUN make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j4
 # Ядро собрано переходим к rootfs
 

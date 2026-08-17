@@ -1,10 +1,10 @@
 #!/usr/bin/bash
-#docker build --no-cache -t build_bb_kernel  /home/evg/SOFT/Github/Arm/Embedded_Linux/LEARN/2024_03_15_Kernel_BB/build_in_Docker/
-docker build -t build_bb_kernel  /home/evg/SOFT/Github/Arm/Embedded_Linux/LEARN/2024_03_15_Kernel_BB/build_in_Docker/
+#docker build --no-cache -t build_bb_kernel  /media/user/WORK/Github/Arm/Embedded_Linux/2024_03_15_Kernel_BB/build_in_Docker/
+docker build -t build_bb_kernel  /media/user/WORK/Github/Arm/Embedded_Linux/2024_03_15_Kernel_BB/build_in_Docker/
 docker run --name bb_uboot build_bb_kernel
 mkdir -p SDCARD_BOOT/BOOT
-docker cp bb_uboot:/home/evg/u-boot/u-boot.img SDCARD_BOOT/BOOT
-docker cp bb_uboot:/home/evg/u-boot/MLO SDCARD_BOOT/BOOT
+docker cp bb_uboot:/home/user/u-boot/u-boot.img SDCARD_BOOT/BOOT
+docker cp bb_uboot:/home/user/u-boot/MLO SDCARD_BOOT/BOOT
 docker rm bb_uboot 
 cd SDCARD_BOOT/BOOT
 touch uEnv.txt

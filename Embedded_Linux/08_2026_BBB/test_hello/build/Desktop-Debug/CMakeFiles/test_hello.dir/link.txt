@@ -1,0 +1,1 @@
+/bin/clang-19 -g -Xlinker --dependency-file=CMakeFiles/test_hello.dir/link.d CMakeFiles/test_hello.dir/main.c.o -o test_hello

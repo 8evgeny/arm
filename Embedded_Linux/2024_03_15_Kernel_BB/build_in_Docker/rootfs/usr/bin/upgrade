@@ -1,0 +1,65 @@
+#!/bin/sh
+set -x
+cd /home/root
+/usr/bin/tftp 192.168.0.105 -m binary -c get sw_config.cnf
+source /home/root/sw_config.cnf
+
+if [ $UPDATE == "YES" ] ;then
+        echo "Software Update requested"
+else
+        echo "No Software update. Fake Request"
+	/usr/bin/server &
+        exit
+fi
+
+if [ $BOOT == "YES" ]; then
+        echo "Kernel/DTB update is requested"
+        mkdir -p /media/boot_a
+        /bin/mount -t ext4 /dev/mmcblk0p2 /media/boot_a/
+        cd /media/boot_a
+        rm -rf /media/boot_a/*
+        echo "Copying boot directory..."
+        /usr/bin/tftp 192.168.0.105 -m binary -c get boot.tar.gz
+        tar -zxvf boot.tar.gz
+        cd /home/root
+        ls -lrt /media/boot_a
+else
+        echo "Don't panic.! No Kernel update"
+fi
+sleep 5
+
+if [ $RFS == "YES" ] ; then
+        echo "Root Filesystem needs change"
+        cat /proc/cmdline | grep -q mmcblk0p3
+        if [ $? -eq 0 ] ; then
+                mkdir -p /media/rootfs_b
+                ROOT=mmcblk0p4
+                mount -t ext4 /dev/mmcblk0p4 /media/rootfs_b
+                cd /media/rootfs_b
+                rm -rf /media/rootfs_b/*
+        else
+                mkdir -p /media/rootfs_a
+                ROOT=mmcblk0p3
+                mount -t ext4 /dev/mmcblk0p3 /media/rootfs_a
+                cd /media/rootfs_a
+                rm -rf /media/rootfs_a/*
+        fi
+
+        echo "Copying rootfs directory..."
+        /usr/bin/tftp 192.168.0.105 -m binary -c get rootfs.tar.gz
+        tar -zxvf rootfs.tar.gz
+        cd /home/root
+fi
+
+mkdir -p /media/boot
+cd /media/boot
+mount -t vfat /dev/mmcblk0p1 /media/boot
+sed -i "s/mmcblk0p[0-9]/$ROOT/g" /media/boot/uEnv.txt
+
+echo "=================================================="
+echo "=================================================="
+echo "====== Swap to New software..!! =================="
+echo "=================================================="
+echo "=================================================="
+
+reboot
